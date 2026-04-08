@@ -1,0 +1,110 @@
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f7fb;
+}
+
+/* CONTAINER */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* NAVBAR */
+header{
+  background:#0f172a;
+  color:#fff;
+  padding:15px 0;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(to right,#2563eb,#1e3a8a);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:40px;
+}
+
+.hero button{
+  margin-top:20px;
+  padding:12px 20px;
+  border:none;
+  background:#fff;
+  color:#1e3a8a;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+/* SECTION */
+.section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.bg-light{
+  background:#e5e7eb;
+}
+
+/* GRID */
+.grid{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input, textarea{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+button{
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+}
