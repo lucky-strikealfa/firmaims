@@ -108,3 +108,23 @@ footer{
   text-align:center;
   padding:15px;
 }
+
+.tentang{
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  color: #333;
+}
+
+.tentang p{
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.tentang strong{
+  color: #0f172a;
+  font-weight: 600;
+}
