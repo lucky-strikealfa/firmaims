@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlazzTax Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="container nav">
+    <h2 class="logo">FlazzTax</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Kelola Pajak Lebih Mudah</h1>
+    <p>Layanan konsultan pajak online untuk individu & perusahaan</p>
+    <button onclick="scrollToForm()">Konsultasi Gratis</button>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan" class="section">
+  <h2>Layanan Kami</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Konsultasi Pajak</h3>
+      <p>Diskusi langsung dengan konsultan profesional</p>
+    </div>
+
+    <div class="card">
+      <h3>Laporan Pajak</h3>
+      <p>SPT Tahunan & Bulanan untuk bisnis & individu</p>
+    </div>
+
+    <div class="card">
+      <h3>Tax Planning</h3>
+      <p>Perencanaan pajak untuk efisiensi keuangan</p>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="section bg-light">
+  <h2>Tentang Kami</h2>
+  <p>
+    Kami adalah platform layanan pajak online yang membantu
+    analisis, perhitungan, dan pelaporan pajak secara mudah dan aman.
+  </p>
+</section>
+
+<!-- FORM -->
+<section id="kontak" class="section">
+  <h2>Konsultasi Gratis</h2>
+
+  <form id="form">
+    <input type="text" placeholder="Nama" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Pertanyaan"></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <p id="msg"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 FlazzTax Clone</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
