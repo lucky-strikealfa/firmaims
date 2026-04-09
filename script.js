@@ -32,6 +32,13 @@ const dots = document.querySelectorAll(".dots span");
 function showSlide(){
   slides.style.transform = `translateX(-${index * 100}%)`;
 
+  // HAPUS semua active
+  slideItems.forEach(slide => slide.classList.remove("active"));
+
+  // TAMBAH active ke slide sekarang
+  slideItems[index].classList.add("active");
+
+  // DOTS
   dots.forEach(d => d.classList.remove("active"));
   if(dots[index]) dots[index].classList.add("active");
 }
