@@ -11,28 +11,34 @@ document.getElementById("form").addEventListener("submit", function(e){
 
 let index = 0;
 const slides = document.querySelector(".slides");
-const totalSlides = document.querySelectorAll(".slide").length;
+const slideItems = document.querySelectorAll(".slide");
+const totalSlides = slideItems.length;
 
-// AUTO SLIDE
-setInterval(() => {
-  nextSlide();
-}, 4000);
+function showSlide(){
+  slides.style.transform = `translateX(-${index * 100}%)`;
+
+  // reset animasi caption
+  slideItems.forEach(slide => {
+    slide.querySelector(".caption").style.animation = "none";
+  });
+
+  setTimeout(() => {
+    slideItems[index].querySelector(".caption").style.animation = "fadeUp 1s ease";
+  }, 50);
+}
 
 function nextSlide(){
-  index++;
-  if(index >= totalSlides) index = 0;
-  updateSlide();
+  index = (index + 1) % totalSlides;
+  showSlide();
 }
 
 function prevSlide(){
-  index--;
-  if(index < 0) index = totalSlides - 1;
-  updateSlide();
+  index = (index - 1 + totalSlides) % totalSlides;
+  showSlide();
 }
 
-function updateSlide(){
-  slides.style.transform = "translateX(-" + (index * 100) + "%)";
-}
+// AUTO SLIDE
+setInterval(nextSlide, 5000);
 
 // BUTTON
 document.querySelector(".next").onclick = nextSlide;
