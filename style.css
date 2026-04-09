@@ -284,3 +284,15 @@ footer{
   .caption h1{
     font-size: 28px;
   }
+
+
+  .caption{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+.slide.active .caption{
+  opacity: 1;
+  transform: translateY(-50%);
+}
