@@ -17,13 +17,13 @@ const dotsContainer = document.querySelector(".dots");
 
 let interval;
 
-// CREATE DOTS
+// DOTS
 slideItems.forEach((_, i) => {
   const dot = document.createElement("span");
-  dot.addEventListener("click", () => {
+  dot.onclick = () => {
     index = i;
     showSlide();
-  });
+  };
   dotsContainer.appendChild(dot);
 });
 
@@ -33,16 +33,7 @@ function showSlide(){
   slides.style.transform = `translateX(-${index * 100}%)`;
 
   dots.forEach(d => d.classList.remove("active"));
-  dots[index].classList.add("active");
-
-  // reset animasi
-  slideItems.forEach(s => {
-    s.querySelector(".caption").style.animation = "none";
-  });
-
-  setTimeout(()=>{
-    slideItems[index].querySelector(".caption").style.animation = "fadeUp 1s ease";
-  },50);
+  if(dots[index]) dots[index].classList.add("active");
 }
 
 function next(){
@@ -55,24 +46,25 @@ function prev(){
   showSlide();
 }
 
-// AUTO SLIDE
-function startAuto(){
-  interval = setInterval(next, 5000);
+// AUTO
+function start(){
+  interval = setInterval(next, 4000);
 }
 
-function stopAuto(){
+function stop(){
   clearInterval(interval);
 }
 
-startAuto();
+start();
 
 // BUTTON
 document.querySelector(".next").onclick = next;
 document.querySelector(".prev").onclick = prev;
 
-// PAUSE HOVER
-document.querySelector(".hero-slider").addEventListener("mouseenter", stopAuto);
-document.querySelector(".hero-slider").addEventListener("mouseleave", startAuto);
+// HOVER STOP
+const slider = document.querySelector(".hero-slider");
+slider.addEventListener("mouseenter", stop);
+slider.addEventListener("mouseleave", start);
 
 // INIT
 showSlide();
