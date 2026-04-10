@@ -149,7 +149,8 @@ footer{
   min-width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: center; /* biar tidak aneh */
+  background-color: #0f172a; /* biar tidak kosong putih */
+  background-position: center right;
   background-repeat: no-repeat;
   filter: brightness(0.9) contrast(1.1);
 }
