@@ -80,11 +80,18 @@ showSlide();
 // ================= MENU HAMBURGER =================
 const toggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
 
 toggle.addEventListener("click", () => {
   menu.classList.toggle("active");
+  overlay.classList.toggle("active");
 });
 
+// klik luar = tutup
+overlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+  overlay.classList.remove("active");
+});
 
 // ================= ANIMASI SCROLL =================
 const observer = new IntersectionObserver(entries => {
