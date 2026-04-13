@@ -11,7 +11,7 @@ body{
   margin:auto;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR CLEAN ================= */
 header{
   background:#0f172a;
   color:#fff;
@@ -24,13 +24,40 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:relative;
+  padding:0 15px;
 }
 
-.nav a{
+/* LOGO */
+.logo{
+  font-size:16px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* MENU DESKTOP */
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
   color:#fff;
-  margin-left:20px;
   text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#f43f5e;
+}
+
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+  color:#fff;
 }
 
 
@@ -339,14 +366,12 @@ footer{
 
   /* NAVBAR */
   .nav{
-    flex-direction: column;
     gap:10px;
     text-align:center;
   }
 
   .nav a{
     margin: 5px 10px;
-    display:inline-block;
   }
 
   /* HERO */
@@ -362,7 +387,7 @@ footer{
   .caption{
     left: 6%;
     right: 5%;
-    max-width: 550%;
+    max-width: 550px;
     text-align: left;
   }
 
@@ -431,18 +456,17 @@ h2{
   font-size:26px;
   cursor:pointer;
   color:#fff;
-  display:none;
 }
 
 /* MOBILE */
 @media (max-width:768px){
 
-  /* hamburger muncul */
+  /* tampilkan hamburger */
   .menu-toggle{
     display:block;
   }
 
-  /* menu disembunyikan */
+  /* sembunyikan menu desktop */
   nav{
     position:fixed;
     top:0;
@@ -452,14 +476,20 @@ h2{
     background:#0f172a;
     flex-direction:column;
     padding-top:80px;
-    transition:0.4s;
+    transition:0.4s ease;
+    z-index:1001;
+  }
+
+  nav a{
+    padding:15px 25px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
   }
 
   nav.active{
     right:0;
   }
-}
 
+}
 /* ================= ANIMASI ================= */
 .hidden{
   opacity:0;
