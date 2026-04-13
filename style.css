@@ -207,11 +207,13 @@ footer{
 .caption{
   position: absolute;
   top: 50%;
-  left: 8%;
+  right: 8%;        /* pindah ke kanan */
+  left: auto;       /* penting: nonaktifkan left */
   transform: translateY(-50%);
+  text-align: right; /* biar teks rata kanan */
   color: #fff;
   max-width: 500px;
-  z-index: 2; /* PENTING */
+  z-index: 2;
 }
 
 .caption h1{
@@ -219,12 +221,14 @@ footer{
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1px;
+  margin-bottom: 10px;
 }
 
 .caption p{
   font-size: 18px;
   margin-top: 12px;
   color: #e5e7eb;
+  margin-bottom: 15px;
 }
 
 /* TEXT */
