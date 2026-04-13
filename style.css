@@ -161,7 +161,7 @@ footer{
 
 /* OVERLAY */
 .overlay{
-  position: absolute;
+  position:absolute;
   top:0;
   left:0;
   width:100%;
@@ -169,8 +169,8 @@ footer{
 
   background: linear-gradient(
     to right,
-    rgba(15,23,42,0.85) 0%,
-    rgba(15,23,42,0.7) 40%,
+    rgba(15,23,42,0.75) 0%,
+    rgba(15,23,42,0.5) 40%,
     rgba(15,23,42,0.2) 70%,
     transparent 100%
   );
@@ -218,9 +218,13 @@ footer{
 }
 
 .caption span{
-  color: #3f51f4;
-}
+  color:#3f51f4;
+  font-weight:700;
 
+  text-shadow:
+    0 0 10px rgba(63,81,244,0.7),
+    0 0 20px rgba(63,81,244,0.5);
+}
 .caption p{
   margin-top: 10px;
   font-size: 18px;
@@ -230,18 +234,22 @@ footer{
 .btn-cta{
   display:inline-block;
   margin-top:25px;
-  padding:14px 28px;
+  padding:14px 30px;
+
   background: linear-gradient(135deg,#f43f5e,#e11d48);
   color:#fff;
   border-radius:30px;
   font-weight:600;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.4),
+    0 0 10px rgba(244,63,94,0.5);
+
   transition:0.3s;
 }
 
 .btn-cta:hover{
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.03);
 }
 
 /* NAV */
@@ -298,19 +306,27 @@ footer{
 
 /* MOBILE */
 @media(max-width:768px){
-  .caption h1{
-    font-size: 30px;
+
+   .overlay{
+    background: rgba(15,23,42,0.6);
   }
 
-  .caption p{
-    font-size: 15px;
-  }
+  .caption h1{
+  font-size:52px;
+  font-weight:700;
+  color:#ffffff;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,0.6),
+    0 4px 20px rgba(0,0,0,0.4);
 }
 
-  .caption{
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.5s;
+.caption p{
+  font-size:18px;
+  color:#e5e7eb;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.5);
 }
 
 .slide.active .caption{
@@ -344,9 +360,9 @@ footer{
   }
 
   .caption{
-    left: 5%;
+    left: 6%;
     right: 5%;
-    max-width: 100%;
+    max-width: 550%;
     text-align: left;
   }
 
@@ -415,21 +431,33 @@ h2{
   font-size:26px;
   cursor:pointer;
   color:#fff;
+  display:none;
 }
 
 /* MOBILE */
 @media (max-width:768px){
 
+  /* hamburger muncul */
   .menu-toggle{
     display:block;
   }
 
-  .nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  /* menu disembunyikan */
+  nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:70%;
+    height:100vh;
+    background:#0f172a;
+    flex-direction:column;
+    padding-top:80px;
+    transition:0.4s;
   }
 
+  nav.active{
+    right:0;
+  }
 }
 
 /* ================= ANIMASI ================= */
