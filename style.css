@@ -431,44 +431,31 @@ h2{
 /* ================= MOBILE ================= */
 @media (max-width:768px){
 
-.menu-toggle{
-    display:block;
-    position:absolute;
-    right:20px;
-    top:50%;
-    transform:translateY(-50%);
-  }
-
   nav{
-    position:absolute;
-    top:70px;
-    right:0;
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:70%;
+    height:100vh;
     background:#0f172a;
-    width:100%;
-    display:none;
+    display:flex;
     flex-direction:column;
-    text-align:center;
-    padding:20px 0;
+    padding-top:80px;
+    transition:0.4s ease;
+    z-index:1000;
   }
 
   nav a{
+    padding:15px 25px;
     color:#fff;
-    text-decoration:none;
     font-size:18px;
-    padding:15px 30px;
-    transition:0.3s;
-    border-left:3px solid transparent;
-  }
-
-  nav a:hover{
-    background:rgba(255,255,255,0.05);
-    border-left:3px solid #f43f5e;
-    padding-left:35px;
+    text-decoration:none;
   }
 
   nav.active{
     right:0;
   }
+
 }
 
 /* ANIMASI DROPDOWN */
@@ -493,10 +480,24 @@ h2{
   opacity:0;
   visibility:hidden;
   transition:0.3s;
-  z-index:998;
+  z-index:999;
 }
 
 .menu-overlay.active{
   opacity:1;
   visibility:visible;
+}
+
+.logo{
+  font-size:18px;
+  max-width:80%;
+}
+
+/* supaya ada ruang untuk hamburger */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+  padding:0 15px;
 }
