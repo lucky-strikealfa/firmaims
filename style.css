@@ -183,7 +183,6 @@ footer{
   background-color: #0f172a; /* biar tidak kosong putih */
   background-position: center right;
   background-repeat: no-repeat;
-  filter: brightness(0.9) contrast(1.1);
 }
 
 /* OVERLAY */
@@ -196,9 +195,9 @@ footer{
 
   background: linear-gradient(
     to right,
-    rgba(15,23,42,0.75) 0%,
-    rgba(15,23,42,0.5) 40%,
-    rgba(15,23,42,0.2) 70%,
+    rgba(15,23,42,0.6) 0%,
+    rgba(15,23,42,0.3) 40%,
+    rgba(15,23,42,0.1) 70%,
     transparent 100%
   );
 
@@ -344,8 +343,8 @@ footer{
   color:#ffffff;
 
   text-shadow:
-    0 2px 10px rgba(0,0,0,0.6),
-    0 4px 20px rgba(0,0,0,0.4);
+    0 2px 10px rgba(0,0,0,0.7)
+    0 4px 20px rgba(0,0,0,0.5);
 }
 
 .caption p{
@@ -353,7 +352,7 @@ footer{
   color:#e5e7eb;
 
   text-shadow:
-    0 2px 8px rgba(0,0,0,0.5);
+    0 2px 8px rgba(0,0,0,0.6);
 }
 
 .slide.active .caption{
@@ -382,8 +381,14 @@ footer{
   .slide{
     height: 80vh;
     background-position: center;
+    transform: scale(1);
+    transition: transform 6s ease;
   }
 
+.slide.active{
+  transform: scale(1.05);
+}
+  
   .caption{
     left: 6%;
     right: 5%;
