@@ -16,6 +16,8 @@ header{
   background:#0f172a;
   color:#fff;
   padding:15px 0;
+  position:relative;
+  z-index:1000;
 }
 
 .nav{
@@ -410,10 +412,24 @@ h2{
 
 /* ================= HAMBURGER ================= */
 .menu-toggle{
-  display:none;
   font-size:26px;
   cursor:pointer;
   color:#fff;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
 }
 
 /* ================= ANIMASI ================= */
@@ -489,8 +505,11 @@ h2{
 }
 
 .logo{
-  font-size:18px;
-  max-width:80%;
+  font-size:16px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:75%;
 }
 
 /* supaya ada ruang untuk hamburger */
