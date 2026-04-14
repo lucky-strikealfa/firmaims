@@ -52,12 +52,6 @@ nav a:hover{
 }
 
 /* HAMBURGER */
-.menu-toggle{
-  display:block;
-  font-size:100px;
-  cursor:pointer;
-  color:#fdfd01;
-}
 
 
 /* HERO */
@@ -69,7 +63,7 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:40px;
+  font-size:100px;
 }
 
 .hero button{
