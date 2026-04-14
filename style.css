@@ -566,3 +566,17 @@ h2{
 .slide-right p{
   color:#555;
 }
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.caption h1{
+  font-size:48px;
+  line-height:1.2;
+}
+
+.highlight-red{
+  color:#e53935;
+  font-weight:700;
+}
