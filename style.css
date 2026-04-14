@@ -53,7 +53,7 @@ nav a:hover{
 
 /* HAMBURGER */
 .menu-toggle{
-  display:none;
+  display:block;
   font-size:100px;
   cursor:pointer;
   color:#fdfd01;
