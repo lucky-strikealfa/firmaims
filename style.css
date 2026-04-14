@@ -580,3 +580,14 @@ body{
   color:#e53935;
   font-weight:700;
 }
+
+  .slide .caption{
+  opacity:0;
+  transform: translateY(30px);
+  transition:0.6s ease;
+}
+
+.slide.active .caption{
+  opacity:1;
+  transform: translateY(-50%);
+}
