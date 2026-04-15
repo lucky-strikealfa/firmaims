@@ -697,3 +697,18 @@ body{
   left: auto;
   max-width: 500px;
 }
+
+.slide-right .caption h1 {
+  text-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ================= POSISI SLIDE 2 ================= */
+.slide-right .caption {
+  right: 5% !important;     /* geser ke kanan (semakin kecil → makin ke kanan) */
+  left: auto !important;
+
+  top: 40% !important;      /* naik ke atas (default 50%) */
+  transform: translateY(-40%) !important;
+
+  max-width: 500px;
+}
