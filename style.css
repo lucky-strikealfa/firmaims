@@ -695,7 +695,7 @@ body{
 .slide-right .caption {
   right: 10%;
   left: auto;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .slide-right .caption h1 {
@@ -707,10 +707,10 @@ body{
   right: 15% !important;   /* lebih ke kanan */ makin kecil = makin ke kanan
   left: auto !important;
 
-  top: 20% !important;    /* lebih ke atas */ makin kecil = naik ke atas
+  top: 45% !important;    /* lebih ke atas */ makin kecil = naik ke atas
   transform: translateY(-35%) !important;
 
-  max-width: 700px;       /* batasi lebar biar tidak melebar ke kiri */
+  max-width: 800px;       /* batasi lebar biar tidak melebar ke kiri */
 }
 
 .slide-right .caption h1{
