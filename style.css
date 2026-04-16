@@ -704,11 +704,15 @@ body{
 
 /* ================= POSISI SLIDE 2 ================= */
 .slide-right .caption {
-  right: 5% !important;     /* geser ke kanan (semakin kecil → makin ke kanan) */
+  right: 3% !important;   /* lebih ke kanan */
   left: auto !important;
 
-  top: 40% !important;      /* naik ke atas (default 50%) */
-  transform: translateY(-40%) !important;
+  top: 35% !important;    /* lebih ke atas */
+  transform: translateY(-35%) !important;
 
-  max-width: 500px;
+  max-width: 420px;       /* batasi lebar biar tidak melebar ke kiri */
+}
+
+.slide-right .caption h1{
+  word-break: break-word;
 }
