@@ -694,12 +694,6 @@ body{
   font-weight: 900;
 }
 
-.slide-right .caption {
-  right: 10%;
-  left: auto;
-  max-width: 700px;
-}
-
 .slide-right .caption h1 {
   text-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -707,10 +701,10 @@ body{
 /* ================= POSISI SLIDE 2 ================= */
 .slide-right .caption {
   left: auto;
-  right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 500px;
+  right: 2%;
+  top: 32%;
+  transform: translateY(-32%);
+  max-width: 380px;
 }
 
 .slide-right .caption h1 {
