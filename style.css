@@ -704,7 +704,7 @@ body{
 
 /* ================= POSISI SLIDE 2 ================= */
 .slide-right .caption {
-  right: 2%;
+  right: 15%;
   top: 30%;
   transform: translateY(-30%);
   max-width: 380px;
