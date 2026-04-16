@@ -184,7 +184,6 @@ footer{
     rgba(15,23,42,0.85) 0%,
     rgba(15,23,42,0.5) 40%,
     transparent 100%
-  );
 }
 
 .overlay-light{
@@ -206,7 +205,6 @@ footer{
     rgba(255,255,255,0.85) 65%,
     rgba(255,255,255,1) 100%
   );
-
   z-index:1;
 }
 
@@ -627,7 +625,11 @@ body{
 
 .slide.active .caption{
   opacity:1;
-  transform: translateY(-50%);
+}
+
+/* khusus slide kanan */
+.slide-right.active .caption{
+  transform: translateY(-30%);
 }
 
 .hero-title {
@@ -704,10 +706,11 @@ body{
 
 /* ================= POSISI SLIDE 2 ================= */
 .slide-right .caption {
-  right: 15%;
-  top: 30%;
-  transform: translateY(-30%);
-  max-width: 380px;
+  left: auto;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 500px;
 }
 
 .slide-right .caption h1 {
