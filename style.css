@@ -704,10 +704,10 @@ body{
 
 /* ================= POSISI SLIDE 2 ================= */
 .slide-right .caption {
-  right: 3% !important;   /* lebih ke kanan */
+  right: 7% !important;   /* lebih ke kanan */ makin kecil = makin ke kanan
   left: auto !important;
 
-  top: 35% !important;    /* lebih ke atas */
+  top: 30% !important;    /* lebih ke atas */ makin kecil = naik ke atas
   transform: translateY(-35%) !important;
 
   max-width: 420px;       /* batasi lebar biar tidak melebar ke kiri */
