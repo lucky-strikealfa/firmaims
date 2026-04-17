@@ -194,18 +194,6 @@ footer{
     rgba(255,255,255,0.7) 75%,
     rgba(255,255,255,0.95) 100%
   );
-}
-  z-index:1;
-}
-
-/* KHUSUS SLIDE 2 (putih kanan) */
-.overlay-light{
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0) 30%,
-    rgba(255,255,255,0.85) 65%,
-    rgba(255,255,255,1) 100%
-  );
   z-index:1;
 }
 
@@ -366,10 +354,11 @@ footer{
     text-align: left;
   }
 
-  .caption h1{
-    font-size: 26px;
-    line-height: 1.3;
-  }
+ .caption h1{
+  font-size:56px;
+  font-weight:800;
+  line-height:1.2;
+}
 
   .caption p{
     font-size: 14px;
@@ -553,25 +542,6 @@ h2{
   padding:0 15px;
 }
 
-.slide-right .caption h1{
-  font-size:52px;
-  font-weight:800;
-  color:#111;
-}
-
-.slide-right .caption p{
-  font-size:18px;
-  color:#444;
-}
-
-.highlight-red{
-  color: #e53935;
-}
-
-.slide-right p{
-  color:#555;
-}
-
 body{
   font-family: 'Poppins', sans-serif;
 }
@@ -579,13 +549,6 @@ body{
 .caption h1{
   font-size:48px;
   line-height:1.2;
-}
-
-.highlight-red{
-  background: linear-gradient(135deg,#ff4d4d,#b91c1c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight:800;
 }
 
   .slide .caption{
@@ -616,12 +579,6 @@ body{
   margin-top:15px;
   color:#e5e7eb;
   font-weight:300;
-}
-
-  
-  opacity:0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
 }
 
 .slide.active .caption{
@@ -693,25 +650,4 @@ body{
   color: #e53935 !important;
   -webkit-text-fill-color: #e53935 !important;
   font-weight: 900;
-}
-
-.slide-right .caption h1 {
-  text-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* ================= POSISI SLIDE 2 ================= */
-.slide-right .caption {
-  left: auto;
-  right: 2%;
-  top: 32%;
-  transform: translateY(-32%);
-  max-width: 380px;
-}
-
-.slide-right .caption h1 {
-  font-size: 58px;
-}
-
-.slide-right .caption p {
-  font-size: 18px;
 }
