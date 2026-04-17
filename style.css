@@ -357,3 +357,83 @@ footer{
     width:90%;
   }
 }
+
+
+/* ================= TEXT SLIDE FINAL ================= */
+
+/* DEFAULT (SLIDE KIRI - PUTIH) */
+.caption{
+  color:#fff;
+}
+
+.caption h1{
+  font-size:60px;
+  font-weight:800;
+  line-height:1.2;
+
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.caption p{
+  font-size:20px;
+  margin-top:15px;
+
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.8s ease;
+}
+
+/* SLIDE KANAN (HITAM) */
+.slide-right .caption{
+  color:#111;
+}
+
+.slide-right .caption p{
+  color:#444;
+}
+
+/* WARNA MERAH */
+.red{
+  color:#e53935;
+  font-weight:900;
+}
+
+/* ANIMASI MASUK */
+.slide.active .caption h1{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:0.3s;
+}
+
+.slide.active .caption p{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:0.6s;
+}
+
+/* EFEK ZOOM HALUS */
+.slide.active .caption{
+  animation: zoomText 1.2s ease;
+}
+
+@keyframes zoomText{
+  from{
+    transform:translateY(-50%) scale(0.95);
+  }
+  to{
+    transform:translateY(-50%) scale(1);
+  }
+}
+
+/* MOBILE */
+@media (max-width:768px){
+  .caption h1{
+    font-size:32px;
+  }
+
+  .caption p{
+    font-size:14px;
+  }
+}
