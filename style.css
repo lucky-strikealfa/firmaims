@@ -238,8 +238,11 @@ footer{
 
 .slide.active .caption{
   opacity:1;
-  transform:translateY(-50%);
 }
+
+.slide.active .caption:not(.right){
+  transform:translateY(-50%);
+}   
 
 /* BUTTON CTA */
 .btn-cta{
@@ -444,40 +447,40 @@ footer{
   }
 }
 
-.logo{
-  font-size:24px;        /* BESARKAN */
-  font-weight:700;       /* BIAR TEBAL */
-  color:#2563eb;         /* BIRU */
-  
-  max-width:75%;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
 /* KHUSUS SLIDE YANG MAU DI KANAN */
 .slide-right{
   display:flex;
-  justify-content:flex-end; /* geser ke kanan */
+  justify-content:flex-end;
   align-items:center;
-}
-
-/* POSISI CAPTION */
-.caption.right{
-  position:relative;
-  margin-right:8%; /* jarak dari kanan */
-  margin-left:auto;
-  transform:none; /* matikan translate lama */
 }
 
 .slide-right .caption{
   position:relative;
   top:auto;
   left:auto;
-  right:auto;
   transform:none;
+  margin-right:8%;
+}
+
+/* BOX GLASS */
+.caption.right{
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding:30px;
+  border-radius:20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+  max-width:500px;
+}
+
+/* ANIMASI KHUSUS */
+.slide.active .caption.right{
+  transform: scale(1);
+  opacity:1;
 }
 
 .caption.right{
-  max-width:500px;
+  border:1px solid rgba(255,255,255,0.3);
 }
