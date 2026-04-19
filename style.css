@@ -440,3 +440,14 @@ footer{
     font-size:14px;
   }
 }
+
+.logo{
+  font-size:24px;        /* BESARKAN */
+  font-weight:700;       /* BIAR TEBAL */
+  color:#2563eb;         /* BIRU */
+  
+  max-width:75%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
