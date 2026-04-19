@@ -170,12 +170,13 @@ footer{
 }
 
 .overlay-light{
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0),
-    rgba(255,255,255,0.7),
-    #fff
-  );
+  position:absolute;
+  inset:0;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  background: rgba(255,255,255,0.2); /* efek kaca */
 }
 
 /* CAPTION */
@@ -191,9 +192,14 @@ footer{
 
 /* kanan */
 .caption.right{
-  left:auto;
-  right:8%;
-  color:#111;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding:30px;
+  border-radius:20px;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 /* TEXT */
