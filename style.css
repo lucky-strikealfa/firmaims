@@ -454,3 +454,30 @@ footer{
   overflow:hidden;
   text-overflow:ellipsis;
 }
+
+/* KHUSUS SLIDE YANG MAU DI KANAN */
+.slide-right{
+  display:flex;
+  justify-content:flex-end; /* geser ke kanan */
+  align-items:center;
+}
+
+/* POSISI CAPTION */
+.caption.right{
+  position:relative;
+  margin-right:8%; /* jarak dari kanan */
+  margin-left:auto;
+  transform:none; /* matikan translate lama */
+}
+
+.slide-right .caption{
+  position:relative;
+  top:auto;
+  left:auto;
+  right:auto;
+  transform:none;
+}
+
+.caption.right{
+  max-width:500px;
+}
