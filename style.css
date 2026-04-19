@@ -575,8 +575,37 @@ footer{
   .tentang-flex{
     flex-direction:column;
   }
+  font-size:42px;        /* ukuran besar */
+  font-weight:800;
+  color:#0f172a;
+  margin-bottom:40px;
+}
 
+/* JUDUL SECTION */
+.section h2{
+  font-size:42px;        /* ukuran besar */
+  font-weight:800;
+  color:#0f172a;
+  margin-bottom:40px;
+}
+
+/* KHUSUS TENTANG KAMI (biar lebih standout) */
+#tentang h2{
+  font-size:48px;
+  font-weight:800;
+  color:#2563eb; /* biru */
+}
   .tentang-text{
     text-align:center;
   }
+}
+
+#tentang h2::after{
+  content:"";
+  display:block;
+  width:80px;
+  height:4px;
+  background:#2563eb;
+  margin:10px auto 0;
+  border-radius:2px;
 }
