@@ -575,10 +575,10 @@ footer{
   .tentang-flex{
     flex-direction:column;
   }
-  font-size:42px;        /* ukuran besar */
-  font-weight:800;
-  color:#0f172a;
-  margin-bottom:40px;
+
+  .tentang-text{
+    text-align:center;
+  }
 }
 
 /* JUDUL SECTION */
