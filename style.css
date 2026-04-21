@@ -162,7 +162,7 @@ footer{
   transform:translateY(-50%);
   max-width:500px;
   z-index:2;
-  color:#fff;
+  color:#111;
 }
 
 /* Animasi teks */
@@ -218,12 +218,16 @@ footer{
 
 /* Box style kanan */
 .caption.right{
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(10px);
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
   padding:30px;
   border-radius:20px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.15);
+
   border:1px solid rgba(255,255,255,0.3);
+  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+  0 0 20px rgba(255,255,255,0.2);
 }
 
 /* Button */
@@ -418,7 +422,12 @@ footer{
 
 
 header{
-  background:#721e49 !important;
+  background:#721e49;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
 }
 
 .menu-overlay{
@@ -434,20 +443,9 @@ header{
   z-index:9999;
 }
 
-/* NAV JUGA UNGU */
-.nav{
-  background:#721e49 !important;
-}
-
 /* HAPUS OVERLAY DI ATAS HEADER */
 .menu-overlay{
   display:none !important;
-}
-
-/* PASTIKAN TIDAK ADA WARNA LAIN MENIMPA */
-header *,
-.nav *{
-  background:transparent;
 }
 
 .logo{
