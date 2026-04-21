@@ -138,9 +138,11 @@ footer{
 .slide{
   min-width:100%;
   height:100vh;
-  background-size:cover;
+  background-size:contain;
+  background-repeat:no-repeat;
   background-position:center;
-  position:relative;
+  position:relative;background-size:contain;
+  background-color:#000;
 }
 
 /* Overlay */
@@ -345,17 +347,25 @@ footer{
 /* ================= RESPONSIVE ================= */
 .menu-toggle{
   display:none;
-  font-size:20px;
-  color:#fff;
-  cursor:pointer;
 }
 
+/* DESKTOP */
 @media (min-width:768px){
   .logo img{
     width:55px;
     height:55px;
   }
+
+  nav{
+    position:static;
+    flex-direction:row;
+    height:auto;
+    background:transparent;
+  }
 }
+
+/* MOBILE */
+@media (max-width:767px){
 
   .menu-toggle{
     display:block;
