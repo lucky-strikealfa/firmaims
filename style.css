@@ -404,3 +404,46 @@ footer{
     width:90%;
   }
 }
+
+
+header{
+  background:#721e49 !important;
+}
+
+.nav{
+  background:#721e49 !important;
+}
+
+.menu-overlay{
+  display:none;
+}
+
+header,
+.nav,
+.container.nav{
+  background:#721e49 !important;
+}
+
+
+/* FORCE HEADER UNGU */
+header{
+  background:#721e49 !important;
+  position:relative;
+  z-index:9999;
+}
+
+/* NAV JUGA UNGU */
+.nav{
+  background:#721e49 !important;
+}
+
+/* HAPUS OVERLAY DI ATAS HEADER */
+.menu-overlay{
+  display:none !important;
+}
+
+/* PASTIKAN TIDAK ADA WARNA LAIN MENIMPA */
+header *,
+.nav *{
+  background:transparent;
+}
