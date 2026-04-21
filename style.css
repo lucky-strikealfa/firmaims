@@ -350,7 +350,12 @@ footer{
   cursor:pointer;
 }
 
-@media (max-width:768px){
+@media (min-width:768px){
+  .logo img{
+    width:55px;
+    height:55px;
+  }
+}
 
   .menu-toggle{
     display:block;
