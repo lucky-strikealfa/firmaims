@@ -225,8 +225,8 @@ footer{
   padding:30px;
   border-radius:20px;
 
-  border:1px solid rgba(255,255,255,0.3);
-  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+box-shadow:
+  0 10px 40px rgba(0,0,0,0.15),
   0 0 20px rgba(255,255,255,0.2);
 }
 
@@ -466,4 +466,102 @@ header{
 
 .logo img{
   box-shadow:0 0 10px rgba(255,255,255,0.3);
+}
+
+/* ===== LAYANAN SECTION ===== */
+#layanan{
+  background: linear-gradient(to bottom,#f8fafc,#eef2ff);
+}
+
+#layanan h2{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:40px;
+  position:relative;
+}
+
+#layanan h2::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:4px;
+  background:#2563eb;
+  margin:12px auto 0;
+  border-radius:2px;
+}
+
+/* GRID */
+.layanan-grid{
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* CARD MODERN */
+.layanan-card{
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  padding:30px 25px;
+  border-radius:18px;
+
+  width:280px;
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,0.4);
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:all 0.35s ease;
+  cursor:pointer;
+}
+
+/* ICON */
+.layanan-card .icon{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.layanan-card h3{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:10px;
+  color:#111;
+}
+
+/* TEXT */
+.layanan-card p{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+}
+
+/* HOVER EFFECT (INI YANG BIKIN MAHAL) */
+.layanan-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* GARIS AKSEN SAAT HOVER */
+.layanan-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  padding:1px;
+  background:linear-gradient(135deg,#2563eb,#1e3a8a);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:0;
+  transition:0.3s;
+}
+
+.layanan-card:hover::before{
+  opacity:1;
 }
