@@ -14,7 +14,7 @@ body{
 
 /* ================= NAVBAR ================= */
 header{
-  background: rgba(15,23,42,0.9);
+  background: rgba(114,30,73,0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
@@ -115,7 +115,7 @@ button{
 
 /* ================= FOOTER ================= */
 footer{
-  background:#0f172a;
+  background:#721e49;
   color:#fff;
   text-align:center;
   padding:15px;
@@ -362,7 +362,7 @@ footer{
     right:-100%;
     width:70%;
     height:100vh;
-    background:#0f172a;
+    background:#721e49;
     flex-direction:column;
     padding-top:80px;
     transition:0.3s;
