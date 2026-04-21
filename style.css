@@ -464,11 +464,10 @@ footer{
   flex-wrap:wrap;
 }
 
-/* TEXT */
 .tentang-text{
   flex:1;
   min-width:300px;
-  text-align:left;
+  text-align:center; 
 }
 
 .sub-title{
@@ -479,6 +478,17 @@ footer{
   margin-bottom:15px;
   letter-spacing:1px;
 }
+
+.sub-title::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background:#2563eb;
+  margin:10px auto 0;
+  border-radius:2px;
+}
+
 .tentang-text h2{
   font-size:36px;
   margin-bottom:20px;
