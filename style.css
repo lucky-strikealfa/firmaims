@@ -551,9 +551,9 @@ footer{
 }
 
 #tentang h2{
-  font-size:48px;
+  font-size:60px;
   font-weight:800;
-  color:#2563eb; /* biru */
+  color:#2563eb;
 }
   .tentang-text{
     text-align:center;
