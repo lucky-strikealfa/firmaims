@@ -371,22 +371,22 @@ box-shadow:
   }
 }
 
-/* MOBILE */
 @media (max-width:767px){
 
+  /* NAV */
   .menu-toggle{
     display:block;
   }
 
   nav{
     position:fixed;
-    top:0;
+    top:65px;
     right:-100%;
     width:70%;
     height:100vh;
     background:#721e49;
     flex-direction:column;
-    padding-top:80px;
+    padding-top:20px;
     transition:0.3s;
   }
 
@@ -399,24 +399,43 @@ box-shadow:
     border-bottom:1px solid rgba(255,255,255,0.1);
   }
 
-  .hero-slider,
-  .slide{
-    height:80vh;
+  /* SLIDER */
+  .hero-slider{
+    height:70vh;
   }
 
-  .caption{
-    left:5%;
-    right:5%;
+  .slider-btn{
+    display:none;
+  }
+
+  .dots{
+    bottom:10px;
+  }
+
+  /* CAPTION */
+  .slide-right{
+    justify-content:center;
+  }
+
+  .slide-right .caption{
+    width:90%;
+    margin:0;
+  }
+
+  .caption.right{
+    padding:18px;
+    border-radius:14px;
   }
 
   .caption h1{
-    font-size:32px;
+    font-size:24px;
   }
 
   .caption p{
-    font-size:14px;
+    font-size:13px;
   }
 
+  /* GRID */
   .grid{
     flex-direction:column;
     align-items:center;
@@ -571,4 +590,101 @@ header{
 
 .layanan-card:hover::before{
   opacity:1;
+}
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:65px;
+  background:#721e49;
+  z-index:9999;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+body{
+  padding-top:65px;
+}
+
+.nav{
+  height:65px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 15px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  font-size:16px;
+}
+
+.logo img{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+}
+
+/* ===== FIX SLIDER MOBILE ===== */
+@media (max-width:767px){
+
+  .hero-slider{
+    height:75vh; /* lebih pendek */
+  }
+
+  .slide{
+    height:75vh;
+  }
+
+  /* tombol slider biar ga nabrak */
+  .slider-btn{
+    display:none;
+  }
+
+  /* DOT lebih rapi */
+  .dots{
+    bottom:10px;
+  }
+}
+
+@media (max-width:767px){
+
+  .slide-right{
+    justify-content:center;
+  }
+
+  .slide-right .caption{
+    margin:0;
+    width:90%;
+  }
+
+  .caption.right{
+    padding:18px;
+    border-radius:14px;
+  }
+
+  .caption h1{
+    font-size:24px;
+    line-height:1.3;
+  }
+
+  .caption p{
+    font-size:13px;
+  }
+
+  .btn-cta{
+    padding:10px 20px;
+    font-size:13px;
+  }
+}
+
+@media (max-width:767px){
+
+  nav{
+    top:65px; /* SESUAI TINGGI HEADER */
+  }
 }
