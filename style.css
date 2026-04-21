@@ -127,6 +127,7 @@ footer{
   width:100%;
   height:100vh;
   overflow:hidden;
+  margin-top:80px;
 }
 
 .slides{
@@ -150,11 +151,6 @@ footer{
   position:absolute;
   inset:0;
   background:transparent;
-  to right,
-    rgba(255,255,255,0.8),
-    rgba(255,255,255,0.3),
-    transparent
-  );
   z-index:1;
 }
 
@@ -425,25 +421,16 @@ header{
   background:#721e49 !important;
 }
 
-.nav{
-  background:#721e49 !important;
-}
-
 .menu-overlay{
   display:none;
 }
 
-header,
-.nav,
-.container.nav{
-  background:#721e49 !important;
-}
-
-
 /* FORCE HEADER UNGU */
 header{
-  background:#721e49 !important;
-  position:relative;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
   z-index:9999;
 }
 
