@@ -291,11 +291,11 @@ box-shadow:
   opacity:1;
   background:#e11d48;
 }
-
+5
 /* ================= TENTANG ================= */
 .tentang-section{
-  padding:55px 20px 80px;
-  margin-top:-40px;
+  padding:50px 20px 80px;
+  margin-top:-15px;
   text-align:center;
   background:linear-gradient(to bottom,#f8fafc,#eef2ff);
 }
