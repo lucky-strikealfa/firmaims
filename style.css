@@ -447,3 +447,23 @@ header *,
 .nav *{
   background:transparent;
 }
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:22px;
+  font-weight:700;
+  color:#fff;
+}
+
+.logo img{
+  width:45px;
+  height:45px;
+  object-fit:cover;
+  border-radius:50%; /* biar bulat seperti gambar Anda */
+}
+
+.logo img{
+  box-shadow:0 0 10px rgba(255,255,255,0.3);
+}
