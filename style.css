@@ -115,15 +115,6 @@ footer{
   padding:15px;
 }
 
-.tentang{
-  max-width:800px;
-  margin:60px auto;
-  padding:20px;
-  text-align:center;
-  line-height:1.8;
-  color:#333;
-}
-
 .hero-slider{
   position:relative;
   width:100%;
@@ -345,10 +336,6 @@ footer{
   }
 }
 
-.caption{
-  color:#fff;
-}
-
 .caption h1{
   font-size:60px;
   font-weight:800;
@@ -461,23 +448,6 @@ footer{
   flex:1;
   min-width:300px;
   text-align:center; 
-}
-
-.sub-title::after{
-  content:"";
-  display:block;
-  width:60px;
-  height:3px;
-  background:#2563eb;
-  margin:10px auto 0;
-  border-radius:2px;
-}
-
-.tentang-text h2{
-  font-size:28px; 
-  max-width:500px;
-  margin:0 auto 20px;
-  line-height:1.4;
 }
 
 .blue{
