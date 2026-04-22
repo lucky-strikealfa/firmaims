@@ -571,18 +571,18 @@ header{
   top:0;
   left:0;
   width:100%;
-  height:65px;
+  height:80px
   background:#721e49;
   z-index:9999;
   box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 body{
-  padding-top:65px;
+  padding-top:80px;
 }
 
 .nav{
-  height:65px;
+  height:80px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -598,9 +598,10 @@ body{
 }
 
 .logo img{
-  width:35px;
-  height:35px;
+  width:55px;
+  height:55px;
   border-radius:50%;
+  object-fit:cover;
 }
 
 /* ===== FIX SLIDER MOBILE ===== */
@@ -660,5 +661,24 @@ body{
 
   nav{
     top:65px; /* SESUAI TINGGI HEADER */
+  }
+}
+
+@media (max-width:767px){
+  .logo img{
+    width:45px;
+    height:45px;
+  }
+
+  header{
+    height:70px;
+  }
+
+  .nav{
+    height:70px;
+  }
+
+  body{
+    padding-top:70px;
   }
 }
