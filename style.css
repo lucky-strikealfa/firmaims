@@ -122,14 +122,14 @@ footer{
 .slide{
   min-width:100%;
   height:calc(100vh - 80px);
-  background-size:cover; /* ⬅️ balik ke cover */
+  background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  background-color:#fff; /* ⬅️ putih, bukan hitam */
+  background-color:#fff;
   position:relative;
 }
 
-/* Overlay */
+/* Overlay */.slide{
 .overlay{
   position:absolute;
   inset:0;
@@ -500,7 +500,7 @@ body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#f5f7fb;
-  padding-top:80px;
+  padding-top:65px;
 }
 
   .nav{
@@ -596,11 +596,13 @@ body{
     height:65vh;
   }
 
-  .slide{
+ .slide{
     height:65vh;
-    background-position:center;
-    background-size:cover;
-  }
+    background-size:contain;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-color:#fff;
+}
 
   .slider-btn{
     display:none;
