@@ -99,8 +99,9 @@ footer{
 
 /* ================= SLIDER ================= */
 .hero-slider{
-  height:90vh;
-  margin-top:0px;
+ height:calc(100vh - 80px);
+  margin-top:0;
+  overflow:hidden;
 }
 
 #layanan{
@@ -123,13 +124,12 @@ footer{
   min-width:100%;
   height:calc(100vh - 80px);
   background-size:cover;
-  background-position:center;
+  background-position:center center;
   background-repeat:no-repeat;
-  background-color:#fff;
   position:relative;
 }
 
-/* Overlay */.slide{
+/* Overlay */
 .overlay{
   position:absolute;
   inset:0;
@@ -598,7 +598,7 @@ body{
 
  .slide{
     height:65vh;
-    background-size:contain;
+    background-size:cover;
     background-position:center top;
     background-repeat:no-repeat;
     background-color:#fff;
