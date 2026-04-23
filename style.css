@@ -99,7 +99,9 @@ footer{
 
 /* ================= SLIDER ================= */
 .hero-slider{
- height:calc(100vh - 80px);
+  .slide{
+  min-height:600px;
+  height:calc(100vh - 80px);
   margin-top:0;
   overflow:hidden;
 }
@@ -124,7 +126,7 @@ footer{
   min-width:100%;
   height:calc(100vh - 80px);
   background-size:cover;
-  background-position:center center;
+  background-position:left center;
   background-repeat:no-repeat;
   position:relative;
 }
@@ -500,7 +502,7 @@ body{
   margin:0;
   font-family:'Poppins', sans-serif;
   background:#f5f7fb;
-  padding-top:65px;
+  padding-top:80px;
 }
 
   .nav{
