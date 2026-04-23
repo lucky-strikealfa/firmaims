@@ -1,10 +1,11 @@
-/* ================= GLOBAL ================= */
+/* ================= RESET ================= */
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 body{
-  margin:0;
   font-family:'Poppins', sans-serif;
   background:#f5f7fb;
   padding-top:80px;
@@ -21,19 +22,18 @@ body{
 header{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
   height:80px;
-  background:#721e49;
+  background:rgba(114,30,73,0.9);
+  backdrop-filter:blur(10px);
   z-index:9999;
-  box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 .nav{
   height:80px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 }
 
 /* LOGO */
@@ -48,7 +48,6 @@ header{
   width:50px;
   height:50px;
   border-radius:50%;
-  object-fit:cover;
 }
 
 /* NAV */
@@ -60,15 +59,14 @@ nav{
 nav a{
   color:#fff;
   text-decoration:none;
-  font-size:16px;
-  transition:0.3s;
+  font-weight:500;
 }
 
 nav a:hover{
   color:#f43f5e;
 }
 
-/* ================= SLIDER PREMIUM ================= */
+/* ================= SLIDER ================= */
 .hero-slider{
   width:100%;
   height:calc(100vh - 80px);
@@ -79,7 +77,7 @@ nav a:hover{
 .slides{
   display:flex;
   height:100%;
-  transition:transform 0.9s cubic-bezier(0.77,0,0.175,1);
+  transition:transform 0.8s ease;
 }
 
 .slide{
@@ -90,100 +88,60 @@ nav a:hover{
   position:relative;
 }
 
-/* Overlay lebih jelas */
+/* Overlay */
 .overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
-  z-index:1;
+  background:rgba(0,0,0,0.3);
 }
 
-/* Caption */
+/* GLASS CAPTION */
 .caption{
   position:absolute;
   top:50%;
   left:8%;
   transform:translateY(-50%);
   max-width:500px;
-  z-index:2;
+
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+
+  padding:30px;
+  border-radius:20px;
   color:#fff;
 }
 
-/* ANIMASI HALUS */
+/* TEXT */
 .caption h1{
-  font-size:48px;
+  font-size:42px;
   font-weight:800;
-  line-height:1.2;
-  margin:0;
-
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
 }
 
 .caption p{
-  font-size:18px;
-  margin-top:15px;
-
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 0.8s ease;
-}
-
-/* ACTIVE SLIDE */
-.slide.active h1{
-  opacity:1;
-  transform:translateY(0);
-  transition-delay:0.3s;
-}
-
-.slide.active p{
-  opacity:1;
-  transform:translateY(0);
-  transition-delay:0.6s;
-}
-
-/* RIGHT */
-.slide-right{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-}
-
-.caption.right{
-  left:auto;
-  right:8%;
-  text-align:right;
+  margin-top:10px;
 }
 
 /* BUTTON */
 .btn-cta{
   display:inline-block;
-  margin-top:20px;
+  margin-top:15px;
   padding:12px 25px;
-  background:linear-gradient(135deg,#2563eb,#1e3a8a);
+  background:#2563eb;
   color:#fff;
   border-radius:50px;
   text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
 }
 
-.btn-cta:hover{
-  transform:translateY(-3px);
-}
-
-/* NAV BUTTON */
+/* SLIDER BUTTON */
 .slider-btn{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:rgba(255,255,255,0.85);
+  background:#fff;
   border:none;
-  padding:12px;
+  padding:10px;
   border-radius:50%;
   cursor:pointer;
-  z-index:10;
 }
 
 .prev{ left:20px; }
@@ -192,20 +150,19 @@ nav a:hover{
 /* DOTS */
 .dots{
   position:absolute;
-  bottom:20px;
+  bottom:15px;
   width:100%;
   text-align:center;
 }
 
 .dots span{
-  display:inline-block;
   width:10px;
   height:10px;
-  margin:5px;
   background:#fff;
+  display:inline-block;
+  margin:5px;
   border-radius:50%;
   opacity:0.5;
-  cursor:pointer;
 }
 
 .dots .active{
@@ -215,28 +172,61 @@ nav a:hover{
 
 /* ================= SECTION ================= */
 .section{
-  padding:70px 20px;
+  padding:60px 20px;
   text-align:center;
 }
 
-/* ================= GRID ================= */
-.grid{
-  display:flex;
-  gap:25px;
-  justify-content:center;
-  flex-wrap:wrap;
+/* ================= TENTANG ================= */
+.tentang-section{
+  padding:60px 20px;
+  background:#eef2ff;
 }
 
-.card{
+.tentang-text{
+  max-width:700px;
+  margin:auto;
+}
+
+.tentang-text p{
+  color:#444;
+  line-height:1.8;
+}
+
+/* CARD */
+.tentang-card-wrap{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.tentang-card{
+  background:#fff;
+  padding:20px;
+  border-radius:15px;
+  width:280px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= LAYANAN ================= */
+.layanan-grid{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.layanan-card{
   background:#fff;
   padding:25px;
-  border-radius:12px;
+  border-radius:15px;
   width:260px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
   transition:0.3s;
 }
 
-.card:hover{
+.layanan-card:hover{
   transform:translateY(-5px);
 }
 
@@ -246,21 +236,13 @@ form{
   margin:auto;
   display:flex;
   flex-direction:column;
-  gap:12px;
+  gap:10px;
 }
 
 input, textarea{
-  padding:12px;
+  padding:10px;
   border:1px solid #ccc;
-  border-radius:6px;
-}
-
-button{
-  background:#2563eb;
-  color:#fff;
-  border:none;
-  padding:12px;
-  cursor:pointer;
+  border-radius:5px;
 }
 
 /* ================= FOOTER ================= */
@@ -274,19 +256,22 @@ footer{
 /* ================= MOBILE ================= */
 @media (max-width:767px){
 
-  header{
-    height:65px;
+  header{ height:65px; }
+  body{ padding-top:65px; }
+
+  .hero-slider{ height:65vh; }
+
+  .caption{
+    left:5%;
+    right:5%;
+    max-width:90%;
+    padding:15px;
   }
 
-  body{
-    padding-top:65px;
+  .caption h1{
+    font-size:20px;
   }
 
-  .nav{
-    height:65px;
-  }
-
-  /* NAV MOBILE */
   nav{
     position:fixed;
     top:65px;
@@ -302,55 +287,18 @@ footer{
     right:0;
   }
 
-  nav a{
-    padding:15px;
-    border-bottom:1px solid rgba(255,255,255,0.1);
-  }
-
-  /* SLIDER */
-  .hero-slider{
-    height:65vh;
-  }
-
-  .slide{
-    height:65vh;
-    background-position:left center;
-  }
-
-  .caption{
-    left:5%;
-    right:5%;
-    text-align:center;
-  }
-
-  .caption h1{
-    font-size:22px;
-  }
-
-  .caption p{
-    font-size:13px;
-  }
-
-  .btn-cta{
-    padding:8px 16px;
-    font-size:12px;
-  }
-
   .slider-btn{
     display:none;
   }
 
-  /* GRID */
-  .grid{
+  .layanan-grid,
+  .tentang-card-wrap{
     flex-direction:column;
     align-items:center;
   }
 
-  .card{
-    width:90%;
-  }
-
-  form{
+  .layanan-card,
+  .tentang-card{
     width:90%;
   }
 }
