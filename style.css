@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* ================= GLOBAL ================= */
 *{
   box-sizing:border-box;
 }
@@ -34,7 +34,6 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 15px;
 }
 
 /* LOGO */
@@ -43,7 +42,6 @@ header{
   align-items:center;
   gap:10px;
   color:#fff;
-  font-size:16px;
 }
 
 .logo img{
@@ -70,7 +68,7 @@ nav a:hover{
   color:#f43f5e;
 }
 
-/* ================= SLIDER ================= */
+/* ================= SLIDER PREMIUM ================= */
 .hero-slider{
   width:100%;
   height:calc(100vh - 80px);
@@ -81,7 +79,7 @@ nav a:hover{
 .slides{
   display:flex;
   height:100%;
-  transition:transform 0.8s ease-in-out;
+  transition:transform 0.9s cubic-bezier(0.77,0,0.175,1);
 }
 
 .slide{
@@ -89,15 +87,14 @@ nav a:hover{
   height:100%;
   background-size:cover;
   background-position:center;
-  background-repeat:no-repeat;
   position:relative;
 }
 
-/* Overlay */
+/* Overlay lebih jelas */
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.25);
+  background:linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
   z-index:1;
 }
 
@@ -112,17 +109,51 @@ nav a:hover{
   color:#fff;
 }
 
-/* TEXT */
+/* ANIMASI HALUS */
 .caption h1{
   font-size:48px;
   font-weight:800;
   line-height:1.2;
   margin:0;
+
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
 }
 
 .caption p{
   font-size:18px;
   margin-top:15px;
+
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.8s ease;
+}
+
+/* ACTIVE SLIDE */
+.slide.active h1{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:0.3s;
+}
+
+.slide.active p{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:0.6s;
+}
+
+/* RIGHT */
+.slide-right{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.caption.right{
+  left:auto;
+  right:8%;
+  text-align:right;
 }
 
 /* BUTTON */
@@ -135,6 +166,11 @@ nav a:hover{
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
+  transition:0.3s;
+}
+
+.btn-cta:hover{
+  transform:translateY(-3px);
 }
 
 /* NAV BUTTON */
@@ -142,9 +178,9 @@ nav a:hover{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  background:#fff;
+  background:rgba(255,255,255,0.85);
   border:none;
-  padding:10px;
+  padding:12px;
   border-radius:50%;
   cursor:pointer;
   z-index:10;
@@ -156,7 +192,7 @@ nav a:hover{
 /* DOTS */
 .dots{
   position:absolute;
-  bottom:15px;
+  bottom:20px;
   width:100%;
   text-align:center;
 }
@@ -169,6 +205,7 @@ nav a:hover{
   background:#fff;
   border-radius:50%;
   opacity:0.5;
+  cursor:pointer;
 }
 
 .dots .active{
@@ -178,24 +215,29 @@ nav a:hover{
 
 /* ================= SECTION ================= */
 .section{
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
 
 /* ================= GRID ================= */
 .grid{
   display:flex;
-  gap:20px;
+  gap:25px;
   justify-content:center;
   flex-wrap:wrap;
 }
 
 .card{
   background:#fff;
-  padding:20px;
-  border-radius:10px;
-  width:250px;
-  box-shadow:0 5px 10px rgba(0,0,0,0.1);
+  padding:25px;
+  border-radius:12px;
+  width:260px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
 }
 
 /* ================= FORM ================= */
@@ -204,20 +246,20 @@ form{
   margin:auto;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:12px;
 }
 
 input, textarea{
-  padding:10px;
+  padding:12px;
   border:1px solid #ccc;
-  border-radius:5px;
+  border-radius:6px;
 }
 
 button{
   background:#2563eb;
   color:#fff;
   border:none;
-  padding:10px;
+  padding:12px;
   cursor:pointer;
 }
 
@@ -232,7 +274,6 @@ footer{
 /* ================= MOBILE ================= */
 @media (max-width:767px){
 
-  /* HEADER */
   header{
     height:65px;
   }
@@ -255,7 +296,6 @@ footer{
     background:#721e49;
     flex-direction:column;
     transition:0.3s;
-    padding-top:20px;
   }
 
   nav.active{
@@ -277,11 +317,10 @@ footer{
     background-position:left center;
   }
 
-  /* CAPTION */
   .caption{
     left:5%;
     right:5%;
-    max-width:90%;
+    text-align:center;
   }
 
   .caption h1{
