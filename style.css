@@ -599,7 +599,7 @@ body{
  .slide{
     height:65vh;
     background-size:cover;
-    background-position:center top;
+    background-position:left center;
     background-repeat:no-repeat;
     background-color:#fff;
 }
