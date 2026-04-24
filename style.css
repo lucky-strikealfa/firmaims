@@ -303,10 +303,10 @@ footer{
   }
 }
 
-.slide:nth-child(1){
-  background-size: 90%;
-  background-position: right center;
-  background-repeat: no-repeat;
+.hero-slider .slides .slide:nth-child(1){
+  background-size: 90% !important;
+  background-position: right center !important;
+  background-repeat: no-repeat !important;
 }
 
 .slide:nth-child(1) .overlay{
