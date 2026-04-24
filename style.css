@@ -304,7 +304,7 @@ footer{
 }
 
 .hero-slider .slides .slide:nth-child(1){
-  background-size: cover !important;
+  background-position: right center !important;
   background-position: 85% center !important;
 }
 
