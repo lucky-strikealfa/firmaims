@@ -36,6 +36,8 @@ header{
   align-items:center;
 }
 
+
+
 /* LOGO */
 .logo{
   display:flex;
@@ -319,4 +321,21 @@ footer{
 .slide:nth-child(1){
   background-position: 85% center;
   transition: background-position 0.5s ease;
+}
+
+/* HIDE hamburger di desktop */
+.menu-toggle{
+  display:none;
+}
+
+/* MUNCULKAN hanya di mobile */
+@media (max-width:767px){
+  .menu-toggle{
+    display:block;
+    font-size:22px;
+    background:none;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+  }
 }
