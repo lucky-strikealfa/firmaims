@@ -304,9 +304,8 @@ footer{
 }
 
 .hero-slider .slides .slide:nth-child(1){
-  background-size: 90% !important;
-  background-position: right center !important;
-  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: 85% center !important;
 }
 
 .slide:nth-child(1) .overlay{
@@ -317,3 +316,7 @@ footer{
   );
 }
 
+.slide:nth-child(1){
+  background-position: 85% center;
+  transition: background-position 0.5s ease;
+}
