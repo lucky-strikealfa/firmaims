@@ -302,3 +302,18 @@ footer{
     width:90%;
   }
 }
+
+.slide:nth-child(1){
+  background-size: 90%;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.slide:nth-child(1) .overlay{
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.1)
+  );
+}
+
