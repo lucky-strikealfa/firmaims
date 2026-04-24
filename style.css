@@ -104,13 +104,12 @@ nav a:hover{
   left:8%;
   transform:translateY(-50%);
   max-width:500px;
-
   background:rgba(255,255,255,0.15);
   backdrop-filter:blur(15px);
-
   padding:30px;
   border-radius:20px;
   color:#fff;
+  z-index:2;
 }
 
 /* TEXT */
@@ -290,7 +289,8 @@ nav a:hover{
 }
 
 .layanan-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-8px);
+  box-shadow:0 20px 35px rgba(37,99,235,0.15);
 }
 
 /* ================= FORM ================= */
@@ -316,58 +316,7 @@ footer{
   padding:15px;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width:767px){
-
-  header{ height:65px; }
-  body{ padding-top:65px; }
-
-  .hero-slider{ height:65vh; }
-
-  .caption{
-    left:5%;
-    right:5%;
-    max-width:90%;
-    padding:15px;
-  }
-
-  .caption h1{
-    font-size:20px;
-  }
-
-  nav{
-    position:fixed;
-    top:65px;
-    right:-100%;
-    width:70%;
-    height:100vh;
-    background:#721e49;
-    flex-direction:column;
-    transition:0.3s;
-  }
-
-  nav.active{
-    right:0;
-  }
-
-  .slider-btn{
-    display:none;
-  }
-
-  .layanan-grid,
-  .tentang-card-wrap{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .layanan-card,
-  .tentang-card{
-    width:90%;
-  }
-}
-
 .hero-slider .slides .slide:nth-child(1){
-  background-position: right center !important;
   background-position: 85% center !important;
 }
 
@@ -389,8 +338,49 @@ footer{
   display:none;
 }
 
-/* MUNCULKAN hanya di mobile */
+/* ================= MOBILE ================= */
 @media (max-width:767px){
+
+  header{
+    height:65px;
+  }
+
+  body{
+    padding-top:65px;
+  }
+
+  .hero-slider{
+    height:65vh;
+  }
+
+  .caption{
+    left:5%;
+    right:5%;
+    max-width:90%;
+    padding:15px;
+  }
+
+  .caption h1{
+    font-size:20px;
+  }
+
+  nav{
+    position:fixed;
+    top:65px;
+    right:-100%;
+    width:70%;
+    height:100vh;
+    background:#721e49;
+    flex-direction:column;
+    transition:0.3s;
+    padding-top:30px;
+    transition: right 0.3s ease;
+  }
+
+  nav.active{
+    right:0;
+  }
+
   .menu-toggle{
     display:block;
     font-size:22px;
@@ -398,5 +388,43 @@ footer{
     border:none;
     color:#fff;
     cursor:pointer;
+  }
+
+  .slider-btn{
+    display:none;
+  }
+
+  /* layanan */
+  .layanan-grid{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .layanan-card{
+    width:90%;
+  }
+
+  /* tentang */
+  .tentang-flex{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .tentang-text h2{
+    font-size:30px;
+    text-align:center;
+  }
+
+  .tentang-text p,
+  .sub-title{
+    text-align:center;
+  }
+
+  .tentang-card-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .tentang-card{
+    width:100%;
   }
 }
