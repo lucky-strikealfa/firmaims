@@ -178,37 +178,98 @@ nav a:hover{
   text-align:center;
 }
 
-/* ================= TENTANG ================= */
+/* ================= TENTANG SECTION ================= */
 .tentang-section{
-  padding:60px 20px;
-  background:#eef2ff;
+  padding:100px 20px;
+  background:linear-gradient(135deg,#f8fbff,#eef4ff);
 }
 
-.tentang-text{
-  max-width:700px;
-  margin:auto;
+.tentang-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
 }
 
+/* SUB TITLE */
+.sub-title{
+  color:#2563eb;
+  font-size:14px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.tentang-text h2{
+  font-size:42px;
+  font-weight:800;
+  line-height:1.3;
+  margin-bottom:20px;
+  color:#111827;
+}
+
+.blue{
+  color:#2563eb;
+}
+
+/* PARAGRAPH */
 .tentang-text p{
-  color:#444;
-  line-height:1.8;
+  color:#6b7280;
+  font-size:17px;
+  line-height:1.9;
+  margin-bottom:15px;
 }
 
-/* CARD */
+/* CARD WRAPPER */
 .tentang-card-wrap{
-  display:flex;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:30px;
 }
 
+/* CARD STYLE */
 .tentang-card{
-  background:#fff;
-  padding:20px;
+  background:#ffffff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  transition:0.3s ease;
+  border:1px solid rgba(255,255,255,0.6);
+}
+
+/* Hover effect */
+.tentang-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(37,99,235,0.15);
+}
+
+/* ICON */
+.tentang-card .icon{
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#eff6ff;
   border-radius:15px;
-  width:280px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+/* TITLE CARD */
+.tentang-card h4{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
+  color:#111827;
+}
+
+/* CARD TEXT */
+.tentang-card p{
+  color:#6b7280;
+  line-height:1.7;
 }
 
 /* ================= LAYANAN ================= */
