@@ -428,3 +428,26 @@ footer{
     width:100%;
   }
 }
+
+/* posisi gambar slide mobile */
+.slide:nth-child(1){
+  background-position: 85% center !important;
+}
+
+/* PERBAIKI slide 2 agar orang berada di tengah */
+.slide:nth-child(2){
+  background-position: center center !important;
+}
+
+/* jika slide lain perlu penyesuaian */
+.slide:nth-child(3){
+  background-position: center center !important;
+}
+
+.slide:nth-child(4){
+  background-position: center center !important;
+}
+
+.slide:nth-child(5){
+  background-position: center center !important;
+}
