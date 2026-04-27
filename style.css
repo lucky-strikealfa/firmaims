@@ -441,37 +441,48 @@ footer{
 
 /* ================= VISION SECTION ================= */
 .vision-section{
-  padding:120px 20px;
-  background:#ffffff;
+  background:linear-gradient(135deg,#ffffff,#f8fbff);
+  padding:100px 20px 0;
 }
 
 .vision-flex{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
-  align-items:center;
+  align-items:stretch;
 }
 
-/* IMAGE */
+/* CONTAINER GAMBAR */
+.vision-image{
+  position:relative;
+  display:flex;
+  align-items:flex-end;   /* ⬅️ kunci nempel bawah */
+  justify-content:flex-start;
+  height:100%;
+  overflow:hidden;
+}
+
+/* GAMBAR */
 .vision-image img{
-  width:100%;
-  max-height:520px;
-  object-fit:contain; /* penting */
-  background:none; /* jaga-jaga */
-  box-shadow:none; /* opsional kalau mau clean */
-  box-shadow:none;
+  width:115%;            /* ⬅️ lebih besar & proporsional */
+  max-width:none;
+  height:auto;
+
+  object-fit:contain;
+
   display:block;
-  align-items:center;
-  justify-content:center;
+
+  background:transparent;
+  box-shadow:none;
+  border-radius:0;
+
+  transform:translateY(20px); /* ⬅️ dorong ke bawah */
+  transition:0.4s ease;
 }
 
+/* HOVER HALUS */
 .vision-image img:hover{
-  transform:translateX(-20px);
-}
-
-.vision-image img.show{
-  opacity:1;
-  transform:translateY(0);
+  transform:translateY(20px) scale(1.03);
 }
 
 /* TEXT */
@@ -488,56 +499,4 @@ footer{
   font-size:17px;
   line-height:1.9;
   margin-bottom:20px;
-}
-
-/* PREMIUM TOUCH */
-.vision-text .sub-title{
-  font-size:18px;
-  letter-spacing:3px;
-  font-weight:700;
-}
-
-/* BUTTON */
-.vision-text .btn-cta{
-  background:linear-gradient(135deg,#2563eb,#1e40af);
-  box-shadow:0 10px 25px rgba(37,99,235,0.3);
-}
-
-/* ================= VISION IMAGE CLEAN ================= */
-.vision-image{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-
-/* HAPUS SEMUA EFEK TAMBAHAN */
-.vision-image::after{
-  display:none;
-}
-
-/* GAMBAR */
-.vision-image img{
-  width:100%;
-  max-height:520px;
-  object-fit:contain;
-
-  /* ini penting biar benar-benar bersih */
-  background:transparent;
-  box-shadow:none;
-  border-radius:0;
-
-  /* bikin lebih natural */
-  display:block;
-}
-
-/* OPTIONAL: biar terlihat lebih hidup */
-.vision-image img:hover{
-  transform:translateX(-10px) scale(1.02);
-  transition:0.4s ease;
-}
-
-.vision-section{
-  background:linear-gradient(135deg,#ffffff,#f8fbff);
 }
