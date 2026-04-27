@@ -461,16 +461,18 @@ footer{
 }
 
 .vision-image img{
-  width:110%;
-  max-width:600px;
+  width:130%;
+  max-width:7000px;
   height:auto;
   object-fit:contain;
+
+  display:block;
 
   background:transparent;
   box-shadow:none;
   border-radius:0;
 
-  transform:translateY(20px);
+  transform:translateY(35px);
   transition:0.4s ease;
 }
 
