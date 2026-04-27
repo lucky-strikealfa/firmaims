@@ -90,7 +90,7 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-document.querySelectorAll(".card, .tentang, form, h2").forEach(el => {
+document.querySelectorAll(".card, .tentang, form, h2, .vision-image img").forEach(el => {
   el.classList.add("hidden");
   observer.observe(el);
 });
