@@ -455,13 +455,17 @@ footer{
 /* IMAGE */
 .vision-image img{
   width:100%;
-  border-radius:20px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.15);
-  transition:0.4s;
+  max-height:500px;
+  object-fit:contain; /* penting */
+  background:none; /* jaga-jaga */
+  box-shadow:none; /* opsional kalau mau clean */
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .vision-image img:hover{
-  transform:scale(1.03);
+  transform:translateX(-20px);
 }
 
 .vision-image img.show{
