@@ -14,7 +14,7 @@ body{
 /* ================= CONTAINER ================= */
 .container{
   width:90%;
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
 }
 
@@ -285,7 +285,7 @@ nav a:hover{
   border-radius:15px;
   width:260px;
   box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .layanan-card:hover{
@@ -314,10 +314,6 @@ footer{
   color:#fff;
   text-align:center;
   padding:15px;
-}
-
-.hero-slider .slides .slide:nth-child(1){
-  background-position: 85% center !important;
 }
 
 .slide:nth-child(1) .overlay{
@@ -372,9 +368,8 @@ footer{
     height:100vh;
     background:#721e49;
     flex-direction:column;
-    transition:0.3s;
-    padding-top:30px;
     transition: right 0.3s ease;
+    padding-top:30px;
   }
 
   nav.active{
@@ -382,12 +377,12 @@ footer{
   }
 
   .menu-toggle{
-    display:block;
-    font-size:22px;
-    background:none;
-    border:none;
-    color:#fff;
-    cursor:pointer;
+  display:block;
+  font-size:22px;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
   }
 
   .slider-btn{
@@ -427,27 +422,81 @@ footer{
   .tentang-card{
     width:100%;
   }
+
+  /* ✅ TAMBAHKAN DI SINI (VISION FIX) */
+  .vision-flex{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .vision-text{
+    text-align:center;
+  }
+
+  .vision-text h2{
+    font-size:28px;
+  }
+
 }
 
-/* posisi gambar slide mobile */
-.slide:nth-child(1){
-  background-position: 85% center !important;
+/* ================= VISION SECTION ================= */
+.vision-section{
+  padding:120px 20px;
+  background:#ffffff;
 }
 
-/* PERBAIKI slide 2 agar orang berada di tengah */
-.slide:nth-child(2){
-  background-position: center center !important;
+.vision-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
 }
 
-/* jika slide lain perlu penyesuaian */
-.slide:nth-child(3){
-  background-position: center center !important;
+/* IMAGE */
+.vision-image img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
 }
 
-.slide:nth-child(4){
-  background-position: center center !important;
+.vision-image img:hover{
+  transform:scale(1.03);
 }
 
-.slide:nth-child(5){
-  background-position: center center !important;
+.vision-image img.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* TEXT */
+.vision-text h2{
+  font-size:38px;
+  font-weight:800;
+  line-height:1.4;
+  color:#111827;
+  margin-bottom:20px;
+}
+
+.vision-text p{
+  color:#6b7280;
+  font-size:17px;
+  line-height:1.9;
+  margin-bottom:20px;
+}
+
+/* PREMIUM TOUCH */
+.vision-text .sub-title{
+  font-size:18px;
+  letter-spacing:3px;
+  font-weight:700;
+}
+
+/* BUTTON */
+.vision-text .btn-cta{
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+  box-shadow:0 10px 25px rgba(37,99,235,0.3);
 }
