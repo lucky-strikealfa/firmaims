@@ -442,7 +442,7 @@ footer{
 /* ================= VISION SECTION ================= */
 .vision-section{
   background:linear-gradient(135deg,#ffffff,#f8fbff);
-  padding:100px 20px 0;
+  padding:100px 20px 60px;
 }
 
 .vision-flex{
@@ -452,35 +452,28 @@ footer{
   align-items:stretch;
 }
 
-/* CONTAINER GAMBAR */
 .vision-image{
-  position:relative;
   display:flex;
-  align-items:flex-end;   /* ⬅️ kunci nempel bawah */
+  align-items:flex-end;
   justify-content:flex-start;
   height:100%;
   overflow:hidden;
 }
 
-/* GAMBAR */
 .vision-image img{
-  width:115%;            /* ⬅️ lebih besar & proporsional */
-  max-width:none;
+  width:110%;
+  max-width:600px;
   height:auto;
-
   object-fit:contain;
-
-  display:block;
 
   background:transparent;
   box-shadow:none;
   border-radius:0;
 
-  transform:translateY(20px); /* ⬅️ dorong ke bawah */
+  transform:translateY(20px);
   transition:0.4s ease;
 }
 
-/* HOVER HALUS */
 .vision-image img:hover{
   transform:translateY(20px) scale(1.03);
 }
@@ -499,4 +492,104 @@ footer{
   font-size:17px;
   line-height:1.9;
   margin-bottom:20px;
+}
+
+/* ================= SERVICE HIGHLIGHT ================= */
+.service-highlight{
+  padding:120px 20px;
+  background:linear-gradient(135deg,#f8fbff,#ffffff);
+}
+
+.service-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* KIRI (TEMPAT GAMBAR) */
+.service-image{
+  width:100%;
+  height:400px; /* placeholder space */
+  border-radius:20px;
+
+  /* biar keliatan estetik walau belum ada gambar */
+  background:linear-gradient(135deg,#e0e7ff,#f1f5f9);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* efek glow halus */
+.service-image::before{
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:#2563eb;
+  filter:blur(100px);
+  opacity:0.2;
+}
+
+/* kalau nanti pakai gambar */
+.service-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* TEKS */
+.service-text h2{
+  font-size:40px;
+  font-weight:800;
+  color:#111827;
+  margin-bottom:15px;
+}
+
+.highlight-text{
+  font-size:20px;
+  font-weight:600;
+  color:#2563eb;
+  margin-bottom:20px;
+}
+
+/* garis aksen */
+.line{
+  width:60px;
+  height:4px;
+  background:#2563eb;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+/* paragraf */
+.service-text p{
+  color:#6b7280;
+  font-size:17px;
+  line-height:1.8;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:767px){
+
+  .service-flex{
+    grid-template-columns:1fr;
+  }
+
+  .service-text{
+    text-align:center;
+  }
+
+  .line{
+    margin:20px auto;
+  }
+
+  .service-image{
+    height:250px;
+  }
 }
