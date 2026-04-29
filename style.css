@@ -539,10 +539,14 @@ footer{
 
 /* kalau nanti pakai gambar */
 .service-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+  width:110%;
+  height:auto;
+  object-fit:contain;
   border-radius:20px;
+  transform:translateX(-40px) translateY(30px);
+  transition:all 0.6s ease;
+
+  filter:drop-shadow(0 25px 40px rgba(0,0,0,0.15));
 }
 
 /* TEKS */
@@ -658,15 +662,20 @@ footer{
   height:220px;
   background:#2563eb;
   filter:blur(120px);
-  opacity:0.15;
+  opacity:0.25;
+  animation:floatGlow 6s ease-in-out infinite;
 }
 
 /* jika pakai gambar */
 .professional-image img{
-  width:100%;
-  height:100%;
+  width:110%;
+  height:auto;
   object-fit:cover;
   border-radius:20px;
+  transform:translateX(40px) translateY(20px);
+  transition:all 0.6s ease;
+
+  filter:drop-shadow(0 25px 40px rgba(0,0,0,0.15));
 }
 
 /* ================= MOBILE ================= */
@@ -721,7 +730,7 @@ footer{
   justify-content:center;
 
   position:relative;
-  overflow:visable;
+  overflow:visible;
 }
 
 /* glow effect */
@@ -732,15 +741,20 @@ footer{
   height:220px;
   background:#2563eb;
   filter:blur(120px);
-  opacity:0.15;
+  opacity:0.25;
+  animation:floatGlow 6s ease-in-out infinite;
 }
 
 /* kalau pakai gambar */
 .workspace-image img{
-  width:100%;
-  height:100%;
+  width:110%;
+  height:auto;
   object-fit:cover;
   border-radius:20px;
+  transform:translateX(-30px) translateY(25px);
+  transition:all 0.6s ease;
+
+  filter:drop-shadow(0 25px 40px rgba(0,0,0,0.15));
 }
 
 /* TEXT KANAN */
@@ -767,6 +781,8 @@ footer{
   margin-bottom:20px;
 }
 
+
+
 /* ================= MOBILE ================= */
 @media (max-width:767px){
 
@@ -786,4 +802,29 @@ footer{
   .workspace-text h2{
     font-size:28px;
   }
+}
+
+.service-image:hover img,
+.professional-image:hover img,
+.workspace-image:hover img{
+transform:translateX(0) translateY(0) scale(1.05);
+filter:drop-shadow(0 35px 60px rgba(0,0,0,0.25));
+}
+
+@keyframes floatGlow{
+  0%{ transform:translate(0,0); }
+  50%{ transform:translate(20px,-20px); }
+  100%{ transform:translate(0,0); }
+}
+
+.service-image,
+.professional-image,
+.workspace-image{
+  animation:floatWrap 6s ease-in-out infinite;
+}
+
+@keyframes floatWrap{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-15px); }
+  100%{ transform:translateY(0); }
 }
