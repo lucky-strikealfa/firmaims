@@ -105,7 +105,7 @@ nav a:hover{
   transform:translateY(-50%);
   max-width:500px;
   background:rgba(255,255,255,0.15);
-  backdrop-filter:blur(15px);
+  backdrop-filter:none;
   padding:30px;
   border-radius:20px;
   color:#fff;
@@ -334,111 +334,6 @@ footer{
   display:none;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width:767px){
-
-  header{
-    height:65px;
-  }
-
-  body{
-    padding-top:65px;
-  }
-
-  .hero-slider{
-    height:65vh;
-  }
-
-  .caption{
-    left:5%;
-    right:5%;
-    max-width:90%;
-    padding:15px;
-  }
-
-  .caption h1{
-    font-size:20px;
-  }
-
-  nav{
-    position:fixed;
-    top:65px;
-    right:-100%;
-    width:70%;
-    height:100vh;
-    background:#721e49;
-    flex-direction:column;
-    transition: right 0.3s ease;
-    padding-top:30px;
-  }
-
-  nav.active{
-    right:0;
-  }
-
-  .menu-toggle{
-  display:block;
-  font-size:22px;
-  background:none;
-  border:none;
-  color:#fff;
-  cursor:pointer;
-  }
-
-  .slider-btn{
-    display:none;
-  }
-
-  /* layanan */
-  .layanan-grid{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .layanan-card{
-    width:90%;
-  }
-
-  /* tentang */
-  .tentang-flex{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .tentang-text h2{
-    font-size:30px;
-    text-align:center;
-  }
-
-  .tentang-text p,
-  .sub-title{
-    text-align:center;
-  }
-
-  .tentang-card-wrap{
-    grid-template-columns:1fr;
-  }
-
-  .tentang-card{
-    width:100%;
-  }
-
-  /* ✅ TAMBAHKAN DI SINI (VISION FIX) */
-  .vision-flex{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .vision-text{
-    text-align:center;
-  }
-
-  .vision-text h2{
-    font-size:28px;
-  }
-
-}
-
 /* ================= VISION SECTION ================= */
 .vision-section{
   background:linear-gradient(135deg,#ffffff,#f8fbff);
@@ -578,26 +473,6 @@ footer{
   color:#6b7280;
   font-size:17px;
   line-height:1.8;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width:767px){
-
-  .service-flex{
-    grid-template-columns:1fr;
-  }
-
-  .service-text{
-    text-align:center;
-  }
-
-  .line{
-    margin:20px auto;
-  }
-
-  .service-image{
-    height:250px;
-  }
 }
 
 /* ================= PROFESSIONAL SECTION ================= */
@@ -939,4 +814,8 @@ footer{
     font-size:28px;
   }
 
+}
+
+.slide{
+  background-position: 75% center;
 }
