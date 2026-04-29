@@ -783,16 +783,152 @@ footer{
 
 
 
-/* ================= MOBILE ================= */
 @media (max-width:767px){
 
-  .workspace-flex{
+  /* ================= NAVBAR ================= */
+  header{
+    height:65px;
+  }
+
+  body{
+    padding-top:65px;
+  }
+
+  nav{
+    position:fixed;
+    top:65px;
+    right:-100%;
+    width:70%;
+    height:100vh;
+    background:#721e49;
+    flex-direction:column;
+    transition: right 0.3s ease;
+    padding-top:30px;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  .menu-toggle{
+    display:block;
+    font-size:22px;
+    background:none;
+    border:none;
+    color:#fff;
+  }
+
+  /* ================= SLIDER FIX ================= */
+  .hero-slider{
+    height:65vh;
+  }
+
+  .slide{
+    background-position: right center;
+  }
+
+  .caption{
+    top:auto;
+    bottom:20px;
+    left:5%;
+    right:5%;
+    transform:none;
+    max-width:90%;
+    padding:15px;
+    background: rgba(0,0,0,0.4);
+  }
+
+  .caption h1{
+    font-size:18px;
+  }
+
+  .caption p{
+    font-size:13px;
+  }
+
+  .slider-btn{
+    display:none;
+  }
+
+  /* ================= TENTANG ================= */
+  .tentang-flex{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .tentang-text h2{
+    font-size:30px;
+    text-align:center;
+  }
+
+  .tentang-text p,
+  .sub-title{
+    text-align:center;
+  }
+
+  .tentang-card-wrap{
+    grid-template-columns:1fr;
+  }
+
+  /* ================= VISION ================= */
+  .vision-flex{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .vision-text{
+    text-align:center;
+  }
+
+  .vision-text h2{
+    font-size:28px;
+  }
+
+  /* ================= LAYANAN ================= */
+  .layanan-grid{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .layanan-card{
+    width:90%;
+  }
+
+  /* ================= SERVICE ================= */
+  .service-flex{
+    grid-template-columns:1fr;
+  }
+
+  .service-text{
+    text-align:center;
+  }
+
+  .service-image{
+    height:250px;
+  }
+
+  .line{
+    margin:20px auto;
+  }
+
+  /* ================= PROFESSIONAL ================= */
+  .professional-flex{
     grid-template-columns:1fr;
     text-align:center;
   }
 
-  .workspace-text .line{
-    margin:20px auto;
+  .professional-image{
+    height:250px;
+  }
+
+  .professional-text h2{
+    font-size:28px;
+  }
+
+  /* ================= WORKSPACE ================= */
+  .workspace-flex{
+    grid-template-columns:1fr;
+    text-align:center;
   }
 
   .workspace-image{
@@ -802,67 +938,5 @@ footer{
   .workspace-text h2{
     font-size:28px;
   }
-}
 
-.service-image:hover img,
-.professional-image:hover img,
-.workspace-image:hover img{
-transform:translateX(0) translateY(0) scale(1.05);
-filter:drop-shadow(0 35px 60px rgba(0,0,0,0.25));
-}
-
-@keyframes floatGlow{
-  0%{ transform:translate(0,0); }
-  50%{ transform:translate(20px,-20px); }
-  100%{ transform:translate(0,0); }
-}
-
-.service-image,
-.professional-image,
-.workspace-image{
-  animation:floatWrap 6s ease-in-out infinite;
-}
-
-@keyframes floatWrap{
-  0%{ transform:translateY(0); }
-  50%{ transform:translateY(-15px); }
-  100%{ transform:translateY(0); }
-}
-
-.wa-float{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  width:60px;
-  height:60px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-  z-index:9999;
-  transition:0.3s ease;
-  text-decoration:none;
-}
-
-.wa-float img{
-  width:32px;
-  height:32px;
-}
-
-/* Hover effect */
-.wa-float:hover{
-  transform:scale(1.1);
-  box-shadow:0 15px 35px rgba(0,0,0,0.3);
-}
-
-.wa-float{
-  animation:waPulse 2s infinite;
-}
-
-@keyframes waPulse{
-  0%{ box-shadow:0 0 0 0 rgba(37,211,102,0.6); }
-  70%{ box-shadow:0 0 0 15px rgba(37,211,102,0); }
-  100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
 }
