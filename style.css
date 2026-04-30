@@ -326,20 +326,21 @@ footer{
 }
 
 /* HIDE hamburger di desktop */
-@media (max-width:767px){
-  .menu-toggle{
-    display:block;
-  }
-}
-
 .menu-toggle{
   display:none;
   background:none;
   border:none;
-  font-size:26px;
+  font-size:28px;
   color:#fff;
   cursor:pointer;
   z-index:10001;
+}
+
+/* MOBILE ONLY */
+@media (max-width:767px){
+  .menu-toggle{
+    display:block;
+  }
 }
 
 /* ================= VISION SECTION ================= */
@@ -663,8 +664,6 @@ footer{
   border-radius:10px;
   margin-bottom:20px;
 }
-
-
 
 @media (max-width:767px){
 
