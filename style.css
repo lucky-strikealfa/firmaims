@@ -330,8 +330,10 @@ footer{
 }
 
 /* HIDE hamburger di desktop */
-.menu-toggle{
-  display:none;
+@media (max-width:767px){
+  .menu-toggle{
+    display:block;
+  }
 }
 
 /* ================= VISION SECTION ================= */
@@ -677,7 +679,7 @@ footer{
   opacity:0;
   visibility:hidden;
   transition:0.3s;
-  z-index:999;
+  z-index:9998;
 }
 
 .nav-overlay.active{
@@ -701,7 +703,7 @@ nav{
   padding:80px 25px;
 
   transition:0.4s cubic-bezier(0.77, 0, 0.18, 1);
-  z-index:1000;
+  z-index:9999;
 
   box-shadow:-10px 0 30px rgba(0,0,0,0.2);
   border-left:1px solid rgba(255,255,255,0.1);
@@ -895,6 +897,9 @@ nav a:hover{
 nav a{
   opacity:0;
   transform:translateX(20px);
+}
+
+nav.active a{
   animation:menuFade 0.4s forwards;
 }
 
