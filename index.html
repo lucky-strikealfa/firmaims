@@ -21,25 +21,25 @@
   
 <header>
   <div class="container nav">
-
+    
     <div class="logo">
-    <img src="assets/logofirma.png" alt="Logo IMS">
-    <span class="logo-text">Firma Idola Makmur Solusindo</span>
-</div>
+      <img src="logo.png">
+      <span>Brand</span>
+    </div>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-      ☰
-    </button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <nav id="menu">
       <a href="#">Home</a>
-      <a href="#layanan">Layanan</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#kontak">Kontak</a>
+      <a href="#">Tentang</a>
+      <a href="#">Layanan</a>
+      <a href="#">Kontak</a>
     </nav>
 
   </div>
 </header>
+
+<div class="nav-overlay" onclick="toggleMenu()"></div>
 
 <div class="nav-overlay" id="overlay"></div>
 
