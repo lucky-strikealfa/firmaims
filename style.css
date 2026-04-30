@@ -665,13 +665,6 @@ footer{
   margin-bottom:20px;
 }
 
-@media (max-width:767px){
-    .slide{
-    background-position: right center;
-  }
-
-}
-
   /* ================= NAVBAR ================= */
   header{
     height:65px;
@@ -945,10 +938,15 @@ img{
 }
 
 
-@media (max-width:767px){
 
-  .slide:nth-child(1){
-    background-position: 80% center;
+
+  .hero-slider{
+    height:65vh;
+  }
+
+  .slide{
+    background-size: cover;
+    background-position: 80% center; /* fokus ke orang */
   }
 
   .slide:nth-child(2){
@@ -959,22 +957,14 @@ img{
     background-position: 75% center;
   }
 
-}
-
-.slide{
-  position:relative;
-  overflow:hidden;
-}
-
-.slide-img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:right center; /* fokus ke orang */
-}
-
-@media (max-width:767px){
-  .slide{
-    background-position:right center;
+  .caption{
+    bottom:20px;
+    left:5%;
+    right:5%;
+    top:auto;
+    transform:none;
+    padding:15px;
+    background:rgba(0,0,0,0.4);
   }
+
 }
