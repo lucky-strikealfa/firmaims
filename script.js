@@ -117,10 +117,3 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 });
-
-<script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".nav-overlay").classList.toggle("active");
-}
-</script>
