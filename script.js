@@ -117,3 +117,8 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 });
+
+function start(){
+  stop(); // penting biar tidak double interval
+  interval = setInterval(next, 4000);
+}
