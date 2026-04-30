@@ -68,6 +68,8 @@ nav a:hover{
   color:#f43f5e;
 }
 
+<div class="nav-overlay" id="overlay"></div>
+
 /* ================= SLIDER ================= */
 .hero-slider{
   width:100%;
@@ -669,30 +671,66 @@ footer{
     padding-top:65px;
   }
 
-  nav{
-    position:fixed;
-    top:65px;
-    right:-100%;
-    width:70%;
-    height:100vh;
-    background:#721e49;
-    flex-direction:column;
-    transition: right 0.3s ease;
-    padding-top:30px;
-  }
+ .nav-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(4px);
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:999;
+}
 
-  nav.active{
-    right:0;
-  }
+.nav-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
 
-  .menu-toggle{
-    display:block;
-    font-size:22px;
-    background:none;
-    border:none;
-    color:#fff;
-  }
+/* MENU */
+nav{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:75%;
+  max-width:320px;
+  height:100vh;
 
+  background:rgba(114,30,73,0.85);
+  backdrop-filter:blur(12px);
+
+  flex-direction:column;
+  padding:80px 25px;
+
+  transition:0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  z-index:1000;
+
+  box-shadow:-10px 0 30px rgba(0,0,0,0.2);
+  border-left:1px solid rgba(255,255,255,0.1);
+}
+
+/* ACTIVE */
+nav.active{
+  right:0;
+}
+
+/* MENU ITEM */
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:500;
+  padding:12px 15px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+/* HOVER EFFECT */
+nav a:hover{
+  background:rgba(255,255,255,0.1);
+  transform:translateX(5px);
+  color:#f43f5e;
+}
   /* ================= SLIDER FIX ================= */
   .hero-slider{
     height:65vh;
