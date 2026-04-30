@@ -68,8 +68,6 @@ nav a:hover{
   color:#f43f5e;
 }
 
-<div class="nav-overlay" id="overlay"></div>
-
 /* ================= SLIDER ================= */
 .hero-slider{
   width:100%;
@@ -892,4 +890,22 @@ nav a:hover{
   0%{ box-shadow:0 0 0 0 rgba(37,211,102,0.6); }
   70%{ box-shadow:0 0 0 15px rgba(37,211,102,0); }
   100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
+}
+
+nav a{
+  opacity:0;
+  transform:translateX(20px);
+  animation:menuFade 0.4s forwards;
+}
+
+nav.active a:nth-child(1){ animation-delay:0.1s; }
+nav.active a:nth-child(2){ animation-delay:0.2s; }
+nav.active a:nth-child(3){ animation-delay:0.3s; }
+nav.active a:nth-child(4){ animation-delay:0.4s; }
+
+@keyframes menuFade{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
 }
