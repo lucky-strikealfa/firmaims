@@ -339,6 +339,7 @@ footer{
   font-size:26px;
   color:#fff;
   cursor:pointer;
+  z-index:10001;
 }
 
 /* ================= VISION SECTION ================= */
@@ -708,7 +709,7 @@ nav{
   padding:80px 25px;
 
   transition:0.4s cubic-bezier(0.77, 0, 0.18, 1);
-  z-index:9999;
+  z-index:10000;
 
   box-shadow:-10px 0 30px rgba(0,0,0,0.2);
   border-left:1px solid rgba(255,255,255,0.1);
