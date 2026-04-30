@@ -68,29 +68,45 @@ slider.addEventListener("mouseleave", start);
 
 showSlide();
 
+// ================= MENU MOBILE =================
 const toggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 const overlay = document.getElementById("overlay");
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  overlay.classList.toggle("active");
-});
+// OPEN MENU
+if(toggle && menu && overlay){
 
-overlay.addEventListener("click", () => {
-  menu.classList.remove("active");
-  overlay.classList.remove("active");
-});
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
+    // animasi body biar tidak scroll
+    document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "auto";
   });
-});
 
-document.querySelectorAll(".card, .tentang, form, h2, .vision-image img").forEach(el => {
-  el.classList.add("hidden");
-  observer.observe(el);
+  // CLOSE via overlay
+  overlay.addEventListener("click", () => {
+    closeMenu();
+  });
+
+  // CLOSE saat klik link
+  document.querySelectorAll("#menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  function closeMenu(){
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+}
+
+window.addEventListener("scroll", () => {
+  if(menu.classList.contains("active")){
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
 });
