@@ -478,7 +478,9 @@ footer{
   background:#721e49;
   color:#fff;
   text-align:center;
-  padding:15px;
+  padding:30px 20px;
+  font-size:14px;
+  letter-spacing:0.5px;
 }
 
 .slide:nth-child(1) .overlay{
@@ -911,6 +913,8 @@ nav a:hover{
   }
 
   .slide{
+    background-size:contain;
+    background-repeat:no-repeat;
     background-position: right center;
   }
 
@@ -1112,3 +1116,36 @@ nav a:hover{
   }
 
 }
+
+form button{
+  padding:14px;
+  border:none;
+  background:#2563eb;
+  color:#fff;
+  font-weight:600;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+form button:hover{
+  background:#1d4ed8;
+}
+
+.section h2{
+  font-size:42px;
+  font-weight:800;
+  color:#111827;
+  margin-bottom:50px;
+}
+
+@media(max-width:767px){
+
+  .slide{
+    background-size:cover;
+    background-position:70% center;
+  }
+
+}
+
+
