@@ -12,13 +12,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-
-<script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
-  document.querySelector(".nav-overlay").classList.toggle("active");
-}
-</script>
   
 <body>
 
@@ -34,13 +27,15 @@ function toggleMenu(){
      <span class="logo-text">Firma Idola Makmur Solusindo</span>
     </div>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<button id="menu-toggle" class="menu-toggle">
+  ☰
+</button>
 
     <nav id="menu">
       <a href="#">Home</a>
-      <a href="#">Tentang</a>
-      <a href="#">Layanan</a>
-      <a href="#">Kontak</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#kontak">Kontak</a>
     </nav>
 
   </div>
