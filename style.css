@@ -1151,4 +1151,28 @@ form button:hover{
 
 }
 
+.logo-text{
+  font-size:18px;
+  font-weight:700;
+  line-height:1.2;
+}
 
+@media(max-width:767px){
+
+  .logo-text{
+    font-size:13px;
+    max-width:180px;
+  }
+
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
