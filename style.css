@@ -911,9 +911,10 @@ nav a:hover{
   color:#f43f5e;
 }
   /* ================= SLIDER FIX ================= */
-  .hero-slider{
-    height:65vh;
-  }
+.hero-slider{
+  height:58vh;
+  min-height:480px;
+}
 
   .slide{
     background-size:contain;
