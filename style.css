@@ -499,20 +499,44 @@ footer{
   transition: background-position 0.5s ease;
 }
 
-/* HIDE hamburger di desktop */
-@media (max-width:767px){
-  .menu-toggle{
-    display:block;
-  }
-}
+/* ================= HAMBURGER MENU ================= */
 
+/* default desktop */
 .menu-toggle{
   display:none;
-  background:none;
+
+  width:46px;
+  height:46px;
+
   border:none;
-  font-size:26px;
+  border-radius:14px;
+
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(10px);
+
   color:#fff;
+  font-size:24px;
   cursor:pointer;
+
+  align-items:center;
+  justify-content:center;
+
+  transition:0.3s ease;
+}
+
+/* hover desktop */
+.menu-toggle:hover{
+  background:rgba(255,255,255,0.2);
+  transform:scale(1.05);
+}
+
+/* tampil di HP */
+@media (max-width:767px){
+
+  .menu-toggle{
+    display:flex;
+  }
+
 }
 
 /* ================= VISION SECTION ================= */
@@ -1176,4 +1200,79 @@ form button:hover{
 .reveal.active{
   opacity:1;
   transform:translateY(0);
+}
+
+/* ================= MOBILE NAVBAR ================= */
+@media (max-width:767px){
+
+  .nav{
+    height:65px;
+  }
+
+  nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:78%;
+    max-width:320px;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    padding:90px 25px;
+
+    background:rgba(17,24,39,0.92);
+    backdrop-filter:blur(18px);
+
+    transition:0.45s ease;
+    z-index:9999;
+
+    border-left:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+      -10px 0 40px rgba(0,0,0,0.25);
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  nav a{
+    font-size:17px;
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.03);
+
+    transition:0.3s ease;
+  }
+
+  nav a:hover{
+    background:rgba(37,99,235,0.2);
+    color:#60a5fa;
+    transform:translateX(6px);
+  }
+
+  .nav-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(4px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.3s;
+    z-index:9998;
+  }
+
+  .nav-overlay.active{
+    opacity:1;
+    visibility:visible;
+  }
+
 }
