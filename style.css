@@ -70,7 +70,9 @@ nav a:hover{
   min-height:650px;
   overflow:hidden;
   position:relative;
-  background:#f3f4f6/* ================= HERO SLIDER ================= */
+  background:#f3f4f6
+    
+/* ================= HERO SLIDER ================= */
     to right,
     rgba(0,0,0,0.55),
     rgba(0,0,0,0.15)
@@ -568,6 +570,7 @@ footer{
 }
 
 /* ================= MOBILE ================= */
+@media (max-width:767px){
     background:rgba(255,255,255,0.12);
     color:#fff;
 
