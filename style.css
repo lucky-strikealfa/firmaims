@@ -887,7 +887,7 @@ form button:hover{
 @media(max-width:767px){
 .cta-image img{
   max-width:280px;
-  transform:scale(1.05);
+  transform:scale(1.18);
 }
 
 .socials{
@@ -927,8 +927,10 @@ form button:hover{
     max-width:320px;
     height:100vh;
 
-    background:#111827;
-
+    background:rgba(17,24,39,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+     
     flex-direction:column;
 
     padding:90px 25px;
@@ -1148,19 +1150,43 @@ form button:hover{
 }
 
 .cta-image{
+  position:relative;
   display:flex;
   align-items:flex-end;
   justify-content:center;
 }
 
 .cta-image img{
-  width:100%;
-  max-width:420px;
-
-  transform:scale(1.18);
-
-  transform-origin:bottom center;
+  width:115%;
+  max-width:none;
+  height:auto;
 
   object-fit:contain;
+
+  transform:scale(1.28);
+
+  transform-origin:bottom center;
+}
+.socials a:nth-child(1):hover{
+  color:#E1306C;
 }
 
+.socials a:nth-child(2):hover{
+  color:#0A66C2;
+}
+
+.socials a:nth-child(3):hover{
+  color:#1877F2;
+}
+
+.socials a:nth-child(4):hover{
+  color:#000;
+}
+
+.socials a:nth-child(5):hover{
+  color:#FF0000;
+}
+
+.socials a:nth-child(6):hover{
+  color:#000;
+}
