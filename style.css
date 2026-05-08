@@ -1688,3 +1688,34 @@ body{
   font-family:'Poppins', sans-serif;
   overflow-x:hidden;
 }
+
+
+.socials{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.socials a{
+  width:45px;
+  height:45px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#fff;
+  color:#111827;
+
+  transition:0.3s ease;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.socials a:hover{
+  transform:translateY(-5px);
+  background:#2563eb;
+  color:#fff;
+}
