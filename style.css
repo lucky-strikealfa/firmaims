@@ -885,7 +885,15 @@ form button:hover{
    MOBILE
 ========================================================= */
 @media(max-width:767px){
+.cta-image img{
+  max-width:280px;
+  transform:scale(1.05);
+}
 
+.socials{
+  justify-content:center;
+}
+  
   body{
     padding-top:65px;
   }
@@ -1037,6 +1045,7 @@ form button:hover{
     grid-template-columns:1fr;
     padding:40px 25px;
     text-align:center;
+    min-height:440px;
   }
 
   .cta-content h2{
@@ -1058,3 +1067,100 @@ form button:hover{
   }
 
 }
+
+/* ================= SOCIAL ICON ================= */
+.socials{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-top:25px;
+}
+
+.socials a{
+  position:relative;
+
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  color:#4b5563;
+
+  transition:.3s ease;
+
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.socials a svg{
+  width:22px;
+  height:22px;
+}
+
+.socials a:hover{
+  transform:translateY(-5px) scale(1.08);
+  color:#2563eb;
+
+  box-shadow:0 15px 30px rgba(37,99,235,.25);
+}
+
+/* TOOLTIP */
+.socials a::after{
+  content:attr(aria-label);
+
+  position:absolute;
+
+  bottom:60px;
+  left:50%;
+
+  transform:translateX(-50%) translateY(10px);
+
+  background:#111827;
+  color:#fff;
+
+  padding:8px 14px;
+
+  border-radius:10px;
+
+  font-size:13px;
+  font-weight:600;
+
+  white-space:nowrap;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:.3s ease;
+
+  pointer-events:none;
+}
+
+.socials a:hover::after{
+  opacity:1;
+  visibility:visible;
+
+  transform:translateX(-50%) translateY(0);
+}
+
+.cta-image{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.cta-image img{
+  width:100%;
+  max-width:420px;
+
+  transform:scale(1.18);
+
+  transform-origin:bottom center;
+
+  object-fit:contain;
+}
+
