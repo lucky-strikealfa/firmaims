@@ -70,13 +70,7 @@ nav a:hover{
   min-height:650px;
   overflow:hidden;
   position:relative;
-  background:#f3f4f6
-    
-/* ================= HERO SLIDER ================= */
-    to right,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.15)
-  );
+  background:#f3f4f6;
 }
 
 .caption{
@@ -569,18 +563,6 @@ footer{
   transform:scale(1.05);
 }
 
-/* ================= MOBILE ================= */
-@media (max-width:767px){
-    background:rgba(255,255,255,0.12);
-    color:#fff;
-
-    align-items:center;
-    justify-content:center;
-
-    font-size:24px;
-    cursor:pointer;
-  }
-
   nav{
     position:fixed;
     top:0;
@@ -967,10 +949,6 @@ footer{
   border-radius:10px;
   margin-bottom:20px;
 }
-
-
-
-@media (max-width:767px){
 
   /* ================= NAVBAR ================= */
   header{
