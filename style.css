@@ -819,60 +819,7 @@ form button:hover{
   drop-shadow(0 20px 35px rgba(0,0,0,.25));
 }
 
-/* =========================================================
-   MOBILE CTA
-========================================================= */
-@media(max-width:767px){
 
-  .cta-box{
-    grid-template-columns:1fr;
-
-    text-align:center;
-
-    padding:45px 25px 0;
-
-    gap:10px;
-  }
-
-  .cta-content h2{
-    font-size:34px;
-  }
-
-  .cta-content p{
-    font-size:15px;
-  }
-
-  .cta-buttons{
-    justify-content:center;
-  }
-
-  .cta-image{
-    margin-top:20px;
-  }
-
-  .cta-image img{
-    max-width:290px;
-
-    top:0;
-  }
-
-  .cta-box::before{
-    width:250px;
-    height:250px;
-
-    top:-120px;
-    right:-80px;
-  }
-
-  .cta-box::after{
-    width:180px;
-    height:180px;
-
-    left:-60px;
-    bottom:-80px;
-  }
-
-}
 
 /* ================= SOCIAL ICON ================= */
 .socials{
@@ -1069,41 +1016,6 @@ form button:hover{
   color:#6b7280;
 }
 
-/* =========================================================
-   MOBILE FOOTER
-========================================================= */
-@media(max-width:767px){
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .footer-address{
-    border:none;
-    padding:0;
-  }
-
-  .footer-links{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
-
-  .footer-brand,
-  .footer-address,
-  .footer-links{
-    text-align:center;
-  }
-
-  .footer-logo{
-    justify-content:center;
-  }
-
-  .socials{
-    justify-content:center;
-  }
-
-}
 
 /* =========================================================
    WHATSAPP FLOAT
@@ -1139,4 +1051,314 @@ form button:hover{
   width:34px;
   height:34px;
   object-fit:contain;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE FIX
+========================================================= */
+@media screen and (max-width:768px){
+
+  body{
+    padding-top:70px;
+  }
+
+  .container{
+    width:92%;
+  }
+
+  /* ================= HEADER ================= */
+
+  header{
+    height:70px;
+  }
+
+  .nav-wrapper{
+    height:70px;
+  }
+
+  .logo img{
+    width:40px;
+  }
+
+  .logo-text{
+    font-size:14px;
+    line-height:1.3;
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  nav{
+    position:fixed;
+
+    top:70px;
+    right:-100%;
+
+    width:260px;
+    height:100vh;
+
+    background:#111827;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:35px 25px;
+
+    transition:.4s ease;
+
+    z-index:99999;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  nav a{
+    font-size:18px;
+  }
+
+  /* ================= HERO ================= */
+
+  .hero-slider{
+    height:auto;
+    min-height:620px;
+  }
+
+  .slide{
+    background-position:center center !important;
+  }
+
+  .overlay{
+    background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.65) 0%,
+      rgba(0,0,0,.35) 100%
+    );
+  }
+
+  .caption{
+    left:20px;
+    right:20px;
+
+    top:52%;
+
+    max-width:none;
+
+    padding:28px 22px;
+
+    border-radius:24px;
+  }
+
+  .caption h1{
+    font-size:34px;
+    line-height:1.3;
+
+    margin-bottom:14px;
+  }
+
+  .caption p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .btn-cta{
+    padding:13px 24px;
+    font-size:14px;
+  }
+
+  .slider-btn{
+    width:42px;
+    height:42px;
+
+    font-size:16px;
+  }
+
+  .prev{
+    left:10px;
+  }
+
+  .next{
+    right:10px;
+  }
+
+  /* ================= SECTION ================= */
+
+  .section,
+  .vision-section,
+  .professional-section,
+  .workspace-section,
+  .service-highlight,
+  .tentang-section,
+  .cta-section{
+    padding:70px 0;
+  }
+
+  .section h2,
+  .tentang-text h2,
+  .vision-text h2,
+  .professional-text h2,
+  .workspace-text h2,
+  .service-text h2,
+  .cta-content h2{
+    font-size:30px;
+    line-height:1.4;
+  }
+
+  .tentang-text p,
+  .vision-text p,
+  .professional-text p,
+  .workspace-text p,
+  .service-text p,
+  .cta-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  /* ================= GRID 1 KOLOM ================= */
+
+  .tentang-flex,
+  .vision-flex,
+  .professional-flex,
+  .workspace-flex,
+  .service-flex,
+  .cta-box{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .tentang-card-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .layanan-grid{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .layanan-card{
+    width:100%;
+  }
+
+  /* ================= IMAGE ================= */
+
+  .vision-image img,
+  .professional-image img,
+  .workspace-image img,
+  .service-image img{
+    max-width:100%;
+  }
+
+  /* ================= CTA ================= */
+
+  .cta-box{
+    padding:40px 20px 0;
+
+    text-align:center;
+
+    border-radius:28px;
+  }
+
+  .cta-buttons{
+    justify-content:center;
+  }
+
+  .btn-white,
+  .btn-outline{
+    width:100%;
+
+    text-align:center;
+  }
+
+  .cta-image{
+    margin-top:10px;
+  }
+
+  .cta-image img{
+    max-width:240px;
+
+    top:0;
+  }
+
+  .cta-box::before{
+    width:220px;
+    height:220px;
+
+    top:-100px;
+    right:-80px;
+  }
+
+  .cta-box::after{
+    width:160px;
+    height:160px;
+
+    left:-50px;
+    bottom:-70px;
+  }
+
+  .cta-content::before{
+    display:none;
+  }
+
+  /* ================= FOOTER ================= */
+
+  .footer-modern{
+    padding:50px 0 20px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+    text-align:center;
+  }
+
+  .footer-logo{
+    justify-content:center;
+  }
+
+  .footer-logo h3{
+    font-size:22px;
+  }
+
+  .footer-brand h4{
+    font-size:18px;
+  }
+
+  .footer-address{
+    border:none;
+
+    padding:0;
+  }
+
+  .footer-links{
+    grid-template-columns:1fr;
+
+    gap:25px;
+  }
+
+  .socials{
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:14px;
+  }
+
+  /* ================= WA ================= */
+
+  .wa-float{
+    width:58px;
+    height:58px;
+
+    right:18px;
+    bottom:18px;
+  }
+
+  .wa-float img{
+    width:30px;
+    height:30px;
+  }
+
 }
