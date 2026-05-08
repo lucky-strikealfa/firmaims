@@ -101,3 +101,10 @@ document.querySelectorAll('#menu a').forEach(link => {
 window.addEventListener('load', () => {
   window.scrollTo(0,0);
 });
+
+// LOAD FOOTER
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
