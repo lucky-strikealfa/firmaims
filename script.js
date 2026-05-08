@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    updateSlider();
-  }
+  updateSlider();
+});
 
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
@@ -49,3 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
   window.scrollTo(0,0);
 
 });
+
+function updateSlider(){
+  document.querySelector('.slides').style.transform =
+    `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide(){
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider();
+}
+
+function prevSlide(){
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlider();
+}
+
+
