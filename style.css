@@ -976,3 +976,131 @@ form button:hover{
 .socials a:nth-child(6):hover{
   color:#000;
 }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer-modern{
+  background:#f3f4f6;
+  padding:70px 20px 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr 1fr;
+
+  gap:50px;
+
+  padding-top:50px;
+
+  border-top:1px solid #d1d5db;
+}
+
+.footer-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:25px;
+}
+
+.footer-logo img{
+  width:50px;
+  height:50px;
+}
+
+.footer-logo h3{
+  font-size:28px;
+  font-weight:800;
+}
+
+.footer-brand h4{
+  margin-top:10px;
+  font-size:22px;
+}
+
+.footer-address{
+  padding:0 40px;
+
+  border-left:1px solid #d1d5db;
+  border-right:1px solid #d1d5db;
+}
+
+.footer-address p{
+  line-height:1.9;
+  color:#374151;
+  margin-bottom:18px;
+}
+
+.footer-links{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.footer-links h4{
+  margin-bottom:16px;
+  font-size:18px;
+}
+
+.footer-links a{
+  display:block;
+
+  margin-bottom:12px;
+
+  text-decoration:none;
+  color:#4b5563;
+
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#2563eb;
+}
+
+.footer-bottom{
+  margin-top:40px;
+  padding-top:20px;
+
+  text-align:center;
+
+  border-top:1px solid #d1d5db;
+
+  color:#6b7280;
+}
+
+/* =========================================================
+   MOBILE FOOTER
+========================================================= */
+@media(max-width:767px){
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .footer-address{
+    border:none;
+    padding:0;
+  }
+
+  .footer-links{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .footer-brand,
+  .footer-address,
+  .footer-links{
+    text-align:center;
+  }
+
+  .footer-logo{
+    justify-content:center;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+}
