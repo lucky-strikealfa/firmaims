@@ -689,65 +689,99 @@ form button:hover{
     font-size:17px;
   }
 
-  /* HERO */
+ /* =========================================================
+   MOBILE HERO PREMIUM
+========================================================= */
 
-  .hero-slider,
-  .slide{
-    height:100vh;
-    min-height:auto;
-  }
+.hero-slider,
+.slide{
+  height:100vh;
+  min-height:720px;
+}
 
-  .slide{
-    background-position:center center !important;
-  }
+.slide{
+  background-size:cover;
+  background-position:72% bottom !important;
+}
 
-  .overlay{
-    background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.72) 0%,
-      rgba(0,0,0,.40) 100%
-    );
-  }
+/* supaya orang terlihat */
+.slide::after{
+  content:'';
+  position:absolute;
+  inset:0;
 
-  .caption{
-    left:16px;
-    right:16px;
+  background:
+  linear-gradient(
+    180deg,
+    rgba(2,6,23,.25) 0%,
+    rgba(2,6,23,.45) 55%,
+    rgba(2,6,23,.88) 100%
+  );
 
-    top:52%;
+  z-index:1;
+}
 
-    transform:translateY(-50%);
+.overlay{
+  background:none;
+}
 
-    max-width:none;
+.caption{
+  left:18px;
+  right:18px;
 
-    padding:24px 20px;
+  top:auto;
+  bottom:85px;
 
-    border-radius:22px;
+  transform:none;
 
-    text-align:center;
+  max-width:none;
 
-    background:rgba(0,0,0,.30);
-    backdrop-filter:blur(10px);
-  }
+  padding:28px 24px;
 
-  .caption h1{
-    font-size:32px;
-    line-height:1.25;
-  }
+  border-radius:28px;
 
-  .caption p{
-    font-size:15px;
-    line-height:1.7;
-  }
+  text-align:left;
 
-  .btn-cta{
-    padding:13px 24px;
-    font-size:14px;
-  }
+  background:
+  linear-gradient(
+    135deg,
+    rgba(17,24,39,.80),
+    rgba(17,24,39,.55)
+  );
 
-  .slider-btn{
-    display:none;
-  }
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  z-index:5;
+}
+
+.caption h1{
+  font-size:42px;
+  line-height:1.1;
+
+  margin-bottom:16px;
+
+  letter-spacing:-1px;
+}
+
+.caption p{
+  font-size:15px;
+  line-height:1.7;
+  color:rgba(255,255,255,.82);
+}
+
+.btn-cta{
+  margin-top:22px;
+
+  padding:14px 24px;
+
+  font-size:14px;
+}
+
+.slider-btn{
+  display:none;
+}
 
   /* SECTION */
 
@@ -871,13 +905,31 @@ form button:hover{
    HERO SLIDER PROFESSIONAL
 ========================================================= */
 
+/* =========================================================
+   HERO SLIDER PREMIUM
+========================================================= */
 .hero-slider{
   position:relative;
   width:100%;
   height:100vh;
   min-height:720px;
   overflow:hidden;
-  background:#0f172a;
+
+  background:
+  radial-gradient(circle at top left,#123d91 0%,#071229 45%,#020617 100%);
+}
+
+.hero-slider::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle at 15% 20%,rgba(37,99,235,.35),transparent 30%),
+  radial-gradient(circle at 85% 30%,rgba(96,165,250,.18),transparent 25%),
+  radial-gradient(circle at 50% 80%,rgba(37,99,235,.12),transparent 30%);
+
+  z-index:1;
 }
 
 .slides{
@@ -889,28 +941,15 @@ form button:hover{
 .slide{
   position:relative;
   min-width:100%;
+  flex:0 0 100%;
   height:100%;
 
-  background-size:cover;
+  background-size:contain;
   background-repeat:no-repeat;
-
-  /* fokus wajah/orang */
-  background-position:center top;
+  background-position:right bottom;
 }
 
-/* supaya orang tidak kepotong */
-.slide:nth-child(1){
-  background-position:78% center;
-}
-
-.slide:nth-child(2){
-  background-position:center center;
-}
-
-.slide:nth-child(3){
-  background-position:75% center;
-}
-
+/* overlay */
 .overlay{
   position:absolute;
   inset:0;
@@ -919,15 +958,16 @@ form button:hover{
   linear-gradient(
     90deg,
     rgba(2,6,23,.88) 0%,
-    rgba(2,6,23,.55) 45%,
-    rgba(2,6,23,.18) 100%
+    rgba(2,6,23,.55) 38%,
+    rgba(2,6,23,.10) 100%
   );
+
+  z-index:1;
 }
 
 /* =========================================================
    HERO CAPTION
 ========================================================= */
-
 .caption{
   position:absolute;
   top:50%;
@@ -935,31 +975,39 @@ form button:hover{
 
   transform:translateY(-50%);
 
-  max-width:620px;
+  max-width:650px;
 
-  padding:50px;
+  padding:55px;
 
-  border-radius:32px;
+  border-radius:36px;
 
-  background:rgba(255,255,255,.08);
-
-  border:1px solid rgba(255,255,255,.12);
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,.10),
+    rgba(255,255,255,.04)
+  );
 
   backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,.08);
 
   box-shadow:
   0 25px 50px rgba(0,0,0,.25);
 
   color:#fff;
-  z-index:5;
+
+  z-index:2;
 }
 
 .caption h1{
-  font-size:68px;
-  line-height:1.1;
+  font-size:82px;
+  line-height:1.02;
   font-weight:800;
 
-  margin-bottom:24px;
+  margin-bottom:22px;
+
+  letter-spacing:-2px;
 }
 
 .caption span{
@@ -967,10 +1015,9 @@ form button:hover{
 }
 
 .caption p{
-  font-size:18px;
-  line-height:1.9;
-
-  color:rgba(255,255,255,.92);
+  font-size:20px;
+  line-height:1.8;
+  color:rgba(255,255,255,.85);
 }
 
 /* =========================================================
