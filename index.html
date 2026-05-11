@@ -3,19 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="konsultan pajak, jasa pajak, tax consultant, laporan pajak, akuntansi">
-  <meta name="author" content="PT Idola Makmur Solusindo">
-  <meta property="og:title" content="PT Idola Makmur Solusindo">
-  <meta property="og:description" content="Konsultan pajak profesional dan terpercaya">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/preview.jpg">
-  <meta property="og:url" content="https://domainanda.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <title>PT Idola Makmur Solusindo</title>
+  <title>Firma Idola Makmur Solusindo</title>
 
   <meta name="description" content="Konsultan pajak profesional dan terpercaya dengan pengalaman lebih dari 15 tahun.">
 
@@ -23,6 +12,13 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+  document.querySelector(".nav-overlay").classList.toggle("active");
+}
+</script>
   
 <body>
 
@@ -31,119 +27,108 @@
 </a>
   
 <header>
-  <div class="container nav-wrapper">
-
+  <div class="container nav">
+    
     <div class="logo">
-      <img src="assets/logofirma.png" alt="Logo Firma">
-      <span class="logo-text">
-        Firma Idola Makmur Solusindo
-      </span>
+      <img src="assets/logofirma.png" alt="Logo IMS">
+     <span class="logo-text">Firma Idola Makmur Solusindo</span>
     </div>
 
-    <button class="menu-toggle" id="menu-toggle">
-      ☰
-    </button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <nav id="menu">
-      <a href="#home">Home</a>
-      <a href="#tentang">Tentang</a>
-      <a href="#layanan">Layanan</a>
-      <a href="#kontak">Kontak</a>
+      <a href="#">Home</a>
+      <a href="#">Tentang</a>
+      <a href="#">Layanan</a>
+      <a href="#">Kontak</a>
     </nav>
 
   </div>
 </header>
 
+<div class="nav-overlay" onclick="toggleMenu()"></div>
+
 <div class="nav-overlay" id="overlay"></div>
 
-<section class="hero-slider" id="home">
+<section class="hero-slider">
 
   <div class="slides">
 
-    <div class="slide" style="background-image:url('assets/slide1.png')">
-      <div class="overlay"></div>
+    <div class="slide slide-right" style="background-image: url('assets/slide1.png')">
+      <div class="overlay overlay-light"></div>
 
-      <div class="caption">
+      <div class="caption right">
         <h1>
-          Kewajiban Pajak<br>
-          <span>Selesai Mudah</span>
+          Kewajiban Pajak <br>
+          <span class="red">Selesai Mudah</span>
         </h1>
 
-        <p>
-          Layanan pajak profesional dan terpercaya
-        </p>
+        <p>Layanan pajak profesional & terpercaya</p>
 
-        <a href="#kontak" class="btn-cta">
-          Konsultasi Sekarang
-        </a>
+        <a href="#kontak" class="btn-cta">Konsultasi Sekarang</a>
       </div>
     </div>
 
-    <div class="slide" style="background-image:url('assets/slide2.png')">
-      <div class="overlay"></div>
+    <div class="slide slide-right" style="background-image: url('assets/slide2.png')">
+      <div class="overlay overlay-light"></div>
 
-      <div class="caption">
+      <div class="caption right">
         <h1>
-          Pendampingan Pajak<br>
-          <span>Profesional</span>
+          Check Up <br>
+          <span class="red">Pendampingan</span><br>
+          Pajak <span class="red">Terpercaya</span>
         </h1>
 
         <p>
-          Solusi tepat untuk bisnis dan pribadi
+          Pastikan tidak ada kewajiban pajak masa lalu <br>
+          yang akan menghambat bisnis Anda di masa depan.
         </p>
+
       </div>
     </div>
 
-    <div class="slide" style="background-image:url('assets/slide3.png')">
-      <div class="overlay"></div>
+    <div class="slide slide-right" style="background-image: url('assets/slide3.png')">
+      <div class="overlay overlay-light"></div>
 
-      <div class="caption">
+      <div class="caption right">
         <h1>
-          Laporan Pajak<br>
-          <span>Cepat & Akurat</span>
+          Laporan Pajak <br>
+          <span class="red">Cepat & Akurat</span>
         </h1>
 
-        <p>
-          Proses cepat dengan hasil terpercaya
-        </p>
+        <p>Proses mudah dengan hasil yang tepat dan terpercaya</p>
       </div>
     </div>
 
-     <div class="slide" style="background-image:url('assets/slide4.png')">
-      <div class="overlay"></div>
+    <div class="slide slide-right" style="background-image: url('assets/slide4.png')">
+      <div class="overlay overlay-light"></div>
 
-      <div class="caption">
+      <div class="caption right">
         <h1>
-          Laporan Pajak<br>
-          <span>Cepat & Akurat</span>
+          Tim <span class="red">Profesional</span><br>
+          Berpengalaman
         </h1>
 
-        <p>
-          Proses cepat dengan hasil terpercaya
-        </p>
+        <p>Lebih dari 15 tahun menangani perpajakan & akuntansi</p>
       </div>
     </div>
 
- <div class="slide" style="background-image:url('assets/slide5.png')">
-      <div class="overlay"></div>
+    <div class="slide slide-right" style="background-image: url('assets/slide5.png')">
+      <div class="overlay overlay-light"></div>
 
-      <div class="caption">
+      <div class="caption right">
         <h1>
-          Laporan Pajak<br>
-          <span>Cepat & Akurat</span>
+          Konsultasi <span class="red">Gratis</span>
         </h1>
 
-        <p>
-          Proses cepat dengan hasil terpercaya
-        </p>
+        <p>Mulai sekarang dan dapatkan solusi terbaik untuk bisnis Anda</p>
       </div>
     </div>
-    
 
   </div>
 
-  <button class="slider-btn prev">❮</button>
-  <button class="slider-btn next">❯</button>
+  <button class="slider-btn prev" aria-label="Sebelumnya">&#10094;</button>
+  <button class="slider-btn next" aria-label="Berikutnya">&#10095;</button>
 
   <div class="dots"></div>
 
@@ -196,7 +181,7 @@
 <section id="layanan" class="section">
   <h2>Layanan Kami</h2>
 
-  <div class="layanan-grid">
+  <div class="grid layanan-grid">
 
   <div class="card layanan-card">
     <div class="icon">💬</div>
@@ -252,7 +237,7 @@
 
     <!-- KIRI (KOSONG UNTUK GAMBAR) -->
     <div class="service-image">
-      <img src="assets/pic1.png" loading="lazy" alt="Pelayanan Konsultan Pajak Profesional">
+      <img src="assets/pic1.png" alt="Pelayanan Prima">
     </div>
 
     <!-- KANAN (TEKS) -->
@@ -293,7 +278,7 @@
 
       <!-- GAMBAR KANAN -->
       <div class="professional-image">
-       <img src="assets/pic2.png" loading="lazy" alt="Konsultan Pajak Profesional">
+       <img src="assets/pic2.png" alt="Professional">
       </div>
 
     </div>
@@ -306,7 +291,7 @@
 
       <!-- GAMBAR KIRI -->
       <div class="workspace-image">
-        <img src="assets/pic3.png" loading="lazy" alt="">
+        <img src="assets/pic3.png" alt="Workspace">
       </div>
 
       <!-- TEKS KANAN -->
@@ -344,150 +329,9 @@
   <p id="msg"></p>
 </section>
 
-  <section class="cta-section">
-  <div class="container">
-
-    <div class="cta-box">
-
-      <!-- KIRI -->
-      <div class="cta-content">
-
-        <h2>
-          Pesan Jasa IMS untuk Kebutuhan
-          Usaha & Pribadimu
-        </h2>
-
-        <p>
-          Tanyakan pada Admin jika perlu bantuan lebih lanjut
-        </p>
-
-<div class="cta-buttons">
-
-  <a href="#tentang" class="btn-white">
-    Pelajari Lebih Lanjut
-  </a>
-
-  <a href="https://wa.me/6282129811869"
-     target="_blank"
-     class="btn-outline">
-    Tanya Admin Gratis
-  </a>
-
-</div>
-
-      </div>
-
-      <!-- KANAN -->
-      <div class="cta-image">
-<!-- ================= FOOTER ================= -->
-<footer class="footer-modern">
-
-  <div class="container footer-grid">
-
-    <!-- KOLOM 1 -->
-    <div class="footer-brand">
-
-      <div class="footer-logo">
-        <img src="assets/logofirma.png" alt="Logo">
-        <div>
-          <h3>Idola Makmur Solusindo</h3>
-          <span>Tax Made Easy</span>
-        </div>
-      </div>
-
-      <h4>PT Idola Makmur Solusindo</h4>
-
-      <div class="socials">
-
-        <a href="https://tr.ee/9Zqe-6UAyw" target="_blank">
-          Instagram
-        </a>
-
-        <a href="https://tr.ee/jNnNIstRWU" target="_blank">
-          LinkedIn
-        </a>
-
-        <a href="https://tr.ee/PLvbKRprcy" target="_blank">
-          Facebook
-        </a>
-
-        <a href="https://tr.ee/SqKLYy2mno" target="_blank">
-          X
-        </a>
-
-        <a href="https://tr.ee/SUY4Rzmbqt" target="_blank">
-          YouTube
-        </a>
-
-        <a href="https://tr.ee/8Pi6Vyrb29" target="_blank">
-          TikTok
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- KOLOM 2 -->
-    <div class="footer-address">
-
-      <p>
-        <strong>Jakarta:</strong><br>
-        Office Park Lantai 22 Suite E,F,G
-        Jl. TB Simatupang 18,
-        Kebagusan, Pasar Minggu,
-        Jakarta Selatan
-      </p>
-
-      <p>
-        <strong>Gedung:</strong><br>
-        Gedung Idola Makmur Solusindo
-      </p>
-
-    </div>
-
-    <!-- KOLOM 3 -->
-    <div class="footer-links">
-
-      <div>
-        <h4>Layanan</h4>
-        <a href="#">Pajak Perusahaan</a>
-        <a href="#">Pajak Individu</a>
-        <a href="#">Konsultasi</a>
-      </div>
-
-      <div>
-        <h4>Tentang Kami</h4>
-        <a href="#">Kolaborasi</a>
-        <a href="#">Karir</a>
-        <a href="#">Hubungi Kami</a>
-      </div>
-
-      <div>
-        <h4>Tanya Pajak</h4>
-        <a href="#">Forum Diskusi</a>
-        <a href="#">Download</a>
-        <a href="#">Online Learning</a>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 PT Idola Makmur Solusindo
-  </div>
-
+<footer>
+  <p>© 2026 PT Idola Makmur Solusindo</p>
 </footer>
-        
-        <img src="assets/pic5.png" alt="Customer Service">
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-  <div id="footer"></div>
 
 <script src="script.js"></script>
 
