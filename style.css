@@ -14,21 +14,20 @@ html{
 
 body{
   font-family:'Poppins',sans-serif;
-  overflow-x:hidden;
   background:#fff;
   color:#111827;
+  overflow-x:hidden;
   padding-top:80px;
 }
 
 .container{
-  width:90%;
-  max-width:1200px;
+  width:min(92%,1200px);
   margin:auto;
 }
 
 img{
-  max-width:100%;
   display:block;
+  max-width:100%;
 }
 
 /* =========================================================
@@ -41,16 +40,16 @@ header{
   width:100%;
   height:80px;
 
-  background:rgba(17,24,39,0.92);
+  background:rgba(17,24,39,.90);
   backdrop-filter:blur(12px);
 
-  border-bottom:1px solid rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
 
   z-index:9999;
 }
 
 .nav-wrapper{
-  height:80px;
+  height:100%;
 
   display:flex;
   align-items:center;
@@ -62,7 +61,9 @@ header{
   display:flex;
   align-items:center;
   gap:12px;
+
   color:#fff;
+  text-decoration:none;
 }
 
 .logo img{
@@ -85,14 +86,36 @@ nav{
 }
 
 nav a{
+  position:relative;
+
   color:#fff;
   text-decoration:none;
   font-weight:500;
+
+  transition:.3s ease;
+}
+
+nav a::after{
+  content:'';
+
+  position:absolute;
+  left:0;
+  bottom:-6px;
+
+  width:0;
+  height:2px;
+
+  background:#60a5fa;
+
   transition:.3s ease;
 }
 
 nav a:hover{
   color:#60a5fa;
+}
+
+nav a:hover::after{
+  width:100%;
 }
 
 /* =========================================================
@@ -107,8 +130,7 @@ nav a:hover{
   border:none;
   border-radius:14px;
 
-  background:rgba(255,255,255,0.12);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.12);
 
   color:#fff;
   font-size:24px;
@@ -122,7 +144,7 @@ nav a:hover{
 }
 
 .menu-toggle:hover{
-  background:rgba(255,255,255,0.2);
+  background:rgba(255,255,255,.20);
   transform:scale(1.05);
 }
 
@@ -133,7 +155,7 @@ nav a:hover{
   position:fixed;
   inset:0;
 
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,.45);
   backdrop-filter:blur(4px);
 
   opacity:0;
@@ -153,27 +175,30 @@ nav a:hover{
    BUTTON
 ========================================================= */
 .btn-cta{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
   margin-top:28px;
   padding:15px 32px;
 
+  border:none;
   border-radius:999px;
 
   text-decoration:none;
   font-weight:600;
 
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
   color:#fff;
 
-  box-shadow:0 12px 25px rgba(37,99,235,.3);
+  box-shadow:0 15px 30px rgba(37,99,235,.30);
 
-  transition:.3s ease;
+  transition:.35s ease;
 }
 
 .btn-cta:hover{
   transform:translateY(-4px);
-  box-shadow:0 18px 35px rgba(37,99,235,.4);
+  box-shadow:0 20px 40px rgba(37,99,235,.40);
 }
 
 /* =========================================================
@@ -189,25 +214,241 @@ nav a:hover{
 
   color:#111827;
 
-  margin-bottom:50px;
-
   text-align:center;
+
+  margin-bottom:50px;
 }
 
 .sub-title{
   color:#2563eb;
 
-  font-size:20px;
-  font-weight:600;
+  font-size:18px;
+  font-weight:700;
 
   text-transform:uppercase;
   letter-spacing:2px;
 
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .blue{
   color:#2563eb;
+}
+
+.line{
+  width:60px;
+  height:4px;
+
+  background:#2563eb;
+
+  border-radius:999px;
+
+  margin-bottom:25px;
+}
+
+/* =========================================================
+   HERO SLIDER
+========================================================= */
+.hero-slider{
+  position:relative;
+
+  width:100%;
+  height:100vh;
+  min-height:720px;
+
+  overflow:hidden;
+
+  background:
+  radial-gradient(circle at top left,#1d4ed8 0%,#081229 35%,#020617 100%);
+}
+
+/* glow */
+.hero-slider::before{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at 15% 20%,rgba(37,99,235,.35),transparent 28%),
+    radial-gradient(circle at 85% 30%,rgba(96,165,250,.18),transparent 22%);
+
+  z-index:1;
+}
+
+/* overlay */
+.hero-slider::after{
+  content:'';
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(2,6,23,.78) 0%,
+    rgba(2,6,23,.45) 42%,
+    rgba(2,6,23,.05) 100%
+  );
+
+  z-index:2;
+}
+
+.slides{
+  display:flex;
+  height:100%;
+
+  transition:transform .8s ease-in-out;
+}
+
+.slide{
+  position:relative;
+
+  min-width:100%;
+  height:100%;
+
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:right bottom;
+
+  z-index:3;
+}
+
+/* =========================================================
+   HERO CAPTION
+========================================================= */
+.caption{
+  position:absolute;
+
+  top:50%;
+  left:7%;
+
+  transform:translateY(-50%);
+
+  max-width:620px;
+
+  padding:52px;
+
+  border-radius:34px;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(17,24,39,.82),
+    rgba(17,24,39,.45)
+  );
+
+  backdrop-filter:blur(16px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+
+  z-index:5;
+
+  color:#fff;
+}
+
+.caption h1{
+  font-size:72px;
+  line-height:1.05;
+  font-weight:800;
+
+  margin-bottom:22px;
+
+  letter-spacing:-2px;
+}
+
+.caption span{
+  color:#60a5fa;
+}
+
+.caption p{
+  font-size:19px;
+  line-height:1.8;
+
+  color:rgba(255,255,255,.88);
+}
+
+/* =========================================================
+   SLIDER BUTTON
+========================================================= */
+.slider-btn{
+  position:absolute;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:56px;
+  height:56px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#fff;
+  color:#111827;
+
+  font-size:22px;
+
+  cursor:pointer;
+
+  z-index:20;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+  transition:.3s ease;
+}
+
+.slider-btn:hover{
+  transform:translateY(-50%) scale(1.08);
+}
+
+.prev{
+  left:24px;
+}
+
+.next{
+  right:24px;
+}
+
+/* =========================================================
+   DOTS
+========================================================= */
+.dots{
+  position:absolute;
+  bottom:28px;
+
+  width:100%;
+
+  text-align:center;
+
+  z-index:20;
+}
+
+.dots span{
+  width:12px;
+  height:12px;
+
+  display:inline-block;
+
+  margin:0 6px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  opacity:.4;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+}
+
+.dots span.active{
+  opacity:1;
+  background:#60a5fa;
+
+  transform:scale(1.2);
 }
 
 /* =========================================================
@@ -221,12 +462,14 @@ nav a:hover{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
+
   align-items:center;
 }
 
 .tentang-text h2{
   font-size:42px;
   line-height:1.3;
+
   margin-bottom:20px;
 }
 
@@ -242,6 +485,7 @@ nav a:hover{
 .tentang-card-wrap{
   display:grid;
   grid-template-columns:repeat(2,1fr);
+
   gap:20px;
 }
 
@@ -254,7 +498,7 @@ nav a:hover{
 
   box-shadow:0 15px 35px rgba(0,0,0,.08);
 
-  transition:.3s ease;
+  transition:.35s ease;
 }
 
 .tentang-card:hover{
@@ -306,7 +550,9 @@ nav a:hover{
 .service-flex{
   display:grid;
   grid-template-columns:1fr 1fr;
+
   gap:60px;
+
   align-items:center;
 }
 
@@ -315,11 +561,11 @@ nav a:hover{
 .professional-image,
 .workspace-image,
 .service-image{
-  position:relative;
-
   display:flex;
   align-items:center;
   justify-content:center;
+
+  position:relative;
 }
 
 .vision-image img,
@@ -366,17 +612,6 @@ nav a:hover{
   line-height:1.9;
 }
 
-.line{
-  width:60px;
-  height:4px;
-
-  background:#2563eb;
-
-  border-radius:999px;
-
-  margin-bottom:25px;
-}
-
 /* =========================================================
    LAYANAN
 ========================================================= */
@@ -384,6 +619,7 @@ nav a:hover{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
+
   gap:24px;
 }
 
@@ -398,7 +634,7 @@ nav a:hover{
 
   box-shadow:0 10px 25px rgba(0,0,0,.08);
 
-  transition:.3s ease;
+  transition:.35s ease;
 }
 
 .layanan-card:hover{
@@ -416,17 +652,36 @@ form{
 
   display:flex;
   flex-direction:column;
+
   gap:14px;
 }
 
 input,
 textarea{
+  width:100%;
+
   padding:15px;
 
   border:1px solid #d1d5db;
   border-radius:12px;
 
   font-family:inherit;
+  font-size:15px;
+
+  outline:none;
+
+  transition:.3s ease;
+}
+
+input:focus,
+textarea:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 4px rgba(37,99,235,.10);
+}
+
+textarea{
+  min-height:140px;
+  resize:vertical;
 }
 
 form button{
@@ -454,12 +709,14 @@ form button:hover{
 ========================================================= */
 .cta-section{
   padding:100px 20px 70px;
+
   background:#f3f4f6;
 }
 
 .cta-box{
   display:grid;
   grid-template-columns:1.1fr .9fr;
+
   align-items:center;
 
   gap:40px;
@@ -471,8 +728,7 @@ form button:hover{
   background:
   linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);
 
-  box-shadow:
-  0 25px 60px rgba(37,99,235,.25);
+  box-shadow:0 25px 60px rgba(37,99,235,.25);
 }
 
 .cta-content h2{
@@ -497,11 +753,16 @@ form button:hover{
 .cta-buttons{
   display:flex;
   gap:18px;
+
   flex-wrap:wrap;
 }
 
 .btn-white,
 .btn-outline{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
   padding:16px 30px;
 
   border-radius:999px;
@@ -530,6 +791,7 @@ form button:hover{
 .cta-image img{
   width:100%;
   max-width:420px;
+
   margin:auto;
 }
 
@@ -538,6 +800,7 @@ form button:hover{
 ========================================================= */
 .footer-modern{
   background:#f3f4f6;
+
   padding:70px 20px 20px;
 }
 
@@ -555,6 +818,7 @@ form button:hover{
 .footer-links{
   display:grid;
   grid-template-columns:repeat(3,1fr);
+
   gap:30px;
 }
 
@@ -563,8 +827,8 @@ form button:hover{
 ========================================================= */
 .wa-float{
   position:fixed;
-  bottom:25px;
   right:25px;
+  bottom:25px;
 
   width:65px;
   height:65px;
@@ -577,7 +841,7 @@ form button:hover{
 
   background:#25D366;
 
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  box-shadow:0 10px 25px rgba(0,0,0,.20);
 
   z-index:9999;
 
@@ -608,7 +872,7 @@ form button:hover{
   }
 
   .caption h1{
-    font-size:48px;
+    font-size:54px;
   }
 
   .cta-box{
@@ -618,7 +882,6 @@ form button:hover{
   .cta-buttons{
     justify-content:center;
   }
-
 }
 
 /* =========================================================
@@ -635,7 +898,6 @@ form button:hover{
   }
 
   /* HEADER */
-
   header,
   .nav-wrapper{
     height:70px;
@@ -660,11 +922,12 @@ form button:hover{
 
   nav{
     position:fixed;
+
     top:70px;
     right:-100%;
 
     width:260px;
-    height:100vh;
+    height:calc(100vh - 70px);
 
     background:#111827;
 
@@ -672,13 +935,14 @@ form button:hover{
     align-items:flex-start;
 
     padding:35px 25px;
+
     gap:22px;
 
     transition:.4s ease;
 
-    z-index:99999;
-
     overflow-y:auto;
+
+    z-index:99999;
   }
 
   nav.active{
@@ -689,93 +953,72 @@ form button:hover{
     font-size:17px;
   }
 
- /* =========================================================
-   MOBILE HERO PREMIUM
-========================================================= */
+  /* HERO */
+  .hero-slider,
+  .slide{
+    height:100svh;
+    min-height:680px;
+  }
 
-.hero-slider,
-.slide{
-  height:100svh;
-  min-height:720px;
-}
+  .slide{
+    background-size:92%;
+    background-position:center 90px;
+  }
 
-.slide{
-  position:relative;
-  min-width:100%;
-  height:100%;
+  .hero-slider::after{
+    background:
+    linear-gradient(
+      180deg,
+      rgba(2,6,23,.10) 0%,
+      rgba(2,6,23,.55) 55%,
+      rgba(2,6,23,.95) 100%
+    );
+  }
 
-  background-size:contain;
-  background-repeat:no-repeat;
+  .caption{
+    left:16px;
+    right:16px;
 
-  background-position:right bottom;
+    top:auto;
+    bottom:24px;
 
-  z-index:2;
-}
+    transform:none;
 
-.overlay{
-  background:none;
-}
+    max-width:none;
 
-.caption{
-  left:18px;
-  right:18px;
+    padding:24px 20px;
 
-  top:auto;
-  bottom:85px;
+    border-radius:24px;
 
-  transform:none;
+    text-align:center;
 
-  max-width:none;
+    backdrop-filter:blur(12px);
+  }
 
-  padding:28px 24px;
+  .caption h1{
+    font-size:32px;
+    line-height:1.2;
 
-  border-radius:28px;
+    margin-bottom:14px;
 
-  text-align:left;
+    letter-spacing:-1px;
+  }
 
-  background:
-  linear-gradient(
-    135deg,
-    rgba(17,24,39,.80),
-    rgba(17,24,39,.55)
-  );
+  .caption p{
+    font-size:14px;
+    line-height:1.7;
+  }
 
-  backdrop-filter:blur(14px);
+  .btn-cta{
+    width:100%;
+    margin-top:20px;
+  }
 
-  border:1px solid rgba(255,255,255,.08);
-
-  z-index:5;
-}
-
-.caption h1{
-  font-size:42px;
-  line-height:1.1;
-
-  margin-bottom:16px;
-
-  letter-spacing:-1px;
-}
-
-.caption p{
-  font-size:15px;
-  line-height:1.7;
-  color:rgba(255,255,255,.82);
-}
-
-.btn-cta{
-  margin-top:22px;
-
-  padding:14px 24px;
-
-  font-size:14px;
-}
-
-.slider-btn{
-  display:none;
-}
+  .slider-btn{
+    display:none;
+  }
 
   /* SECTION */
-
   .section,
   .vision-section,
   .professional-section,
@@ -795,6 +1038,7 @@ form button:hover{
   .cta-content h2{
     font-size:28px;
     line-height:1.4;
+
     text-align:center;
   }
 
@@ -806,6 +1050,7 @@ form button:hover{
   .cta-content p{
     font-size:15px;
     line-height:1.8;
+
     text-align:center;
   }
 
@@ -814,8 +1059,11 @@ form button:hover{
     font-size:16px;
   }
 
-  /* GRID */
+  .line{
+    margin:0 auto 25px;
+  }
 
+  /* GRID */
   .tentang-flex,
   .vision-flex,
   .professional-flex,
@@ -823,6 +1071,7 @@ form button:hover{
   .service-flex,
   .cta-box{
     grid-template-columns:1fr;
+
     gap:35px;
   }
 
@@ -854,10 +1103,11 @@ form button:hover{
   }
 
   /* CTA */
-
   .cta-box{
     padding:38px 20px;
+
     border-radius:26px;
+
     text-align:center;
   }
 
@@ -869,18 +1119,23 @@ form button:hover{
   .btn-white,
   .btn-outline{
     width:100%;
-    text-align:center;
   }
 
   .cta-image img{
     max-width:260px;
   }
 
-  /* WHATSAPP */
+  /* FOOTER */
+  .footer-links{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
 
+  /* WA */
   .wa-float{
     width:56px;
     height:56px;
+
     right:16px;
     bottom:16px;
   }
@@ -888,580 +1143,5 @@ form button:hover{
   .wa-float img{
     width:28px;
     height:28px;
-  }
-
-}
-
-/* =========================================================
-   HERO SLIDER PREMIUM FINAL
-========================================================= */
-
-.hero-slider{
-  position:relative;
-  width:100%;
-  height:100vh;
-  min-height:720px;
-  overflow:hidden;
-
-  background:
-  radial-gradient(circle at top left,#1d4ed8 0%,#081229 35%,#020617 100%);
-}
-
-/* EFFECT BACKGROUND */
-.hero-slider::before{
-  content:'';
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at 15% 20%, rgba(37,99,235,.35), transparent 28%),
-    radial-gradient(circle at 85% 30%, rgba(96,165,250,.20), transparent 22%),
-    radial-gradient(circle at 50% 80%, rgba(59,130,246,.12), transparent 30%);
-
-  z-index:1;
-}
-
-.hero-slider .glow{
-  position:absolute;
-  width:500px;
-  height:500px;
-
-  border-radius:50%;
-
-  background:rgba(59,130,246,.22);
-
-  filter:blur(120px);
-
-  top:-120px;
-  right:-100px;
-
-  z-index:0;
-}
-
-.hero-slider::after{
-  content:'';
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(2,6,23,.68) 0%,
-      rgba(2,6,23,.32) 38%,
-      rgba(2,6,23,.06) 100%
-    );
-
-  z-index:1;
-}
-
-.slides{
-  display:flex;
-  height:100%;
-  transition:transform .8s ease-in-out;
-}
-
-.slide{
-  position:relative;
-  min-width:100%;
-  height:100%;
-
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:right bottom;
-
-  z-index:2;
-}
-
-/* overlay lama dimatikan */
-.overlay{
-  display:none;
-}
-
-/* =========================================================
-   CAPTION
-========================================================= */
-
-.caption{
-  position:absolute;
-
-  top:50%;
-  left:7%;
-
-  transform:translateY(-50%);
-
-  max-width:650px;
-
-  padding:55px;
-
-  border-radius:36px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(17,24,39,.82),
-      rgba(17,24,39,.45)
-    );
-
-  backdrop-filter:blur(16px);
-
-  border:1px solid rgba(255,255,255,.08);
-
-  box-shadow:
-    0 25px 50px rgba(0,0,0,.25);
-
-  color:#fff;
-
-  z-index:5;
-}
-
-.caption h1{
-  font-size:82px;
-  line-height:1.02;
-  font-weight:800;
-
-  margin-bottom:22px;
-
-  letter-spacing:-2px;
-}
-
-.caption span{
-  color:#60a5fa;
-}
-
-.caption p{
-  font-size:20px;
-  line-height:1.8;
-  color:rgba(255,255,255,.88);
-}
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.btn-cta{
-  display:inline-block;
-
-  margin-top:28px;
-  padding:15px 32px;
-
-  border-radius:999px;
-
-  text-decoration:none;
-  font-weight:600;
-
-  background:
-    linear-gradient(
-      135deg,
-      #3b82f6,
-      #2563eb
-    );
-
-  color:#fff;
-
-  box-shadow:
-    0 15px 30px rgba(37,99,235,.35);
-
-  transition:.35s ease;
-}
-
-.btn-cta:hover{
-  transform:translateY(-4px);
-
-  box-shadow:
-    0 22px 40px rgba(37,99,235,.45);
-}
-
-/* =========================================================
-   SLIDER BUTTON
-========================================================= */
-
-.slider-btn{
-  position:absolute;
-  top:50%;
-
-  transform:translateY(-50%);
-
-  width:58px;
-  height:58px;
-
-  border:none;
-  border-radius:50%;
-
-  background:rgba(255,255,255,.92);
-
-  color:#111827;
-
-  font-size:22px;
-
-  cursor:pointer;
-
-  z-index:20;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.25);
-
-  transition:.3s ease;
-}
-
-.slider-btn:hover{
-  transform:translateY(-50%) scale(1.08);
-}
-
-.prev{
-  left:24px;
-}
-
-.next{
-  right:24px;
-}
-
-/* =========================================================
-   DOTS
-========================================================= */
-
-.dots{
-  position:absolute;
-  bottom:28px;
-
-  width:100%;
-  text-align:center;
-
-  z-index:20;
-}
-
-.dots span{
-  width:12px;
-  height:12px;
-
-  display:inline-block;
-
-  margin:0 6px;
-
-  border-radius:50%;
-
-  background:#fff;
-
-  opacity:.4;
-  cursor:pointer;
-
-  transition:.3s ease;
-}
-
-.dots span.active{
-  opacity:1;
-  background:#60a5fa;
-
-  transform:scale(1.2);
-}
-
-/* =========================================================
-   HERO SLIDER PREMIUM CLEAN
-========================================================= */
-
-.hero-slider{
-  position:relative;
-  width:100%;
-  height:100vh;
-  min-height:720px;
-  overflow:hidden;
-
-  background:
-  radial-gradient(circle at top left,#1d4ed8 0%,#081229 35%,#020617 100%);
-}
-
-/* efek glow */
-.hero-slider::before{
-  content:'';
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at 15% 20%, rgba(37,99,235,.35), transparent 28%),
-    radial-gradient(circle at 85% 30%, rgba(96,165,250,.18), transparent 22%);
-
-  z-index:1;
-}
-
-/* overlay */
-.hero-slider::after{
-  content:'';
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(2,6,23,.75) 0%,
-      rgba(2,6,23,.45) 40%,
-      rgba(2,6,23,.08) 100%
-    );
-
-  z-index:2;
-}
-
-.slides{
-  display:flex;
-  height:100%;
-  transition:transform .8s ease-in-out;
-}
-
-.slide{
-  position:relative;
-
-  min-width:100%;
-  height:100%;
-
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:right bottom;
-
-  z-index:3;
-}
-
-/* =========================================================
-   CAPTION DESKTOP
-========================================================= */
-
-.caption{
-  position:absolute;
-
-  top:50%;
-  left:7%;
-
-  transform:translateY(-50%);
-
-  max-width:650px;
-
-  padding:55px;
-
-  border-radius:34px;
-
-  background:
-  linear-gradient(
-    135deg,
-    rgba(17,24,39,.82),
-    rgba(17,24,39,.45)
-  );
-
-  backdrop-filter:blur(16px);
-
-  border:1px solid rgba(255,255,255,.08);
-
-  box-shadow:
-  0 25px 50px rgba(0,0,0,.25);
-
-  z-index:5;
-
-  color:#fff;
-}
-
-.caption h1{
-  font-size:72px;
-  line-height:1.05;
-  font-weight:800;
-
-  margin-bottom:22px;
-
-  letter-spacing:-2px;
-}
-
-.caption span{
-  color:#60a5fa;
-}
-
-.caption p{
-  font-size:19px;
-  line-height:1.8;
-
-  color:rgba(255,255,255,.88);
-}
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.btn-cta{
-  display:inline-block;
-
-  margin-top:28px;
-  padding:15px 30px;
-
-  border-radius:999px;
-
-  text-decoration:none;
-  font-weight:600;
-
-  background:
-  linear-gradient(135deg,#3b82f6,#2563eb);
-
-  color:#fff;
-
-  box-shadow:
-  0 15px 30px rgba(37,99,235,.35);
-
-  transition:.35s ease;
-}
-
-.btn-cta:hover{
-  transform:translateY(-4px);
-}
-
-/* =========================================================
-   SLIDER BUTTON
-========================================================= */
-
-.slider-btn{
-  position:absolute;
-  top:50%;
-
-  transform:translateY(-50%);
-
-  width:56px;
-  height:56px;
-
-  border:none;
-  border-radius:50%;
-
-  background:#fff;
-
-  color:#111827;
-
-  font-size:22px;
-
-  cursor:pointer;
-
-  z-index:20;
-
-  box-shadow:
-  0 10px 25px rgba(0,0,0,.25);
-
-  transition:.3s ease;
-}
-
-.slider-btn:hover{
-  transform:translateY(-50%) scale(1.08);
-}
-
-.prev{
-  left:24px;
-}
-
-.next{
-  right:24px;
-}
-
-/* =========================================================
-   DOTS
-========================================================= */
-
-.dots{
-  position:absolute;
-  bottom:28px;
-
-  width:100%;
-  text-align:center;
-
-  z-index:20;
-}
-
-.dots span{
-  width:12px;
-  height:12px;
-
-  display:inline-block;
-
-  margin:0 6px;
-
-  border-radius:50%;
-
-  background:#fff;
-
-  opacity:.4;
-
-  cursor:pointer;
-
-  transition:.3s ease;
-}
-
-.dots span.active{
-  opacity:1;
-  background:#60a5fa;
-
-  transform:scale(1.2);
-}
-
-/* =========================================================
-   MOBILE HERO PROFESSIONAL
-========================================================= */
-
-@media screen and (max-width:768px){
-
-  .hero-slider,
-  .slide{
-    height:100svh;
-    min-height:760px;
-  }
-
-  .slide{
-    background-size:95%;
-    background-position:center 85px;
-  }
-
-  .hero-slider::after{
-    background:
-    linear-gradient(
-      180deg,
-      rgba(2,6,23,.12) 0%,
-      rgba(2,6,23,.55) 55%,
-      rgba(2,6,23,.92) 100%
-    );
-  }
-
-  .caption{
-    left:16px;
-    right:16px;
-
-    top:auto;
-    bottom:34px;
-
-    transform:none;
-
-    max-width:none;
-
-    padding:24px 22px;
-
-    border-radius:26px;
-
-    text-align:center;
-  }
-
-  .caption h1{
-    font-size:34px;
-    line-height:1.18;
-
-    margin-bottom:14px;
-
-    letter-spacing:-1px;
-  }
-
-  .caption p{
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  .btn-cta{
-    margin-top:20px;
-
-    padding:13px 22px;
-
-    font-size:14px;
-  }
-
-  .slider-btn{
-    display:none;
   }
 }
