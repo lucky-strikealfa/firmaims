@@ -970,68 +970,6 @@ form button:hover{
 }
 
 /* =========================================================
-   FOOTER
-========================================================= */
-.footer-modern{
-  background:#f3f4f6;
-
-  padding:70px 20px 20px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-  gap:50px;
-
-  padding-top:50px;
-
-  border-top:1px solid #d1d5db;
-}
-
-.footer-links{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-
-  gap:30px;
-}
-
-/* =========================================================
-   WHATSAPP FLOAT
-========================================================= */
-.wa-float{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-
-  width:65px;
-  height:65px;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:#25D366;
-
-  box-shadow:0 10px 25px rgba(0,0,0,.20);
-
-  z-index:9999;
-
-  transition:.3s ease;
-}
-
-.wa-float:hover{
-  transform:scale(1.08);
-}
-
-.wa-float img{
-  width:34px;
-  height:34px;
-}
-
-/* =========================================================
    TABLET
 ========================================================= */
 @media screen and (max-width:1024px){
@@ -1299,23 +1237,3 @@ form button:hover{
     max-width:260px;
   }
 
-  /* FOOTER */
-  .footer-links{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-
-  /* WA */
-  .wa-float{
-    width:56px;
-    height:56px;
-
-    right:16px;
-    bottom:16px;
-  }
-
-  .wa-float img{
-    width:28px;
-    height:28px;
-  }
-}
