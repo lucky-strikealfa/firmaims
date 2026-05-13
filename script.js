@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(){
   // ================= MENU MOBILE =================
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
-  const overlay = document.getElementById("overlay");
+  const overlay = document.querySelector(".nav-overlay");
 
   if(toggle && menu && overlay){
 
