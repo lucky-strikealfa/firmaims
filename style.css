@@ -992,7 +992,8 @@ CTA BLUE SECTION ================= */
 /* BOX */
 .cta-red-box{
   position:relative;
-  overflow:hidden;
+
+  overflow:visible;
 
   max-width:1200px;
   margin:auto;
@@ -1001,7 +1002,6 @@ CTA BLUE SECTION ================= */
 
   border-radius:28px;
 
-  /* WARNA BIRU */
   background:
     linear-gradient(135deg,#2563eb 0%, #3b82f6 60%, #60a5fa 100%);
 
@@ -1102,27 +1102,36 @@ CTA BLUE SECTION ================= */
 .cta-red-image img{
   width:auto;
 
-  /* PERBESAR GAMBAR */
-  height:560px;
+  height:700px;
 
   object-fit:contain;
 
-  position:relative;
+  position:absolute;
 
-  /* POSISI */
-  right:-30px;
-  bottom:-85px;
+  right:-40px;
+  bottom:-120px;
 
-  z-index:2;
+  z-index:3;
 }
+
+.cta-red-content{
+  position:relative;
+  z-index:5;
+  max-width:620px;
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:991px){
 
+  .cta-red-box{
+    overflow:hidden;
+  }
+
   .cta-red-image img{
-    height:420px;
-    bottom:-40px;
-    right:0;
+    height:460px;
+    right:-20px;
+    bottom:-60px;
   }
 
 }
@@ -1130,7 +1139,9 @@ CTA BLUE SECTION ================= */
 @media(max-width:767px){
 
   .cta-red-image img{
-    height:340px;
+    position:relative;
+    height:320px;
+    right:0;
     bottom:-20px;
   }
 
