@@ -44,6 +44,7 @@ header{
   align-items:center;
   gap:10px;
   color:#fff;
+  min-width:0;
 }
 
 .logo img{
@@ -88,6 +89,9 @@ nav a:hover{
   background-size:cover;
   background-position:70% center;
   position:relative;
+
+  display:flex;
+  align-items:center;
 }
 
 @media(max-width:767px){
@@ -112,7 +116,7 @@ nav a:hover{
   transform:translateY(-50%);
   max-width:500px;
   background:rgba(255,255,255,0.15);
-  backdrop-filter:none;
+  backdrop-filter:blur(10px);
   padding:30px;
   border-radius:20px;
   color:#fff;
@@ -717,7 +721,7 @@ input, textarea{
     height:auto;
 
     background:none;
-    backdrop-filter:none;
+    backdrop-filter:blur(10px);
 
     flex-direction:row;
     align-items:center;
@@ -1036,8 +1040,20 @@ input, textarea{
 
 .cta-red-image img{
   width:100%;
-  max-width:360px;
+  max-width:430px;
   object-fit:contain;
+}
+
+a,
+button{
+  transition:.3s ease;
+}
+
+.btn-white:hover,
+.btn-outline:hover,
+.btn-cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* SHAPES */
