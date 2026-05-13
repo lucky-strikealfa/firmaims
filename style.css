@@ -1325,42 +1325,76 @@ FORCE PREMIUM CTA
 }
 
 @media(max-width:991px){
-
-  .cta-red-image img{
-    height:560px !important;
+   .cta-red-image{
+    right:20px !important;
+    width:260px !important;
   }
 
-  .cta-red-content h2{
-    font-size:44px !important;
+  .cta-red-image img{
+    height:88% !important;
   }
 
 }
 
 @media(max-width:767px){
 
-  .cta-red-box{
-    overflow:hidden !important;
-  }
-
   .cta-red-image{
     position:relative !important;
-    width:100% !important;
+
     right:auto !important;
-    bottom:auto !important;
-    display:flex !important;
+
+    width:100% !important;
+    height:auto !important;
+
     justify-content:center !important;
+
+    margin-top:20px;
   }
 
   .cta-red-image img{
-    height:420px !important;
-  }
+    height:320px !important;
 
-  .cta-red-content{
-    width:100% !important;
-  }
-
-  .cta-red-content h2{
-    font-size:34px !important;
+    transform:none !important;
   }
 
 }
+
+/* =========================================
+POSITION LIKE SAMPLE IMAGE
+========================================= */
+
+.cta-red-box{
+  overflow:hidden !important;
+}
+
+/* WRAPPER ORANG */
+.cta-red-image{
+  position:absolute !important;
+
+  right:70px !important;
+  bottom:0 !important;
+
+  width:320px !important;
+  height:100% !important;
+
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+
+  z-index:4;
+}
+
+/* FOTO ORANG */
+.cta-red-image img{
+  height:92% !important;
+  width:auto !important;
+
+  object-fit:contain !important;
+
+  transform:translateY(8px) !important;
+
+  filter:
+  drop-shadow(0 20px 35px rgba(0,0,0,.18));
+}
+
+
