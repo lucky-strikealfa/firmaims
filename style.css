@@ -13,7 +13,7 @@ body{
 
 /* ================= CONTAINER ================= */
 .container{
-  width:90%;
+  width:min(92%, 1280px);
   max-width:1200px;
   margin:auto;
 }
@@ -318,8 +318,8 @@ input, textarea{
 /* GRID */
 .footer-grid{
   display:grid;
-  grid-template-columns: 1.1fr 1.5fr 1.6fr;
-  gap:50px;
+  grid-template-columns: 1.2fr 1.4fr 1.8fr;
+  gap:60px;
   align-items:flex-start;
 }
 
@@ -811,7 +811,7 @@ nav a:hover{
 }
 
 .slide{
-  background-position: 75% center;
+  background-position:center;
 }
 
 .wa-float{
@@ -879,18 +879,64 @@ nav a:hover{
 
   nav{
     position:static;
-    height:auto;
+    top:auto;
+    right:auto;
+
     width:auto;
+    max-width:none;
+    height:auto;
+
     background:none;
+    backdrop-filter:none;
+
     flex-direction:row;
+    align-items:center;
+
     padding:0;
+    gap:25px;
+
     box-shadow:none;
+    border:none;
+
+    display:flex;
   }
 
   nav a{
     opacity:1;
     transform:none;
     animation:none;
+
+    font-size:16px;
+    padding:0;
+    border-radius:0;
+    background:none;
+  }
+
+  .nav-overlay{
+    display:none;
+  }
+
+}
+
+@media (min-width:992px){
+
+  .hero-slider{
+    height:92vh;
+  }
+
+  .caption{
+    max-width:620px;
+    padding:40px;
+  }
+
+  .caption h1{
+    font-size:52px;
+    line-height:1.2;
+  }
+
+  .caption p{
+    font-size:17px;
+    line-height:1.8;
   }
 
 }
