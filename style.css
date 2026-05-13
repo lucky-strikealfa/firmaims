@@ -543,37 +543,42 @@ VISION / SERVICE / PROFESSIONAL
 }
 
 /* =========================================================
-CTA PREMIUM
+CTA PREMIUM MODERN BALANCED
 ========================================================= */
+
 .cta-red-section{
-  padding:110px 20px;
+  padding:100px 20px;
   background:linear-gradient(to bottom,#f5f9ff,#ffffff);
 }
 
+/* BOX */
 .cta-red-box{
   position:relative;
   overflow:hidden;
 
   max-width:1180px;
-  min-height:560px;
+  min-height:520px;
 
   margin:auto;
 
-  border-radius:36px;
+  border-radius:38px;
 
-  padding:70px;
+  padding:70px 70px;
 
   display:flex;
   align-items:center;
+  justify-content:space-between;
 
-  background:linear-gradient(
+  background:
+  linear-gradient(
     135deg,
-    #2563eb 0%,
-    #3b82f6 45%,
+    #1d4ed8 0%,
+    #2563eb 45%,
     #60a5fa 100%
   );
 
-  box-shadow:0 30px 80px rgba(37,99,235,.18);
+  box-shadow:
+  0 30px 80px rgba(37,99,235,.18);
 }
 
 /* ORNAMEN */
@@ -588,70 +593,181 @@ CTA PREMIUM
 
   background:rgba(255,255,255,.06);
 
-  top:-260px;
-  right:-140px;
+  top:-240px;
+  right:-120px;
 }
 
 .cta-red-box::after{
   content:"";
   position:absolute;
 
-  width:340px;
-  height:340px;
+  width:320px;
+  height:320px;
 
   border-radius:50%;
 
   background:rgba(255,255,255,.05);
 
-  bottom:-180px;
-  left:35%;
+  bottom:-140px;
+  left:38%;
 }
 
-/* CONTENT */
+/* =========================================================
+CONTENT
+========================================================= */
+
 .cta-red-content{
   position:relative;
   z-index:5;
 
   width:55%;
-  max-width:580px;
+  max-width:560px;
 }
 
+/* LABEL */
+.cta-label{
+  display:inline-block;
+
+  padding:10px 20px;
+
+  border-radius:50px;
+
+  background:rgba(255,255,255,.12);
+
+  color:#fff;
+
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:1px;
+
+  margin-bottom:28px;
+
+  backdrop-filter:blur(10px);
+}
+
+/* TITLE */
 .cta-red-content h2{
   color:#fff;
 
-  font-size:58px;
-  line-height:1.15;
+  font-size:64px;
+  line-height:1.1;
   font-weight:800;
+
+  letter-spacing:-2px;
 
   margin-bottom:24px;
 }
 
+/* GARIS */
+.cta-line{
+  width:95px;
+  height:5px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,.35);
+
+  margin-bottom:28px;
+}
+
+/* PARAGRAPH */
 .cta-red-content p{
   color:rgba(255,255,255,.92);
 
   font-size:18px;
   line-height:1.9;
 
+  margin-bottom:18px;
+}
+
+/* LIST */
+.cta-list{
+  margin-top:18px;
   margin-bottom:35px;
 }
 
-/* BUTTON */
+.cta-list li{
+  list-style:none;
+
+  color:#fff;
+
+  font-size:17px;
+  line-height:1.9;
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:12px;
+
+  margin-bottom:10px;
+}
+
+.cta-list li::before{
+  content:"✔";
+
+  min-width:26px;
+  height:26px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(255,255,255,.18);
+
+  font-size:14px;
+}
+
+/* BUTTONS */
 .cta-red-buttons{
   display:flex;
+  align-items:center;
   gap:18px;
   flex-wrap:wrap;
 }
 
-.btn-white,
-.btn-outline{
-  height:58px;
+/* BUTTON WHITE */
+.btn-white{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  height:60px;
   padding:0 34px;
 
   border-radius:60px;
 
+  background:#fff;
+  color:#2563eb;
+
+  font-size:16px;
+  font-weight:700;
+
+  transition:.3s;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.15);
+}
+
+.btn-white:hover{
+  transform:translateY(-5px);
+}
+
+/* BUTTON OUTLINE */
+.btn-outline{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+
+  height:60px;
+  padding:0 34px;
+
+  border-radius:60px;
+
+  border:1.5px solid rgba(255,255,255,.6);
+
+  color:#fff;
 
   font-size:16px;
   font-weight:700;
@@ -659,37 +775,22 @@ CTA PREMIUM
   transition:.3s;
 }
 
-.btn-white{
-  background:#fff;
-  color:#2563eb;
-
-  box-shadow:0 12px 30px rgba(0,0,0,.12);
-}
-
-.btn-white:hover{
-  transform:translateY(-4px);
-}
-
-.btn-outline{
-  border:1.5px solid rgba(255,255,255,.7);
-  color:#fff;
-}
-
 .btn-outline:hover{
-  background:rgba(255,255,255,.12);
-  transform:translateY(-4px);
+  background:rgba(255,255,255,.1);
+  transform:translateY(-5px);
 }
 
 /* =========================================================
-CTA IMAGE FIXED
+IMAGE
 ========================================================= */
+
 .cta-red-image{
   position:absolute;
 
-  right:40px;
+  right:55px;
   bottom:0;
 
-  width:360px;
+  width:33%;
   height:100%;
 
   display:flex;
@@ -700,14 +801,138 @@ CTA IMAGE FIXED
 }
 
 .cta-red-image img{
+  height:90%;
   width:auto;
-  height:92%;
 
   object-fit:contain;
 
   display:block;
 
-  filter:drop-shadow(0 20px 40px rgba(0,0,0,.22));
+  filter:
+  drop-shadow(0 20px 40px rgba(0,0,0,.22));
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media(max-width:991px){
+
+  .cta-red-box{
+    min-height:460px;
+    padding:55px 40px;
+  }
+
+  .cta-red-content{
+    width:58%;
+  }
+
+  .cta-red-content h2{
+    font-size:46px;
+  }
+
+  .cta-red-content p{
+    font-size:16px;
+  }
+
+  .cta-list li{
+    font-size:15px;
+  }
+
+  .cta-red-image{
+    width:34%;
+    right:10px;
+  }
+
+  .cta-red-image img{
+    height:82%;
+  }
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media(max-width:767px){
+
+  .cta-red-section{
+    padding:70px 15px;
+  }
+
+  .cta-red-box{
+    flex-direction:column;
+
+    text-align:center;
+
+    min-height:auto;
+
+    padding:45px 24px 0;
+
+    border-radius:28px;
+  }
+
+  .cta-red-content{
+    width:100%;
+    max-width:100%;
+  }
+
+  .cta-label{
+    font-size:12px;
+    padding:8px 16px;
+  }
+
+  .cta-red-content h2{
+    font-size:36px;
+    line-height:1.25;
+    letter-spacing:-1px;
+  }
+
+  .cta-line{
+    margin:0 auto 24px;
+  }
+
+  .cta-red-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .cta-list{
+    text-align:left;
+  }
+
+  .cta-list li{
+    font-size:14px;
+  }
+
+  .cta-red-buttons{
+    justify-content:center;
+  }
+
+  .btn-white,
+  .btn-outline{
+    width:100%;
+    max-width:280px;
+  }
+
+  /* IMAGE MOBILE */
+  .cta-red-image{
+    position:relative;
+
+    width:100%;
+    height:auto;
+
+    right:auto;
+    bottom:auto;
+
+    margin-top:20px;
+  }
+
+  .cta-red-image img{
+    height:400px;
+    max-width:100%;
+  }
+
 }
 
 /* =========================================================
