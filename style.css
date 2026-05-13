@@ -546,24 +546,11 @@ input, textarea{
 .workspace-flex{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:80px;
   align-items:center;
 }
 
-/* ================= WORKSPACE SECTION ================= */
-.workspace-section{
-  padding:120px 20px;
-  background:linear-gradient(135deg,#f8fbff,#ffffff);
-}
-
-.workspace-flex{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-}
-
-/* WRAPPER IMAGE */
+/* IMAGE WRAPPER */
 .workspace-image{
   position:relative;
   display:flex;
@@ -573,7 +560,7 @@ input, textarea{
   overflow:visible;
 }
 
-/* GLOW */
+/* GLOW EFFECT */
 .workspace-image::before{
   content:"";
   position:absolute;
@@ -581,21 +568,23 @@ input, textarea{
   height:250px;
   background:#2563eb;
   filter:blur(120px);
-  opacity:0.2;
+  opacity:0.18;
   z-index:0;
 }
 
 /* IMAGE */
 .workspace-image img{
   width:100%;
-  max-width:560px;
+  max-width:580px;
   height:auto;
   object-fit:contain;
 
   position:relative;
   z-index:2;
 
-  transform:translateX(20px);
+  transform:translateX(30px);
+
+  display:block;
 }
 
 /* TEXT */
@@ -621,230 +610,33 @@ input, textarea{
   margin-bottom:20px;
 }
 
-  @media (min-width:992px){
+/* ================= MOBILE ================= */
+@media (max-width:767px){
 
   .workspace-flex{
-    gap:80px;
-    align-items:center;
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
   }
 
   .workspace-image{
-    min-height:500px;
+    min-height:auto;
   }
 
   .workspace-image img{
-    max-width:580px;
-  }
-
-}
-
-@media (max-width:767px){
-
-  /* ================= NAVBAR ================= */
-  header{
-    height:65px;
-  }
-
-  body{
-    padding-top:65px;
-  }
-
- .nav-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.4);
-  backdrop-filter:blur(4px);
-  opacity:0;
-  visibility:hidden;
-  transition:0.3s;
-  z-index:9998;
-}
-
-.nav-overlay.active{
-  opacity:1;
-  visibility:visible;
-}
-
-/* MENU */
-nav{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:75%;
-  max-width:320px;
-  height:100vh;
-
-  background:rgba(114,30,73,0.85);
-  backdrop-filter:blur(12px);
-
-  flex-direction:column;
-  padding:80px 25px;
-
-  transition:0.4s cubic-bezier(0.77, 0, 0.18, 1);
-  z-index:9999;
-
-  box-shadow:-10px 0 30px rgba(0,0,0,0.2);
-  border-left:1px solid rgba(255,255,255,0.1);
-}
-
-/* ACTIVE */
-nav.active{
-  right:0;
-}
-
-/* MENU ITEM */
-nav a{
-  color:#fff;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:500;
-  padding:12px 15px;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-/* HOVER EFFECT */
-nav a:hover{
-  background:rgba(255,255,255,0.1);
-  transform:translateX(5px);
-  color:#f43f5e;
-}
-  /* ================= SLIDER FIX ================= */
-  .hero-slider{
-    height:65vh;
-  }
-
-  .slide{
-    background-position: right center;
-  }
-
-  .caption{
-    top:auto;
-    bottom:20px;
-    left:5%;
-    right:5%;
+    max-width:100%;
     transform:none;
-    max-width:90%;
-    padding:15px;
-    background: rgba(0,0,0,0.4);
   }
 
-  .caption h1{
-    font-size:18px;
-  }
-
-  .caption p{
-    font-size:13px;
-  }
-
-  .slider-btn{
-    display:none;
-  }
-
-  /* ================= TENTANG ================= */
-  .tentang-flex{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .tentang-text h2{
+  .workspace-text h2{
     font-size:30px;
-    text-align:center;
   }
 
-  .tentang-text p,
-  .sub-title{
-    text-align:center;
+  .workspace-text .line{
+    margin:0 auto 20px;
   }
 
-  .tentang-card-wrap{
-    grid-template-columns:1fr;
-  }
-
-  /* ================= VISION ================= */
-  .vision-flex{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .vision-text{
-    text-align:center;
-  }
-
-  .vision-text h2{
-    font-size:28px;
-  }
-
-  /* ================= LAYANAN ================= */
-  .layanan-grid{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .layanan-card{
-    width:90%;
-  }
-
-  /* ================= SERVICE ================= */
-  .service-flex{
-    grid-template-columns:1fr;
-  }
-
-  .service-text{
-    text-align:center;
-  }
-
-  .service-image{
-    height:250px;
-  }
-
-  .line{
-    margin:20px auto;
-  }
-
-  /* ================= PROFESSIONAL ================= */
-  .professional-flex{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .professional-image{
-    height:250px;
-  }
-
-  .professional-text h2{
-    font-size:28px;
-  }
-
-  /* ================= WORKSPACE ================= */
- /* ================= WORKSPACE ================= */
-.workspace-flex{
-  grid-template-columns:1fr;
-  gap:40px;
-  text-align:center;
 }
-
-.workspace-image{
-  min-height:auto;
-}
-
-.workspace-image img{
-  max-width:100%;
-  transform:none;
-}
-
-.workspace-text h2{
-  font-size:30px;
-}
-
-.workspace-text .line{
-  margin:0 auto 20px;
-}
-  
-.slide{
-  background-position:center;
-}
-
 .wa-float{
   position:fixed;
   bottom:25px;
