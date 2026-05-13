@@ -1280,121 +1280,87 @@ MOBILE
   }
 
 }
-@media(max-width:767px){
 
-  .cta-red-section{
-    padding:70px 15px;
-  }
+/* =========================================
+FORCE PREMIUM CTA
+========================================= */
 
-  .cta-red-box{
-    padding:45px 22px 0;
-    border-radius:24px;
+.cta-red-box{
+  overflow:visible !important;
+}
+
+.cta-red-image{
+  position:absolute !important;
+  right:-20px !important;
+  bottom:-40px !important;
+  width:46% !important;
+  height:auto !important;
+}
+
+.cta-red-image img{
+  height:720px !important;
+  width:auto !important;
+  max-width:none !important;
+  object-fit:contain !important;
+}
+
+.cta-red-content{
+  width:54% !important;
+}
+
+.cta-red-content h2{
+  font-size:64px !important;
+  line-height:1.08 !important;
+}
+
+.cta-red-content p{
+  font-size:18px !important;
+  max-width:520px !important;
+}
+
+.btn-white,
+.btn-outline{
+  height:60px !important;
+  padding:0 36px !important;
+}
+
+@media(max-width:991px){
+
+  .cta-red-image img{
+    height:560px !important;
   }
 
   .cta-red-content h2{
-    font-size:30px;
-    line-height:1.35;
+    font-size:44px !important;
   }
 
-  .cta-red-content p{
-    font-size:15px;
-    line-height:1.8;
+}
+
+@media(max-width:767px){
+
+  .cta-red-box{
+    overflow:hidden !important;
+  }
+
+  .cta-red-image{
+    position:relative !important;
+    width:100% !important;
+    right:auto !important;
+    bottom:auto !important;
+    display:flex !important;
+    justify-content:center !important;
   }
 
   .cta-red-image img{
-    height:280px;
+    height:420px !important;
   }
 
-}
-@media(max-width:767px){
-
-  .cta-red-section{
-    padding:70px 15px;
-  }
-
-  .cta-red-box{
-    border-radius:24px;
-    padding:45px 22px 0;
+  .cta-red-content{
+    width:100% !important;
   }
 
   .cta-red-content h2{
-    font-size:31px;
-    line-height:1.4;
+    font-size:34px !important;
   }
 
-  .cta-red-content p{
-    font-size:15px;
-  }
-
-  .btn-white,
-  .btn-outline{
-    min-width:240px;
-    width:100%;
-    text-align:center; 
-  }
-
-}
-
-/* WRAPPER BUTTON */
-.cta-red-buttons{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
-
-/* TOMBOL PUTIH */
-.btn-white{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:16px 32px;
-
-  background:#ffffff;
-  color:#2563eb;
-
-  text-decoration:none;
-  font-weight:700;
-  font-size:16px;
-
-  border-radius:60px;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.12);
-
-  transition:.3s ease;
-}
-
-/* HOVER */
-.btn-white:hover{
-  transform:translateY(-4px);
-  background:#eff6ff;
-}
-
-/* TOMBOL OUTLINE */
-.btn-outline{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:16px 32px;
-
-  border:2px solid rgba(255,255,255,0.8);
-
-  color:#fff;
-  text-decoration:none;
-
-  font-weight:700;
-  font-size:16px;
-
-  border-radius:60px;
-
-  transition:.3s ease;
-}
-
-/* HOVER */
-.btn-outline:hover{
-  background:rgba(255,255,255,0.12);
-  transform:translateY(-4px);
 }
