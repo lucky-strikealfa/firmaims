@@ -1086,20 +1086,14 @@ input, textarea{
 
 /* GAMBAR ORANG */
 .cta-red-image img{
-  position:relative;
-  z-index:2;
-
-  /* INI YANG MEMBUAT GAMBAR BESAR */
-  height:560px;
-
+  height:520px;
   width:auto;
 
   object-fit:contain;
-
   display:block;
 
-  /* POSISI */
-  transform:translateY(25px);
+  position:relative;
+  bottom:-10px;
 }
 
 /* ================= MOBILE ================= */
@@ -1157,11 +1151,11 @@ input, textarea{
 
   .btn-white,
   .btn-outline{
+    min-width:240px;
     width:100%;
-    text-align:center;
+    text-align:center; 
   }
 
-}
 }
 
 /* WRAPPER BUTTON */
