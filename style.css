@@ -90,6 +90,12 @@ nav a:hover{
   position:relative;
 }
 
+@media(max-width:767px){
+
+  .hero-slider{
+    height:70vh;
+  }
+
 }
 
 .overlay{
@@ -890,7 +896,9 @@ input, textarea{
 }
 
 @media(max-width:767px){
-
+nav{
+    display:flex;
+  
   .vision-flex,
   .service-flex,
   .professional-flex,
@@ -917,4 +925,16 @@ input, textarea{
 
 }
 
+.logo-text{
+  font-size:16px;
+  font-weight:600;
+}
 
+@media(max-width:767px){
+
+  .logo-text{
+    font-size:13px;
+    line-height:1.2;
+  }
+
+}
