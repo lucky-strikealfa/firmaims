@@ -896,9 +896,11 @@ input, textarea{
 }
 
 @media(max-width:767px){
-nav{
+
+  nav{
     display:flex;
-  
+  }
+
   .vision-flex,
   .service-flex,
   .professional-flex,
@@ -935,6 +937,173 @@ nav{
   .logo-text{
     font-size:13px;
     line-height:1.2;
+  }
+
+}
+
+  /* ================= CTA RED ================= */
+
+.cta-red-section{
+  padding:100px 20px;
+  background:#f5f7fb;
+}
+
+.cta-red-box{
+  position:relative;
+  overflow:hidden;
+
+  background:linear-gradient(135deg,#ef2b24,#ff3b30);
+
+  border-radius:30px;
+
+  min-height:360px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:60px;
+
+  gap:40px;
+}
+
+/* CONTENT */
+.cta-red-content{
+  position:relative;
+  z-index:2;
+  max-width:620px;
+}
+
+.cta-red-content h2{
+  color:#fff;
+  font-size:52px;
+  line-height:1.3;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.cta-red-content p{
+  color:rgba(255,255,255,0.9);
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+/* BUTTONS */
+.cta-red-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn-white{
+  background:#fff;
+  color:#e3342f;
+  padding:16px 30px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-white:hover{
+  transform:translateY(-3px);
+}
+
+.btn-outline{
+  border:2px solid #fff;
+  color:#fff;
+  padding:16px 30px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:#e3342f;
+}
+
+/* IMAGE */
+.cta-red-image{
+  position:relative;
+  z-index:2;
+  flex:1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+}
+
+.cta-red-image img{
+  width:100%;
+  max-width:360px;
+  object-fit:contain;
+}
+
+/* SHAPES */
+.shape{
+  position:absolute;
+  background:rgba(255,255,255,0.08);
+  border-radius:40px;
+}
+
+.shape1{
+  width:420px;
+  height:420px;
+
+  top:-180px;
+  right:-120px;
+}
+
+.shape2{
+  width:300px;
+  height:300px;
+
+  bottom:-140px;
+  left:280px;
+}
+
+/* MOBILE */
+@media(max-width:991px){
+
+  .cta-red-box{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 30px 0;
+  }
+
+  .cta-red-content h2{
+    font-size:38px;
+  }
+
+  .cta-red-buttons{
+    justify-content:center;
+  }
+
+  .cta-red-image{
+    justify-content:center;
+  }
+
+  .cta-red-image img{
+    max-width:280px;
+  }
+
+}
+
+@media(max-width:767px){
+
+  .cta-red-content h2{
+    font-size:30px;
+  }
+
+  .cta-red-content p{
+    font-size:15px;
+  }
+
+  .btn-white,
+  .btn-outline{
+    width:100%;
+    text-align:center;
   }
 
 }
