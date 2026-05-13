@@ -982,39 +982,38 @@ input, textarea{
 
 }
 
-/* ================= CTA BLUE MODERN ================= */
+CTA BLUE SECTION ================= */
 
 .cta-red-section{
-  padding:100px 20px;
+  padding:90px 20px;
   background:#f5f9ff;
 }
 
-/* BOX UTAMA */
+/* BOX */
 .cta-red-box{
   position:relative;
   overflow:hidden;
 
-  background:
-    linear-gradient(135deg,#2563eb 0%, #3b82f6 55%, #60a5fa 100%);
-
-  border-radius:32px;
-
-  min-height:380px;
-
-  /* BATASI LEBAR BOX */
   max-width:1200px;
   margin:auto;
 
-  /* GANTI FLEX JADI GRID */
+  min-height:360px;
+
+  border-radius:28px;
+
+  /* WARNA BIRU */
+  background:
+    linear-gradient(135deg,#2563eb 0%, #3b82f6 60%, #60a5fa 100%);
+
   display:grid;
-  grid-template-columns:1.2fr 0.6fr;
+  grid-template-columns:1.1fr 0.9fr;
 
   align-items:center;
 
-  padding:70px 60px;
+  padding:55px 60px;
 
   box-shadow:
-    0 25px 60px rgba(37,99,235,0.18);
+    0 20px 50px rgba(37,99,235,.20);
 }
 
 /* ORNAMEN */
@@ -1025,11 +1024,11 @@ input, textarea{
   width:420px;
   height:420px;
 
-  background:rgba(255,255,255,0.08);
-
   border-radius:50%;
 
-  top:-180px;
+  background:rgba(255,255,255,.07);
+
+  top:-220px;
   right:-120px;
 }
 
@@ -1040,26 +1039,12 @@ input, textarea{
   width:260px;
   height:260px;
 
-  background:rgba(255,255,255,0.06);
-
   border-radius:50%;
 
-  bottom:-120px;
-  left:45%;
-}
+  background:rgba(255,255,255,.05);
 
-/* GARIS */
-.cta-red-line{
-  position:absolute;
-  inset:0;
-
-  background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-
-  background-size:40px 40px;
-
-  z-index:1;
+  bottom:-140px;
+  left:35%;
 }
 
 /* CONTENT */
@@ -1069,39 +1054,46 @@ input, textarea{
   max-width:620px;
 }
 
+/* TITLE */
 .cta-red-content h2{
   color:#fff;
-  font-size:54px;
-  line-height:1.2;
+
+  font-size:52px;
+  line-height:1.18;
+
   font-weight:800;
+
   margin-bottom:20px;
-  letter-spacing:-1px;
 }
 
+/* DESCRIPTION */
 .cta-red-content p{
-  color:rgba(255,255,255,0.88);
+  color:rgba(255,255,255,.92);
+
   font-size:18px;
   line-height:1.9;
+
   margin-bottom:35px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .cta-red-buttons{
   display:flex;
   gap:18px;
   flex-wrap:wrap;
 }
 
-/* IMAGE AREA */
+/* IMAGE WRAPPER */
 .cta-red-image{
   position:relative;
-  z-index:2;
 
   display:flex;
-  justify-content:center;
+  justify-content:flex-end;
   align-items:flex-end;
 
   height:100%;
+
+  z-index:2;
 }
 
 /* GLOW */
@@ -1109,28 +1101,33 @@ input, textarea{
   content:"";
   position:absolute;
 
-  width:340px;
-  height:340px;
-
-  background:rgba(255,255,255,0.18);
-
-  filter:blur(70px);
+  width:280px;
+  height:280px;
 
   border-radius:50%;
 
-  z-index:0;
+  background:rgba(255,255,255,.18);
+
+  filter:blur(70px);
+
+  bottom:40px;
+  right:20px;
 }
 
-/* GAMBAR ORANG */
+/* GAMBAR WANITA */
 .cta-red-image img{
-  height:520px;
   width:auto;
 
+  height:420px;
+
   object-fit:contain;
-  display:block;
 
   position:relative;
-  bottom:-10px;
+
+  right:-10px;
+  bottom:-55px;
+
+  z-index:2;
 }
 
 /* ================= MOBILE ================= */
@@ -1140,15 +1137,16 @@ input, textarea{
   .cta-red-box{
     grid-template-columns:1fr;
     text-align:center;
-    padding:60px 30px 0;
+
+    padding:50px 30px 0;
   }
-  
+
   .cta-red-content{
     margin:auto;
   }
 
   .cta-red-content h2{
-    font-size:40px;
+    font-size:38px;
   }
 
   .cta-red-buttons{
@@ -1159,13 +1157,40 @@ input, textarea{
     justify-content:center;
   }
 
-.cta-red-image img{
-    height:420px;
-    transform:none;
+  .cta-red-image img{
+    height:340px;
+    bottom:-20px;
+    right:0;
   }
 
 }
 
+@media(max-width:767px){
+
+  .cta-red-section{
+    padding:70px 15px;
+  }
+
+  .cta-red-box{
+    padding:45px 22px 0;
+    border-radius:24px;
+  }
+
+  .cta-red-content h2{
+    font-size:30px;
+    line-height:1.35;
+  }
+
+  .cta-red-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .cta-red-image img{
+    height:280px;
+  }
+
+}
 @media(max-width:767px){
 
   .cta-red-section{
