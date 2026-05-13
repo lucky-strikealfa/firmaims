@@ -86,11 +86,12 @@ nav a:hover{
   min-width:100%;
   height:100%;
   background-size:cover;
-  background-position:center;
+  background-position:70% center;
   position:relative;
 }
 
-/* Overlay */
+}
+
 .overlay{
   position:absolute;
   inset:0;
@@ -763,3 +764,157 @@ input, textarea{
   }
 
 }
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
+}
+
+@media(max-width:767px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:75%;
+    max-width:320px;
+    height:100vh;
+    background:rgba(114,30,73,0.95);
+    backdrop-filter:blur(12px);
+
+    flex-direction:column;
+    padding:90px 25px;
+    transition:.4s;
+    z-index:9999;
+  }
+
+  nav.active{
+    right:0;
+  }
+
+  .nav-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:9998;
+  }
+
+  .nav-overlay.active{
+    opacity:1;
+    visibility:visible;
+  }
+
+}
+
+.vision-section{
+  padding:100px 20px;
+  background:#fff;
+}
+
+.vision-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.vision-image img{
+  width:100%;
+  max-width:550px;
+}
+
+.vision-text h2{
+  font-size:42px;
+  line-height:1.4;
+}
+
+.vision-text p{
+  margin-top:20px;
+  line-height:1.8;
+  color:#6b7280;
+}
+
+.service-highlight{
+  padding:100px 20px;
+  background:#f8fbff;
+}
+
+.service-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.service-image img{
+  width:100%;
+  max-width:550px;
+}
+
+.service-text h2{
+  font-size:42px;
+  line-height:1.4;
+}
+
+.professional-section{
+  padding:100px 20px;
+  background:#fff;
+}
+
+.professional-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.professional-image img{
+  width:100%;
+  max-width:550px;
+}
+
+.professional-text h2{
+  font-size:42px;
+  line-height:1.4;
+}
+
+@media(max-width:767px){
+
+  .vision-flex,
+  .service-flex,
+  .professional-flex,
+  .workspace-flex,
+  .tentang-flex{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .vision-text h2,
+  .service-text h2,
+  .professional-text h2,
+  .workspace-text h2,
+  .tentang-text h2{
+    font-size:30px;
+  }
+
+  .vision-image img,
+  .service-image img,
+  .professional-image img,
+  .workspace-image img{
+    max-width:100%;
+  }
+
+}
+
+
