@@ -135,7 +135,8 @@ HERO SLIDER
   overflow:hidden;
   position:relative;
 
-  margin-bottom:90px;
+  padding-bottom:90px;
+  background:#eef4ff;
 }
 
 .slides{
@@ -298,7 +299,7 @@ TENTANG
 ========================================================= */
 
 .tentang-section{
-  background:linear-gradient(135deg,#f8fbff,#eef4ff);
+  background:#eef4ff;
 }
 
 .tentang-flex{
@@ -1401,7 +1402,7 @@ SLIDE 5 FIX
 
   .slide{
     background-size:contain;
-    background-color:#dcdcdc;
+    background-color:#eef4ff;
   }
 
 }
@@ -1471,7 +1472,7 @@ SLIDE 5 DESKTOP FIX
   .slide:nth-child(5){
     background-size:58%;
     background-position:right center !important;
-    background-color:#d9d9d9;
+    background-color:#eef4ff;
   }
 
 }
