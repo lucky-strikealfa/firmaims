@@ -135,15 +135,13 @@ HERO SLIDER
   overflow:hidden;
   position:relative;
 
-  padding-bottom:90px;
-
- background:
-linear-gradient(
-135deg,
-#fff7f8 0%,
-#fef2f4 40%,
-#fff 100%
-);
+  background:
+  linear-gradient(
+    135deg,
+    #fff7f8 0%,
+    #fef2f4 40%,
+    #fff 100%
+  );
 }
 
 /* efek glow */
@@ -352,7 +350,7 @@ DOTS
 ========================================================= */
 .dots{
   position:absolute;
-  bottom:20px;
+  bottom:35px;
   width:100%;
   text-align:center;
   z-index:10;
