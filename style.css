@@ -134,6 +134,8 @@ HERO SLIDER
   height:calc(100vh - 80px);
   overflow:hidden;
   position:relative;
+
+  margin-bottom:90px;
 }
 
 .slides{
@@ -294,8 +296,8 @@ SECTION
 /* =========================================================
 TENTANG
 ========================================================= */
+
 .tentang-section{
-  margin-top:80px;
   background:linear-gradient(135deg,#f8fbff,#eef4ff);
 }
 
