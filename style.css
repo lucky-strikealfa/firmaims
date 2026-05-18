@@ -176,13 +176,37 @@ HERO SLIDER
   position:relative;
   display:flex;
   align-items:center;
+
   padding-left:40px;
 
-  background-size:cover;
   background-repeat:no-repeat;
 
-  /* fokus gambar ke kiri */
- background-position:right center;
+  /* PERBAIKAN */
+  background-size:48%;
+  background-position:right bottom;
+
+  background-color:#eef2f7;
+}
+
+/* supaya gambar lebih blend */
+.slide::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:48%;
+  height:100%;
+
+  background:
+  linear-gradient(
+    to left,
+    rgba(238,242,247,0) 0%,
+    rgba(238,242,247,.35) 35%,
+    rgba(238,242,247,.75) 70%,
+    #eef2f7 100%
+  );
+
+  z-index:1;
 }
 
 .overlay{
@@ -192,11 +216,20 @@ HERO SLIDER
   background:
   linear-gradient(
     90deg,
-    rgba(255,255,255,.94) 0%,
-    rgba(255,255,255,.82) 35%,
-    rgba(255,255,255,.15) 70%,
+    rgba(255,255,255,.96) 0%,
+    rgba(255,255,255,.88) 40%,
+    rgba(255,255,255,.15) 75%,
     rgba(255,255,255,0) 100%
   );
+}
+
+@media(min-width:1200px){
+
+  .slide{
+    background-size:42%;
+    background-position:right bottom;
+  }
+
 }
 
 /* =========================================================
