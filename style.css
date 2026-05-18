@@ -126,70 +126,44 @@ MENU TOGGLE
 }
 
 /* =========================================================
-HERO SLIDER
+HERO SLIDER MODERN 2026
 ========================================================= */
 
 .hero-slider{
-  width:100%;
-  height:calc(100vh - 80px);
-  overflow:hidden;
   position:relative;
-
-  background:
-  linear-gradient(
-    135deg,
-    #fff7f8 0%,
-    #fef2f4 40%,
-    #fff 100%
-  );
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  background:#f4f7fb;
 }
 
-/* efek glow */
-.hero-slider::before{
-  content:"";
-  position:absolute;
-
-  width:500px;
-  height:500px;
-
-  background:
-  radial-gradient(
-    rgba(96,165,250,.18),
-    transparent 70%
-  );
-
-  top:-180px;
-  left:-120px;
-
-  z-index:1;
-}
-
+/* SLIDES */
 .slides{
   display:flex;
   height:100%;
-  transition:transform .8s ease;
+  transition:transform .9s ease-in-out;
 }
 
+/* SINGLE SLIDE */
 .slide{
   min-width:100%;
   height:100%;
   position:relative;
+  overflow:hidden;
+
   display:flex;
   align-items:center;
 
-  padding-left:40px;
+  padding:0 8%;
 
   background-repeat:no-repeat;
-
-  /* PROFESIONAL */
-  background-size:auto 92%;
+  background-size:contain;
   background-position:right bottom;
 
-  background-color:#eef2f7;
+  background-color:#f8fafc;
 }
 
-/* supaya gambar lebih blend */
-
+/* OVERLAY */
 .overlay{
   position:absolute;
   inset:0;
@@ -197,111 +171,101 @@ HERO SLIDER
   background:
   linear-gradient(
     90deg,
-    rgba(255,255,255,.96) 0%,
-    rgba(255,255,255,.90) 42%,
-    rgba(255,255,255,.35) 65%,
-    rgba(255,255,255,0) 82%
+    rgba(248,250,252,.98) 0%,
+    rgba(248,250,252,.92) 38%,
+    rgba(248,250,252,.55) 58%,
+    rgba(248,250,252,.15) 75%,
+    rgba(248,250,252,0) 100%
   );
+
+  z-index:1;
 }
 
-.slide::before{
+/* GLOW */
+.slide::after{
   content:"";
   position:absolute;
-  right:-120px;
-  bottom:-120px;
 
-  width:500px;
-  height:500px;
+  width:600px;
+  height:600px;
+
+  right:-200px;
+  top:-120px;
 
   background:
   radial-gradient(
-    rgba(114,30,73,.10),
+    rgba(37,99,235,.12),
     transparent 70%
   );
 
   z-index:1;
 }
 
-@media(min-width:1200px){
-
-  .slide{
-    background-size:auto 95%;
-    background-position:right bottom;
-  }
-
-}
-
-/* =========================================================
-HERO CAPTION MODERN PROFESSIONAL
-========================================================= */
-
+/* CAPTION */
 .caption{
-  position:absolute;
-  left:7%;
-  top:50%;
-  transform:translateY(-50%);
+  position:relative;
   z-index:5;
 
-  width:650px;
-  max-width:90%;
-
-  color:#111827;
+  width:100%;
+  max-width:620px;
 }
 
 /* BADGE */
 .caption::before{
   content:"KONSULTAN PAJAK PROFESIONAL";
-  
-  display:inline-block;
 
-  padding:10px 18px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
-  border-radius:50px;
+  padding:12px 22px;
 
-  background:rgba(255,255,255,.88);
+  border-radius:999px;
+
+  background:rgba(255,255,255,.85);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,.5);
 
   color:#721e49;
 
-  font-size:13px;
+  font-size:12px;
   font-weight:700;
-  letter-spacing:1px;
+  letter-spacing:1.5px;
 
-  margin-bottom:24px;
+  margin-bottom:28px;
 
   box-shadow:
-  0 10px 25px rgba(0,0,0,.08);
+  0 10px 30px rgba(0,0,0,.08);
 }
 
 /* TITLE */
 .caption h1{
-  font-size:72px;
-  line-height:1.08;
+  font-size:78px;
+  line-height:1.05;
   font-weight:800;
 
-  letter-spacing:-2px;
+  letter-spacing:-3px;
 
-  color:#111827;
+  color:#0f172a;
 
-  margin-top:18px;
-
-  text-shadow:none;
+  margin-bottom:24px;
 }
 
-/* WARNA AKSEN */
+/* RED TEXT */
 .caption .red{
-  color:#e53935;
+  color:#ef4444;
 }
 
-/* SUBTITLE */
+/* PARAGRAPH */
 .caption p{
-  margin-top:28px;
-
   font-size:20px;
-  line-height:1.8;
+  line-height:1.9;
 
-  color:#4b5563;
+  color:#475569;
 
-  max-width:580px;
+  max-width:540px;
 }
 
 /* BUTTON */
@@ -310,18 +274,18 @@ HERO CAPTION MODERN PROFESSIONAL
   align-items:center;
   justify-content:center;
 
-  margin-top:35px;
+  margin-top:38px;
 
-  height:60px;
-  padding:0 34px;
+  height:62px;
+  padding:0 36px;
 
-  border-radius:60px;
+  border-radius:999px;
 
   background:
   linear-gradient(
     135deg,
     #721e49,
-    #9d174d
+    #9f1239
   );
 
   color:#fff;
@@ -330,37 +294,45 @@ HERO CAPTION MODERN PROFESSIONAL
   font-weight:700;
 
   box-shadow:
-  0 15px 35px rgba(114,30,73,.25);
+  0 18px 40px rgba(114,30,73,.28);
 
-  transition:.35s;
+  transition:.35s ease;
 }
 
 .btn-cta:hover{
   transform:translateY(-5px);
+
   box-shadow:
-  0 20px 45px rgba(114,30,73,.35);
+  0 24px 50px rgba(114,30,73,.35);
 }
 
 /* =========================================================
 SLIDER BUTTON
 ========================================================= */
+
 .slider-btn{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
+
   z-index:10;
 
-  width:50px;
-  height:50px;
+  width:58px;
+  height:58px;
 
   border:none;
   border-radius:50%;
 
-  background:#fff;
+  background:rgba(255,255,255,.92);
 
-  cursor:pointer;
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
 
   font-size:18px;
+
+  cursor:pointer;
 
   transition:.3s;
 }
@@ -370,37 +342,175 @@ SLIDER BUTTON
 }
 
 .prev{
-  left:20px;
+  left:24px;
 }
 
 .next{
-  right:20px;
+  right:24px;
 }
 
 /* =========================================================
 DOTS
 ========================================================= */
+
 .dots{
   position:absolute;
-  bottom:35px;
+  bottom:38px;
+
   width:100%;
-  text-align:center;
+
+  display:flex;
+  justify-content:center;
+  gap:10px;
+
   z-index:10;
 }
 
 .dots span{
-  width:11px;
-  height:11px;
+  width:10px;
+  height:10px;
+
   border-radius:50%;
-  background:#fff;
-  display:inline-block;
-  margin:0 5px;
-  opacity:.5;
+
+  background:#cbd5e1;
+
+  transition:.3s;
 }
 
 .dots .active{
-  opacity:1;
+  width:34px;
+  border-radius:999px;
+
   background:#e11d48;
+}
+
+/* =========================================================
+DESKTOP LARGE
+========================================================= */
+
+@media(min-width:1400px){
+
+  .slide{
+    background-size:48%;
+  }
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media(max-width:991px){
+
+  .slide{
+    background-size:50%;
+    background-position:right bottom;
+  }
+
+  .caption h1{
+    font-size:56px;
+  }
+
+  .caption p{
+    font-size:18px;
+  }
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media(max-width:767px){
+
+  .hero-slider{
+    height:92vh;
+  }
+
+  .slide{
+    align-items:flex-start;
+
+    padding:
+    120px 24px 40px;
+
+    background-size:95%;
+    background-position:center bottom;
+  }
+
+  .overlay{
+    background:
+    linear-gradient(
+      180deg,
+      rgba(248,250,252,.98) 0%,
+      rgba(248,250,252,.92) 42%,
+      rgba(248,250,252,.45) 68%,
+      rgba(248,250,252,.08) 100%
+    );
+  }
+
+  .caption{
+    max-width:100%;
+  }
+
+  .caption::before{
+    font-size:10px;
+    padding:9px 16px;
+  }
+
+  .caption h1{
+    font-size:42px;
+    line-height:1.15;
+    letter-spacing:-1px;
+  }
+
+  .caption p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .btn-cta{
+    width:100%;
+    max-width:280px;
+    height:56px;
+  }
+
+  .slider-btn{
+    width:44px;
+    height:44px;
+  }
+
+  .prev{
+    left:10px;
+  }
+
+  .next{
+    right:10px;
+  }
+
+}
+
+.slide{
+  isolation:isolate;
+}
+
+.slide::before{
+  content:"";
+  position:absolute;
+
+  right:0;
+  top:0;
+
+  width:48%;
+  height:100%;
+
+  background:
+  linear-gradient(
+    to left,
+    rgba(255,255,255,0),
+    rgba(255,255,255,.08)
+  );
+
+  z-index:2;
 }
 
 /* =========================================================
