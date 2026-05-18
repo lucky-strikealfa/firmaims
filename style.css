@@ -153,7 +153,7 @@ HERO SLIDER
   background-repeat:no-repeat;
 
   /* fokus gambar ke kiri */
-  background-position:left center;
+  background-position:center center;
 }
 
 .overlay{
@@ -167,12 +167,13 @@ CAPTION
 ========================================================= */
 .caption{
   position:absolute;
-  left:8%;
+  left:7%;
   top:50%;
   transform:translateY(-50%);
   z-index:5;
 
-  max-width:620px;
+  width:480px;
+  max-width:90%;
 
   padding:40px;
 
@@ -1384,7 +1385,7 @@ SLIDE 5 FIX
 ========================= */
 
 .slide:nth-child(5){
-  background-position:left center !important;
+  background-position:right center !important;
 }
 
 .slide:nth-child(5) .caption{
@@ -1454,6 +1455,20 @@ MOBILE SLIDER FIX
 
   .next{
     right:12px;
+  }
+
+}
+
+/* =========================
+SLIDE 5 DESKTOP FIX
+========================= */
+
+@media(min-width:992px){
+
+  .slide:nth-child(5){
+    background-size:58%;
+    background-position:right center !important;
+    background-color:#d9d9d9;
   }
 
 }
