@@ -136,7 +136,14 @@ HERO SLIDER
   position:relative;
 
   padding-bottom:90px;
-  background:#eef4ff;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f4f8ff,
+    #eef4ff,
+    #f8fbff
+  );
 }
 
 .slides{
@@ -162,7 +169,15 @@ HERO SLIDER
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.35);
+
+  background:
+  linear-gradient(
+    to right,
+    rgba(255,255,255,.10),
+    rgba(255,255,255,.03)
+  );
+
+  backdrop-filter:brightness(1.03);
 }
 
 /* =========================================================
@@ -182,8 +197,14 @@ CAPTION
 
   border-radius:24px;
 
-  background:rgba(255,255,255,.12);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.22);
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 10px 35px rgba(255,255,255,.08),
+  0 20px 50px rgba(0,0,0,.08);
 
   color:#fff;
 }
@@ -192,12 +213,17 @@ CAPTION
   font-size:52px;
   line-height:1.2;
   font-weight:800;
+
+  text-shadow:
+  0 3px 10px rgba(0,0,0,.18);
 }
 
 .caption p{
   margin-top:14px;
   font-size:17px;
   line-height:1.8;
+
+  color:rgba(255,255,255,.95);
 }
 
 .btn-cta{
