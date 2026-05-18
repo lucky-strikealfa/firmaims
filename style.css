@@ -37,8 +37,11 @@ a{
 CONTAINER
 ========================================================= */
 .container{
-  width:min(92%,1200px);
+  width:100%;
+  max-width:1200px;
   margin:auto;
+  padding-left:24px;
+  padding-right:24px;
 }
 
 /* =========================================================
@@ -70,8 +73,9 @@ LOGO
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
   flex-shrink:0;
+  padding-left:4px;
 }
 
 .logo img{
@@ -96,7 +100,8 @@ NAVIGATION
 nav{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:32px;
+  padding-right:10px;
 }
 
 nav a{
@@ -145,7 +150,10 @@ HERO SLIDER
   align-items:center;
 
   background-size:cover;
-  background-position:center;
+  background-repeat:no-repeat;
+
+  /* fokus gambar ke kiri */
+  background-position:left center;
 }
 
 .overlay{
@@ -1170,8 +1178,9 @@ MOBILE
   }
 
   .logo-text{
-    font-size:13px;
-  }
+  font-size:12px;
+  line-height:1.3;
+}
 
   .menu-toggle{
     display:block;
@@ -1366,6 +1375,85 @@ MOBILE
     flex-direction:column;
     text-align:center;
     font-size:13px;
+  }
+
+}
+
+/* =========================
+SLIDE 5 FIX
+========================= */
+
+.slide:nth-child(5){
+  background-position:left center !important;
+}
+
+.slide:nth-child(5) .caption{
+  left:8%;
+  max-width:550px;
+}
+
+/* Desktop besar */
+@media(min-width:1400px){
+
+  .slide{
+    background-size:contain;
+    background-color:#dcdcdc;
+  }
+
+}
+
+/* =========================
+MOBILE SLIDER FIX
+========================= */
+
+@media(max-width:767px){
+
+  .container{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .nav{
+    gap:10px;
+  }
+
+  .logo img{
+    width:46px;
+    height:46px;
+  }
+
+  .hero-slider{
+    height:78vh;
+  }
+
+  .slide{
+    background-position:left center !important;
+    background-size:cover;
+  }
+
+  .caption{
+    left:16px;
+    right:16px;
+    padding:22px;
+    border-radius:20px;
+  }
+
+  .caption h1{
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  .caption p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .prev{
+    left:12px;
+  }
+
+  .next{
+    right:12px;
   }
 
 }
