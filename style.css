@@ -2340,23 +2340,29 @@ MOBILE
 }
 
 /* =========================
-   ABOUT IMAGE PLACEHOLDER
+ABOUT IMAGE
 ========================= */
 
 .about-image{
+  position:relative;
+  z-index:2;
+
+  overflow:hidden;
+
+  border-radius:34px;
+
+  box-shadow:
+  0 30px 70px rgba(0,0,0,.12);
+
   width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:30px;
 }
 
+/* PLACEHOLDER */
 .photo-placeholder{
   width:100%;
-  max-width:420px;
-  height:500px;
+  height:520px;
 
-  border-radius:30px;
+  border-radius:34px;
 
   background:
     linear-gradient(
@@ -2373,12 +2379,9 @@ MOBILE
 
   position:relative;
   overflow:hidden;
-
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.08);
 }
 
-/* efek glow */
+/* EFEK SHINE */
 .photo-placeholder::before{
   content:"";
 
@@ -2389,7 +2392,7 @@ MOBILE
     linear-gradient(
       120deg,
       transparent,
-      rgba(255,255,255,0.6),
+      rgba(255,255,255,.6),
       transparent
     );
 
@@ -2404,7 +2407,7 @@ MOBILE
 }
 
 .photo-placeholder span{
-  font-size:20px;
+  font-size:22px;
   font-weight:700;
   color:#64748b;
 
