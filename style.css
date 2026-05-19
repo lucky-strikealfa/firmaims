@@ -50,7 +50,6 @@ HEADER
 header{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
   height:80px;
   background:rgba(114,30,73,.92);
@@ -424,10 +423,6 @@ MOBILE
 ========================================================= */
 
 @media(max-width:767px){
-
-  .hero-slider{
-    height:92vh;
-  }
 
   .slide{
     align-items:flex-start;
@@ -1071,28 +1066,29 @@ MOBILE
 ========================================================= */
 
 @media(max-width:767px){
-.caption{
-  width:100%;
-  left:0;
-  padding:0 20px;
-}
 
-.caption::before{
-  font-size:11px;
-  padding:8px 14px;
-  backdrop-filter:blur(10px);
-}
+  .caption{
+    width:100%;
+    padding:0 20px;
+  }
 
-.caption h1{
-  font-size:42px;
-  line-height:1.2;
-   max-width:650px;
-}
+  .caption::before{
+    font-size:11px;
+    padding:8px 14px;
+    backdrop-filter:blur(10px);
+  }
 
-.caption p{
-  font-size:15px;
-  line-height:1.7;
-  font-weight:400;
+  .caption h1{
+    font-size:32px;
+    line-height:1.25;
+  }
+
+  .caption p{
+    font-size:15px;
+    line-height:1.7;
+    font-weight:400;
+  }
+
 }
 
 .btn-cta{
@@ -1466,18 +1462,6 @@ MOBILE
     visibility:visible;
   }
 
-  .hero-slider{
-    height:72vh;
-  }
-
-  .caption{
-    left:20px;
-    right:20px;
-
-    max-width:none;
-
-  }
-
   .caption h1{
     font-size:34px;
   }
@@ -1663,13 +1647,8 @@ MOBILE SLIDER FIX
 
   .slide{
     background-position:left center !important;
-    background-size:cover;
-  }
-
-  .caption{
-    left:16px;
-    right:16px;
-    padding:22px;
+      background-size:contain;
+      background-repeat:no-repeat;
   }
 
   .caption h1{
@@ -2052,7 +2031,6 @@ LEFT
 
   position:absolute;
 
-  left:0;
   bottom:-10px;
 
   border-radius:999px;
