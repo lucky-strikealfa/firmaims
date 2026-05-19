@@ -2140,3 +2140,181 @@ FIX POSISI GAMBAR SLIDE 3 4 5
 .slide:nth-child(3){
   background-position:right bottom !important;
 }
+
+/* =========================================================
+LAYANAN PREMIUM
+========================================================= */
+
+.layanan-premium{
+  position:relative;
+
+  padding:120px 20px;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f8f4ee 0%,
+    #ffffff 45%,
+    #f5efe4 100%
+  );
+}
+
+/* TITLE */
+.layanan-title{
+  text-align:center;
+
+  font-size:64px;
+  font-weight:800;
+
+  color:#111827;
+
+  margin-bottom:70px;
+
+  letter-spacing:-2px;
+}
+
+/* GRID */
+.layanan-premium-grid{
+  display:flex;
+  justify-content:center;
+  gap:34px;
+  flex-wrap:wrap;
+}
+
+/* CARD */
+.layanan-premium-card{
+  position:relative;
+
+  width:320px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  background:
+  rgba(255,255,255,.72);
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 20px 45px rgba(0,0,0,.12);
+
+  transition:.4s ease;
+}
+
+/* HOVER */
+.layanan-premium-card:hover{
+  transform:
+  translateY(-12px)
+  scale(1.02);
+
+  box-shadow:
+  0 35px 60px rgba(0,0,0,.18);
+}
+
+/* TOP AREA */
+.top-icon{
+  height:120px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:54px;
+
+  color:#fff;
+}
+
+/* WARNA */
+.blue-card .top-icon{
+  background:
+  linear-gradient(
+    135deg,
+    #4d8fa4,
+    #6fa7b5
+  );
+}
+
+.cyan-card .top-icon{
+  background:
+  linear-gradient(
+    135deg,
+    #1d6073,
+    #357e94
+  );
+}
+
+.gold-card .top-icon{
+  background:
+  linear-gradient(
+    135deg,
+    #c7a44f,
+    #e7d08b
+  );
+}
+
+/* CONTENT */
+.layanan-content{
+  padding:38px 30px 40px;
+  text-align:center;
+}
+
+.layanan-content h3{
+  font-size:34px;
+  font-weight:700;
+
+  color:#111827;
+
+  margin-bottom:18px;
+}
+
+.layanan-content p{
+  font-size:18px;
+  line-height:1.9;
+
+  color:#374151;
+}
+
+/* GLOW */
+.layanan-premium-card::before{
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  top:-70px;
+  right:-70px;
+
+  background:
+  rgba(255,255,255,.25);
+
+  filter:blur(25px);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .layanan-title{
+    font-size:42px;
+  }
+
+  .layanan-premium-card{
+    width:100%;
+    max-width:360px;
+  }
+
+  .layanan-content h3{
+    font-size:28px;
+  }
+
+  .layanan-content p{
+    font-size:16px;
+  }
+
+}
