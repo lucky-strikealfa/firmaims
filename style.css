@@ -1998,8 +1998,14 @@ MOBILE
 FIX POSISI GAMBAR SLIDE 3 4 5
 ========================= */
 
-.slide:nth-child(3),
-.slide:nth-child(4),
-.slide:nth-child(5){
+.slide:nth-child(3){
   background-position:right bottom !important;
+}
+
+.slide:nth-child(4){
+  background-position:right 35px !important;
+}
+
+.slide:nth-child(5){
+  background-position:right 40px !important;
 }
