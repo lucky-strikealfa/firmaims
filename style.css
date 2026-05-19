@@ -1993,3 +1993,13 @@ MOBILE
 
   letter-spacing:1px;
 }
+
+/* =========================
+FIX POSISI GAMBAR SLIDE 3 4 5
+========================= */
+
+.slide:nth-child(3),
+.slide:nth-child(4),
+.slide:nth-child(5){
+  background-position:right bottom !important;
+}
