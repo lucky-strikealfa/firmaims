@@ -1176,28 +1176,34 @@ MOBILE
 }
 
 /* =========================
-WHATSAPP FLOAT
+WHATSAPP FLOAT FIX
 ========================= */
 
 .wa-float{
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999999;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  position: fixed !important;
+  right: 25px !important;
+  bottom: 25px !important;
+  width: 60px !important;
+  height: 60px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: #25D366 !important;
+  border-radius: 50% !important;
+
+  z-index: 999999 !important;
+
+  text-decoration: none !important;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.25) !important;
 }
 
 .wa-float img{
-  width: 32px;
-  height: 32px;
-  display:block;
+  width: 32px !important;
+  height: 32px !important;
+  display:block !important;
 }
 
 @keyframes waPulse{
