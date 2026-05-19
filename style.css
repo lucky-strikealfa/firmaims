@@ -2156,23 +2156,29 @@ MINI BOX
 }
 
 /* =========================================================
-RIGHT
+RIGHT IMAGE AREA
 ========================================================= */
 
 .about-right{
   position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
 }
 
+/* IMAGE */
 .about-image{
   position:relative;
-  z-index:2;
+  z-index:1;
 
   overflow:hidden;
 
-  border-radius:34px;
+  border-radius:38px;
+
+  width:100%;
 
   box-shadow:
-  0 30px 70px rgba(0,0,0,.12);
+  0 25px 60px rgba(0,0,0,.10);
 }
 
 .about-image img{
@@ -2182,83 +2188,113 @@ RIGHT
 }
 
 /* =========================================================
-CARDS
+CARDS MENYATU DENGAN IMAGE
 ========================================================= */
 
 .about-cards{
+  position:relative;
+  z-index:5;
+
   display:grid;
   grid-template-columns:repeat(3,1fr);
 
   gap:18px;
 
-  margin-top:-45px;
+  width:92%;
 
-  position:relative;
-  z-index:5;
+  margin:
+  -70px auto 0;
 
-  align-items:start;
+  align-items:stretch;
 }
 
+/* CARD */
 .about-card{
-  background:#fff;
+  position:relative;
 
-  border-radius:24px;
+  background:
+  rgba(255,255,255,.88);
 
-  padding:22px 20px;
+  backdrop-filter:blur(14px);
 
-  min-height:230px;
+  -webkit-backdrop-filter:blur(14px);
+
+  border:
+  1px solid rgba(255,255,255,.6);
+
+  border-radius:26px;
+
+  padding:22px 18px;
+
+  min-height:235px;
 
   box-shadow:
-  0 10px 25px rgba(0,0,0,.06);
+  0 12px 35px rgba(0,0,0,.08);
 
-  transition:.35s;
+  transition:.35s ease;
 }
 
+/* HOVER */
 .about-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
 
   box-shadow:
-  0 25px 50px rgba(37,99,235,.15);
+  0 22px 45px rgba(37,99,235,.18);
 }
 
+/* ICON */
 .card-icon{
-  width:54px;
-  height:54px;
+  width:56px;
+  height:56px;
 
   border-radius:18px;
 
-  background:#eef2ff;
+  background:#f4f7ff;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:28px;
+  font-size:26px;
 
   margin-bottom:18px;
+
+  box-shadow:
+  0 6px 16px rgba(0,0,0,.05);
 }
 
+/* NUMBER */
 .about-card span{
+  display:block;
+
   color:#4338ca;
 
+  font-size:15px;
   font-weight:700;
-
-  display:block;
 
   margin-bottom:10px;
 }
 
+/* TITLE */
 .about-card h4{
-  font-size:18px;
-  margin-bottom:14px;
+  font-size:21px;
+  line-height:1.4;
+
+  margin-bottom:12px;
+
+  color:#0f172a;
 }
 
+/* TEXT */
 .about-card p{
-  color:#6b7280;
-  line-height:1.7;
+  color:#64748b;
+
+  line-height:1.8;
+
   font-size:14px;
 }
 
+/* BUTTON */
 .arrow{
   width:42px;
   height:42px;
@@ -2273,9 +2309,15 @@ CARDS
   align-items:center;
   justify-content:center;
 
-  margin-top:22px;
+  margin-top:20px;
 
   font-size:18px;
+
+  transition:.3s;
+}
+
+.about-card:hover .arrow{
+  transform:translateX(4px);
 }
 
 /* =========================================================
@@ -2284,29 +2326,9 @@ TABLET
 
 @media(max-width:991px){
 
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-left{
-    text-align:center;
-  }
-
-  .about-left p{
-    margin:auto auto 20px;
-  }
-
-  .about-badge::after{
-    left:50%;
-    transform:translateX(-50%);
-  }
-
-  .about-left h2{
-    font-size:48px;
-  }
-
   .about-cards{
     grid-template-columns:1fr;
+    width:100%;
     margin-top:25px;
   }
 
@@ -2318,27 +2340,17 @@ MOBILE
 
 @media(max-width:767px){
 
-  .about-modern{
-    padding:80px 15px;
+  .about-image{
+    border-radius:28px;
   }
 
-  .about-left h2{
-    font-size:38px;
-    line-height:1.2;
-    letter-spacing:-1px;
-  }
-
-  .about-left p{
-    font-size:15px;
-    line-height:1.9;
-  }
-
-  .about-mini-box{
-    flex-direction:column;
+  .about-cards{
+    gap:14px;
   }
 
   .about-card{
-    padding:24px;
+    min-height:auto;
+    padding:22px;
   }
 
 }
