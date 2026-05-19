@@ -2003,9 +2003,9 @@ FIX POSISI GAMBAR SLIDE 3 4 5
 }
 
 .slide:nth-child(4){
-  background-position:right 35px !important;
+  background-position:right calc(100% + 40px) !important;
 }
 
 .slide:nth-child(5){
-  background-position:right 40px !important;
+  background-position:right calc(100% + 55px) !important;
 }
