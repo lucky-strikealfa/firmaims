@@ -1179,35 +1179,31 @@ MOBILE
 WHATSAPP FLOAT
 ========================================================= */
 .wa-float{
-  position:fixed;
-  right:25px;
-  bottom:25px;
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
 
-  width:60px;
-  height:60px;
+  width: 60px;
+  height: 60px;
 
-  border-radius:50%;
+  border-radius: 50%;
 
-  background:#25D366;
+  background: #25D366;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 
-  z-index:9999;
+  z-index: 999999 !important;
 
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
 
-  animation:waPulse 2s infinite;
+  animation: waPulse 2s infinite;
 }
 
 .wa-float img{
-  width:28px;
-  height:28px;
-}
-
-.wa-float:hover{
-  transform:scale(1.1);
+  width: 30px;
+  height: 30px;
 }
 
 @keyframes waPulse{
