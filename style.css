@@ -131,7 +131,7 @@ HERO SLIDER MODERN 2026
 .hero-slider{
   position:relative;
   width:100%;
-  height:100vh;
+  height:auto;
   overflow:hidden;
   background:#f4f7fb;
 }
@@ -156,7 +156,7 @@ HERO SLIDER MODERN 2026
   padding:0 8%;
 
   background-repeat:no-repeat;
-  background-size:46%;
+  background-size:min(46%,650px);
   background-position:right center;
 
   background-color:#f8fafc;
@@ -418,73 +418,6 @@ TABLET
 
 }
 
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media(max-width:767px){
-
-  .slide{
-    align-items:flex-start;
-
-    padding:
-    120px 24px 40px;
-
-    background-size:95%;
-    background-position:center bottom;
-  }
-
-  .overlay{
-    background:
-    linear-gradient(
-      180deg,
-      rgba(248,250,252,.98) 0%,
-      rgba(248,250,252,.92) 42%,
-      rgba(248,250,252,.45) 68%,
-      rgba(248,250,252,.08) 100%
-    );
-  }
-
-  .caption{
-    max-width:100%;
-  }
-
-  .caption::before{
-    font-size:10px;
-    padding:9px 16px;
-  }
-
-  .caption h1{
-    font-size:42px;
-    line-height:1.15;
-    letter-spacing:-1px;
-  }
-
-  .caption p{
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  .btn-cta{
-    width:100%;
-    max-width:280px;
-    height:56px;
-  }
-
-  .slider-btn{
-    width:44px;
-    height:44px;
-  }
-
-  .prev{
-    left:10px;
-  }
-
-  .next{
-    right:10px;
-  }
-
-}
 
 .slide{
   isolation:isolate;
@@ -1061,120 +994,6 @@ TABLET
 
 }
 
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media(max-width:767px){
-
-  .caption{
-    width:100%;
-    padding:0 20px;
-  }
-
-  .caption::before{
-    font-size:11px;
-    padding:8px 14px;
-    backdrop-filter:blur(10px);
-  }
-
-  .caption h1{
-    font-size:32px;
-    line-height:1.25;
-  }
-
-  .caption p{
-    font-size:15px;
-    line-height:1.7;
-    font-weight:400;
-  }
-
-}
-
-.btn-cta{
-  width:100%;
-  max-width:280px;
-  height:54px;
-}
-  .cta-red-section{
-    padding:70px 15px;
-  }
-
-  .cta-red-box{
-    flex-direction:column;
-
-    text-align:center;
-
-    min-height:auto;
-
-    padding:45px 24px 0;
-
-    border-radius:28px;
-  }
-
-  .cta-red-content{
-    width:100%;
-    max-width:100%;
-  }
-
-  .cta-label{
-    font-size:12px;
-    padding:8px 16px;
-  }
-
-  .cta-red-content h2{
-    font-size:36px;
-    line-height:1.25;
-    letter-spacing:-1px;
-  }
-
-  .cta-line{
-    margin:0 auto 24px;
-  }
-
-  .cta-red-content p{
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  .cta-list{
-    text-align:left;
-  }
-
-  .cta-list li{
-    font-size:14px;
-  }
-
-  .cta-red-buttons{
-    justify-content:center;
-  }
-
-  .btn-white,
-  .btn-outline{
-    width:100%;
-    max-width:280px;
-  }
-
-  /* IMAGE MOBILE */
-  .cta-red-image{
-    position:relative;
-
-    width:100%;
-    height:auto;
-
-    right:auto;
-    bottom:auto;
-
-    margin-top:20px;
-  }
-
-  .cta-red-image img{
-    height:400px;
-    max-width:100%;
-  }
-
-}
-
 /* =========================
 WHATSAPP FLOAT FIX
 ========================= */
@@ -1392,208 +1211,6 @@ TABLET
 
 }
 
-/* =========================================================
-MOBILE
-========================================================= */
-@media(max-width:767px){
-
-  body{
-    padding-top:75px;
-  }
-
-  header{
-    height:75px;
-  }
-
-  .logo-text{
-  font-size:12px;
-  line-height:1.3;
-}
-
-  .menu-toggle{
-    display:block;
-  }
-
-  nav{
-    position:fixed;
-    top:0;
-    right:-100%;
-
-    width:75%;
-    max-width:320px;
-    height:100vh;
-
-    background:rgba(114,30,73,.96);
-
-    flex-direction:column;
-    align-items:flex-start;
-
-    padding:100px 25px;
-
-    transition:.4s;
-
-    z-index:9999;
-  }
-
-  nav.active{
-    right:0;
-  }
-
-  .nav-overlay{
-    position:fixed;
-    inset:0;
-
-    background:rgba(0,0,0,.5);
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:.3s;
-
-    z-index:9998;
-  }
-
-  .nav-overlay.active{
-    opacity:1;
-    visibility:visible;
-  }
-
-  .caption h1{
-    font-size:34px;
-  }
-
-  .caption p{
-    font-size:15px;
-  }
-
-  .slider-btn{
-    width:42px;
-    height:42px;
-  }
-
-  .tentang-card-wrap{
-    grid-template-columns:1fr;
-  }
-
-  .workspace-text,
-  .vision-text,
-  .service-text,
-  .professional-text,
-  .tentang-text{
-    text-align:center;
-  }
-
-  .workspace-text .line{
-    margin:0 auto 20px;
-  }
-
-  .workspace-text h2,
-  .vision-text h2,
-  .service-text h2,
-  .professional-text h2,
-  .tentang-text h2{
-    font-size:30px;
-  }
-
-  /* CTA */
-  .cta-red-section{
-    padding:70px 15px;
-  }
-
-  .cta-red-box{
-    flex-direction:column;
-    text-align:center;
-
-    min-height:auto;
-
-    padding:50px 24px 0;
-
-    border-radius:28px;
-  }
-
-  .cta-red-content{
-    width:100%;
-    max-width:100%;
-  }
-
-  .cta-red-content h2{
-    font-size:34px;
-    line-height:1.3;
-  }
-
-  .cta-red-content p{
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  .cta-red-buttons{
-    justify-content:center;
-  }
-
-  .btn-white,
-  .btn-outline{
-    width:100%;
-    max-width:280px;
-  }
-
-  /* PERBAIKAN FOTO MOBILE */
-  .cta-red-image{
-    position:relative;
-
-    right:auto;
-    bottom:auto;
-
-    width:100%;
-    height:auto;
-
-    margin-top:25px;
-
-    justify-content:center;
-  }
-
-  .cta-red-image img{
-    width:auto;
-    height:420px;
-
-    max-width:100%;
-
-    object-fit:contain;
-  }
-
-  .footer-modern{
-    padding:45px 0 25px;
-  }
-
-  .footer-brand{
-    text-align:center;
-    align-items:center;
-  }
-
-  .footer-logo{
-    justify-content:center;
-  }
-
-  .socials{
-    justify-content:center;
-  }
-
-  .footer-address{
-    text-align:center;
-  }
-
-  .footer-links{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
-    font-size:13px;
-  }
-
-}
-
 /* =========================
 SLIDE 5 FIX
 ========================= */
@@ -1613,56 +1230,6 @@ SLIDE 5 FIX
   .slide{
     background-size:contain;
     background-color:#eef4ff;
-  }
-
-}
-
-/* =========================
-MOBILE SLIDER FIX
-========================= */
-
-@media(max-width:767px){
-
-  .container{
-    padding-left:18px;
-    padding-right:18px;
-  }
-
-  .nav{
-    gap:10px;
-  }
-
-  .logo img{
-    width:46px;
-    height:46px;
-  }
-
-  .hero-slider{
-    height:78vh;
-  }
-
-  .slide{
-    background-position:left center !important;
-      background-size:contain;
-      background-repeat:no-repeat;
-  }
-
-  .caption h1{
-    font-size:30px;
-    line-height:1.25;
-  }
-
-  .caption p{
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  .prev{
-    left:12px;
-  }
-
-  .next{
-    right:12px;
   }
 
 }
@@ -2329,22 +1896,58 @@ MOBILE
 
 }
 
-/* =========================
-ABOUT IMAGE
-========================= */
+@media(max-width:767px){
 
-.about-image{
-  position:relative;
-  z-index:2;
+  body{
+    padding-top:75px;
+  }
 
-  overflow:hidden;
+  header{
+    height:75px;
+  }
 
-  border-radius:34px;
+  .hero-slider{
+    height:78vh;
+    min-height:650px;
+  }
 
-  box-shadow:
-  0 30px 70px rgba(0,0,0,.12);
+  .slide{
+    padding:110px 20px 40px;
+    background-size:contain;
+    background-position:center bottom;
+    background-repeat:no-repeat;
+  }
 
-  width:100%;
+  .caption{
+    width:100%;
+    padding:0 10px;
+    max-width:100%;
+  }
+
+  .caption::before{
+    font-size:11px;
+    padding:8px 14px;
+  }
+
+  .caption h1{
+    font-size:32px;
+    line-height:1.25;
+    letter-spacing:-1px;
+    max-width:100%;
+  }
+
+  .caption p{
+    font-size:15px;
+    line-height:1.7;
+    font-weight:400;
+  }
+
+  .btn-cta{
+    width:100%;
+    max-width:280px;
+    height:54px;
+  }
+
 }
 
 /* PLACEHOLDER */
