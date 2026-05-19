@@ -131,22 +131,21 @@ HERO SLIDER MODERN 2026
 .hero-slider{
   position:relative;
   width:100%;
-  height:auto;
+  min-height:100vh;
   overflow:hidden;
   background:#f4f7fb;
 }
 
-/* SLIDES */
 .slides{
   display:flex;
-  height:100%;
+  min-height:100vh;
   transition:transform .9s ease-in-out;
 }
 
-/* SINGLE SLIDE */
 .slide{
   min-width:100%;
-  height:100%;
+  min-height:100vh;
+
   position:relative;
   overflow:hidden;
 
@@ -156,8 +155,8 @@ HERO SLIDER MODERN 2026
   padding:0 8%;
 
   background-repeat:no-repeat;
-  background-size:min(46%,650px);
-  background-position:right center;
+  background-size:contain;
+  background-position:right bottom;
 
   background-color:#f8fafc;
 }
@@ -395,32 +394,6 @@ DESKTOP LARGE
     background-size:48%;
   }
 
-}
-
-/* =========================================================
-TABLET
-========================================================= */
-
-@media(max-width:991px){
-
-  .slide{
-    background-size:50%;
-    background-position:right bottom;
-  }
-
-  .caption h1{
-    font-size:56px;
-  }
-
-  .caption p{
-    font-size:18px;
-  }
-
-}
-
-
-.slide{
-  isolation:isolate;
 }
 
 /* =========================================================
@@ -956,44 +929,6 @@ IMAGE
   drop-shadow(0 20px 40px rgba(0,0,0,.22));
 }
 
-/* =========================================================
-TABLET
-========================================================= */
-
-@media(max-width:991px){
-
-  .cta-red-box{
-    min-height:460px;
-    padding:55px 40px;
-  }
-
-  .cta-red-content{
-    width:58%;
-  }
-
-  .cta-red-content h2{
-    font-size:46px;
-  }
-
-  .cta-red-content p{
-    font-size:16px;
-  }
-
-  .cta-list li{
-    font-size:15px;
-  }
-
-  .cta-red-image{
-    width:34%;
-    right:10px;
-  }
-
-  .cta-red-image img{
-    height:82%;
-  }
-
-}
-
 /* =========================
 WHATSAPP FLOAT FIX
 ========================= */
@@ -1017,6 +952,8 @@ WHATSAPP FLOAT FIX
   text-decoration: none !important;
 
   box-shadow: 0 8px 20px rgba(0,0,0,.25) !important;
+
+  animation:waPulse 2s infinite;
 }
 
 .wa-float img{
@@ -1155,62 +1092,6 @@ FOOTER
   font-size:14px;
 }
 
-/* =========================================================
-TABLET
-========================================================= */
-@media(max-width:991px){
-
-  .caption h1{
-    font-size:42px;
-  }
-
-  .tentang-flex,
-  .workspace-flex,
-  .vision-flex,
-  .service-flex,
-  .professional-flex{
-    grid-template-columns:1fr;
-  }
-
-  .cta-red-box{
-    min-height:480px;
-    padding:55px 40px;
-  }
-
-  .cta-red-content{
-    width:60%;
-  }
-
-  .cta-red-content h2{
-    font-size:42px;
-  }
-
-  .cta-red-image{
-    width:300px;
-    right:10px;
-  }
-
-  .cta-red-image img{
-    height:85%;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-address{
-    border-right:none;
-    border-top:1px solid rgba(0,0,0,.1);
-    border-bottom:1px solid rgba(0,0,0,.1);
-    padding:25px 0;
-  }
-
-  .footer-links{
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-
 /* =========================
 SLIDE 5 FIX
 ========================= */
@@ -1240,10 +1121,12 @@ SLIDE 5 DESKTOP FIX
 
 @media(min-width:992px){
 
+  .slide:nth-child(4){
+    background-position:right 20px bottom !important;
+  }
+
   .slide:nth-child(5){
-    background-size:58%;
     background-position:right center !important;
-    background-color:#eef4ff;
   }
 
 }
@@ -1468,36 +1351,6 @@ STEPS
   margin-top:54px;
 
   border-radius:999px;
-}
-
-/* =========================================================
-TABLET
-========================================================= */
-
-@media(max-width:991px){
-
-  .prima-top{
-    grid-template-columns:1fr;
-    gap:50px;
-  }
-
-  .prima-heading{
-    text-align:center;
-  }
-
-  .prima-heading h2{
-    font-size:46px;
-    margin:auto auto 30px;
-  }
-
-  .prima-desc{
-    margin:auto;
-  }
-
-  .step-line{
-    display:none;
-  }
-
 }
 
 /* =========================================================
@@ -1873,8 +1726,55 @@ TABLET
     margin-top:25px;
   }
 
-}
+  .menu-toggle{
+    display:block;
+  }
 
+  nav{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+
+    background:#721e49;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:25px;
+
+    display:none;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .about-grid,
+  .prima-top,
+  .workspace-flex,
+  .tentang-flex,
+  .vision-flex,
+  .service-flex,
+  .professional-flex{
+    grid-template-columns:1fr;
+  }
+
+  .cta-red-box{
+    padding-bottom:320px;
+  }
+
+  .cta-red-content{
+    width:100%;
+  }
+
+  .cta-red-image{
+    width:260px;
+    right:50%;
+    transform:translateX(50%);
+  }
+
+}
 /* =========================================================
 MOBILE
 ========================================================= */
@@ -1898,54 +1798,65 @@ MOBILE
 
 @media(max-width:767px){
 
-  body{
-    padding-top:75px;
-  }
-
-  header{
-    height:75px;
-  }
-
   .hero-slider{
-    height:78vh;
-    min-height:650px;
+    min-height:100vh;
+    height:auto;
+  }
+
+  .slides{
+    min-height:100vh;
   }
 
   .slide{
-    padding:110px 20px 40px;
-    background-size:contain;
-    background-position:center bottom;
-    background-repeat:no-repeat;
+    min-height:100vh;
+
+    padding:
+      110px 20px 60px;
+
+    align-items:flex-start;
+
+    background-size:85%;
+    background-position:
+      center bottom;
+  }
+
+  .overlay{
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(248,250,252,.97) 0%,
+      rgba(248,250,252,.92) 45%,
+      rgba(248,250,252,.35) 75%,
+      rgba(248,250,252,0) 100%
+    );
   }
 
   .caption{
-    width:100%;
-    padding:0 10px;
     max-width:100%;
-  }
-
-  .caption::before{
-    font-size:11px;
-    padding:8px 14px;
+    text-align:center;
   }
 
   .caption h1{
-    font-size:32px;
-    line-height:1.25;
-    letter-spacing:-1px;
-    max-width:100%;
+    font-size:34px;
+    line-height:1.2;
   }
 
   .caption p{
     font-size:15px;
     line-height:1.7;
-    font-weight:400;
   }
 
   .btn-cta{
     width:100%;
     max-width:280px;
-    height:54px;
+    margin:auto;
+    margin-top:30px;
+  }
+
+  .slider-btn{
+    width:44px;
+    height:44px;
+    font-size:15px;
   }
 
 }
@@ -2000,12 +1911,4 @@ FIX POSISI GAMBAR SLIDE 3 4 5
 
 .slide:nth-child(3){
   background-position:right bottom !important;
-}
-
-.slide:nth-child(4){
-  background-position:right calc(100% + 40px) !important;
-}
-
-.slide:nth-child(5){
-  background-position:right calc(100% + 55px) !important;
 }
