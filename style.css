@@ -498,29 +498,257 @@ CARD
 }
 
 /* =========================================================
-LAYANAN
+LAYANAN PREMIUM MODERN
 ========================================================= */
+
+.layanan-section{
+  position:relative;
+  padding:120px 20px;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f6f1e8 0%,
+    #ffffff 45%,
+    #f7f4ef 100%
+  );
+}
+
+/* EFFECT BACKGROUND */
+.layanan-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    rgba(59,130,246,.10),
+    transparent 60%
+  );
+
+  filter:blur(100px);
+  opacity:.6;
+
+  pointer-events:none;
+}
+
+.layanan-title{
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+
+  font-size:64px;
+  font-weight:800;
+
+  color:#0f172a;
+
+  margin-bottom:70px;
+
+  letter-spacing:-2px;
+}
+
+/* GRID */
 .layanan-grid{
+  position:relative;
+  z-index:2;
+
   display:flex;
   justify-content:center;
-  gap:24px;
+  gap:34px;
   flex-wrap:wrap;
 }
 
+/* CARD */
 .layanan-card{
-  width:260px;
-  background:#fff;
-  border-radius:18px;
-  padding:28px;
+  position:relative;
 
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  width:320px;
+  min-height:360px;
 
-  transition:.3s;
+  border-radius:34px;
+
+  overflow:hidden;
+
+  background:
+  rgba(255,255,255,.58);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  border:
+  1px solid rgba(255,255,255,.7);
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.10);
+
+  transition:.45s ease;
 }
 
+/* HOVER */
 .layanan-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 35px rgba(37,99,235,.15);
+  transform:
+  translateY(-12px)
+  scale(1.02);
+
+  box-shadow:
+  0 30px 60px rgba(0,0,0,.14);
+}
+
+/* HEADER */
+.layanan-top{
+  position:relative;
+
+  height:120px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:
+  30px 30px 0 0;
+
+  overflow:hidden;
+}
+
+/* WARNA TIAP CARD */
+.layanan-card:nth-child(1) .layanan-top{
+  background:
+  linear-gradient(
+    135deg,
+    #7bb0be,
+    #4f7884
+  );
+}
+
+.layanan-card:nth-child(2) .layanan-top{
+  background:
+  linear-gradient(
+    135deg,
+    #2e7388,
+    #154b5a
+  );
+}
+
+.layanan-card:nth-child(3) .layanan-top{
+  background:
+  linear-gradient(
+    135deg,
+    #f2df9b,
+    #b9973c
+  );
+}
+
+/* GLOW */
+.layanan-top::after{
+  content:"";
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  background:
+  radial-gradient(
+    rgba(255,255,255,.45),
+    transparent 70%
+  );
+
+  filter:blur(20px);
+
+  top:-70px;
+  right:-40px;
+}
+
+/* ICON */
+.layanan-icon{
+  position:relative;
+  z-index:2;
+
+  font-size:54px;
+  color:#fff;
+
+  filter:
+  drop-shadow(0 6px 10px rgba(0,0,0,.18));
+}
+
+/* BODY */
+.layanan-body{
+  padding:38px 34px 34px;
+  text-align:center;
+}
+
+.layanan-body h3{
+  font-size:34px;
+  line-height:1.2;
+
+  color:#0f172a;
+
+  margin-bottom:18px;
+
+  font-weight:700;
+}
+
+.layanan-body p{
+  font-size:18px;
+  line-height:1.9;
+
+  color:#475569;
+}
+
+/* BORDER GLOW */
+.layanan-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  border-radius:34px;
+
+  padding:1.5px;
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,.8),
+    rgba(255,255,255,0)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+
+  pointer-events:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .layanan-section{
+    padding:90px 20px;
+  }
+
+  .layanan-title{
+    font-size:42px;
+    margin-bottom:50px;
+  }
+
+  .layanan-card{
+    width:100%;
+    max-width:360px;
+    min-height:auto;
+  }
+
+  .layanan-body h3{
+    font-size:28px;
+  }
+
+  .layanan-body p{
+    font-size:16px;
+  }
+
 }
 
 /* =========================================================
