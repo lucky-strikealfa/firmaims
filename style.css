@@ -157,10 +157,12 @@ HERO SLIDER MODERN 2026
   padding:0 8%;
 
   background-repeat:no-repeat;
-  background-size:contain;
-  background-position:right bottom;
 
-  background-color:#f8fafc;
+  /* INI YANG MEMBUAT MENYATU */
+  background-size:cover;
+  background-position:center right;
+
+  background-color:#f4f1eb;
 }
 
 /* OVERLAY */
@@ -171,12 +173,33 @@ HERO SLIDER MODERN 2026
   background:
   linear-gradient(
     90deg,
-    rgba(248,250,252,.96) 0%,
-    rgba(248,250,252,.90) 35%,
-    rgba(248,250,252,.30) 52%,
-    rgba(248,250,252,.05) 68%,
-    rgba(248,250,252,0) 100%
+    rgba(244,241,235,.97) 0%,
+    rgba(244,241,235,.93) 30%,
+    rgba(244,241,235,.72) 48%,
+    rgba(244,241,235,.25) 68%,
+    rgba(244,241,235,0) 100%
   );
+
+  z-index:1;
+}
+
+.slide::before{
+  content:"";
+  position:absolute;
+
+  width:900px;
+  height:900px;
+
+  right:-250px;
+  top:-250px;
+
+  background:
+  radial-gradient(
+    rgba(255,255,255,.45),
+    transparent 70%
+  );
+
+  filter:blur(80px);
 
   z-index:1;
 }
