@@ -16,12 +16,29 @@ html{
   scroll-behavior:smooth;
 }
 
+/* =========================================================
+ROOT COLOR
+========================================================= */
+:root{
+  --primary:#7c3aed;
+  --primary-dark:#5b21b6;
+  --primary-light:#a78bfa;
+
+  --dark:#0f172a;
+  --text:#475569;
+
+  --bg:#f5f7fb;
+  --white:#ffffff;
+
+  --border:#e2e8f0;
+}
+
 body{
   font-family:'Poppins',sans-serif;
-  background:#f5f7fb;
-  color:#111827;
+  background:var(--bg);
+  color:var(--dark);
   overflow-x:hidden;
-  padding-top:80px;
+  padding-top:90px;
 }
 
 img{
@@ -50,19 +67,24 @@ HEADER
 header{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
-  height:80px;
-  background:rgba(114,30,73,.92);
-  z-index:9999;
-  display:flex;
-  align-items:center;
-}
+  height:90px;
 
-.nav{
-  width:100%;
+  z-index:9999;
+
+  background:rgba(255,255,255,.88);
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(0,0,0,.05);
+
+  box-shadow:
+  0 10px 35px rgba(15,23,42,.04);
+
   display:flex;
   align-items:center;
-  justify-content:space-between;
 }
 
 /* =========================================================
