@@ -2410,7 +2410,7 @@ PROFESSIONAL BANNER PREMIUM
   position:relative;
   overflow:hidden;
 
-  padding:110px 20px;
+  padding:90px 20px;
 
   background:
   linear-gradient(
@@ -2421,79 +2421,59 @@ PROFESSIONAL BANNER PREMIUM
   );
 }
 
-/* OVERLAY */
-.professional-overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  radial-gradient(
-    rgba(114,30,73,.08),
-    transparent 60%
-  );
-
-  filter:blur(100px);
-}
-
-/* WRAPPER */
 .professional-wrapper{
-  position:relative;
-  z-index:2;
-
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:50px;
   align-items:center;
 }
 
 /* =========================================================
-LEFT
+LEFT CONTENT
 ========================================================= */
 
 .pro-badge{
   display:inline-block;
 
-  margin-bottom:18px;
-
-  font-size:15px;
+  font-size:13px;
   font-weight:700;
   letter-spacing:2px;
 
-  color:#3b2d2f;
+  color:#721e49;
+
+  margin-bottom:16px;
 }
 
 .professional-content h2{
-  font-size:74px;
-  line-height:1.02;
+  font-size:52px;
+  line-height:1.1;
   font-weight:800;
 
   color:#721e49;
 
-  margin-bottom:42px;
-
-  letter-spacing:-3px;
+  margin-bottom:34px;
 }
 
 .professional-content h2 span{
   display:block;
 
+  font-size:38px;
+
   color:#1f2937;
 
-  font-size:54px;
-
-  margin:10px 0;
+  margin-top:6px;
 }
 
 /* =========================================================
-MAIN ICONS
+ICON SECTION
 ========================================================= */
 
 .pro-main-icons{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:26px;
 
-  margin-bottom:45px;
+  margin-bottom:35px;
 }
 
 .pro-icon-card{
@@ -2501,8 +2481,8 @@ MAIN ICONS
 }
 
 .icon-circle{
-  width:120px;
-  height:120px;
+  width:90px;
+  height:90px;
 
   border-radius:50%;
 
@@ -2513,69 +2493,69 @@ MAIN ICONS
     #9f1239
   );
 
-  color:#fff;
-
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:46px;
+  color:#fff;
 
-  margin:auto auto 18px;
+  font-size:34px;
+
+  margin:auto auto 14px;
 
   box-shadow:
-  0 20px 40px rgba(114,30,73,.25);
+  0 15px 35px rgba(114,30,73,.20);
 }
 
 .pro-icon-card h4{
-  font-size:24px;
-  color:#4b5563;
+  font-size:18px;
+  color:#374151;
 }
 
 .pro-divider{
-  width:2px;
-  height:120px;
+  width:1px;
+  height:90px;
 
   background:#d1d5db;
 }
 
 /* =========================================================
-MINI LIST
+MINI BOX
 ========================================================= */
 
 .pro-mini-list{
   display:flex;
   flex-wrap:wrap;
-  gap:18px;
+  gap:14px;
 }
 
 .mini-box{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
 
   background:#fff;
 
-  padding:18px 22px;
+  padding:14px 18px;
 
-  border-radius:18px;
+  border-radius:16px;
 
   box-shadow:
-  0 10px 25px rgba(0,0,0,.06);
+  0 8px 20px rgba(0,0,0,.06);
 
   transition:.3s;
 }
 
 .mini-box:hover{
-  transform:translateY(-5px);
+  transform:translateY(-4px);
 }
 
 .mini-box span{
-  font-size:26px;
+  font-size:22px;
 }
 
 .mini-box p{
-  font-size:16px;
+  font-size:14px;
   font-weight:600;
   color:#374151;
 }
@@ -2593,68 +2573,67 @@ RIGHT IMAGE
 }
 
 .professional-person img{
-  position:relative;
-  z-index:5;
-
   width:100%;
-  max-width:500px;
+  max-width:520px;
 
   object-fit:contain;
 
+  position:relative;
+  z-index:5;
+
   filter:
-  drop-shadow(0 30px 50px rgba(0,0,0,.20));
+  drop-shadow(0 25px 40px rgba(0,0,0,.18));
 }
 
 /* GLOW */
 .person-glow{
   position:absolute;
 
-  width:380px;
-  height:380px;
+  width:320px;
+  height:320px;
 
   background:
   radial-gradient(
-    rgba(114,30,73,.22),
+    rgba(114,30,73,.18),
     transparent 70%
   );
 
   filter:blur(60px);
 
-  bottom:20px;
+  bottom:10px;
 }
 
 /* SHIELD */
 .shield-icon{
   position:absolute;
-  top:30px;
-  right:30px;
 
-  width:140px;
-  height:140px;
+  top:40px;
+  right:40px;
+
+  width:110px;
+  height:110px;
 
   border-radius:50%;
 
   background:
-  rgba(255,255,255,.45);
+  rgba(255,255,255,.35);
 
-  backdrop-filter:blur(12px);
+  backdrop-filter:blur(10px);
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:56px;
+  font-size:42px;
 
   color:#fff;
-
-  z-index:2;
 }
 
 /* CARD */
 .pro-card{
   position:absolute;
 
-  bottom:30px;
+  bottom:20px;
   left:50%;
 
   transform:translateX(-50%);
@@ -2666,21 +2645,21 @@ RIGHT IMAGE
     #7c2449
   );
 
-  padding:20px 28px;
+  padding:16px 24px;
 
-  border-radius:16px;
+  border-radius:14px;
 
   z-index:10;
 
   box-shadow:
-  0 20px 40px rgba(0,0,0,.18);
+  0 15px 35px rgba(0,0,0,.16);
 }
 
 .pro-card h5{
   color:#d6a95b;
 
-  font-size:18px;
-  line-height:1.6;
+  font-size:15px;
+  line-height:1.5;
 
   text-align:center;
 
@@ -2702,11 +2681,11 @@ MOBILE
   }
 
   .professional-content h2{
-    font-size:48px;
+    font-size:38px;
   }
 
   .professional-content h2 span{
-    font-size:34px;
+    font-size:28px;
   }
 
   .pro-main-icons{
@@ -2718,13 +2697,7 @@ MOBILE
   }
 
   .professional-person{
-    margin-top:40px;
-  }
-
-  .shield-icon{
-    width:100px;
-    height:100px;
-    font-size:42px;
+    margin-top:30px;
   }
 
 }
