@@ -2701,3 +2701,10 @@ MOBILE
   }
 
 }
+
+.professional-person img{
+  width:100%;
+  max-width:520px;
+  display:block;
+  object-fit:contain;
+}
