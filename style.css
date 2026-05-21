@@ -2926,6 +2926,34 @@ MOBILE
 
 }
 
+.professional-person{
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+/* EFEK MENYATU KE BACKGROUND */
+.professional-person::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 45%,
+      rgba(245,237,227,.35) 70%,
+      rgba(245,237,227,.75) 100%
+    );
+
+  z-index:6;
+  pointer-events:none;
+}
+
+/* GAMBAR */
 .professional-person img{
   width:100%;
   max-width:none;
@@ -2933,4 +2961,51 @@ MOBILE
 
   object-fit:cover;
   display:block;
+
+  position:relative;
+  z-index:5;
+
+  /* supaya tepi blur */
+  -webkit-mask-image:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,1) 58%,
+      rgba(0,0,0,.95) 68%,
+      rgba(0,0,0,.55) 82%,
+      transparent 100%
+    );
+
+  mask-image:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,1) 58%,
+      rgba(0,0,0,.95) 68%,
+      rgba(0,0,0,.55) 82%,
+      transparent 100%
+    );
+
+  filter:
+    drop-shadow(0 25px 40px rgba(0,0,0,.18))
+    blur(.2px);
+
+  transform:scale(1.05);
+}
+
+.person-glow{
+  position:absolute;
+
+  width:520px;
+  height:520px;
+
+  background:
+    radial-gradient(
+      rgba(255,255,255,.65),
+      rgba(114,30,73,.12),
+      transparent 72%
+    );
+
+  filter:blur(90px);
+
+  bottom:-40px;
+  z-index:1;
 }
