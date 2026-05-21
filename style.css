@@ -2043,18 +2043,22 @@ MOBILE
 @media(max-width:767px){
 
   .hero-slider{
-    height:100vh;
-    min-height:100vh;
+    min-height:100svh;
   }
 
-  .slides{
-    height:100%;
+  .slide{
+    min-height:100svh;
+
+    padding:110px 20px 140px;
+
+    flex-direction:column;
+    justify-content:flex-start;
+
+    background-size:78%;
+    background-position:center bottom 10px;
   }
 
   .caption{
-    position:relative;
-    z-index:5;
-
     max-width:100%;
     text-align:center;
   }
@@ -2072,7 +2076,6 @@ MOBILE
   .btn-cta{
     width:100%;
     max-width:280px;
-    margin:auto;
     margin-top:30px;
   }
 
@@ -2289,7 +2292,7 @@ LAYANAN PREMIUM
 /* MOBILE */
 @media(max-width:768px){
 
-  .layanan-title{
+  .layanan-modern-title
     font-size:42px;
   }
 
@@ -2475,34 +2478,30 @@ BACKGROUND PREMIUM EFFECT
 
 .professional-person{
   position:relative;
+  overflow:hidden;
 
   display:flex;
   justify-content:center;
   align-items:flex-end;
-
-  overflow:visible;
 }
 
-/* EFFECT BLEND KE BACKGROUND */
 .professional-person::after{
   content:"";
   position:absolute;
-  inset:-20px;
+  inset:0;
 
   background:
     radial-gradient(
       circle at center,
       transparent 45%,
-      rgba(245,237,227,.15) 65%,
-      rgba(245,237,227,.65) 82%,
-      #f5ede3 100%
+      rgba(245,237,227,.35) 70%,
+      rgba(245,237,227,.75) 100%
     );
 
   z-index:6;
   pointer-events:none;
 }
 
-/* IMAGE */
 .professional-person img{
   width:100%;
   max-width:620px;
@@ -2514,29 +2513,28 @@ BACKGROUND PREMIUM EFFECT
   position:relative;
   z-index:5;
 
-  /* HILANGKAN BENTUK KOTAK */
   -webkit-mask-image:
     radial-gradient(
-      ellipse at center,
-      rgba(0,0,0,1) 52%,
-      rgba(0,0,0,.96) 64%,
-      rgba(0,0,0,.55) 80%,
+      circle at center,
+      rgba(0,0,0,1) 58%,
+      rgba(0,0,0,.95) 68%,
+      rgba(0,0,0,.55) 82%,
       transparent 100%
     );
 
   mask-image:
     radial-gradient(
-      ellipse at center,
-      rgba(0,0,0,1) 52%,
-      rgba(0,0,0,.96) 64%,
-      rgba(0,0,0,.55) 80%,
+      circle at center,
+      rgba(0,0,0,1) 58%,
+      rgba(0,0,0,.95) 68%,
+      rgba(0,0,0,.55) 82%,
       transparent 100%
     );
 
   filter:
-    drop-shadow(0 25px 45px rgba(0,0,0,.18));
+    drop-shadow(0 25px 40px rgba(0,0,0,.18));
 
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
 /* GLOW */
@@ -2690,49 +2688,6 @@ MINI BOX
   color:#374151;
 }
 
-/* =========================================================
-RIGHT IMAGE
-========================================================= */
-
-.professional-person{
-  position:relative;
-
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-}
-
-.professional-person img{
-  width:100%;
-  max-width:520px;
-
-  object-fit:contain;
-
-  position:relative;
-  z-index:5;
-
-  filter:
-  drop-shadow(0 25px 40px rgba(0,0,0,.18));
-}
-
-/* GLOW */
-.person-glow{
-  position:absolute;
-
-  width:320px;
-  height:320px;
-
-  background:
-  radial-gradient(
-    rgba(114,30,73,.18),
-    transparent 70%
-  );
-
-  filter:blur(60px);
-
-  bottom:10px;
-}
-
 /* SHIELD */
 .shield-icon{
   position:absolute;
@@ -2825,21 +2780,6 @@ MOBILE
   .pro-mini-list{
     justify-content:center;
   }
-
-  .professional-person{
-    margin-top:30px;
-  }
-
-}
-
-.professional-person{
-  position:relative;
-  overflow:hidden;
-
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-}
 
 /* EFEK MENYATU KE BACKGROUND */
 .professional-person::after{
