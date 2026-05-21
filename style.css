@@ -2400,7 +2400,7 @@ PROFESSIONAL BANNER PREMIUM
   position:relative;
   overflow:hidden;
 
-  padding:90px 20px;
+  padding:110px 20px;
 
   background:
     linear-gradient(
@@ -2413,10 +2413,7 @@ PROFESSIONAL BANNER PREMIUM
   isolation:isolate;
 }
 
-/* =========================================================
-BACKGROUND PREMIUM EFFECT
-========================================================= */
-
+/* BACKGROUND EFFECT */
 .professional-banner::before{
   content:"";
   position:absolute;
@@ -2428,13 +2425,11 @@ BACKGROUND PREMIUM EFFECT
       rgba(255,255,255,.85),
       transparent 35%
     ),
-
     radial-gradient(
       circle at right center,
       rgba(180,140,90,.12),
       transparent 30%
     ),
-
     radial-gradient(
       circle at bottom left,
       rgba(114,30,73,.08),
@@ -2470,92 +2465,21 @@ BACKGROUND PREMIUM EFFECT
   pointer-events:none;
 }
 
-/* supaya content tetap di atas */
+/* =========================================================
+WRAPPER FIX
+========================================================= */
+
 .professional-wrapper{
   position:relative;
   z-index:2;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  align-items:center;
+  gap:70px;
 }
 
-.professional-person{
-  position:relative;
-  overflow:hidden;
-
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-}
-
-.professional-person::after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(
-      circle at center,
-      transparent 45%,
-      rgba(245,237,227,.35) 70%,
-      rgba(245,237,227,.75) 100%
-    );
-
-  z-index:6;
-  pointer-events:none;
-}
-
-.professional-person img{
-  width:100%;
-  max-width:620px;
-  height:auto;
-
-  object-fit:contain;
-  display:block;
-
-  position:relative;
-  z-index:5;
-
-  -webkit-mask-image:
-    radial-gradient(
-      circle at center,
-      rgba(0,0,0,1) 58%,
-      rgba(0,0,0,.95) 68%,
-      rgba(0,0,0,.55) 82%,
-      transparent 100%
-    );
-
-  mask-image:
-    radial-gradient(
-      circle at center,
-      rgba(0,0,0,1) 58%,
-      rgba(0,0,0,.95) 68%,
-      rgba(0,0,0,.55) 82%,
-      transparent 100%
-    );
-
-  filter:
-    drop-shadow(0 25px 40px rgba(0,0,0,.18));
-
-  transform:scale(1.05);
-}
-
-/* GLOW */
-.person-glow{
-  position:absolute;
-
-  width:600px;
-  height:600px;
-
-  background:
-    radial-gradient(
-      rgba(255,255,255,.75),
-      rgba(114,30,73,.10),
-      transparent 72%
-    );
-
-  filter:blur(100px);
-
-  bottom:-80px;
-  z-index:1;
-}
 /* =========================================================
 LEFT CONTENT
 ========================================================= */
@@ -2573,7 +2497,7 @@ LEFT CONTENT
 }
 
 .professional-content h2{
-  font-size:52px;
+  font-size:58px;
   line-height:1.1;
   font-weight:800;
 
@@ -2585,16 +2509,14 @@ LEFT CONTENT
 .professional-content h2 span{
   display:block;
 
-  font-size:38px;
+  font-size:42px;
 
   color:#1f2937;
 
   margin-top:6px;
 }
 
-/* =========================================================
-ICON SECTION
-========================================================= */
+/* ICON SECTION */
 
 .pro-main-icons{
   display:flex;
@@ -2647,9 +2569,7 @@ ICON SECTION
   background:#d1d5db;
 }
 
-/* =========================================================
-MINI BOX
-========================================================= */
+/* MINI BOX */
 
 .pro-mini-list{
   display:flex;
@@ -2688,7 +2608,77 @@ MINI BOX
   color:#374151;
 }
 
+/* =========================================================
+RIGHT IMAGE
+========================================================= */
+
+.professional-person{
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+/* BLUR MENYATU */
+.professional-person::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 45%,
+      rgba(245,237,227,.35) 70%,
+      rgba(245,237,227,.75) 100%
+    );
+
+  z-index:6;
+  pointer-events:none;
+}
+
+/* IMAGE */
+.professional-person img{
+  width:100%;
+  max-width:620px;
+  height:auto;
+
+  object-fit:contain;
+  display:block;
+
+  position:relative;
+  z-index:5;
+
+  filter:
+    drop-shadow(0 25px 40px rgba(0,0,0,.18));
+
+  transform:scale(1.04);
+}
+
+/* GLOW */
+
+.person-glow{
+  position:absolute;
+
+  width:600px;
+  height:600px;
+
+  background:
+    radial-gradient(
+      rgba(255,255,255,.75),
+      rgba(114,30,73,.10),
+      transparent 72%
+    );
+
+  filter:blur(100px);
+
+  bottom:-80px;
+  z-index:1;
+}
+
 /* SHIELD */
+
 .shield-icon{
   position:absolute;
 
@@ -2712,9 +2702,12 @@ MINI BOX
   font-size:42px;
 
   color:#fff;
+
+  z-index:10;
 }
 
 /* CARD */
+
 .pro-card{
   position:absolute;
 
@@ -2752,13 +2745,14 @@ MINI BOX
 }
 
 /* =========================================================
-MOBILE
+TABLET & MOBILE
 ========================================================= */
 
 @media(max-width:991px){
 
   .professional-wrapper{
     grid-template-columns:1fr;
+    gap:50px;
   }
 
   .professional-content{
@@ -2766,11 +2760,11 @@ MOBILE
   }
 
   .professional-content h2{
-    font-size:38px;
+    font-size:40px;
   }
 
   .professional-content h2 span{
-    font-size:28px;
+    font-size:30px;
   }
 
   .pro-main-icons{
@@ -2781,77 +2775,47 @@ MOBILE
     justify-content:center;
   }
 
-/* EFEK MENYATU KE BACKGROUND */
-.professional-person::after{
-  content:"";
-  position:absolute;
-  inset:0;
+  .professional-person img{
+    max-width:500px;
+  }
 
-  background:
-    radial-gradient(
-      circle at center,
-      transparent 45%,
-      rgba(245,237,227,.35) 70%,
-      rgba(245,237,227,.75) 100%
-    );
-
-  z-index:6;
-  pointer-events:none;
 }
 
-/* GAMBAR */
-.professional-person img{
-  width:100%;
-  max-width:none;
-  height:auto;
+@media(max-width:767px){
 
-  object-fit:cover;
-  display:block;
+  .professional-banner{
+    padding:80px 20px;
+  }
 
-  position:relative;
-  z-index:5;
+  .professional-content h2{
+    font-size:34px;
+  }
 
-  /* supaya tepi blur */
-  -webkit-mask-image:
-    radial-gradient(
-      circle at center,
-      rgba(0,0,0,1) 58%,
-      rgba(0,0,0,.95) 68%,
-      rgba(0,0,0,.55) 82%,
-      transparent 100%
-    );
+  .professional-content h2 span{
+    font-size:26px;
+  }
 
-  mask-image:
-    radial-gradient(
-      circle at center,
-      rgba(0,0,0,1) 58%,
-      rgba(0,0,0,.95) 68%,
-      rgba(0,0,0,.55) 82%,
-      transparent 100%
-    );
+  .pro-main-icons{
+    gap:18px;
+  }
 
-  filter:
-    drop-shadow(0 25px 40px rgba(0,0,0,.18))
-    blur(.2px);
+  .icon-circle{
+    width:75px;
+    height:75px;
+    font-size:28px;
+  }
 
-  transform:scale(1.05);
-}
+  .pro-icon-card h4{
+    font-size:15px;
+  }
 
-.person-glow{
-  position:absolute;
+  .mini-box{
+    width:100%;
+    justify-content:center;
+  }
 
-  width:520px;
-  height:520px;
+  .professional-person img{
+    max-width:100%;
+  }
 
-  background:
-    radial-gradient(
-      rgba(255,255,255,.65),
-      rgba(114,30,73,.12),
-      transparent 72%
-    );
-
-  filter:blur(90px);
-
-  bottom:-40px;
-  z-index:1;
 }
