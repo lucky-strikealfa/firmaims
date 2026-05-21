@@ -157,10 +157,8 @@ HERO SLIDER MODERN 2026
   padding:0 8%;
 
   background-repeat:no-repeat;
-
-  /* INI YANG MEMBUAT MENYATU */
-  background-size:cover;
-  background-position:center right;
+  background-size:48%;
+  background-position:right center;
 
   background-color:#f4f1eb;
 }
@@ -1346,9 +1344,6 @@ SLIDE 5 FIX
   max-width:550px;
 }
 
-/* Desktop besar */
-@media(min-width:1400px){
-
 .slide{
   min-width:100%;
   min-height:100vh;
@@ -1363,14 +1358,7 @@ SLIDE 5 FIX
 
   background-repeat:no-repeat;
 
-  /* PERBAIKAN */
-  background-size:48%;
-  background-position:right center;
-
-  background-color:#f4f1eb;
-}
-
-  /* =========================
+ /* =========================
 DESKTOP BESAR
 ========================= */
 @media(min-width:1400px){
@@ -1415,7 +1403,6 @@ MOBILE
   }
 
 }
-
   
 /* =========================
 SLIDE 5 DESKTOP FIX
