@@ -186,7 +186,7 @@ HERO SLIDER FIX HD PREMIUM
 
 .slide{
   min-width:100%;
-  height:100vh;
+  min-height:100vh;
 
   position:relative;
   overflow:hidden;
@@ -197,38 +197,30 @@ HERO SLIDER FIX HD PREMIUM
   padding:0 8%;
 
   background-repeat:no-repeat;
-}
-  
-  /* FIX UTAMA */
-  background-size:auto 92%;
-  background-position:right bottom;
-
+  background-size:50%;
+  background-position:right center;
   background-color:#f4f1eb;
 
-  image-rendering:auto;
+  image-rendering:-webkit-optimize-contrast;
+
   backface-visibility:hidden;
   transform:translateZ(0);
 }
 
-/* UKURAN TIAP SLIDE */
-.slide:nth-child(1){
-  background-size:auto 92%;
-}
-
-.slide:nth-child(2){
-  background-size:auto 90%;
-}
-
-.slide:nth-child(3){
-  background-size:auto 90%;
-}
-
-.slide:nth-child(4){
-  background-size:auto 90%;
-}
-
+.slide:nth-child(1),
+.slide:nth-child(2),
+.slide:nth-child(3),
+.slide:nth-child(4),
 .slide:nth-child(5){
-  background-size:auto 92%;
+  background-size:contain;
+}
+
+.slide{
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:right bottom;
+
+  image-rendering:-webkit-optimize-contrast;
 }
 
 /* EFFECT LIGHT */
@@ -1433,31 +1425,6 @@ SLIDE 5 FIX
 .slide:nth-child(5) .caption{
   left:8%;
   max-width:550px;
-}
-
-.slide{
-  min-width:100%;
-  min-height:100vh;
-
-  position:relative;
-  overflow:hidden;
-
-  display:flex;
-  align-items:center;
-
-  padding:0 8%;
-
-  background-repeat:no-repeat;
-
- /* =========================
-DESKTOP BESAR
-========================= */
-@media(min-width:1400px){
-
-  .slide{
-    background-size:42%;
-  }
-
 }
 
 /* =========================
