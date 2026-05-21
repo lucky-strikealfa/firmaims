@@ -2643,9 +2643,13 @@ BACKGROUND PREMIUM EFFECT
 
 .professional-wrapper{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
+  grid-template-columns:48% 52%;
+  gap:20px;
   align-items:center;
+}
+
+.professional-person{
+  transform:scale(1.15);
 }
 
 /* =========================================================
@@ -2924,7 +2928,9 @@ MOBILE
 
 .professional-person img{
   width:100%;
-  max-width:520px;
+  max-width:none;
+  height:auto;
+
+  object-fit:cover;
   display:block;
-  object-fit:contain;
 }
