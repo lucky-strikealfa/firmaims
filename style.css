@@ -144,17 +144,28 @@ MENU TOGGLE
 }
 
 .slide{
-  background-size:auto 96%;
+  position:relative;
+  overflow:hidden;
+
+  min-width:100%;
+  min-height:100svh;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 8%;
+
+  background-repeat:no-repeat;
+  background-size:auto 98%;
   background-position:right bottom;
+  background-color:#f4f1eb;
 
-  image-rendering:-webkit-optimize-contrast;
   image-rendering:auto;
-}
 
-.slide img{
-  filter:
-    contrast(1.08)
-    saturate(1.05);
+  will-change:transform;
+
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 /* =========================================================
@@ -175,20 +186,6 @@ HERO SLIDER HD FIX
   height:100%;
   transition:transform .8s ease-in-out;
 }
-
-.slide{
-  min-width:100%;
-  min-height:100vh;
-
-  position:relative;
-  overflow:hidden;
-
-  display:flex;
-  align-items:center;
-
-  padding:0 8%;
-
-  background-repeat:no-repeat;
 
   /* FIX HD */
   background-size:auto 98%;
@@ -392,23 +389,6 @@ HERO SLIDER HD FIX
   border-radius:999px;
 
   background:#e11d48;
-}
-
-/* =========================================================
-TABLET
-========================================================= */
-
-@media(max-width:992px){
-
-  .slide{
-    background-size:auto 72%;
-    background-position:right bottom;
-  }
-
-  .caption h1{
-    font-size:58px;
-  }
-
 }
 
 /* =========================================================
@@ -1368,29 +1348,6 @@ SLIDE 5 FIX
 }
 
 /* =========================
-LAPTOP
-========================= */
-@media(max-width:1200px){
-
-  .slide{
-    background-size:52%;
-  }
-
-}
-
-/* =========================
-TABLET
-========================= */
-@media(max-width:992px){
-
-  .slide{
-    background-size:58%;
-    background-position:right bottom;
-  }
-
-}
-
-/* =========================
 MOBILE
 ========================= */
 @media(max-width:767px){
@@ -2086,28 +2043,18 @@ MOBILE
 @media(max-width:767px){
 
   .hero-slider{
+    height:100vh;
     min-height:100vh;
-    height:auto;
   }
 
   .slides{
-    min-height:100vh;
-  }
-
-  .slide{
-    min-height:100vh;
-
-    padding:
-      110px 20px 60px;
-
-    align-items:flex-start;
-
-    background-size:95%;
-    background-position:
-      center bottom;
+    height:100%;
   }
 
   .caption{
+    position:relative;
+    z-index:5;
+
     max-width:100%;
     text-align:center;
   }
@@ -2127,12 +2074,6 @@ MOBILE
     max-width:280px;
     margin:auto;
     margin-top:30px;
-  }
-
-  .slider-btn{
-    width:44px;
-    height:44px;
-    font-size:15px;
   }
 
 }
