@@ -801,59 +801,25 @@ WORKSPACE
 }
 
 .workspace-flex{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:80px;
+  display:flex;
   align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:nowrap;
 }
 
 .workspace-image{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.workspace-image::before{
-  content:"";
-  position:absolute;
-
-  width:260px;
-  height:260px;
-
-  background:#2563eb;
-  opacity:.15;
-
-  filter:blur(120px);
+  flex:1;
 }
 
 .workspace-image img{
-  position:relative;
-  z-index:2;
-
   width:100%;
-  max-width:580px;
-
-  object-fit:contain;
+  max-width:520px;
+  display:block;
 }
 
-.workspace-text .line{
-  width:60px;
-  height:4px;
-  background:#2563eb;
-  margin-bottom:20px;
-}
-
-.workspace-text h2{
-  font-size:42px;
-  line-height:1.35;
-  margin-bottom:20px;
-}
-
-.workspace-text p{
-  font-size:17px;
-  line-height:1.9;
-  color:#6b7280;
+.workspace-text{
+  flex:1;
 }
 
 /* =========================================================
