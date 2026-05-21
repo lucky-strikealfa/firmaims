@@ -157,10 +157,40 @@ HERO SLIDER MODERN 2026
   padding:0 8%;
 
   background-repeat:no-repeat;
-  background-size:48%;
-  background-position:right center;
+
+  }
+
+  /* PERBAIKAN */
+  background-size:contain;
+  background-position:right bottom;
 
   background-color:#f4f1eb;
+}
+
+.slide:nth-child(1){
+  background-size:58%;
+}
+
+.slide:nth-child(2){
+  background-size:56%;
+}
+
+.slide:nth-child(3){
+  background-size:56%;
+}
+
+.slide:nth-child(4){
+  background-size:56%;
+}
+
+.slide:nth-child(5){
+  background-size:58%;
+}
+
+.slide{
+  image-rendering:auto;
+  backface-visibility:hidden;
+  transform:translateZ(0);
 }
 
 /* OVERLAY */
@@ -171,8 +201,8 @@ HERO SLIDER MODERN 2026
   background:
   linear-gradient(
     90deg,
-    rgba(244,241,235,.97) 0%,
-    rgba(244,241,235,.93) 30%,
+    rgba(244,241,235,.88) 0%,
+    rgba(244,241,235,.78) 30%,
     rgba(244,241,235,.72) 48%,
     rgba(244,241,235,.25) 68%,
     rgba(244,241,235,0) 100%
@@ -2104,7 +2134,7 @@ MOBILE
 
     align-items:flex-start;
 
-    background-size:85%;
+    background-size:95%;
     background-position:
       center bottom;
   }
