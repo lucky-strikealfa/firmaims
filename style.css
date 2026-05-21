@@ -2538,72 +2538,85 @@ BACKGROUND PREMIUM EFFECT
   display:flex;
   justify-content:center;
   align-items:flex-end;
+
+  overflow:visible;
 }
 
-/* efek cahaya belakang orang */
-.professional-person::before{
+/* EFFECT BLEND KE BACKGROUND */
+.professional-person::after{
   content:"";
   position:absolute;
-
-  width:420px;
-  height:420px;
-
-  border-radius:50%;
+  inset:-20px;
 
   background:
     radial-gradient(
-      rgba(255,220,180,.55),
-      transparent 72%
+      circle at center,
+      transparent 45%,
+      rgba(245,237,227,.15) 65%,
+      rgba(245,237,227,.65) 82%,
+      #f5ede3 100%
     );
 
-  top:40px;
-  right:40px;
-
-  filter:blur(45px);
-
-  z-index:1;
+  z-index:6;
+  pointer-events:none;
 }
 
-/* efek shadow premium */
+/* IMAGE */
 .professional-person img{
+  width:100%;
+  max-width:620px;
+  height:auto;
+
+  object-fit:contain;
+  display:block;
+
   position:relative;
   z-index:5;
 
-  filter:
-    drop-shadow(0 25px 45px rgba(0,0,0,.18))
-    contrast(1.03)
-    saturate(1.02);
-}
-
-.professional-banner{
-  background-image:
-    linear-gradient(
-      115deg,
-      #f5ede3 0%,
-      #fbf7f2 38%,
-      #efe3d4 100%
-    ),
-
-    repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,.02) 0px,
-      rgba(255,255,255,.02) 2px,
-      transparent 2px,
-      transparent 6px
+  /* HILANGKAN BENTUK KOTAK */
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,1) 52%,
+      rgba(0,0,0,.96) 64%,
+      rgba(0,0,0,.55) 80%,
+      transparent 100%
     );
+
+  mask-image:
+    radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,1) 52%,
+      rgba(0,0,0,.96) 64%,
+      rgba(0,0,0,.55) 80%,
+      transparent 100%
+    );
+
+  filter:
+    drop-shadow(0 25px 45px rgba(0,0,0,.18));
+
+  transform:scale(1.08);
 }
 
-.professional-wrapper{
-  display:grid;
-  grid-template-columns:48% 52%;
-  gap:20px;
-  align-items:center;
-}
+/* GLOW */
+.person-glow{
+  position:absolute;
 
-.professional-person{
-  transform:scale(1.15);
-}
+  width:600px;
+  height:600px;
 
+  background:
+    radial-gradient(
+      rgba(255,255,255,.75),
+      rgba(114,30,73,.10),
+      transparent 72%
+    );
+
+  filter:blur(100px);
+
+  bottom:-80px;
+  z-index:1;
+}
 /* =========================================================
 LEFT CONTENT
 ========================================================= */
