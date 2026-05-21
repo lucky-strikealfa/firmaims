@@ -134,14 +134,52 @@ MENU TOGGLE
   background:
   linear-gradient(
     90deg,
-    rgba(244,241,235,.88) 0%,
-    rgba(244,241,235,.78) 30%,
-    rgba(244,241,235,.72) 48%,
-    rgba(244,241,235,.25) 68%,
-    rgba(244,241,235,0) 100%
+    rgba(244,241,235,.55) 0%,
+    rgba(244,241,235,.28) 32%,
+    rgba(244,241,235,.10) 52%,
+    rgba(244,241,235,0) 72%
   );
 
   z-index:1;
+}
+
+/* HILANGKAN BLUR BERLEBIHAN */
+.slide::before{
+  content:"";
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  right:-120px;
+  top:-120px;
+
+  background:
+  radial-gradient(
+    rgba(255,255,255,.10),
+    transparent 75%
+  );
+
+  filter:blur(20px);
+
+  z-index:1;
+
+  pointer-events:none;
+}
+
+.slide{
+  background-size:auto 96%;
+  background-position:right bottom;
+
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:crisp-edges;
+}
+
+.slide img{
+  filter:
+    contrast(1.08)
+    saturate(1.05)
+    sharpen(1);
 }
 
 .slide::before{
@@ -199,7 +237,7 @@ HERO SLIDER HD FIX
   background-repeat:no-repeat;
 
   /* FIX HD */
-  background-size:auto 92%;
+  background-size:auto 98%;
   background-position:right bottom;
 
   background-color:#f4f1eb;
