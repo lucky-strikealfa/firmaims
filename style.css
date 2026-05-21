@@ -410,18 +410,6 @@ DOTS
 }
 
 /* =========================================================
-DESKTOP LARGE
-========================================================= */
-
-@media(min-width:1400px){
-
-  .slide{
-    background-size:48%;
-  }
-
-}
-
-/* =========================================================
 SECTION
 ========================================================= */
 .section{
@@ -1361,13 +1349,74 @@ SLIDE 5 FIX
 /* Desktop besar */
 @media(min-width:1400px){
 
+.slide{
+  min-width:100%;
+  min-height:100vh;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 8%;
+
+  background-repeat:no-repeat;
+
+  /* PERBAIKAN */
+  background-size:48%;
+  background-position:right center;
+
+  background-color:#f4f1eb;
+}
+
+  /* =========================
+DESKTOP BESAR
+========================= */
+@media(min-width:1400px){
+
   .slide{
-    background-size:contain;
-    background-color:#eef4ff;
+    background-size:42%;
   }
 
 }
 
+/* =========================
+LAPTOP
+========================= */
+@media(max-width:1200px){
+
+  .slide{
+    background-size:52%;
+  }
+
+}
+
+/* =========================
+TABLET
+========================= */
+@media(max-width:992px){
+
+  .slide{
+    background-size:58%;
+    background-position:right bottom;
+  }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+@media(max-width:767px){
+
+  .slide{
+    background-size:82%;
+    background-position:center bottom;
+  }
+
+}
+
+  
 /* =========================
 SLIDE 5 DESKTOP FIX
 ========================= */
