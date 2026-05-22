@@ -45,26 +45,24 @@ CONTAINER
 }
 
 /* =========================================================
-   HEADER
+HEADER
 ========================================================= */
 header{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: rgba(114, 30, 73, .92);
-  z-index: 9999;
-
-  display: flex;
-  align-items: center;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  background:rgba(114,30,73,.92);
+  z-index:9999;
+  display:flex;
+  align-items:center;
 }
 
 .nav{
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 /* =========================================================
@@ -124,6 +122,278 @@ MENU TOGGLE
   color:#fff;
   font-size:30px;
   cursor:pointer;
+}
+
+/* =========================================================
+HERO SLIDER MODERN 2026
+========================================================= */
+
+.hero-slider{
+  position:relative;
+  width:100%;
+  min-height:100vh;
+  overflow:hidden;
+  background:#f4f7fb;
+}
+
+.slides{
+  display:flex;
+  min-height:100vh;
+  transition:transform .9s ease-in-out;
+}
+
+.slide{
+  min-width:100%;
+  min-height:100vh;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 8%;
+
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:right bottom;
+
+  background-color:#f8fafc;
+}
+
+/* OVERLAY */
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(248,250,252,.96) 0%,
+    rgba(248,250,252,.90) 35%,
+    rgba(248,250,252,.30) 52%,
+    rgba(248,250,252,.05) 68%,
+    rgba(248,250,252,0) 100%
+  );
+
+  z-index:1;
+}
+
+/* GLOW */
+.slide::after{
+  content:"";
+  position:absolute;
+
+  width:600px;
+  height:600px;
+
+  right:-200px;
+  top:-120px;
+
+  background:
+  radial-gradient(
+    rgba(37,99,235,.12),
+    transparent 70%
+  );
+
+  z-index:1;
+  opacity:.18;
+  filter:blur(25px);
+}
+
+/* CAPTION */
+.caption{
+  position:relative;
+  z-index:5;
+
+  width:100%;
+  max-width:620px;
+}
+
+/* BADGE */
+.caption::before{
+  content:"KONSULTAN PAJAK PROFESIONAL";
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.85);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,.5);
+
+  color:#721e49;
+
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+
+  margin-bottom:28px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+/* TITLE */
+.caption h1{
+  font-size:78px;
+  line-height:1.05;
+  font-weight:800;
+
+  letter-spacing:-3px;
+
+  color:#0f172a;
+
+  margin-bottom:24px;
+}
+
+/* RED TEXT */
+.caption .red{
+  color:#ef4444;
+}
+
+/* PARAGRAPH */
+.caption p{
+  font-size:20px;
+  line-height:1.9;
+
+  color:#475569;
+
+  max-width:540px;
+}
+
+/* BUTTON */
+.btn-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:38px;
+
+  height:62px;
+  padding:0 36px;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #721e49,
+    #9f1239
+  );
+
+  color:#fff;
+
+  font-size:16px;
+  font-weight:700;
+
+  box-shadow:
+  0 18px 40px rgba(114,30,73,.28);
+
+  transition:.35s ease;
+}
+
+.btn-cta:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 24px 50px rgba(114,30,73,.35);
+}
+
+/* =========================================================
+SLIDER BUTTON
+========================================================= */
+
+.slider-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  z-index:10;
+
+  width:58px;
+  height:58px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,255,255,.92);
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.slider-btn:hover{
+  transform:translateY(-50%) scale(1.08);
+}
+
+.prev{
+  left:24px;
+}
+
+.next{
+  right:24px;
+}
+
+/* =========================================================
+DOTS
+========================================================= */
+
+.dots{
+  position:absolute;
+  bottom:38px;
+
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  gap:10px;
+
+  z-index:10;
+}
+
+.dots span{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#cbd5e1;
+
+  transition:.3s;
+}
+
+.dots .active{
+  width:34px;
+  border-radius:999px;
+
+  background:#e11d48;
+}
+
+/* =========================================================
+DESKTOP LARGE
+========================================================= */
+
+@media(min-width:1400px){
+
+  .slide{
+    background-size:48%;
+  }
+
 }
 
 /* =========================================================
@@ -228,257 +498,29 @@ CARD
 }
 
 /* =========================================================
-LAYANAN PREMIUM MODERN
+LAYANAN
 ========================================================= */
-
-.layanan-section{
-  position:relative;
-  padding:120px 20px;
-  overflow:hidden;
-
-  background:
-  linear-gradient(
-    135deg,
-    #f6f1e8 0%,
-    #ffffff 45%,
-    #f7f4ef 100%
-  );
-}
-
-/* EFFECT BACKGROUND */
-.layanan-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-  radial-gradient(
-    rgba(59,130,246,.10),
-    transparent 60%
-  );
-
-  filter:blur(100px);
-  opacity:.6;
-
-  pointer-events:none;
-}
-
-.layanan-title{
-  position:relative;
-  z-index:2;
-
-  text-align:center;
-
-  font-size:64px;
-  font-weight:800;
-
-  color:#0f172a;
-
-  margin-bottom:70px;
-
-  letter-spacing:-2px;
-}
-
-/* GRID */
 .layanan-grid{
-  position:relative;
-  z-index:2;
-
   display:flex;
   justify-content:center;
-  gap:34px;
+  gap:24px;
   flex-wrap:wrap;
 }
 
-/* CARD */
 .layanan-card{
-  position:relative;
+  width:260px;
+  background:#fff;
+  border-radius:18px;
+  padding:28px;
 
-  width:100%;
-  max-width:320px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 
-  border-radius:34px;
-
-  overflow:hidden;
-
-  background:
-  rgba(255,255,255,.58);
-
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-
-  border:
-  1px solid rgba(255,255,255,.7);
-
-  box-shadow:
-  0 20px 50px rgba(0,0,0,.10);
-
-  transition:.45s ease;
+  transition:.3s;
 }
 
-/* HOVER */
 .layanan-card:hover{
-  transform:
-  translateY(-12px)
-  scale(1.02);
-
-  box-shadow:
-  0 30px 60px rgba(0,0,0,.14);
-}
-
-/* HEADER */
-.layanan-top{
-  position:relative;
-
-  height:120px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  border-radius:
-  30px 30px 0 0;
-
-  overflow:hidden;
-}
-
-/* WARNA TIAP CARD */
-.layanan-card:nth-child(1) .layanan-top{
-  background:
-  linear-gradient(
-    135deg,
-    #7bb0be,
-    #4f7884
-  );
-}
-
-.layanan-card:nth-child(2) .layanan-top{
-  background:
-  linear-gradient(
-    135deg,
-    #2e7388,
-    #154b5a
-  );
-}
-
-.layanan-card:nth-child(3) .layanan-top{
-  background:
-  linear-gradient(
-    135deg,
-    #f2df9b,
-    #b9973c
-  );
-}
-
-/* GLOW */
-.layanan-top::after{
-  content:"";
-  position:absolute;
-
-  width:180px;
-  height:180px;
-
-  background:
-  radial-gradient(
-    rgba(255,255,255,.45),
-    transparent 70%
-  );
-
-  filter:blur(20px);
-
-  top:-70px;
-  right:-40px;
-}
-
-/* ICON */
-.layanan-icon{
-  position:relative;
-  z-index:2;
-
-  font-size:54px;
-  color:#fff;
-
-  filter:
-  drop-shadow(0 6px 10px rgba(0,0,0,.18));
-}
-
-/* BODY */
-.layanan-body{
-  padding:38px 34px 34px;
-  text-align:center;
-}
-
-.layanan-body h3{
-  font-size:34px;
-  line-height:1.2;
-
-  color:#0f172a;
-
-  margin-bottom:18px;
-
-  font-weight:700;
-}
-
-.layanan-body p{
-  font-size:18px;
-  line-height:1.9;
-
-  color:#475569;
-}
-
-/* BORDER GLOW */
-.layanan-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  border-radius:34px;
-
-  padding:1.5px;
-
-  background:
-  linear-gradient(
-    135deg,
-    rgba(255,255,255,.8),
-    rgba(255,255,255,0)
-  );
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-
-  pointer-events:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .layanan-section{
-    padding:90px 20px;
-  }
-
-  .layanan-title{
-    font-size:42px;
-    margin-bottom:50px;
-  }
-
-  .layanan-card{
-    width:100%;
-    max-width:360px;
-    min-height:auto;
-  }
-
-  .layanan-body h3{
-    font-size:28px;
-  }
-
-  .layanan-body p{
-    font-size:16px;
-  }
-
+  transform:translateY(-8px);
+  box-shadow:0 20px 35px rgba(37,99,235,.15);
 }
 
 /* =========================================================
@@ -517,25 +559,59 @@ WORKSPACE
 }
 
 .workspace-flex{
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
   align-items:center;
-  justify-content:space-between;
-  gap:60px;
-  flex-wrap:nowrap;
 }
 
 .workspace-image{
-  flex:1;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.workspace-image::before{
+  content:"";
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  background:#2563eb;
+  opacity:.15;
+
+  filter:blur(120px);
 }
 
 .workspace-image img{
+  position:relative;
+  z-index:2;
+
   width:100%;
-  max-width:520px;
-  display:block;
+  max-width:580px;
+
+  object-fit:contain;
 }
 
-.workspace-text{
-  flex:1;
+.workspace-text .line{
+  width:60px;
+  height:4px;
+  background:#2563eb;
+  margin-bottom:20px;
+}
+
+.workspace-text h2{
+  font-size:42px;
+  line-height:1.35;
+  margin-bottom:20px;
+}
+
+.workspace-text p{
+  font-size:17px;
+  line-height:1.9;
+  color:#6b7280;
 }
 
 /* =========================================================
@@ -831,8 +907,7 @@ IMAGE
   right:55px;
   bottom:0;
 
-  width:30%;
-  max-width:340px;
+  width:33%;
   height:100%;
 
   display:flex;
@@ -859,24 +934,24 @@ WHATSAPP FLOAT FIX
 ========================= */
 
 .wa-float{
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  width: 60px;
-  height: 60px;
+  position: fixed !important;
+  right: 25px !important;
+  bottom: 25px !important;
+  width: 60px !important;
+  height: 60px !important;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
-  background: #25D366;
-  border-radius: 50%;
+  background: #25D366 !important;
+  border-radius: 50% !important;
 
-  z-index: 999999;
+  z-index: 999999 !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25) !important;
 
   animation:waPulse 2s infinite;
 }
@@ -1030,24 +1105,16 @@ SLIDE 5 FIX
   max-width:550px;
 }
 
-/* =========================
-MOBILE
-========================= */
-.slide{
-  min-height:100svh;
+/* Desktop besar */
+@media(min-width:1400px){
 
-  padding:110px 20px 120px;
+  .slide{
+    background-size:contain;
+    background-color:#eef4ff;
+  }
 
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-
-  background-size:85%;
-  background-position:center bottom;
-
-  text-align:center;
 }
-  
+
 /* =========================
 SLIDE 5 DESKTOP FIX
 ========================= */
@@ -1553,7 +1620,7 @@ CARDS MENYATU DENGAN IMAGE
 
   padding:22px 18px;
 
-  min-height:210px;
+  min-height:235px;
 
   box-shadow:
   0 12px 35px rgba(0,0,0,.08);
@@ -1732,19 +1799,36 @@ MOBILE
 @media(max-width:767px){
 
   .hero-slider{
-    min-height:100svh;
+    min-height:100vh;
+    height:auto;
+  }
+
+  .slides{
+    min-height:100vh;
   }
 
   .slide{
-    min-height:100svh;
+    min-height:100vh;
 
-    padding:110px 20px 140px;
+    padding:
+      110px 20px 60px;
 
-    flex-direction:column;
-    justify-content:flex-start;
+    align-items:flex-start;
 
-    background-size:78%;
-    background-position:center bottom 10px;
+    background-size:85%;
+    background-position:
+      center bottom;
+  }
+
+  .overlay{
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(248,250,252,.97) 0%,
+      rgba(248,250,252,.92) 45%,
+      rgba(248,250,252,.35) 75%,
+      rgba(248,250,252,0) 100%
+    );
   }
 
   .caption{
@@ -1765,7 +1849,14 @@ MOBILE
   .btn-cta{
     width:100%;
     max-width:280px;
+    margin:auto;
     margin-top:30px;
+  }
+
+  .slider-btn{
+    width:44px;
+    height:44px;
+    font-size:15px;
   }
 
 }
@@ -1820,710 +1911,4 @@ FIX POSISI GAMBAR SLIDE 3 4 5
 
 .slide:nth-child(3){
   background-position:right bottom !important;
-}
-
-/* =========================================================
-LAYANAN PREMIUM
-========================================================= */
-
-.layanan-premium{
-  position:relative;
-
-  padding:120px 20px;
-
-  overflow:hidden;
-
-  background:
-  linear-gradient(
-    135deg,
-    #f8f4ee 0%,
-    #ffffff 45%,
-    #f5efe4 100%
-  );
-}
-
-/* GRID */
-.layanan-premium-grid{
-  display:flex;
-  justify-content:center;
-  gap:34px;
-  flex-wrap:wrap;
-}
-
-/* CARD */
-.layanan-premium-card{
-  position:relative;
-
-  width:320px;
-
-  border-radius:28px;
-
-  overflow:hidden;
-
-  background:
-  rgba(255,255,255,.72);
-
-  backdrop-filter:blur(14px);
-
-  box-shadow:
-  0 20px 45px rgba(0,0,0,.12);
-
-  transition:.4s ease;
-}
-
-/* HOVER */
-.layanan-premium-card:hover{
-  transform:
-  translateY(-12px)
-  scale(1.02);
-
-  box-shadow:
-  0 35px 60px rgba(0,0,0,.18);
-}
-
-/* TOP AREA */
-.top-icon{
-  height:120px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:54px;
-
-  color:#fff;
-}
-
-/* WARNA */
-.blue-card .top-icon{
-  background:
-  linear-gradient(
-    135deg,
-    #4d8fa4,
-    #6fa7b5
-  );
-}
-
-.cyan-card .top-icon{
-  background:
-  linear-gradient(
-    135deg,
-    #1d6073,
-    #357e94
-  );
-}
-
-.gold-card .top-icon{
-  background:
-  linear-gradient(
-    135deg,
-    #c7a44f,
-    #e7d08b
-  );
-}
-
-/* CONTENT */
-.layanan-content{
-  padding:38px 30px 40px;
-  text-align:center;
-}
-
-.layanan-content h3{
-  font-size:34px;
-  font-weight:700;
-
-  color:#111827;
-
-  margin-bottom:18px;
-}
-
-.layanan-content p{
-  font-size:18px;
-  line-height:1.9;
-
-  color:#374151;
-}
-
-/* GLOW */
-.layanan-premium-card::before{
-  content:"";
-
-  position:absolute;
-
-  width:180px;
-  height:180px;
-
-  border-radius:50%;
-
-  top:-70px;
-  right:-70px;
-
-  background:
-  rgba(255,255,255,.25);
-
-  filter:blur(25px);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
- .layanan-modern-title{
-  font-size:42px;
-}
-
-  .layanan-premium-card{
-    width:100%;
-    max-width:360px;
-  }
-
-  .layanan-content h3{
-    font-size:28px;
-  }
-
-  .layanan-content p{
-    font-size:16px;
-  }
-
-}
-
-/* =========================================================
-LAYANAN LIST MODERN
-========================================================= */
-
-.layanan-list-modern{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:24px;
-  margin-top:60px;
-}
-
-.layanan-item{
-  display:flex;
-  align-items:flex-start;
-  gap:18px;
-
-  padding:24px;
-
-  border-radius:24px;
-
-  background:#fff;
-
-  box-shadow:
-  0 12px 30px rgba(0,0,0,.06);
-
-  transition:.3s;
-}
-
-.layanan-item:hover{
-  transform:translateY(-6px);
-
-  box-shadow:
-  0 18px 40px rgba(37,99,235,.12);
-}
-
-.layanan-item span{
-  min-width:58px;
-  height:58px;
-
-  border-radius:18px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:linear-gradient(
-    135deg,
-    #721e49,
-    #9f1239
-  );
-
-  color:#fff;
-
-  font-size:18px;
-  font-weight:700;
-}
-
-.layanan-item p{
-  font-size:17px;
-  line-height:1.8;
-  color:#374151;
-  font-weight:500;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .layanan-list-modern{
-    grid-template-columns:1fr;
-  }
-
-  .layanan-item{
-    padding:20px;
-  }
-
-  .layanan-item p{
-    font-size:15px;
-  }
-
-}
-
-/* =========================================================
-PROFESSIONAL BANNER FIX CLEAN
-========================================================= */
-
-.professional-banner{
-  padding:120px 20px;
-  background:
-  linear-gradient(
-    135deg,
-    #f5efe7 0%,
-    #f9f6f1 45%,
-    #f3ece3 100%
-  );
-
-  overflow:hidden;
-}
-
-/* WRAPPER */
-.professional-wrapper{
-  max-width:1280px;
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:1.05fr 1fr;
-
-  gap:80px;
-  align-items:center;
-}
-
-/* =========================================================
-LEFT CONTENT
-========================================================= */
-
-.professional-content{
-  position:relative;
-  z-index:5;
-}
-
-/* SMALL LABEL */
-.pro-badge{
-  display:inline-block;
-
-  font-size:13px;
-  font-weight:700;
-
-  letter-spacing:3px;
-  text-transform:uppercase;
-
-  color:#6b0f1a;
-
-  margin-bottom:22px;
-}
-
-/* TITLE */
-.professional-content h2{
-  font-size:82px;
-  line-height:0.95;
-  font-weight:800;
-
-  color:#7a1026;
-
-  letter-spacing:-3px;
-
-  margin-bottom:45px;
-}
-
-.professional-content h2 span{
-  display:block;
-  color:#111827;
-}
-
-/* =========================================================
-ICON FEATURES
-========================================================= */
-
-.pro-main-icons{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-
-  gap:28px;
-  max-width:500px;
-}
-
-/* ITEM */
-.pro-icon-card{
-  display:flex;
-  align-items:center;
-  gap:18px;
-
-  background:rgba(255,255,255,.72);
-
-  padding:20px;
-
-  border-radius:22px;
-
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-  0 12px 30px rgba(0,0,0,.06);
-
-  transition:.35s ease;
-}
-
-.pro-icon-card:hover{
-  transform:translateY(-6px);
-
-  box-shadow:
-  0 18px 40px rgba(122,16,38,.15);
-}
-
-/* ICON */
-.icon-circle{
-  width:70px;
-  height:70px;
-
-  border-radius:50%;
-
-  background:
-  linear-gradient(
-    135deg,
-    #7a1026,
-    #a31d3a
-  );
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  color:#fff;
-  font-size:30px;
-
-  flex-shrink:0;
-
-  box-shadow:
-  0 10px 25px rgba(122,16,38,.25);
-}
-
-/* TEXT */
-.pro-icon-card h4{
-  font-size:17px;
-  line-height:1.5;
-  color:#111827;
-}
-
-/* =========================================================
-RIGHT IMAGE
-========================================================= */
-
-.professional-person{
-  position:relative;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-/* GLOW */
-.professional-person::before{
-  content:"";
-
-  position:absolute;
-
-  width:500px;
-  height:500px;
-
-  border-radius:50%;
-
-  background:
-  radial-gradient(
-    rgba(255,255,255,.7),
-    transparent 70%
-  );
-
-  filter:blur(20px);
-
-  z-index:1;
-}
-
-/* IMAGE */
-.professional-person img{
-  position:relative;
-  z-index:5;
-
-  width:100%;
-  max-width:620px;
-
-  border-radius:36px;
-
-  object-fit:cover;
-
-  box-shadow:
-  0 35px 80px rgba(0,0,0,.18);
-}
-
-/* SHIELD ICON */
-.shield-icon{
-  position:absolute;
-
-  top:40px;
-  right:40px;
-
-  width:110px;
-  height:110px;
-
-  border-radius:50%;
-
-  background:
-  rgba(255,255,255,.2);
-
-  backdrop-filter:blur(14px);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:52px;
-
-  color:#fff;
-
-  z-index:10;
-
-  box-shadow:
-  0 10px 40px rgba(255,255,255,.15);
-}
-
-/* FLOATING CARD */
-.pro-card{
-  position:absolute;
-
-  left:-20px;
-  bottom:35px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #7a1026,
-    #4a0814
-  );
-
-  padding:22px 30px;
-
-  border-radius:24px;
-
-  z-index:20;
-
-  box-shadow:
-  0 20px 40px rgba(0,0,0,.18);
-}
-
-.pro-card h5{
-  color:#f5d36b;
-
-  font-size:16px;
-  line-height:1.5;
-
-  text-align:center;
-}
-
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media(max-width:991px){
-
-  .professional-wrapper{
-    grid-template-columns:1fr;
-    gap:60px;
-  }
-
-  .professional-content{
-    text-align:center;
-  }
-
-  .professional-content h2{
-    font-size:56px;
-  }
-
-  .pro-main-icons{
-    margin:auto;
-  }
-
-  .professional-person img{
-    max-width:100%;
-  }
-
-  .pro-card{
-    left:50%;
-    transform:translateX(-50%);
-  }
-
-}
-
-@media(max-width:767px){
-
-  .professional-banner{
-    padding:90px 20px;
-  }
-
-  .professional-content h2{
-    font-size:42px;
-    line-height:1.05;
-  }
-
-  .pro-main-icons{
-    grid-template-columns:1fr;
-  }
-
-  .pro-icon-card{
-    padding:18px;
-  }
-
-  .icon-circle{
-    width:60px;
-    height:60px;
-    font-size:26px;
-  }
-
-  .shield-icon{
-    width:80px;
-    height:80px;
-    font-size:38px;
-  }
-
-  .pro-card{
-    width:90%;
-    left:50%;
-    transform:translateX(-50%);
-    bottom:-25px;
-  }
-
-}
-
-
-/* MINI LIST */
-.pro-mini-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-
-  margin-top:35px;
-}
-
-/* MINI BOX */
-.mini-box{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  padding:14px 18px;
-
-  background:rgba(255,255,255,.75);
-
-  border-radius:18px;
-
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-  0 10px 25px rgba(0,0,0,.06);
-
-  transition:.3s;
-}
-
-.mini-box:hover{
-  transform:translateY(-4px);
-}
-
-.mini-box span{
-  font-size:22px;
-}
-
-.mini-box p{
-  font-size:14px;
-  font-weight:600;
-  color:#111827;
-}
-
-/* GLOW */
-.person-glow{
-  position:absolute;
-
-  width:500px;
-  height:500px;
-
-  border-radius:50%;
-
-  background:
-  radial-gradient(
-    rgba(255,255,255,.5),
-    transparent 70%
-  );
-
-  filter:blur(20px);
-
-  z-index:1;
-}
-
-@media(max-width:991px){
-
-  .layanan-grid,
-  .layanan-premium-grid{
-    gap:24px;
-  }
-
-  .caption h1{
-    letter-spacing:-1px;
-  }
-
-  .about-left h2,
-  .prima-heading h2,
-  .professional-content h2{
-    font-size:48px;
-  }
-
-}
-
-@media(max-width:767px){
-
-  .container{
-    padding-left:18px;
-    padding-right:18px;
-  }
-
-  .layanan-title{
-    font-size:38px;
-    line-height:1.2;
-  }
-
-  .about-left h2,
-  .prima-heading h2,
-  .professional-content h2{
-    font-size:36px;
-    line-height:1.2;
-  }
-
-  .cta-red-content h2{
-    font-size:38px;
-    line-height:1.2;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .footer-links{
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-
-.slide{
-  min-height:100svh;
-  padding:110px 20px 120px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  background-size:cover;
-  background-position:center;
-  text-align:center;
 }
