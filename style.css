@@ -2363,171 +2363,280 @@ PROFESSIONAL BANNER FIX CLEAN
 ========================================================= */
 
 .professional-banner{
-  padding:100px 20px;
-  background:#f5f1eb;
+  padding:120px 20px;
+  background:
+  linear-gradient(
+    135deg,
+    #f5efe7 0%,
+    #f9f6f1 45%,
+    #f3ece3 100%
+  );
+
   overflow:hidden;
 }
 
+/* WRAPPER */
 .professional-wrapper{
-  max-width:1200px;
+  max-width:1280px;
   margin:auto;
 
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
+  grid-template-columns:1.05fr 1fr;
+
+  gap:80px;
   align-items:center;
 }
 
-/* LEFT */
+/* =========================================================
+LEFT CONTENT
+========================================================= */
+
 .professional-content{
-  max-width:520px;
+  position:relative;
+  z-index:5;
 }
 
+/* SMALL LABEL */
 .pro-badge{
-  font-size:12px;
+  display:inline-block;
+
+  font-size:13px;
   font-weight:700;
-  letter-spacing:2px;
-  color:#721e49;
-  margin-bottom:18px;
-  display:block;
+
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  color:#6b0f1a;
+
+  margin-bottom:22px;
 }
 
+/* TITLE */
 .professional-content h2{
-  font-size:62px;
-  line-height:1.1;
+  font-size:82px;
+  line-height:0.95;
   font-weight:800;
-  color:#721e49;
-  margin-bottom:30px;
+
+  color:#7a1026;
+
+  letter-spacing:-3px;
+
+  margin-bottom:45px;
 }
 
 .professional-content h2 span{
   display:block;
-  color:#1f2937;
+  color:#111827;
 }
 
-/* ICONS */
+/* =========================================================
+ICON FEATURES
+========================================================= */
+
 .pro-main-icons{
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:28px;
+  max-width:500px;
 }
 
+/* ITEM */
 .pro-icon-card{
   display:flex;
-  align-items:flex-start;
+  align-items:center;
   gap:18px;
+
+  background:rgba(255,255,255,.72);
+
+  padding:20px;
+
+  border-radius:22px;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,.06);
+
+  transition:.35s ease;
 }
 
+.pro-icon-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:
+  0 18px 40px rgba(122,16,38,.15);
+}
+
+/* ICON */
 .icon-circle{
-  width:68px;
-  height:68px;
+  width:70px;
+  height:70px;
+
   border-radius:50%;
 
-  background:#fff;
+  background:
+  linear-gradient(
+    135deg,
+    #7a1026,
+    #a31d3a
+  );
 
   display:flex;
   align-items:center;
   justify-content:center;
 
+  color:#fff;
   font-size:30px;
 
   flex-shrink:0;
 
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  box-shadow:
+  0 10px 25px rgba(122,16,38,.25);
 }
 
+/* TEXT */
 .pro-icon-card h4{
   font-size:17px;
-  line-height:1.6;
+  line-height:1.5;
   color:#111827;
-  margin-top:8px;
 }
 
-/* RIGHT IMAGE */
+/* =========================================================
+RIGHT IMAGE
+========================================================= */
+
 .professional-person{
   position:relative;
+
   display:flex;
   justify-content:center;
+  align-items:center;
 }
 
-.professional-person img{
-  width:100%;
-  max-width:480px;
-  border-radius:10px;
-  display:block;
-}
+/* GLOW */
+.professional-person::before{
+  content:"";
 
-/* CHECK ICON */
-.shield-icon{
   position:absolute;
-  top:-20px;
-  right:40px;
 
-  width:90px;
-  height:90px;
+  width:500px;
+  height:500px;
 
   border-radius:50%;
 
-  background:rgba(255,255,255,.7);
+  background:
+  radial-gradient(
+    rgba(255,255,255,.7),
+    transparent 70%
+  );
 
-  backdrop-filter:blur(10px);
+  filter:blur(20px);
+
+  z-index:1;
+}
+
+/* IMAGE */
+.professional-person img{
+  position:relative;
+  z-index:5;
+
+  width:100%;
+  max-width:620px;
+
+  border-radius:36px;
+
+  object-fit:cover;
+
+  box-shadow:
+  0 35px 80px rgba(0,0,0,.18);
+}
+
+/* SHIELD ICON */
+.shield-icon{
+  position:absolute;
+
+  top:40px;
+  right:40px;
+
+  width:110px;
+  height:110px;
+
+  border-radius:50%;
+
+  background:
+  rgba(255,255,255,.2);
+
+  backdrop-filter:blur(14px);
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:40px;
+  font-size:52px;
 
   color:#fff;
+
+  z-index:10;
+
+  box-shadow:
+  0 10px 40px rgba(255,255,255,.15);
 }
 
-/* BOTTOM CARD */
+/* FLOATING CARD */
 .pro-card{
   position:absolute;
+
   left:-20px;
-  bottom:30px;
+  bottom:35px;
 
-  background:#721e49;
+  background:
+  linear-gradient(
+    135deg,
+    #7a1026,
+    #4a0814
+  );
 
-  padding:18px 24px;
+  padding:22px 30px;
 
-  border-radius:16px;
+  border-radius:24px;
 
-  box-shadow:0 12px 30px rgba(0,0,0,.15);
+  z-index:20;
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.18);
 }
 
 .pro-card h5{
-  color:#d4a017;
-  font-size:14px;
+  color:#f5d36b;
+
+  font-size:16px;
   line-height:1.5;
+
   text-align:center;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media(max-width:991px){
 
   .professional-wrapper{
     grid-template-columns:1fr;
-    gap:50px;
+    gap:60px;
   }
 
   .professional-content{
-    max-width:100%;
     text-align:center;
   }
 
   .professional-content h2{
-    font-size:42px;
+    font-size:56px;
   }
 
   .pro-main-icons{
-    align-items:center;
-  }
-
-  .pro-icon-card{
-    width:100%;
-    max-width:320px;
+    margin:auto;
   }
 
   .professional-person img{
@@ -2537,160 +2646,46 @@ PROFESSIONAL BANNER FIX CLEAN
   .pro-card{
     left:50%;
     transform:translateX(-50%);
-    bottom:-20px;
-  }
-
-  .shield-icon{
-    right:20px;
-    width:70px;
-    height:70px;
-    font-size:30px;
   }
 
 }
 
-@media(max-width:767px){  
+@media(max-width:767px){
 
   .professional-banner{
-    padding:80px 20px;
+    padding:90px 20px;
   }
 
   .professional-content h2{
-    font-size:34px;
-  }
-
-  .professional-content h2 span{
-    font-size:26px;
+    font-size:42px;
+    line-height:1.05;
   }
 
   .pro-main-icons{
-    gap:18px;
-  }
-
-  .icon-circle{
-    width:75px;
-    height:75px;
-    font-size:28px;
-  }
-
-  .pro-icon-card h4{
-    font-size:15px;
-  }
-
-  .mini-box{
-    width:100%;
-    justify-content:center;
-  }
-
-  .professional-person img{
-  width:100%;
-  max-width:520px;
-  height:auto;
-
-  object-fit:contain;
-  display:block;
-
-  position:relative;
-  z-index:5;
-
-  filter:
-    drop-shadow(0 20px 35px rgba(0,0,0,.16));
-
-  transform:scale(1);
-}
-
-.mini-box{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  background:#fff;
-
-  padding:12px 16px;
-
-  border-radius:16px;
-
-  box-shadow:
-  0 8px 20px rgba(0,0,0,.06);
-
-  transition:.3s;
-}
-
-.mini-box span{
-  font-size:18px;
-}
-
-.mini-box p{
-  font-size:13px;
-  font-weight:600;
-  color:#374151;
-}
-
-  /* =========================================
-FIX PROFESSIONAL ICONS
-========================================= */
-
-.pro-main-icons{
-  display:flex;
-  align-items:flex-start;
-  gap:24px;
-  flex-wrap:wrap;
-
-  margin-top:30px;
-}
-
-/* CARD ICON */
-.pro-icon-card{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-
-  width:140px;
-}
-
-/* ICON BULAT */
-.icon-circle{
-  width:80px;
-  height:80px;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:#fff;
-
-  font-size:34px;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
-
-  margin-bottom:14px;
-}
-
-/* TEXT */
-.pro-icon-card h4{
-  font-size:18px;
-  line-height:1.5;
-
-  color:#111827;
-}
-
-/* MOBILE */
-@media(max-width:767px){
-
-  .pro-main-icons{
-    justify-content:center;
+    grid-template-columns:1fr;
   }
 
   .pro-icon-card{
-    width:120px;
+    padding:18px;
   }
 
-  .pro-icon-card h4{
-    font-size:15px;
+  .icon-circle{
+    width:60px;
+    height:60px;
+    font-size:26px;
+  }
+
+  .shield-icon{
+    width:80px;
+    height:80px;
+    font-size:38px;
+  }
+
+  .pro-card{
+    width:90%;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-25px;
   }
 
 }
