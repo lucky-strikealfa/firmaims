@@ -187,14 +187,29 @@ HERO SLIDER HD FIX
   transition:transform .8s ease-in-out;
 }
 
-  /* FIX HD */
+.slide{
+  position:relative;
+  overflow:hidden;
+
+  min-width:100%;
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 8%;
+
+  background-repeat:no-repeat;
   background-size:auto 98%;
   background-position:right bottom;
-
   background-color:#f4f1eb;
 
-  /* HILANGKAN BLUR */
   image-rendering:auto;
+
+  will-change:transform;
+
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 /* LIGHT EFFECT */
@@ -389,25 +404,6 @@ HERO SLIDER HD FIX
   border-radius:999px;
 
   background:#e11d48;
-}
-
-/* =========================================================
-IMAGE QUALITY FIX
-========================================================= */
-
-.slide{
-  will-change:auto;
-}
-
-.slide,
-.slide *{
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-
-.slide img{
-  image-rendering:auto;
-  object-fit:contain;
 }
 
 /* =========================================================
@@ -1115,7 +1111,8 @@ IMAGE
   right:55px;
   bottom:0;
 
-  width:33%;
+  width:30%;
+  max-width:340px;
   height:100%;
 
   display:flex;
@@ -1316,13 +1313,19 @@ SLIDE 5 FIX
 /* =========================
 MOBILE
 ========================= */
-@media(max-width:767px){
+.slide{
+  min-height:100svh;
 
-  .slide{
-    background-size:82%;
-    background-position:center bottom;
-  }
+  padding:110px 20px 120px;
 
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+
+  background-size:85%;
+  background-position:center bottom;
+
+  text-align:center;
 }
   
 /* =========================
@@ -1830,7 +1833,7 @@ CARDS MENYATU DENGAN IMAGE
 
   padding:22px 18px;
 
-  min-height:235px;
+  min-height:210px;
 
   box-shadow:
   0 12px 35px rgba(0,0,0,.08);
@@ -2117,20 +2120,6 @@ LAYANAN PREMIUM
     #ffffff 45%,
     #f5efe4 100%
   );
-}
-
-/* TITLE */
-.layanan-title{
-  text-align:center;
-
-  font-size:64px;
-  font-weight:800;
-
-  color:#111827;
-
-  margin-bottom:70px;
-
-  letter-spacing:-2px;
 }
 
 /* GRID */
@@ -2686,6 +2675,124 @@ MOBILE
     left:50%;
     transform:translateX(-50%);
     bottom:-25px;
+  }
+
+}
+
+
+/* MINI LIST */
+.pro-mini-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+
+  margin-top:35px;
+}
+
+/* MINI BOX */
+.mini-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:14px 18px;
+
+  background:rgba(255,255,255,.75);
+
+  border-radius:18px;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.06);
+
+  transition:.3s;
+}
+
+.mini-box:hover{
+  transform:translateY(-4px);
+}
+
+.mini-box span{
+  font-size:22px;
+}
+
+.mini-box p{
+  font-size:14px;
+  font-weight:600;
+  color:#111827;
+}
+
+/* GLOW */
+.person-glow{
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    rgba(255,255,255,.5),
+    transparent 70%
+  );
+
+  filter:blur(20px);
+
+  z-index:1;
+}
+
+@media(max-width:991px){
+
+  .layanan-grid,
+  .layanan-premium-grid{
+    gap:24px;
+  }
+
+  .caption h1{
+    letter-spacing:-1px;
+  }
+
+  .about-left h2,
+  .prima-heading h2,
+  .professional-content h2{
+    font-size:48px;
+  }
+
+}
+
+@media(max-width:767px){
+
+  .container{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .layanan-title{
+    font-size:38px;
+    line-height:1.2;
+  }
+
+  .about-left h2,
+  .prima-heading h2,
+  .professional-content h2{
+    font-size:36px;
+    line-height:1.2;
+  }
+
+  .cta-red-content h2{
+    font-size:38px;
+    line-height:1.2;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .footer-links{
+    grid-template-columns:1fr 1fr;
   }
 
 }
