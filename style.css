@@ -294,8 +294,8 @@ LAYANAN PREMIUM MODERN
 .layanan-card{
   position:relative;
 
-  width:320px;
-  min-height:360px;
+  width:100%;
+  max-width:320px;
 
   border-radius:34px;
 
@@ -2515,4 +2515,15 @@ MOBILE
     grid-template-columns:1fr 1fr;
   }
 
+}
+
+.slide{
+  min-height:100svh;
+  padding:110px 20px 120px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background-size:cover;
+  background-position:center;
+  text-align:center;
 }
