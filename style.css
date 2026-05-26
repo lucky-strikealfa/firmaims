@@ -21,7 +21,6 @@ body{
   background:#f5f7fb;
   color:#111827;
   overflow-x:hidden;
-  padding-top:80px;
 }
 
 img{
@@ -131,15 +130,19 @@ HERO SLIDER FIX
 .hero-slider{
   position:relative;
   width:100%;
-  min-height:100vh;
+  height:100vh;
   overflow:hidden;
+
   background:#eef4ff;
+
+  margin-top:-80px;
+  padding-top:80px;
 }
 
 .slides{
   position:relative;
   width:100%;
-  height:100vh;
+  height:100%;
 }
 
 .slide{
@@ -155,18 +158,16 @@ HERO SLIDER FIX
   padding:120px 8% 100px;
 
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:48%;
   background-position:right bottom;
 
   opacity:0;
-  visibility:hidden;
 
   transition:1s ease;
 }
 
 .slide.active{
   opacity:1;
-  visibility:visible;
   z-index:2;
 }
 
@@ -196,7 +197,6 @@ CAPTION
 .caption{
   position:relative;
   z-index:5;
-
   max-width:620px;
 }
 
@@ -224,7 +224,6 @@ CAPTION
 
   max-width:560px;
 }
-
 /* =========================================================
 BUTTON
 ========================================================= */
