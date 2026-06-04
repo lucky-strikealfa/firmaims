@@ -168,10 +168,10 @@ OVERLAY
   background:
   linear-gradient(
     90deg,
-    rgba(248,250,252,.98) 0%,
-    rgba(248,250,252,.95) 35%,
-    rgba(248,250,252,.72) 58%,
-    rgba(248,250,252,.12) 78%,
+    rgba(248,250,252,.95) 0%,
+    rgba(248,250,252,.85) 28%,
+    rgba(248,250,252,.35) 52%,
+    rgba(248,250,252,.05) 70%,
     rgba(248,250,252,0) 100%
   );
 }
@@ -1446,10 +1446,18 @@ SLIDE 5 FIX
 @media(min-width:1400px){
 
   .slide{
-    background-size:contain;
+    background-size:50%;
+    image-rendering:auto;
     background-color:#eef4ff;
   }
 
+  .slide.active{
+  opacity:1;
+  visibility:visible;
+  z-index:2;
+  filter:none;
+}
+  
 }
 
 /* =========================
