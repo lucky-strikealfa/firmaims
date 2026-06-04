@@ -301,8 +301,8 @@ FIX UKURAN GAMBAR PER SLIDE
 ========================================================= */
 
 .slide:nth-child(1){
-  background-size:80% !important;
-  background-position:right -100px bottom -20px !important;
+  background-size:100% !important;
+  background-position:right -800px bottom -40px !important;
 }
 
 
