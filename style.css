@@ -21,6 +21,7 @@ body{
   background:#f5f7fb;
   color:#111827;
   overflow-x:hidden;
+  padding-top:80px;
 }
 
 img{
@@ -124,7 +125,7 @@ MENU TOGGLE
 }
 
 /* =========================================================
-HERO SLIDER FIX
+HERO SLIDER MODERN 2026
 ========================================================= */
 
 .hero-slider{
@@ -132,7 +133,7 @@ HERO SLIDER FIX
   width:100%;
   min-height:100vh;
   overflow:hidden;
-  background:#eef4ff;
+  background:#f4f7fb;
 }
 
 .slides{
@@ -146,23 +147,21 @@ HERO SLIDER FIX
   min-height:100vh;
 
   position:relative;
+  overflow:hidden;
+
   display:flex;
   align-items:center;
 
-  padding:120px 8% 100px;
+  padding:0 8%;
 
   background-repeat:no-repeat;
-
-  /* ukuran default */
-  background-size:48%;
-
+  background-size:contain;
   background-position:right bottom;
+
+  background-color:#f8fafc;
 }
 
-/* =========================================================
-OVERLAY
-========================================================= */
-
+/* OVERLAY */
 .overlay{
   position:absolute;
   inset:0;
@@ -170,86 +169,141 @@ OVERLAY
   background:
   linear-gradient(
     90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
+    rgba(248,250,252,.96) 0%,
+    rgba(248,250,252,.90) 35%,
+    rgba(248,250,252,.30) 52%,
+    rgba(248,250,252,.05) 68%,
     rgba(248,250,252,0) 100%
   );
-}
-.slide{
-  filter:none !important;
-}
 
-.slide img{
-  filter:none !important;
-  opacity:1 !important;
+  z-index:1;
 }
 
-/* =========================================================
-CAPTION
-========================================================= */
+/* GLOW */
+.slide::after{
+  content:"";
+  position:absolute;
 
+  width:600px;
+  height:600px;
+
+  right:-200px;
+  top:-120px;
+
+  background:
+  radial-gradient(
+    rgba(37,99,235,.12),
+    transparent 70%
+  );
+
+  z-index:1;
+  opacity:.18;
+  filter:blur(25px);
+}
+
+/* CAPTION */
 .caption{
   position:relative;
   z-index:5;
+
+  width:100%;
   max-width:620px;
 }
 
+/* BADGE */
+.caption::before{
+  content:"KONSULTAN PAJAK PROFESIONAL";
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.85);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,.5);
+
+  color:#721e49;
+
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+
+  margin-bottom:28px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+/* TITLE */
 .caption h1{
-  font-size:68px;
+  font-size:78px;
   line-height:1.05;
   font-weight:800;
 
-  color:#0f172a;
+  letter-spacing:-3px;
 
-  letter-spacing:-2px;
+  color:#0f172a;
 
   margin-bottom:24px;
 }
 
-.caption h1 span{
-  color:#2563eb;
+/* RED TEXT */
+.caption .red{
+  color:#ef4444;
 }
 
+/* PARAGRAPH */
 .caption p{
-  font-size:18px;
+  font-size:20px;
   line-height:1.9;
 
-  color:#64748b;
+  color:#475569;
 
-  max-width:560px;
+  max-width:540px;
 }
-/* =========================================================
-BUTTON
-========================================================= */
 
+/* BUTTON */
 .btn-cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
 
-  margin-top:34px;
+  margin-top:38px;
 
-  padding:18px 34px;
+  height:62px;
+  padding:0 36px;
 
   border-radius:999px;
 
-  background:#2563eb;
+  background:
+  linear-gradient(
+    135deg,
+    #721e49,
+    #9f1239
+  );
+
   color:#fff;
 
   font-size:16px;
   font-weight:700;
 
-  transition:.35s;
-
   box-shadow:
-  0 15px 35px rgba(37,99,235,.25);
+  0 18px 40px rgba(114,30,73,.28);
+
+  transition:.35s ease;
 }
 
 .btn-cta:hover{
   transform:translateY(-5px);
-  background:#1d4ed8;
+
+  box-shadow:
+  0 24px 50px rgba(114,30,73,.35);
 }
 
 /* =========================================================
@@ -259,32 +313,32 @@ SLIDER BUTTON
 .slider-btn{
   position:absolute;
   top:50%;
-
   transform:translateY(-50%);
 
-  width:56px;
-  height:56px;
+  z-index:10;
+
+  width:58px;
+  height:58px;
 
   border:none;
   border-radius:50%;
 
-  background:#fff;
-  color:#111827;
+  background:rgba(255,255,255,.92);
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
 
   font-size:18px;
 
   cursor:pointer;
 
-  z-index:20;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.12);
-
   transition:.3s;
 }
 
 .slider-btn:hover{
-  transform:translateY(-50%) scale(1.06);
+  transform:translateY(-50%) scale(1.08);
 }
 
 .prev{
@@ -295,246 +349,6 @@ SLIDER BUTTON
   right:24px;
 }
 
-
-/* =========================================================
-FIX UKURAN GAMBAR PER SLIDE
-========================================================= */
-
-.slide:nth-child(1){
-  background-size:80% !important;
-  background-position:right -100px bottom -20px !important;
-}
-
-
-/* Slide 2 */
-.slide:nth-child(2){
-  background-size:55% !important;
-  background-position:right bottom !important;
-}
-
-/* Slide 3 */
-.slide:nth-child(3){
-  background-size:42% !important;
-  background-position:right bottom !important;
-}
-
-/* Slide 4 */
-.slide:nth-child(4){
-  background-size:48% !important;
-  background-position:right 20px bottom !important;
-}
-
-/* Slide 5 */
-.slide:nth-child(5){
-  background-size:48% !important;
-  background-position:right center !important;
-}
-
-/* =========================================================
-DESKTOP LARGE
-========================================================= */
-
-@media(min-width:1400px){
-
-  .slide{
-    background-size:45%;
-  }
-
-  .slide:nth-child(3){
-    background-size:38% !important;
-  }
-}
-
-/* =========================================================
-TABLET
-========================================================= */
-
-@media(max-width:991px){
-
-.slide{
-  padding:120px 40px 80px;
-
-  background-size:55%;
-  background-position:right bottom;
-}
-
-.slide:nth-child(3){
-  background-size:48% !important;
-}
-
-.overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
-    rgba(248,250,252,0) 100%
-  );
-}
-  .caption{
-    max-width:100%;
-    text-align:center;
-    margin:auto;
-  }
-
-  .caption h1{
-    font-size:48px;
-    line-height:1.15;
-  }
-
-  .caption p{
-    max-width:100%;
-  }
-
-}
-
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media(max-width:767px){
-
-  .hero-slider{
-    min-height:100vh;
-    height:auto;
-  }
-
-  .slides{
-    min-height:100vh;
-  }
-
-  .slide{
-  min-height:100vh;
-
-  padding:110px 20px 60px;
-
-  align-items:flex-start;
-
-  background-size:80%;
-  background-position:center bottom;
-}
-  
-.overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
-    rgba(248,250,252,0) 100%
-  );
-}
-
-  .caption{
-    max-width:100%;
-    text-align:center;
-  }
-
-  .caption h1{
-    font-size:34px;
-    line-height:1.2;
-  }
-
-  .caption p{
-    font-size:15px;
-    line-height:1.7;
-  }
-
-  .btn-cta{
-    width:100%;
-    max-width:280px;
-    margin:auto;
-    margin-top:30px;
-  }
-}
-
-  .prev{
-    left:12px;
-  }
-
-  .next{
-    right:12px;
-  }
-
-  .dots{
-    bottom:20px;
-  }
-
-}
-
-  /* =========================================================
-GLOBAL RESPONSIVE FIX
-========================================================= */
-
-section{
-  overflow:hidden;
-}
-
-img{
-  max-width:100%;
-  height:auto;
-}
-
-/* TITLE FIX */
-.workspace-text h2,
-.prima-heading h2,
-.about-left h2,
-.cta-red-content h2{
-  word-break:normal;
-}
-
-/* GRID FIX */
-@media(max-width:991px){
-
-  .about-grid,
-  .prima-top,
-  .workspace-flex,
-  .tentang-flex,
-  .vision-flex,
-  .service-flex,
-  .professional-flex{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .about-left,
-  .workspace-text,
-  .vision-text,
-  .service-text,
-  .professional-text,
-  .tentang-text{
-    text-align:center;
-  }
-
-}
-
-/* MOBILE TITLE FIX */
-@media(max-width:767px){
-
-  .workspace-text h2,
-  .prima-heading h2,
-  .about-left h2,
-  .cta-red-content h2,
-  .vision-text h2,
-  .service-text h2,
-  .professional-text h2,
-  .tentang-text h2{
-    font-size:34px !important;
-    line-height:1.3 !important;
-    letter-spacing:-1px !important;
-  }
-
-}
-  
 /* =========================================================
 DOTS
 ========================================================= */
@@ -568,6 +382,18 @@ DOTS
   border-radius:999px;
 
   background:#e11d48;
+}
+
+/* =========================================================
+DESKTOP LARGE
+========================================================= */
+
+@media(min-width:1400px){
+
+  .slide{
+    background-size:48%;
+  }
+
 }
 
 /* =========================================================
@@ -729,248 +555,63 @@ textarea{
 WORKSPACE
 ========================================================= */
 .workspace-section{
-  position:relative;
-  padding:90px 20px;
-  background:#f3f5f9;
-  overflow:hidden;
+  background:linear-gradient(135deg,#f8fbff,#ffffff);
 }
 
 .workspace-flex{
   display:grid;
   grid-template-columns:1fr 1fr;
+  gap:80px;
   align-items:center;
-
-  max-width:1200px;
-  margin:auto;
-
-  background:#f3f5f9;
-
-  border-radius:40px;
-
-  overflow:hidden;
-
-  position:relative;
 }
-
-/* =========================================================
-IMAGE
-========================================================= */
 
 .workspace-image{
   position:relative;
-  height:620px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-  overflow:hidden;
+.workspace-image::before{
+  content:"";
+  position:absolute;
 
-  border-radius:38px;
+  width:260px;
+  height:260px;
+
+  background:#2563eb;
+  opacity:.15;
+
+  filter:blur(120px);
 }
 
 .workspace-image img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-  object-position:center;
-
-  display:block;
-}
-
-/* overlay lembut */
-.workspace-image::after{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      to right,
-      rgba(243,245,249,0) 55%,
-      rgba(243,245,249,.10) 75%,
-      rgba(243,245,249,.20) 100%
-    );
-}
-
-/* =========================================================
-TEXT
-========================================================= */
-
-.workspace-text{
   position:relative;
+  z-index:2;
 
-  padding:70px 60px;
+  width:100%;
+  max-width:580px;
 
-  z-index:5;
+  object-fit:contain;
+}
+
+.workspace-text .line{
+  width:60px;
+  height:4px;
+  background:#2563eb;
+  margin-bottom:20px;
 }
 
 .workspace-text h2{
-  font-size:64px;
-  line-height:1.05;
-
-  font-weight:800;
-
-  letter-spacing:-2px;
-
-  color:#0f172a;
-
-  margin-bottom:26px;
-
-  max-width:520px;
-}
-
-.workspace-text h2 span{
-  color:#3b5bfd;
-}
-
-/* garis emas */
-.workspace-text .line{
-  width:280px;
-  height:16px;
-
-  border-radius:999px;
-
-  background:#d4a017;
-
-  margin-top:25px;
-  margin-bottom:30px;
+  font-size:42px;
+  line-height:1.35;
+  margin-bottom:20px;
 }
 
 .workspace-text p{
-  font-size:18px;
+  font-size:17px;
   line-height:1.9;
-
-  color:#64748b;
-
-  max-width:520px;
-}
-
-/* =========================================================
-ORNAMENT
-========================================================= */
-
-.workspace-section::before{
-  content:"";
-
-  position:absolute;
-
-  top:20px;
-  right:40px;
-
-  width:80px;
-  height:80px;
-
-  background-image:
-    radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
-
-  background-size:12px 12px;
-
-  opacity:.7;
-}
-
-/* =========================================================
-BOTTOM BAR
-========================================================= */
-
-.workspace-section::after{
-  content:"";
-
-  position:absolute;
-
-  left:50%;
-  bottom:35px;
-
-  transform:translateX(-50%);
-
-  width:85%;
-  height:52px;
-
-  background:#fff;
-
-  border-radius:999px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.06);
-}
-
-/* =========================================================
-TABLET
-========================================================= */
-
-@media(max-width:991px){
-
-  .workspace-flex{
-    grid-template-columns:1fr;
-  }
-
-  .workspace-image{
-    height:420px;
-
-    border-radius:30px 30px 0 0;
-  }
-
-  .workspace-text{
-    padding:50px 35px;
-    text-align:center;
-  }
-
-  .workspace-text h2{
-    font-size:44px;
-
-    max-width:100%;
-  }
-
-  .workspace-text p{
-    max-width:100%;
-  }
-
-  .workspace-text .line{
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .workspace-section::after{
-    display:none;
-  }
-
-}
-
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media(max-width:767px){
-
-  .workspace-section{
-    padding:50px 15px;
-  }
-
-  .workspace-image{
-    height:300px;
-
-    border-radius:24px 24px 0 0;
-  }
-
-  .workspace-text{
-    padding:40px 24px;
-  }
-
-  .workspace-text h2{
-    font-size:34px;
-    line-height:1.18;
-
-    letter-spacing:-1px;
-  }
-
-  .workspace-text p{
-    font-size:15px;
-    line-height:1.8;
-  }
-
-  .workspace-text .line{
-    width:180px;
-    height:12px;
-  }
-
+  color:#6b7280;
 }
 
 /* =========================================================
@@ -1468,18 +1109,10 @@ SLIDE 5 FIX
 @media(min-width:1400px){
 
   .slide{
-    background-size:50%;
-    image-rendering:auto;
+    background-size:contain;
     background-color:#eef4ff;
   }
 
-  .slide.active{
-  opacity:1;
-  visibility:visible;
-  z-index:2;
-  filter:none;
-}
-  
 }
 
 /* =========================
@@ -1758,31 +1391,8 @@ MOBILE
   .step-circle{
     width:95px;
     height:95px;
+
     font-size:36px;
-  }
-
-  /* =====================
-     WORKSPACE MOBILE
-  ===================== */
-
-  .workspace-flex{
-    grid-template-columns:1fr;
-    gap:30px;
-    min-height:auto;
-  }
-
-  .workspace-image img{
-    height:auto;
-    border-radius:20px;
-  }
-
-  .workspace-text{
-    padding-right:0;
-    text-align:center;
-  }
-
-  .workspace-text h2{
-    font-size:30px;
   }
 
 }
@@ -2210,20 +1820,16 @@ MOBILE
       center bottom;
   }
 
-.overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
-    rgba(248,250,252,0) 100%
-  );
-}
+  .overlay{
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(248,250,252,.97) 0%,
+      rgba(248,250,252,.92) 45%,
+      rgba(248,250,252,.35) 75%,
+      rgba(248,250,252,0) 100%
+    );
+  }
 
   .caption{
     max-width:100%;
@@ -2297,4 +1903,12 @@ MOBILE
   color:#64748b;
 
   letter-spacing:1px;
+}
+
+/* =========================
+FIX POSISI GAMBAR SLIDE 3 4 5
+========================= */
+
+.slide:nth-child(3){
+  background-position:right bottom !important;
 }
