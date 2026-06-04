@@ -363,18 +363,21 @@ MOBILE
 
   .hero-slider{
     min-height:100vh;
+    height:auto;
   }
 
   .slides{
-    height:100vh;
+    min-height:100vh;
   }
 
   .slide{
+    min-height:100vh;
+
+    padding:110px 20px 60px;
+
     align-items:flex-start;
 
-    padding:110px 20px 70px;
-
-    background-size:88%;
+    background-size:80%;
     background-position:center bottom;
   }
 
@@ -382,46 +385,35 @@ MOBILE
     background:
     linear-gradient(
       to bottom,
-      rgba(248,250,252,.98) 0%,
-      rgba(248,250,252,.95) 42%,
-      rgba(248,250,252,.45) 72%,
+      rgba(248,250,252,.92) 0%,
+      rgba(248,250,252,.80) 40%,
+      rgba(248,250,252,.25) 70%,
       rgba(248,250,252,0) 100%
     );
   }
 
   .caption{
+    max-width:100%;
     text-align:center;
-    margin:auto;
   }
 
   .caption h1{
     font-size:34px;
     line-height:1.2;
-
-    letter-spacing:-1px;
-
-    margin-bottom:18px;
   }
 
   .caption p{
     font-size:15px;
-    line-height:1.8;
+    line-height:1.7;
   }
 
   .btn-cta{
     width:100%;
     max-width:280px;
-
     margin:auto;
-    margin-top:28px;
+    margin-top:30px;
   }
-
-  .slider-btn{
-    width:44px;
-    height:44px;
-
-    font-size:15px;
-  }
+}
 
   .prev{
     left:12px;
