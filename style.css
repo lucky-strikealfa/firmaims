@@ -146,14 +146,16 @@ HERO SLIDER FIX
   min-height:100vh;
 
   position:relative;
-
   display:flex;
   align-items:center;
 
   padding:120px 8% 100px;
 
   background-repeat:no-repeat;
-  background-size:contain;
+
+  /* ukuran default */
+  background-size:48%;
+
   background-position:right bottom;
 }
 
@@ -295,18 +297,24 @@ SLIDER BUTTON
 
 
 /* =========================================================
-FIX SLIDE 3 4 5
+FIX UKURAN GAMBAR PER SLIDE
 ========================================================= */
 
+/* Slide 3 terlalu besar */
 .slide:nth-child(3){
+  background-size:42% !important;
   background-position:right bottom !important;
 }
 
+/* Slide 4 */
 .slide:nth-child(4){
+  background-size:48% !important;
   background-position:right 20px bottom !important;
 }
 
+/* Slide 5 */
 .slide:nth-child(5){
+  background-size:48% !important;
   background-position:right center !important;
 }
 
@@ -317,9 +325,12 @@ DESKTOP LARGE
 @media(min-width:1400px){
 
   .slide{
-    background-size:48%;
+    background-size:45%;
   }
 
+  .slide:nth-child(3){
+    background-size:38% !important;
+  }
 }
 
 /* =========================================================
@@ -328,12 +339,16 @@ TABLET
 
 @media(max-width:991px){
 
-  .slide{
-    padding:120px 40px 80px;
+.slide{
+  padding:120px 40px 80px;
 
-    background-size:58%;
-    background-position:center bottom;
-  }
+  background-size:55%;
+  background-position:right bottom;
+}
+
+.slide:nth-child(3){
+  background-size:48% !important;
+}
 
 .overlay{
   position:absolute;
@@ -382,16 +397,16 @@ MOBILE
   }
 
   .slide{
-    min-height:100vh;
+  min-height:100vh;
 
-    padding:110px 20px 60px;
+  padding:110px 20px 60px;
 
-    align-items:flex-start;
+  align-items:flex-start;
 
-    background-size:80%;
-    background-position:center bottom;
-  }
-
+  background-size:80%;
+  background-position:center bottom;
+}
+  
 .overlay{
   position:absolute;
   inset:0;
@@ -541,18 +556,6 @@ DOTS
   border-radius:999px;
 
   background:#e11d48;
-}
-
-/* =========================================================
-DESKTOP LARGE
-========================================================= */
-
-@media(min-width:1400px){
-
-  .slide{
-    background-size:48%;
-  }
-
 }
 
 /* =========================================================
@@ -2282,12 +2285,4 @@ MOBILE
   color:#64748b;
 
   letter-spacing:1px;
-}
-
-/* =========================
-FIX POSISI GAMBAR SLIDE 3 4 5
-========================= */
-
-.slide:nth-child(3){
-  background-position:right bottom !important;
 }
