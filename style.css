@@ -300,7 +300,19 @@ SLIDER BUTTON
 FIX UKURAN GAMBAR PER SLIDE
 ========================================================= */
 
-/* Slide 3 terlalu besar */
+/* Slide 1 */
+.slide:nth-child(1){
+  background-size:62% !important;
+  background-position:right bottom !important;
+}
+
+/* Slide 2 */
+.slide:nth-child(2){
+  background-size:55% !important;
+  background-position:right bottom !important;
+}
+
+/* Slide 3 */
 .slide:nth-child(3){
   background-size:42% !important;
   background-position:right bottom !important;
