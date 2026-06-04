@@ -1627,12 +1627,36 @@ SERVICE PRIMA MODERN
   filter:blur(120px);
 }
 
+.prima-image{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  height:100%;
+}
+
+.prima-image::before{
+  content:"";
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  background:#2563eb;
+  opacity:.10;
+
+  filter:blur(140px);
+}
+
 .prima-image img{
   position:relative;
   z-index:2;
 
   width:100%;
-  max-width:620px;
+  max-width:850px;   /* sebelumnya 620px */
+
+  transform:scale(1.25); /* memperbesar orang */
+  transform-origin:center center;
 
   object-fit:contain;
 }
