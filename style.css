@@ -168,12 +168,20 @@ OVERLAY
   background:
   linear-gradient(
     90deg,
-    rgba(248,250,252,.95) 0%,
-    rgba(248,250,252,.85) 28%,
-    rgba(248,250,252,.35) 52%,
+    rgba(248,250,252,.88) 0%,
+    rgba(248,250,252,.60) 25%,
+    rgba(248,250,252,.20) 50%,
     rgba(248,250,252,.05) 70%,
     rgba(248,250,252,0) 100%
   );
+}
+.slide{
+  filter:none !important;
+}
+
+.slide img{
+  filter:none !important;
+  opacity:1 !important;
 }
 
 /* =========================================================
@@ -327,17 +335,20 @@ TABLET
     background-position:center bottom;
   }
 
-  .overlay{
-    background:
-    linear-gradient(
-      to bottom,
-      rgba(248,250,252,.97) 0%,
-      rgba(248,250,252,.92) 45%,
-      rgba(248,250,252,.35) 75%,
-      rgba(248,250,252,0) 100%
-    );
-  }
+.overlay{
+  position:absolute;
+  inset:0;
 
+  background:
+  linear-gradient(
+    90deg,
+    rgba(248,250,252,.88) 0%,
+    rgba(248,250,252,.60) 25%,
+    rgba(248,250,252,.20) 50%,
+    rgba(248,250,252,.05) 70%,
+    rgba(248,250,252,0) 100%
+  );
+}
   .caption{
     max-width:100%;
     text-align:center;
@@ -381,16 +392,20 @@ MOBILE
     background-position:center bottom;
   }
 
-  .overlay{
-    background:
-    linear-gradient(
-      to bottom,
-      rgba(248,250,252,.92) 0%,
-      rgba(248,250,252,.80) 40%,
-      rgba(248,250,252,.25) 70%,
-      rgba(248,250,252,0) 100%
-    );
-  }
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(248,250,252,.88) 0%,
+    rgba(248,250,252,.60) 25%,
+    rgba(248,250,252,.20) 50%,
+    rgba(248,250,252,.05) 70%,
+    rgba(248,250,252,0) 100%
+  );
+}
 
   .caption{
     max-width:100%;
@@ -2180,16 +2195,20 @@ MOBILE
       center bottom;
   }
 
-  .overlay{
-    background:
-    linear-gradient(
-      to bottom,
-      rgba(248,250,252,.97) 0%,
-      rgba(248,250,252,.92) 45%,
-      rgba(248,250,252,.35) 75%,
-      rgba(248,250,252,0) 100%
-    );
-  }
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(248,250,252,.88) 0%,
+    rgba(248,250,252,.60) 25%,
+    rgba(248,250,252,.20) 50%,
+    rgba(248,250,252,.05) 70%,
+    rgba(248,250,252,0) 100%
+  );
+}
 
   .caption{
     max-width:100%;
