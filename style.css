@@ -300,11 +300,11 @@ SLIDER BUTTON
 FIX UKURAN GAMBAR PER SLIDE
 ========================================================= */
 
-/* Slide 1 */
 .slide:nth-child(1){
-  background-size:62% !important;
-  background-position:right bottom !important;
+  background-size:80% !important;
+  background-position:right -100px bottom -20px !important;
 }
+
 
 /* Slide 2 */
 .slide:nth-child(2){
