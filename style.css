@@ -133,23 +133,19 @@ HERO SLIDER FIX
   min-height:100vh;
   overflow:hidden;
   background:#eef4ff;
-
-  margin-top:-80px;
-  padding-top:80px;
 }
 
 .slides{
-  position:relative;
-  width:100%;
+  display:flex;
   min-height:100vh;
+  transition:transform .9s ease-in-out;
 }
 
 .slide{
-  position:absolute;
-  inset:0;
-
-  width:100%;
+  min-width:100%;
   min-height:100vh;
+
+  position:relative;
 
   display:flex;
   align-items:center;
@@ -159,17 +155,6 @@ HERO SLIDER FIX
   background-repeat:no-repeat;
   background-size:contain;
   background-position:right bottom;
-
-  opacity:0;
-  visibility:hidden;
-
-  transition:1s ease;
-}
-
-.slide.active{
-  opacity:1;
-  visibility:visible;
-  z-index:2;
 }
 
 /* =========================================================
