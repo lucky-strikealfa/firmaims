@@ -1964,14 +1964,14 @@ HERO MODERN PREMIUM
 /* Heading */
 
 .hero-content h1{
-    font-size:78px;
-    line-height:1.05;
+    font-size:clamp(42px,5vw,64px);
+    line-height:1.15;
     font-weight:800;
-    letter-spacing:-3px;
+    letter-spacing:-2px;
 
     color:#0f172a;
 
-    margin-bottom:28px;
+    margin-bottom:24px;
 }
 
 .hero-content .dark{
