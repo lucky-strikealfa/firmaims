@@ -124,9 +124,8 @@ MENU TOGGLE
 }
 
 /* =========================================================
-HERO SLIDER FIX
+HERO SLIDER
 ========================================================= */
-
 .hero-slider{
   position:relative;
   width:100%;
@@ -144,40 +143,13 @@ HERO SLIDER FIX
 .slide{
   min-width:100%;
   min-height:100vh;
-
   position:relative;
   display:flex;
   align-items:center;
-
   padding:120px 8% 100px;
-
   background-repeat:no-repeat;
-
-  /* ukuran default */
   background-size:48%;
-
   background-position:right bottom;
-}
-
-/* =========================================================
-OVERLAY
-========================================================= */
-
-.overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
-    rgba(248,250,252,0) 100%
-  );
-}
-.slide{
   filter:none !important;
 }
 
@@ -187,9 +159,24 @@ OVERLAY
 }
 
 /* =========================================================
+OVERLAY
+========================================================= */
+.overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(248,250,252,.88) 0%,
+    rgba(248,250,252,.60) 25%,
+    rgba(248,250,252,.20) 50%,
+    rgba(248,250,252,.05) 70%,
+    rgba(248,250,252,0) 100%
+  );
+}
+
+/* =========================================================
 CAPTION
 ========================================================= */
-
 .caption{
   position:relative;
   z-index:5;
@@ -200,11 +187,8 @@ CAPTION
   font-size:68px;
   line-height:1.05;
   font-weight:800;
-
   color:#0f172a;
-
   letter-spacing:-2px;
-
   margin-bottom:24px;
 }
 
@@ -215,36 +199,26 @@ CAPTION
 .caption p{
   font-size:18px;
   line-height:1.9;
-
   color:#64748b;
-
   max-width:560px;
 }
+
 /* =========================================================
 BUTTON
 ========================================================= */
-
 .btn-cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-
   margin-top:34px;
-
   padding:18px 34px;
-
   border-radius:999px;
-
   background:#2563eb;
   color:#fff;
-
   font-size:16px;
   font-weight:700;
-
   transition:.35s;
-
-  box-shadow:
-  0 15px 35px rgba(37,99,235,.25);
+  box-shadow: 0 15px 35px rgba(37,99,235,.25);
 }
 
 .btn-cta:hover{
@@ -255,31 +229,20 @@ BUTTON
 /* =========================================================
 SLIDER BUTTON
 ========================================================= */
-
 .slider-btn{
   position:absolute;
   top:50%;
-
   transform:translateY(-50%);
-
   width:56px;
   height:56px;
-
   border:none;
   border-radius:50%;
-
   background:#fff;
   color:#111827;
-
   font-size:18px;
-
   cursor:pointer;
-
   z-index:20;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.12);
-
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
   transition:.3s;
 }
 
@@ -287,195 +250,65 @@ SLIDER BUTTON
   transform:translateY(-50%) scale(1.06);
 }
 
-.prev{
-  left:24px;
-}
-
-.next{
-  right:24px;
-}
-
+.prev{ left:24px; }
+.next{ right:24px; }
 
 /* =========================================================
 FIX UKURAN GAMBAR PER SLIDE
 ========================================================= */
-
 .slide:nth-child(1){
   background-size:100% !important;
   background-position:right -800px bottom -40px !important;
 }
-
-
-/* Slide 2 */
 .slide:nth-child(2){
   background-size:55% !important;
   background-position:right bottom !important;
 }
-
-/* Slide 3 */
 .slide:nth-child(3){
   background-size:42% !important;
   background-position:right bottom !important;
 }
-
-/* Slide 4 */
 .slide:nth-child(4){
   background-size:48% !important;
   background-position:right 20px bottom !important;
 }
-
-/* Slide 5 */
 .slide:nth-child(5){
   background-size:48% !important;
   background-position:right center !important;
 }
 
 /* =========================================================
-DESKTOP LARGE
+DOTS
 ========================================================= */
+.dots{
+  position:absolute;
+  bottom:38px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  z-index:10;
+}
 
-@media(min-width:1400px){
+.dots span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#cbd5e1;
+  transition:.3s;
+}
 
-  .slide{
-    background-size:45%;
-  }
-
-  .slide:nth-child(3){
-    background-size:38% !important;
-  }
+.dots .active{
+  width:34px;
+  border-radius:999px;
+  background:#e11d48;
 }
 
 /* =========================================================
-TABLET
+SECTION GLOBAL
 ========================================================= */
-
-@media(max-width:991px){
-
-.slide{
-  padding:120px 40px 80px;
-
-  background-size:55%;
-  background-position:right bottom;
-}
-
-.slide:nth-child(3){
-  background-size:48% !important;
-}
-
-.overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
-    rgba(248,250,252,0) 100%
-  );
-}
-  .caption{
-    max-width:100%;
-    text-align:center;
-    margin:auto;
-  }
-
-  .caption h1{
-    font-size:48px;
-    line-height:1.15;
-  }
-
-  .caption p{
-    max-width:100%;
-  }
-
-}
-
-/* =========================================================
-MOBILE
-========================================================= */
-
-@media(max-width:767px){
-
-  .hero-slider{
-    min-height:100vh;
-    height:auto;
-  }
-
-  .slides{
-    min-height:100vh;
-  }
-
-  .slide{
-  min-height:100vh;
-
-  padding:110px 20px 60px;
-
-  align-items:flex-start;
-
-  background-size:80%;
-  background-position:center bottom;
-}
-  
-.overlay{
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(248,250,252,.88) 0%,
-    rgba(248,250,252,.60) 25%,
-    rgba(248,250,252,.20) 50%,
-    rgba(248,250,252,.05) 70%,
-    rgba(248,250,252,0) 100%
-  );
-}
-
-  .caption{
-    max-width:100%;
-    text-align:center;
-  }
-
-  .caption h1{
-    font-size:34px;
-    line-height:1.2;
-  }
-
-  .caption p{
-    font-size:15px;
-    line-height:1.7;
-  }
-
-  .btn-cta{
-    width:100%;
-    max-width:280px;
-    margin:auto;
-    margin-top:30px;
-  }
-}
-
-  .prev{
-    left:12px;
-  }
-
-  .next{
-    right:12px;
-  }
-
-  .dots{
-    bottom:20px;
-  }
-
-}
-
-  /* =========================================================
-GLOBAL RESPONSIVE FIX
-========================================================= */
-
-section{
+.section, section{
+  padding:100px 20px;
   overflow:hidden;
 }
 
@@ -484,7 +317,6 @@ img{
   height:auto;
 }
 
-/* TITLE FIX */
 .workspace-text h2,
 .prima-heading h2,
 .about-left h2,
@@ -492,95 +324,9 @@ img{
   word-break:normal;
 }
 
-/* GRID FIX */
-@media(max-width:991px){
-
-  .about-grid,
-  .prima-top,
-  .workspace-flex,
-  .tentang-flex,
-  .vision-flex,
-  .service-flex,
-  .professional-flex{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .about-left,
-  .workspace-text,
-  .vision-text,
-  .service-text,
-  .professional-text,
-  .tentang-text{
-    text-align:center;
-  }
-
-}
-
-/* MOBILE TITLE FIX */
-@media(max-width:767px){
-
-  .workspace-text h2,
-  .prima-heading h2,
-  .about-left h2,
-  .cta-red-content h2,
-  .vision-text h2,
-  .service-text h2,
-  .professional-text h2,
-  .tentang-text h2{
-    font-size:34px !important;
-    line-height:1.3 !important;
-    letter-spacing:-1px !important;
-  }
-
-}
-  
-/* =========================================================
-DOTS
-========================================================= */
-
-.dots{
-  position:absolute;
-  bottom:38px;
-
-  width:100%;
-
-  display:flex;
-  justify-content:center;
-  gap:10px;
-
-  z-index:10;
-}
-
-.dots span{
-  width:10px;
-  height:10px;
-
-  border-radius:50%;
-
-  background:#cbd5e1;
-
-  transition:.3s;
-}
-
-.dots .active{
-  width:34px;
-  border-radius:999px;
-
-  background:#e11d48;
-}
-
-/* =========================================================
-SECTION
-========================================================= */
-.section{
-  padding:100px 20px;
-}
-
 /* =========================================================
 TENTANG
 ========================================================= */
-
 .tentang-section{
   background:#eef4ff;
 }
@@ -633,9 +379,7 @@ CARD
   border-radius:22px;
   padding:30px;
   transition:.35s;
-
   border:1px solid rgba(255,255,255,.7);
-
   box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
@@ -647,17 +391,12 @@ CARD
 .tentang-card .icon{
   width:62px;
   height:62px;
-
   border-radius:16px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   background:#eff6ff;
-
   font-size:28px;
-
   margin-bottom:20px;
 }
 
@@ -686,9 +425,7 @@ LAYANAN
   background:#fff;
   border-radius:18px;
   padding:28px;
-
   box-shadow:0 10px 25px rgba(0,0,0,.08);
-
   transition:.3s;
 }
 
@@ -703,20 +440,16 @@ FORM
 form{
   max-width:450px;
   margin:auto;
-
   display:flex;
   flex-direction:column;
   gap:14px;
 }
 
-input,
-textarea{
+input, textarea{
   width:100%;
   padding:14px;
-
   border-radius:10px;
   border:1px solid #d1d5db;
-
   font-family:'Poppins',sans-serif;
 }
 
@@ -739,82 +472,54 @@ WORKSPACE
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-
   max-width:1200px;
   margin:auto;
-
   background:#f3f5f9;
-
   border-radius:40px;
-
   overflow:hidden;
-
   position:relative;
 }
-
-/* =========================================================
-IMAGE
-========================================================= */
 
 .workspace-image{
   position:relative;
   height:620px;
-
   overflow:hidden;
-
   border-radius:38px;
 }
 
 .workspace-image img{
   width:100%;
   height:100%;
-
   object-fit:cover;
   object-position:center;
-
   display:block;
 }
 
-/* overlay lembut */
 .workspace-image::after{
   content:"";
-
   position:absolute;
   inset:0;
-
-  background:
-    linear-gradient(
-      to right,
-      rgba(243,245,249,0) 55%,
-      rgba(243,245,249,.10) 75%,
-      rgba(243,245,249,.20) 100%
-    );
+  background: linear-gradient(
+    to right,
+    rgba(243,245,249,0) 55%,
+    rgba(243,245,249,.10) 75%,
+    rgba(243,245,249,.20) 100%
+  );
 }
-
-/* =========================================================
-TEXT
-========================================================= */
 
 .workspace-text{
   position:relative;
-
   padding:70px 60px;
-
   z-index:5;
 }
 
 .workspace-text h2{
   font-size:64px;
   line-height:1.05;
-
   font-weight:800;
-
   letter-spacing:-2px;
-
   color:#0f172a;
-
   margin-bottom:26px;
-
   max-width:520px;
 }
 
@@ -822,15 +527,11 @@ TEXT
   color:#3b5bfd;
 }
 
-/* garis emas */
 .workspace-text .line{
   width:280px;
   height:16px;
-
   border-radius:999px;
-
   background:#d4a017;
-
   margin-top:25px;
   margin-bottom:30px;
 }
@@ -838,65 +539,155 @@ TEXT
 .workspace-text p{
   font-size:18px;
   line-height:1.9;
-
   color:#64748b;
-
   max-width:520px;
 }
 
-/* =========================================================
-ORNAMENT
-========================================================= */
-
 .workspace-section::before{
   content:"";
-
   position:absolute;
-
   top:20px;
   right:40px;
-
   width:80px;
   height:80px;
-
-  background-image:
-    radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
-
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
   background-size:12px 12px;
-
   opacity:.7;
 }
 
-/* =========================================================
-BOTTOM BAR
-========================================================= */
-
 .workspace-section::after{
   content:"";
-
   position:absolute;
-
   left:50%;
   bottom:35px;
-
   transform:translateX(-50%);
-
   width:85%;
   height:52px;
-
   background:#fff;
-
   border-radius:999px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
 /* =========================================================
-TABLET
+VISION / SERVICE / PROFESSIONAL BASE
+========================================================= */
+.vision-section {
+  background: #fff;
+}
+
+.professional-section{
+  background:#fff;
+  padding:100px 20px;
+  overflow:hidden;
+}
+
+.professional-flex{
+  display:grid;
+  grid-template-columns:48% 52%;
+  gap:40px;
+  align-items:center;
+  max-width:1300px;
+  margin:auto;
+}
+
+.professional-text{
+  max-width:560px;
+}
+
+.professional-text h2{
+  font-size:56px;
+  line-height:1.15;
+  font-weight:800;
+  color:#0f172a;
+  margin-bottom:20px;
+}
+
+.professional-text h2 span{
+  color:#2563eb;
+}
+
+.professional-text p{
+  font-size:16px;
+  line-height:1.9;
+  color:#64748b;
+}
+
+.professional-text::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:4px;
+  background:#2563eb;
+  border-radius:999px;
+  margin-top:20px;
+}
+
+.professional-image{
+  position:relative;
+  height:650px;
+  display:flex;
+}
+
+/* =========================================================
+MEDIA QUERIES (RESPONSIVE)
 ========================================================= */
 
+/* DESKTOP LARGE */
+@media(min-width:1400px){
+  .slide{
+    background-size:45%;
+  }
+  .slide:nth-child(3){
+    background-size:38% !important;
+  }
+}
+
+/* TABLET (max-width: 991px) */
 @media(max-width:991px){
+  .slide{
+    padding:120px 40px 80px;
+    background-size:55%;
+    background-position:right bottom;
+  }
+
+  .slide:nth-child(3){
+    background-size:48% !important;
+  }
+
+  .caption{
+    max-width:100%;
+    text-align:center;
+    margin:auto;
+  }
+
+  .caption h1{
+    font-size:48px;
+    line-height:1.15;
+  }
+
+  .caption p{
+    max-width:100%;
+  }
+
+  .about-grid,
+  .prima-top,
+  .workspace-flex,
+  .tentang-flex,
+  .vision-flex,
+  .service-flex,
+  .professional-flex{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .about-left,
+  .workspace-text,
+  .vision-text,
+  .service-text,
+  .professional-text,
+  .tentang-text{
+    text-align:center;
+  }
 
   .workspace-flex{
     grid-template-columns:1fr;
@@ -904,7 +695,6 @@ TABLET
 
   .workspace-image{
     height:420px;
-
     border-radius:30px 30px 0 0;
   }
 
@@ -915,7 +705,6 @@ TABLET
 
   .workspace-text h2{
     font-size:44px;
-
     max-width:100%;
   }
 
@@ -931,14 +720,65 @@ TABLET
   .workspace-section::after{
     display:none;
   }
-
 }
 
-/* =========================================================
-MOBILE
-========================================================= */
-
+/* MOBILE (max-width: 767px) */
 @media(max-width:767px){
+  .hero-slider{
+    min-height:100vh;
+    height:auto;
+  }
+
+  .slides{
+    min-height:100vh;
+  }
+
+  .slide{
+    min-height:100vh;
+    padding:110px 20px 60px;
+    align-items:flex-start;
+    background-size:80%;
+    background-position:center bottom;
+  }
+
+  .caption{
+    max-width:100%;
+    text-align:center;
+  }
+
+  .caption h1{
+    font-size:34px;
+    line-height:1.2;
+  }
+
+  .caption p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .btn-cta{
+    width:100%;
+    max-width:280px;
+    margin:auto;
+    margin-top:30px;
+  }
+
+  .prev{ left:12px; }
+  .next{ right:12px; }
+  .dots{ bottom:20px; }
+
+  .workspace-text h2,
+  .prima-heading h2,
+  .about-left h2,
+  .cta-red-content h2,
+  .vision-text h2,
+  .service-text h2,
+  .professional-text h2,
+  .tentang-text h2{
+    font-size:34px !important;
+    line-height:1.3 !important;
+    letter-spacing:-1px !important;
+  }
 
   .workspace-section{
     padding:50px 15px;
@@ -946,7 +786,6 @@ MOBILE
 
   .workspace-image{
     height:300px;
-
     border-radius:24px 24px 0 0;
   }
 
@@ -957,7 +796,6 @@ MOBILE
   .workspace-text h2{
     font-size:34px;
     line-height:1.18;
-
     letter-spacing:-1px;
   }
 
@@ -970,7 +808,6 @@ MOBILE
     width:180px;
     height:12px;
   }
-
 }
 
 /* =========================================================
@@ -982,7 +819,7 @@ VISION / SERVICE / PROFESSIONAL
   
 /* =========================================================
 PROFESSIONAL SECTION ONLY
-========================================================= */   =[============================================
+========================================================= */  
 
 /* =========================================================
 GOOGLE FONT
@@ -1965,7 +1802,8 @@ VISION / SERVICE / PROFESSIONAL
 .vision-section,
 .professional-section{
   background:#fff;
-  
+}
+
 /* =========================================================
 PROFESSIONAL SECTION ONLY
 ========================================================= */
