@@ -2086,26 +2086,20 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
-    min-height:650px;
-
-    display:flex;
-    align-items:flex-start;
-    justify-content:flex-end;
-
+    min-height:700px;
     overflow:visible;
 }
 
 .hero-image img{
     position:absolute;
 
-    top:0;
-    right:0;
+    top:-60px;      /* naikkan gambar */
+    right:-20px;    /* geser sedikit ke kanan */
 
     width:auto;
-    height:650px;
+    height:760px;   /* perbesar sedikit */
 
     max-width:none;
-
     object-fit:contain;
 
     z-index:1;
@@ -2126,18 +2120,18 @@ HERO MODERN PREMIUM
 /* Bottom Bar */
 
 .hero-bottom{
-    position:relative;
-    margin:20px auto 0;
-   
-    width:100%;
-    max-width:540px;
-    left:auto;
-    transform:none;
+    position:absolute;
 
-    padding:18px 22px;
+    bottom:40px;
+    right:20px;
+
+    width:520px;
+    max-width:520px;
+
+    padding:20px 25px;
 
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
 
     border-radius:24px;
@@ -2152,18 +2146,27 @@ HERO MODERN PREMIUM
     box-shadow:
     0 20px 45px rgba(0,0,0,.15);
 
-    z-index:5;
+    z-index:10;
 }
 
 .bottom-item{
     display:flex;
+    flex-direction:column; /* icon di atas */
     align-items:center;
+    justify-content:center;
     gap:8px;
 
     font-size:14px;
     font-weight:600;
-
     text-align:center;
+
+    color:#fff;
+}
+
+.bottom-item i,
+.bottom-item svg{
+    font-size:18px;
+    margin-bottom:4px;
 }
 
 /* Mobile */
@@ -2237,7 +2240,8 @@ HERO MODERN PREMIUM
 }
 
 .hero-image{
-    min-height:auto;
+    position:relative;
+    min-height:760px;
 }
 
 .hero-image img{
@@ -2249,27 +2253,24 @@ HERO MODERN PREMIUM
     margin:auto;
 }
 
+.hero-image img{
+    top:-80px;
+    right:-30px;
+    height:800px;
+}
+
+.hero-image{
+    min-height:780px;
+}
+
 .hero-bottom{
-    position:relative;
-    left:auto;
-    bottom:auto;
-
-    transform:none;
-
-    width:100%;
-    max-width:100%;
-
-    margin-top:20px;
-
-    flex-direction:column;
-    gap:15px;
-
-    border-radius:20px;
+    position:absolute;
+    right:40px;
+    top:20px; /* pindah ke atas gambar */
+    width:430px;
 }
 
 .bottom-item{
-    justify-content:center;
-    width:100%;
-}
-
+    flex-direction:column;
+    gap:6px;
 }
