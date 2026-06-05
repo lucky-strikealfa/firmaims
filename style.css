@@ -1931,13 +1931,19 @@ HERO MODERN PREMIUM
 }
 
 .hero-container{
-    max-width:1280px;
+    max-width:1400px;
     margin:auto;
-    padding:0 30px;
+
+    padding:0 40px;
 
     display:grid;
-    grid-template-columns:1.05fr .95fr;
-    gap:60px;
+
+    grid-template-columns:
+      minmax(500px,620px)
+      minmax(500px,700px);
+
+    gap:50px;
+
     align-items:center;
 }
 
@@ -2001,7 +2007,7 @@ HERO MODERN PREMIUM
 }
 
 .feature-box{
-    flex:1;
+    flex:0 0 180px;
     min-width:160px;
 
     background:#fff;
@@ -2042,17 +2048,6 @@ HERO MODERN PREMIUM
     color:#475569;
     font-weight:600;
     line-height:1.6;
-}
-
-/* IMAGE AREA */
-
-.hero-image{
-    position:relative;
-    min-height:620px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .circle-bg{
@@ -2100,13 +2095,12 @@ HERO MODERN PREMIUM
 
 .hero-bottom{
     position:relative;
-    margin-top:20px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:92%;
+    margin:20px auto 0;
+   
+    width:100%;
     max-width:540px;
+    left:auto;
+    transform:none;
 
     padding:18px 22px;
 
@@ -2150,7 +2144,8 @@ HERO MODERN PREMIUM
     }
 
     .hero-content h1{
-        font-size:46px;
+        font-size:clamp(28px,3vw,48px);
+        line-height:1.15;
     }
 
     .hero-content p{
@@ -2214,7 +2209,11 @@ HERO MODERN PREMIUM
 }
 
 .hero-image img{
-    max-width:350px;
+    width:100%;
+    max-width:620px;
+
+    display:block;
+
     margin:auto;
 }
 
