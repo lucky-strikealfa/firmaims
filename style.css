@@ -1933,17 +1933,12 @@ HERO MODERN PREMIUM
 .hero-container{
     max-width:1400px;
     margin:auto;
-
     padding:0 40px;
 
     display:grid;
+    grid-template-columns:55% 45%;
 
-    grid-template-columns:
-      minmax(500px,620px)
-      minmax(500px,700px);
-
-    gap:50px;
-
+    gap:30px;
     align-items:center;
 }
 
@@ -2071,26 +2066,43 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
-    min-height:620px;
+    min-height:650px;
+
     display:flex;
-    align-items:flex-end;
-    justify-content:center;
+    align-items:flex-start;
+    justify-content:flex-end;
+
+    overflow:visible;
 }
 
 .hero-image img{
-    width:100%;
-    max-width:700px;
+    position:absolute;
 
-    height:auto;
+    top:0;
+    right:0;
 
-    position:relative;
+    width:auto;
+    height:650px;
+
+    max-width:none;
+
+    object-fit:contain;
+
     z-index:3;
 
     filter:
     drop-shadow(0 25px 50px rgba(0,0,0,.15));
-
-    transition:.4s;
 }
+
+.hero-image img{
+    transform:translateX(50px);
+}
+
+.circle-bg{
+    right:-150px;
+    top:-120px;
+}
+
 /* Bottom Bar */
 
 .hero-bottom{
