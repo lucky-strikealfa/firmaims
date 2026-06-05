@@ -1965,7 +1965,7 @@ HERO MODERN PREMIUM
 /* Heading */
 
 .hero-content h1{
-    font-size:clamp(34px,4vw,58px);
+    font-size:clamp(32px,3.8vw,52px);
     line-height:1.15;
     font-weight:800;
     letter-spacing:-1.5px;
@@ -1987,7 +1987,7 @@ HERO MODERN PREMIUM
     line-height:1.9;
     color:#64748b;
 
-    max-width:580px;
+    max-width:620px;
 
     margin-bottom:35px;
 }
@@ -2002,7 +2002,7 @@ HERO MODERN PREMIUM
 
 .feature-box{
     flex:1;
-    min-width:180px;
+    min-width:160px;
 
     background:#fff;
 
@@ -2048,9 +2048,11 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
+    min-height:620px;
+
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 }
 
 .circle-bg{
@@ -2082,7 +2084,7 @@ HERO MODERN PREMIUM
 
 .hero-image img{
     width:100%;
-    max-width:580px;
+    max-width:700px;
 
     height:auto;
 
@@ -2097,8 +2099,8 @@ HERO MODERN PREMIUM
 /* Bottom Bar */
 
 .hero-bottom{
-    position:absolute;
-    bottom:25px;
+    position:relative;
+    margin-top:20px;
     left:50%;
 
     transform:translateX(-50%);
