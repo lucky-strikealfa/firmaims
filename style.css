@@ -1959,12 +1959,10 @@ HERO MODERN PREMIUM
 
 .hero-image img{
     position:relative;
-    z-index:1;
+    z-index:5;
 }
 
-/* Badge */
-
-.hero-badge{
+.hero-badge{  
     display:inline-flex;
     align-items:center;
     gap:10px;
@@ -2090,22 +2088,28 @@ HERO MODERN PREMIUM
     overflow:visible;
 }
 
+.hero-image{
+    position:relative;
+    min-height:620px;
+    overflow:visible;
+}
+
 .hero-image img{
     position:absolute;
 
-    top:-60px;      /* naikkan gambar */
-    right:-20px;    /* geser sedikit ke kanan */
+    top:-130px;      /* lebih naik */
+    right:-20px;
+
+    height:860px;    /* sedikit lebih besar */
 
     width:auto;
-    height:760px;   /* perbesar sedikit */
-
     max-width:none;
     object-fit:contain;
 
-    z-index:1;
+    z-index:2;
 
     filter:
-    drop-shadow(0 25px 50px rgba(0,0,0,.15));
+      drop-shadow(0 25px 50px rgba(0,0,0,.15));
 }
 
 .hero-image img{
@@ -2122,17 +2126,18 @@ HERO MODERN PREMIUM
 .hero-bottom{
     position:absolute;
 
-    bottom:40px;
+    bottom:30px;
     right:20px;
 
-    width:520px;
-    max-width:520px;
+    width:650px;          /* diperlebar */
+    max-width:650px;
 
-    padding:20px 25px;
+    padding:22px 30px;
 
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
 
     border-radius:24px;
 
@@ -2146,27 +2151,29 @@ HERO MODERN PREMIUM
     box-shadow:
     0 20px 45px rgba(0,0,0,.15);
 
-    z-index:10;
+    z-index:15;
 }
 
 .bottom-item{
     display:flex;
-    flex-direction:column; /* icon di atas */
+    flex-direction:column;
     align-items:center;
-    justify-content:center;
-    gap:8px;
 
-    font-size:14px;
-    font-weight:600;
+    gap:10px;
+
     text-align:center;
-
     color:#fff;
+
+    font-size:13px;
+    line-height:1.5;
+
+    font-weight:600;
 }
 
 .bottom-item i,
 .bottom-item svg{
-    font-size:18px;
-    margin-bottom:4px;
+    font-size:20px;
+    margin-bottom:6px;
 }
 
 /* Mobile */
@@ -2241,16 +2248,26 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
-    min-height:760px;
+    min-height:620px;
+    overflow:visible;
 }
 
 .hero-image img{
-    width:100%;
-    max-width:620px;
+    position:absolute;
 
-    display:block;
+    top:-130px;      /* lebih naik */
+    right:-20px;
 
-    margin:auto;
+    height:860px;    /* sedikit lebih besar */
+
+    width:auto;
+    max-width:none;
+    object-fit:contain;
+
+    z-index:2;
+
+    filter:
+      drop-shadow(0 25px 50px rgba(0,0,0,.15));
 }
 
 .hero-image img{
