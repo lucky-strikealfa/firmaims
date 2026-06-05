@@ -2108,7 +2108,7 @@ HERO MODERN PREMIUM
 
     object-fit:contain;
 
-    z-index:3;
+    z-index:1;
 
     filter:
     drop-shadow(0 25px 50px rgba(0,0,0,.15));
