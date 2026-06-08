@@ -2098,10 +2098,10 @@ HERO MODERN PREMIUM
 .hero-image img{
     position:absolute;
 
-    top:-40px;
-    right:-80px;
+    top:-95px;          /* gambar naik */
+    right:-40px;        /* geser sedikit ke kiri */
 
-    height:700px;
+    height:610px;       /* gambar lebih kecil */
 
     width:auto;
     max-width:none;
@@ -2116,22 +2116,17 @@ HERO MODERN PREMIUM
       drop-shadow(0 20px 40px rgba(0,0,0,.12));
 }
 
+/* hilangkan translate yang membuat gambar terlalu ke kanan */
 .hero-image img{
-    transform:translateX(50px);
+    transform:none;
 }
 
-.circle-bg{
-    right:-150px;
-    top:-120px;
-}
-
-/* Bottom Bar */
-
+/* kotak biru */
 .hero-bottom{
     position:absolute;
 
-    bottom:90px;
-    right:10px;
+    bottom:35px;        /* lebih ke bawah */
+    right:25px;
 
     width:620px;
     max-width:620px;
