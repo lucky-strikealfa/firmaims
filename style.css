@@ -2099,9 +2099,9 @@ HERO MODERN PREMIUM
     position:absolute;
 
     top:-160px;      /* lebih naik */
-    right:300px;
+    right:10px;
 
-    height:450px;    /* lebih kecil */
+    height:550px;    /* lebih kecil */
 
     width:auto;
     max-width:none;
