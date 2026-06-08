@@ -2121,24 +2121,27 @@ HERO MODERN PREMIUM
     transform:none;
 }
 
-/* kotak biru */
+  /* =================================
+KOTAK BIRU PREMIUM
+================================= */
+
 .hero-bottom{
     position:absolute;
 
-    bottom:35px;        /* lebih ke bawah */
-    right:25px;
+    bottom:20px;
+    right:0;
 
-    width:620px;
-    max-width:620px;
+    width:580px;
+    max-width:580px;
 
-    padding:22px 30px;
+    padding:28px 20px;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-    gap:20px;
+    gap:15px;
 
-    border-radius:24px;
+    border-radius:30px;
 
     background:
     linear-gradient(
@@ -2153,35 +2156,48 @@ HERO MODERN PREMIUM
     z-index:20;
 }
 
-.hero-content{
-    position:relative;
-    z-index:50;
-}
-
-.hero-image{
-    position:relative;
-    z-index:1;
-}
+/* ITEM */
 
 .bottom-item{
     display:flex;
     flex-direction:column;
+
     justify-content:center;
     align-items:center;
 
     text-align:center;
 
-    min-height:120px;
+    min-height:130px;
+
+    padding:10px;
 
     color:#fff;
 
-    font-size:15px;
-    line-height:1.7;
-    font-weight:600;
+    font-size:52px; /* ukuran icon */
 
-    padding:10px;
+    transition:.3s;
 }
 
+.bottom-item:hover{
+    transform:translateY(-6px);
+}
+
+/* TEKS */
+
+.bottom-item span{
+    display:block;
+
+    margin-top:16px;
+
+    font-size:18px;
+    line-height:1.5;
+
+    font-weight:600;
+
+    max-width:140px;
+
+    color:#fff;
+}
 .bottom-item i,
 .bottom-item svg{
     font-size:56px;
