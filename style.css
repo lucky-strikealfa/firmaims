@@ -1922,10 +1922,29 @@ FIX HERO SECTION
     max-width:1400px;
     margin:auto;
     padding:0 40px;
+
     display:grid;
-    grid-template-columns:52% 48%;
-    gap:20px;
+    grid-template-columns:55% 45%;
+    gap:30px;
     align-items:center;
+}
+
+.hero-image{
+    min-height:auto;
+    text-align:center;
+}
+
+.hero-image img{
+    position:relative;
+
+    top:auto;
+    right:auto;
+
+    width:100%;
+    max-width:420px;
+    height:auto;
+
+    margin:auto;
 }
 
 /* TEXT AREA */
@@ -2004,10 +2023,10 @@ FIX HERO SECTION
 .hero-bottom{
     position:absolute;
 
-    right:20px;
-    bottom:30px;
+    right:0;
+    bottom:50px;
 
-    width:520px;
+    width:620px;
 
     padding:26px 20px;
 
