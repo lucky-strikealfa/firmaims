@@ -2168,3 +2168,25 @@ FIX HERO SECTION
   }
 
 }
+
+@media(max-width:768px){
+
+  .hero-image{
+      min-height:350px !important;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+  }
+
+  .hero-image img{
+      position:relative !important;
+      top:auto !important;
+      right:auto !important;
+
+      width:75% !important;
+      max-width:260px !important;
+
+      transform:none !important;
+  }
+
+}
