@@ -1936,7 +1936,7 @@ HERO MODERN PREMIUM
     padding:0 40px;
 
     display:grid;
-    grid-template-columns:55% 45%;
+    grid-template-columns:48% 52%;
 
     gap:30px;
     align-items:center;
@@ -2004,7 +2004,8 @@ HERO MODERN PREMIUM
 .hero-content p{
     font-size:18px;
     line-height:1.9;
-    color:#64748b;
+    color:#475569;
+    font-weight:500;
 
     max-width:620px;
 
@@ -2097,19 +2098,22 @@ HERO MODERN PREMIUM
 .hero-image img{
     position:absolute;
 
-    top:-130px;      /* lebih naik */
-    right:-20px;
+    top:-40px;
+    right:-80px;
 
-    height:860px;    /* sedikit lebih besar */
+    height:700px;
 
     width:auto;
     max-width:none;
+
     object-fit:contain;
 
     z-index:2;
 
+    transform:none;
+
     filter:
-      drop-shadow(0 25px 50px rgba(0,0,0,.15));
+      drop-shadow(0 20px 40px rgba(0,0,0,.12));
 }
 
 .hero-image img{
@@ -2126,11 +2130,11 @@ HERO MODERN PREMIUM
 .hero-bottom{
     position:absolute;
 
-    bottom:30px;
-    right:20px;
+    bottom:90px;
+    right:10px;
 
-    width:650px;          /* diperlebar */
-    max-width:650px;
+    width:620px;
+    max-width:620px;
 
     padding:22px 30px;
 
@@ -2151,7 +2155,7 @@ HERO MODERN PREMIUM
     box-shadow:
     0 20px 45px rgba(0,0,0,.15);
 
-    z-index:15;
+    z-index:20;
 }
 
 .bottom-item{
