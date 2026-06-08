@@ -2091,7 +2091,7 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
-    min-height:620px;
+    min-height:520px;
     overflow:visible;
 }
 
@@ -2099,9 +2099,9 @@ HERO MODERN PREMIUM
     position:absolute;
 
     top:-95px;          /* gambar naik */
-    right:-40px;        /* geser sedikit ke kiri */
+    right:0;      /* geser sedikit ke kiri */
 
-    height:610px;       /* gambar lebih kecil */
+    height:520px;       /* gambar lebih kecil */
 
     width:auto;
     max-width:none;
@@ -2225,12 +2225,12 @@ HERO MODERN PREMIUM
 @media(max-width:768px){
 
 .hero-modern{
-    padding:60px 0;
+    padding:50px 0;
 }
 
 .hero-container{
     grid-template-columns:1fr;
-    gap:40px;
+    gap:30px;
 }
 
 .hero-content{
@@ -2238,65 +2238,65 @@ HERO MODERN PREMIUM
 }
 
 .hero-content h1{
-    font-size:38px;
-    line-height:1.2;
+    font-size:32px;
+    line-height:1.25;
 }
 
 .hero-content p{
-    font-size:16px;
-    max-width:100%;
+    font-size:15px;
+    line-height:1.8;
 }
 
-.hero-features{
-    flex-direction:column;
-}
-
-.feature-box{
-    width:100%;
-}
-
+/* GAMBAR */
 .hero-image{
     position:relative;
-    min-height:620px;
-    overflow:visible;
+    min-height:420px;
+    overflow:hidden;
 }
 
 .hero-image img{
     position:absolute;
 
-    top:-130px;      /* lebih naik */
-    right:-20px;
+    top:0;
+    left:50%;
 
-    height:860px;    /* sedikit lebih besar */
+    transform:translateX(-50%);
 
+    height:420px;
     width:auto;
-    max-width:none;
+    max-width:95%;
+
     object-fit:contain;
-
-    z-index:2;
-
-    filter:
-      drop-shadow(0 25px 50px rgba(0,0,0,.15));
 }
 
-.hero-image img{
-    top:-80px;
-    right:-30px;
-    height:800px;
-}
-
-.hero-image{
-    min-height:780px;
-}
-
+/* KOTAK BIRU */
 .hero-bottom{
-    position:absolute;
-    right:40px;
-    top:20px; /* pindah ke atas gambar */
-    width:430px;
+    position:relative;
+
+    top:auto;
+    right:auto;
+
+    width:100%;
+
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    padding:20px;
+
+    border-radius:22px;
 }
 
 .bottom-item{
-    flex-direction:column;
-    gap:6px;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.bottom-item i{
+    font-size:18px;
+}
+
 }
