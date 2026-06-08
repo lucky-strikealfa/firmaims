@@ -2101,7 +2101,7 @@ HERO MODERN PREMIUM
     top:-160px;      /* lebih naik */
     right:10px;
 
-    height:550px;    /* lebih kecil */
+    height:500px;    /* lebih kecil */
 
     width:auto;
     max-width:none;
@@ -2166,23 +2166,28 @@ HERO MODERN PREMIUM
 .bottom-item{
     display:flex;
     flex-direction:column;
+    justify-content:center;
     align-items:center;
 
-    gap:10px;
-
     text-align:center;
+
+    min-height:120px;
+
     color:#fff;
 
-    font-size:13px;
-    line-height:1.5;
-
+    font-size:15px;
+    line-height:1.7;
     font-weight:600;
+
+    padding:10px;
 }
 
 .bottom-item i,
 .bottom-item svg{
-    font-size:50px;
-    margin-bottom:15px;
+    font-size:56px;
+    margin-bottom:18px;
+
+    display:block;
 }
 
 /* Mobile */
