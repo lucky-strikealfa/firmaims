@@ -2125,35 +2125,19 @@ HERO MODERN PREMIUM
 KOTAK BIRU PREMIUM
 ================================= */
 
-.hero-bottom{
-    position:absolute;
+.bottom-item{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    bottom:20px;
-    right:0;
+    text-align:center;
 
-    width:580px;
-    max-width:580px;
+    min-height:85px;
 
-    padding:28px 20px;
+    padding:5px;
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-
-    gap:15px;
-
-    border-radius:30px;
-
-    background:
-    linear-gradient(
-      135deg,
-      #17326d,
-      #2451d3
-    );
-
-    box-shadow:
-    0 20px 45px rgba(0,0,0,.15);
-
-    z-index:20;
+    color:#fff;
 }
 
 /* ITEM */
@@ -2204,8 +2188,8 @@ KOTAK BIRU PREMIUM
   
 .bottom-item i,
 .bottom-item svg{
-    font-size:56px;
-    margin-bottom:18px;
+    font-size:38px;
+    margin-bottom:10px;
 
     display:block;
 }
