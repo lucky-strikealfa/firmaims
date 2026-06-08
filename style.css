@@ -385,18 +385,6 @@ DOTS
 }
 
 /* =========================================================
-DESKTOP LARGE
-========================================================= */
-
-@media(min-width:1400px){
-
-  .slide{
-    background-size:48%;
-  }
-
-}
-
-/* =========================================================
 SECTION
 ========================================================= */
 .section{
@@ -1121,14 +1109,10 @@ SLIDE 5 DESKTOP FIX
 
 @media(min-width:992px){
 
-  .slide:nth-child(4){
-    background-position:right 20px bottom !important;
-  }
-
-  .slide:nth-child(5){
-    background-position:right center !important;
-  }
-
+.slide:nth-child(4),
+.slide:nth-child(5){
+   background-position:right bottom !important;
+   background-size:contain !important;
 }
 
 /* =========================================================
@@ -1927,7 +1911,7 @@ HERO MODERN PREMIUM
         #eef3fb 100%
     );
 
-    padding:80px 0;
+    padding:120px 0 80px;
 }
 
 /* =================================
@@ -1978,8 +1962,8 @@ FIX HERO SECTION
     position:absolute;
     top:20px;
     right:0;
-    height:560px;
-    width:auto;
+    height:auto;
+    width:min(100%,650px);
     max-width:none;
     object-fit:contain;
     z-index:2;
