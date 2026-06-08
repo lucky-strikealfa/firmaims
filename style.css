@@ -2098,8 +2098,8 @@ HERO MODERN PREMIUM
 .hero-image img{
     position:absolute;
 
-    top:-150px;      /* lebih naik */
-    right:20px;
+    top:-160px;      /* lebih naik */
+    right:300px;
 
     height:450px;    /* lebih kecil */
 
@@ -2181,8 +2181,8 @@ HERO MODERN PREMIUM
 
 .bottom-item i,
 .bottom-item svg{
-    font-size:34px;
-    margin-bottom:10px;
+    font-size:50px;
+    margin-bottom:15px;
 }
 
 /* Mobile */
