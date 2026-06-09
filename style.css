@@ -2092,25 +2092,23 @@ HERO MODERN PREMIUM
 .hero-image{
     position:relative;
     min-height:520px;
-    overflow:visible;
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-start;
 }
 
 .hero-image img{
     position:absolute;
 
-    top:-190px;      /* lebih naik */
-    right:30px;
+    top:-70px;
+    right:0;
 
-    height:470px;    /* lebih kecil */
-
+    height:380px;
     width:auto;
-    max-width:none;
 
     object-fit:contain;
 
-    z-index:2;
-
-    transform:none;
+    z-index:3;
 
     filter:
       drop-shadow(0 20px 40px rgba(0,0,0,.12));
@@ -2192,30 +2190,23 @@ KOTAK BIRU PREMIUM
 ================================= */
 
 .hero-bottom{
-    position:relative;
+    position:absolute;
 
-    right:0;
-    bottom:20px;
+    top:0;
+    left:40px;
 
-    width:380px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    grid-template-columns:repeat(2,1fr);
-
-    gap:0;
+    width:300px;
 
     background:#2563eb;
 
     border-radius:30px;
-    min-height:auto;
-    overflow:visible;
+
+    overflow:hidden;
+
+    z-index:10;
 
     box-shadow:
       0 20px 50px rgba(37,99,235,.25);
-
-    z-index:10;
 }
 
 .bottom-item{
@@ -2226,9 +2217,9 @@ KOTAK BIRU PREMIUM
 
     text-align:center;
 
-    min-height:140px;
+    min-height:150px;
 
-    padding:15px;
+    padding:25px 15px;
 
     color:#fff;
 
