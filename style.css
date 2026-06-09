@@ -649,11 +649,26 @@ VISION / SERVICE / PROFESSIONAL
   align-items:flex-start;
 }
 
+/* =========================================================
+PROFESSIONAL SECTION FIX
+========================================================= */
+
+.professional-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .professional-image img{
-  width:130%;          /* gambar 30% lebih besar */
-  max-width:720px;     /* sebelumnya 550px */
-  margin-top:-50px;    /* naik ke atas */
+  width:100%;
+  max-width:420px;   /* atur ukuran gambar */
+  height:auto;
+
   object-fit:contain;
+
+  margin-top:0;
+
+  transition:.3s ease;
 }
 
 .vision-text h2,
