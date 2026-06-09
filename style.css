@@ -2098,10 +2098,10 @@ HERO MODERN PREMIUM
 .hero-image img{
     position:absolute;
 
-    top:-160px;      /* lebih naik */
-    right:10px;
+    top:-190px;      /* lebih naik */
+    right:30px;
 
-    height:500px;    /* lebih kecil */
+    height:470px;    /* lebih kecil */
 
     width:auto;
     max-width:none;
@@ -2180,14 +2180,80 @@ KOTAK BIRU PREMIUM
 
     max-width:140px;
 
-    color:#fff;
+    color:#ffffff !important;
 }
 
 .bottom-icon{
     font-size:64px;
+  }
+
+/* =================================
+KOTAK BIRU PREMIUM
+================================= */
+
+.hero-bottom{
+    position:absolute;
+
+    right:0;
+    bottom:20px;
+
+    width:380px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:0;
+
+    background:#2563eb;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:
+      0 20px 50px rgba(37,99,235,.25);
+
+    z-index:10;
+}
+
+.bottom-item{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    min-height:140px;
+
+    padding:15px;
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.bottom-item:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.bottom-item i,
+.bottom-item svg{
+    font-size:42px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.bottom-item span{
+    font-size:17px;
+    line-height:1.5;
+    font-weight:600;
+    color:#fff;
+}
   
 .bottom-item i,
 .bottom-item svg{
+    color:#ffffff !important;
     font-size:38px;
     margin-bottom:10px;
 
