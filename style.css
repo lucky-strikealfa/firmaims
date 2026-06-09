@@ -673,17 +673,108 @@ PROFESSIONAL SECTION FIX
 
 .vision-text h2,
 .service-text h2,
-.professional-text h2{
-  font-size:42px;
-  line-height:1.4;
+.professional-text{
+  max-width:650px;
 }
 
-.vision-text p,
-.service-text p,
+.professional-text::before{
+  content:"PROFESIONALISME";
+  display:inline-block;
+
+  padding:10px 22px;
+
+  background:#eef4ff;
+  color:#2563eb;
+
+  border-radius:999px;
+
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1.5px;
+
+  margin-bottom:24px;
+}
+
+.professional-text h2{
+  font-size:56px;
+  line-height:1.15;
+  font-weight:800;
+
+  letter-spacing:-2px;
+
+  color:#0f172a;
+
+  margin-bottom:24px;
+}
+
+.professional-text h2 span{
+  color:#2563eb;
+}
+
 .professional-text p{
-  margin-top:20px;
-  line-height:1.9;
-  color:#6b7280;
+  font-size:18px;
+  line-height:2;
+
+  color:#64748b;
+
+  margin-bottom:30px;
+}
+
+/* garis aksen */
+.professional-text .line{
+  width:80px;
+  height:5px;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #2563eb,
+    #60a5fa
+  );
+
+  margin-bottom:28px;
+}
+
+/* mini highlight */
+.professional-highlight{
+  display:flex;
+  gap:18px;
+
+  padding:22px;
+
+  border-radius:22px;
+
+  background:#ffffff;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.06);
+
+  border:1px solid #eef2ff;
+
+  margin-top:30px;
+}
+
+.professional-highlight-icon{
+  min-width:60px;
+  height:60px;
+
+  border-radius:18px;
+
+  background:#eef4ff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:28px;
+}
+
+.professional-highlight-text{
+  color:#475569;
+  line-height:1.8;
+  font-size:15px;
 }
 
 /* =========================================================
