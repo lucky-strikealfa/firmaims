@@ -643,9 +643,17 @@ VISION / SERVICE / PROFESSIONAL
 
 .vision-image img,
 .service-image img,
+.professional-image{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
 .professional-image img{
-  width:100%;
-  max-width:550px;
+  width:130%;          /* gambar 30% lebih besar */
+  max-width:720px;     /* sebelumnya 550px */
+  margin-top:-50px;    /* naik ke atas */
+  object-fit:contain;
 }
 
 .vision-text h2,
