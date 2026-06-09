@@ -2091,17 +2091,17 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
-    min-height:520px;
     display:flex;
-    justify-content:flex-end;
-    align-items:flex-start;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-height:auto;
 }
 
 .hero-image img{
-    position:absolute;
-
-    top:-70px;
-    right:0;
+    position:relative;
+    top:0;
+    right:auto;
 
     height:380px;
     width:auto;
@@ -2109,6 +2109,8 @@ HERO MODERN PREMIUM
     object-fit:contain;
 
     z-index:3;
+
+    margin-bottom:25px;
 
     filter:
       drop-shadow(0 20px 40px rgba(0,0,0,.12));
@@ -2190,16 +2192,17 @@ KOTAK BIRU PREMIUM
 ================================= */
 
 .hero-bottom{
-    position:absolute;
+    position:relative;
 
-    top:0;
-    left:40px;
+    width:100%;
+    max-width:760px;
 
-    width:300px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
 
     background:#2563eb;
 
-    border-radius:30px;
+    border-radius:28px;
 
     overflow:hidden;
 
@@ -2362,13 +2365,14 @@ KOTAK BIRU PREMIUM
 
 .bottom-item{
     display:flex;
-    flex-direction:row;
-    align-items:center;
+    flex-direction:column;
     justify-content:center;
-    gap:10px;
+    align-items:center;
 
-    min-height:90px;
-    padding:10px;
+    text-align:center;
+
+    min-height:180px;
+    padding:20px;
 }
 
 .bottom-item i,
@@ -2383,5 +2387,18 @@ KOTAK BIRU PREMIUM
     line-height:1.3;
     text-align:left;
     margin-top:0;
+ }
 }
+
+@media(max-width:991px){
+
+  .hero-bottom{
+      grid-template-columns:1fr;
+      max-width:100%;
+  }
+
+  .bottom-item{
+      min-height:100px;
+  }
+
 }
