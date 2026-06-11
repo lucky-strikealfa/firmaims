@@ -2063,9 +2063,9 @@ HERO MODERN PREMIUM
     padding:0 40px;
 
     display:grid;
-    grid-template-columns:55% 45%;
+    grid-template-columns:48% 52%;
 
-    gap:30px;
+    gap:20px;
     align-items:center;
 }
 
@@ -2118,7 +2118,9 @@ HERO MODERN PREMIUM
     letter-spacing:-1.5px;
     color:#0f172a;
     margin-bottom:20px;
-    max-width:700px;
+    margin-left:30px;
+    width:fit-content;
+    max-width:620px;
 }
 
 .hero-content .dark{
