@@ -2541,21 +2541,22 @@ VISION FINAL FIX
 
 .vision-text{
     padding-left:20px;
+    max-width:520px;
 }
 
 .vision-text h2{
-    font-size:36px !important;
+    font-size:30px !important;
     line-height:1.4 !important;
-    font-weight:800 !important;
+    font-weight:700 !important;
 
-    margin-bottom:20px !important;
+    margin-bottom:15px !important;
 
     max-width:850px !important;
 }
 
 .vision-text p{
-    font-size:19px !important;
-    line-height:1.9 !important;
+    font-size:16px !important;
+    line-height:1.8 !important;
 
     margin-top:20px !important;
 
