@@ -2585,3 +2585,8 @@ FIX SECTION VISI
 
     margin-top:20px !important;
 }
+
+.vision-text h2{
+    font-size:10px !important;
+    color:red !important;
+}
