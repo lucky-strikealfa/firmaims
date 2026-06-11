@@ -1235,16 +1235,7 @@ SLIDE 5 FIX
 .slide:nth-child(5) .caption{
   left:8%;
   max-width:550px;
-}
-
-/* Desktop besar */
-@media(min-width:1400px){
-
-  .slide{
-    background-size:contain;
-    background-color:#eef4ff;
-  }
-
+ }
 }
 
 /* =========================
@@ -1275,15 +1266,6 @@ SERVICE PRIMA MODERN
     #f8fbff 0%,
     #ffffff 100%
   );
-}
-
-/* TOP */
-prima-heading h2{
-  font-size:62px;
-  line-height:1.12;
-  font-weight:800;
-  letter-spacing:-2px;
-  margin-bottom:18px;
 }
 
 /* BADGE */
@@ -2060,33 +2042,13 @@ HERO MODERN PREMIUM
 .hero-container{
     max-width:1400px;
     margin:auto;
-    padding:0 40px;
-
+    padding:0 60px;
     display:grid;
-    grid-template-columns:48% 52%;
-
-    gap:20px;
+    grid-template-columns:40% 60%;
+    gap:40px;
     align-items:center;
-}
-
-.hero-container{
     position:relative;
     z-index:2;
-}
-
-.hero-content{
-    position:relative;
-    z-index:10;
-}
-
-.hero-image{
-    position:relative;
-    z-index:1;
-}
-
-.hero-image img{
-    position:relative;
-    z-index:5;
 }
 
 .hero-badge{  
@@ -2132,7 +2094,7 @@ HERO MODERN PREMIUM
     color:#2563eb;
 }
 
-.hero-content p{
+.hero-content p{   
     font-size:20px;
     line-height:1.8;
     color:#475569;
@@ -2216,107 +2178,34 @@ HERO MODERN PREMIUM
 
 .hero-image{
     position:relative;
-    min-height:700px;
-    overflow:visible;
-}
-
-.hero-image{
-    position:relative;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
-    min-height:auto;
+    overflow:visible;
 }
 
 .hero-image img{
     position:relative;
-    top:0;
-    right:auto;
 
-    height:456px;
+    height:650px;
     width:auto;
 
     object-fit:contain;
 
+    margin-left:40px;
+
     z-index:3;
 
-    margin-bottom:15px;
-
     filter:
-      drop-shadow(0 20px 40px rgba(0,0,0,.12));
-}
-
-/* hilangkan translate yang membuat gambar terlalu ke kanan */
-.hero-image img{
-    transform:none;
-}
-
-  /* =================================
-KOTAK BIRU PREMIUM
-================================= */
-
-.bottom-item{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    min-height:85px;
-
-    padding:5px;
-
-    color:#fff;
+    drop-shadow(0 25px 45px rgba(0,0,0,.15));
 }
 
 /* ITEM */
 
-.bottom-item{
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    min-height:130px;
-
-    padding:10px;
-
-    color:#fff;
-
-    font-size:52px; /* ukuran icon */
-
-    transition:.3s;
-}
-
 .bottom-item:hover{
     transform:translateY(-6px);
 }
-
-/* TEKS */
-
-.bottom-item span{
-    display:block;
-
-    margin-top:16px;
-
-    font-size:18px;
-    line-height:1.5;
-
-    font-weight:600;
-
-    max-width:140px;
-
-    color:#ffffff !important;
-}
-
-.bottom-icon{
-    font-size:64px;
-  }
 
 /* =================================
 KOTAK BIRU PREMIUM
@@ -2378,15 +2267,6 @@ KOTAK BIRU PREMIUM
     color:#fff;
 
   max-width:90px;
-}
-  
-.bottom-item i,
-.bottom-item svg{
-    color:#ffffff !important;
-    font-size:27px;
-    margin-bottom:10px;
-
-    display:block;
 }
 
 /* Mobile */
@@ -2537,118 +2417,6 @@ KOTAK BIRU PREMIUM
 
 }
 
-/* ===================================
-VISION FINAL FIX
-=================================== */
-
-.vision-text{
-    padding-left:20px;
-    max-width:900px;
-}
-
-.vision-flex{
-    grid-template-columns:2fr 1fr;
-}
-
-.vision-text h2{
-    font-size:30px !important;
-    line-height:1.4 !important;
-    font-weight:700 !important;
-
-    margin-bottom:15px !important;
-
-    max-width:850px !important;
-}
-
-.vision-text p{
-    font-size:16px !important;
-    line-height:1.8 !important;
-
-    margin-top:20px !important;
-
-    max-width:700px !important;
-}
-
-/* ===================================
-FIX SECTION VISI
-=================================== */
-
-.vision-text h2{
-    font-size:64px !important;
-    line-height:1.25 !important;
-    font-weight:800 !important;
-
-    width:1000px;
-    max-width:none;
-
-    margin-bottom:25px !important;
-}
-
-.vision-text p{
-    font-size:22px !important;
-    line-height:2 !important;
-
-    max-width:800px !important;
-
-    margin-top:20px !important;
-}
-
-.vision-text h2{
-    font-size:40px !important;
-    color:red !important;
-}
-
-
-/* ===================================
-HERO TITLE PREMIUM
-=================================== */
-
-/* ===================================
-HERO HEADING FIX
-=================================== */
-
-.hero-content h1{
-    font-size:58px !important;
-    line-height:1.18 !important;
-    font-weight:800;
-    letter-spacing:-1px;
-
-    color:#111827;
-
-    margin:0 0 28px 0 !important;
-    max-width:760px;
-}
-
-.hero-content h1 .red{
-    color:#ff1f1f;
-}
-
-.hero-content h1 .blue{
-    color:#2f5be7;
-}
-
-.hero-content p{
-    font-size:20px;
-    line-height:1.9;
-    color:#374151;
-
-    max-width:650px;
-
-    margin-bottom:40px;
-}
-
-/* Tablet */
-@media(max-width:991px){
-
-    .hero-content h1{
-        font-size:46px !important;
-    }
-
-    .hero-content p{
-        font-size:18px;
-    }
-}
-
 /* Mobile */
 @media(max-width:768px){
 
@@ -2661,4 +2429,25 @@ HERO HEADING FIX
         font-size:16px;
         line-height:1.8;
     }
+}
+
+
+.hero-content{
+    padding-left:20px;
+}
+
+.hero-content h1{
+    font-size:62px !important;
+    line-height:1.15 !important;
+
+    max-width:800px;
+
+    margin-bottom:30px !important;
+}
+
+.hero-content p{
+    font-size:22px !important;
+    line-height:1.9 !important;
+
+    max-width:700px;
 }
