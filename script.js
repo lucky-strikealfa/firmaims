@@ -2516,5 +2516,4 @@ KOTAK BIRU PREMIUM
   .bottom-item{
       min-height:100px;
   }
-
 }
