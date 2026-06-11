@@ -2050,7 +2050,7 @@ HERO MODERN PREMIUM
     padding:0 40px;
 
     display:grid;
-    grid-template-columns:48% 52%;
+    grid-template-columns:55% 45%;
 
     gap:30px;
     align-items:center;
@@ -2098,12 +2098,11 @@ HERO MODERN PREMIUM
 /* Heading */
 
 .hero-content h1{
-    font-size:clamp(32px,3.8vw,52px);
-    line-height:1.15;
+    font-size:clamp(48px,5vw,72px);
+    line-height:1.08;
     font-weight:800;
-    letter-spacing:-1.5px;
-
-    margin-bottom:24px;
+    letter-spacing:-2px;
+    margin-bottom:20px;
 }
 
 .hero-content .dark{
@@ -2116,12 +2115,12 @@ HERO MODERN PREMIUM
 }
 
 .hero-content p{
-    font-size:18px;
-    line-height:1.9;
+    font-size:20px;
+    line-height:1.8;
     color:#475569;
     font-weight:500;
 
-    max-width:620px;
+    max-width:650px;
 
     margin-bottom:35px;
 }
