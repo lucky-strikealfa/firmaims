@@ -2098,11 +2098,16 @@ HERO MODERN PREMIUM
 /* Heading */
 
 .hero-content h1{
-    font-size:clamp(48px,5vw,72px);
-    line-height:1.08;
+    font-size:82px;
+    line-height:1.1;
     font-weight:800;
     letter-spacing:-2px;
-    margin-bottom:20px;
+
+    color:#0f172a;
+
+    margin-bottom:24px;
+
+    max-width:750px;
 }
 
 .hero-content .dark{
@@ -2111,7 +2116,7 @@ HERO MODERN PREMIUM
 }
 
 .hero-content .gold{
-    color:#d4a017;
+    color:#2563eb;
 }
 
 .hero-content p{
@@ -2380,9 +2385,10 @@ KOTAK BIRU PREMIUM
         text-align:center;
     }
 
-    .hero-content h1{
-        font-size:clamp(28px,3vw,48px);
+     .hero-content h1{
+        font-size:56px;
         line-height:1.15;
+        text-align:center;
     }
 
     .hero-content p{
@@ -2424,8 +2430,8 @@ KOTAK BIRU PREMIUM
 }
 
 .hero-content h1{
-    font-size:32px;
-    line-height:1.25;
+    font-size:42px;
+    line-height:1.2;
 }
 
 .hero-content p{
