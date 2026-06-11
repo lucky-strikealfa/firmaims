@@ -1291,10 +1291,9 @@ SERVICE PRIMA MODERN
 
 /* TITLE */
 .prima-heading h2{
-  font-size:58px;
-  line-height:1.15;
+  font-size:62px;
+  line-height:1.12;
   font-weight:800;
-
   letter-spacing:-2px;
 
   color:#0f172a;
@@ -1478,8 +1477,8 @@ MOBILE
   }
 
   .prima-heading h2{
-    font-size:34px;
-    line-height:1.3;
+    font-size:62px;
+    line-height:1.12;
     letter-spacing:-1px;
   }
 
@@ -2097,17 +2096,15 @@ HERO MODERN PREMIUM
 
 /* Heading */
 
-.hero-content h1{
-    font-size:82px;
-    line-height:1.1;
+.hero-content h1,
+.hero-content h2{
+    font-size:54px;
+    line-height:1.2;
     font-weight:800;
-    letter-spacing:-2px;
-
+    letter-spacing:-1.5px;
     color:#0f172a;
-
-    margin-bottom:24px;
-
-    max-width:750px;
+    margin-bottom:20px;
+    max-width:700px;
 }
 
 .hero-content .dark{
