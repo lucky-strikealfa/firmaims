@@ -2590,3 +2590,86 @@ FIX SECTION VISI
     font-size:40px !important;
     color:red !important;
 }
+
+
+/* ===================================
+HERO TITLE PREMIUM
+=================================== */
+
+.hero-title-small{
+    display:block;
+    font-size:22px;
+    font-weight:700;
+    color:#dc2626;
+    line-height:1.4;
+    margin-bottom:8px;
+}
+
+.hero-title-main{
+    display:block;
+    font-size:58px;
+    font-weight:800;
+    line-height:1.15;
+    color:#2563eb;
+    letter-spacing:-1.5px;
+    margin-bottom:12px;
+}
+
+.hero-title-sub{
+    display:block;
+    font-size:24px;
+    font-weight:700;
+    color:#dc2626;
+    line-height:1.4;
+    margin-bottom:28px;
+}
+
+.hero-description{
+    font-size:22px;
+    line-height:1.9;
+    color:#1f2937;
+    max-width:650px;
+    margin-bottom:35px;
+}
+
+/* Tablet */
+@media (max-width:991px){
+
+    .hero-title-small{
+        font-size:18px;
+    }
+
+    .hero-title-main{
+        font-size:42px;
+    }
+
+    .hero-title-sub{
+        font-size:20px;
+    }
+
+    .hero-description{
+        font-size:18px;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .hero-title-small{
+        font-size:16px;
+    }
+
+    .hero-title-main{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .hero-title-sub{
+        font-size:18px;
+    }
+
+    .hero-description{
+        font-size:16px;
+        line-height:1.8;
+    }
+}
