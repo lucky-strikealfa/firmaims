@@ -641,40 +641,36 @@ VISION / SERVICE / PROFESSIONAL
   align-items:center;
 }
 
-.vision-image img,
-.service-image img,
+.vision-image,
+.service-image,
 .professional-image{
   display:flex;
   justify-content:center;
-  align-items:flex-start;
+  align-items:center;
 }
 
 /* =========================================================
 PROFESSIONAL SECTION FIX
 ========================================================= */
 
+..professional-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
 .professional-image{
   display:flex;
   justify-content:center;
   align-items:center;
-  position:relative;
 }
 
 .professional-image img{
-  width:auto;
-  max-width:none;
-  height:520px;
+  width:100%;
+  max-width:420px;
+  height:auto;
   object-fit:contain;
-  position:relative;
-  transform:scale(1.25);
-  transition:.3s ease;
-}
-
-.professional-flex{
-  display:grid;
-  grid-template-columns:500px 1fr;
-  gap:70px;
-  align-items:center;
 }
 
 .vision-text h2,
@@ -1901,11 +1897,12 @@ TABLET
   .professional-flex{
       grid-template-columns:1fr;
       text-align:center;
+      gap:40px;
   }
 
   .professional-image img{
-      height:420px;
-      transform:none;
+      max-width:320px;
+      height:auto;
   }
 
 }
