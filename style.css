@@ -653,7 +653,7 @@ VISION / SERVICE / PROFESSIONAL
 PROFESSIONAL SECTION FIX
 ========================================================= */
 
-..professional-flex{
+.professional-flex{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
@@ -1357,12 +1357,6 @@ SERVICE PRIMA MODERN
 }
 
 /* IMAGE */
-.prima-image{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
 
 .prima-image{
   position:relative;
