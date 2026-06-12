@@ -1,4 +1,4 @@
-/* =========================================================
+  /* =========================================================
 GOOGLE FONT
 ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
@@ -643,24 +643,138 @@ VISION / SERVICE / PROFESSIONAL
 
 .vision-image img,
 .service-image img,
+.professional-image{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+/* =========================================================
+PROFESSIONAL SECTION FIX
+========================================================= */
+
+.professional-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .professional-image img{
   width:100%;
-  max-width:550px;
+  max-width:420px;   /* atur ukuran gambar */
+  height:auto;
+
+  object-fit:contain;
+
+  margin-top:0;
+
+  transition:.3s ease;
 }
 
 .vision-text h2,
 .service-text h2,
-.professional-text h2{
-  font-size:42px;
-  line-height:1.4;
+.professional-text{
+  max-width:650px;
 }
 
-.vision-text p,
-.service-text p,
+.professional-text::before{
+  content:"PROFESIONALISME";
+  display:inline-block;
+
+  padding:10px 22px;
+
+  background:#eef4ff;
+  color:#2563eb;
+
+  border-radius:999px;
+
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1.5px;
+
+  margin-bottom:24px;
+}
+
+.professional-text h2{
+  font-size:56px;
+  line-height:1.15;
+  font-weight:800;
+
+  letter-spacing:-2px;
+
+  color:#0f172a;
+
+  margin-bottom:24px;
+}
+
+.professional-text h2 span{
+  color:#2563eb;
+}
+
 .professional-text p{
-  margin-top:20px;
-  line-height:1.9;
-  color:#6b7280;
+  font-size:18px;
+  line-height:2;
+
+  color:#64748b;
+
+  margin-bottom:30px;
+}
+
+/* garis aksen */
+.professional-text .line{
+  width:80px;
+  height:5px;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #2563eb,
+    #60a5fa
+  );
+
+  margin-bottom:28px;
+}
+
+/* mini highlight */
+.professional-highlight{
+  display:flex;
+  gap:18px;
+
+  padding:22px;
+
+  border-radius:22px;
+
+  background:#ffffff;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.06);
+
+  border:1px solid #eef2ff;
+
+  margin-top:30px;
+}
+
+.professional-highlight-icon{
+  min-width:60px;
+  height:60px;
+
+  border-radius:18px;
+
+  background:#eef4ff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:28px;
+}
+
+.professional-highlight-text{
+  color:#475569;
+  line-height:1.8;
+  font-size:15px;
 }
 
 /* =========================================================
@@ -1911,4 +2025,496 @@ FIX POSISI GAMBAR SLIDE 3 4 5
 
 .slide:nth-child(3){
   background-position:right bottom !important;
+}
+
+/* =================================
+HERO MODERN PREMIUM
+================================= */
+
+.hero-modern{
+    position:relative;
+    overflow:hidden;
+    background:
+    linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #eef3fb 100%
+    );
+
+    padding:80px 0;
+}
+
+.hero-container{
+    max-width:1400px;
+    margin:auto;
+    padding:0 40px;
+
+    display:grid;
+    grid-template-columns:48% 52%;
+
+    gap:30px;
+    align-items:center;
+}
+
+.hero-container{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+}
+
+.hero-image{
+    position:relative;
+    z-index:1;
+}
+
+.hero-image img{
+    position:relative;
+    z-index:5;
+}
+
+.hero-badge{  
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 28px;
+
+    background:#eaf1ff;
+    color:#2563eb;
+
+    border-radius:999px;
+
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    margin-bottom:30px;
+}
+
+/* Heading */
+
+.hero-content h1{
+    font-size:clamp(32px,3.8vw,52px);
+    line-height:1.15;
+    font-weight:800;
+    letter-spacing:-1.5px;
+
+    margin-bottom:24px;
+}
+
+.hero-content .dark{
+    display:block;
+    color:#0f172a;
+}
+
+.hero-content .gold{
+    color:#d4a017;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:#475569;
+    font-weight:500;
+
+    max-width:620px;
+
+    margin-bottom:35px;
+}
+
+/* Feature Box */
+
+.hero-features{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.feature-box{
+    flex:0 0 180px;
+    min-width:160px;
+
+    background:#fff;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-5px);
+}
+
+.feature-box .icon{
+    width:60px;
+    height:60px;
+
+    margin:auto auto 15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:#eef4ff;
+
+    font-size:28px;
+}
+
+.feature-box span{
+    display:block;
+    color:#475569;
+    font-weight:600;
+    line-height:1.6;
+}
+
+.circle-bg{
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(37,99,235,.12),
+        rgba(37,99,235,.03),
+        transparent 70%
+    );
+
+    z-index:1;
+}
+
+.hero-image{
+    position:relative;
+    min-height:700px;
+    overflow:visible;
+}
+
+.hero-image{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    min-height:auto;
+}
+
+.hero-image img{
+    position:relative;
+    top:0;
+    right:auto;
+
+    height:456px;
+    width:auto;
+
+    object-fit:contain;
+
+    z-index:3;
+
+    margin-bottom:15px;
+
+    filter:
+      drop-shadow(0 20px 40px rgba(0,0,0,.12));
+}
+
+/* hilangkan translate yang membuat gambar terlalu ke kanan */
+.hero-image img{
+    transform:none;
+}
+
+  /* =================================
+KOTAK BIRU PREMIUM
+================================= */
+
+.bottom-item{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    min-height:85px;
+
+    padding:5px;
+
+    color:#fff;
+}
+
+/* ITEM */
+
+.bottom-item{
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    min-height:130px;
+
+    padding:10px;
+
+    color:#fff;
+
+    font-size:52px; /* ukuran icon */
+
+    transition:.3s;
+}
+
+.bottom-item:hover{
+    transform:translateY(-6px);
+}
+
+/* TEKS */
+
+.bottom-item span{
+    display:block;
+
+    margin-top:16px;
+
+    font-size:18px;
+    line-height:1.5;
+
+    font-weight:600;
+
+    max-width:140px;
+
+    color:#ffffff !important;
+}
+
+.bottom-icon{
+    font-size:64px;
+  }
+
+/* =================================
+KOTAK BIRU PREMIUM
+================================= */
+
+.hero-bottom{
+    position:relative;
+
+    width:100%;
+    max-width:530px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    background:#2563eb;
+
+   border-radius:20px;
+
+    overflow:hidden;
+
+    z-index:10;
+
+    box-shadow:
+     0 15px 35px rgba(37,99,235,.22);
+}
+
+.bottom-item{
+    min-height:105px; /* -30% */
+
+    padding:15px 10px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.bottom-item:hover{
+    background:rgba(255,255,255,.08);
+}
+
+.bottom-item i,
+.bottom-item svg{
+    font-size:42px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.bottom-item span{
+    font-size:12px;
+    line-height:1.4;
+    font-weight:600;
+    color:#fff;
+
+  max-width:90px;
+}
+  
+.bottom-item i,
+.bottom-item svg{
+    color:#ffffff !important;
+    font-size:27px;
+    margin-bottom:10px;
+
+    display:block;
+}
+
+/* Mobile */
+
+@media(max-width:991px){
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:clamp(28px,3vw,48px);
+        line-height:1.15;
+    }
+
+    .hero-content p{
+        font-size:16px;
+        margin:auto auto 30px;
+    }
+
+    .hero-features{
+        justify-content:center;
+    }
+
+    .hero-bottom{
+        position:relative;
+        transform:none;
+        left:auto;
+        width:100%;
+        margin-top:25px;
+
+        flex-direction:column;
+        gap:15px;
+
+        border-radius:30px;
+    }
+}
+
+@media(max-width:768px){
+
+.hero-modern{
+    padding:50px 0;
+}
+
+.hero-container{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:32px;
+    line-height:1.25;
+}
+
+.hero-content p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* GAMBAR */
+.hero-image{
+    position:relative;
+    min-height:600px;
+    overflow:visible;
+}
+
+.hero-image img{
+    position:relative;
+
+    top:-70px;   /* atur naik turun gambar */
+    right:auto;
+
+    height:470px;
+    width:auto;
+
+    object-fit:contain;
+
+    z-index:2;
+
+    margin-bottom:-40px;
+}
+
+/* KOTAK BIRU */
+.hero-bottom{
+    position:relative;
+
+    width:520px;
+    max-width:100%;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    background:#2563eb;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+      0 20px 50px rgba(37,99,235,.25);
+
+    z-index:10;
+}
+
+.bottom-item{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    min-height:180px;
+    padding:20px;
+}
+
+.bottom-item i,
+.bottom-item svg{
+    font-size:26px;
+    margin-bottom:0;
+    flex-shrink:0;
+}
+
+.bottom-item span{
+    font-size:13px;
+    line-height:1.3;
+    text-align:left;
+    margin-top:0;
+ }
+}
+
+@media(max-width:991px){
+
+  .hero-bottom{
+      grid-template-columns:1fr;
+      max-width:100%;
+  }
+
+  .bottom-item{
+      min-height:100px;
+  }
+
 }
