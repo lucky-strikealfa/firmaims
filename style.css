@@ -2605,3 +2605,26 @@ PASTE PALING BAWAH CSS
         font-size:11px !important;
     }
 }
+
+/* =========================================
+NAIKKAN KONTEN KIRI 20% KE ATAS
+========================================= */
+
+.hero-content{
+    position:relative !important;
+    transform:translateY(-20%) !important;
+}
+
+/* Tablet */
+@media(max-width:991px){
+    .hero-content{
+        transform:translateY(-10%) !important;
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .hero-content{
+        transform:none !important;
+    }
+}
