@@ -1264,10 +1264,11 @@ SERVICE PRIMA MODERN
 /* TOP */
 .prima-top{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
+  grid-template-columns:520px 1fr;
   align-items:center;
-  margin-bottom:70px;
+  gap:60px;
+  max-width:1200px;
+  margin:0 auto 70px;
 }
 
 /* BADGE */
@@ -1363,27 +1364,19 @@ SERVICE PRIMA MODERN
   align-items:center;
 }
 
-.prima-image::before{
-  content:"";
-  position:absolute;
-
-  width:320px;
-  height:320px;
-
-  background:#2563eb;
-  opacity:.12;
-
-  filter:blur(120px);
+.prima-image{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
 }
 
 .prima-image img{
-  position:relative;
-  z-index:2;
-
   width:100%;
-  max-width:620px;
-
+  max-width:650px;
+  height:auto;
   object-fit:contain;
+  display:block;
 }
 
 /* =========================================================
@@ -2043,5 +2036,161 @@ FIX POSISI GAMBAR SLIDE 3 4 5
 
 .slide:nth-child(3){
   background-position:right bottom !important;
+}
+
+/* ========================================
+SERVICE PRIMA FIX VERSI GAMBAR 2
+======================================== */
+
+.prima-top{
+    display:grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items:center;
+    gap:40px;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* AREA KIRI */
+.prima-heading{
+    max-width:520px;
+}
+
+.prima-heading h2{
+    font-size:68px;
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-3px;
+    margin-bottom:30px;
+}
+
+.prima-desc{
+    background:none;
+    box-shadow:none;
+    padding:0;
+    max-width:520px;
+}
+
+.prima-desc p{
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* AREA KANAN */
+.prima-image{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.prima-image img{
+    width:100%;
+    max-width:760px;
+    height:auto;
+    object-fit:contain;
+
+    position:relative;
+    z-index:2;
+}
+
+/* CARD BIRU */
+.prima-steps{
+    position:absolute;
+    bottom:-35px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:78%;
+    max-width:620px;
+
+    background:#2563eb;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    z-index:5;
+
+    box-shadow:
+    0 20px 40px rgba(37,99,235,.25);
+}
+
+/* HILANGKAN GARIS */
+.step-line{
+    display:none;
+}
+
+.prima-step{
+    width:100%;
+    text-align:center;
+}
+
+/* ICON */
+.step-circle{
+    width:55px;
+    height:55px;
+
+    margin:0 auto 12px;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+
+    font-size:28px;
+}
+
+/* TEKS PUTIH */
+.prima-step h4{
+    color:#fff;
+    font-size:15px;
+    line-height:1.5;
+    margin-bottom:0;
+}
+
+.prima-step p{
+    display:none;
+}
+
+/* MOBILE */
+@media(max-width:991px){
+
+    .prima-top{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .prima-heading{
+        max-width:100%;
+    }
+
+    .prima-heading h2{
+        font-size:42px;
+    }
+
+    .prima-image{
+        margin-top:40px;
+    }
+
+    .prima-image img{
+        max-width:500px;
+    }
+
+    .prima-steps{
+        position:relative;
+        left:auto;
+        bottom:auto;
+        transform:none;
+
+        width:100%;
+        margin-top:20px;
+
+        grid-template-columns:1fr;
+    }
 }
 
