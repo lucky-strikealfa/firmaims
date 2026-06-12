@@ -5001,23 +5001,26 @@ KOTAK BIRU PREMIUM
     }
 }
 
-/* Naikkan gambar */
-.hero-image{
-    position:relative;
-    top:-60px;
+/* =========================================
+NAIKKAN GAMBAR SAJA
+KOTAK BIRU TETAP
+========================================= */
+
+.hero-image img{
+    position:relative !important;
+    top:-60px !important;
 }
 
 /* Tablet */
 @media(max-width:991px){
-    .hero-image{
-        top:-35px;
+    .hero-image img{
+        top:-35px !important;
     }
 }
 
 /* Mobile */
 @media(max-width:768px){
-    .hero-image{
-        top:0;
+    .hero-image img{
+        top:-20px !important;
     }
 }
-
