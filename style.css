@@ -2518,3 +2518,90 @@ KOTAK BIRU PREMIUM
   }
 
 }
+
+/* =========================================
+FIX UKURAN GAMBAR + KOTAK BIRU
+PASTE PALING BAWAH CSS
+========================================= */
+
+/* Gambar diperbesar 15% */
+.hero-image img{
+    height:525px !important; /* sebelumnya ±456px */
+    width:auto !important;
+    max-width:none !important;
+}
+
+/* Kotak biru diperkecil */
+.hero-bottom{
+    max-width:450px !important; /* sebelumnya 530px */
+    border-radius:16px !important;
+}
+
+/* Item dalam kotak biru */
+.bottom-item{
+    min-height:85px !important;
+    padding:10px 8px !important;
+}
+
+/* Icon diperkecil */
+.bottom-item i,
+.bottom-item svg,
+.bottom-icon{
+    font-size:22px !important;
+    margin-bottom:8px !important;
+}
+
+/* Teks diperkecil agar tetap proporsional */
+.bottom-item span{
+    font-size:11px !important;
+    line-height:1.35 !important;
+    max-width:80px !important;
+}
+
+/* Desktop besar */
+@media (min-width:1200px){
+    .hero-image img{
+        height:525px !important;
+    }
+
+    .hero-bottom{
+        max-width:450px !important;
+    }
+}
+
+/* Tablet */
+@media (max-width:991px){
+    .hero-image img{
+        height:500px !important;
+    }
+
+    .hero-bottom{
+        max-width:420px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .hero-image img{
+        height:540px !important; /* tetap terlihat besar di HP */
+    }
+
+    .hero-bottom{
+        width:100% !important;
+        max-width:420px !important;
+    }
+
+    .bottom-item{
+        min-height:80px !important;
+    }
+
+    .bottom-item i,
+    .bottom-item svg{
+        font-size:20px !important;
+    }
+
+    .bottom-item span{
+        font-size:11px !important;
+    }
+}
