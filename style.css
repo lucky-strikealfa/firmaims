@@ -2092,25 +2092,29 @@ SERVICE PRIMA FIX VERSI GAMBAR 2
 
 /* CARD BIRU */
 .prima-steps{
+    position:absolute !important;
+    bottom:-35px !important;
+    left:50% !important;
 
-    width:78%;
-    max-width:620px;
+    transform:translateX(-50%) !important;
 
-    background:#2563eb;
+    width:78% !important;
+    max-width:620px !important;
 
-    border-radius:22px;
+    background:#2563eb !important;
+    border-radius:22px !important;
 
-    padding:25px;
+    padding:25px !important;
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
 
-    gap:20px;
+    gap:20px !important;
 
-    z-index:5;
+    z-index:999 !important;
 
     box-shadow:
-    0 20px 40px rgba(37,99,235,.25);
+    0 20px 40px rgba(37,99,235,.25) !important;
 }
 
 /* HILANGKAN GARIS */
@@ -2205,8 +2209,8 @@ SERVICE PRIMA FIX VERSI GAMBAR 2
 
     box-shadow:
       0 20px 40px rgba(37,99,235,.25);
+  }
 }
-
   /* =========================================================
 HERO MODERN FINAL
 ========================================================= */
