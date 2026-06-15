@@ -1264,10 +1264,10 @@ SERVICE PRIMA MODERN
 /* TOP */
 .prima-top{
   display:grid;
-  grid-template-columns:520px 1fr;
+  grid-template-columns:650px 1fr;
   align-items:center;
   gap:60px;
-  max-width:1200px;
+  max-width:1300px;
   margin:0 auto 70px;
 }
 
@@ -1294,17 +1294,17 @@ SERVICE PRIMA MODERN
 
 /* TITLE */
 .prima-heading h2{
-  font-size:clamp(70px, 6vw, 90px);     /* mengubah ukuran tulisan di slide 5 */
+  font-size:95px;     /* mengubah ukuran tulisan di slide 5 */
   line-height:1.15;
   font-weight:800;
 
-  letter-spacing:-2px;
+  letter-spacing:-3px;
 
   color:#0f172a;
 
   margin-bottom:30px;
 
-  max-width:700px;
+  max-width:900px;
 }
 
 .prima-heading .dark{
