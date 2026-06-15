@@ -2371,7 +2371,7 @@ JUDUL VISI PERUSAHAAN
 ===================================== */
 .vision-text h2{
     font-size:56px !important;
-    line-height:1.2 !important;
+    line-height:1.1 !important;
     font-weight:800 !important;
     letter-spacing:-1px !important;
     color:#0f172a;
@@ -2379,12 +2379,12 @@ JUDUL VISI PERUSAHAAN
 }
 
 .vision-text h2 .blue{
-    color:#2563eb;
-    font-weight:800;
-    font-size:0.7em;
     display:block;
-    margin-top:5px;
-  
+    color:#2563eb;
+    font-weight:700;
+    font-size:24px !important;
+    line-height:1.2;
+    margin:6px 0;
 }
 
 .visi-kecil{
