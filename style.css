@@ -1020,7 +1020,7 @@ IMAGE
 .cta-red-image{
   position:absolute;
   right:40px;
-  bottom:-15px;      /* turunkan seluruh gambar */
+  bottom:-20px;      /* turunkan seluruh gambar */
 
   width:36%;
   height:100%;
