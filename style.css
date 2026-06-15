@@ -2365,3 +2365,36 @@ JUDUL HERO MODERN
     }
 
 }
+
+/* =====================================
+JUDUL VISI PERUSAHAAN
+===================================== */
+.vision-text h2{
+    font-size:58px;
+    line-height:1.15;
+    font-weight:800;
+    letter-spacing:-2px;
+    color:#0f172a;
+    margin-bottom:25px;
+}
+
+.vision-text h2 .blue{
+    color:#2563eb;
+    font-weight:800;
+}
+
+/* Tablet */
+@media(max-width:991px){
+    .vision-text h2{
+        font-size:46px;
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .vision-text h2{
+        font-size:34px;
+        line-height:1.25;
+        letter-spacing:-1px;
+    }
+}
