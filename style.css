@@ -1034,7 +1034,7 @@ IMAGE
 }
 
 .cta-red-image img{
-  height:90%;
+  height:105%;
   width:auto;
 
   object-fit:contain;
@@ -1043,6 +1043,9 @@ IMAGE
 
   filter:
   drop-shadow(0 20px 40px rgba(0,0,0,.22));
+
+  transform:scale(1.2);
+  transform-origin:bottom center;
 }
 
 /* =========================
@@ -2231,7 +2234,7 @@ HERO IMAGE
 
 .hero-image img{
     width:100%;
-    max-width:620px;
+    max-width:750px;
     display:block;
     position:relative;
     z-index:2;
