@@ -2410,3 +2410,36 @@ JUDUL VISI PERUSAHAAN
         letter-spacing:-1px;
     }
 }
+
+/* =========================================
+   POSISI TOMBOL SAMA DI SEMUA SLIDE
+========================================= */
+
+.caption{
+    position:relative;
+    z-index:5;
+
+    width:100%;
+    max-width:620px;
+
+    display:flex;
+    flex-direction:column;
+
+    min-height:420px; /* tinggi tetap */
+}
+
+/* Area judul */
+.caption h1{
+    min-height:170px;
+}
+
+/* Area deskripsi */
+.caption p{
+    min-height:80px;
+}
+
+/* Tombol selalu berada di posisi bawah */
+.btn-cta{
+    margin-top:auto !important;
+    align-self:flex-start;
+}
