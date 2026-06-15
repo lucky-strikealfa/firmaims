@@ -1034,8 +1034,9 @@ IMAGE
 }
 
 .cta-red-image img{
-  height:105%;
+  height:110%;
   width:auto;
+  bottom:-10px;
 
   object-fit:contain;
 
@@ -1044,7 +1045,7 @@ IMAGE
   filter:
   drop-shadow(0 20px 40px rgba(0,0,0,.22));
 
-  transform:scale(1.2);
+  transform:scale(1.35);
   transform-origin:bottom center;
 }
 
