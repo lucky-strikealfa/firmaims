@@ -2217,13 +2217,17 @@ HERO MODERN FINAL
     flex:1;
 }
 
+/* =========================================================
+HERO IMAGE
+========================================================= */
+
 .hero-image{
     flex:1;
     position:relative;
 
     display:flex;
-    justify-content:center;
-    align-items:flex-start;
+    flex-direction:column;
+    align-items:center;
 }
 
 .hero-image img{
@@ -2236,6 +2240,7 @@ HERO MODERN FINAL
     margin-top:-20px;
 }
 
+/* LINGKARAN BELAKANG */
 .circle-bg{
     position:absolute;
     width:450px;
@@ -2247,27 +2252,30 @@ HERO MODERN FINAL
     z-index:1;
 }
 
+/* KOTAK BIRU DI BAWAH GAMBAR */
 .hero-bottom{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-
-    bottom:-15px;
+    position:relative;     /* sebelumnya absolute */
+    left:auto;
+    bottom:auto;
+    transform:none;
 
     width:320px;
 
     background:#2563eb;
-    border-radius:14px;
+    border-radius:16px;
 
     display:flex;
     justify-content:space-around;
     align-items:center;
 
-    padding:12px;
+    padding:18px 15px;
 
-    box-shadow:0 12px 25px rgba(0,0,0,.15);
+    margin-top:30px;       /* jarak dari gambar */
 
-    z-index:3;
+    box-shadow:
+      0 15px 35px rgba(0,0,0,.15);
+
+    z-index:5;
 }
 
 .bottom-item{
@@ -2276,15 +2284,15 @@ HERO MODERN FINAL
 }
 
 .bottom-icon{
-    font-size:20px;
-    margin-bottom:5px;
+    font-size:22px;
+    margin-bottom:8px;
 }
 
 .bottom-item span{
     color:#fff;
-    font-size:11px;
+    font-size:12px;
     font-weight:600;
-    line-height:1.4;
+    line-height:1.5;
 }
 
 @media(max-width:991px){
