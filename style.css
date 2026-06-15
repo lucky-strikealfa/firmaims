@@ -2253,64 +2253,74 @@ HERO IMAGE
 }
 
 /* KOTAK BIRU DI BAWAH GAMBAR */
+/* =========================================
+   INFO BOX PROFESSIONAL
+========================================= */
+
 .hero-bottom{
-    position:relative;     /* sebelumnya absolute */
-    left:auto;
-    bottom:auto;
-    transform:none;
-
-    width:65%;
-    max-width:450px;
-
-    background:#2563eb;
-    border-radius:16px;
+    width:430px;
 
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items:center;
+    gap:10px;
 
-    padding:18px 15px;
+    background:linear-gradient(
+        135deg,
+        #2563eb 0%,
+        #1d4ed8 100%
+    );
 
-    margin-top:30px;       /* jarak dari gambar */
+    padding:22px 20px;
+
+    border-radius:20px;
+
+    margin-top:25px;
 
     box-shadow:
-      0 15px 35px rgba(0,0,0,.15);
+      0 20px 40px rgba(37,99,235,.25);
 
-    z-index:5;
+    position:relative;
+    z-index:10;
 }
 
+/* GARIS PEMBATAS */
 .bottom-item{
     flex:1;
     text-align:center;
+    position:relative;
 }
 
+.bottom-item:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:15%;
+    width:1px;
+    height:70%;
+    background:rgba(255,255,255,.2);
+}
+
+/* ICON */
 .bottom-icon{
-    font-size:22px;
-    margin-bottom:8px;
+    font-size:28px;
+    margin-bottom:10px;
 }
 
-.bottom-item span{
-    color:#fff;
-    font-size:12px;
-    font-weight:600;
-    line-height:1.5;
+/* JUDUL */
+.bottom-title{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:4px;
 }
 
-@media(max-width:991px){
-
-    .hero-container{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .hero-image img{
-        max-width:520px;
-        margin-top:0;
-    }
-
-    .hero-bottom{
-        width:300px;
-    }
+/* DESKRIPSI */
+.bottom-desc{
+    color:rgba(255,255,255,.85);
+    font-size:13px;
+    font-weight:500;
+    line-height:1.4;
 }
 
 @media(max-width:768px){
