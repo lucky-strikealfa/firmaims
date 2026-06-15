@@ -2329,10 +2329,10 @@ HERO IMAGE
 JUDUL HERO MODERN
 ===================================== */
 .hero-content h1{
-    font-size:60px !important;
+    font-size:clamp(48px, 4.5vw, 60px);
     line-height:1.1 !important;
     font-weight:800 !important;
-    letter-spacing:-3px !important;
+    letter-spacing:-2px !important;
     color:#0f172a;
     margin-bottom:25px;
 }
@@ -2344,4 +2344,14 @@ JUDUL HERO MODERN
 
 .hero-content .gold{
     color:#d4a017;
+}
+
+@media (max-width:768px){
+
+    .hero-content h1{
+        font-size:42px;
+        line-height:1.2;
+        letter-spacing:-1px;
+    }
+
 }
