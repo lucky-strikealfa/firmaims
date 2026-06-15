@@ -1367,11 +1367,10 @@ SERVICE PRIMA MODERN
 }
 
 .prima-image img{
-    width:100%;
-    max-width:760px;
+    width:115%;
+    max-width:1100px;
     height:auto;
     object-fit:contain;
-    display:block;
 }
 
 /* ========================================
