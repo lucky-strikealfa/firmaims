@@ -2259,7 +2259,8 @@ HERO IMAGE
     bottom:auto;
     transform:none;
 
-    width:320px;
+    width:65%;
+    max-width:450px;
 
     background:#2563eb;
     border-radius:16px;
