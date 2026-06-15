@@ -2328,9 +2328,8 @@ HERO IMAGE
 /* =====================================
 JUDUL HERO MODERN
 ===================================== */
-
 .hero-content h1{
-    font-size:85px !important;
+    font-size:60px !important;
     line-height:1.1 !important;
     font-weight:800 !important;
     letter-spacing:-3px !important;
