@@ -2370,12 +2370,12 @@ JUDUL HERO MODERN
 JUDUL VISI PERUSAHAAN
 ===================================== */
 .vision-text h2{
-    font-size:95px;
-    line-height:1.15;
-    font-weight:800;
-    letter-spacing:-2px;
-    color:#0f172a;
-    margin-bottom:25px;
+    font-size:95px !important;
+    line-height:1.15 !important;
+    font-weight:800 !important;
+    letter-spacing:-2px !important;
+    color:#0f172a !important;
+    margin-bottom:25px !important;
 }
 
 .vision-text h2 .blue{
