@@ -1,15 +1,57 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  // ================= FORM =================
-  const form = document.getElementById("form");
-  const msg = document.getElementById("msg");
+ // ================= FORM GOOGLE SHEET =================
+const form = document.getElementById("form");
+const msg = document.getElementById("msg");
 
-  if(form){
-    form.addEventListener("submit", function(e){
-      e.preventDefault();
-      if(msg) msg.innerText = "Pesan berhasil dikirim!";
-    });
-  }
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyU-JaanMbmptpMWWO2RTRtxROnur1xETytTqElS7cscTcG2xQibrcJwJTXLpHjp4uQ1A/exec";
+
+if(form){
+
+  form.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    msg.innerHTML = "⏳ Mengirim data...";
+
+    const data = {
+      nama: form.nama.value,
+      email: form.email.value,
+      pesan: form.pesan.value
+    };
+
+    try{
+
+      const response = await fetch(SCRIPT_URL,{
+        method:"POST",
+        body:JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if(result.result === "success"){
+
+        msg.innerHTML = "✅ Data berhasil dikirim.";
+
+        form.reset();
+
+      }else{
+
+        msg.innerHTML = "❌ Gagal mengirim data.";
+
+      }
+
+    }catch(error){
+
+      console.error(error);
+
+      msg.innerHTML = "❌ Terjadi kesalahan saat mengirim.";
+
+    }
+
+  });
+
+}
 
   // ================= SCROLL =================
   window.scrollToForm = function(){
