@@ -2560,3 +2560,11 @@ TOMBOL KONSULTASI TETAP DI HERO
   }
 
 }
+
+/* ==========================================
+NAIKKAN KONTEN SLIDE 2
+========================================== */
+
+.slide:nth-child(2) .caption{
+    transform:translateY(-70px);
+}
