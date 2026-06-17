@@ -2498,33 +2498,31 @@ form button:active{
 }
 
 /* ==========================================
-TOMBOL KONSULTASI TETAP DI SEMUA SLIDE
+POSISI TOMBOL SAMA DI SEMUA SLIDE
 ========================================== */
 
-.hero-slider{
-  position:relative;
+.caption{
+    position:relative;
+    z-index:5;
+
+    width:100%;
+    max-width:620px;
+
+    display:flex;
+    flex-direction:column;
+
+    height:450px; /* tinggi tetap */
 }
 
-.fixed-consult-btn{
-  position:absolute;
-  top:65%;
-  right:8%;
-  transform:translateY(-50%);
-  z-index:20;
+.caption h1{
+    min-height:170px;
 }
 
-.fixed-consult-btn .btn-cta{
-  display:inline-block;
+.caption p{
+    min-height:90px;
 }
 
-/* Mobile */
-@media(max-width:768px){
-
-  .fixed-consult-btn{
-    top:75%;
-    left:50%;
-    right:auto;
-    transform:translateX(-50%);
-  }
-
+.btn-cta{
+    margin-top:auto !important;
+    align-self:flex-start;
 }
