@@ -2496,3 +2496,35 @@ form button:active{
     0 1px 0 #1d4ed8,
     0 4px 8px rgba(37,99,235,.25);
 }
+
+/* ==========================================
+TOMBOL KONSULTASI TETAP DI SEMUA SLIDE
+========================================== */
+
+.hero-slider{
+  position:relative;
+}
+
+.fixed-consult-btn{
+  position:absolute;
+  top:65%;
+  right:8%;
+  transform:translateY(-50%);
+  z-index:20;
+}
+
+.fixed-consult-btn .btn-cta{
+  display:inline-block;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  .fixed-consult-btn{
+    top:75%;
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
+  }
+
+}
