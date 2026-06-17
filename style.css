@@ -2443,3 +2443,56 @@ JUDUL VISI PERUSAHAAN
     margin-top:auto !important;
     align-self:flex-start;
 }
+
+/* =========================================================
+TOMBOL KIRIM FORM 3D BIRU
+========================================================= */
+
+form button{
+  width:170px;
+  height:48px;
+
+  margin:10px auto 0;
+
+  border:none;
+  border-radius:12px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #3b82f6 0%,
+      #2563eb 100%
+    );
+
+  color:#fff;
+
+  font-family:'Poppins',sans-serif;
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 5px 0 #1d4ed8,
+    0 10px 20px rgba(37,99,235,.25);
+
+  transition:.2s ease;
+}
+
+/* Hover */
+form button:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 7px 0 #1d4ed8,
+    0 15px 25px rgba(37,99,235,.35);
+}
+
+/* Saat diklik */
+form button:active{
+  transform:translateY(4px);
+
+  box-shadow:
+    0 1px 0 #1d4ed8,
+    0 4px 8px rgba(37,99,235,.25);
+}
