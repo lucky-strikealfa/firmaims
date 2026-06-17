@@ -2543,3 +2543,62 @@ NAIKKAN KONTEN SLIDE 2
 .slide:nth-child(2) .caption{
     transform:translateY(-70px);
 }
+
+/* ==========================================
+SCROLL ANIMATION
+========================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(80px);
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Gambar masuk dari kiri */
+.reveal-left{
+    opacity:0;
+    transform:translateX(-100px);
+    transition:
+      opacity 1s ease,
+      transform 1s ease;
+}
+
+.reveal-left.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Gambar masuk dari kanan */
+.reveal-right{
+    opacity:0;
+    transform:translateX(100px);
+    transition:
+      opacity 1s ease,
+      transform 1s ease;
+}
+
+.reveal-right.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Zoom */
+.reveal-zoom{
+    opacity:0;
+    transform:scale(.85);
+    transition:
+      opacity 1s ease,
+      transform 1s ease;
+}
+
+.reveal-zoom.active{
+    opacity:1;
+    transform:scale(1);
+}
