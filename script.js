@@ -14,11 +14,12 @@ if(form){
 
     msg.innerHTML = "⏳ Mengirim data...";
 
-    const data = {
-      nama: form.nama.value,
-      email: form.email.value,
-      pesan: form.pesan.value
-    };
+const data = {
+  nama: form.nama.value,
+  email: form.email.value,
+  hp: form.hp.value,
+  pesan: form.pesan.value
+};
 
     try{
 
