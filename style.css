@@ -2498,31 +2498,65 @@ form button:active{
 }
 
 /* ==========================================
-POSISI TOMBOL SAMA DI SEMUA SLIDE
+TOMBOL KONSULTASI TETAP DI HERO
 ========================================== */
 
-.caption{
-    position:relative;
-    z-index:5;
+.floating-consult{
+  position:absolute;
 
-    width:100%;
-    max-width:620px;
+  left:8%;
+  top:72%;
 
-    display:flex;
-    flex-direction:column;
+  z-index:999;
 
-    min-height:430px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  height:62px;
+  padding:0 36px;
+
+  border-radius:999px;
+
+  background:linear-gradient(
+    135deg,
+    #721e49,
+    #9f1239
+  );
+
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+
+  box-shadow:
+    0 18px 40px rgba(114,30,73,.28);
+
+  transition:.3s ease;
 }
 
-.caption h1{
-    min-height:180px;
+.floating-consult:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 24px 50px rgba(114,30,73,.35);
 }
 
-.caption p{
-    min-height:90px;
-}
+@media(max-width:767px){
 
-.caption .btn-cta{
-    margin-top:auto;
-    align-self:flex-start;
+  .floating-consult{
+    left:50%;
+    top:48%;
+
+    transform:translateX(-50%);
+
+    width:280px;
+    max-width:90%;
+  }
+
+  .floating-consult:hover{
+    transform:
+      translateX(-50%)
+      translateY(-4px);
+  }
+
 }
