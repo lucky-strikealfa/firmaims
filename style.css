@@ -212,32 +212,7 @@ HERO SLIDER MODERN 2026
 
 /* BADGE */
 .caption::before{
-  content:"KONSULTAN PAJAK PROFESIONAL";
-
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:12px 22px;
-
-  border-radius:999px;
-
-  background:rgba(255,255,255,.85);
-
-  backdrop-filter:blur(12px);
-
-  border:1px solid rgba(255,255,255,.5);
-
-  color:#721e49;
-
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:1.5px;
-
-  margin-bottom:28px;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.08);
+  display:none;
 }
 
 /* TITLE */
