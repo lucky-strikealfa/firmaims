@@ -160,3 +160,29 @@ const data = {
   }
 
 });
+
+// =======================
+// SCROLL ANIMATION
+// =======================
+
+const reveals = document.querySelectorAll(
+'.reveal, .reveal-left, .reveal-right, .reveal-zoom'
+);
+
+function revealOnScroll(){
+
+  reveals.forEach(item => {
+
+    const top = item.getBoundingClientRect().top;
+    const trigger = window.innerHeight - 120;
+
+    if(top < trigger){
+      item.classList.add('active');
+    }
+
+  });
+
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
