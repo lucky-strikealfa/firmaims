@@ -186,3 +186,20 @@ document.querySelectorAll(
 ).forEach(el=>{
   observer.observe(el);
 });
+
+// ================= DROPDOWN MOBILE =================
+
+const dropdown = document.querySelector(".dropdown");
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+if(window.innerWidth <= 991 && dropdown && dropdownToggle){
+
+  dropdownToggle.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    dropdown.classList.toggle("active");
+
+  });
+
+}
