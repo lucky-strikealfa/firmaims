@@ -2386,6 +2386,39 @@ JUDUL VISI PERUSAHAAN
     }
 }
 
+  .dropdown{
+    width:100%;
+  }
+
+  .dropdown-toggle{
+    width:100%;
+  }
+
+  .dropdown-menu{
+    position:static;
+
+    opacity:1;
+    visibility:visible;
+
+    transform:none;
+
+    background:rgba(255,255,255,.05);
+
+    box-shadow:none;
+
+    padding-left:15px;
+
+    display:none;
+  }
+
+  .dropdown.active .dropdown-menu{
+    display:block;
+  }
+
+  .dropdown-menu a{
+    color:#fff !important;
+  }
+
 /* =========================================
    POSISI TOMBOL SAMA DI SEMUA SLIDE
 ========================================= */
@@ -2601,4 +2634,69 @@ SCROLL ANIMATION
 .reveal-zoom.active{
     opacity:1;
     transform:scale(1);
+}
+
+/* =========================================================
+DROPDOWN MENU
+========================================================= */
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown-toggle{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.dropdown-menu{
+  position:absolute;
+
+  top:100%;
+  left:0;
+
+  min-width:240px;
+
+  background:#fff;
+
+  border-radius:14px;
+
+  padding:10px 0;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:.3s ease;
+
+  z-index:9999;
+}
+
+.dropdown-menu a{
+  display:block;
+
+  padding:12px 20px;
+
+  color:#111827 !important;
+
+  font-size:15px;
+
+  transition:.3s;
+}
+
+.dropdown-menu a:hover{
+  background:#f3f4f6;
+  color:#721e49 !important;
+  padding-left:25px;
+}
+
+.dropdown:hover .dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
 }
