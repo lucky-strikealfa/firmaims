@@ -141,9 +141,9 @@ const data = {
 
     overlay.addEventListener("click", closeMenu);
 
-    document.querySelectorAll("#menu a").forEach(link => {
-      link.addEventListener("click", closeMenu);
-    });
+document.querySelectorAll("#menu > a").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
 
     function closeMenu(){
       menu.classList.remove("active");
@@ -189,16 +189,19 @@ document.querySelectorAll(
 
 // ================= DROPDOWN MOBILE =================
 
-const dropdown = document.querySelector(".dropdown");
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 
-if(window.innerWidth <= 991 && dropdown && dropdownToggle){
+if(dropdownToggle){
 
   dropdownToggle.addEventListener("click", function(e){
 
-    e.preventDefault();
+    if(window.innerWidth <= 991){
 
-    dropdown.classList.toggle("active");
+      e.preventDefault();
+
+      this.parentElement.classList.toggle("active");
+
+    }
 
   });
 
