@@ -2081,28 +2081,20 @@ FIX POSISI GAMBAR SLIDE 3 4 5
         font-size:42px;
     }
 
-prima-image{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-end;
-}
+    .prima-image{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-end;
+    }
 
-
-.prima-image img{
-    width:100%;
-    max-width:900px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-}
-
-    .prima-steps{
-        position:absolute;
-        bottom:-35px;
-        left:50%;
-        transform:translateX(-50%);
+    .prima-image img{
+        width:100%;
+        max-width:900px;
+        height:auto;
+        object-fit:contain;
+        display:block;
     }
 
 }
