@@ -188,7 +188,6 @@ document.querySelectorAll(
 });
 
 // ================= DROPDOWN MOBILE =================
-
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 
 if(dropdownToggle){
