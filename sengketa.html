@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sengketa Pajak | Firma Idola Makmur Solusindo</title>
+<title>Sengketa Pajak | PT Idola Makmur Solusindo</title>
 
-<meta name="description" 
-content="Layanan sengketa pajak profesional meliputi pendampingan pemeriksaan, pengajuan keberatan, dan banding pajak bersama konsultan pajak berpengalaman.">
+<meta name="description" content="Layanan sengketa pajak meliputi pendampingan pemeriksaan, pengajuan keberatan, dan banding pajak bersama konsultan profesional IMS.">
 
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 </head>
+
 
 <body>
 
-<!-- =========================
-HEADER
-========================= -->
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/6282129811869"
+target="_blank"
+class="wa-float">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+alt="WhatsApp">
+
+</a>
+
+
+
+<!-- ================= HEADER ================= -->
+
 
 <header>
 
@@ -27,24 +43,82 @@ HEADER
 
 <div class="logo">
 
-<img src="assets/logo.png">
+<img src="assets/logofirma.png" alt="Logo IMS">
 
-<div class="logo-text">
-Firma Idola Makmur<br>
-Solusindo
+<span class="logo-text">
+Firma Idola Makmur Solusindo
+</span>
+
 </div>
 
+
+<button id="menu-toggle" class="menu-toggle">
+☰
+</button>
+
+
+
+<nav id="menu">
+
+
+<a href="index.html">
+Beranda
+</a>
+
+
+<a href="index.html#tentang">
+Tentang
+</a>
+
+
+
+<div class="dropdown">
+
+
+<a href="index.html#layanan" class="dropdown-toggle">
+Layanan ▾
+</a>
+
+
+<div class="dropdown-menu">
+
+
+<a href="konsultasi.html">
+Konsultasi Pajak
+</a>
+
+
+<a href="sengketa.html">
+Sengketa Pajak
+</a>
+
+
+<a href="#">
+Akuntansi & Audit
+</a>
+
+
+<a href="#">
+Transfer Pricing
+</a>
+
+
+<a href="#">
+Pelatihan Pajak
+</a>
+
+
 </div>
 
-<nav>
 
-<a href="index.html">Home</a>
+</div>
 
-<a href="index.html#tentang">Tentang</a>
 
-<a href="index.html#layanan">Layanan</a>
 
-<a href="index.html#kontak">Kontak</a>
+<a href="index.html#kontak">
+Kontak
+</a>
+
 
 
 </nav>
@@ -52,17 +126,26 @@ Solusindo
 
 </div>
 
+
 </header>
 
-<!-- =========================
-SERVICE HERO
-========================= -->
 
 
-<section class="service-detail-hero">
+<div class="nav-overlay"></div>
+
+
+
+
+<!-- ================= HERO PAGE ================= -->
+
+
+<section class="page-hero">
 
 
 <div class="container">
+
+
+<div class="page-hero-content">
 
 
 <span>
@@ -71,242 +154,476 @@ LAYANAN PROFESIONAL
 
 
 <h1>
-Sengketa 
-<span>Pajak</span>
+Sengketa <strong>Pajak</strong>
 </h1>
 
 
 <p>
 
-Kami membantu Wajib Pajak menghadapi proses sengketa perpajakan
-dengan pendampingan profesional, mulai dari pemeriksaan,
-penyusunan keberatan hingga proses banding pajak.
+Pendampingan dan penyelesaian sengketa perpajakan
+secara profesional untuk melindungi hak dan kepentingan Anda.
 
 </p>
 
 
+<a href="index.html#kontak" class="btn-primary">
+
+Konsultasi Sekarang
+
+</a>
+
+
 </div>
 
+
+</div>
+
+
 </section>
-<!-- =========================
-CONTENT
-========================= -->
-<section class="service-content">
+
+
+
+
+
+
+<!-- ================= CONTENT ================= -->
+
+
+<section class="section sengketa-section">
+
 
 <div class="container">
 
-<div class="service-intro">
+
+
+<div class="section-title">
+
 
 <h2>
-Penyelesaian Sengketa Pajak Secara Strategis
+Layanan Sengketa Pajak
 </h2>
+
 
 <p>
 
-Permasalahan pajak dapat muncul akibat perbedaan pemahaman,
-hasil pemeriksaan, maupun ketidaksesuaian perhitungan pajak.
-Kami memberikan pendampingan agar Wajib Pajak mendapatkan
-solusi terbaik sesuai ketentuan perpajakan yang berlaku.
+Kami membantu wajib pajak menghadapi proses sengketa
+dengan pendekatan profesional, strategis, dan sesuai
+ketentuan perpajakan yang berlaku.
 
 </p>
 
+
 </div>
+
+
+
+
+
+<div class="grid sengketa-grid">
+
+
 
 <!-- CARD 1 -->
 
-<div class="service-box">
+<div class="card layanan-card reveal-zoom">
+
+
+<div class="icon">
+🔎
+</div>
+
 
 <h3>
-Pendampingan Pemeriksaan Pajak
+Pendampingan Pemeriksaan
 </h3>
 
 
 <p>
 
-Kami mendampingi Wajib Pajak dalam menghadapi proses
-pemeriksaan pajak, mulai dari persiapan dokumen,
-analisa kewajiban perpajakan, hingga komunikasi dengan
-pihak pemeriksa.
+Mendampingi wajib pajak dalam proses pemeriksaan pajak,
+mulai dari persiapan dokumen, komunikasi dengan pemeriksa,
+hingga penyelesaian hasil pemeriksaan.
 
 </p>
 
 
-<ul>
-
-<li>
-Review dan analisa dokumen perpajakan
-</li>
-
-<li>
-Pendampingan proses pemeriksaan
-</li>
-
-<li>
-Pembahasan hasil pemeriksaan
-</li>
-
-<li>
-Strategi penyelesaian permasalahan pajak
-</li>
-
-</ul>
-
 </div>
+
+
+
+
 
 <!-- CARD 2 -->
 
-<div class="service-box">
+
+<div class="card layanan-card">
+
+
+<div class="icon">
+📄
+</div>
+
 
 <h3>
-Pengajuan Keberatan Pajak
+Pengajuan Keberatan
 </h3>
+
 
 <p>
 
-Apabila terdapat ketidaksesuaian atas hasil ketetapan pajak,
-kami membantu menyusun strategi dan dokumen keberatan
-berdasarkan analisa perpajakan yang komprehensif.
+Membantu penyusunan dan pengajuan keberatan pajak
+berdasarkan analisa profesional terhadap ketetapan pajak
+yang diterbitkan oleh otoritas pajak.
 
 </p>
 
-<ul>
-
-<li>
-Analisa dasar pengajuan keberatan
-</li>
-
-<li>
-Penyusunan surat keberatan pajak
-</li>
-
-<li>
-Pengumpulan dokumen pendukung
-</li>
-
-<li>
-Pendampingan komunikasi dengan otoritas pajak
-</li>
-
-</ul>
 
 </div>
+
+
+
+
+
+
 
 <!-- CARD 3 -->
 
-<div class="service-box">
+
+<div class="card layanan-card">
+
+
+<div class="icon">
+⚖️
+</div>
+
 
 <h3>
-Pengajuan Banding Pajak
+Pengajuan Banding
 </h3>
 
 
 <p>
 
-Kami memberikan pendampingan dalam proses banding pajak
-untuk membantu Wajib Pajak memperjuangkan haknya melalui
-argumentasi dan dokumen yang kuat.
+Memberikan pendampingan dalam proses banding pajak,
+termasuk penyusunan argumentasi dan strategi penyelesaian
+sengketa melalui jalur hukum perpajakan.
 
 </p>
 
-<ul>
-
-<li>
-Evaluasi keputusan keberatan pajak
-</li>
-
-<li>
-Penyusunan strategi banding
-</li>
-
-<li>
-Persiapan dokumen dan bukti pendukung
-</li>
-
-
-<li>
-Pendampingan proses penyelesaian sengketa
-</li>
-
-</ul>
 
 </div>
 
-<!-- COMMITMENT -->
-
-<div class="commitment">
-
-<h2>
-Mengapa Memilih Kami?
-</h2>
 
 
-<p>
-
-Kami mengutamakan pendekatan profesional,
-analisa mendalam, dan strategi perpajakan yang tepat
-untuk membantu Wajib Pajak menghadapi permasalahan
-sengketa pajak dengan lebih percaya diri.
-
-</p>
 
 </div>
 
+
+
 </div>
+
 
 </section>
 
-<!-- =========================
-CTA
-========================= -->
+
+
+
+
+
+<!-- ================= CTA ================= -->
+
 
 <section class="cta-red-section">
 
+
+<div class="container">
+
+
 <div class="cta-red-box">
+
 
 <div class="cta-red-content">
 
-<div class="cta-label">
-KONSULTASI PAJAK
-</div>
 
 <h2>
+
 Hadapi Sengketa Pajak Dengan Strategi Yang Tepat
+
 </h2>
+
 
 <p>
 
-Konsultasikan permasalahan pajak Anda bersama
-tenaga profesional kami.
+Percayakan penyelesaian sengketa pajak Anda
+kepada tim profesional PT Idola Makmur Solusindo.
 
 </p>
 
+
+
 <div class="cta-red-buttons">
 
+
 <a href="index.html#kontak" class="btn-white">
-Konsultasi Sekarang
+
+Konsultasi Gratis
+
 </a>
 
 
-<a href="index.html" class="btn-outline">
-Kembali Home
+
+<a href="https://wa.me/6282129811869"
+class="btn-outline">
+
+Hubungi Admin
+
 </a>
 
-</div>
 
 </div>
 
+
 </div>
+
+
+
+
+<div class="cta-red-image">
+
+
+<img src="assets/pic5.png"
+alt="Konsultan Pajak IMS">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- WHATSAPP -->
 
-<a href="#" class="wa-float">
 
-<img src="assets/whatsapp.png">
 
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="footer-modern">
+
+
+<div class="container footer-grid">
+
+
+<div class="footer-brand">
+
+
+<div class="footer-logo">
+
+
+<img src="assets/logofirma.png">
+
+
+<div>
+
+<h3>
+Idola Makmur Solusindo
+</h3>
+
+<span>
+Tax Made Easy
+</span>
+
+
+</div>
+
+
+</div>
+
+
+<h4>
+PT Idola Makmur Solusindo
+</h4>
+
+
+
+<div class="socials">
+
+<a href="https://tr.ee/9Zqe-6UAyw">
+Instagram
 </a>
+
+<a href="https://tr.ee/jNnNIstRWU">
+LinkedIn
+</a>
+
+
+<a href="https://tr.ee/PLvbKRprcy">
+Facebook
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="footer-address">
+
+
+<p>
+
+<strong>Jakarta:</strong><br>
+
+Office Park Lantai 22 Suite E,F,G
+
+Jl. TB Simatupang 18,
+
+Kebagusan, Pasar Minggu,
+
+Jakarta Selatan
+
+</p>
+
+
+<p>
+
+<strong>Jakarta:</strong><br>
+
+Gedung Idola Makmur Solusindo
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="footer-links">
+
+
+<div>
+
+<h4>
+Layanan
+</h4>
+
+
+<a href="konsultasi.html">
+Konsultasi Pajak
+</a>
+
+
+<a href="sengketa.html">
+Sengketa Pajak
+</a>
+
+
+<a href="#">
+Akuntansi & Audit
+</a>
+
+
+</div>
+
+
+
+<div>
+
+<h4>
+Tentang Kami
+</h4>
+
+
+<a href="#">
+Kolaborasi
+</a>
+
+
+<a href="#">
+Karir
+</a>
+
+
+<a href="index.html#kontak">
+Hubungi Kami
+</a>
+
+
+</div>
+
+
+
+<div>
+
+<h4>
+Tanya Pajak
+</h4>
+
+
+<a href="#">
+Forum Diskusi
+</a>
+
+
+<a href="#">
+Download
+</a>
+
+
+<a href="#">
+Online Learning
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+
+<span>
+© 2018-2026 PT Idola Makmur Solusindo. All rights reserved
+</span>
+
+
+<span>
+Syarat Layanan
+</span>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
 
 </body>
 
