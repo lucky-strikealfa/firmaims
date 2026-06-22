@@ -305,7 +305,7 @@ SLIDER BUTTON
   backdrop-filter:blur(10px);
 
   box-shadow:
-  0 10px 30px rgba(0,0,0,.08);
+  0 10px 30px rgba(0,0,0,0.08);
 
   font-size:18px;
 
@@ -439,7 +439,7 @@ CARD
 
   border:1px solid rgba(255,255,255,.7);
 
-  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 .tentang-card:hover{
@@ -490,7 +490,7 @@ LAYANAN
   border-radius:18px;
   padding:28px;
 
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
   transition:.3s;
 }
@@ -728,7 +728,7 @@ PROFESSIONAL SECTION FIX
   background:#ffffff;
 
   box-shadow:
-  0 15px 35px rgba(0,0,0,.06);
+  0 15px 35px rgba(0,0,0,0.06);
 
   border:1px solid #eef2ff;
 
