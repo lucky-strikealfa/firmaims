@@ -2848,3 +2848,165 @@ padding:25px;
 
 
 }
+
+/* ===============================
+SENGKETA PAGE
+================================ */
+
+
+.page-hero{
+
+padding:140px 0 90px;
+
+background:
+linear-gradient(
+135deg,
+#0b1f44,
+#173b78
+);
+
+color:white;
+
+}
+
+
+.page-hero-content{
+
+max-width:700px;
+
+}
+
+
+.page-hero-content span{
+
+font-size:14px;
+
+letter-spacing:2px;
+
+font-weight:600;
+
+}
+
+
+.page-hero h1{
+
+font-size:52px;
+
+margin:20px 0;
+
+}
+
+
+.page-hero h1 strong{
+
+color:#e63946;
+
+}
+
+
+.page-hero p{
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+
+
+
+.btn-primary{
+
+display:inline-block;
+
+background:#e63946;
+
+color:white;
+
+padding:14px 32px;
+
+border-radius:30px;
+
+font-weight:600;
+
+}
+
+
+
+.sengketa-section{
+
+padding:90px 0;
+
+}
+
+
+.section-title{
+
+text-align:center;
+
+max-width:750px;
+
+margin:auto;
+
+margin-bottom:50px;
+
+}
+
+
+.section-title h2{
+
+font-size:38px;
+
+}
+
+
+.section-title p{
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+
+
+
+.sengketa-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.sengketa-grid .layanan-card{
+
+padding:35px;
+
+min-height:330px;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+.page-hero h1{
+
+font-size:36px;
+
+}
+
+
+.sengketa-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
