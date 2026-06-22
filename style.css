@@ -2706,8 +2706,6 @@ DROPDOWN MENU
 /* ==========================================
 HALAMAN DETAIL LAYANAN
 ========================================== */
-
-
 .service-detail-hero{
 
 padding:120px 20px 90px;
@@ -2721,7 +2719,6 @@ linear-gradient(
 
 }
 
-
 .service-detail-hero span{
 
 color:#2563eb;
@@ -2733,8 +2730,6 @@ font-weight:700;
 letter-spacing:2px;
 
 }
-
-
 
 .service-detail-hero h1{
 
@@ -2759,7 +2754,6 @@ color:#721e49;
 font-size:inherit;
 
 }
-
 
 
 .service-detail-hero p{
