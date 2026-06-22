@@ -2702,3 +2702,218 @@ DROPDOWN MENU
   }
 
 }
+
+/* ==========================================
+HALAMAN DETAIL LAYANAN
+========================================== */
+
+
+.service-detail-hero{
+
+padding:120px 20px 90px;
+
+background:
+linear-gradient(
+135deg,
+#f8fbff,
+#ffffff
+);
+
+}
+
+
+.service-detail-hero span{
+
+color:#2563eb;
+
+font-size:14px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+}
+
+
+
+.service-detail-hero h1{
+
+font-size:56px;
+
+line-height:1.2;
+
+font-weight:800;
+
+color:#0f172a;
+
+margin:20px 0;
+
+}
+
+
+
+.service-detail-hero h1 span{
+
+color:#721e49;
+
+font-size:inherit;
+
+}
+
+
+
+.service-detail-hero p{
+
+max-width:800px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#64748b;
+
+}
+
+
+
+
+
+.service-content{
+
+padding:90px 20px;
+
+background:#fff;
+
+}
+
+
+
+.service-intro,
+.service-box,
+.commitment{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:24px;
+
+margin-bottom:35px;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.06);
+
+}
+
+
+
+.service-content h2{
+
+font-size:36px;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+
+
+.service-content h3{
+
+font-size:28px;
+
+color:#721e49;
+
+margin-bottom:18px;
+
+}
+
+
+
+.service-content p{
+
+font-size:16px;
+
+line-height:1.9;
+
+color:#64748b;
+
+}
+
+
+
+.service-content ul{
+
+margin-top:20px;
+
+padding-left:20px;
+
+}
+
+
+
+.service-content li{
+
+margin-bottom:12px;
+
+line-height:1.8;
+
+color:#475569;
+
+}
+
+
+
+.commitment{
+
+background:
+
+linear-gradient(
+135deg,
+#721e49,
+#9f1239
+);
+
+color:white;
+
+}
+
+
+
+.commitment h2,
+.commitment p{
+
+color:white;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.service-detail-hero h1{
+
+font-size:38px;
+
+}
+
+
+.service-content h2{
+
+font-size:28px;
+
+}
+
+
+.service-box,
+.service-intro{
+
+padding:25px;
+
+}
+
+
+}
