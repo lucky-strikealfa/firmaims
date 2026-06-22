@@ -652,7 +652,7 @@ PROFESSIONAL SECTION FIX
 
 .vision-text h2,
 .service-text h2,
-.professional-text{
+.professional-text h2{
   max-width:650px;
 }
 
@@ -1272,7 +1272,7 @@ SERVICE PRIMA MODERN
 
 /* TITLE */
 .prima-heading h2{
-  font-size:1100px;     /* mengubah ukuran tulisan di slide 5 */
+  font-size:56px;     /* mengubah ukuran tulisan di slide 5 */
   line-height:1.15;
   font-weight:800;
 
@@ -1694,12 +1694,6 @@ RIGHT IMAGE AREA
   0 25px 60px rgba(0,0,0,.10);
 }
 
-.about-image img{
-  width:100%;
-  display:block;
-  object-fit:cover;
-}
-
 /* =========================================================
 CARDS MENYATU DENGAN IMAGE
 ========================================================= */
@@ -2017,13 +2011,17 @@ MOBILE
 }
 
 .about-image img{
-  width:100%;
-  display:block;
-  object-fit:cover;
 
-  filter:
-  contrast(1.02)
-  brightness(1.02);
+width:100%;
+
+display:block;
+
+object-fit:cover;
+
+filter:
+contrast(1.02)
+brightness(1.02);
+
 }
 
 @keyframes shine{
@@ -2127,47 +2125,25 @@ SERVICE PRIMA FIX FINAL
         font-size:42px;
     }
 
-   /* AREA KANAN */
-.prima-image{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-}
+    .prima-image{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:flex-end;
+    }
 
-.prima-image img{
-    width:100%;
-    max-width:760px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-}
+    .prima-image img{
+        width:100%;
+        max-width:760px;
+    }
 
-/* CARD BIRU MENEMPEL KE GAMBAR */
-.prima-steps{
-    position:absolute;
-    bottom:-35px;
-    left:50%;
-    transform:translateX(-50%);
+    .prima-steps{
+        position:absolute;
+        bottom:-35px;
+        left:50%;
+        transform:translateX(-50%);
+    }
 
-    width:78%;
-    max-width:620px;
-
-    background:#2563eb;
-    border-radius:22px;
-
-    padding:25px;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-
-    z-index:5;
-
-    box-shadow:
-      0 20px 40px rgba(37,99,235,.25);
-  }
 }
   /* =========================================================
 HERO MODERN FINAL
@@ -2192,6 +2168,7 @@ HERO MODERN FINAL
 
 .hero-content{
     flex:1;
+}
 }
 
 /* =========================================================
