@@ -1334,34 +1334,9 @@ SERVICE PRIMA MODERN
   line-height:1.9;
 }
 
-/* IMAGE */
-
-/* AREA KANAN */
-.prima-image{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.prima-image img{
-    width:115%;
-    max-width:1100px;
-    height:auto;
-    object-fit:contain;
-}
-
 /* ========================================
 SERVICE PRIMA FIX FULL DESKTOP
 ======================================== */
-
-.prima-image{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    padding-bottom:70px;
-}
 
 .prima-steps{
     position:absolute;
@@ -2046,25 +2021,6 @@ FIX POSISI GAMBAR SLIDE 3 4 5
   background-position:right bottom !important;
 }
 
-/* ========================================
-SERVICE PRIMA FIX FINAL
-======================================== */
-
-.prima-image{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.prima-image img{
-    width:100%;
-    max-width:900px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-}
-
 /* KOTAK BIRU */
 .prima-steps{
     position:relative;
@@ -2125,17 +2081,22 @@ SERVICE PRIMA FIX FINAL
         font-size:42px;
     }
 
-    .prima-image{
-        position:relative;
-        display:flex;
-        justify-content:center;
-        align-items:flex-end;
-    }
+prima-image{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+}
 
-    .prima-image img{
-        width:100%;
-        max-width:760px;
-    }
+
+.prima-image img{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
 
     .prima-steps{
         position:absolute;
@@ -2168,7 +2129,6 @@ HERO MODERN FINAL
 
 .hero-content{
     flex:1;
-}
 }
 
 /* =========================================================
