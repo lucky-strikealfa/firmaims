@@ -3421,3 +3421,29 @@ font-size:30px;
 }
 
 }
+
+/* =========================================================
+   DROPDOWN TOGGLE FIX COLOR
+========================================================= */
+
+.dropdown-toggle{
+  background: transparent;
+  border: none;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* saat normal, hover, focus, active */
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.dropdown-toggle:active{
+  color: #fff !important;
+  outline: none;
+}
+
+/* jika parent nav dark (header) */
+nav#menu .dropdown-toggle{
+  color: #fff !important;
+}
