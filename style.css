@@ -2573,6 +2573,14 @@ DROPDOWN MENU
 
 }
 
+.dropdown-toggle{
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+}
+
 /* ==========================================
 HALAMAN DETAIL LAYANAN
 ========================================== */
