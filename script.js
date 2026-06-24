@@ -14,37 +14,25 @@ if(form){
 
     msg.innerHTML = "⏳ Mengirim data...";
 
-const data = {
-  nama: form.nama.value,
-  email: form.email.value,
-  telp: form.telp.value,
-  subjek: form.subjek.value,
-  pesan: form.pesan.value
-};
+    const data = {
+      nama: form.nama.value,
+      email: form.email.value,
+      telp: form.telp.value,
+      subjek: form.subjek.value,
+      pesan: form.pesan.value
+    };
 
     try{
 
-  const response = await fetch(SCRIPT_URL,{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify(data)
-  });
+      await fetch(SCRIPT_URL,{
+        method:"POST",
+        mode:"no-cors",
+        body:JSON.stringify(data)
+      });
 
-  const result = await response.json();
+      msg.innerHTML = "✅ Data berhasil dikirim.";
 
-      if(result.result === "success"){
-
-        msg.innerHTML = "✅ Data berhasil dikirim.";
-
-        form.reset();
-
-      }else{
-
-        msg.innerHTML = "❌ Gagal mengirim data.";
-
-      }
+      form.reset();
 
     }catch(error){
 
@@ -57,7 +45,6 @@ const data = {
   });
 
 }
-
   // ================= SCROLL =================
   window.scrollToForm = function(){
     document.getElementById("kontak")?.scrollIntoView({
