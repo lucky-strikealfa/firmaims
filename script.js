@@ -205,9 +205,3 @@ if(dropdownToggle){
   });
 
 }
-
-const dropdownToggle = document.querySelector('.dropdown-toggle');
-
-dropdownToggle.addEventListener('click', function(e){
-  e.preventDefault();
-});
