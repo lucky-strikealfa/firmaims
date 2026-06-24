@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tanya Kami | PT Idola Makmur Solusindo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:#f7f9fc;
+}
+
+.page-header{
+    background:linear-gradient(135deg,#0f4c81,#1c6fb8);
+    color:white;
+    text-align:center;
+    padding:120px 20px 70px;
+}
+
+.page-header h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.page-header p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    opacity:.9;
+}
+
+.contact-section{
+    padding:80px 20px;
+}
+
+.contact-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.contact-info h2{
+    margin-bottom:25px;
+}
+
+.info-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.info-icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#0f4c81;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.info-text h4{
+    margin:0 0 5px;
+}
+
+.info-text p{
+    margin:0;
+    color:#666;
+    line-height:1.7;
+}
+
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.contact-form h2{
+    margin-bottom:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    box-sizing:border-box;
+}
+
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+.contact-form button{
+    background:#d62828;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp-box{
+    margin-top:25px;
+    background:#25D366;
+    color:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.whatsapp-box a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:991px){
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+.page-header h1{
+    font-size:36px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="page-header">
+
+<h1>Tanya Kami</h1>
+
+<p>
+Punya pertanyaan seputar perpajakan, akuntansi, atau bisnis?
+Tim konsultan kami siap membantu memberikan solusi terbaik untuk kebutuhan Anda.
+</p>
+
+</section>
+
+<section class="contact-section">
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h2>Informasi Kontak</h2>
+
+<div class="info-item">
+<div class="info-icon">📍</div>
+<div class="info-text">
+<h4>Alamat</h4>
+<p>
+Office Park Lantai 22 Suite E,F,G<br>
+Jl. TB Simatupang No.18<br>
+Jakarta Selatan
+</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="info-icon">📞</div>
+<div class="info-text">
+<h4>Telepon / WhatsApp</h4>
+<p>0821-2981-1869</p>
+</div>
+</div>
+
+<div class="info-item">
+<div class="info-icon">✉️</div>
+<div class="info-text">
+<h4>Email</h4>
+<p>info@imstax.co.id</p>
+</div>
+</div>
+
+<div class="whatsapp-box">
+Butuh respon lebih cepat?<br><br>
+
+<a href="https://wa.me/6282129811869" target="_blank">
+Chat WhatsApp Sekarang
+</a>
+
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<h2>Kirim Pertanyaan</h2>
+
+<form id="form">
+
+<input type="text" name="nama" placeholder="Nama Lengkap" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="tel" name="hp" placeholder="Nomor WhatsApp" required>
+
+<textarea name="pesan" placeholder="Tuliskan pertanyaan Anda"></textarea>
+
+<button type="submit">
+Kirim Pertanyaan
+</button>
+
+</form>
+
+<p id="msg"></p>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
