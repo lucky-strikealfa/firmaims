@@ -83,7 +83,7 @@ Silakan kirim pertanyaan Anda melalui form di bawah atau hubungi kami langsung.
 
 <h2>Form Pertanyaan</h2>
 
-<form action="https://formspree.io/f/your-id" method="POST">
+<form id="questionForm">
 
 <input type="text" name="nama" placeholder="Nama Lengkap" required>
 
@@ -96,6 +96,8 @@ Silakan kirim pertanyaan Anda melalui form di bawah atau hubungi kami langsung.
 <textarea name="pesan" rows="6" placeholder="Tulis pertanyaan Anda..." required></textarea>
 
 <button type="submit">Kirim Pertanyaan</button>
+
+  <p id="msg"></p>
 
 </form>
 
@@ -254,5 +256,64 @@ PT Idola Makmur Solusindo
 
 <script src="script.js"></script>
 
+<script>
+const form = document.getElementById("questionForm");
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  msg.innerHTML = "Mengirim pertanyaan...";
+
+  const data = {
+    nama: form.nama.value,
+    email: form.email.value,
+    telp: form.telp.value,
+    subjek: form.subjek.value,
+    pesan: form.pesan.value
+  };
+
+  try {
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbyU-JaanMbmptpMWWO2RTRtxROnur1xETytTqElS7cscTcG2xQibrcJwJTXLpHjp4uQ1A/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }
+    );
+
+    const result = await response.json();
+
+    if(result.result === "success"){
+
+      msg.style.color = "green";
+      msg.innerHTML = "✓ Pertanyaan berhasil dikirim";
+
+      form.reset();
+
+    }else{
+
+      msg.style.color = "red";
+      msg.innerHTML = "Gagal mengirim pertanyaan";
+
+    }
+
+  } catch(error){
+
+    msg.style.color = "red";
+    msg.innerHTML = "Terjadi kesalahan koneksi";
+
+    console.error(error);
+
+  }
+
+});
+</script>
+  
 </body>
 </html>
