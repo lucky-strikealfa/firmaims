@@ -24,8 +24,6 @@ const data = {
 
     try{
 
-     try{
-
   const response = await fetch(SCRIPT_URL,{
     method:"POST",
     headers:{
