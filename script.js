@@ -17,18 +17,24 @@ if(form){
 const data = {
   nama: form.nama.value,
   email: form.email.value,
-  hp: form.hp.value,
+  telp: form.telp.value,
+  subjek: form.subjek.value,
   pesan: form.pesan.value
 };
 
     try{
 
-      const response = await fetch(SCRIPT_URL,{
-        method:"POST",
-        body:JSON.stringify(data)
-      });
+     try{
 
-      const result = await response.json();
+  const response = await fetch(SCRIPT_URL,{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(data)
+  });
+
+  const result = await response.json();
 
       if(result.result === "success"){
 
