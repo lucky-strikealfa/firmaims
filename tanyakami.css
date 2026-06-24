@@ -375,3 +375,36 @@ nav a{
   display:inline-block;
   text-decoration:none;
 }
+
+/* ================= NAVBAR CTA BUTTON ================= */
+
+nav a{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+  white-space:nowrap; /* 🔥 penting agar tidak turun ke bawah */
+}
+
+/* tombol Tanya Kami */
+.nav-cta{
+  background:#0b1f3a;   /* biru profesional */
+  color:#fff !important;
+  padding:8px 16px;
+  border-radius:999px;  /* pill shape */
+  font-weight:500;
+  margin-left:10px;
+  transition:all 0.25s ease;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* hover */
+.nav-cta:hover{
+  background:#163a6b;
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* aktif tetap rapi */
+.nav-cta.active{
+  background:#163a6b;
+}
