@@ -1,1 +1,289 @@
+/* =========================================================
+TANYA KAMI PAGE
+========================================================= */
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f7f9fc;
+  color:#333;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.page-header{
+  background:linear-gradient(
+    135deg,
+    #0f4c81,
+    #1c6fb8
+  );
+  color:#fff;
+  text-align:center;
+  padding:130px 20px 90px;
+}
+
+.page-header h1{
+  font-size:48px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.page-header p{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  font-size:18px;
+  opacity:.95;
+}
+
+/* =========================================================
+CONTACT SECTION
+========================================================= */
+
+.contact-section{
+  padding:80px 20px;
+}
+
+.contact-container{
+  max-width:1200px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+/* =========================================================
+CONTACT INFO
+========================================================= */
+
+.contact-info{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contact-info h2{
+  margin-bottom:30px;
+  font-size:30px;
+  color:#0f4c81;
+}
+
+.info-item{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.info-icon{
+  width:55px;
+  height:55px;
+  flex-shrink:0;
+
+  border-radius:50%;
+
+  background:#0f4c81;
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:22px;
+}
+
+.info-text h4{
+  margin-bottom:5px;
+  color:#222;
+}
+
+.info-text p{
+  color:#666;
+  line-height:1.7;
+}
+
+/* =========================================================
+WHATSAPP BOX
+========================================================= */
+
+.whatsapp-box{
+  margin-top:30px;
+  background:#25D366;
+  color:#fff;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.whatsapp-box a{
+  display:inline-block;
+  margin-top:15px;
+
+  background:#fff;
+  color:#25D366;
+
+  padding:12px 24px;
+  border-radius:8px;
+
+  text-decoration:none;
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.whatsapp-box a:hover{
+  transform:translateY(-3px);
+}
+
+/* =========================================================
+FORM
+========================================================= */
+
+.contact-form{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contact-form h2{
+  margin-bottom:30px;
+  font-size:30px;
+  color:#0f4c81;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:15px;
+
+  border:1px solid #ddd;
+  border-radius:10px;
+
+  margin-bottom:15px;
+
+  font-size:15px;
+  font-family:'Poppins',sans-serif;
+
+  transition:.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:#0f4c81;
+}
+
+.contact-form textarea{
+  min-height:160px;
+  resize:vertical;
+}
+
+.contact-form button{
+  width:100%;
+
+  border:none;
+
+  background:#d62828;
+  color:#fff;
+
+  padding:16px;
+
+  border-radius:10px;
+
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.contact-form button:hover{
+  transform:translateY(-2px);
+  opacity:.95;
+}
+
+/* =========================================================
+MESSAGE
+========================================================= */
+
+#msg{
+  margin-top:15px;
+  font-weight:600;
+  text-align:center;
+}
+
+/* =========================================================
+MAP SECTION
+========================================================= */
+
+.map-section{
+  padding:0 20px 80px;
+}
+
+.map-container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.map-container iframe{
+  width:100%;
+  height:450px;
+
+  border:none;
+  border-radius:20px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:991px){
+
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .page-header{
+    padding:110px 20px 70px;
+  }
+
+  .page-header h1{
+    font-size:38px;
+  }
+
+  .page-header p{
+    font-size:16px;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .page-header h1{
+    font-size:32px;
+  }
+
+  .contact-info,
+  .contact-form{
+    padding:25px;
+  }
+
+  .contact-info h2,
+  .contact-form h2{
+    font-size:24px;
+  }
+
+}
