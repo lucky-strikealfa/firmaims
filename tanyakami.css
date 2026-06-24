@@ -287,3 +287,66 @@ RESPONSIVE
   }
 
 }
+
+.tanya-hero{
+  padding:120px 0 40px;
+  text-align:center;
+  background:#0b1f3a;
+  color:#fff;
+}
+
+.tanya-hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.tanya-hero p{
+  max-width:700px;
+  margin:auto;
+  opacity:0.85;
+}
+
+.tanya-section{
+  padding:60px 0;
+}
+
+.tanya-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:40px;
+}
+
+.tanya-form input,
+.tanya-form textarea{
+  width:100%;
+  margin-bottom:15px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.tanya-form button{
+  width:100%;
+  padding:12px;
+  background:#0b1f3a;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+}
+
+.tanya-side .box{
+  background:#f5f5f5;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:10px;
+}
+
+.btn-wa{
+  display:inline-block;
+  margin-top:10px;
+  background:#25D366;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:8px;
+  text-decoration:none;
+}
