@@ -3,9 +3,17 @@ SECTION
 ========================================== */
 
 .sengketa-section{
-    padding:90px 0;
+    background:#fff !important;
+    padding:100px 0;
 }
 
+.section-title{
+    background:transparent;
+}
+
+.sengketa-list{
+    margin-top:80px;
+}
 /* ==========================================
 LIST
 ========================================== */
