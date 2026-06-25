@@ -130,3 +130,32 @@ MOBILE
     }
 
 }
+
+/* ==========================================
+HERO PUTIH
+========================================== */
+
+.page-hero{
+    background:#fff !important;
+}
+
+.page-hero::before,
+.page-hero::after{
+    display:none !important;
+}
+
+.page-hero-content{
+    color:#111 !important;
+}
+
+.page-hero-content h1{
+    color:#0d2341 !important;
+}
+
+.page-hero-content p{
+    color:#555 !important;
+}
+
+.page-hero-content span{
+    color:#b71c1c !important;
+}
