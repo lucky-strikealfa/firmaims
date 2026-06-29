@@ -206,20 +206,21 @@ GRID
 }
 
 .service-box{
-    display:grid !important;
-    grid-template-columns:420px 1fr !important;
+    display:grid;
+    grid-template-columns:42% 58%;
+    gap:60px;
     align-items:center;
-    gap:50px;
 
-    position:relative;
     background:#fff;
     border-radius:25px;
-    padding:30px;
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
     overflow:hidden;
 }
 
 .service-box.reverse{
-    grid-template-columns:1fr 420px !important;
+    grid-template-columns:42% 58%;
 }
 
 .service-box.reverse .service-image{
@@ -235,79 +236,27 @@ GRID
 IMAGE
 ==========================================================*/
 
-.service-grid{
-    display:flex;
-    flex-direction:column;
-    gap:50px;
-}
-
-.service-box{
-
-    display:flex;
-    align-items:center;
-    gap:50px;
-
-    background:#fff;
-    border-radius:25px;
-    padding:35px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    overflow:hidden;
-}
-
-.service-box.reverse{
-
-    flex-direction:row-reverse;
-
-}
-
 .service-image{
-
-    flex:0 0 42%;
+    width:100%;
     overflow:hidden;
-    border-radius:18px;
-
+    border-radius:20px;
 }
 
 .service-image img{
-
     width:100%;
-    height:350px;
+    height:380px;
     object-fit:cover;
     display:block;
-    border-radius:18px;
+    border-radius:20px;
     transition:.4s;
-
 }
 
 .service-box:hover .service-image img{
-
     transform:scale(1.05);
-
 }
 
 .service-body{
-
-    flex:1;
-
-}
-
-@media(max-width:991px){
-
-.service-box,
-.service-box.reverse{
-
-    flex-direction:column;
-
-}
-
-.service-image{
-
     width:100%;
-
-}
-
 }
 
 /* ==========================================================
@@ -391,28 +340,43 @@ DECORATION
 RESPONSIVE
 ==========================================================*/
 @media(max-width:991px){
+
 .service-detail-hero{
-min-height:520px;
-padding:70px 0;
+    min-height:520px;
+    padding:70px 0;
 }
 
 .service-detail-hero h1{
-font-size:42px;
+    font-size:42px;
 }
 
 .service-detail-hero h1 span{
-font-size:28px;
-
+    font-size:28px;
 }
 
 .service-intro h2{
-font-size:34px;
-
+    font-size:34px;
 }
 
-.service-grid{
-grid-template-columns:1fr;
+/* SERVICE CARD */
+.service-box,
+.service-box.reverse{
+    grid-template-columns:1fr;
+    gap:30px;
+}
 
+.service-box.reverse .service-image,
+.service-box.reverse .service-body{
+    grid-column:auto;
+    grid-row:auto;
+}
+
+.service-image img{
+    height:300px;
+}
+
+.service-body{
+    padding:20px;
 }
 
 }
