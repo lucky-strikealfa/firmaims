@@ -200,16 +200,11 @@ GRID
 ==========================================================*/
 
 .service-grid{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
+    flex-direction:column;
     gap:35px;
 
 }
-
-
 
 /* ==========================================================
 CARD
@@ -217,16 +212,13 @@ CARD
 
 .service-box{
     display:grid;
-    grid-template-columns:420px 1fr;
+    grid-template-columns:430px 1fr;
     align-items:center;
     gap:50px;
     background:#fff;
-    border-radius:25px;
-    padding:30px;
-    margin-bottom:50px;
-
+    border-radius:35px;
+    padding:24px;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.35s;
 
 }
 
@@ -236,8 +228,6 @@ CARD
     box-shadow:0 25px 60px rgba(0,0,0,.15);
 }
 
-}
-
 .service-box.reverse .service-image{
     order:2;
 
@@ -245,8 +235,6 @@ CARD
 
 .service-box.reverse .service-body{
     order:1;
-
-}
 
 }
 
@@ -264,6 +252,7 @@ IMAGE
 ==========================================================*/
 
 .service-image{
+    position:relative;
     width:100%;
     overflow:hidden;
     border-radius:20px;
@@ -320,11 +309,8 @@ IMAGE
 }
 
 @media(max-width:991px){
-
 .service-box{
-
 grid-template-columns:1fr;
-
 gap:25px;
 
 }
@@ -402,7 +388,7 @@ DECORATION
     content:"";
     position:absolute;
     width:90px;
-    height:90px
+    height:90px;
     border-radius:50%;
     background:#0f4c81;
     opacity:.05;
@@ -452,8 +438,7 @@ grid-template-columns:1fr;
 
 }
 
-
-@media(max-width:768px)
+@media(max-width:768px){
 .service-detail-hero{
 text-align:center;
 }
