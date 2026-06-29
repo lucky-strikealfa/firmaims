@@ -602,6 +602,12 @@ VISION / SERVICE / PROFESSIONAL
 
 .vision-flex,
 .service-flex,
+.professional-flex{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
 
 .vision-image,
 .service-image,
@@ -1322,6 +1328,29 @@ SERVICE PRIMA MODERN
 /* ========================================
 SERVICE PRIMA FIX FULL DESKTOP
 ======================================== */
+
+.prima-step{
+    text-align:center;
+}
+
+.step-circle{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.prima-step h4{
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    line-height:1.4;
+    margin:0;
+}
+
+.prima-step p{
+    display:none;
+}
+
+
 /* ITEM */
 .prima-step{
     width:100%;
@@ -2156,6 +2185,15 @@ HERO IMAGE
 /* =====================================
 JUDUL HERO MODERN
 ===================================== */
+.hero-content h1{
+    font-size:clamp(48px, 4.5vw, 60px);
+    line-height:1.1 !important;
+    font-weight:800 !important;
+    letter-spacing:-2px !important;
+    color:#0f172a;
+    margin-bottom:25px;
+}
+
 .hero-content .dark{
     display:block;
     color:#0f172a;
@@ -2178,6 +2216,15 @@ JUDUL HERO MODERN
 /* =====================================
 JUDUL VISI PERUSAHAAN
 ===================================== */
+.vision-text h2{
+    font-size:56px !important;
+    line-height:1.1 !important;
+    font-weight:800 !important;
+    letter-spacing:-1px !important;
+    color:#0f172a;
+    margin-bottom:25px;
+}
+
 .vision-text h2 .blue{
     display:block;
     color:#2563eb;
@@ -2447,10 +2494,37 @@ SCROLL ANIMATION
 /* ==========================================
 DROPDOWN MENU
 ========================================== */
+
+.dropdown{
+  position:relative;
+}
+
 .dropdown-toggle{
   display:flex;
   align-items:center;
   gap:6px;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:50px;
+  left:0;
+
+  min-width:240px;
+
+  background:#fff;
+  border-radius:14px;
+
+  padding:10px 0;
+
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+
+  transition:.3s ease;
+  z-index:99999;
 }
 
 .dropdown-menu a{
@@ -2497,6 +2571,14 @@ DROPDOWN MENU
     color:#fff !important;
   }
 
+}
+
+.dropdown-toggle{
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
 }
 
 /* ==========================================
@@ -2920,6 +3002,11 @@ padding:70px 0 100px;
 background:#f8fafc;
 }
 
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
 .section-title span{
 display:inline-block;
 margin-bottom:10px;
@@ -3016,7 +3103,7 @@ line-height:1.8;
 color:rgba(255,255,255,.9);
 }
 
-.cta-accounting .btn-cta{
+.btn-cta{
 display:inline-flex;
 align-items:center;
 justify-content:center;
@@ -3079,6 +3166,13 @@ PELATIHAN PAJAK MODERN
 /* =========================================================
 INTRO
 ========================================================= */
+
+.service-intro{
+text-align:center;
+max-width:900px;
+margin:auto;
+padding-bottom:50px;
+}
 
 .service-intro h2{
 font-size:42px;
