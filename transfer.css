@@ -200,10 +200,9 @@ GRID
 ==========================================================*/
 
 .service-grid{
-    display:grid;
+    display:flex;
     flex-direction:column;
-    gap:35px;
-
+    gap:50px;
 }
 
 /* ==========================================================
@@ -211,6 +210,9 @@ CARD
 ==========================================================*/
 
 .service-box{
+
+    position:relative;
+    overflow:hidden;
     display:grid;
     grid-template-columns:430px 1fr;
     align-items:center;
@@ -226,16 +228,6 @@ CARD
 
     transform:translateY(-8px);
     box-shadow:0 25px 60px rgba(0,0,0,.15);
-}
-
-.service-box.reverse .service-image{
-    order:2;
-
-}
-
-.service-box.reverse .service-body{
-    order:1;
-
 }
 
 .service-box.reverse .service-image{
@@ -260,7 +252,7 @@ IMAGE
 
 .service-image img{
     width:100%;
-    height:330px;
+    height:360px;
     object-fit:cover;
     display:block;
     border-radius:18px;
