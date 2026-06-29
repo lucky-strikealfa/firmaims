@@ -1,1 +1,991 @@
+/* ==========================================================
+TRANSFER PRICING PAGE
+PT IDOLA MAKMUR SOLUSINDO
+PART 1
+==========================================================*/
+
+
+/* ==========================================================
+HERO
+==========================================================*/
+
+.service-detail-hero{
+
+    position:relative;
+
+    min-height:620px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(10,35,70,.72),rgba(10,35,70,.72)),
+    url("assets/transfer-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    color:#fff;
+
+    overflow:hidden;
+
+}
+
+.service-detail-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:50%;
+
+    right:-150px;
+
+    top:-120px;
+
+}
+
+.service-detail-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+
+    left:-80px;
+
+    bottom:-80px;
+
+}
+
+.service-detail-hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1180px;
+
+}
+
+.service-detail-hero span{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.service-detail-hero h1{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.service-detail-hero h1 span{
+
+    background:none;
+
+    padding:0;
+
+    color:#9fd0ff;
+
+    font-size:34px;
+
+    font-weight:500;
+
+}
+
+.service-detail-hero p{
+
+    max-width:760px;
+
+    line-height:2;
+
+    font-size:18px;
+
+    color:#f1f1f1;
+
+}
+
+
+
+/* ==========================================================
+SERVICE CONTENT
+==========================================================*/
+
+.service-content{
+
+    padding:100px 20px;
+
+    background:#f7f9fc;
+
+}
+
+
+
+/* ==========================================================
+INTRO
+==========================================================*/
+
+.service-intro{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 80px;
+
+}
+
+.service-intro h2{
+
+    font-size:42px;
+
+    color:#0f4c81;
+
+    margin-bottom:25px;
+
+}
+
+.service-intro p{
+
+    color:#666;
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+
+
+/* ==========================================================
+GRID
+==========================================================*/
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+/* ==========================================================
+CARD
+==========================================================*/
+
+.service-box{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    position:relative;
+
+}
+
+.service-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.15);
+
+}
+
+
+
+/* ==========================================================
+IMAGE
+==========================================================*/
+
+.service-image{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.service-image img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.service-box:hover .service-image img{
+
+    transform:scale(1.08);
+
+}
+
+.service-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to top,
+    rgba(0,0,0,.15),
+    transparent);
+
+}
+
+
+
+/* ==========================================================
+BODY
+==========================================================*/
+
+.service-body{
+
+    padding:30px;
+
+}
+
+.service-body h3{
+
+    font-size:25px;
+
+    color:#0f4c81;
+
+    margin-bottom:18px;
+
+}
+
+.service-body p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ==========================================================
+LIST
+==========================================================*/
+
+.service-body ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.service-body li{
+
+    position:relative;
+
+    padding-left:28px;
+
+    margin-bottom:14px;
+
+    color:#444;
+
+    line-height:1.8;
+
+}
+
+.service-body li::before{
+
+    content:"✔";
+
+    position:absolute;
+
+    left:0;
+
+    color:#0f4c81;
+
+    font-weight:bold;
+
+}
+
+
+
+/* ==========================================================
+DECORATION
+==========================================================*/
+
+.service-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#0f4c81;
+
+    opacity:.05;
+
+    top:-20px;
+
+    right:-20px;
+
+}
+
+.service-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#d62828;
+
+    opacity:.06;
+
+    left:-15px;
+
+    bottom:-15px;
+
+}
+
+
+
+/* ==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media(max-width:991px){
+
+.service-detail-hero{
+
+min-height:520px;
+
+padding:70px 0;
+
+}
+
+.service-detail-hero h1{
+
+font-size:42px;
+
+}
+
+.service-detail-hero h1 span{
+
+font-size:28px;
+
+}
+
+.service-intro h2{
+
+font-size:34px;
+
+}
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.service-detail-hero{
+
+text-align:center;
+
+}
+
+.service-detail-hero h1{
+
+font-size:34px;
+
+}
+
+.service-detail-hero h1 span{
+
+font-size:24px;
+
+}
+
+.service-detail-hero p{
+
+font-size:16px;
+
+}
+
+.service-intro{
+
+margin-bottom:50px;
+
+}
+
+.service-intro h2{
+
+font-size:30px;
+
+}
+
+.service-body{
+
+padding:25px;
+
+}
+
+.service-body h3{
+
+font-size:22px;
+
+}
+
+.service-image img{
+
+height:220px;
+
+}
+
+}
+
+/* ==========================================================
+TRANSFER PRICING PAGE
+PART 2
+COMMITMENT
+CTA
+ANIMATION
+==========================================================*/
+
+
+/* ==========================================================
+COMMITMENT
+==========================================================*/
+
+.commitment{
+
+    margin-top:100px;
+
+    padding:70px;
+
+    border-radius:28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+    linear-gradient(135deg,#0f4c81,#123a67,#1b5c9b);
+
+    box-shadow:0 25px 60px rgba(15,76,129,.25);
+
+}
+
+.commitment::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-150px;
+
+    right:-120px;
+
+}
+
+.commitment::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    left:-80px;
+
+    bottom:-80px;
+
+}
+
+.commitment h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+.commitment p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:2;
+
+    font-size:18px;
+
+    color:#eef4ff;
+
+}
+
+
+
+/* ==========================================================
+CTA SECTION
+==========================================================*/
+
+.transfer-cta{
+
+    margin-top:100px;
+
+    padding:120px 20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(rgba(7,35,70,.82),rgba(7,35,70,.82)),
+    url("assets/transfer-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:#fff;
+
+}
+
+.transfer-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(45deg,
+    rgba(255,255,255,.04),
+    transparent);
+
+}
+
+.transfer-cta .cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.transfer-cta h2{
+
+    font-size:44px;
+
+    margin-bottom:20px;
+
+}
+
+.transfer-cta p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+    color:#f3f3f3;
+
+}
+
+
+
+/* ==========================================================
+BUTTON
+==========================================================*/
+
+.transfer-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:#fff;
+
+    color:#0f4c81;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
+
+}
+
+.transfer-btn:hover{
+
+    transform:translateY(-6px);
+
+    background:#d62828;
+
+    color:#fff;
+
+}
+
+
+
+/* ==========================================================
+SCROLL ANIMATION
+==========================================================*/
+
+.service-box{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.service-box:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.service-box:nth-child(3){
+
+    animation-delay:.30s;
+
+}
+
+.service-box:nth-child(4){
+
+    animation-delay:.45s;
+
+}
+
+.service-box:nth-child(5){
+
+    animation-delay:.60s;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* ==========================================================
+SMOOTH IMAGE
+==========================================================*/
+
+.service-image img{
+
+    filter:brightness(.98);
+
+}
+
+.service-box:hover .service-image img{
+
+    filter:brightness(1.05);
+
+}
+
+
+
+/* ==========================================================
+CUSTOM SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eef3f8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#0f4c81;
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#0b3559;
+
+}
+
+
+
+/* ==========================================================
+TABLET
+==========================================================*/
+
+@media(max-width:991px){
+
+.commitment{
+
+padding:50px 35px;
+
+}
+
+.commitment h2{
+
+font-size:34px;
+
+}
+
+.transfer-cta{
+
+padding:90px 20px;
+
+}
+
+.transfer-cta h2{
+
+font-size:34px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:768px){
+
+.commitment{
+
+padding:40px 25px;
+
+margin-top:70px;
+
+}
+
+.commitment h2{
+
+font-size:28px;
+
+}
+
+.commitment p{
+
+font-size:16px;
+
+line-height:1.9;
+
+}
+
+.transfer-cta{
+
+padding:70px 20px;
+
+border-radius:20px;
+
+}
+
+.transfer-cta h2{
+
+font-size:28px;
+
+}
+
+.transfer-cta p{
+
+font-size:16px;
+
+}
+
+.transfer-btn{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+}
+
+
+
+/* ==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media(max-width:480px){
+
+.service-content{
+
+padding:70px 15px;
+
+}
+
+.service-body{
+
+padding:22px;
+
+}
+
+.service-body h3{
+
+font-size:20px;
+
+}
+
+.service-body li{
+
+font-size:15px;
+
+}
+
+.commitment{
+
+border-radius:18px;
+
+}
+
+.transfer-cta{
+
+border-radius:18px;
+
+}
+
+}
+
+
 
