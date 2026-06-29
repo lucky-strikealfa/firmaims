@@ -199,44 +199,36 @@ INTRO
 GRID
 ==========================================================*/
 
-.service-grid{
+.s.service-grid{
     display:flex;
     flex-direction:column;
     gap:50px;
 }
 
-/* ==========================================================
-CARD
-==========================================================*/
-
 .service-box{
-
-    position:relative;
-    overflow:hidden;
-    display:grid;
-    grid-template-columns:430px 1fr;
+    display:grid !important;
+    grid-template-columns:420px 1fr !important;
     align-items:center;
     gap:50px;
-    background:#fff;
-    border-radius:35px;
-    padding:24px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
+    position:relative;
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    overflow:hidden;
 }
 
-.service-box:hover{
-
-    transform:translateY(-8px);
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
+.service-box.reverse{
+    grid-template-columns:1fr 420px !important;
 }
 
 .service-box.reverse .service-image{
-    order:2;
+    grid-column:2;
 }
 
 .service-box.reverse .service-body{
-    order:1;
-
+    grid-column:1;
+    grid-row:1;
 }
 
 /* ==========================================================
@@ -301,23 +293,19 @@ IMAGE
 }
 
 @media(max-width:991px){
-.service-box{
-grid-template-columns:1fr;
-gap:25px;
+
+.service-box,
+.service-box.reverse{
+
+grid-template-columns:1fr !important;
 
 }
 
 .service-box.reverse .service-image,
-
 .service-box.reverse .service-body{
 
-order:unset;
-
-}
-
-.service-image img{
-
-height:260px;
+grid-column:auto;
+grid-row:auto;
 
 }
 
