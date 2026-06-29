@@ -217,236 +217,168 @@ CARD
 
 .service-box{
 
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    align-items:center;
+
+    gap:40px;
+
     background:#fff;
 
-    border-radius:22px;
+    border-radius:24px;
 
-    overflow:hidden;
+    padding:25px;
+
+    margin-bottom:45px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
     transition:.35s;
-
-    box-shadow:0 15px 45px rgba(0,0,0,.08);
-
-    position:relative;
 
 }
 
 .service-box:hover{
 
-    transform:translateY(-10px);
-
-    box-shadow:0 30px 70px rgba(0,0,0,.15);
-
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
 }
-
-
 
 /* ==========================================================
 IMAGE
 ==========================================================*/
 
 .service-image{
-
+    width:100%;
     overflow:hidden;
-
-    position:relative;
-
+    border-radius:20px;
 }
 
 .service-image img{
-
     width:100%;
-
-    height:260px;
-
+    height:320px;
     object-fit:cover;
-
+    display:block;
     transition:.5s;
-
 }
 
 .service-box:hover .service-image img{
-
     transform:scale(1.08);
 
 }
 
 .service-image::after{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:linear-gradient(to top,
     rgba(0,0,0,.15),
     transparent);
 
 }
 
-
-
 /* ==========================================================
 BODY
 ==========================================================*/
 
 .service-body{
-
     padding:30px;
-
 }
 
 .service-body h3{
-
     font-size:25px;
-
     color:#0f4c81;
-
     margin-bottom:18px;
 
 }
 
 .service-body p{
-
     color:#666;
-
     line-height:1.9;
-
     margin-bottom:20px;
 
 }
-
-
 
 /* ==========================================================
 LIST
 ==========================================================*/
 
 .service-body ul{
-
     list-style:none;
-
     padding:0;
-
     margin:0;
-
 }
 
 .service-body li{
-
     position:relative;
-
     padding-left:28px;
-
     margin-bottom:14px;
-
     color:#444;
-
     line-height:1.8;
 
 }
 
 .service-body li::before{
-
     content:"✔";
-
     position:absolute;
-
     left:0;
-
     color:#0f4c81;
-
     font-weight:bold;
-
 }
-
-
 
 /* ==========================================================
 DECORATION
 ==========================================================*/
 
 .service-box::before{
-
     content:"";
-
     position:absolute;
-
     width:90px;
-
-    height:90px;
-
+    height:90px
     border-radius:50%;
-
     background:#0f4c81;
-
     opacity:.05;
-
     top:-20px;
-
     right:-20px;
-
 }
 
 .service-box::after{
-
     content:"";
-
     position:absolute;
-
     width:70px;
-
     height:70px;
-
     border-radius:50%;
-
     background:#d62828;
-
     opacity:.06;
-
     left:-15px;
-
     bottom:-15px;
-
 }
-
-
 
 /* ==========================================================
 RESPONSIVE
 ==========================================================*/
-
 @media(max-width:991px){
-
 .service-detail-hero{
-
 min-height:520px;
-
 padding:70px 0;
-
 }
 
 .service-detail-hero h1{
-
 font-size:42px;
-
 }
 
 .service-detail-hero h1 span{
-
 font-size:28px;
 
 }
 
 .service-intro h2{
-
 font-size:34px;
 
 }
 
 .service-grid{
-
 grid-template-columns:1fr;
 
 }
@@ -454,23 +386,17 @@ grid-template-columns:1fr;
 }
 
 
-
-@media(max-width:768px){
-
+@media(max-width:768px)
 .service-detail-hero{
-
 text-align:center;
-
 }
 
 .service-detail-hero h1{
-
 font-size:34px;
 
 }
 
 .service-detail-hero h1 span{
-
 font-size:24px;
 
 }
