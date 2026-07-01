@@ -265,7 +265,7 @@ BODY
 ==========================================================*/
 
 .service-body{
-    padding:30px;
+    padding:15px;
 }
 
 .service-body h3{
@@ -276,8 +276,9 @@ BODY
 }
 
 .service-body p{
+    ont-size:18px;
     color:#666;
-    line-height:1.9;
+    line-height:2;
     margin-bottom:20px;
 
 }
@@ -802,7 +803,6 @@ font-size:34px;
 }
 
 }
-
 
 
 /* ==========================================================
