@@ -132,30 +132,332 @@ MOBILE
 }
 
 /* ==========================================
-HERO PUTIH
-========================================== */
+HERO SENGKETA MODERN
+==========================================*/
 
 .page-hero{
-    background:#fff !important;
+
+    padding:110px 0;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fcfcfc,
+        #fff7f7
+    );
+
+    overflow:hidden;
+
+    position:relative;
+
 }
 
-.page-hero::before,
+.page-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:rgba(183,28,28,.05);
+
+    right:-220px;
+
+    top:-220px;
+
+}
+
 .page-hero::after{
-    display:none !important;
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:rgba(13,35,65,.04);
+
+    left:-120px;
+
+    bottom:-120px;
+
 }
 
-.page-hero-content{
-    color:#111 !important;
+.hero-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
 }
 
-.page-hero-content h1{
-    color:#0d2341 !important;
+.hero-badge{
+
+    display:inline-block;
+
+    background:#ffeaea;
+
+    color:#b71c1c;
+
+    padding:9px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+
 }
 
-.page-hero-content p{
-    color:#555 !important;
+.hero-content h1{
+
+    font-size:56px;
+
+    color:#0d2341;
+
+    line-height:1.15;
+
+    margin-bottom:22px;
+
+    font-weight:800;
+
 }
 
-.page-hero-content span{
-    color:#b71c1c !important;
+.hero-content h1 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:38px;
+
+    color:#b71c1c;
+
+}
+
+.hero-content p{
+
+    color:#5d6775;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-btn{
+
+    padding:16px 34px;
+
+    background:#b71c1c;
+
+    color:#fff;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(183,28,28,.25);
+
+}
+
+.hero-btn-outline{
+
+    padding:16px 34px;
+
+    border:2px solid #b71c1c;
+
+    color:#b71c1c;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero-btn-outline:hover{
+
+    background:#b71c1c;
+
+    color:#fff;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:560px;
+
+    border-radius:28px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.hero-card{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:-40px;
+
+    background:#fff;
+
+    padding:22px 28px;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.hero-card strong{
+
+    display:block;
+
+    color:#b71c1c;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.hero-card span{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+@media(max-width:991px){
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-image{
+
+    margin-top:40px;
+
+}
+
+.hero-card{
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+.hero-content h1 span{
+
+    font-size:28px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.hero-image img{
+
+    max-width:360px;
+
+}
+
+.hero-card{
+
+    position:relative;
+
+    left:auto;
+
+    transform:none;
+
+    margin:20px auto 0;
+
+    width:240px;
+
+}
+
 }
