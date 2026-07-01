@@ -1,9 +1,3 @@
-/* ==========================================================
-TRANSFER PRICING PAGE
-PT IDOLA MAKMUR SOLUSINDO
-PART 1
-==========================================================*/
-
 
 /* ==========================================================
 HERO
@@ -86,21 +80,13 @@ HERO
 }
 
 .service-detail-hero span{
-
     display:inline-block;
-
     background:rgba(255,255,255,.15);
-
     padding:10px 20px;
-
     border-radius:30px;
-
     font-size:14px;
-
     letter-spacing:1px;
-
-    margin-bottom:25px;
-
+    margin-bottom:25px
     backdrop-filter:blur(8px);
 
 }
@@ -108,11 +94,8 @@ HERO
 .service-detail-hero h1{
 
     font-size:56px;
-
     font-weight:700;
-
     line-height:1.2;
-
     margin-bottom:25px;
 
 }
@@ -120,13 +103,9 @@ HERO
 .service-detail-hero h1 span{
 
     background:none;
-
     padding:0;
-
     color:#9fd0ff;
-
     font-size:34px;
-
     font-weight:500;
 
 }
@@ -134,11 +113,8 @@ HERO
 .service-detail-hero p{
 
     max-width:760px;
-
     line-height:2;
-
     font-size:18px;
-
     color:#f1f1f1;
 
 }
@@ -152,7 +128,6 @@ SERVICE CONTENT
 .service-content{
 
     padding:100px 20px;
-
     background:#f7f9fc;
 
 }
@@ -166,9 +141,7 @@ INTRO
 .service-intro{
 
     text-align:center;
-
     max-width:900px;
-
     margin:0 auto 80px;
 
 }
@@ -176,9 +149,7 @@ INTRO
 .service-intro h2{
 
     font-size:42px;
-
     color:#0f4c81;
-
     margin-bottom:25px;
 
 }
@@ -186,9 +157,7 @@ INTRO
 .service-intro p{
 
     color:#666;
-
     line-height:2;
-
     font-size:17px;
 
 }
@@ -448,19 +417,12 @@ COMMITMENT
 .commitment{
 
     margin-top:100px;
-
     padding:70px;
-
     border-radius:28px;
-
     position:relative;
-
     overflow:hidden;
-
     text-align:center;
-
     color:#fff;
-
     background:
     linear-gradient(135deg,#0f4c81,#123a67,#1b5c9b);
 
@@ -471,19 +433,12 @@ COMMITMENT
 .commitment::before{
 
     content:"";
-
     position:absolute;
-
     width:320px;
-
     height:320px;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     top:-150px;
-
     right:-120px;
 
 }
@@ -491,19 +446,12 @@ COMMITMENT
 .commitment::after{
 
     content:"";
-
     position:absolute;
-
     width:220px;
-
     height:220px;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.06);
-
     left:-80px;
-
     bottom:-80px;
 
 }
@@ -511,13 +459,9 @@ COMMITMENT
 .commitment h2{
 
     position:relative;
-
     z-index:2;
-
     font-size:42px;
-
     margin-bottom:25px;
-
     font-weight:700;
 
 }
@@ -525,17 +469,11 @@ COMMITMENT
 .commitment p{
 
     position:relative;
-
     z-index:2;
-
     max-width:900px;
-
     margin:auto;
-
     line-height:2;
-
     font-size:18px;
-
     color:#eef4ff;
 
 }
@@ -549,25 +487,16 @@ CTA SECTION
 .transfer-cta{
 
     margin-top:100px;
-
     padding:120px 20px;
-
     position:relative;
-
     overflow:hidden;
-
     text-align:center;
-
     border-radius:30px;
-
     background:
     linear-gradient(rgba(7,35,70,.82),rgba(7,35,70,.82)),
     url("assets/transfer-banner.jpg");
-
     background-size:cover;
-
     background-position:center;
-
     color:#fff;
 
 }
