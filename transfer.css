@@ -172,15 +172,17 @@ GRID
 }
 
 .service-box{
-display:grid !important;
-grid-template-columns:45% 55% !important;
-align-items:center;
-gap:50px;
-padding:40px;
-background:#fff;
-border-radius:25px;
-margin-bottom:60px;
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+    position:relative;
+    display:grid;
+    grid-template-columns:45% 55%;
+    align-items:center;
+    gap:50px;
+    padding:40px;
+    background:#fff;
+    border-radius:25px;
+    margin-bottom:60px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
 .service-box.reverse .service-image{
@@ -209,6 +211,7 @@ IMAGE
     display:block;
     border-radius:20px;
     transition:.45s;
+    filter:brightness(.98);
 }
 
 .service-box:hover .service-image img{
@@ -217,13 +220,6 @@ IMAGE
 
 .service-body{
     width:100%;
-}
-
-/* ==========================================================
-BODY
-==========================================================*/
-
-.service-body{
     padding:15px;
 }
 
