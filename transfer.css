@@ -8,8 +8,7 @@ HERO
     min-height:620px;
     display:flex;
     align-items:center;
-    background:
-    linear-gradient(rgba(10,35,70,.72),rgba(10,35,70,.72)),
+    background:#f2f5fa;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     url("assets/transfer-hero.jpg");
     background-size:cover;
     background-position:center;
@@ -22,9 +21,9 @@ HERO
 .service-detail-hero::before{
     content:"";
     position:absolute;
-    width:450px;
-    height:450px;
-    background:rgba(255,255,255,.05);
+    width:260px;
+    height:260px;
+    background:#eef2f7;
     border-radius:50%;
     right:-150px;
     top:-120px;
