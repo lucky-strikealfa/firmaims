@@ -220,10 +220,6 @@ GRID
     0 10px 30px rgba(0,0,0,.08);
 }
 
-.service-box.reverse{
-    grid-template-columns:42% 58%;
-}
-
 .service-box.reverse .service-image{
     grid-column:2;
 }
@@ -276,7 +272,7 @@ BODY
 }
 
 .service-body p{
-    ont-size:18px;
+    font-size:18px;
     color:#666;
     line-height:2;
     margin-bottom:20px;
