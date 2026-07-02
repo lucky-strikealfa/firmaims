@@ -385,107 +385,378 @@ MOBILE
 
 }
 
-/* =====================================
-KOMITMEN ORNAMEN
-===================================== */
+/* =====================================================
+KOMITMEN KAMI
+===================================================== */
 
 .commitment-section{
+
     position:relative;
-    padding:90px 40px;
+
+    max-width:1200px;
+
+    margin:90px auto;
+
     overflow:hidden;
+
     border-radius:28px;
-    background:
-    linear-gradient(
+
+    background:linear-gradient(
     135deg,
-    #7c1f55 0%,
-    #9b174d 55%,
-    #b41445 100%
+    #6d123d 0%,
+    #8d1647 45%,
+    #b0164c 100%
     );
 
+    padding:70px;
+
     box-shadow:
-    0 30px 70px rgba(124,31,85,.18);
+    0 25px 60px rgba(124,31,85,.22);
 
 }
 
+/* ===========================
+ORNAMEN
+=========================== */
+
 .commitment-section::before{
+
     content:"";
+
     position:absolute;
+
     width:520px;
+
     height:520px;
+
     border-radius:50%;
+
     background:
+
     radial-gradient(
-        circle,
-        rgba(255,255,255,.12),
+
+        rgba(255,255,255,.15),
+
         transparent 70%
+
     );
 
-    top:-260px;
+    right:-220px;
 
-    right:-170px;
+    top:-230px;
 
 }
 
 .commitment-section::after{
+
     content:"";
+
     position:absolute;
-    width:340px;
-    height:340px;
+
+    width:350px;
+
+    height:350px;
+
     border-radius:50%;
+
     background:
+
     radial-gradient(
-        circle,
+
         rgba(255,255,255,.08),
+
         transparent 70%
+
     );
 
+    left:-180px;
+
     bottom:-180px;
-    left:-120px;
 
 }
 
+/* ===========================
+GARIS
+=========================== */
+
 .commitment-decoration{
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
 
 }
 
 .commitment-decoration span{
-    position:absolute;
-    width:2px;
-    height:260px;
-    background:
-    linear-gradient(
-        transparent,
-        rgba(255,255,255,.15),
-        transparent
 
-    );
+position:absolute;
 
-    transform:rotate(35deg);
+width:2px;
+
+height:250px;
+
+background:
+
+linear-gradient(
+
+transparent,
+
+rgba(255,255,255,.18),
+
+transparent
+
+);
+
+transform:rotate(35deg);
 
 }
 
 .commitment-decoration span:nth-child(1){
 
-    right:90px;
-    top:-40px;
+right:120px;
+
+top:-30px;
 
 }
 
 .commitment-decoration span:nth-child(2){
 
-    right:170px;
-    top:70px;
+right:210px;
+
+top:90px;
 
 }
 
 .commitment-decoration span:nth-child(3){
 
-    left:80px;
-    bottom:-20px;
+left:70px;
+
+bottom:-50px;
 
 }
 
+/* ===========================
+DOTS
+=========================== */
+
+.commitment-dots{
+
+position:absolute;
+
+right:90px;
+
+top:70px;
+
+width:90px;
+
+height:90px;
+
+opacity:.22;
+
+background-image:
+
+radial-gradient(
+
+#fff 2px,
+
+transparent 2px
+
+);
+
+background-size:18px 18px;
+
+}
+
+/* ===========================
+CONTENT
+=========================== */
+
+.commitment-content{
+
+position:relative;
+
+z-index:10;
+
+}
+
+.commitment-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:10px 22px;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.15);
+
+color:#fff;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+margin-bottom:24px;
+
+}
+
+.commitment-content h2{
+
+font-size:58px;
+
+font-weight:800;
+
+color:#fff;
+
+margin-bottom:22px;
+
+line-height:1.1;
+
+}
+
+.commitment-content h2::after{
+
+content:"";
+
+display:block;
+
+margin-top:18px;
+
+width:80px;
+
+height:5px;
+
+border-radius:20px;
+
+background:#ff6b93;
+
+}
+
+.commitment-content p{
+
+font-size:20px;
+
+line-height:2;
+
+color:rgba(255,255,255,.94);
+
+max-width:850px;
+
+margin-bottom:45px;
+
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.commitment-list{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+}
+
+.commitment-list .item{
+
+padding:28px 22px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(10px);
+
+color:#fff;
+
+font-weight:600;
+
+font-size:17px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.commitment-list .item:hover{
+
+transform:translateY(-10px);
+
+background:rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+.commitment-section{
+
+padding:45px;
+
+}
+
+.commitment-content h2{
+
+font-size:42px;
+
+}
+
+.commitment-content p{
+
+font-size:17px;
+
+}
+
+.commitment-list{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.commitment-section{
+
+padding:35px 25px;
+
+}
+
+.commitment-content h2{
+
+font-size:32px;
+
+}
+
+.commitment-content p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.commitment-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
