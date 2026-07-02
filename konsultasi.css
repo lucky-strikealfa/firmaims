@@ -225,117 +225,75 @@ HERO 2 KOLOM
 }
 
 .hero-badge{
-
     display:inline-block;
-
     padding:8px 18px;
-
     background:#edf4ff;
-
     color:#2554ff;
-
     border-radius:30px;
-
     font-size:13px;
-
     font-weight:700;
-
     letter-spacing:1px;
-
     margin-bottom:22px;
 
 }
 
 .hero-content h1{
-
     font-size:58px;
-
     line-height:1.15;
-
     font-weight:800;
-
     color:#0f172a;
-
     margin-bottom:22px;
 
 }
 
 .hero-content h1 span{
-
     display:block;
-
     color:#2554ff;
-
     font-size:42px;
-
     margin-top:10px;
 
 }
 
 .hero-content p{
-
     font-size:18px;
-
     line-height:1.9;
-
     color:#64748b;
-
     margin-bottom:35px;
 
 }
 
 .hero-btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:16px 34px;
-
     background:#2554ff;
-
     color:#fff;
-
     border-radius:50px;
-
     text-decoration:none;
-
     font-weight:600;
-
     transition:.3s;
 
 }
 
 .hero-btn:hover{
-
     transform:translateY(-5px);
-
     box-shadow:0 15px 35px rgba(37,84,255,.25);
 
 }
 
 .hero-image{
-
     position:relative;
-
     display:flex;
-
     justify-content:center;
 
 }
 
 .hero-image::before{
-
     content:"";
-
     position:absolute;
-
     width:420px;
-
     height:420px;
-
     background:linear-gradient(
         135deg,
         #2554ff,
@@ -343,9 +301,7 @@ HERO 2 KOLOM
     );
 
     opacity:.08;
-
     border-radius:35px;
-
     transform:rotate(-8deg);
 
 }
@@ -353,21 +309,15 @@ HERO 2 KOLOM
 .hero-image img{
 
     position:relative;
-
     width:100%;
-
     max-width:560px;
-
     border-radius:30px;
-
     box-shadow:0 30px 60px rgba(0,0,0,.15);
-
     transition:.4s;
 
 }
 
 .hero-image img:hover{
-
     transform:translateY(-8px);
 
 }
@@ -381,25 +331,21 @@ TABLET
 .hero-grid{
 
     grid-template-columns:1fr;
-
     text-align:center;
 
 }
 
 .hero-content{
-
-    margin:auto;
+   margin:auto;
 
 }
 
 .hero-content h1{
-
     font-size:44px;
 
 }
 
 .hero-content h1 span{
-
     font-size:34px;
 
 }
@@ -417,29 +363,129 @@ MOBILE
 ======================*/
 
 @media(max-width:768px){
-
 .hero-content h1{
-
     font-size:34px;
 
 }
 
 .hero-content h1 span{
-
     font-size:28px;
 
 }
 
 .hero-content p{
-
     font-size:16px;
 
 }
 
 .hero-image img{
-
     max-width:340px;
 
 }
 
 }
+
+/* =====================================
+KOMITMEN ORNAMEN
+===================================== */
+
+.commitment-section{
+    position:relative;
+    padding:90px 40px;
+    overflow:hidden;
+    border-radius:28px;
+    background:
+    linear-gradient(
+    135deg,
+    #7c1f55 0%,
+    #9b174d 55%,
+    #b41445 100%
+    );
+
+    box-shadow:
+    0 30px 70px rgba(124,31,85,.18);
+
+}
+
+.commitment-section::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.12),
+        transparent 70%
+    );
+
+    top:-260px;
+
+    right:-170px;
+
+}
+
+.commitment-section::after{
+    content:"";
+    position:absolute;
+    width:340px;
+    height:340px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.08),
+        transparent 70%
+    );
+
+    bottom:-180px;
+    left:-120px;
+
+}
+
+.commitment-decoration{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+
+}
+
+.commitment-decoration span{
+    position:absolute;
+    width:2px;
+    height:260px;
+    background:
+    linear-gradient(
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+
+    );
+
+    transform:rotate(35deg);
+
+}
+
+.commitment-decoration span:nth-child(1){
+
+    right:90px;
+    top:-40px;
+
+}
+
+.commitment-decoration span:nth-child(2){
+
+    right:170px;
+    top:70px;
+
+}
+
+.commitment-decoration span:nth-child(3){
+
+    left:80px;
+    bottom:-20px;
+
+}
+
