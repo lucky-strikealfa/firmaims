@@ -1,3 +1,38 @@
+/* ======================================================
+RESET
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f7faff;
+    color:#1b2430;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
 /* ==========================================================
    TENTANG FIRMA
    PT IDOLA MAKMUR SOLUSINDO
@@ -55,78 +90,52 @@ margin:auto;
 /*==========================================================
 HEADER
 ==========================================================*/
-
 .profile-header{
-
+max-width:900px;
+margin:0 auto 90px;
 text-align:center;
-
-max-width:850px;
-
-margin:0 auto 70px;
-
 }
 
 .section-badge{
-
-display:inline-block;
-
-padding:10px 22px;
-
-border-radius:50px;
-
-background:#eaf1ff;
-
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 28px;
+background:#eef4ff;
 color:var(--primary);
-
-font-size:.90rem;
-
+border-radius:50px;
+font-size:15px;
 font-weight:700;
-
-margin-bottom:20px;
-
-letter-spacing:.5px;
+margin-bottom:25px;
 
 }
 
 .profile-header h2{
-
-font-size:clamp(2rem,4vw,3.2rem);
-
-line-height:1.2;
-
-color:var(--dark);
-
-margin-bottom:25px;
-
-font-weight:700;
+font-size:clamp(38px,5vw,58px);
+font-weight:800;
+line-height:1.15;
+margin-bottom:28px;
+color:#1b2430;
 
 }
 
 .profile-header p{
-
-font-size:1.08rem;
-
-line-height:1.9;
-
-color:var(--text);
+font-size:18px;
+line-height:2;
+color:#5d6677;
+max-width:850px;
+margin:auto;
 
 }
-
 
 /*==========================================================
 GRID
 ==========================================================*/
-
 .profile-content{
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:70px;
-
 align-items:center;
-
 margin-bottom:90px;
 
 }
@@ -135,30 +144,22 @@ margin-bottom:90px;
 /*==========================================================
 IMAGE
 ==========================================================*/
-
 .profile-image{
-
 position:relative;
 
 }
 
 .profile-image img{
-
 width:100%;
-
-display:block;
-
-border-radius:26px;
-
-box-shadow:var(--shadow);
-
-transition:var(--transition);
+border-radius:30px;
+box-shadow:
+0 35px 80px rgba(0,0,0,.15);
+transition:.45s;
 
 }
 
 .profile-image img:hover{
-
-transform:translateY(-8px);
+transform:scale(1.03);
 
 }
 
@@ -166,74 +167,52 @@ transform:translateY(-8px);
 /*==========================================================
 TEXT
 ==========================================================*/
-
 .profile-text{
-
 display:flex;
-
 flex-direction:column;
-
 gap:25px;
 
 }
 
 .profile-card{
-
 background:var(--white);
-
 padding:35px;
-
 border-radius:var(--radius);
-
 box-shadow:var(--shadow);
-
 border:1px solid rgba(31,94,255,.08);
-
 transition:var(--transition);
 
 }
 
 .profile-card:hover{
-
 transform:translateY(-8px);
-
 box-shadow:
 0 25px 55px rgba(0,0,0,.12);
 
 }
 
 .profile-card h3{
-
 font-size:1.4rem;
-
 margin-bottom:15px;
-
 color:var(--primary);
 
 }
 
 .profile-card p{
-
 color:var(--text);
-
 line-height:1.9;
 
 }
 
 .profile-card ul{
-
 padding-left:20px;
-
 margin-top:10px;
 
 }
 
 .profile-card li{
-
 margin-bottom:12px;
-
 line-height:1.8;
-
 color:var(--text);
 
 }
@@ -370,45 +349,29 @@ border-color:var(--gold);
 }
 
 .icon{
-
 width:75px;
-
 height:75px;
-
 margin:auto;
-
 margin-bottom:22px;
-
 border-radius:50%;
-
 background:#edf4ff;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 font-size:30px;
-
 color:var(--primary);
 
 }
 
 .value-box h4{
-
 font-size:1.25rem;
-
 margin-bottom:15px;
-
 color:var(--dark);
 
 }
 
 .value-box p{
-
 color:var(--text);
-
 line-height:1.8;
 
 }
@@ -417,76 +380,68 @@ line-height:1.8;
 /*==========================================================
 CTA
 ==========================================================*/
-
 .profile-cta{
-
-margin-top:90px;
-
-padding:70px 50px;
-
+margin-top:120px;
+padding:90px;
+border-radius:35px;
 background:
 linear-gradient(
 135deg,
-var(--primary),
-var(--primary-dark)
+#1f5eff,
+#1448d6
+
 );
 
-border-radius:30px;
-
 text-align:center;
-
 color:#fff;
+overflow:hidden;
+position:relative;
+
+}
+
+.profile-cta::before{
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+top:-120px;
+right:-120px;
 
 }
 
 .profile-cta h2{
-
-font-size:clamp(2rem,3vw,2.8rem);
-
-margin-bottom:18px;
+font-size:48px;
+margin-bottom:25px;
+position:relative;
 
 }
 
 .profile-cta p{
-
-max-width:720px;
-
-margin:auto;
-
-line-height:1.9;
-
-opacity:.95;
-
-margin-bottom:35px;
+font-size:18px;
+line-height:2;
+max-width:750px;
+margin:auto auto 35px;
+position:relative;
 
 }
 
 .btn-profile{
-
 display:inline-block;
-
 padding:16px 40px;
-
 background:#fff;
-
 color:var(--primary);
-
 font-weight:700;
-
 text-decoration:none;
-
 border-radius:50px;
-
 transition:.35s;
 
 }
 
 .btn-profile:hover{
-
 background:var(--gold);
-
 color:#fff;
-
 transform:translateY(-5px);
 
 }
@@ -495,37 +450,106 @@ transform:translateY(-5px);
 /*==========================================================
 RESPONSIVE
 ==========================================================*/
-
 @media(max-width:991px){
-
 .profile-content{
-
-grid-template-columns:1fr;
-
-gap:40px;
+display:grid;
+grid-template-columns:560px 1fr;
+gap:70px;
+align-items:center;
+margin-top:80px;
+margin-bottom:100px;
 
 }
 
 .profile-image{
-
 order:-1;
 
 }
 
 .profile-stat{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin:120px 0;
 
-grid-template-columns:repeat(2,1fr);
+}
+
+.stat-item{
+background:
+linear-gradient(
+135deg,
+#1f5eff,
+#1448d6
+
+);
+
+padding:45px 25px;
+border-radius:24px;
+color:#fff;
+text-align:center;
+transition:.4s;
+
+}
+
+.stat-item:hover{
+transform:translateY(-12px);
+
+}
+
+.stat-item h3{
+font-size:54px;
+color:#fff;
+margin-bottom:12px;
+
+}
+
+.stat-item span{
+font-size:16px;
+color:#fff;
+opacity:.9;
 
 }
 
 .value-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:35px;
+margin-top:50px;
 
-grid-template-columns:repeat(2,1fr);
+}
+
+.value-box{
+background:#fff;
+padding:45px 30px;
+border-radius:28px;
+text-align:center;
+box-shadow:
+0 20px 55px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+.value-box:hover{
+transform:translateY(-10px);
+
+}
+
+.icon{
+width:90px;
+height:90px;
+background:#eef4ff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:36px;
+margin:auto;
+margin-bottom:25px;
+color:#1f5eff;
 
 }
 
 .profile-cta{
-
 padding:60px 30px;
 
 }
@@ -533,71 +557,92 @@ padding:60px 30px;
 }
 
 @media(max-width:768px){
-
 .company-profile{
-
 padding:80px 20px;
 
 }
 
 .profile-header{
-
 margin-bottom:50px;
 
 }
 
 .profile-header h2{
-
 font-size:2rem;
 
 }
 
 .profile-header p{
-
 font-size:1rem;
 
 }
 
 .profile-card{
+background:#fff;
+padding:35px;
+border-radius:25px;
+border-left:5px solid var(--gold);
+box-shadow:
+0 18px 45px rgba(0,0,0,.08);
+margin-bottom:25px;
+transition:.35s;
 
-padding:28px;
+}
+
+.profile-card:hover{
+transform:translateY(-8px);
+box-shadow:
+0 25px 55px rgba(0,0,0,.12);
+
+}
+
+.profile-card h3{
+font-size:25px;
+margin-bottom:18px;
+color:#1f5eff;
+
+}
+
+.profile-card p{
+font-size:16px;
+line-height:1.9;
+color:#5d6677;
+
+}
+
+.profile-card li{
+margin-bottom:12px;
+line-height:1.9;
 
 }
 
 .profile-stat{
-
 grid-template-columns:1fr;
 
 }
 
 .value-grid{
-
 grid-template-columns:1fr;
 
 }
 
 .company-values h2{
-
 font-size:2rem;
 
 }
 
 .profile-cta h2{
-
 font-size:1.8rem;
 
 }
 
 .profile-cta{
-
 padding:50px 25px;
 
 }
 
 .btn-profile{
-
 width:100%;
-
 text-align:center;
 
 }
