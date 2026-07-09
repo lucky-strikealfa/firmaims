@@ -196,3 +196,32 @@ if(dropdownToggle){
   });
 
 }
+
+/* ==========================================
+FAQ ACCORDION
+========================================== */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const btn = item.querySelector(".faq-question");
+
+    btn.addEventListener("click", () => {
+
+        const active = item.classList.contains("active");
+
+        faqItems.forEach(i => {
+            i.classList.remove("active");
+            i.querySelector(".faq-answer").style.maxHeight = null;
+        });
+
+        if (!active) {
+            item.classList.add("active");
+            item.querySelector(".faq-answer").style.maxHeight =
+                item.querySelector(".faq-answer").scrollHeight + "px";
+        }
+
+    });
+
+});
