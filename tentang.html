@@ -26,45 +26,87 @@ content="Firma Idola Makmur Solusindo merupakan konsultan pajak profesional yang
 </a>
 
 
-<!-- ================= HEADER ================= -->
-<header>
-  <div class="container nav">
-    
-    <div class="logo">
-      <img src="assets/logofirma.png" alt="Logo IMS">
-     <span class="logo-text">Firma Idola Makmur Solusindo</span>
-    </div>
+/* =========================================================
+HEADER
+========================================================= */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  background:rgba(114,30,73,.92);
+  z-index:9999;
+  display:flex;
+  align-items:center;
+}
 
-   <button id="menu-toggle" class="menu-toggle">☰</button>
+.nav{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    <nav id="menu">
+/* =========================================================
+LOGO
+========================================================= */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-shrink:0;
+  padding-left:4px;
+}
 
-  <a href="#">Beranda</a>
+.logo img{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+  padding:2px;
+}
 
-  <a href="tentang.html">Tentang</a>
+.logo-text{
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.3;
+}
 
-<div class="dropdown">
+/* =========================================================
+NAVIGATION
+========================================================= */
+nav{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  padding-right:10px;
 
-  <button class="dropdown-toggle" type="button">
-    Layanan ▾
-  </button>
+    overflow:visible;
+}
 
-  <div class="dropdown-menu">
-    <a href="konsultasi.html">Konsultasi Pajak</a>
-    <a href="sengketa.html">Sengketa Pajak</a>
-    <a href="akuntansi.html">Akuntansi & Audit</a>
-    <a href="transfer.html">Transfer Pricing</a>
-    <a href="pelatihan.html">Pelatihan Pajak</a>
-  </div>
+nav a{
+  color:#fff;
+  font-weight:500;
+  transition:.3s;
+}
 
-</div>
+nav a:hover{
+  color:#f43f5e;
+}
 
-  <a href="tanyakami.html" class="nav-cta">Tanya Kami</a>
-
-</nav>
-
-  </div>
-</header>
+/* =========================================================
+MENU TOGGLE
+========================================================= */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
+}
 
 <div class="nav-overlay"></div>
 
