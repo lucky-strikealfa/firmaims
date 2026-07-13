@@ -4,7 +4,7 @@
 .hero{
     position:relative;
     overflow:hidden;
-    padding:95px 0 70px;
+    padding:70px 0 70px;
     min-height:650px;
     display:flex;
     align-items:center;
