@@ -348,10 +348,13 @@
 ========================================================== */
 
 .stats{
-background:linear-gradient(
-135deg,
-#7c2248,
-#a04575
+    background:linear-gradient(
+        135deg,
+        #7c2248,
+        #a04575
+    );
+    padding:100px 0;
+    color:#fff;
 }
 
 .stats-grid{
@@ -820,8 +823,8 @@ background:linear-gradient(
 
     background:linear-gradient(
     135deg,
-    #fbf3f7,
-    #f5dde9
+    #7c2248,
+    #a04575
     );
 
     color:#fff;
