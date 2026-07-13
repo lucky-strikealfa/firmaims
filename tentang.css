@@ -160,13 +160,10 @@
 }
 
 .hero .container{
-
     max-width:1180px;
-
 }
 
 /* Animation */
-
 @keyframes heroFloat{
 
     0%{
@@ -182,10 +179,6 @@
     }
 
 }
-
-/* ==========================================================
-   ABOUT SECTION
-========================================================== */
 
 .about{
     background:#ffffff;
