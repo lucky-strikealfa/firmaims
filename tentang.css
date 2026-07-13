@@ -1,7 +1,6 @@
 /* ==========================================================
    HERO SECTION
 ========================================================== */
-
 .hero{
     position:relative;
     overflow:hidden;
@@ -9,7 +8,6 @@
     min-height:650px;
     display:flex;
     align-items:center;
-
     background:linear-gradient(
         135deg,
         #f9fbff 0%,
