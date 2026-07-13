@@ -30,7 +30,7 @@
     width:360px;
     height:360px;
     background:#2979ff;
-    top:-120px;
+    top:-100px;
     right:-80px;
 }
 
@@ -39,7 +39,7 @@
     height:300px;
     background:#7c2248;
     left:-100px;
-    bottom:-120px;
+    bottom:-100px;
 }
 
 /* Grid */
