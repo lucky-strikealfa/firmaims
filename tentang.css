@@ -9,10 +9,10 @@
     display:flex;
     align-items:center;
     background:linear-gradient(
-        135deg,
-        #f9fbff 0%,
-        #edf5ff 55%,
-        #ffffff 100%
+       135deg,
+       #fffafd 0%,
+       #f7edf3 55%,
+       #ffffff 100%
     );
 }
 
@@ -29,7 +29,7 @@
 .hero-shape1{
     width:360px;
     height:360px;
-    background:#2979ff;
+    background:#7c2248;
     top:-100px;
     right:-80px;
 }
@@ -67,7 +67,7 @@
     align-items:center;
     gap:10px;
     padding:12px 22px;
-    background:#edf5ff;
+    background:#f7edf3;
     color:var(--primary);
     border-radius:50px;
     font-size:14px;
@@ -348,9 +348,10 @@
 ========================================================== */
 
 .stats{
-    background:linear-gradient(135deg,#0f52ff,#2d7cff);
-    padding:100px 0;
-    color:#fff;
+background:linear-gradient(
+135deg,
+#7c2248,
+#a04575
 }
 
 .stats-grid{
@@ -470,7 +471,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,var(--primary),#4b83ff);
+    background:linear-gradient(135deg,#7c2248,#a04575);
     color:#fff;
     font-size:22px;
     font-weight:700;
@@ -523,9 +524,9 @@
     width:100%;
     height:5px;
     background:linear-gradient(
-        90deg,
-        var(--primary),
-        #4b83ff
+    90deg,
+    #7c2248,
+    #a04575
     );
     transform:scaleX(0);
     transform-origin:left;
@@ -818,9 +819,9 @@
     justify-content:center;
 
     background:linear-gradient(
-        135deg,
-        var(--primary),
-        #4d84ff
+    135deg,
+    #fbf3f7,
+    #f5dde9
     );
 
     color:#fff;
