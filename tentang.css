@@ -4,8 +4,8 @@
 .hero{
     position:relative;
     overflow:hidden;
-    padding:70px 0 70px;
-    min-height:650px;
+    padding:40px 0;
+    min-height:580px;
     display:flex;
     align-items:center;
     background:linear-gradient(
@@ -45,9 +45,9 @@
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:1.2fr .8fr;
+    gap:10px;
     align-items:center;
-    gap:20px;
 
 }
 
@@ -129,10 +129,10 @@
 .floating-card{
     position:absolute;
     background:rgba(255,255,255,.95);
-    backdrop-filter:blur(16px);
-    border-radius:22px;
-    padding:16px 22px;
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.6);
+    padding:18px 24px;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
     z-index:10;
 }
 
@@ -150,13 +150,13 @@
 }
 
 .card1{
-    top:70px;
-    left:20px;
+    top:15%;
+    left:10%;
 }
 
 .card2{
-    right:10px;
-    bottom:20px;
+    right:35px;
+    bottom:35px;
 }
 
 .hero .container{
@@ -300,8 +300,10 @@
     }
 
     .hero-image img{
-        width:430px;
-        max-width:100%;
+    width:480px;
+    max-width:100%;
+    filter:
+        drop-shadow(0 30px 45px rgba(0,0,0,.18));
     }
 
     .floating-card{
@@ -319,6 +321,18 @@
     .about-list{
         grid-template-columns:1fr;
     }
+
+   /* Tambahkan di sini */
+    .card1{
+        left:20px;
+        top:40px;
+    }
+
+    .card2{
+        right:20px;
+        bottom:15px;
+    }
+
 
 }
 
@@ -994,27 +1008,18 @@
     gap:14px;
     padding:18px 24px;
     background:#fff;
-    border-radius:18px;
-    box-shadow:0 10px 28px rgba(0,0,0,.05);
-    transition:.3s;
-}
-
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:18px 24px;
-    background:#fff;
     border:1px solid #ececec;
     border-radius:18px;
-    box-shadow:0 10px 28px rgba(0,0,0,.05)
-
+    box-shadow:0 10px 28px rgba(0,0,0,.05);
     color:#333;
-
     transition:.35s ease;
 }
 
+.choose-left li:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+}
 /* Right */
-
 .highlight-box{
     position:relative;
     overflow:hidden;
@@ -1024,9 +1029,6 @@
     border:1px solid #ececec;
     color:#222;
     box-shadow:0 25px 60px rgba(0,0,0,.08);
-    );
-    color:#fff;
-    box-shadow:0 30px 70px rgba(31,94,255,.25);
 }
 
 .highlight-box::before{
