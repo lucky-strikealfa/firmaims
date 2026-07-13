@@ -939,9 +939,10 @@
 ========================================================== */
 
 .choose-section{
-    background:#f8fbff;
     position:relative;
     overflow:hidden;
+    background:#f8fbff;
+    padding:140px 0;
 }
 
 .choose-grid{
