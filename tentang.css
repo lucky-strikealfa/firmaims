@@ -1371,3 +1371,26 @@ transform:translateY(-10px);
 }
 
 }
+
+/* ===========================
+   CTA Bottom Wave
+=========================== */
+
+.cta-v2-wave{
+    position:absolute;
+    left:0;
+    bottom:-1px;
+    width:100%;
+    line-height:0;
+    overflow:hidden;
+}
+
+.cta-v2-wave svg{
+    display:block;
+    width:100%;
+    height:140px;
+}
+
+.cta-v2-wave path{
+    fill:#ffffff;
+}
