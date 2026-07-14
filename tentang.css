@@ -4,8 +4,8 @@
 .hero{
     position:relative;
     overflow:hidden;
-    padding:40px 0;
-    min-height:580px;
+    padding:20px 0 30px;
+    min-height:430px;
     display:flex;
     align-items:center;
     background:linear-gradient(
@@ -71,16 +71,16 @@
     font-size:12px;
     font-weight:700;
     letter-spacing:1px;
-    margin-bottom:18px;
+    margin-bottom:12px;
     text-transform:uppercase;
 }
 
 .hero-content h1{
 
     font-size:48px;
-    line-height:1.1;
+    line-height:1.05;
     letter-spacing:-1px;
-    margin-bottom:18px;
+    margin-bottom:12px;
 }
 
 .hero-content h1 span{
@@ -93,7 +93,7 @@
     font-size:16px;
     line-height:1.8;
     color:var(--text);
-    margin-bottom:28px;
+    margin-bottom:18px;
 }
 
 /* Button */
@@ -102,7 +102,7 @@
     display:flex;
     gap:18px;
     flex-wrap:wrap;
-    margin-top:10px;
+    margin-top:0;
 }
 
 /* Right Image */
