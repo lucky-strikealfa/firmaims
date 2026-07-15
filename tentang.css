@@ -2,12 +2,12 @@
    HERO SECTION
 ========================================================== */
 .hero{
-    position:relative;
-    overflow:hidden;
-    padding:20px 0 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
     min-height:430px;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     background:linear-gradient(
      135deg,
      #faf8ff 0%,
@@ -46,7 +46,7 @@
 .hero-grid{
     display:grid;
     grid-template-columns:1.2fr .8fr;
-    gap:10px;
+    gap:40px;
     align-items:center;
 
 }
@@ -110,17 +110,18 @@
 .hero-image{
     position:relative;
     display:flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:flex-end;
+    align-items:flex-end;
 }
 
 .hero-image img{
-    width:470px;
+    width:400px;
     max-width:100%;
+    display:block;
     position:relative;
     z-index:2;
     animation:heroFloat 6s ease-in-out infinite;
-    filter:drop-shadow(0 25px 40px rgba(0,0,0,.12));
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.12));
 }
 
 /* Floating Card */
