@@ -771,11 +771,11 @@ max-width:1250px;
 margin:90px auto;
 padding:60px;
 
-background:transparent;   /* atau #fff jika ingin tetap putih */
+background:#fff;
 
-border:none;              /* hilangkan garis */
+border:none;
 
-border-radius:0;          /* hilangkan sudut */
+border-radius:0;
 
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -786,7 +786,7 @@ overflow:visible;
 
 position:relative;
 
-box-shadow:none;          /* hilangkan bayangan */
+box-shadow:none;
 
 }
 
