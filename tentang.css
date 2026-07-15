@@ -975,15 +975,31 @@
 /* Left */
 
 .choose-left .mini-title{
-    display:inline-block;
-    padding:10px 22px;
-    background:#edf5ff;
-    color:var(--primary);
-    border-radius:50px;
-    font-size:14px;
-    font-weight:700;
-    margin-bottom:20px;
-    letter-spacing:.5px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 28px;
+
+    background:linear-gradient(
+        135deg,
+        #f5e8ff,
+        #efe3ff
+    );
+
+    color:#721e49;
+
+    border:1px solid rgba(114,30,73,.15);
+
+    border-radius:999px;
+
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+
+    box-shadow:
+        0 10px 25px rgba(114,30,73,.08);
 }
 
 .choose-left h2{
