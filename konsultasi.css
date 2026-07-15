@@ -901,42 +901,55 @@ line-height:1.6;
 /* kanan */
 
 .tax-right{
-
-position:relative;
-height:620px;
-
-display:flex;
-align-items:flex-end;
-justify-content:center;
-
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:650px;
+    overflow:hidden;
 }
 
 .tax-photo{
 
-position:relative;
-z-index:3;
+    position:absolute;
+    top:-45px;          /* naik ke atas */
+    right:10px;
+    width:520px;
+    z-index:5;
+    display:block;
+}
 
-width:460px;
+.tax-right::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-5px;
+    height:140px;
+    z-index:6;
+    pointer-events:none;
+    background:linear-gradient(
+        to top,
+        #fff 5%,
+        rgba(255,255,255,.96) 20%,
+        rgba(255,255,255,.82) 40%,
+        rgba(255,255,255,.45) 70%,
+        transparent 100%
+    );
 
 }
 
 /* ungu */
 
 .purple-shape{
-
-position:absolute;
-
-right:0;
-bottom:0;
-
-width:340px;
-height:280px;
-
-background:linear-gradient(135deg,#8a2b74,#b85f95);
-
-border-radius:180px 180px 0 0;
-
-opacity:.9;
+    position:absolute;
+    width:360px;
+    height:360px;
+    background:#a54f8f;
+    border-radius:50% 50% 0 0;
+    bottom:-40px;
+    right:35px;
+    z-index:1;
 
 }
 
@@ -990,27 +1003,18 @@ z-index:5;
 /* kartu */
 
 .tax-card{
-
 position:absolute;
-
-bottom:25px;
-left:20px;
-
+bottom:20px;
+left:0;
 background:#fff;
-
 width:370px;
-
 display:flex;
 align-items:center;
 gap:20px;
-
 padding:22px;
-
 border-radius:18px;
-
 box-shadow:0 15px 45px rgba(0,0,0,.18);
-
-z-index:10;
+z-index:20;
 
 }
 
