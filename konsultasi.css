@@ -212,9 +212,9 @@ HERO 2 KOLOM
 .hero-grid{
 
     display:grid;
-    grid-template-columns:1.1fr 1fr;
+    grid-template-columns:0.95fr 1.05fr;
     align-items:center;
-    gap:70px;
+    gap:40px;
 
 }
 
@@ -1120,5 +1120,89 @@ height:200px;
 font-size:44px;
 
 }
+
+}
+
+.hero-circle{
+
+position:absolute;
+
+right:50px;
+top:40px;
+
+width:130px;
+height:130px;
+
+border:2px dashed rgba(37,84,255,.18);
+
+border-radius:50%;
+
+z-index:2;
+
+}
+
+.hero-dot{
+
+position:absolute;
+
+left:50px;
+bottom:90px;
+
+width:120px;
+height:120px;
+
+background-image:
+radial-gradient(
+#2554ff 2px,
+transparent 2px
+);
+
+background-size:18px 18px;
+
+opacity:.15;
+
+z-index:1;
+
+}
+
+.hero-line{
+
+position:absolute;
+
+right:20px;
+bottom:60px;
+
+width:220px;
+height:220px;
+
+border-right:4px solid rgba(124,31,85,.15);
+
+border-bottom:4px solid rgba(124,31,85,.15);
+
+border-radius:0 0 120px 0;
+
+z-index:1;
+
+}
+
+.service-detail-hero{
+
+padding-top:120px;
+padding-bottom:90px;
+
+min-height:618px;
+
+display:flex;
+align-items:center;
+
+background:
+
+linear-gradient(
+180deg,
+#ffffff,
+#f8fbff
+);
+
+overflow:hidden;
 
 }
