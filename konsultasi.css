@@ -909,14 +909,62 @@ line-height:1.6;
     overflow:hidden;
 }
 
+.tax-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    left:50%;
+    top:38%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.95) 0%,
+        rgba(248,249,255,.85) 45%,
+        rgba(255,255,255,0) 80%
+    );
+
+    filter:blur(45px);
+
+    z-index:1;
+
+}
+
 .tax-photo{
 
     position:absolute;
-    top:-45px;          /* naik ke atas */
+    top:-45px;
     right:10px;
     width:520px;
     z-index:5;
     display:block;
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,1) 72%,
+            rgba(0,0,0,.85) 82%,
+            rgba(0,0,0,.45) 92%,
+            rgba(0,0,0,0) 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,1) 72%,
+            rgba(0,0,0,.85) 82%,
+            rgba(0,0,0,.45) 92%,
+            rgba(0,0,0,0) 100%
+        );
+
 }
 
 .tax-right::after{
