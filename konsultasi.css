@@ -945,7 +945,7 @@ line-height:1.6;
     right:10px;
     width:520px;
     z-index:5;
-    display:block;
+    display:none;
 
     -webkit-mask-image:
         linear-gradient(
