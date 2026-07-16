@@ -967,26 +967,6 @@ line-height:1.6;
 
 }
 
-.tax-right::after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:-5px;
-    height:140px;
-    z-index:6;
-    pointer-events:none;
-    background:linear-gradient(
-        to top,
-        #fff 5%,
-        rgba(255,255,255,.96) 20%,
-        rgba(255,255,255,.82) 40%,
-        rgba(255,255,255,.45) 70%,
-        transparent 100%
-    );
-
-}
-
 /* ungu */
 
 .purple-shape{
