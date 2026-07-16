@@ -942,15 +942,7 @@ line-height:1.6;
 /* ungu */
 
 .purple-shape{
-    position:absolute;
-    width:360px;
-    height:360px;
-    background:#a54f8f;
-    border-radius:50% 50% 0 0;
-    bottom:-40px;
-    right:35px;
-    z-index:1;
-
+    display:none;
 }
 
 /* dekorasi */
