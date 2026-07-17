@@ -247,7 +247,7 @@ LEFT
 
 .premium-bg{
     position:absolute;
-    inset:40px;
+    inset:15px;
     background:#fff;
     border-radius:70px;
     box-shadow:0 30px 70px rgba(0,0,0,.12);
@@ -317,14 +317,14 @@ LEFT
 .premium-photo{
     position:absolute;
     left:50%;
-    bottom:-8px;
+    bottom:0;
     transform:translateX(-50%);
-    width:120%;
-    max-width:640px;
+    width:135%;
+    max-width:none;
     height:auto;
     object-fit:contain;
     z-index:10;
-    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
+    filter:drop-shadow(0 25px 40px rgba(0,0,0,.18));
 
 }
 
