@@ -502,15 +502,15 @@ font-size:42px;
 }
 
 .premium-photo{
-max-width:340px;
+max-width:620px;
 
 }
 
 .premium-card{
 position:relative;
-left:50%;
+left:-10%;
   transform:translateX(-50%);
-bottom:15px;
+bottom:40px;
 margin:25px auto 0;
 width:100%;
 max-width:340px;
