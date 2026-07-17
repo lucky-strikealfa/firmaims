@@ -205,6 +205,398 @@ SERVICE CARD IMAGE SECTION
 
 }
 
+/*=====================================================
+KONSULTASI PERPAJAKAN PREMIUM
+BAGIAN 1
+Layout Kiri + Frame + Foto + Ornament
+======================================================*/
+
+.premium-tax{
+    padding:110px 0;
+    background:#ffffff;
+    position:relative;
+    overflow:hidden;
+}
+
+/* background glow */
+
+.premium-tax::before{
+    content:"";
+    position:absolute;
+    top:-260px;
+    right:-180px;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(138,43,116,.06),
+    transparent 70%);
+}
+
+.premium-tax::after{
+    content:"";
+    position:absolute;
+    left:-180px;
+    bottom:-220px;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(214,171,69,.08),
+    transparent 70%);
+}
+
+/* ========================= */
+
+.premium-container{
+
+    max-width:1240px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:560px 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+
+}
+
+/* ========================= */
+
+.premium-left{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* ========================= */
+
+.premium-photo-wrap{
+
+    position:relative;
+
+    width:100%;
+    max-width:520px;
+
+    height:650px;
+
+}
+
+/* FRAME */
+
+.premium-bg{
+
+    position:absolute;
+
+    inset:35px;
+
+    background:#fff;
+
+    border-radius:70px;
+
+    box-shadow:
+    0 35px 90px rgba(0,0,0,.13);
+
+}
+
+/* blok maroon */
+
+.premium-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-28px;
+    top:-28px;
+
+    width:210px;
+    height:210px;
+
+    background:linear-gradient(
+    135deg,
+    #7c1f55,
+    #b0164c);
+
+    border-radius:60px;
+
+    z-index:-1;
+
+}
+
+/* blok emas */
+
+.premium-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-25px;
+    bottom:-25px;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50px;
+
+    background:#d7aa45;
+
+    z-index:-1;
+
+}
+
+/* garis */
+
+.premium-line{
+
+    position:absolute;
+
+    left:-65px;
+    top:120px;
+
+    width:160px;
+    height:320px;
+
+    border-left:4px solid #d7aa45;
+
+    border-radius:180px;
+
+    transform:rotate(-12deg);
+
+    opacity:.6;
+
+}
+
+/* titik */
+
+.premium-dots{
+
+    position:absolute;
+
+    right:-30px;
+    top:60px;
+
+    width:110px;
+    height:110px;
+
+    background-image:
+    radial-gradient(
+    #7c1f55 2px,
+    transparent 2px);
+
+    background-size:18px 18px;
+
+    opacity:.18;
+
+}
+
+/* FOTO */
+
+.premium-photo{
+
+    position:absolute;
+
+    left:50%;
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:95%;
+    max-width:480px;
+
+    object-fit:contain;
+
+    z-index:10;
+
+    filter:drop-shadow(
+    0 25px 45px rgba(0,0,0,.18));
+
+    transition:.35s;
+
+}
+
+.premium-photo:hover{
+
+    transform:
+    translateX(-50%)
+    translateY(-8px)
+    scale(1.02);
+
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.premium-card{
+
+    position:absolute;
+
+    left:-35px;
+
+    bottom:45px;
+
+    width:320px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.14);
+
+    z-index:20;
+
+}
+
+.card-icon{
+
+    width:68px;
+    height:68px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+    135deg,
+    #7c1f55,
+    #b0164c);
+
+    flex-shrink:0;
+
+}
+
+.card-text{
+
+    flex:1;
+
+}
+
+.card-text h4{
+
+    font-size:20px;
+
+    color:#172554;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.card-text p{
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+.premium-container{
+
+grid-template-columns:1fr;
+
+gap:70px;
+
+}
+
+.premium-photo-wrap{
+
+margin:auto;
+
+height:560px;
+
+}
+
+.premium-card{
+
+left:20px;
+
+bottom:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.premium-tax{
+
+padding:70px 20px;
+
+}
+
+.premium-photo-wrap{
+
+height:450px;
+
+}
+
+.premium-bg{
+
+inset:25px;
+
+border-radius:40px;
+
+}
+
+.premium-photo{
+
+max-width:340px;
+
+}
+
+.premium-card{
+
+position:relative;
+
+left:auto;
+bottom:auto;
+
+margin:25px auto 0;
+
+width:100%;
+max-width:340px;
+
+}
+
+.premium-line,
+.premium-dots{
+
+display:none;
+
+}
+
+}
+
 /* ==========================================
 HERO 2 KOLOM
 ==========================================*/
