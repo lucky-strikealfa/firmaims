@@ -239,7 +239,8 @@ LEFT
     position:relative;
     width:100%;
     max-width:500px;
-    height:610px;
+    height:620px;
+    margin:auto;
 
 }
 
@@ -314,18 +315,29 @@ LEFT
 
 /* foto */
 
+/* ==========================
+FOTO
+==========================*/
+
 .premium-photo{
     position:absolute;
     left:50%;
-    bottom:-8px;
+    bottom:0;
     transform:translateX(-50%);
-    width:118%;
-    width:auto;
-    max-width:none;
+    width:92%;
+    max-width:470px;
     height:auto;
     object-fit:contain;
-    z-index:12;
-    filter:drop-shadow(0 25px 40px rgba(0,0,0,.18));
+    z-index:10;
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
+    transition:.35s;
+}
+
+.premium-photo:hover{
+    transform:
+    translateX(-50%)
+    translateY(-6px)
+    scale(1.02);
 
 }
 
@@ -335,19 +347,18 @@ CARD
 
 .premium-card{
     position:absolute;
-    left:22px;
-    bottom:22px;
-    transform:translateX(-58%);
-    width:330px;
+    left:-5px;
+    bottom:30px;
+    width:300px;
     display:flex;
-    align-items:center;
     gap:18px;
-    padding:24px;
+    align-items:center;
     background:#fff;
-    border-radius:24px;
+    padding:22px;
+    border-radius:22px;
     box-shadow:
-        0 18px 45px rgba(0,0,0,.14);
-    z-index:30;
+    0 18px 40px rgba(0,0,0,.15);
+    z-index:20;
 
 }
 
