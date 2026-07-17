@@ -265,17 +265,6 @@ Layout Kiri + Frame + Foto + Ornament
 
 }
 
-/* ==========================================
-PREMIUM CONTAINER
-========================================== */
-
-.premium-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
-}
-
 .premium-right{
     max-width:620px;
 }
@@ -555,12 +544,9 @@ color:#0f172a;
     object-fit:contain;
     z-index:15;
 
-}
-
     filter:drop-shadow(
-    0 25px 45px rgba(0,0,0,.18));
+        0 25px 45px rgba(0,0,0,.18));
 
-    /* efek bagian bawah memudar */
     -webkit-mask-image:linear-gradient(
         to bottom,
         #000 0%,
@@ -578,7 +564,6 @@ color:#0f172a;
         rgba(0,0,0,.3) 95%,
         transparent 100%
     );
-
 }
 
 .premium-photo:hover{
@@ -598,9 +583,9 @@ CARD
 
     position:absolute;
 
-    left:-35px;
+    left:10px;
 
-    bottom:45px;
+    bottom:10px;
 
     width:320px;
 
