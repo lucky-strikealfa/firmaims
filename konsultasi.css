@@ -221,7 +221,7 @@ KONSULTASI PERPAJAKAN
     margin:auto;
 
     display:grid;
-    grid-template-columns:560px 1fr;
+    grid-template-columns:480px 1fr;
     gap:90px;
     align-items:center;
 }
@@ -238,8 +238,8 @@ LEFT
 .premium-photo-wrap{
     position:relative;
     width:100%;
-    max-width:520px;
-    height:760px;
+    max-width:500px;
+    height:610px;
 
 }
 
@@ -247,7 +247,7 @@ LEFT
 
 .premium-bg{
     position:absolute;
-    inset:15px;
+    inset:30px 18px 18px 18px;
     background:#fff;
     border-radius:70px;
     box-shadow:0 30px 70px rgba(0,0,0,.12);
@@ -317,11 +317,11 @@ LEFT
 .premium-photo{
     position:absolute;
     left:50%;
-    bottom:0;
+    bottom:-12px;
     transform:translateX(-50%);
-    width:135%;
+    height:630px;
+    width:auto;
     max-width:none;
-    height:auto;
     object-fit:contain;
     z-index:10;
     filter:drop-shadow(0 25px 40px rgba(0,0,0,.18));
@@ -335,7 +335,7 @@ CARD
 .premium-card{
     position:absolute;
     left:0;
-    bottom:20px;
+    bottom:50px;
     width:320px;
     background:#fff;
     display:flex;
