@@ -217,12 +217,11 @@ KONSULTASI PERPAJAKAN
 }
 
 .premium-container{
-    max-width:1250px;
+    max-width:1180px;
     margin:auto;
-
     display:grid;
-    grid-template-columns:480px 1fr;
-    gap:90px;
+    grid-template-columns:430px 1fr;
+    gap:70px;
     align-items:center;
 }
 
@@ -238,22 +237,20 @@ LEFT
 .premium-photo-wrap{
     position:relative;
     width:100%;
-    max-width:500px;
-    height:620px;
+    max-width:430px;
+    height:560px;
     margin:auto;
-
 }
 
 /* frame */
 
 .premium-bg{
     position:absolute;
-    inset:30px 18px 18px 18px;
+    inset:20px;
+    border-radius:55px;
     background:#fff;
-    border-radius:70px;
-    box-shadow:0 30px 70px rgba(0,0,0,.12);
     overflow:hidden;
-
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
 }
 
 /* blok maroon */
@@ -321,16 +318,15 @@ FOTO
 
 .premium-photo{
     position:absolute;
-    left:50%;
     bottom:0;
+    left:50%;
     transform:translateX(-50%);
-    width:92%;
-    max-width:470px;
+    width:82%;
+    max-width:360px;
     height:auto;
     object-fit:contain;
     z-index:10;
-    filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
-    transition:.35s;
+    filter:drop-shadow(0 18px 28px rgba(0,0,0,.18));
 }
 
 .premium-photo:hover{
@@ -347,19 +343,17 @@ CARD
 
 .premium-card{
     position:absolute;
-    left:-5px;
-    bottom:30px;
-    width:300px;
+    left:-20px;
+    bottom:35px;
+    width:260px;
     display:flex;
-    gap:18px;
     align-items:center;
+    gap:16px;
+    padding:18px;
     background:#fff;
-    padding:22px;
     border-radius:22px;
-    box-shadow:
-    0 18px 40px rgba(0,0,0,.15);
+    box-shadow:0 15px 35px rgba(0,0,0,.14);
     z-index:20;
-
 }
 
 .card-icon{
@@ -488,7 +482,7 @@ RESPONSIVE
 @media(max-width:991px){
 .premium-container{
 grid-template-columns:1fr;
-gap:70px;
+gap:60px;
 
 }
 
@@ -508,7 +502,8 @@ grid-template-columns:1fr;
 }
 
 .premium-photo-wrap{
-height:650px;
+    max-width:360px;
+    height:470px;
 
 }
 
@@ -521,7 +516,8 @@ font-size:42px;
 }
 
 .premium-photo-wrap{
-height:480px;
+    max-width:290px;
+    width:82%;
 
 }
 
@@ -532,8 +528,9 @@ max-width:340px;
 
 .premium-card{
 position:relative;
-left:auto;
-bottom:auto;
+left:50%;
+  transform:translateX(-50%);
+bottom:15px;
 margin:25px auto 0;
 width:100%;
 max-width:340px;
