@@ -236,30 +236,21 @@ LEFT
 }
 
 .premium-photo-wrap{
-
     position:relative;
-
     width:100%;
     max-width:520px;
-
-    height:720px;
+    height:760px;
 
 }
 
 /* frame */
 
 .premium-bg{
-
     position:absolute;
-
     inset:40px;
-
     background:#fff;
-
     border-radius:70px;
-
     box-shadow:0 30px 70px rgba(0,0,0,.12);
-
     overflow:hidden;
 
 }
@@ -267,19 +258,13 @@ LEFT
 /* blok maroon */
 
 .premium-bg::before{
-
     content:"";
-
     position:absolute;
-
     left:-35px;
     top:-35px;
-
     width:180px;
     height:180px;
-
     border-radius:55px;
-
     background:#8b1d56;
 
 }
@@ -287,19 +272,13 @@ LEFT
 /* blok emas */
 
 .premium-bg::after{
-
     content:"";
-
     position:absolute;
-
     right:-35px;
     bottom:-35px;
-
     width:160px;
     height:160px;
-
     border-radius:45px;
-
     background:#d8a73f;
 
 }
@@ -307,21 +286,13 @@ LEFT
 /* garis */
 
 .premium-line{
-
     position:absolute;
-
     left:-60px;
-
     top:120px;
-
     width:150px;
-
     height:320px;
-
     border-left:3px solid #d8a73f;
-
     border-radius:120px;
-
     transform:rotate(-10deg);
 
 }
@@ -329,22 +300,14 @@ LEFT
 /* titik */
 
 .premium-dots{
-
     position:absolute;
-
     right:-15px;
-
     top:80px;
-
     width:110px;
-
     height:110px;
-
     background-image:
     radial-gradient(#8b1d56 2px,transparent 2px);
-
     background-size:18px 18px;
-
     opacity:.18;
 
 }
@@ -352,23 +315,15 @@ LEFT
 /* foto */
 
 .premium-photo{
-
     position:absolute;
-
     left:50%;
-
-    bottom:0;
-
+    bottom:-8px;
     transform:translateX(-50%);
-
-    width:96%;
-
-    max-width:500px;
-
-    z-index:10;
-
+    width:120%;
+    max-width:640px;
+    height:auto;
     object-fit:contain;
-
+    z-index:10;
     filter:drop-shadow(0 20px 35px rgba(0,0,0,.18));
 
 }
@@ -378,66 +333,43 @@ CARD
 ==========================*/
 
 .premium-card{
-
     position:absolute;
-
     left:0;
-
-    bottom:35px;
-
+    bottom:20px;
     width:320px;
-
     background:#fff;
-
     display:flex;
-
     gap:18px;
-
     padding:24px;
-
     border-radius:24px;
-
     align-items:center;
-
     box-shadow:0 20px 40px rgba(0,0,0,.14);
-
     z-index:20;
 
 }
 
 .card-icon{
-
     width:68px;
     height:68px;
-
     border-radius:18px;
-
     background:linear-gradient(135deg,#8b1d56,#b01d55);
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     flex-shrink:0;
 
 }
 
 .card-text h4{
-
     font-size:18px;
-
     margin-bottom:8px;
-
     color:#12264d;
 
 }
 
 .card-text p{
-
     font-size:15px;
-
     color:#666;
-
     line-height:1.8;
 
 }
@@ -447,159 +379,108 @@ RIGHT
 ==========================*/
 
 .premium-right h2{
-
     font-size:58px;
-
     line-height:1.1;
-
     color:#12264d;
 
 }
 
 .premium-right h2 span{
-
     display:block;
 
 }
 
 .section-label{
-
     display:inline-block;
-
     margin-bottom:15px;
-
     color:#8b1d56;
-
     font-size:14px;
-
     font-weight:700;
-
     letter-spacing:2px;
 
 }
 
 .gold-line{
-
     width:80px;
-
     height:4px;
-
     background:#d8a73f;
-
     margin:20px 0 30px;
 
 }
 
 .premium-desc{
-
     color:#667085;
-
     line-height:2;
-
     margin-bottom:40px;
-
     font-size:17px;
 
 }
 
 .premium-feature-grid{
-
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:25px;
 
 }
 
 .premium-feature{
-
     display:flex;
-
     gap:15px;
-
     align-items:flex-start;
 
 }
 
 .feature-icon{
-
     width:55px;
-
     height:55px;
-
     background:#fff;
-
     border-radius:50%;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     font-size:22px;
-
     box-shadow:0 8px 18px rgba(0,0,0,.08);
-
     flex-shrink:0;
-
 }
 
 .premium-feature h5{
-
     margin-bottom:8px;
-
     font-size:17px;
-
     color:#12264d;
-
 }
 
 .premium-feature p{
-
     color:#666;
-
     line-height:1.7;
-
     font-size:15px;
-
 }
 
 /*==========================
 RESPONSIVE
 ==========================*/
-
 @media(max-width:991px){
-
 .premium-container{
-
 grid-template-columns:1fr;
-
 gap:70px;
 
 }
 
 .premium-right{
-
 text-align:center;
 
 }
 
 .gold-line{
-
 margin:20px auto 30px;
 
 }
 
 .premium-feature-grid{
-
 grid-template-columns:1fr;
 
 }
 
 .premium-photo-wrap{
-
 height:650px;
 
 }
@@ -607,34 +488,26 @@ height:650px;
 }
 
 @media(max-width:768px){
-
 .premium-right h2{
-
 font-size:42px;
 
 }
 
 .premium-photo-wrap{
-
 height:480px;
 
 }
 
 .premium-photo{
-
 max-width:340px;
 
 }
 
 .premium-card{
-
 position:relative;
-
 left:auto;
 bottom:auto;
-
 margin:25px auto 0;
-
 width:100%;
 max-width:340px;
 
@@ -654,17 +527,11 @@ KOMITMEN KAMI
 ===================================================== */
 
 .commitment-section{
-
     position:relative;
-
     max-width:1200px;
-
     margin:90px auto;
-
     overflow:hidden;
-
     border-radius:28px;
-
     background:linear-gradient(
     135deg,
     #6d123d 0%,
