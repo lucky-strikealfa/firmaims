@@ -237,8 +237,8 @@ LEFT
 .premium-photo-wrap{
     position:relative;
     width:100%;
-    max-width:520px;
-    height:680px;
+    max-width:500px;
+    height:600px;
     margin:auto;
 }
 
@@ -319,10 +319,10 @@ FOTO
 .premium-photo{
     position:absolute;
     left:50%;
-    bottom:0;
+    bottom:-8px;
     transform:translateX(-50%);
-    width:96%;
-    max-width:500px;
+    width:100%;
+    max-width:none;
     height:auto;
     object-fit:contain;
     z-index:10;
