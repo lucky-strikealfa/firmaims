@@ -317,11 +317,12 @@ LEFT
 .premium-photo{
     position:absolute;
     left:50%;
-    bottom:-12px;
+    bottom:-8px;
     transform:translateX(-50%);
-    height:630px;
+    width:138%;
     width:auto;
     max-width:none;
+    height:auto;
     object-fit:contain;
     z-index:10;
     filter:drop-shadow(0 25px 40px rgba(0,0,0,.18));
@@ -332,45 +333,64 @@ LEFT
 CARD
 ==========================*/
 
+/* ==========================
+CARD
+==========================*/
+
 .premium-card{
     position:absolute;
-    left:0;
-    bottom:50px;
-    width:320px;
-    background:#fff;
+    left:50%;
+    bottom:38px;
+    transform:translateX(-58%);
+    width:340px;
     display:flex;
-    gap:18px;
-    padding:24px;
-    border-radius:24px;
     align-items:center;
-    box-shadow:0 20px 40px rgba(0,0,0,.14);
-    z-index:20;
+    gap:18px;
+    padding:26px 24px;
+    background:#fff;
+    border-radius:28px;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.15);
+    z-index:30;
 
 }
 
 .card-icon{
-    width:68px;
-    height:68px;
+    width:72px;
+    height:72px;
     border-radius:18px;
-    background:linear-gradient(135deg,#8b1d56,#b01d55);
     display:flex;
     justify-content:center;
     align-items:center;
     flex-shrink:0;
+    background:linear-gradient(
+        135deg,
+        #8b1d56,
+        #b01d55
+    );
+
+}
+
+.card-text{
+    flex:1;
 
 }
 
 .card-text h4{
+
+    margin:0 0 10px;
     font-size:18px;
-    margin-bottom:8px;
-    color:#12264d;
+    line-height:1.35;
+    color:#13264a;
+    font-weight:700;
 
 }
 
 .card-text p{
+    margin:0;
     font-size:15px;
+    line-height:1.75;
     color:#666;
-    line-height:1.8;
 
 }
 
