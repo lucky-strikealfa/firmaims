@@ -707,45 +707,29 @@ margin-bottom:45px;
 /* ===========================
 CARD
 =========================== */
-
 .commitment-list{
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:22px;
 
 }
 
 .commitment-list .item{
-
 padding:28px 22px;
-
 border-radius:18px;
-
 background:rgba(255,255,255,.08);
-
 border:1px solid rgba(255,255,255,.10);
-
 backdrop-filter:blur(10px);
-
 color:#fff;
-
 font-weight:600;
-
 font-size:17px;
-
 text-align:center;
-
 transition:.35s;
 
 }
 
 .commitment-list .item:hover{
-
 transform:translateY(-10px);
-
 background:rgba(255,255,255,.15);
 
 }
@@ -753,29 +737,23 @@ background:rgba(255,255,255,.15);
 /* ===========================
 RESPONSIVE
 =========================== */
-
 @media(max-width:991px){
-
 .commitment-section{
-
 padding:45px;
 
 }
 
 .commitment-content h2{
-
 font-size:42px;
 
 }
 
 .commitment-content p{
-
 font-size:17px;
 
 }
 
 .commitment-list{
-
 grid-template-columns:repeat(2,1fr);
 
 }
@@ -783,29 +761,23 @@ grid-template-columns:repeat(2,1fr);
 }
 
 @media(max-width:768px){
-
 .commitment-section{
-
 padding:35px 25px;
 
 }
 
 .commitment-content h2{
-
 font-size:32px;
 
 }
 
 .commitment-content p{
-
 font-size:16px;
-
 line-height:1.8;
 
 }
 
 .commitment-list{
-
 grid-template-columns:1fr;
 
 }
@@ -815,28 +787,19 @@ grid-template-columns:1fr;
 /*=============================
 TAX PLANNING
 ==============================*/
-
 .tax-planning-section{
-
 max-width:1250px;
 margin:90px auto;
 padding:60px;
-
 background:#fff;
-
 border:none;
-
 border-radius:0;
-
 display:grid;
 grid-template-columns:1fr 1fr;
 align-items:center;
 gap:40px;
-
 overflow:visible;
-
 position:relative;
-
 box-shadow:none;
 
 }
@@ -844,7 +807,6 @@ box-shadow:none;
 /* kiri */
 
 .mini-title{
-
 font-size:13px;
 font-weight:700;
 letter-spacing:1px;
@@ -860,25 +822,21 @@ margin-bottom:10px;
 font-size:60px;
 font-weight:800;
 line-height:1;
-
 margin-bottom:18px;
 
 }
 
 .tax-left h2 span{
-
 color:#8a2b74;
 
 }
 
 .tax-left h2{
-
 color:#152248;
 
 }
 
 .line{
-
 width:55px;
 height:4px;
 background:#f0b84a;
@@ -889,62 +847,45 @@ margin-bottom:22px;
 }
 
 .tax-desc{
-
 font-size:18px;
 line-height:1.8;
 color:#666;
-
 margin-bottom:35px;
-
 max-width:520px;
 
 }
 
 .tax-item{
-
 display:flex;
 align-items:center;
-
 gap:18px;
-
 padding:18px 0;
-
 border-bottom:1px solid #ececec;
 
 }
 
 .tax-item:last-child{
-
 border:none;
 
 }
 
 .tax-item .icon{
-
 width:55px;
 height:55px;
-
 background:#fff;
-
 border-radius:50%;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 font-size:24px;
-
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-
 flex-shrink:0;
 
 }
 
 .tax-item span{
-
 font-size:18px;
 color:#444;
-
 line-height:1.6;
 
 }
@@ -1014,17 +955,12 @@ line-height:1.6;
 }
 
  .tax-right::after{
-
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
     bottom:0;
-
     height:180px;
-
     background:linear-gradient(
         to top,
         #fff 0%,
@@ -1034,7 +970,6 @@ line-height:1.6;
     );
 
     z-index:8;
-
     pointer-events:none;
 
 }
@@ -1048,52 +983,42 @@ line-height:1.6;
 /* dekorasi */
 
 .coin{
-
 position:absolute;
 top:10px;
 left:180px;
 font-size:60px;
-
 z-index:5;
 
 }
 
 .money{
-
 position:absolute;
 left:20px;
 top:120px;
 font-size:48px;
-
 z-index:5;
 
 }
 
 .wallet{
-
 position:absolute;
 left:30px;
 top:260px;
 font-size:65px;
-
 z-index:5;
 
 }
 
 .question{
-
 position:absolute;
 right:30px;
 top:40px;
-
 font-size:90px;
-
 z-index:5;
 
 }
 
 /* kartu */
-
 .tax-card{
 position:absolute;
 bottom:20px;
@@ -1111,26 +1036,18 @@ z-index:30;
 }
 
 .target{
-
 width:65px;
 height:65px;
-
 border-radius:18px;
-
 background:#f3ebff;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 font-size:34px;
-
 flex-shrink:0;
-
 }
 
 .tax-card p{
-
 font-size:16px;
 line-height:1.7;
 color:#555;
@@ -1138,43 +1055,33 @@ color:#555;
 }
 
 .tax-card b{
-
 color:#222;
 
 }
 
 @media(max-width:991px){
-
 .tax-planning-section{
-
 grid-template-columns:1fr;
-
 padding:40px 30px;
 
 }
 
 .tax-right{
-
 height:auto;
 margin-top:50px;
 
 }
 
 .tax-photo{
-
 width:320px;
 
 }
 
 .tax-card{
-
 position:relative;
-
 left:auto;
 bottom:auto;
-
 margin-top:-40px;
-
 width:100%;
 
 }
