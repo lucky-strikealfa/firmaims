@@ -314,6 +314,24 @@ LEFT
     z-index:10;
     filter:drop-shadow(0 22px 45px rgba(0,0,0,.18));
 
+   -webkit-mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 82%,
+        rgba(0,0,0,.9) 90%,
+        rgba(0,0,0,.45) 96%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 82%,
+        rgba(0,0,0,.9) 90%,
+        rgba(0,0,0,.45) 96%,
+        transparent 100%
+    );
+
 }
 
 /* CARD */
