@@ -221,7 +221,7 @@ KONSULTASI PERPAJAKAN
     margin:auto;
     display:grid;
     grid-template-columns:55% 45%;
-    gap:7  0px;
+    gap:70px;
     align-items:center;
 }
 
@@ -238,7 +238,7 @@ LEFT
 .premium-photo-wrap{
     position:relative;
     width:100%;
-    max-width:620px;
+    max-width:420px;
     height:640px;
     margin:auto;
 }
@@ -307,13 +307,12 @@ LEFT
     left:50%;
     bottom:0;
     transform:translateX(-50%);
-    width:118%;
-    max-width:650px;
+    width:110%;
+    max-width:700px;
     height:auto;
     object-fit:contain;
     z-index:10;
     filter:drop-shadow(0 28px 45px rgba(0,0,0,.18));
-);
 
 }
 
