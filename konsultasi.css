@@ -220,8 +220,8 @@ KONSULTASI PERPAJAKAN
     max-width:1400px;
     margin:auto;
     display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:70px;
+    grid-template-columns:1.1fr 1.1fr;
+    gap:40px;
     align-items:center;
 }
 
@@ -367,11 +367,11 @@ LEFT
 RIGHT
 ==========================*/
 
-.premium-right h2{
+premium-right h2{
     font-size:54px;
-    line-height:1.05;
+    line-height:1.15;
     margin-bottom:20px;
-
+    white-space:nowrap;   /* jangan pindah baris */
 }
 
 .premium-right h2 span{
@@ -473,37 +473,37 @@ grid-template-columns:1fr;
 }
 
 @media(max-width:768px){
-.premium-right h2{
-font-size:42px;
 
+.premium-right h2{
+    font-size:54px;
+    line-height:1.15;
+    margin-bottom:20px;
+    white-space:nowrap;
 }
 
 .premium-photo-wrap{
     max-width:290px;
     width:82%;
-
 }
 
 .premium-photo{
-max-width:520px;
-
+    max-width:520px;
 }
 
 .premium-card{
-position:relative;
-left:-10%;
-  transform:translateX(-50%);
-bottom:40px;
-margin:25px auto 0;
-width:100%;
-max-width:340px;
-
+    position:relative;
+    left:-10%;
+    transform:translateX(-50%);
+    bottom:40px;
+    margin:25px auto 0;
+    width:100%;
+    max-width:340px;
 }
 
 .premium-line,
 .premium-dots,
 .premium-bg{
-display:none;
+    display:none;
 }
 
 }
