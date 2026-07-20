@@ -220,7 +220,8 @@ KONSULTASI PERPAJAKAN
     max-width:1320px;
     margin:auto;
     display:grid;
-    grid-template-columns:55% 45%;
+    grid-template-columns:620px 1fr;
+    column-gap:90px;
     gap:70px;
     align-items:center;
 }
@@ -231,16 +232,16 @@ LEFT
 
 .premium-left{
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
+    padding-left:30px;
     align-items:center;
 }
 
 .premium-photo-wrap{
     position:relative;
     width:100%;
-    max-width:420px;
-    height:640px;
-    margin:auto;
+    height:700px;
+    overflow:visible;
 }
 
 /* FRAME */
@@ -304,18 +305,16 @@ LEFT
 /* FOTO */
 .premium-photo{
     position:absolute;
+    bottom:-10px;
     left:50%;
-    bottom:0;
     transform:translateX(-50%);
-    width:110%;
-    max-width:700px;
+    width:760px;
+    max-width:none;
     height:auto;
     object-fit:contain;
-    z-index:10;
-    filter:drop-shadow(0 28px 45px rgba(0,0,0,.18));
+    z-index:20;
 
 }
-
 .premium-photo:hover{
     transform:translateX(-50%) translateY(-6px);
 
