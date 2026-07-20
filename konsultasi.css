@@ -3,7 +3,7 @@ SHOWCASE KONSULTASI
 ===================================================== */
 
 .konsultasi-showcase{
-  padding:90px 20px;
+  padding:60px 20px;
   background:#fff;
 }
 
@@ -210,19 +210,18 @@ KONSULTASI PERPAJAKAN
 ====================================================*/
 
 .premium-tax{
-    padding:80px 20px;
+    padding:30px 20px 60px;
     background:#fff;
     position:relative;
     overflow:hidden;
 }
 
 .premium-container{
-    max-width:1320px;
-    margin:auto;
+    max-width:1200px;
+    margin:0 auto;
     display:grid;
-    grid-template-columns:620px 1fr;
-    column-gap:90px;
-    gap:70px;
+    grid-template-columns:48% 52%;
+    gap:50px;
     align-items:center;
 }
 
@@ -232,27 +231,19 @@ LEFT
 
 .premium-left{
     display:flex;
-    justify-content:flex-start;
+    justify-content:center;
     padding-left:30px;
     align-items:center;
 }
 
 .premium-photo-wrap{
-
     position:relative;
-
     width:100%;
-
-    max-width:620px;
-
+    max-width:500px;
     height:680px;
-
     margin:auto;
-
     display:flex;
-
     justify-content:center;
-
     align-items:flex-end;
 
 }
@@ -337,12 +328,13 @@ LEFT
 /* FOTO */
 .premium-photo{
     width:100%;
-    max-width:620px;
+    max-width:470px;
+    display:block;
     height:auto;
     object-fit:contain;
     position:relative;
     z-index:10;
-    filter:drop-shadow(0 25px 45px rgba(0,0,0,.18));
+    filter:drop-shadow(0 18px 35px rgba(0,0,0,.18));
 
 }
 
@@ -412,9 +404,9 @@ RIGHT
 ==========================*/
 
 .premium-right h2{
-    font-size:58px;
-    line-height:1.1;
-    color:#12264d;
+    font-size:54px;
+    line-height:1.05;
+    margin-bottom:20px;
 
 }
 
@@ -443,16 +435,16 @@ RIGHT
 
 .premium-desc{
     color:#667085;
-    line-height:2;
-    margin-bottom:40px;
-    font-size:17px;
+    line-height:1.8;
+    margin:22px 0 35px;
+    font-size:16px;
 
 }
 
 .premium-feature-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    gap:22px 28px;
 
 }
 
@@ -494,17 +486,18 @@ RESPONSIVE
 @media(max-width:991px){
 .premium-container{
 grid-template-columns:1fr;
-gap:60px;
+gap:40px;
 
 }
 
 .premium-right{
 text-align:center;
+max-width:100%;
 
 }
 
 .gold-line{
-margin:20px auto 30px;
+margin:20px auto;
 
 }
 
@@ -534,7 +527,7 @@ font-size:42px;
 }
 
 .premium-photo{
-max-width:620px;
+max-width:360px;
 
 }
 
@@ -1202,11 +1195,9 @@ z-index:1;
 }
 
 .service-detail-hero{
-
-padding-top:120px;
-padding-bottom:90px;
-
-min-height:618px;
+    padding-top:100px;
+    padding-bottom:50px;
+    min-height:auto;
 
 display:flex;
 align-items:center;
