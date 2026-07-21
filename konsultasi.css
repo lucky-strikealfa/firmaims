@@ -210,7 +210,7 @@ KONSULTASI PERPAJAKAN
 ====================================================*/
 
 .premium-tax{
-    padding:40px 20px;
+    padding:20px 20px;
     background:#fff;
     position:relative;
     overflow:hidden;
@@ -221,7 +221,7 @@ KONSULTASI PERPAJAKAN
     margin:auto;
     display:grid;
     grid-template-columns:1.1fr 1.1fr;
-    gap:40px;
+    gap:20px;
     align-items:center;
 }
 
@@ -232,13 +232,13 @@ LEFT
 .premium-left{
     display:flex;
     justify-content:center;
-    align-items:flex-end;
+    align-items:center;
 }
 
 .premium-photo-wrap{
     position:relative;
     width:100%;
-    max-width:760px;
+    max-width:620px;
     margin:0 auto;
     display:flex;
     justify-content:center;
@@ -418,7 +418,7 @@ LEFT
 RIGHT
 ==========================*/
 
-premium-right h2{
+.premium-right h2{
     font-size:54px;
     line-height:1.15;
     margin-bottom:20px;
