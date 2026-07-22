@@ -131,50 +131,35 @@ TEXT AREA
 /* =========================
 IMAGE AREA
 ========================= */
-
-
 .hero-image{
     position:relative;
     display:flex;
     justify-content:center;
-
+    align-items:flex-end;
+    overflow:visible;
 }
 
-
-
+/* HAPUS dekorasi kotak */
 .hero-image::before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border-radius:35px;
-    background:
-    linear-gradient(
-    135deg,
-    #2554ff,
-    #7c1f55
-    );
-
-    opacity:.08;
-    transform:rotate(-8deg);
+    display:none;
 }
 
 .hero-image img{
     position:relative;
     width:100%;
-    max-width:600px;
-    border-radius:28px;
-    box-shadow:
-    0 30px 70px rgba(0,0,0,.15);
-    transition:.4s;
+    max-width:680px;
 
+    border-radius:0;
+    box-shadow:none;
+
+    display:block;
+    object-fit:contain;
+
+    transition:.35s;
 }
 
-
 .hero-image img:hover{
-    transform:
-    translateY(-10px);
-
+    transform:translateY(-8px);
 }
 
 /* =========================================================
