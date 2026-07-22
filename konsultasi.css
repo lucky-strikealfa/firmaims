@@ -1507,3 +1507,28 @@ overflow:hidden;
         margin: 18px auto 0;
     }
 }
+
+/* Hilangkan frame putih */
+.showcase-image{
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.showcase-image img{
+    display:block;
+    width:100%;
+    max-width:540px;
+    height:auto;
+
+    background:transparent !important;
+    border:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+}
