@@ -1510,25 +1510,128 @@ overflow:hidden;
 
 /* Hilangkan frame putih */
 .showcase-image{
-    background: transparent !important;
-    padding: 0 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    position:relative;
 
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-end;
+
+    overflow:visible;
+
+    background:transparent !important;
+    padding:0 !important;
+    border:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
 }
 
 .showcase-image img{
+
     display:block;
+
     width:100%;
     max-width:540px;
     height:auto;
+
+    object-fit:contain;
 
     background:transparent !important;
     border:none !important;
     border-radius:0 !important;
     box-shadow:none !important;
+
+    filter:drop-shadow(0 28px 45px rgba(0,0,0,.16));
+
+    -webkit-mask-image:linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 82%,
+        rgba(0,0,0,.85) 92%,
+        transparent 100%
+    );
+
+    mask-image:linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 82%,
+        rgba(0,0,0,.85) 92%,
+        transparent 100%
+    );
+}
+
+.showcase-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:120px;
+
+    background:linear-gradient(
+        to top,
+        #ffffff,
+        rgba(255,255,255,.96),
+        rgba(255,255,255,.65),
+        transparent
+    );
+
+    pointer-events:none;
+}
+
+.showcase-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:120px;
+
+    background:linear-gradient(
+        to top,
+        #fff,
+        rgba(255,255,255,.96),
+        rgba(255,255,255,.65),
+        transparent
+    );
+
+    pointer-events:none;
+}
+
+.showcase-image{
+
+    position:relative;
+}
+
+.showcase-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        #eef5ff 0%,
+        #f8fbff 55%,
+        transparent 75%
+    );
+
+    left:50%;
+    top:45%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
 }
