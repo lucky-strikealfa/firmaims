@@ -1360,11 +1360,15 @@ overflow:hidden;
 /* ================= RIGHT ================= */
 
 .hero-right{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    min-height:430px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    min-height:560px;
+    background:transparent;
+    border-radius:0;
+    box-shadow:none;
+    overflow:visible;
 }
 
 .circle-bg{
