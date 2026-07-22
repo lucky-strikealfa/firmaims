@@ -1364,7 +1364,7 @@ overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:flex-end;
-    min-height:560px;
+    min-height:680px;
     background:transparent;
     border-radius:0;
     box-shadow:none;
@@ -1403,12 +1403,15 @@ overflow:hidden;
 
 /* FOTO */
 .hero-photo{
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    max-width: 720px;
-    object-fit: contain;
-    filter: drop-shadow(0 24px 40px rgba(15,23,42,.18));
+    position:absolute;
+    bottom:0;
+    right:-20px;
+    width:760px;      /* Perbesar gambar */
+    max-width:none;
+    height:auto;
+    object-fit:contain;
+    z-index:3;
+    filter:drop-shadow(0 24px 40px rgba(15,23,42,.18));
 }
 
 /* CARD MENGAMBANG */
@@ -1526,21 +1529,17 @@ overflow:hidden;
 }
 
 .showcase-image img{
-
     display:block;
-
     width:100%;
     max-width:540px;
     height:auto;
-
     object-fit:contain;
-
     background:transparent !important;
     border:none !important;
     border-radius:0 !important;
     box-shadow:none !important;
-
     filter:drop-shadow(0 28px 45px rgba(0,0,0,.16));
+}
 
 .showcase-image::after{
 
@@ -1577,7 +1576,7 @@ overflow:hidden;
 
     height:110px;
 
-    b background:linear-gradient(
+    background:linear-gradient(
         to top,
         #fff 5%,
         rgba(255,255,255,.98) 25%,
