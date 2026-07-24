@@ -1374,7 +1374,8 @@ overflow:hidden;
 .circle-bg{
     position: absolute;
     width: 520px;
-    height: 520px;
+    height:520px;
+    right:20px;
     border-radius: 50%;
     background: radial-gradient(circle,#efe8ff 0%,#f7f3ff 55%,transparent 72%);
     z-index: 1;
@@ -1384,6 +1385,7 @@ overflow:hidden;
     position: absolute;
     width: 620px;
     height: 620px;
+    right:-20px;
     border-radius: 50%;
     border: 2px dashed rgba(75,15,99,.14);
     z-index: 1;
