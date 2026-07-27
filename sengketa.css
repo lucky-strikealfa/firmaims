@@ -1,6 +1,7 @@
 /* ==========================================
 SECTION
 ========================================== */
+
 .sengketa-section{
     background:#fff !important;
     padding:100px 0;
@@ -87,6 +88,7 @@ IMAGE
 /* ==========================================
 TABLET
 ========================================== */
+
 @media(max-width:991px){
 
     .sengketa-item,
@@ -107,6 +109,7 @@ TABLET
 /* ==========================================
 MOBILE
 ========================================== */
+
 @media(max-width:768px){
 
     .sengketa-item{
@@ -132,7 +135,7 @@ MOBILE
 HERO SENGKETA MODERN
 ==========================================*/
 
-.premium-hero{
+.page-hero{
 
     padding:80px 0;
 
@@ -146,29 +149,47 @@ HERO SENGKETA MODERN
     );
 
     overflow:hidden;
+
     position:relative;
 
 }
 
-.premium-hero::before
+.page-hero::before{
+
     content:"";
+
     position:absolute;
+
     width:520px;
+
     height:520px;
+
     border-radius:50%;
+
     background:rgba(183,28,28,.05);
+
     right:-220px;
+
     top:-220px;
+
 }
 
-.premium-hero::after
+.page-hero::after{
+
     content:"";
+
     position:absolute;
+
     width:280px;
+
     height:280px;
+
     border-radius:50%;
+
     background:rgba(13,35,65,.04);
+
     left:-120px;
+
     bottom:-120px;
 
 }
@@ -179,45 +200,54 @@ HERO SENGKETA MODERN
     display:grid;
     grid-template-columns:52% 48%;
     align-items:center;
-    gap:40px;
+    gap:20px;
     min-height:520px;
 }
 
 
 .hero-badge{
+
     display:inline-block;
+
     background:#ffeaea;
+
     color:#b71c1c;
+
     padding:9px 18px;
+
     border-radius:30px;
+
     font-size:13px;
+
     font-weight:700;
+
     margin-bottom:20px;
+
     letter-spacing:1px;
+
 }
 
 .hero-content h1{
-    font-size:50px;
+
+    font-size:58px;
     font-weight:800;
     color:#0d2341;
-    line-height:1.18;
-    margin-bottom:18px;
+    line-height:1.1;
+    margin-bottom:22px;
     font-weight:800;
     letter-spacing:-1px;
-    margin:0 0 20px;
+
 }
 
 .hero-content{
-    max-width:560px;
-    width:100%;
+    max-width:600px;
 }
 
 .hero-content h1 span{
-    font-size:30px;
-    line-height:1.2;
     display:block;
-    margin-top:14px;
-    color:#b71c1c;   
+    margin-top:-10px;
+    font-size:38px;
+    color:#b71c1c;
 }
 
 .hero-content p{
@@ -300,26 +330,24 @@ HERO SENGKETA MODERN
 }
 
 .hero-image img{
-    width:100%;
-    max-width:640px;
+    width:125%;
+    max-width:680px;
     height:auto;
     border-radius:28px;
     box-shadow:0 25px 60px rgba(0,0,0,.18);
-    transition:.35s ease;
-    transform:scale(1);
-    transform-origin:right center;
+    transition:.4s;
+    transform:translateX(25px);
 }
 
 .hero-image img:hover{
-    transform:scale(1.12) translateY(-8px);
+    transform:translateY(-10px);
 
 }
 
 .hero-card{
     position:absolute;
     bottom:20px;
-    left:-70px;
-    z-index:20;
+    left:-40px;
     background:#fff;
     padding:22px 28px;
     border-radius:18px;
