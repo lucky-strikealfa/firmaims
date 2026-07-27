@@ -327,7 +327,7 @@ HERO SENGKETA MODERN
     border-radius:28px;
     box-shadow:0 25px 60px rgba(0,0,0,.18);
     transition:.35s ease;
-    transform:scale(1.12);
+    transform:scale(1);
     transform-origin:right center;
 }
 
