@@ -1,7 +1,6 @@
 /* ==========================================
 SECTION
 ========================================== */
-
 .sengketa-section{
     background:#fff !important;
     padding:100px 0;
@@ -88,7 +87,6 @@ IMAGE
 /* ==========================================
 TABLET
 ========================================== */
-
 @media(max-width:991px){
 
     .sengketa-item,
@@ -109,7 +107,6 @@ TABLET
 /* ==========================================
 MOBILE
 ========================================== */
-
 @media(max-width:768px){
 
     .sengketa-item{
@@ -149,47 +146,29 @@ HERO SENGKETA MODERN
     );
 
     overflow:hidden;
-
     position:relative;
 
 }
 
 .premium-hero::before
-
     content:"";
-
     position:absolute;
-
     width:520px;
-
     height:520px;
-
     border-radius:50%;
-
     background:rgba(183,28,28,.05);
-
     right:-220px;
-
     top:-220px;
-
 }
 
 .premium-hero::after
-
     content:"";
-
     position:absolute;
-
     width:280px;
-
     height:280px;
-
     border-radius:50%;
-
     background:rgba(13,35,65,.04);
-
     left:-120px;
-
     bottom:-120px;
 
 }
