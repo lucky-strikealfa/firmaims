@@ -206,41 +206,31 @@ HERO SENGKETA MODERN
 
 
 .hero-badge{
-
     display:inline-block;
-
     background:#ffeaea;
-
     color:#b71c1c;
-
     padding:9px 18px;
-
     border-radius:30px;
-
     font-size:13px;
-
     font-weight:700;
-
     margin-bottom:20px;
-
     letter-spacing:1px;
-
 }
 
 .hero-content h1{
-
-    font-size:58px;
+    font-size:50px;
     font-weight:800;
     color:#0d2341;
-    line-height:1.1;
-    margin-bottom:22px;
+    line-height:1.08;
+    margin-bottom:18px;
     font-weight:800;
-    letter-spacing:-1px;
+    letter-spacing:-1.5px;
 
 }
 
 .hero-content{
-    max-width:600px;
+    max-width:560px;
+    width:100%;
 }
 
 .hero-content h1 span{
