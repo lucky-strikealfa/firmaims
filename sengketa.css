@@ -346,8 +346,9 @@ HERO SENGKETA MODERN
 
 .hero-card{
     position:absolute;
-    bottom:20px;
-    left:-40px;
+    bottom:30px;
+    left:-35px;
+    z-index:10;
     background:#fff;
     padding:22px 28px;
     border-radius:18px;
