@@ -1,7 +1,6 @@
 /* ==========================================
 SECTION
 ========================================== */
-
 .sengketa-section{
     background:#fff !important;
     padding:100px 0;
@@ -134,13 +133,9 @@ MOBILE
 /* ==========================================
 HERO SENGKETA MODERN
 ==========================================*/
-
 .page-hero{
-
     padding:80px 0;
-
     background:
-
     linear-gradient(
         135deg,
         #ffffff,
@@ -149,27 +144,18 @@ HERO SENGKETA MODERN
     );
 
     overflow:hidden;
-
     position:relative;
 
 }
 
 .page-hero::before{
-
     content:"";
-
     position:absolute;
-
     width:520px;
-
     height:520px;
-
     border-radius:50%;
-
     background:rgba(183,28,28,.05);
-
     right:-220px;
-
     top:-220px;
 
 }
