@@ -231,7 +231,7 @@ HERO SENGKETA MODERN
 
     font-size:48px;
     font-weight:800;
-    color:#0d2341;
+    color:#0d2341 !important;
     line-height:1.15;
     margin-bottom:22px;
     font-weight:800;
@@ -247,11 +247,11 @@ HERO SENGKETA MODERN
     display:block;
     margin-top:10px;
     font-size:38px;
-    color:#b71c1c;
+    color:#b71c1c !important;
 }
 
 .hero-content p{
-    color:#5d6775;
+    color:#5d6775 !important;
     line-height:1.9;
     font-size:18px;
     margin-bottom:35px;
