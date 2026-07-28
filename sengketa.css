@@ -425,3 +425,407 @@ HERO SENGKETA MODERN
 }
 
 }
+
+/* ===========================================================
+   HERO PREMIUM 2026
+   BAGIAN 1
+   Layout • Background • Typography • Left Card
+=========================================================== */
+
+:root{
+
+    --primary:#4f46e5;
+    --primary-dark:#4338ca;
+    --primary-light:#eef2ff;
+
+    --secondary:#7c3aed;
+
+    --navy:#182848;
+
+    --text:#5f6b7a;
+
+    --light:#f8fafc;
+
+    --white:#ffffff;
+
+    --border:#eceff5;
+
+}
+
+/* ================================================= */
+
+.sengketa-premium{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    padding:120px 0 90px;
+
+}
+
+/* blur kanan */
+
+.sengketa-premium::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:620px;
+
+    height:620px;
+
+    right:-260px;
+
+    top:-220px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(124,58,237,.09),
+    transparent 72%);
+
+}
+
+/* blur kiri */
+
+.sengketa-premium::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    left:-180px;
+
+    bottom:-160px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(79,70,229,.05),
+    transparent 72%);
+
+}
+
+/* ================================================= */
+
+.premium-grid{
+
+    position:relative;
+
+    z-index:5;
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* ================================================= */
+
+.premium-left{
+
+    max-width:650px;
+
+}
+
+/* ================================================= */
+
+.premium-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px 22px;
+
+    border-radius:999px;
+
+    background:#f3f0ff;
+
+    color:#5b21b6;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1.3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:26px;
+
+}
+
+.premium-badge::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#6d28d9;
+
+}
+
+/* ================================================= */
+
+.premium-title{
+
+    font-size:64px;
+
+    line-height:1.08;
+
+    color:var(--navy);
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    margin-bottom:28px;
+
+}
+
+.premium-title span{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#5b21b6;
+
+}
+
+/* ================================================= */
+
+.premium-desc{
+
+    font-size:18px;
+
+    line-height:1.95;
+
+    color:var(--text);
+
+    max-width:600px;
+
+    margin-bottom:42px;
+
+}
+
+/* ================================================= */
+
+.premium-service{
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:34px;
+
+    border:1px solid var(--border);
+
+    box-shadow:
+
+    0 25px 60px rgba(15,23,42,.08);
+
+}
+
+/* ================================================= */
+
+.service-top{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+.service-icon{
+
+    flex-shrink:0;
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #5b21b6,
+        #7c3aed);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+
+    0 15px 35px rgba(91,33,182,.25);
+
+}
+
+.service-top h3{
+
+    font-size:28px;
+
+    color:var(--navy);
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.service-top p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/* ================================================= */
+
+.service-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px 28px;
+
+    margin:35px 0;
+
+}
+
+.service-list div{
+
+    position:relative;
+
+    padding-left:34px;
+
+    color:#334155;
+
+    font-weight:500;
+
+}
+
+.service-list div::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#ede9fe;
+
+    color:#5b21b6;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ================================================= */
+
+.premium-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 34px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #5b21b6,
+        #7c3aed);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 20px 45px rgba(91,33,182,.28);
+
+}
+
+.premium-btn span{
+
+    transition:.35s;
+
+}
+
+.premium-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 28px 60px rgba(91,33,182,.35);
+
+}
+
+.premium-btn:hover span{
+
+    transform:translateX(6px);
+
+}
