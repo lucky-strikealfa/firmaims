@@ -200,7 +200,7 @@ HERO SENGKETA MODERN
     display:grid;
     grid-template-columns:52% 48%;
     align-items:center;
-    gap:20px;
+    gap:60px;
     min-height:520px;
 }
 
@@ -229,10 +229,10 @@ HERO SENGKETA MODERN
 
 .hero-content h1{
 
-    font-size:58px;
+    font-size:48px;
     font-weight:800;
     color:#0d2341;
-    line-height:1.1;
+    line-height:1.15;
     margin-bottom:22px;
     font-weight:800;
     letter-spacing:-1px;
@@ -245,7 +245,7 @@ HERO SENGKETA MODERN
 
 .hero-content h1 span{
     display:block;
-    margin-top:-10px;
+    margin-top:10px;
     font-size:38px;
     color:#b71c1c;
 }
@@ -330,13 +330,13 @@ HERO SENGKETA MODERN
 }
 
 .hero-image img{
-    width:125%;
-    max-width:680px;
+    width:100%;
+    max-width:560px;
     height:auto;
     border-radius:28px;
     box-shadow:0 25px 60px rgba(0,0,0,.18);
     transition:.4s;
-    transform:translateX(25px);
+    transform:none;
 }
 
 .hero-image img:hover{
@@ -347,7 +347,7 @@ HERO SENGKETA MODERN
 .hero-card{
     position:absolute;
     bottom:20px;
-    left:-40px;
+    left:20px;
     background:#fff;
     padding:22px 28px;
     border-radius:18px;
@@ -372,8 +372,8 @@ HERO SENGKETA MODERN
 .hero-image::before{
   content:"";
     position:absolute;
-    width:560px;
-    height:560px;
+    width:420px;
+    height:420px;
     left:30px;
     top:20px;
     border-radius:30px;
