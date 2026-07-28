@@ -829,3 +829,838 @@ HERO SENGKETA MODERN
     transform:translateX(6px);
 
 }
+
+/* ===========================================================
+   HERO PREMIUM 2026
+   BAGIAN 2
+   RIGHT IMAGE • ARCH • FLOATING CARD • FEATURES
+===========================================================*/
+
+/* ===========================
+RIGHT
+===========================*/
+
+.premium-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+/* ===========================
+ARCH
+===========================*/
+
+.arch-wrapper{
+
+    position:relative;
+
+    width:540px;
+
+    height:700px;
+
+}
+
+/* arch putih */
+
+.arch-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#ffffff;
+
+    border-radius:280px 280px 36px 36px;
+
+    box-shadow:
+    0 35px 80px rgba(15,23,42,.10);
+
+    overflow:hidden;
+
+}
+
+/* gradient */
+
+.arch-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border-radius:260px 260px 24px 24px;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #faf7ff 55%,
+        #f3efff 100%
+    );
+
+}
+
+/* lingkaran */
+
+.circle-accent{
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(124,58,237,.14),
+    rgba(124,58,237,.02));
+
+    top:90px;
+
+    left:60px;
+
+}
+
+/* ===========================
+PHOTO
+===========================*/
+
+.premium-photo{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:470px;
+
+    height:auto;
+
+    z-index:5;
+
+    object-fit:contain;
+
+    filter:
+
+    drop-shadow(
+    0 28px 55px rgba(15,23,42,.18));
+
+}
+
+/* ===========================
+FLOATING CARD
+===========================*/
+
+.floating-card{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:18px 22px;
+
+    box-shadow:
+
+    0 18px 45px rgba(15,23,42,.12);
+
+    z-index:20;
+
+    transition:.35s;
+
+}
+
+.floating-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+}
+
+/* kiri */
+
+.card-left{
+
+    left:-35px;
+
+    top:140px;
+
+}
+
+/* kanan */
+
+.card-right{
+
+    right:-45px;
+
+    bottom:140px;
+
+}
+
+.floating-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:18px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #5b21b6,
+        #7c3aed);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.floating-card strong{
+
+    display:block;
+
+    font-size:15px;
+
+    color:#182848;
+
+    letter-spacing:.5px;
+
+}
+
+.floating-card span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+/* ===========================
+BOTTOM FEATURES
+===========================*/
+
+.premium-features{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    background:#ffffff;
+
+    padding:26px;
+
+    border-radius:22px;
+
+    border:1px solid #edf1f7;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 15px 40px rgba(15,23,42,.05);
+
+}
+
+.feature-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 25px 55px rgba(15,23,42,.10);
+
+}
+
+.feature-circle{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    background:#f3f0ff;
+
+}
+
+.feature-item strong{
+
+    display:block;
+
+    color:#182848;
+
+    font-size:17px;
+
+    margin-bottom:8px;
+
+}
+
+.feature-item p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+/* ===========================================================
+   HERO PREMIUM 2026
+   BAGIAN 3
+   DECORATION • ANIMATION • RESPONSIVE
+===========================================================*/
+
+/* ==========================================
+DECORATION
+========================================== */
+
+.sengketa-premium .container{
+    position:relative;
+    z-index:2;
+}
+
+/* garis lengkung */
+
+.sengketa-premium .container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    right:80px;
+
+    top:20px;
+
+    border:1px solid rgba(124,58,237,.08);
+
+    border-radius:50%;
+
+}
+
+/* lingkaran kedua */
+
+.sengketa-premium .container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:560px;
+
+    height:560px;
+
+    right:10px;
+
+    top:-40px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(124,58,237,.06);
+
+}
+
+/* dot pattern */
+
+.arch-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-45px;
+
+    top:60px;
+
+    width:120px;
+
+    height:120px;
+
+    background-image:
+        radial-gradient(#d7c9ff 1.4px, transparent 1.4px);
+
+    background-size:16px 16px;
+
+    opacity:.55;
+
+}
+
+/* ==========================================
+ANIMATION
+========================================== */
+
+.premium-left{
+
+    animation:fadeLeft .8s ease both;
+
+}
+
+.premium-right{
+
+    animation:fadeRight .8s ease both;
+
+}
+
+.premium-features{
+
+    animation:fadeUp .9s ease both;
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================
+PHOTO HOVER
+========================================== */
+
+.premium-photo{
+
+    transition:.45s ease;
+
+}
+
+.arch-wrapper:hover .premium-photo{
+
+    transform:
+        translateX(-50%)
+        translateY(-8px)
+        scale(1.03);
+
+}
+
+/* ==========================================
+TABLET
+========================================== */
+
+@media(max-width:1100px){
+
+.premium-grid{
+
+    grid-template-columns:1fr;
+
+    gap:70px;
+
+}
+
+.premium-left{
+
+    max-width:100%;
+
+}
+
+.premium-title{
+
+    font-size:54px;
+
+}
+
+.premium-right{
+
+    justify-content:center;
+
+}
+
+.arch-wrapper{
+
+    width:470px;
+
+    height:630px;
+
+}
+
+.premium-photo{
+
+    width:420px;
+
+}
+
+.card-left{
+
+    left:-10px;
+
+}
+
+.card-right{
+
+    right:-10px;
+
+}
+
+.premium-features{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+TABLET KECIL
+========================================== */
+
+@media(max-width:768px){
+
+.sengketa-premium{
+
+    padding:90px 0 70px;
+
+}
+
+.premium-grid{
+
+    gap:50px;
+
+}
+
+.premium-title{
+
+    font-size:42px;
+
+    letter-spacing:-1px;
+
+}
+
+.premium-title span{
+
+    margin-top:8px;
+
+}
+
+.premium-desc{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+.service-top{
+
+    flex-direction:column;
+
+}
+
+.service-list{
+
+    grid-template-columns:1fr;
+
+}
+
+.arch-wrapper{
+
+    width:380px;
+
+    height:520px;
+
+}
+
+.arch-bg{
+
+    border-radius:220px 220px 24px 24px;
+
+}
+
+.arch-bg::before{
+
+    border-radius:205px 205px 18px 18px;
+
+}
+
+.circle-accent{
+
+    width:300px;
+
+    height:300px;
+
+    top:90px;
+
+    left:40px;
+
+}
+
+.premium-photo{
+
+    width:335px;
+
+}
+
+.card-left{
+
+    left:0;
+
+    top:80px;
+
+}
+
+.card-right{
+
+    right:0;
+
+    bottom:90px;
+
+}
+
+.floating-card{
+
+    padding:14px 16px;
+
+}
+
+.floating-icon{
+
+    width:46px;
+
+    height:46px;
+
+    font-size:18px;
+
+}
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.sengketa-premium{
+
+    padding:70px 0 60px;
+
+}
+
+.premium-title{
+
+    font-size:34px;
+
+    line-height:1.15;
+
+}
+
+.premium-badge{
+
+    font-size:11px;
+
+    padding:9px 16px;
+
+}
+
+.premium-service{
+
+    padding:24px;
+
+    border-radius:22px;
+
+}
+
+.service-top h3{
+
+    font-size:23px;
+
+}
+
+.arch-wrapper{
+
+    width:320px;
+
+    height:450px;
+
+}
+
+.arch-bg{
+
+    border-radius:180px 180px 20px 20px;
+
+}
+
+.arch-bg::before{
+
+    border-radius:165px 165px 15px 15px;
+
+}
+
+.circle-accent{
+
+    width:240px;
+
+    height:240px;
+
+    left:38px;
+
+}
+
+.premium-photo{
+
+    width:280px;
+
+}
+
+.card-left{
+
+    position:absolute;
+
+    left:8px;
+
+    top:45px;
+
+}
+
+.card-right{
+
+    position:absolute;
+
+    right:8px;
+
+    bottom:45px;
+
+}
+
+.floating-card{
+
+    gap:10px;
+
+    padding:10px 12px;
+
+}
+
+.floating-card strong{
+
+    font-size:12px;
+
+}
+
+.floating-card span{
+
+    font-size:11px;
+
+}
+
+.feature-item{
+
+    padding:20px;
+
+}
+
+}
