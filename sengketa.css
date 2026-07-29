@@ -540,7 +540,7 @@ HERO SENGKETA MODERN
 
 .premium-left{
 
-    max-width:650px;
+    max-width:560px;
 
 }
 
@@ -549,28 +549,17 @@ HERO SENGKETA MODERN
 .premium-badge{
 
     display:inline-flex;
-
     align-items:center;
-
     gap:10px;
-
-    padding:11px 22px;
-
+    padding:9px 18px;
     border-radius:999px;
-
     background:#f3f0ff;
-
     color:#5b21b6;
-
-    font-size:13px;
-
+    font-size:12px;
     font-weight:700;
-
-    letter-spacing:1.3px;
-
+    letter-spacing:1px;
     text-transform:uppercase;
-
-    margin-bottom:26px;
+    margin-bottom:18px;
 
 }
 
@@ -591,28 +580,22 @@ HERO SENGKETA MODERN
 /* ================================================= */
 
 .premium-title{
-
-    font-size:64px;
-
-    line-height:1.08;
-
+    font-size:50px;
+    line-height:1.15;
     color:var(--navy);
-
     font-weight:800;
-
-    letter-spacing:-2px;
-
-    margin-bottom:28px;
+    letter-spacing:-1px;
+    margin-bottom:22px;
+    max-width:560px;
 
 }
 
 .premium-title span{
-
     display:block;
-
-    margin-top:10px;
-
+    margin-top:8px;
     color:#5b21b6;
+    font-size:inherit;
+    line-height:inherit;
 
 }
 
@@ -620,15 +603,11 @@ HERO SENGKETA MODERN
 
 .premium-desc{
 
-    font-size:18px;
-
-    line-height:1.95;
-
+    font-size:16px;
+    line-height:1.85;
     color:var(--text);
-
-    max-width:600px;
-
-    margin-bottom:42px;
+    max-width:560px;
+    margin-bottom:34px;
 
 }
 
@@ -1371,7 +1350,7 @@ TABLET
 
 .premium-title{
 
-    font-size:54px;
+    font-size:42px;
 
 }
 
@@ -1435,9 +1414,9 @@ TABLET KECIL
 
 .premium-title{
 
-    font-size:42px;
-
-    letter-spacing:-1px;
+    font-size:34px;
+    line-height:1.18;
+    letter-spacing:-.5px;
 
 }
 
@@ -1553,9 +1532,8 @@ MOBILE
 
 .premium-title{
 
-    font-size:34px;
-
-    line-height:1.15;
+    font-size:30px;
+    line-height:1.2;
 
 }
 
