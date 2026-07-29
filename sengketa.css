@@ -1925,34 +1925,30 @@ RIGHT
 
 .showcase-content h2{
 
-    font-size:64px;
-
-    line-height:1.08;
-
+    font-size:48px;      /* 25% lebih kecil (dari 64px → 48px) untuk pengajuan keberatan & banding */
+    line-height:1.18;
     color:#172554;
-
-    letter-spacing:-2px;
-
-    margin-bottom:25px;
+    font-weight:800;
+    letter-spacing:-1px;
+    margin-bottom:20px;
 
 }
 
 .showcase-content h2 span{
 
     display:block;
-
     color:#6d28d9;
+    font-size:inherit;
+    line-height:inherit;
+    margin-top:6px;
 
 }
 
 .showcase-desc{
 
     font-size:18px;
-
     line-height:2;
-
     color:#64748b;
-
     margin-bottom:40px;
 
 }
@@ -1965,9 +1961,7 @@ FEATURE
 .mini-feature-wrap{
 
     display:flex;
-
     flex-direction:column;
-
     gap:22px;
 
 }
@@ -1975,23 +1969,14 @@ FEATURE
 .mini-feature{
 
     display:flex;
-
     gap:18px;
-
     align-items:center;
-
     background:#fff;
-
     border-radius:22px;
-
     padding:20px 24px;
-
     border:1px solid #eef2ff;
-
     box-shadow:
-
     0 15px 35px rgba(15,23,42,.05);
-
     transition:.35s;
 
 }
