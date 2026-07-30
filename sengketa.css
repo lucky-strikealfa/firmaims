@@ -2171,20 +2171,17 @@ CARD
 =====================================*/
 
 .showcase-service{
-
     background:#fff;
-
     border:1px solid #eef2ff;
-
     border-radius:28px;
-
     padding:35px;
-
     transition:.35s;
-
-    box-shadow:
-    0 18px 40px rgba(15,23,42,.05);
-
+    box-shadow:0 18px 40px rgba(15,23,42,.05);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    height:auto;          /* ganti jika sebelumnya ada tinggi tetap */
+    min-height:unset;     /* hilangkan tinggi minimum */
 }
 
 .showcase-service:hover{
@@ -2965,4 +2962,11 @@ RESPONSIVE
 
 }
 
+}
+
+/* Hilangkan gambar pada card layanan */
+.service-image{
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
