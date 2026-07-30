@@ -2970,3 +2970,12 @@ RESPONSIVE
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.showcase-service{
+    padding-bottom:35px !important;
+}
+
+.service-title:last-child,
+.service-list:last-child{
+    margin-bottom:0;
+}
