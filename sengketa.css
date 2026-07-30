@@ -2154,14 +2154,10 @@ CONTENT
 =====================================*/
 
 .showcase-services{
-
     display:grid;
-
-    grid-template-columns:1fr 80px 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:35px;
-
-    align-items:center;
+    align-items:start;
 
 }
 
