@@ -269,6 +269,61 @@ z-index:5;
     margin-bottom:22px;
 }
 
+/* =========================
+   About Highlight
+========================= */
+
+.about-highlight{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    margin:35px 0;
+    padding:22px;
+    border-radius:22px;
+    background:#faf7ff;
+    border:1px solid rgba(114,30,73,.08);
+}
+
+.highlight-icon{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#7b35ff,#b587ff);
+    color:#fff;
+    font-size:24px;
+}
+
+.highlight-text h4{
+    margin:0 0 8px;
+    font-size:20px;
+    color:#222;
+}
+
+.highlight-text p{
+    margin:0;
+    font-size:15px;
+    line-height:1.8;
+    color:#666;
+}
+
+.about-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+    color:#6d28d9;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.about-link:hover{
+    gap:15px;
+}
+
 /* Feature List */
 
 .about-list{
