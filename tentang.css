@@ -2,18 +2,52 @@
    HERO SECTION
 ========================================================== */
 .hero{
-    position: relative;
-    overflow: hidden;
-    padding: 15px 0;
-    min-height:430px;
-    display: flex;
-    align-items: center;
-    background:linear-gradient(
-     135deg,
-     #faf8ff 0%,
-     #f4efff 55%,
-     #ffffff 100%
-    );
+    position:relative;
+    overflow:hidden;
+
+    padding:30px 0 140px;
+
+    min-height:640px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(126,87,255,.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(109,40,217,.10),
+    transparent 40%),
+
+    linear-gradient(
+    180deg,
+    #faf8ff 0%,
+    #f6f1ff 40%,
+    #ffffff 100%);
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-2px;
+
+width:100%;
+height:180px;
+
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 220'%3E%3Cpath fill='%23ffffff' d='M0 150 C220 240 430 20 700 120 C980 220 1160 40 1440 130 L1440 220 L0 220Z'/%3E%3C/svg%3E") no-repeat bottom;
+
+background-size:cover;
+
+z-index:3;
+
+pointer-events:none;
+
 }
 
 /* Background Shape */
@@ -181,7 +215,18 @@
 }
 
 .about{
-    background:#ffffff;
+position:relative;
+margin-top:-120px;
+padding-top:180px;
+padding-bottom:120px;
+background:
+linear-gradient(
+180deg,
+transparent 0%,
+#ffffff 18%,
+#ffffff 100%);
+z-index:5;
+
 }
 
 .about-grid{
