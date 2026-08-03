@@ -2286,3 +2286,278 @@ SELECTION
     color:#fff;
 
 }
+
+/* ==========================================================
+HERO FINISHING
+========================================================== */
+
+/* Smooth Animation */
+
+.hero-content,
+.hero-image,
+.hero-feature,
+.floating-card,
+.benefit-item{
+
+    opacity:0;
+    transform:translateY(35px);
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.hero-content{
+    animation-delay:.1s;
+}
+
+.hero-image{
+    animation-delay:.3s;
+}
+
+.hero-feature:nth-child(1){
+    animation-delay:.45s;
+}
+
+.hero-feature:nth-child(2){
+    animation-delay:.55s;
+}
+
+.hero-feature:nth-child(3){
+    animation-delay:.65s;
+}
+
+.hero-feature:nth-child(4){
+    animation-delay:.75s;
+}
+
+.card-one{
+    animation-delay:.5s;
+}
+
+.card-two{
+    animation-delay:.8s;
+}
+
+.card-three{
+    animation-delay:1s;
+}
+
+.benefit-item:nth-child(1){
+    animation-delay:1.1s;
+}
+
+.benefit-item:nth-child(2){
+    animation-delay:1.2s;
+}
+
+.benefit-item:nth-child(3){
+    animation-delay:1.3s;
+}
+
+.benefit-item:nth-child(4){
+    animation-delay:1.4s;
+}
+
+/* ================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =================================
+BUTTON
+================================= */
+
+.btn-primary,
+.btn-outline{
+
+    transition:
+    all .35s ease;
+
+}
+
+.btn-primary:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 25px 55px rgba(41,98,255,.35);
+
+}
+
+.btn-outline:hover{
+
+    transform:
+    translateY(-5px);
+
+    border-color:#2962ff;
+
+    color:#2962ff;
+
+}
+
+/* =================================
+FEATURE
+================================= */
+
+.hero-feature{
+
+    cursor:default;
+
+}
+
+.hero-feature:hover{
+
+    border-color:#c8dbff;
+
+}
+
+/* =================================
+FLOAT CARD
+================================= */
+
+.floating-card{
+
+    overflow:hidden;
+
+}
+
+.floating-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    120deg,
+    rgba(255,255,255,.30),
+    transparent 60%);
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.floating-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* =================================
+IMAGE
+================================= */
+
+.hero-image{
+
+    isolation:isolate;
+
+}
+
+.hero-image img{
+
+    transition:
+    transform .45s ease;
+
+}
+
+.hero-image:hover img{
+
+    transform:scale(1.02);
+
+}
+
+/* =================================
+BENEFIT
+================================= */
+
+.benefit-item{
+
+    border-radius:18px;
+
+    padding:10px;
+
+}
+
+.benefit-item:hover{
+
+    background:#f7faff;
+
+}
+
+/* =================================
+SHADOW
+================================= */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* =================================
+GLASS EFFECT
+================================= */
+
+.hero-feature,
+.floating-card{
+
+    backdrop-filter:blur(14px);
+
+}
+
+/* =================================
+SMOOTH
+================================= */
+
+.service-detail-hero *{
+
+    box-sizing:border-box;
+
+}
+
+.hero-grid{
+
+    overflow:visible;
+
+}
+
+/* =================================
+SELECTION
+================================= */
+
+.service-detail-hero ::selection{
+
+    background:#2962ff;
+
+    color:#fff;
+
+}
