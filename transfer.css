@@ -68,15 +68,10 @@ GRID
 
 .hero-grid{
 
-    position:relative;
-    z-index:2;
-
     display:grid;
-    grid-template-columns:560px 1fr;
-
-    gap:70px;
-
+    grid-template-columns:52% 48%;
     align-items:center;
+    gap:60px;
 
 }
 
@@ -325,6 +320,19 @@ IMAGE
 
 .hero-image img{
 
+    width:100%;
+    max-width:760px;
+    display:block;
+    position:relative;
+    z-index:2;
+
+    animation:heroFloat 5s ease-in-out infinite;
+
+    filter:drop-shadow(
+        0 35px 70px rgba(0,0,0,.18)
+    );
+
+}
 /* ===========================
 FLOAT ANIMATION
 =========================== */
@@ -332,21 +340,15 @@ FLOAT ANIMATION
 @keyframes heroFloat{
 
 0%{
-
 transform:translateY(0);
-
 }
 
 50%{
-
 transform:translateY(-12px);
-
 }
 
 100%{
-
 transform:translateY(0);
-
 }
 
 }
@@ -579,22 +581,22 @@ POSITION CARD
 
 .card-top{
 
-    top:30px;
-    right:20px;
+    top:40px;
+    right:-10px;
 
 }
 
 .card-middle{
 
-    top:210px;
-    right:-5px;
+    top:190px;
+    right:-25px;
 
 }
 
 .card-bottom{
 
-    bottom:30px;
-    right:35px;
+    bottom:10px;
+    right:30px;
 
 }
 
@@ -657,7 +659,7 @@ BOTTOM BENEFIT BAR
 
     left:0;
     right:0;
-    bottom:-70px;
+    bottom:-95px;
 
     z-index:20;
 
@@ -816,7 +818,8 @@ TABLET
 
 .service-detail-hero{
 
-    padding:70px 0 100px;
+    padding-top:150px;
+    padding-bottom:220px;
 
 }
 
