@@ -85,8 +85,8 @@ LEFT
 =========================== */
 
 .hero-content{
-
-    max-width:560px;
+    width:100%;
+    max-width:620px;
 
 }
 
@@ -324,25 +324,6 @@ IMAGE
 }
 
 .hero-image img{
-
-    width:100%;
-
-    max-width:760px;
-
-    display:block;
-
-    position:relative;
-
-    z-index:2;
-
-    animation:heroFloat 5s ease-in-out infinite;
-
-    filter:
-
-    drop-shadow(
-    0 35px 70px rgba(0,0,0,.18));
-
-}
 
 /* ===========================
 FLOAT ANIMATION
@@ -598,31 +579,22 @@ POSITION CARD
 
 .card-top{
 
-    top:40px;
-
-    right:-30px;
-
-    width:310px;
+    top:30px;
+    right:20px;
 
 }
 
 .card-middle{
 
-    top:300px;
-
-    right:-70px;
-
-    width:270px;
+    top:210px;
+    right:-5px;
 
 }
 
 .card-bottom{
 
-    bottom:40px;
-
-    right:-20px;
-
-    width:280px;
+    bottom:30px;
+    right:35px;
 
 }
 
