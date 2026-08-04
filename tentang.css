@@ -109,12 +109,15 @@ pointer-events:none;
     text-transform:uppercase;
 }
 
-.hero-content h1{
-
-    font-size:48px;
-    line-height:1.05;
-    letter-spacing:-1px;
-    margin-bottom:12px;
+   .hero-content h1{
+   
+       font-size:48px;
+       line-height:1.15;
+       letter-spacing:-1px;
+       margin-bottom:12px;
+       font-weight:800;
+       color:#19223d;
+       margin-bottom:28px;
 }
 
 .hero-content h1 span{
