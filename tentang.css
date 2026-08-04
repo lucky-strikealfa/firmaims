@@ -4,23 +4,17 @@
 .hero{
     position:relative;
     overflow:hidden;
-
     padding:30px 0 140px;
-
     min-height:640px;
-
     display:flex;
     align-items:center;
-
     background:
     radial-gradient(circle at top right,
     rgba(126,87,255,.18),
     transparent 35%),
-
     radial-gradient(circle at bottom left,
     rgba(109,40,217,.10),
     transparent 40%),
-
     linear-gradient(
     180deg,
     #faf8ff 0%,
