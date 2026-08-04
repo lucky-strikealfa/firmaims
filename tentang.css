@@ -1920,24 +1920,13 @@ font-size:20px;
 }
 
 .card-top{
-
-left:10px;
-top:70px;
-
-}
-
-.card-middle{
-
-left:-20px;
-bottom:100px;
-
+    left:20px;
+    top:120px;
 }
 
 .card-bottom{
-
-right:10px;
-top:270px;
-
+    right:20px;
+    bottom:120px;
 }
 
 /* RIGHT */
