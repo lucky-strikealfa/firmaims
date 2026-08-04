@@ -1878,57 +1878,6 @@ animation:heroFloat 6s ease infinite;
 
 }
 
-/* floating */
-
-.float-card{
-
-position:absolute;
-
-display:flex;
-align-items:center;
-gap:15px;
-
-background:#fff;
-
-padding:18px 22px;
-
-border-radius:22px;
-
-box-shadow:0 20px 45px rgba(0,0,0,.08);
-
-z-index:10;
-
-}
-
-.float-icon{
-
-width:54px;
-height:54px;
-
-border-radius:18px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-background:linear-gradient(135deg,#5f2dff,#7d5fff);
-
-color:#fff;
-
-font-size:20px;
-
-}
-
-.card-top{
-    left:20px;
-    top:120px;
-}
-
-.card-bottom{
-    right:20px;
-    bottom:120px;
-}
-
 /* RIGHT */
 
 .about-right h2{
