@@ -103,20 +103,18 @@ pointer-events:none;
     text-transform:uppercase;
 }
 
-   .hero-content h1{
-   
-       font-size:42px !important;
-       line-height:1.2 !important;
-       letter-spacing:-1px;
-       margin-bottom:12px;
-       font-weight:800;
-       color:#19223d;
-       margin-bottom:28px;
+.hero-content h1{
+    font-size:46px;
+    line-height:1.15;
+    font-weight:800;
+    color:#19223d;
+    margin-bottom:24px;
+    letter-spacing:-1px;
 }
 
 .hero-content h1 span{
     display:block;
-    color:var(--primary);
+    color:#6d3de7;
 }
 
 .hero-content p{
