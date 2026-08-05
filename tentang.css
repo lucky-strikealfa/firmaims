@@ -33,9 +33,7 @@ height:180px;
 background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 220'%3E%3Cpath fill='%23ffffff' d='M0 150 C220 240 430 20 700 120 C980 220 1160 40 1440 130 L1440 220 L0 220Z'/%3E%3C/svg%3E") no-repeat bottom;
 
 background-size:cover;
-
 z-index:3;
-
 pointer-events:none;
 
 }
@@ -1393,11 +1391,8 @@ z-index:5;
     );
 
     color:#721e49;
-
     border:1px solid rgba(114,30,73,.15);
-
     border-radius:999px;
-
     font-size:18px;
     font-weight:800;
     letter-spacing:1.2px;
