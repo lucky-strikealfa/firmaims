@@ -1841,9 +1841,8 @@ transparent 70%);
 
 position:relative;
 z-index:5;
-
-width:430px;
-
+width:560px;
+max-width:none;
 animation:heroFloat 6s ease infinite;
 
 }
