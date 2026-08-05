@@ -1890,16 +1890,6 @@ line-height:1.8;
 
 /* button */
 
-.about-buttons{
-
-display:flex;
-align-items:center;
-gap:35px;
-
-margin-top:45px;
-
-}
-
 .about-link2{
 
 font-weight:700;
@@ -1942,13 +1932,6 @@ grid-template-columns:1fr;
 
 }
 
-.about-buttons{
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-}
 
 .float-card{
 
