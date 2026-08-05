@@ -984,10 +984,10 @@ z-index:5;
 
 @media(max-width:768px){
 
-    .stats-grid,
-    .vision-right,
-    .core-grid{
-        grid-template-columns:1fr;
+.vision-right,
+.core-grid{
+    grid-template-columns:1fr;
+   
     }
 
     .vision-left h2{
@@ -997,10 +997,6 @@ z-index:5;
     .vision-card,
     .core-card{
         padding:30px;
-    }
-
-    .stat-box h2{
-        font-size:46px;
     }
 
 }
@@ -1014,10 +1010,6 @@ z-index:5;
     .vision-card h3,
     .core-card h3{
         font-size:22px;
-    }
-
-    .stat-box{
-        padding:35px 20px;
     }
 
 }
