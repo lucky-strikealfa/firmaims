@@ -325,29 +325,133 @@ IMAGE
 ========================================================== */
 
 .hero-image{
-
     position:relative;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
+    min-height:700px;
 
 }
 
 .hero-image img{
-
     width:100%;
-
     max-width:610px;
+    border-radius:28px;
+    display:block;
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.18);
+
+}
+
+/* ===========================================
+TEXT DI DEPAN GAMBAR
+=========================================== */
+
+.hero-image-content{
+
+    position:absolute;
+
+    left:-10px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:380px;
+
+    z-index:20;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(15px);
+
+    padding:38px;
 
     border-radius:28px;
 
-    display:block;
-
     box-shadow:
-    0 35px 80px rgba(0,0,0,.18);
+    0 30px 70px rgba(0,0,0,.12);
+
+}
+
+/* Badge */
+
+.image-badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#edf4ff;
+
+    color:#2962ff;
+
+    border-radius:40px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+/* Judul */
+
+.hero-image-content h2{
+
+    font-size:42px;
+
+    line-height:1.1;
+
+    color:#12386d;
+
+    margin-bottom:18px;
+
+}
+
+.hero-image-content h2 span{
+
+    color:#2962ff;
+
+}
+
+/* Isi */
+
+.hero-image-content p{
+    font-size:16px;
+    line-height:1.9;
+    color:#6b7280;
+    margin-bottom:30px;
+
+}
+
+/* Button */
+
+.image-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 32px;
+    border-radius:50px;
+    background:#2962ff;
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    transition:.35s;
+
+}
+
+.image-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 20px 40px rgba(41,98,255,.30);
+
+}
+
+.hero-image img{
+    position:relative;
+    margin-left:140px;
 
 }
 
