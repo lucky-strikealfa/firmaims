@@ -44,15 +44,11 @@ TRANSFER HERO
 
     position:relative;
     z-index:2;
-
     display:grid;
-
     grid-template-columns:
     560px
     minmax(450px,1fr);
-
     gap:90px;
-
     align-items:center;
 
 }
