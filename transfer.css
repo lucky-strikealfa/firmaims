@@ -240,11 +240,23 @@ IMAGE
 ========================================================== */
 
 .hero-image{
-    position:relative;
+
     display:flex;
     justify-content:center;
-    align-items:center;
-    min-height:700px;
+    align-items:flex-end;
+
+    position:relative;
+
+}
+
+.hero-person{
+
+    width:100%;
+    max-width:520px;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,.08));
 
 }
 
@@ -889,7 +901,7 @@ MOBILE
 .floating-card{
 
     position:relative;
-
+    
     width:100%;
 
     margin:16px 0;
@@ -1745,10 +1757,12 @@ TABLET
 
 .hero-grid{
 
-    grid-template-columns:1fr;
-    gap:60px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
 
-    text-align:center;
+    gap:90px;
+
+    align-items:center;
 
 }
 
@@ -1843,7 +1857,12 @@ MOBILE
 
 .service-detail-hero{
 
-    padding:60px 0;
+padding:110px 0;
+
+    overflow:hidden;
+
+    position:relative;
+
 
 }
 
