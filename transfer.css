@@ -153,7 +153,6 @@ FEATURE GRID
 }
 
 .hero-feature:hover{
-
     transform:translateY(-8px);
 
 }
@@ -252,7 +251,6 @@ IMAGE
     display:flex;
     justify-content:center;
     align-items:flex-end;
-
     position:relative;
 
 }
@@ -283,26 +281,16 @@ TEXT DI DEPAN GAMBAR
 =========================================== */
 
 .hero-image-content{
-
     position:absolute;
-
     left:-10px;
     top:50%;
-
     transform:translateY(-50%);
-
     width:380px;
-
     z-index:20;
-
     background:rgba(255,255,255,.92);
-
     backdrop-filter:blur(15px);
-
     padding:38px;
-
     border-radius:28px;
-
     box-shadow:
     0 30px 70px rgba(0,0,0,.12);
 
@@ -311,21 +299,13 @@ TEXT DI DEPAN GAMBAR
 /* Badge */
 
 .image-badge{
-
     display:inline-block;
-
     padding:10px 18px;
-
     background:#edf4ff;
-
     color:#2962ff;
-
     border-radius:40px;
-
     font-size:13px;
-
     font-weight:700;
-
     margin-bottom:18px;
 
 }
@@ -333,19 +313,14 @@ TEXT DI DEPAN GAMBAR
 /* Judul */
 
 .hero-image-content h2{
-
     font-size:42px;
-
     line-height:1.1;
-
     color:#12386d;
-
     margin-bottom:18px;
 
 }
 
 .hero-image-content h2 span{
-
     color:#2962ff;
 
 }
@@ -395,76 +370,49 @@ FLOATING CARD
 ========================================================== */
 
 .floating-card{
-
     position:absolute;
-
     background:rgba(255,255,255,.94);
-
     backdrop-filter:blur(15px);
-
     border-radius:22px;
-
     padding:20px;
-
     display:flex;
-
     gap:16px;
-
     align-items:flex-start;
-
     box-shadow:
     0 20px 50px rgba(0,0,0,.12);
 
 }
 
 .floating-icon{
-
     width:54px;
-
     height:54px;
-
     border-radius:16px;
-
     background:#edf4ff;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     color:#3568ff;
 
 }
 
 .floating-card h5{
-
     margin:0;
-
     color:#12386d;
-
     font-size:18px;
 
 }
 
 .floating-card small{
-
     display:block;
-
     margin-top:6px;
-
     color:#6b7280;
 
 }
 
 .floating-card strong{
-
     display:block;
-
     margin-top:8px;
-
     color:#12a24b;
-
     font-size:30px;
 
 }
@@ -472,25 +420,19 @@ FLOATING CARD
 /* ============================= */
 
 .card-one{
-
     top:35px;
-
     right:-25px;
 
 }
 
 .card-two{
-
     top:180px;
-
     right:-55px;
 
 }
 
 .card-three{
-
     bottom:35px;
-
     right:20px;
 
 }
@@ -500,83 +442,55 @@ BENEFIT BAR
 ========================================================== */
 
 .hero-benefit{
-
     margin-top:-50px;
-
     position:relative;
-
     z-index:5;
 
 }
 
 .benefit-grid{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:22px;
-
     padding:35px;
-
     border-radius:30px;
-
     background:#fff;
-
     box-shadow:
     0 25px 60px rgba(0,0,0,.08);
 
 }
 
 .benefit-item{
-
     display:flex;
-
     gap:18px;
 
 }
 
 .benefit-icon{
-
     width:62px;
-
     height:62px;
-
     border-radius:18px;
-
     background:
     linear-gradient(135deg,#3568ff,#4b82ff);
-
     color:#fff;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     font-size:24px;
-
     flex-shrink:0;
 
 }
 
 .benefit-item h4{
-
     color:#163b73;
-
     margin-bottom:8px;
-
     font-size:18px;
 
 }
 
 .benefit-item p{
-
     color:#6c7888;
-
     line-height:1.7;
-
     font-size:14px;
 
 }
