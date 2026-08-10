@@ -91,20 +91,27 @@
 
 .hero-grid{
     width:min(1180px, calc(100% - 50px));
-
     margin:0 auto;
 
     display:grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(430px, .82fr);
+    grid-template-columns:minmax(0, 1.08fr) minmax(430px, .92fr);
+
+    grid-template-areas:
+        "content image";
 
     gap:45px;
 
     align-items:center;
 }
 
+.hero-content{
+    grid-area:content;
+}
+
+.hero-image{
+    grid-area:image;
+}
 
 /* =========================================================
    LEFT CONTENT
@@ -472,28 +479,16 @@
 
     object-fit:contain;
 
-    /*
-       PENTING:
-       Jangan beri background putih.
-       Jangan beri border.
-       Jangan beri box-shadow besar.
-    */
-
     border-radius:0;
 
     box-shadow:none;
 
-    animation:
-        personFloat 6s ease-in-out infinite;
-
-    transition:
-        transform .45s ease;
+    transition:transform .45s ease;
 }
 
 .hero-image:hover img{
     transform:translateY(-4px) scale(1.015);
 }
-
 
 /* =========================================================
    IMAGE DECORATION
@@ -748,32 +743,23 @@
 
 }
 
-@keyframes personFloat{
-
-    0%,
-    100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-6px);
-    }
-
-}
-
-
 /* =========================================================
-   LAPTOP
+   HERO RESPONSIVE — CLEAN VERSION
 ========================================================= */
 
-@media(max-width:1200px){
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width:1200px){
 
     .hero-grid{
         width:min(1080px, calc(100% - 40px));
 
         grid-template-columns:
-            minmax(0,1fr)
-            minmax(380px,.8fr);
+            minmax(0, 1fr)
+            minmax(380px, .85fr);
 
         gap:35px;
     }
@@ -801,18 +787,25 @@
 }
 
 
-/* =========================================================
+/* =========================
    TABLET
-========================================================= */
+========================= */
 
-@media(max-width:991px){
+@media (max-width:991px){
 
     .service-detail-hero{
         padding:50px 0 30px;
     }
 
     .hero-grid{
+
+        width:calc(100% - 40px);
+
         grid-template-columns:1fr;
+
+        grid-template-areas:
+            "content"
+            "image";
 
         gap:35px;
 
@@ -821,7 +814,6 @@
 
     .hero-content{
         max-width:700px;
-
         margin:0 auto;
     }
 
@@ -852,13 +844,27 @@
 
     .hero-image{
         min-height:auto;
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
     }
 
     .hero-image img{
+        width:auto;
+
+        max-width:500px;
+
         max-height:500px;
     }
 
     .hero-benefit{
+        width:calc(100% - 40px);
+
         margin-top:25px;
     }
 
@@ -875,18 +881,25 @@
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .service-detail-hero{
         padding:40px 0 25px;
     }
 
     .hero-grid{
+
         width:calc(100% - 30px);
+
+        grid-template-columns:1fr;
+
+        grid-template-areas:
+            "content"
+            "image";
 
         gap:30px;
     }
@@ -913,10 +926,23 @@
         max-width:500px;
     }
 
-    .hero-image img{
+    .hero-image{
         width:100%;
+
+        min-height:auto;
+
+        margin:0 auto;
+    }
+
+    .hero-image img{
+
+        width:auto;
+
         max-width:430px;
+
         max-height:none;
+
+        margin:0 auto;
     }
 
     .hero-image::before{
@@ -942,17 +968,22 @@
 
     .benefit-item:not(:last-child){
         border-bottom:1px solid #edf1f7;
+
         padding-bottom:14px;
     }
 
 }
 
 
-/* =========================================================
+/* =========================
    SMALL MOBILE
-========================================================= */
+========================= */
 
-@media(max-width:480px){
+@media (max-width:480px){
+
+    .service-detail-hero{
+        padding:40px 14px 25px;
+    }
 
     .hero-content h1{
         font-size:39px;
@@ -964,6 +995,7 @@
 
     .hero-badge{
         font-size:9px;
+
         padding:7px 15px;
     }
 
@@ -973,6 +1005,7 @@
 
     .btn-primary{
         width:100%;
+
         max-width:240px;
     }
 
@@ -1636,158 +1669,6 @@ border-radius:18px;
 }
 
 /* ==========================================================
-RESPONSIVE DESKTOP
-========================================================== */
-
-@media (max-width:1400px){
-
-.hero-grid{
-
-    grid-template-columns:520px 1fr;
-    gap:60px;
-
-}
-
-.hero-content h1{
-
-    font-size:72px;
-
-}
-
-.hero-content h2{
-
-    font-size:30px;
-
-}
-
-.hero-image img{
-
-    max-width:560px;
-
-}
-
-.card-one{
-
-    top:20px;
-    right:-5px;
-
-}
-
-.card-two{
-
-    top:180px;
-    right:-25px;
-
-}
-
-.card-three{
-
-    bottom:25px;
-    right:5px;
-
-}
-
-.hero-feature-grid{
-
-    gap:16px;
-
-}
-
-.benefit-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-/* ==========================================================
-LAPTOP
-========================================================== */
-
-@media (max-width:1200px){
-
-.service-detail-hero{
-
-    padding:80px 0 100px;
-
-}
-
-.hero-grid{
-
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-
-}
-
-.hero-content{
-
-    max-width:100%;
-
-}
-
-.hero-content h1{
-
-    font-size:62px;
-
-    letter-spacing:-2px;
-
-}
-
-.hero-content h2{
-
-    font-size:28px;
-
-}
-
-.hero-content p{
-
-    font-size:16px;
-
-}
-
-.hero-feature{
-
-    padding:18px;
-
-}
-
-.hero-image img{
-
-    max-width:500px;
-
-}
-
-.card-one{
-
-    top:20px;
-    right:0;
-
-}
-
-.card-two{
-
-    top:150px;
-    right:-10px;
-
-}
-
-.card-three{
-
-    bottom:10px;
-    right:10px;
-
-}
-
-.hero-benefit{
-
-    margin-top:40px;
-
-}
-
-}
-
-/* ==========================================================
 TABLET
 ========================================================== */
 
@@ -2097,14 +1978,6 @@ SMALL MOBILE
 /* ==========================================================
 HERO FINISHING
 ========================================================== */
-
-/* Smooth Animation */
-
-.hero-content,
-.hero-image,
-.hero-feature,
-.floating-card,
-.benefit-item{
 
     opacity:0;
     transform:translateY(35px);
