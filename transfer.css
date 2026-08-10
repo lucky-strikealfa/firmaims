@@ -1,1697 +1,1831 @@
 /* =========================================================
    TRANSFER PRICING
-   PREMIUM 2026 — CLEAN REBUILD
-   Dibuat khusus untuk transfer.html
-========================================================= */
+   PREMIUM 2026
+   FINAL CLEAN VERSION
+   ========================================================= */
 
-:root{
-    --tp-blue:#2563eb;
-    --tp-blue-dark:#173b70;
-    --tp-navy:#102f59;
-    --tp-gold:#d8a62b;
-    --tp-text:#64748b;
-    --tp-border:#e5ebf4;
-    --tp-bg:#f7faff;
-    --tp-white:#ffffff;
-}
+/* =========================================================
+   FONT AWESOME
+   ========================================================= */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 
 
 /* =========================================================
-   RESET KHUSUS HALAMAN
-========================================================= */
+   RESET KHUSUS HALAMAN TRANSFER
+   ========================================================= */
 
 .service-detail-hero *,
-.hero-benefit *,
-.service-content *{
-    box-sizing:border-box;
-}
-
-.service-detail-hero{
-    position:relative;
-    overflow:hidden;
+.hero-benefit * {
+    box-sizing: border-box;
 }
 
 
 /* =========================================================
-   HERO BACKGROUND
-========================================================= */
+   BODY
+   ========================================================= */
 
-.service-detail-hero{
-    padding:78px 0 48px;
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #f7f9ff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.service-detail-hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 735px;
+
+    padding: 42px 0 48px;
 
     background:
         radial-gradient(
-            circle at 82% 38%,
-            rgba(37,99,235,.10),
-            transparent 28%
+            circle at 92% 14%,
+            rgba(52, 102, 235, 0.12),
+            transparent 22%
         ),
         radial-gradient(
-            circle at 8% 82%,
-            rgba(37,99,235,.055),
-            transparent 25%
+            circle at 2% 90%,
+            rgba(52, 102, 235, 0.08),
+            transparent 20%
         ),
         linear-gradient(
             135deg,
             #ffffff 0%,
             #f9fbff 52%,
-            #f1f6ff 100%
+            #f1f5ff 100%
         );
 }
 
-.service-detail-hero::before{
-    content:"";
 
-    position:absolute;
+/* =========================================================
+   BACKGROUND CIRCLES
+   ========================================================= */
 
-    width:620px;
-    height:620px;
+.hero-bg {
+    position: absolute;
 
-    right:-300px;
-    top:-280px;
+    border-radius: 50%;
 
-    border-radius:50%;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.hero-bg-1 {
+    width: 500px;
+    height: 500px;
+
+    right: -210px;
+    top: -230px;
 
     background:
         radial-gradient(
             circle,
-            rgba(37,99,235,.08),
-            transparent 68%
+            rgba(43, 99, 235, 0.12),
+            rgba(43, 99, 235, 0.035) 58%,
+            transparent 72%
         );
-
-    pointer-events:none;
 }
 
-.service-detail-hero::after{
-    content:"";
+.hero-bg-2 {
+    width: 330px;
+    height: 330px;
 
-    position:absolute;
-
-    width:420px;
-    height:420px;
-
-    left:-250px;
-    bottom:-250px;
-
-    border-radius:50%;
+    left: -180px;
+    bottom: -200px;
 
     background:
         radial-gradient(
             circle,
-            rgba(37,99,235,.055),
-            transparent 68%
+            rgba(43, 99, 235, 0.09),
+            transparent 70%
         );
-
-    pointer-events:none;
 }
 
 
 /* =========================================================
    CONTAINER
-========================================================= */
+   ========================================================= */
 
-.service-detail-hero > .container{
-    position:relative;
-    z-index:2;
+.service-detail-hero > .container {
+    position: relative;
 
-    width:min(1240px, calc(100% - 60px));
+    z-index: 2;
 
-    margin:0 auto;
+    width: 100%;
+
+    max-width: none;
+
+    padding: 0;
 }
 
 
 /* =========================================================
    HERO GRID
-========================================================= */
+   ========================================================= */
 
-.hero-grid{
-    display:grid;
+.hero-grid {
+    width: min(1280px, calc(100% - 70px));
+
+    margin: 0 auto;
+
+    display: grid;
 
     grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(460px, .95fr);
+        minmax(0, 1fr)
+        470px;
 
-    gap:45px;
+    column-gap: 62px;
 
-    align-items:center;
+    align-items: center;
 
-    min-height:570px;
+    overflow: visible;
 }
 
 
 /* =========================================================
-   HERO CONTENT
-========================================================= */
+   LEFT CONTENT
+   ========================================================= */
 
-.hero-content{
-    width:100%;
-    max-width:650px;
+.hero-content {
+    position: relative;
 
-    margin:0;
+    width: 100%;
 
-    text-align:left;
+    max-width: 720px;
 
-    position:relative;
-    z-index:5;
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    column-gap: 14px;
+
+    align-items: center;
+
+    text-align: left;
+
+    z-index: 5;
+
+    animation: transferContentIn .8s ease both;
 }
 
 
 /* =========================================================
    BADGE
-========================================================= */
+   ========================================================= */
 
-.hero-badge{
-    display:inline-flex;
+.hero-badge {
+    grid-column: 1 / -1;
 
-    align-items:center;
-    gap:8px;
+    justify-self: start;
 
-    padding:8px 15px;
+    display: inline-flex;
 
-    margin-bottom:18px;
+    align-items: center;
+    justify-content: center;
 
-    border-radius:999px;
+    width: max-content;
 
-    background:#fff;
+    padding: 10px 26px;
 
-    border:1px solid #dce7fb;
+    margin: 0 0 22px;
 
-    color:var(--tp-blue);
+    border-radius: 50px;
 
-    font-size:10px;
-    font-weight:800;
+    background: rgba(255, 255, 255, 0.92);
 
-    letter-spacing:1.4px;
+    border: 1px solid #d2e0ff;
+
+    color: #2862e9;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.4px;
 
     box-shadow:
-        0 8px 24px rgba(30,64,110,.06);
-}
-
-.hero-badge i{
-    font-size:10px;
+        0 8px 25px rgba(40, 83, 150, 0.06);
 }
 
 
 /* =========================================================
    TITLE
-========================================================= */
+   ========================================================= */
 
-.hero-content h1{
-    margin:0;
+.hero-content h1 {
+    grid-column: 1 / -1;
 
-    font-size:68px;
+    margin: 0;
 
-    line-height:.94;
+    color: #0c2347;
 
-    letter-spacing:-3.8px;
+    font-family: "Poppins", sans-serif;
 
-    font-weight:800;
+    font-size: clamp(58px, 5.3vw, 76px);
 
-    color:var(--tp-navy);
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -3.5px;
 }
 
-.hero-content h1 span{
-    display:block;
+.hero-content h1 span {
+    display: block;
 
-    color:var(--tp-blue);
+    margin-top: 3px;
 
-    margin-top:4px;
+    color: #2863eb;
 }
 
 
 /* =========================================================
    GOLD LINE
-========================================================= */
+   ========================================================= */
 
-.hero-line{
-    width:58px;
-    height:4px;
+.hero-line {
+    grid-column: 1 / -1;
 
-    margin:19px 0 17px;
+    width: 82px;
 
-    border-radius:99px;
+    height: 5px;
 
-    background:var(--tp-gold);
+    margin: 25px 0 24px;
+
+    border-radius: 20px;
+
+    background: #dba62e;
 }
 
 
 /* =========================================================
    SUBTITLE
-========================================================= */
+   ========================================================= */
 
-.hero-content h2{
-    max-width:620px;
+.hero-content h2 {
+    grid-column: 1 / -1;
 
-    margin:0 0 12px;
+    max-width: 620px;
 
-    color:#183d70;
+    margin: 0 0 17px;
 
-    font-size:21px;
+    color: #153a6d;
 
-    line-height:1.35;
+    font-family: "Poppins", sans-serif;
 
-    letter-spacing:-.35px;
+    font-size: 27px;
 
-    font-weight:800;
+    line-height: 1.4;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
 }
 
 
 /* =========================================================
    DESCRIPTION
-========================================================= */
+   ========================================================= */
 
-.hero-content > p{
-    max-width:610px;
+.hero-content > p {
+    grid-column: 1;
 
-    margin:0;
+    margin: 0;
 
-    color:var(--tp-text);
+    max-width: 590px;
 
-    font-size:13px;
+    color: #61718a;
 
-    line-height:1.75;
+    font-family: "Poppins", sans-serif;
 
-    font-weight:400;
-}
+    font-size: 14px;
 
+    line-height: 1.9;
 
-/* =========================================================
-   FEATURES
-========================================================= */
-
-/*
-   HTML Anda tidak mempunyai .hero-feature-grid.
-   Jadi kita buat feature card langsung melalui
-   .hero-content menggunakan grid.
-*/
-
-.hero-content{
-    display:grid;
-
-    grid-template-columns:repeat(2,minmax(0,1fr));
-
-    column-gap:10px;
-    row-gap:10px;
-}
-
-.hero-content .hero-badge{
-    grid-column:1 / -1;
-}
-
-.hero-content h1{
-    grid-column:1 / -1;
-}
-
-.hero-content .hero-line{
-    grid-column:1 / -1;
-}
-
-.hero-content h2{
-    grid-column:1 / -1;
-}
-
-.hero-content > p{
-    grid-column:1 / -1;
-}
-
-
-/* =========================================================
-   FEATURE CARD
-========================================================= */
-
-.hero-feature{
-    display:flex;
-
-    align-items:center;
-
-    min-height:64px;
-
-    padding:10px 12px;
-
-    border-radius:13px;
-
-    background:rgba(255,255,255,.94);
-
-    border:1px solid #e1e9f6;
-
-    box-shadow:
-        0 7px 22px rgba(30,60,100,.055);
-
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
-}
-
-.hero-feature:hover{
-    transform:translateY(-3px);
-
-    border-color:#cbdcff;
-
-    box-shadow:
-        0 13px 28px rgba(30,70,130,.09);
-}
-
-
-/* =========================================================
-   FEATURE ICON
-========================================================= */
-
-.feature-icon{
-    width:38px;
-    height:38px;
-
-    min-width:38px;
-
-    margin-right:10px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:10px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #edf4ff,
-            #dfeaff
-        );
-
-    color:var(--tp-blue);
-
-    font-size:15px;
-}
-
-.feature-icon i{
-    line-height:1;
-}
-
-
-/* =========================================================
-   FEATURE TEXT
-========================================================= */
-
-.hero-feature h4{
-    margin:0 0 3px;
-
-    color:#163a6c;
-
-    font-size:10px;
-
-    line-height:1.25;
-
-    font-weight:800;
-}
-
-.hero-feature p{
-    margin:0;
-
-    color:#718096;
-
-    font-size:8px;
-
-    line-height:1.35;
+    font-weight: 400;
 }
 
 
 /* =========================================================
    CTA
-========================================================= */
+   ========================================================= */
 
-.hero-buttons{
-    grid-column:1 / -1;
+.hero-buttons {
+    grid-column: 2;
 
-    display:flex;
+    grid-row: 5;
 
-    align-items:center;
+    align-self: end;
 
-    justify-content:flex-start;
+    justify-self: end;
 
-    margin-top:8px;
+    margin: 0 8px 0 0;
+
+    position: relative;
+
+    z-index: 10;
 }
 
-.btn-primary{
-    display:inline-flex;
+.btn-primary {
+    display: inline-flex;
 
-    align-items:center;
-    justify-content:center;
-    gap:9px;
+    align-items: center;
 
-    min-height:46px;
+    justify-content: center;
 
-    padding:0 24px;
+    gap: 10px;
 
-    border-radius:999px;
+    min-width: 196px;
+
+    padding: 14px 27px;
+
+    border: 0;
+
+    border-radius: 50px;
 
     background:
         linear-gradient(
             135deg,
-            #3472f5,
-            #2458db
+            #326cf5,
+            #2457dd
         );
 
-    color:#fff;
+    color: #ffffff;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    font-size:11px;
+    font-family: "Poppins", sans-serif;
 
-    font-weight:800;
+    font-size: 13px;
 
-    box-shadow:
-        0 13px 28px rgba(37,99,235,.23);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
+    font-weight: 700;
 
     box-shadow:
-        0 18px 35px rgba(37,99,235,.30);
-}
-
-.btn-primary i{
-    font-size:10px;
-}
-
-
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
-.hero-image{
-    position:relative;
-
-    width:100%;
-
-    min-height:570px;
-
-    display:flex;
-
-    align-items:flex-end;
-
-    justify-content:center;
-
-    z-index:3;
-}
-
-
-/* =========================================================
-   PERSON GLOW
-========================================================= */
-
-.hero-image::before{
-    content:"";
-
-    position:absolute;
-
-    width:520px;
-    height:520px;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-43%);
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(50,104,235,.12) 0%,
-            rgba(50,104,235,.045) 45%,
-            transparent 70%
-        );
-
-    z-index:-2;
-}
-
-
-/* =========================================================
-   PERSON CIRCLE
-========================================================= */
-
-.hero-image::after{
-    content:"";
-
-    position:absolute;
-
-    width:360px;
-    height:360px;
-
-    left:50%;
-    top:53%;
-
-    transform:translate(-50%,-50%);
-
-    border-radius:50%;
-
-    border:1px solid rgba(54,104,229,.10);
-
-    z-index:-1;
-}
-
-
-/* =========================================================
-   PERSON IMAGE
-========================================================= */
-
-.hero-image img{
-    display:block;
-
-    width:auto;
-
-    height:auto;
-
-    max-width:100%;
-
-    max-height:610px;
-
-    object-fit:contain;
-
-    margin:0 auto;
-
-    border:0;
-
-    border-radius:0;
-
-    box-shadow:none;
-
-    background:transparent;
-
-    transition:
-        transform .4s ease;
-}
-
-.hero-image:hover img{
-    transform:translateY(-6px);
-}
-
-
-/* =========================================================
-   BENEFIT BAR
-========================================================= */
-
-.hero-benefit{
-    position:relative;
-
-    z-index:10;
-
-    width:min(1180px, calc(100% - 60px));
-
-    margin:20px auto 0;
-}
-
-.benefit-grid{
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    padding:10px;
-
-    background:rgba(255,255,255,.96);
-
-    border:1px solid #e3eaf4;
-
-    border-radius:14px;
-
-    box-shadow:
-        0 14px 35px rgba(28,60,100,.07);
-}
-
-
-/* =========================================================
-   BENEFIT ITEM
-========================================================= */
-
-.benefit-item{
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    min-height:55px;
-
-    padding:8px 14px;
-}
-
-.benefit-item:not(:last-child)::after{
-    content:"";
-
-    position:absolute;
-
-    right:0;
-    top:15%;
-
-    width:1px;
-    height:70%;
-
-    background:#e4eaf2;
-}
-
-
-/* =========================================================
-   BENEFIT ICON
-========================================================= */
-
-.benefit-icon{
-    width:34px;
-    height:34px;
-
-    min-width:34px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:9px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #326cf1,
-            #2456d9
-        );
-
-    color:#fff;
-
-    font-size:12px;
-
-    box-shadow:
-        0 7px 15px rgba(37,99,235,.18);
-}
-
-
-/* =========================================================
-   BENEFIT TEXT
-========================================================= */
-
-.benefit-item h4{
-    margin:0 0 2px;
-
-    color:#173b6e;
-
-    font-size:9px;
-
-    line-height:1.2;
-
-    font-weight:800;
-}
-
-.benefit-item p{
-    margin:0;
-
-    color:#718096;
-
-    font-size:7.5px;
-
-    line-height:1.35;
-}
-
-
-/* =========================================================
-   SERVICE CONTENT
-========================================================= */
-
-.service-content{
-    padding:80px 20px 100px;
-
-    background:#f7f9fc;
-}
-
-.service-content > .container{
-    width:min(1180px,100%);
-
-    margin:0 auto;
-}
-
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.service-intro{
-    max-width:760px;
-
-    margin:0 auto 55px;
-
-    padding:30px 35px;
-
-    text-align:center;
-
-    background:#fff;
-
-    border:1px solid #e8edf5;
-
-    border-radius:18px;
-
-    box-shadow:
-        0 12px 30px rgba(25,55,95,.06);
-}
-
-.service-intro h2{
-    margin:0 0 12px;
-
-    color:#123b70;
-
-    font-size:28px;
-
-    line-height:1.2;
-
-    font-weight:800;
-}
-
-.service-intro p{
-    margin:0;
-
-    color:#6b7788;
-
-    font-size:12px;
-
-    line-height:1.8;
-}
-
-
-/* =========================================================
-   SERVICE GRID
-========================================================= */
-
-.service-grid{
-    display:flex;
-
-    flex-direction:column;
-
-    gap:28px;
-}
-
-
-/* =========================================================
-   SERVICE CARD
-========================================================= */
-
-.service-box{
-    position:relative;
-
-    display:grid;
-
-    grid-template-columns:43% 57%;
-
-    align-items:center;
-
-    gap:35px;
-
-    padding:18px;
-
-    background:#fff;
-
-    border:1px solid #e8edf4;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 12px 30px rgba(25,55,95,.06);
+        0 15px 35px rgba(40, 91, 225, 0.28);
 
     transition:
         transform .3s ease,
         box-shadow .3s ease;
 }
 
-.service-box:hover{
-    transform:translateY(-4px);
+.btn-primary i {
+    font-size: 11px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
 
     box-shadow:
-        0 20px 40px rgba(25,55,95,.09);
+        0 20px 40px rgba(40, 91, 225, 0.35);
 }
 
 
 /* =========================================================
-   REVERSE CARD
-========================================================= */
+   FEATURE CARDS
+   IMPORTANT:
+   HTML ANDA TIDAK MEMILIKI .hero-feature-grid.
+   Karena itu kita jadikan .hero-content sebagai grid.
+   ========================================================= */
 
-.service-box.reverse .service-image{
-    grid-column:2;
-    grid-row:1;
+.hero-feature {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 82px;
+
+    padding: 13px 16px;
+
+    margin: 0;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e3eaf7;
+
+    box-shadow:
+        0 10px 28px rgba(25, 55, 105, 0.055);
+
+    opacity: 1;
+
+    transform: none;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
 }
 
-.service-box.reverse .service-body{
-    grid-column:1;
-    grid-row:1;
+
+/* Feature positioning */
+
+.hero-feature:nth-of-type(1) {
+    grid-column: 1;
+
+    grid-row: 6;
+}
+
+.hero-feature:nth-of-type(2) {
+    grid-column: 2;
+
+    grid-row: 6;
+}
+
+.hero-feature:nth-of-type(3) {
+    grid-column: 1;
+
+    grid-row: 7;
+}
+
+.hero-feature:nth-of-type(4) {
+    grid-column: 2;
+
+    grid-row: 7;
+}
+
+
+/* Hover */
+
+.hero-feature:hover {
+    transform: translateY(-3px);
+
+    border-color: #cadbff;
+
+    box-shadow:
+        0 16px 35px rgba(25, 55, 105, 0.09);
 }
 
 
 /* =========================================================
-   SERVICE IMAGE
-========================================================= */
+   FEATURE ICON
+   ========================================================= */
 
-.service-image{
-    width:100%;
+.feature-icon {
+    width: 49px;
+    height: 49px;
 
-    overflow:hidden;
+    min-width: 49px;
 
-    border-radius:14px;
+    margin-right: 14px;
 
-    background:#edf2f8;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf4ff,
+            #e1ebff
+        );
+
+    color: #2763ea;
+
+    font-size: 20px;
 }
 
-.service-image img{
-    display:block;
 
-    width:100%;
-    height:300px;
+/* =========================================================
+   FEATURE TEXT
+   ========================================================= */
 
-    object-fit:cover;
+.hero-feature h4 {
+    margin: 0 0 5px;
+
+    color: #12376a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.hero-feature p {
+    margin: 0;
+
+    color: #687991;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE PANEL
+   ========================================================= */
+
+.hero-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 645px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    margin: 0;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(247, 249, 255, 0.92)
+        );
+
+    box-shadow:
+        0 22px 60px rgba(39, 72, 130, 0.08);
+
+    border: 1px solid rgba(225, 232, 247, 0.75);
+
+    isolation: isolate;
+
+    z-index: 3;
+
+    animation:
+        transferImageIn .9s .15s ease both;
+}
+
+
+/* =========================================================
+   IMAGE PANEL LIGHT EFFECT
+   ========================================================= */
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    right: -170px;
+    top: -160px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 106, 236, 0.13),
+            rgba(57, 106, 236, 0.04) 55%,
+            transparent 72%
+        );
+
+    z-index: -1;
+}
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    left: -200px;
+    bottom: -210px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 106, 236, 0.08),
+            transparent 70%
+        );
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   PERSON
+   ========================================================= */
+
+.hero-image img {
+    position: relative;
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 100%;
+
+    max-height: 635px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    border: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    z-index: 2;
+
+    transform-origin: center bottom;
 
     transition:
         transform .5s ease;
 }
 
-.service-box:hover .service-image img{
-    transform:scale(1.035);
+.hero-image:hover img {
+    transform: scale(1.015);
 }
 
 
 /* =========================================================
-   SERVICE BODY
-========================================================= */
+   BENEFIT BAR
+   ========================================================= */
 
-.service-body{
-    padding:10px 18px;
-}
+.hero-benefit {
+    position: relative;
 
-.service-number{
-    display:inline-flex;
+    z-index: 10;
 
-    align-items:center;
-    justify-content:center;
+    width: min(1280px, calc(100% - 70px));
 
-    width:34px;
-    height:26px;
-
-    margin-bottom:10px;
-
-    border-radius:7px;
-
-    background:#edf4ff;
-
-    color:#2563eb;
-
-    font-size:10px;
-
-    font-weight:800;
-}
-
-.service-body h3{
-    margin:0 0 12px;
-
-    color:#123d72;
-
-    font-size:24px;
-
-    line-height:1.25;
-
-    font-weight:800;
-}
-
-.service-body p{
-    margin:0 0 14px;
-
-    color:#687588;
-
-    font-size:12px;
-
-    line-height:1.75;
+    margin: 44px auto 0;
 }
 
 
 /* =========================================================
-   SERVICE LIST
-========================================================= */
+   BENEFIT GRID
+   ========================================================= */
 
-.service-body ul{
-    list-style:none;
+.benefit-grid {
+    display: grid;
 
-    padding:0;
-    margin:0;
-}
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
-.service-body li{
-    position:relative;
+    align-items: stretch;
 
-    padding-left:18px;
+    min-height: 145px;
 
-    margin-bottom:6px;
+    padding: 20px 18px;
 
-    color:#526174;
+    border-radius: 22px;
 
-    font-size:10px;
+    background: rgba(255, 255, 255, 0.97);
 
-    line-height:1.5;
-}
+    border: 1px solid #e5eaf4;
 
-.service-body li::before{
-    content:"";
-
-    position:absolute;
-
-    width:5px;
-    height:5px;
-
-    left:2px;
-    top:7px;
-
-    border-radius:50%;
-
-    background:#2563eb;
+    box-shadow:
+        0 18px 45px rgba(31, 59, 105, 0.08);
 }
 
 
 /* =========================================================
-   DECORATION
-========================================================= */
+   BENEFIT ITEM
+   ========================================================= */
 
-.service-box::before{
-    content:"";
+.benefit-item {
+    position: relative;
 
-    position:absolute;
+    display: flex;
 
-    width:120px;
-    height:120px;
+    align-items: center;
 
-    right:-65px;
-    top:-65px;
+    gap: 18px;
 
-    border-radius:50%;
+    padding: 12px 22px;
 
-    background:rgba(37,99,235,.045);
-
-    pointer-events:none;
+    border-radius: 15px;
 }
 
-.service-box::after{
-    content:"";
+.benefit-item:not(:last-child)::after {
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:80px;
-    height:80px;
+    top: 15%;
 
-    left:-45px;
-    bottom:-45px;
+    right: 0;
 
-    border-radius:50%;
+    width: 1px;
 
-    background:rgba(216,166,43,.07);
+    height: 70%;
 
-    pointer-events:none;
+    background: #e3e8f1;
 }
 
 
 /* =========================================================
-   COMMITMENT
-========================================================= */
+   BENEFIT ICON
+   ========================================================= */
 
-.commitment{
-    position:relative;
+.benefit-icon {
+    width: 62px;
+    height: 62px;
 
-    margin-top:60px;
+    min-width: 62px;
 
-    padding:55px 40px;
+    display: flex;
 
-    overflow:hidden;
+    align-items: center;
+    justify-content: center;
 
-    border-radius:22px;
-
-    text-align:center;
-
-    color:#fff;
+    border-radius: 16px;
 
     background:
         linear-gradient(
-            135deg,
-            #123d72,
-            #1c5697
+            145deg,
+            #326cf5,
+            #2457dd
         );
 
+    color: #ffffff;
+
+    font-size: 22px;
+
     box-shadow:
-        0 22px 50px rgba(18,61,114,.18);
-}
-
-.commitment::before{
-    content:"";
-
-    position:absolute;
-
-    width:280px;
-    height:280px;
-
-    right:-130px;
-    top:-160px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.07);
-}
-
-.commitment::after{
-    content:"";
-
-    position:absolute;
-
-    width:190px;
-    height:190px;
-
-    left:-80px;
-    bottom:-110px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.05);
-}
-
-.commitment h2{
-    position:relative;
-
-    z-index:2;
-
-    margin:0 0 12px;
-
-    font-size:30px;
-
-    font-weight:800;
-}
-
-.commitment p{
-    position:relative;
-
-    z-index:2;
-
-    max-width:760px;
-
-    margin:0 auto;
-
-    color:#eaf2ff;
-
-    font-size:13px;
-
-    line-height:1.8;
+        0 10px 22px rgba(42, 96, 225, 0.2);
 }
 
 
 /* =========================================================
-   CTA
-========================================================= */
+   BENEFIT TEXT
+   ========================================================= */
 
-.transfer-cta{
-    position:relative;
+.benefit-item h4 {
+    margin: 0 0 7px;
 
-    margin-top:70px;
+    color: #14396d;
 
-    padding:85px 25px;
+    font-family: "Poppins", sans-serif;
 
-    overflow:hidden;
+    font-size: 14px;
 
-    border-radius:24px;
+    font-weight: 800;
 
-    text-align:center;
-
-    color:#fff;
-
-    background:
-        linear-gradient(
-            rgba(7,35,70,.86),
-            rgba(7,35,70,.86)
-        ),
-        url("assets/transfer-banner.jpg");
-
-    background-size:cover;
-
-    background-position:center;
+    line-height: 1.35;
 }
 
-.transfer-cta .cta-content{
-    position:relative;
+.benefit-item p {
+    max-width: 200px;
 
-    z-index:2;
+    margin: 0;
 
-    max-width:760px;
+    color: #69788f;
 
-    margin:0 auto;
-}
+    font-family: "Poppins", sans-serif;
 
-.transfer-cta h2{
-    margin:0 0 15px;
+    font-size: 11px;
 
-    font-size:36px;
-
-    line-height:1.2;
-}
-
-.transfer-cta p{
-    margin:0 0 25px;
-
-    color:#edf4ff;
-
-    font-size:14px;
-
-    line-height:1.8;
-}
-
-.transfer-btn{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 28px;
-
-    border-radius:999px;
-
-    background:#fff;
-
-    color:#123d72;
-
-    text-decoration:none;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    box-shadow:
-        0 12px 28px rgba(0,0,0,.16);
-
-    transition:.3s ease;
-}
-
-.transfer-btn:hover{
-    transform:translateY(-3px);
-
-    background:#2563eb;
-
-    color:#fff;
+    line-height: 1.65;
 }
 
 
 /* =========================================================
    ANIMATION
-========================================================= */
+   ========================================================= */
 
-@keyframes tpFadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
+@keyframes transferContentIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
+
 }
 
-.hero-content,
-.hero-image{
-    animation:tpFadeUp .7s ease both;
+@keyframes transferImageIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
 }
 
-.hero-image{
-    animation-delay:.12s;
+
+/* =========================================================
+   SERVICE CONTENT
+   ========================================================= */
+
+.service-content {
+    position: relative;
+
+    padding: 90px 20px 110px;
+
+    background: #f7f9fc;
+}
+
+
+/* =========================================================
+   SERVICE INTRO
+   ========================================================= */
+
+.service-intro {
+    max-width: 900px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(28, 54, 100, 0.07);
+}
+
+.service-intro h2 {
+    margin: 0 0 16px;
+
+    color: #12396d;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 800;
+}
+
+.service-intro p {
+    margin: 0;
+
+    color: #69788e;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   SERVICE GRID
+   ========================================================= */
+
+.service-grid {
+    width: min(1180px, calc(100% - 20px));
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.service-box {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 43% 57%;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 14px;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf5;
+
+    box-shadow:
+        0 14px 35px rgba(24, 55, 100, 0.07);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 22px 50px rgba(24, 55, 100, 0.11);
+}
+
+
+/* =========================================================
+   REVERSE CARD
+   ========================================================= */
+
+.service-box.reverse .service-image {
+    grid-column: 2;
+}
+
+.service-box.reverse .service-body {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* =========================================================
+   SERVICE IMAGE
+   ========================================================= */
+
+.service-image {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+}
+
+.service-image img {
+    display: block;
+
+    width: 100%;
+
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 17px;
+
+    transition:
+        transform .5s ease;
+}
+
+.service-box:hover .service-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   SERVICE BODY
+   ========================================================= */
+
+.service-body {
+    width: 100%;
+
+    padding: 20px 28px;
+}
+
+.service-number {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #2d65e8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.service-body h3 {
+    margin: 0 0 15px;
+
+    color: #12396d;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 26px;
+
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+.service-body p {
+    margin: 0 0 18px;
+
+    color: #68778d;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICE LIST
+   ========================================================= */
+
+.service-body ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.service-body li {
+    position: relative;
+
+    padding-left: 22px;
+
+    margin-bottom: 8px;
+
+    color: #4f6078;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.service-body li::before {
+    content: "\f00c";
+
+    position: absolute;
+
+    left: 0;
+    top: 2px;
+
+    color: #2863e9;
+
+    font-family: "Font Awesome 6 Free";
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   COMMITMENT
+   ========================================================= */
+
+.commitment {
+    width: min(1180px, calc(100% - 20px));
+
+    margin: 80px auto 0;
+
+    padding: 70px 40px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123d72,
+            #174d91,
+            #245da5
+        );
+
+    box-shadow:
+        0 25px 60px rgba(15, 76, 129, 0.2);
+}
+
+.commitment::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    top: -170px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.commitment::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    left: -100px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.commitment h2 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 18px;
+
+    font-size: 38px;
+
+    font-weight: 800;
+}
+
+.commitment p {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: #edf4ff;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.transfer-cta {
+    width: min(1180px, calc(100% - 20px));
+
+    margin: 80px auto;
+
+    padding: 100px 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            rgba(7, 35, 70, .84),
+            rgba(7, 35, 70, .84)
+        ),
+        url("assets/transfer-banner.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.transfer-cta .cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.transfer-cta h2 {
+    margin: 0 0 20px;
+
+    font-size: 42px;
+}
+
+.transfer-cta p {
+    margin: 0 0 30px;
+
+    color: #f2f6ff;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+.transfer-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    color: #123d72;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.transfer-btn:hover {
+    transform: translateY(-3px);
+
+    background: #2963e9;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eef2f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2459b9;
+
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #153e82;
 }
 
 
 /* =========================================================
    TABLET
-========================================================= */
+   ========================================================= */
 
-@media(max-width:1100px){
+@media (max-width: 1200px) {
 
-    .service-detail-hero > .container{
-        width:min(100% - 40px,1000px);
-    }
+    .hero-grid {
+        width: min(1120px, calc(100% - 50px));
 
-    .hero-grid{
         grid-template-columns:
-            minmax(0,1fr)
-            minmax(360px,.8fr);
+            minmax(0, 1fr)
+            420px;
 
-        gap:30px;
-
-        min-height:530px;
+        column-gap: 40px;
     }
 
-    .hero-content h1{
-        font-size:58px;
+    .hero-image {
+        height: 590px;
     }
 
-    .hero-image{
-        min-height:520px;
+    .hero-image img {
+        max-height: 585px;
     }
 
-    .hero-image img{
-        max-height:540px;
+    .hero-content h1 {
+        font-size: 62px;
     }
 
-    .hero-image::before{
-        width:430px;
-        height:430px;
+    .hero-content h2 {
+        font-size: 23px;
     }
 
-    .hero-image::after{
-        width:310px;
-        height:310px;
+    .hero-feature {
+        min-height: 76px;
     }
 
-    .service-box{
-        grid-template-columns:45% 55%;
-
-        gap:25px;
+    .benefit-grid {
+        min-height: 130px;
     }
+
 }
 
 
 /* =========================================================
-   TABLET / MOBILE
-========================================================= */
+   TABLET / SMALL LAPTOP
+   ========================================================= */
 
-@media(max-width:900px){
+@media (max-width: 991px) {
 
-    .service-detail-hero{
-        padding:60px 0 35px;
+    .service-detail-hero {
+        min-height: auto;
+
+        padding: 55px 0 40px;
     }
 
-    .hero-grid{
-        grid-template-columns:1fr;
+    .hero-grid {
+        width: calc(100% - 40px);
 
-        gap:25px;
+        grid-template-columns: 1fr;
 
-        min-height:auto;
+        gap: 45px;
     }
 
-    .hero-content{
-        max-width:700px;
+    .hero-content {
+        max-width: 720px;
 
-        margin:0 auto;
+        margin: 0 auto;
 
-        text-align:center;
+        text-align: center;
     }
 
-    .hero-content .hero-line{
-        margin-left:auto;
-        margin-right:auto;
+    .hero-badge {
+        justify-self: center;
     }
 
     .hero-content h1,
     .hero-content h2,
-    .hero-content > p{
-        text-align:center;
+    .hero-content > p,
+    .hero-line {
+        grid-column: 1 / -1;
     }
 
-    .hero-buttons{
-        justify-content:center;
+    .hero-content h1 {
+        text-align: center;
+
+        font-size: 58px;
     }
 
-    .hero-image{
-        min-height:460px;
-
-        align-items:flex-end;
+    .hero-line {
+        margin: 22px auto;
     }
 
-    .hero-image img{
-        max-height:500px;
+    .hero-content h2 {
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 24px;
     }
 
-    .benefit-grid{
-        grid-template-columns:repeat(2,1fr);
+    .hero-content > p {
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .benefit-item:nth-child(2)::after{
-        display:none;
+    .hero-buttons {
+        grid-column: 1 / -1;
+
+        grid-row: auto;
+
+        justify-self: center;
+
+        margin: 5px 0 0;
     }
 
-    .benefit-item:nth-child(1),
-    .benefit-item:nth-child(2){
-        border-bottom:1px solid #e7edf5;
+    .hero-feature:nth-of-type(1),
+    .hero-feature:nth-of-type(2),
+    .hero-feature:nth-of-type(3),
+    .hero-feature:nth-of-type(4) {
+        grid-row: auto;
     }
 
-    .service-box,
-    .service-box.reverse{
-        grid-template-columns:1fr;
-
-        gap:20px;
-
-        padding:15px;
+    .hero-feature:nth-of-type(1) {
+        grid-column: 1;
     }
 
-    .service-box.reverse .service-image,
-    .service-box.reverse .service-body{
-        grid-column:auto;
-        grid-row:auto;
+    .hero-feature:nth-of-type(2) {
+        grid-column: 2;
     }
 
-    .service-image img{
-        height:280px;
+    .hero-feature:nth-of-type(3) {
+        grid-column: 1;
     }
 
-    .service-body{
-        padding:8px 10px 15px;
+    .hero-feature:nth-of-type(4) {
+        grid-column: 2;
     }
+
+    .hero-image {
+        width: min(520px, 100%);
+
+        height: 600px;
+
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        max-height: 590px;
+    }
+
+    .hero-benefit {
+        width: calc(100% - 40px);
+
+        margin-top: 35px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .benefit-item:not(:last-child)::after {
+        display: none;
+    }
+
+    .service-box {
+        grid-template-columns: 1fr;
+    }
+
+    .service-box.reverse .service-image {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .service-box.reverse .service-body {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
 }
 
 
 /* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
-@media(max-width:600px){
+@media (max-width: 768px) {
 
-    .service-detail-hero{
-        padding:42px 0 25px;
+    .service-detail-hero {
+        padding: 45px 0 35px;
     }
 
-    .service-detail-hero > .container{
-        width:calc(100% - 28px);
+    .hero-grid {
+        width: calc(100% - 28px);
+
+        gap: 35px;
     }
 
-    .hero-grid{
-        gap:18px;
+    .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
     }
 
-    .hero-content{
-        display:block;
+    .hero-badge {
+        align-self: center;
 
-        text-align:center;
+        margin-bottom: 18px;
     }
 
-    .hero-badge{
-        margin-bottom:13px;
+    .hero-content h1 {
+        font-size: 48px;
 
-        padding:7px 12px;
-
-        font-size:8px;
+        letter-spacing: -2.5px;
     }
 
-    .hero-content h1{
-        font-size:43px;
+    .hero-line {
+        align-self: center;
 
-        line-height:.95;
-
-        letter-spacing:-2.3px;
+        margin: 18px 0;
     }
 
-    .hero-line{
-        width:48px;
-        height:3px;
+    .hero-content h2 {
+        font-size: 21px;
 
-        margin:14px auto 13px !important;
+        line-height: 1.45;
     }
 
-    .hero-content h2{
-        margin-bottom:9px;
+    .hero-content > p {
+        font-size: 13px;
 
-        font-size:15px;
-
-        line-height:1.35;
+        line-height: 1.8;
     }
 
-    .hero-content > p{
-        font-size:10px;
+    .hero-feature:nth-of-type(1),
+    .hero-feature:nth-of-type(2),
+    .hero-feature:nth-of-type(3),
+    .hero-feature:nth-of-type(4) {
+        width: 100%;
 
-        line-height:1.65;
+        grid-column: auto;
     }
 
+    .hero-feature {
+        min-height: 72px;
 
-    /* FEATURE */
+        padding: 12px;
 
-    .hero-feature{
-        min-height:55px;
-
-        margin-top:8px;
-
-        padding:8px;
-
-        text-align:left;
+        text-align: left;
     }
 
-    .feature-icon{
-        width:32px;
-        height:32px;
+    .feature-icon {
+        width: 44px;
+        height: 44px;
 
-        min-width:32px;
+        min-width: 44px;
 
-        margin-right:8px;
-
-        font-size:12px;
+        font-size: 17px;
     }
 
-    .hero-feature h4{
-        font-size:8.5px;
+    .hero-feature h4 {
+        font-size: 12px;
     }
 
-    .hero-feature p{
-        font-size:7px;
+    .hero-feature p {
+        font-size: 9px;
     }
 
+    .hero-buttons {
+        align-self: center;
 
-    /* BUTTON */
-
-    .hero-buttons{
-        margin-top:14px;
-
-        justify-content:center;
+        margin-top: 5px;
     }
 
-    .btn-primary{
-        min-height:40px;
+    .hero-image {
+        width: min(430px, 100%);
 
-        padding:0 20px;
+        height: 520px;
 
-        font-size:9px;
+        border-radius: 22px;
     }
 
+    .hero-image img {
+        max-width: 100%;
 
-    /* IMAGE */
-
-    .hero-image{
-        min-height:350px;
-
-        margin-top:-2px;
+        max-height: 510px;
     }
 
-    .hero-image img{
-        width:auto;
+    .hero-benefit {
+        width: calc(100% - 28px);
 
-        max-width:90%;
-
-        max-height:390px;
+        margin-top: 30px;
     }
 
-    .hero-image::before{
-        width:300px;
-        height:300px;
+    .benefit-grid {
+        grid-template-columns: 1fr;
+
+        padding: 15px;
     }
 
-    .hero-image::after{
-        width:230px;
-        height:230px;
+    .benefit-item {
+        min-height: 85px;
+
+        padding: 12px;
     }
 
-
-    /* BENEFIT */
-
-    .hero-benefit{
-        width:calc(100% - 28px);
-
-        margin-top:12px;
+    .benefit-item:not(:last-child) {
+        border-bottom: 1px solid #e7ebf2;
     }
 
-    .benefit-grid{
-        grid-template-columns:1fr;
-
-        gap:0;
-
-        padding:7px;
+    .benefit-item:not(:last-child)::after {
+        display: none;
     }
 
-    .benefit-item{
-        min-height:48px;
+    .benefit-icon {
+        width: 52px;
+        height: 52px;
 
-        padding:7px 8px;
+        min-width: 52px;
+
+        font-size: 18px;
     }
 
-    .benefit-item:not(:last-child){
-        border-bottom:1px solid #e7edf5;
+    .benefit-item h4 {
+        font-size: 13px;
     }
 
-    .benefit-item::after{
-        display:none !important;
+    .benefit-item p {
+        font-size: 10px;
     }
 
-    .benefit-icon{
-        width:29px;
-        height:29px;
-
-        min-width:29px;
-
-        font-size:10px;
+    .service-content {
+        padding: 65px 15px 80px;
     }
 
-    .benefit-item h4{
-        font-size:8px;
+    .service-intro {
+        padding: 25px 20px;
+
+        margin-bottom: 40px;
     }
 
-    .benefit-item p{
-        font-size:6.8px;
+    .service-intro h2 {
+        font-size: 27px;
     }
 
-
-    /* SERVICE */
-
-    .service-content{
-        padding:45px 14px 70px;
+    .service-intro p {
+        font-size: 13px;
     }
 
-    .service-intro{
-        margin-bottom:30px;
-
-        padding:22px 18px;
-
-        border-radius:15px;
+    .service-grid {
+        width: 100%;
     }
 
-    .service-intro h2{
-        font-size:21px;
+    .service-box {
+        padding: 10px;
+
+        border-radius: 20px;
     }
 
-    .service-intro p{
-        font-size:9px;
-
-        line-height:1.7;
+    .service-image img {
+        height: 250px;
     }
 
-    .service-grid{
-        gap:20px;
+    .service-body {
+        padding: 15px;
     }
 
-    .service-box{
-        border-radius:15px;
+    .service-body h3 {
+        font-size: 21px;
     }
 
-    .service-image{
-        border-radius:11px;
+    .service-body p {
+        font-size: 13px;
     }
 
-    .service-image img{
-        height:200px;
+    .commitment {
+        width: 100%;
+
+        padding: 45px 22px;
+
+        margin-top: 60px;
     }
 
-    .service-body h3{
-        font-size:18px;
+    .commitment h2 {
+        font-size: 29px;
     }
 
-    .service-body p{
-        font-size:10px;
-
-        line-height:1.7;
+    .commitment p {
+        font-size: 14px;
     }
 
-    .service-body li{
-        font-size:8.5px;
+    .transfer-cta {
+        width: 100%;
+
+        margin: 60px auto;
+
+        padding: 70px 20px;
     }
 
-    .commitment{
-        margin-top:40px;
-
-        padding:35px 20px;
-
-        border-radius:17px;
+    .transfer-cta h2 {
+        font-size: 29px;
     }
 
-    .commitment h2{
-        font-size:23px;
-    }
-
-    .commitment p{
-        font-size:10px;
-    }
-
-    .transfer-cta{
-        margin-top:45px;
-
-        padding:60px 18px;
-
-        border-radius:18px;
-    }
-
-    .transfer-cta h2{
-        font-size:25px;
-    }
-
-    .transfer-cta p{
-        font-size:11px;
-    }
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
+   SMALL MOBILE
+   ========================================================= */
 
-@media(max-width:400px){
+@media (max-width: 480px) {
 
-    .hero-content h1{
-        font-size:40px;
+    .service-detail-hero {
+        padding: 38px 0 30px;
     }
 
-    .hero-content h2{
-        font-size:14px;
+    .hero-grid {
+        width: calc(100% - 22px);
     }
 
-    .hero-content > p{
-        font-size:9px;
+    .hero-badge {
+        padding: 8px 17px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.7px;
     }
 
-    .hero-image{
-        min-height:330px;
+    .hero-content h1 {
+        font-size: 42px;
+
+        letter-spacing: -2px;
     }
 
-    .hero-image img{
-        max-height:365px;
+    .hero-content h2 {
+        font-size: 19px;
     }
 
-    .hero-feature{
-        min-height:52px;
+    .hero-content > p {
+        font-size: 12px;
     }
 
-    .service-image img{
-        height:185px;
-    }
-}
+    .hero-image {
+        height: 450px;
 
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    .hero-content,
-    .hero-image{
-        animation:none;
+        border-radius: 19px;
     }
 
-    *,
-    *::before,
-    *::after{
-        transition:none !important;
+    .hero-image img {
+        max-height: 445px;
     }
+
+    .btn-primary {
+        min-width: 180px;
+
+        padding: 12px 22px;
+
+        font-size: 11px;
+    }
+
+    .hero-feature {
+        min-height: 68px;
+
+        padding: 10px;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+
+        margin-right: 10px;
+
+        font-size: 16px;
+    }
+
+    .hero-feature h4 {
+        font-size: 11px;
+    }
+
+    .hero-feature p {
+        font-size: 8.5px;
+    }
+
+    .benefit-item {
+        gap: 12px;
+    }
+
+    .benefit-icon {
+        width: 48px;
+        height: 48px;
+
+        min-width: 48px;
+    }
+
 }
