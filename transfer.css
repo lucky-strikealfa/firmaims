@@ -2516,3 +2516,260 @@ SELECTION
     color:#fff;
 
 }
+
+/* =========================================================
+   FINAL FIX — TRANSFER PRICING HERO
+   TULISAN KIRI + GAMBAR KANAN
+========================================================= */
+
+/* HERO */
+.service-detail-hero{
+    position:relative;
+    overflow:hidden;
+    padding:55px 0 35px;
+}
+
+/* CONTAINER */
+.service-detail-hero > .container{
+    width:100%;
+    position:relative;
+    z-index:5;
+}
+
+/* =========================================================
+   DESKTOP — WAJIB 2 KOLOM
+========================================================= */
+
+.hero-grid{
+    width:min(1180px, calc(100% - 50px)) !important;
+
+    margin:0 auto !important;
+
+    display:grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(430px, .82fr) !important;
+
+    grid-template-areas:
+        "content image" !important;
+
+    gap:45px !important;
+
+    align-items:center !important;
+
+    overflow:visible !important;
+}
+
+/* TULISAN = KIRI */
+.hero-grid > .hero-content{
+    grid-area:content !important;
+
+    width:100% !important;
+
+    max-width:650px !important;
+
+    margin:0 !important;
+
+    text-align:left !important;
+}
+
+/* GAMBAR = KANAN */
+.hero-grid > .hero-image{
+    grid-area:image !important;
+
+    width:100% !important;
+
+    min-height:500px !important;
+
+    margin:0 !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    text-align:center !important;
+
+    position:relative !important;
+
+    z-index:5 !important;
+}
+
+/* GAMBAR ORANG */
+.hero-grid > .hero-image img{
+    display:block !important;
+
+    width:auto !important;
+
+    max-width:100% !important;
+
+    max-height:535px !important;
+
+    height:auto !important;
+
+    margin:0 auto !important;
+
+    object-fit:contain !important;
+
+    border:0 !important;
+
+    border-radius:0 !important;
+
+    box-shadow:none !important;
+
+    transform:none !important;
+}
+
+
+/* =========================================================
+   PASTIKAN SEMUA ISI HERO TETAP DI KOLOM KIRI
+========================================================= */
+
+.hero-content .hero-badge{
+    display:inline-flex !important;
+}
+
+.hero-content h1{
+    text-align:left !important;
+}
+
+.hero-content h2{
+    text-align:left !important;
+}
+
+.hero-content > p{
+    text-align:left !important;
+}
+
+.hero-content .hero-line{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+.hero-content .hero-buttons{
+    justify-content:flex-start !important;
+}
+
+.hero-content .hero-feature-grid{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+
+/* =========================================================
+   BENEFIT BAR
+========================================================= */
+
+.hero-benefit{
+    width:min(1180px, calc(100% - 50px)) !important;
+
+    margin:25px auto 0 !important;
+
+    position:relative;
+
+    z-index:10;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:991px){
+
+    .hero-grid{
+        width:calc(100% - 40px) !important;
+
+        grid-template-columns:1fr !important;
+
+        grid-template-areas:
+            "content"
+            "image" !important;
+
+        gap:35px !important;
+    }
+
+    .hero-grid > .hero-content{
+        text-align:center !important;
+
+        max-width:700px !important;
+
+        margin:0 auto !important;
+    }
+
+    .hero-content h1,
+    .hero-content h2,
+    .hero-content > p{
+        text-align:center !important;
+    }
+
+    .hero-content .hero-line{
+        margin:18px auto !important;
+    }
+
+    .hero-content .hero-buttons{
+        justify-content:center !important;
+    }
+
+    .hero-content .hero-feature-grid{
+        margin-left:auto !important;
+        margin-right:auto !important;
+
+        text-align:left !important;
+    }
+
+    .hero-grid > .hero-image{
+        min-height:auto !important;
+
+        width:100% !important;
+
+        margin:0 auto !important;
+    }
+
+    .hero-grid > .hero-image img{
+        max-width:500px !important;
+
+        max-height:500px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:768px){
+
+    .hero-grid{
+        width:calc(100% - 30px) !important;
+
+        gap:30px !important;
+    }
+
+    .hero-grid > .hero-image img{
+        max-width:430px !important;
+
+        width:auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+    .hero-grid{
+        width:calc(100% - 28px) !important;
+    }
+
+    .hero-grid > .hero-image img{
+        max-width:360px !important;
+    }
+
+}
