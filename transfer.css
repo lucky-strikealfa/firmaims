@@ -1,187 +1,222 @@
 
 /* ==========================================================
-TRANSFER HERO
+TRANSFER PRICING HERO — PREMIUM 2026
 ========================================================== */
 
 .service-detail-hero{
     position:relative;
     overflow:hidden;
-    padding:90px 0 120px;
+    padding:44px 0 78px;
     background:
-    radial-gradient(circle at top right,#dce8ff 0%,transparent 35%),
-    radial-gradient(circle at bottom left,#edf4ff 0%,transparent 40%),
-    linear-gradient(135deg,#ffffff,#f8fbff,#eef5ff);
+        radial-gradient(
+            circle at 94% 12%,
+            rgba(75,120,255,.12),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 2% 85%,
+            rgba(66,119,255,.08),
+            transparent 20%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f9fbff 48%,
+            #f3f7ff 100%
+        );
 }
 
+
+/* ==========================================================
+BACKGROUND ORNAMENT
+========================================================== */
 
 .hero-bg{
     position:absolute;
     border-radius:50%;
-    filter:blur(70px);
+    pointer-events:none;
     z-index:0;
 }
 
 .hero-bg-1{
     width:430px;
     height:430px;
-    background:#3f7cff33;
+    right:-150px;
     top:-180px;
-    right:-120px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(72,111,255,.15),
+            rgba(72,111,255,.02) 65%,
+            transparent 72%
+        );
+
+    filter:blur(1px);
 }
 
 .hero-bg-2{
-    width:320px;
-    height:320px;
-    background:#1d4ed822;
-    bottom:-120px;
-    left:-120px;
+    width:300px;
+    height:300px;
+    left:-160px;
+    bottom:-130px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(78,126,255,.12),
+            transparent 70%
+        );
 }
 
 
-.hero-grid{
+/* ==========================================================
+CONTAINER
+========================================================== */
 
+.service-detail-hero > .container{
     position:relative;
     z-index:2;
+}
+
+.hero-grid{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+
     display:grid;
     grid-template-columns:
-    560px
-    minmax(450px,1fr);
-    gap:90px;
-    align-items:center;
+        minmax(0, 1.08fr)
+        minmax(430px, .92fr);
 
+    gap:55px;
+
+    align-items:center;
 }
+
+
+/* ==========================================================
+LEFT CONTENT
+========================================================== */
 
 .hero-content{
-    max-width:560px;
+    max-width:720px;
+    position:relative;
+    z-index:5;
 }
+
+
+/* ==========================================================
+BADGE
+========================================================== */
 
 .hero-badge{
-
     display:inline-flex;
     align-items:center;
-    gap:10px;
-    padding:12px 22px;
-    background:#ffffff;
-    border:1px solid #d9e7ff;
-    border-radius:50px;
-    color:#2962ff;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:2px;
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.05);
+    justify-content:center;
 
+    padding:10px 27px;
+
+    background:rgba(255,255,255,.92);
+
+    border:1.5px solid #d6e3ff;
+
+    border-radius:50px;
+
+    color:#245ce5;
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:2.4px;
+
+    box-shadow:
+        0 8px 24px rgba(36,92,229,.07);
+
+    margin-bottom:24px;
 }
 
-.hero-content h1{
-    margin:30px 0 0;
-    font-size:82px;
-    line-height:.92;
-    font-weight:800;
-    color:#0d2452;
 
+/* ==========================================================
+TITLE
+========================================================== */
+
+.hero-content h1{
+    margin:0;
+
+    font-size:68px;
+    line-height:.98;
+
+    letter-spacing:-2.8px;
+
+    font-weight:800;
+
+    color:#0b234b;
 }
 
 .hero-content h1 span{
     display:block;
-    color:#3568ff;
 
+    color:#2e62ed;
+
+    margin-top:3px;
 }
 
-.hero-line{
-    width:95px;
-    height:4px;
-    border-radius:20px;
-    background:#d5a11b;
-    margin:28px 0;
-
-}
-
-/* ============================= */
-
-.hero-content h2{
-    font-size:34px;
-    line-height:1.35;
-    color:#173c70;
-    margin-bottom:22px;
-
-}
-
-.hero-content p{
-    color:#69778a;
-    font-size:17px;
-    line-height:2;
-
-}
 
 /* ==========================================================
-FEATURE GRID
+GOLD LINE
 ========================================================== */
 
-.hero-feature-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(2,1fr);
-    gap:18px;
-    margin-top:45px;
+.hero-line{
+    width:82px;
+    height:4px;
 
+    margin:27px 0 23px;
+
+    border-radius:50px;
+
+    background:#d99b16;
 }
 
-.hero-feature{
-    display:flex;
-    gap:16px;
-    padding:22px;
-    background:#fff;
-    border-radius:22px;
-    border:1px solid #edf3ff;
-    box-shadow:
-    0 18px 40px rgba(0,0,0,.05);
-    transition:.35s;
 
+/* ==========================================================
+SUB TITLE
+========================================================== */
+
+.hero-content h2{
+    max-width:650px;
+
+    margin:0 0 17px;
+
+    color:#173b70;
+
+    font-size:27px;
+    line-height:1.38;
+
+    font-weight:750;
+
+    letter-spacing:-.5px;
 }
 
-.hero-feature:hover{
-    transform:translateY(-8px);
 
-}
+/* ==========================================================
+DESCRIPTION
+========================================================== */
 
-/* ============================= */
+.hero-content p{
+    max-width:650px;
 
-.feature-icon{
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
-    background: linear-gradient(
-        135deg,
-        #eaf2ff,
-        #dceaff
-    );
-
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #17447e;
-    font-size: 24px;
-    box-shadow:
-        0 8px 20px rgba(23, 68, 126, 0.08);
-
-    transition: all 0.3s ease;
-}
-
-.hero-feature h4{
-    font-size:18px;
-    color:#123b70;
-    margin-bottom:8px;
-
-}
-
-.hero-feature p{
-    font-size:14px;
-    line-height:1.7;
     margin:0;
 
+    color:#64748b;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    font-weight:400;
 }
+
 
 /* ==========================================================
 BUTTON
@@ -189,470 +224,578 @@ BUTTON
 
 .hero-buttons{
     display:flex;
-    gap:20px;
-    margin-top:45px;
+    align-items:center;
 
+    margin-top:-58px;
+    margin-left:495px;
+
+    position:relative;
+    z-index:10;
 }
 
 .btn-primary{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
-    padding:17px 34px;
-    background:
-    linear-gradient(135deg,#3568ff,#2351d8);
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:700;
-    box-shadow:
-    0 20px 45px rgba(41,98,255,.25);
 
+    min-width:196px;
+
+    padding:14px 27px;
+
+    border:none;
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3169f5,
+            #2455d8
+        );
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:750;
+
+    box-shadow:
+        0 15px 32px rgba(43,96,232,.28);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
 .btn-primary:hover{
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
+    box-shadow:
+        0 20px 40px rgba(43,96,232,.38);
 }
 
-.btn-outline{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:17px 34px;
-    border-radius:50px;
-    background:#fff;
-    border:1px solid #e5ebfb;
-    color:#18386b;
-    text-decoration:none;
-    font-weight:700;
-
-}
 
 /* ==========================================================
-IMAGE
+FEATURE GRID
+========================================================== */
+
+.hero-feature-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:9px 12px;
+
+    margin-top:29px;
+
+    max-width:705px;
+}
+
+.hero-feature{
+    display:flex;
+    align-items:center;
+
+    min-height:80px;
+
+    padding:12px 14px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border:1px solid #edf2fb;
+
+    border-radius:17px;
+
+    box-shadow:
+        0 8px 25px rgba(31,58,100,.055);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.hero-feature:hover{
+    transform:translateY(-3px);
+
+    border-color:#dce7ff;
+
+    box-shadow:
+        0 14px 32px rgba(31,58,100,.09);
+}
+
+
+/* ==========================================================
+FEATURE ICON
+========================================================== */
+
+.feature-icon{
+    width:50px;
+    height:50px;
+
+    min-width:50px;
+
+    margin-right:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf4ff,
+            #e1ebff
+        );
+
+    color:#2763ec;
+
+    font-size:21px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(70,115,230,.04);
+}
+
+
+/* ==========================================================
+FEATURE TEXT
+========================================================== */
+
+.hero-feature h4{
+    margin:0 0 5px;
+
+    color:#12376c;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    line-height:1.3;
+}
+
+.hero-feature p{
+    margin:0;
+
+    color:#687890;
+
+    font-size:10.5px;
+
+    line-height:1.5;
+
+    white-space:normal;
+}
+
+
+/* ==========================================================
+RIGHT IMAGE
 ========================================================== */
 
 .hero-image{
+    position:relative;
 
     display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    position:relative;
-
-}
-
-.hero-person{
-
-    width:100%;
-    max-width:520px;
-    height:auto;
-    display:block;
-    object-fit:contain;
-    filter:drop-shadow(0 20px 40px rgba(0,0,0,.08));
-
-}
-
-.hero-image img{
-    width:100%;
-    max-width:610px;
-    border-radius:28px;
-    display:block;
-    box-shadow:
-    0 35px 80px rgba(0,0,0,.18);
-
-}
-
-/* ===========================================
-TEXT DI DEPAN GAMBAR
-=========================================== */
-
-.hero-image-content{
-    position:absolute;
-    left:-10px;
-    top:50%;
-    transform:translateY(-50%);
-    width:380px;
-    z-index:20;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(15px);
-    padding:38px;
-    border-radius:28px;
-    box-shadow:
-    0 30px 70px rgba(0,0,0,.12);
-
-}
-
-/* Badge */
-
-.image-badge{
-    display:inline-block;
-    padding:10px 18px;
-    background:#edf4ff;
-    color:#2962ff;
-    border-radius:40px;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:18px;
-
-}
-
-/* Judul */
-
-.hero-image-content h2{
-    font-size:42px;
-    line-height:1.1;
-    color:#12386d;
-    margin-bottom:18px;
-
-}
-
-.hero-image-content h2 span{
-    color:#2962ff;
-
-}
-
-/* Isi */
-
-.hero-image-content p{
-    font-size:16px;
-    line-height:1.9;
-    color:#6b7280;
-    margin-bottom:30px;
-
-}
-
-/* Button */
-
-.image-btn{
-
-    display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:16px 32px;
-    border-radius:50px;
-    background:#2962ff;
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    transition:.35s;
 
+    min-height:650px;
+
+    z-index:3;
 }
 
-.image-btn:hover{
-    transform:translateY(-5px);
-    box-shadow:
-    0 20px 40px rgba(41,98,255,.30);
 
-}
+/*
+   IMPORTANT:
+   Jangan gunakan margin-left:140px.
+*/
 
 .hero-image img{
     position:relative;
-    margin-left:140px;
 
+    display:block;
+
+    width:100%;
+    max-width:500px;
+
+    height:auto;
+
+    margin:0 auto;
+
+    object-fit:contain;
+
+    border-radius:26px;
+
+    box-shadow:
+        0 25px 65px rgba(25,55,105,.08);
+
+    animation:
+        heroPersonFloat 6s ease-in-out infinite;
+
+    transition:
+        transform .45s ease;
 }
+
+.hero-image:hover img{
+    transform:translateY(-5px) scale(1.01);
+}
+
 
 /* ==========================================================
-FLOATING CARD
+PERSON FLOAT
 ========================================================== */
 
-.floating-card{
+@keyframes heroPersonFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+
+}
+
+
+/* ==========================================================
+REMOVE UNUSED FLOATING CARDS
+========================================================== */
+
+.floating-card,
+.hero-image-content{
+    display:none !important;
+}
+
+
+/* ==========================================================
+IMAGE DECORATION
+========================================================== */
+
+.hero-image::before{
+    content:"";
+
     position:absolute;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(15px);
-    border-radius:22px;
-    padding:20px;
-    display:flex;
-    gap:16px;
-    align-items:flex-start;
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.12);
 
+    width:530px;
+    height:530px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(68,112,255,.10),
+            rgba(68,112,255,.035) 52%,
+            transparent 72%
+        );
+
+    z-index:-1;
+
+    pointer-events:none;
 }
 
-.floating-icon{
-    width:54px;
-    height:54px;
-    border-radius:16px;
-    background:#edf4ff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#3568ff;
+.hero-image::after{
+    content:"";
 
+    position:absolute;
+
+    width:360px;
+    height:360px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8),
+            transparent 70%
+        );
+
+    z-index:-1;
+
+    pointer-events:none;
 }
 
-.floating-card h5{
-    margin:0;
-    color:#12386d;
-    font-size:18px;
-
-}
-
-.floating-card small{
-    display:block;
-    margin-top:6px;
-    color:#6b7280;
-
-}
-
-.floating-card strong{
-    display:block;
-    margin-top:8px;
-    color:#12a24b;
-    font-size:30px;
-
-}
-
-/* ============================= */
-
-.card-one{
-    top:35px;
-    right:-25px;
-
-}
-
-.card-two{
-    top:180px;
-    right:-55px;
-
-}
-
-.card-three{
-    bottom:35px;
-    right:20px;
-
-}
 
 /* ==========================================================
 BENEFIT BAR
 ========================================================== */
 
 .hero-benefit{
-    margin-top:-50px;
     position:relative;
-    z-index:5;
 
+    z-index:10;
+
+    margin:12px auto 0;
+
+    max-width:1280px;
 }
 
 .benefit-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-    padding:35px;
-    border-radius:30px;
-    background:#fff;
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.08);
 
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    background:
+        rgba(255,255,255,.96);
+
+    border-radius:23px;
+
+    padding:26px 25px;
+
+    box-shadow:
+        0 20px 55px rgba(25,55,100,.075);
+
+    border:1px solid rgba(226,233,246,.8);
 }
+
+
+/* ==========================================================
+BENEFIT ITEM
+========================================================== */
 
 .benefit-item{
     display:flex;
-    gap:18px;
+    align-items:flex-start;
 
+    gap:16px;
+
+    padding:0 27px;
+
+    position:relative;
 }
 
+.benefit-item:not(:last-child)::after{
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    width:1px;
+    height:100%;
+
+    background:#e4eaf3;
+}
+
+
+/* ==========================================================
+BENEFIT ICON
+========================================================== */
+
 .benefit-icon{
-    width:62px;
-    height:62px;
-    border-radius:18px;
-    background:
-    linear-gradient(135deg,#3568ff,#4b82ff);
-    color:#fff;
+    width:60px;
+    height:60px;
+
+    min-width:60px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:24px;
-    flex-shrink:0;
 
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2764ed,
+            #2457d9
+        );
+
+    color:#fff;
+
+    font-size:22px;
+
+    box-shadow:
+        0 10px 22px rgba(39,100,237,.22);
 }
 
-.benefit-item h4{
-    color:#163b73;
-    margin-bottom:8px;
-    font-size:18px;
 
+/* ==========================================================
+BENEFIT TEXT
+========================================================== */
+
+.benefit-item h4{
+    margin:1px 0 7px;
+
+    color:#14386d;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    line-height:1.3;
 }
 
 .benefit-item p{
-    color:#6c7888;
-    line-height:1.7;
-    font-size:14px;
+    margin:0;
 
+    color:#697890;
+
+    font-size:11px;
+
+    line-height:1.65;
 }
+
 
 /* ==========================================================
-ANIMATION
+HERO CONTENT ANIMATION
 ========================================================== */
 
-@keyframes heroFloat{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-12px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-
+.hero-content{
+    animation:
+        heroContentIn .75s ease both;
 }
 
-.hero-image img{
-    animation:heroFloat 5s ease-in-out infinite;
+.hero-image{
+    animation:
+        heroImageIn .85s .15s ease both;
 }
 
-/* Floating Card Animation */
-
-.floating-card{
-
-    animation:heroFloat 6s ease-in-out infinite;
-
+.hero-feature{
+    opacity:0;
+    animation:
+        featureIn .65s ease forwards;
 }
 
-.card-one{
-    animation-delay:.2s;
+.hero-feature:nth-child(1){
+    animation-delay:.35s;
 }
 
-.card-two{
-    animation-delay:.8s;
+.hero-feature:nth-child(2){
+    animation-delay:.45s;
 }
 
-.card-three{
-    animation-delay:1.4s;
+.hero-feature:nth-child(3){
+    animation-delay:.55s;
 }
 
-/* ==========================================================
-IMAGE EFFECT
-========================================================== */
-
-.hero-image::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:560px;
-    height:560px;
-
-    border-radius:50%;
-
-    background:
-    radial-gradient(circle,
-    rgba(53,104,255,.18),
-    transparent 72%);
-
-    z-index:-1;
-
+.hero-feature:nth-child(4){
+    animation-delay:.65s;
 }
 
-.hero-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:100%;
-    height:100%;
-
-    background:
-    radial-gradient(circle,
-    rgba(255,255,255,.45),
-    transparent 72%);
-
-    z-index:-2;
-
-}
-
-/* ==========================================================
-HOVER
-========================================================== */
-
-.hero-feature,
-.floating-card,
 .benefit-item{
+    animation:
+        featureIn .65s .75s ease both;
+}
 
-    transition:
-    transform .35s,
-    box-shadow .35s;
+
+@keyframes heroContentIn{
+
+    from{
+        opacity:0;
+        transform:translateX(-25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
 
 }
 
-.hero-feature:hover{
+@keyframes heroImageIn{
 
-    transform:translateY(-8px);
+    from{
+        opacity:0;
+        transform:translateX(25px);
+    }
 
-    box-shadow:
-    0 28px 60px rgba(0,0,0,.10);
-
-}
-
-.floating-card:hover{
-
-    transform:
-    translateY(-8px)
-    scale(1.02);
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
 
 }
 
-.benefit-item:hover{
+@keyframes featureIn{
 
-    transform:translateY(-6px);
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
+
 
 /* ==========================================================
-DESKTOP
+DESKTOP 1400+
 ========================================================== */
 
-@media (max-width:1300px){
+@media (min-width:1401px){
 
-.hero-grid{
+    .service-detail-hero{
+        padding-top:45px;
+        padding-bottom:72px;
+    }
 
-    grid-template-columns:
-    1fr
-    1fr;
+    .hero-content h1{
+        font-size:70px;
+    }
 
-    gap:60px;
+    .hero-image{
+        min-height:650px;
+    }
 
-}
-
-.hero-content h1{
-
-    font-size:72px;
-
-}
-
-.hero-image img{
-
-    max-width:540px;
+    .hero-image img{
+        max-width:510px;
+    }
 
 }
 
-.card-one{
 
-    right:-10px;
+/* ==========================================================
+LAPTOP 1200 - 1400
+========================================================== */
+
+@media (max-width:1400px){
+
+    .hero-grid{
+        max-width:1160px;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(400px, .82fr);
+
+        gap:45px;
+    }
+
+    .hero-content h1{
+        font-size:62px;
+    }
+
+    .hero-content h2{
+        font-size:25px;
+    }
+
+    .hero-buttons{
+        margin-left:420px;
+    }
+
+    .hero-image img{
+        max-width:460px;
+    }
+
+    .benefit-grid{
+        max-width:1160px;
+    }
+
+    .benefit-item{
+        padding:0 18px;
+    }
 
 }
 
-.card-two{
-
-    right:-30px;
-
-}
-
-.card-three{
-
-    right:0;
-
-}
-
-}
 
 /* ==========================================================
 TABLET
@@ -660,90 +803,84 @@ TABLET
 
 @media (max-width:991px){
 
-.service-detail-hero{
+    .service-detail-hero{
+        padding:70px 20px 65px;
+    }
 
-    padding:80px 0;
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:45px;
 
-}
+        text-align:center;
+    }
 
-.hero-grid{
+    .hero-content{
+        max-width:700px;
+        margin:0 auto;
+    }
 
-    grid-template-columns:1fr;
+    .hero-content h1{
+        font-size:58px;
+    }
 
-    text-align:center;
+    .hero-line{
+        margin:25px auto 22px;
+    }
 
-}
+    .hero-content h2{
+        margin-left:auto;
+        margin-right:auto;
+    }
 
-.hero-content{
+    .hero-content p{
+        margin-left:auto;
+        margin-right:auto;
+    }
 
-    max-width:100%;
+    .hero-buttons{
+        justify-content:center;
 
-}
+        margin:28px 0 0;
+    }
 
-.hero-line{
+    .hero-feature-grid{
+        max-width:700px;
+        margin-left:auto;
+        margin-right:auto;
 
-    margin:28px auto;
+        text-align:left;
+    }
 
-}
+    .hero-image{
+        min-height:auto;
+        margin-top:10px;
+    }
 
-.hero-feature-grid{
+    .hero-image img{
+        max-width:500px;
+    }
 
-    grid-template-columns:repeat(2,1fr);
+    .benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
 
-}
+        max-width:700px;
 
-.hero-buttons{
+        margin:0 auto;
 
-    justify-content:center;
+        padding:25px;
+    }
 
-}
+    .benefit-item{
+        padding:5px 10px;
+    }
 
-.hero-image{
-
-    margin-top:60px;
-
-}
-
-.hero-image img{
-
-    max-width:520px;
-
-}
-
-.card-one{
-
-    top:20px;
-    right:10px;
-
-}
-
-.card-two{
-
-    top:170px;
-    right:-10px;
-
-}
-
-.card-three{
-
-    bottom:20px;
-    right:20px;
-
-}
-
-.hero-benefit{
-
-    margin-top:60px;
-
-}
-
-.benefit-grid{
-
-    grid-template-columns:repeat(2,1fr);
+    .benefit-item:not(:last-child)::after{
+        display:none;
+    }
 
 }
 
-}
 
 /* ==========================================================
 MOBILE
@@ -751,93 +888,91 @@ MOBILE
 
 @media (max-width:768px){
 
-.service-detail-hero{
+    .service-detail-hero{
+        padding:55px 16px 50px;
+    }
 
-    padding:70px 0;
+    .hero-grid{
+        gap:35px;
+    }
 
-}
+    .hero-badge{
+        font-size:10px;
+        letter-spacing:1.7px;
 
-.hero-content h1{
+        padding:9px 19px;
+    }
 
-    font-size:54px;
+    .hero-content h1{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
 
-    line-height:1;
+    .hero-content h2{
+        font-size:23px;
+    }
 
-}
+    .hero-content p{
+        font-size:14px;
+        line-height:1.8;
+    }
 
-.hero-content h2{
+    .hero-feature-grid{
+        grid-template-columns:1fr;
+        gap:10px;
 
-    font-size:26px;
+        margin-top:25px;
+    }
 
-}
+    .hero-feature{
+        min-height:76px;
+    }
 
-.hero-content p{
+    .hero-feature p{
+        font-size:11px;
+    }
 
-    font-size:16px;
+    .hero-buttons{
+        margin-top:25px;
+    }
 
-}
+    .btn-primary{
+        width:100%;
+        max-width:280px;
+    }
 
-.hero-feature-grid{
+    .hero-image{
+        min-height:auto;
+    }
 
-    grid-template-columns:1fr;
+    .hero-image img{
+        max-width:100%;
+        border-radius:22px;
+    }
 
-}
+    .hero-image::before{
+        width:350px;
+        height:350px;
+    }
 
-.hero-buttons{
+    .benefit-grid{
+        grid-template-columns:1fr;
 
-    flex-direction:column;
+        gap:20px;
 
-}
+        padding:22px;
+    }
 
-.btn-primary,
-.btn-outline{
+    .benefit-item{
+        padding:0;
+    }
 
-    width:100%;
-
-}
-
-.hero-image{
-
-    margin-top:50px;
-
-}
-
-.hero-image img{
-
-    max-width:100%;
-
-}
-
-.floating-card{
-
-    position:relative;
-    
-    width:100%;
-
-    margin:16px 0;
-
-    top:auto;
-    right:auto;
-    bottom:auto;
-    left:auto;
-
-}
-
-.hero-benefit{
-
-    margin-top:40px;
-
-}
-
-.benefit-grid{
-
-    grid-template-columns:1fr;
-
-    padding:25px;
-
-}
+    .benefit-item:not(:last-child)::after{
+        display:none;
+    }
 
 }
+
 
 /* ==========================================================
 SMALL MOBILE
@@ -845,44 +980,39 @@ SMALL MOBILE
 
 @media (max-width:480px){
 
-.hero-content h1{
+    .service-detail-hero{
+        padding:45px 14px;
+    }
 
-    font-size:42px;
+    .hero-content h1{
+        font-size:40px;
+    }
 
-}
+    .hero-content h2{
+        font-size:20px;
+    }
 
-.hero-content h2{
+    .hero-content p{
+        font-size:13.5px;
+    }
 
-    font-size:22px;
+    .feature-icon{
+        width:46px;
+        height:46px;
+        min-width:46px;
 
-}
+        font-size:19px;
+    }
 
-.hero-badge{
+    .hero-feature{
+        padding:12px;
+    }
 
-    font-size:11px;
-
-    letter-spacing:1px;
-
-    padding:10px 18px;
-
-}
-
-.feature-icon,
-.floating-icon,
-.benefit-icon{
-
-    width:50px;
-    height:50px;
-
-    font-size:20px;
-
-}
-
-.hero-feature{
-
-    padding:18px;
-
-}
+    .benefit-icon{
+        width:52px;
+        height:52px;
+        min-width:52px;
+    }
 
 }
 
