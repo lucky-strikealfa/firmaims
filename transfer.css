@@ -13,7 +13,6 @@ TRANSFER HERO
     linear-gradient(135deg,#ffffff,#f8fbff,#eef5ff);
 }
 
-/* ============================= */
 
 .hero-bg{
     position:absolute;
@@ -38,7 +37,6 @@ TRANSFER HERO
     left:-120px;
 }
 
-/* ============================= */
 
 .hero-grid{
 
@@ -53,13 +51,9 @@ TRANSFER HERO
 
 }
 
-/* ============================= */
-
 .hero-content{
     max-width:560px;
 }
-
-/* ============================= */
 
 .hero-badge{
 
@@ -79,8 +73,6 @@ TRANSFER HERO
 
 }
 
-/* ============================= */
-
 .hero-content h1{
     margin:30px 0 0;
     font-size:82px;
@@ -95,8 +87,6 @@ TRANSFER HERO
     color:#3568ff;
 
 }
-
-/* ============================= */
 
 .hero-line{
     width:95px;
@@ -116,8 +106,6 @@ TRANSFER HERO
     margin-bottom:22px;
 
 }
-
-/* ============================= */
 
 .hero-content p{
     color:#69778a;
