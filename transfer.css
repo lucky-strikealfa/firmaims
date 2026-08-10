@@ -1,293 +1,318 @@
-/* =========================================================
-   TRANSFER PRICING — PREMIUM HERO
-   PT IDOLA MAKMUR SOLUSINDO
-   Design target: screenshot reference
-   ========================================================= */
+/* ----------------------------------------------------------
+   HERO WRAPPER
+---------------------------------------------------------- */
 
-
-/* =========================================================
-   GLOBAL
-   ========================================================= */
-
-.service-detail-hero,
-.service-detail-hero *,
-.hero-benefit,
-.hero-benefit *,
-.service-content,
-.service-content * {
-    box-sizing: border-box;
-}
-
-.service-detail-hero {
+.tp-hero {
     position: relative;
     width: 100%;
-    min-height: 850px;
-
-    padding: 70px 0 80px;
-
-    overflow: hidden;
+    padding: 32px 20px 80px;
 
     background:
         radial-gradient(
-            circle at 85% 15%,
-            rgba(61, 115, 255, .10),
+            circle at 90% 10%,
+            rgba(48, 105, 255, 0.08),
             transparent 30%
         ),
         radial-gradient(
-            circle at 10% 90%,
-            rgba(55, 105, 240, .08),
-            transparent 30%
+            circle at 5% 90%,
+            rgba(37, 99, 235, 0.06),
+            transparent 32%
         ),
-        linear-gradient(
-            135deg,
-            #f8fbff 0%,
-            #ffffff 50%,
-            #f3f7ff 100%
-        );
+        #f5f8fc;
+
+    overflow: hidden;
 }
 
 
-/* =========================================================
-   BACKGROUND DECORATION
-   ========================================================= */
+/* ----------------------------------------------------------
+   HERO CARD
+---------------------------------------------------------- */
 
-.hero-bg {
-    position: absolute;
-
-    border-radius: 50%;
-
-    pointer-events: none;
-
-    filter: blur(70px);
-
-    z-index: 0;
-}
-
-.hero-bg-1 {
-    width: 420px;
-    height: 420px;
-
-    top: -200px;
-    right: -120px;
-
-    background: rgba(52, 103, 255, .12);
-}
-
-.hero-bg-2 {
-    width: 350px;
-    height: 350px;
-
-    left: -180px;
-    bottom: -180px;
-
-    background: rgba(42, 92, 220, .10);
-}
-
-
-/* =========================================================
-   MAIN CONTAINER
-   ========================================================= */
-
-.service-detail-hero > .container,
-.service-detail-hero .container {
+.tp-hero-card {
     position: relative;
 
-    width: min(1500px, calc(100% - 80px));
+    width: min(1480px, 100%);
+    min-height: 790px;
 
     margin: 0 auto;
 
-    z-index: 2;
-}
-
-
-/* =========================================================
-   HERO GRID
-   ========================================================= */
-
-.hero-grid {
-
-    position: relative;
-
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 55px;
-
-    align-items: center;
-
-    width: 100%;
-
-    min-height: 770px;
-
-    padding: 0;
+    grid-template-columns: 50% 50%;
 
     background: #ffffff;
 
-    border-radius: 42px;
+    border-radius: 36px;
 
     overflow: hidden;
 
     box-shadow:
-        0 30px 70px rgba(31, 65, 125, .12),
-        0 10px 30px rgba(31, 65, 125, .06);
+        0 25px 70px rgba(25, 55, 100, 0.13);
+
+    isolation: isolate;
 }
 
 
-/* =========================================================
-   LEFT SIDE — IMAGE
-   ========================================================= */
+/* ----------------------------------------------------------
+   LEFT VISUAL
+---------------------------------------------------------- */
 
-.hero-image {
-
+.tp-visual {
     position: relative;
 
-    grid-column: 1;
-    grid-row: 1;
-
-    width: 100%;
-    height: 100%;
-
-    min-height: 770px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    min-width: 0;
+    min-height: 790px;
 
     overflow: hidden;
 
     background:
         linear-gradient(
-            145deg,
-            #f8f5ef 0%,
-            #eee9e1 50%,
-            #e4e9f5 100%
+            180deg,
+            #f7f9fc 0%,
+            #eef3fa 100%
         );
 }
 
 
-/* image */
+/* ----------------------------------------------------------
+   IMAGE WRAPPER
+---------------------------------------------------------- */
 
-.hero-person {
+.tp-image-wrap {
+    position: absolute;
 
-    position: relative;
+    inset: 0;
 
+    overflow: hidden;
+
+    border-radius: 0 0 0 36px;
+}
+
+
+/* ----------------------------------------------------------
+   PERSON IMAGE
+---------------------------------------------------------- */
+
+.tp-person {
     display: block;
 
     width: 100%;
     height: 100%;
 
-    max-width: none;
-
     object-fit: cover;
+    object-position: center center;
 
-    object-position: center;
+    margin: 0;
+    padding: 0;
 
-    border-radius: 0;
+    border: 0;
 
     filter: none;
 
-    transform: scale(1.01);
-
-    transition: transform .5s ease;
-}
-
-.hero-image:hover .hero-person {
-    transform: scale(1.025);
+    transition:
+        transform 0.6s ease;
 }
 
 
-/* =========================================================
-   REMOVE OLD IMAGE DECORATIONS
-   ========================================================= */
+/* subtle zoom */
 
-.hero-image::before,
-.hero-image::after {
-
-    display: none !important;
-
+.tp-hero-card:hover .tp-person {
+    transform: scale(1.015);
 }
 
 
-/* =========================================================
-   RIGHT SIDE — CONTENT
-   ========================================================= */
+/* ----------------------------------------------------------
+   IMAGE INFORMATION PANEL
+---------------------------------------------------------- */
 
-.hero-content {
+.tp-image-info {
+    position: absolute;
 
-    position: relative;
+    left: 0;
+    bottom: 0;
 
-    grid-column: 2;
-    grid-row: 1;
+    width: min(560px, 82%);
 
-    width: 100%;
+    min-height: 150px;
 
-    max-width: 670px;
+    padding: 28px 34px;
 
-    padding: 65px 65px 65px 5px;
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(53, 104, 255, 0.88),
+            rgba(20, 52, 125, 0.96)
+        );
+
+    border-radius: 0 40px 0 36px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 -10px 40px rgba(24, 66, 150, 0.12);
 
     z-index: 5;
 }
 
 
-/* =========================================================
-   NUMBER BADGE
-   ========================================================= */
+/* ----------------------------------------------------------
+   INFO ICON
+---------------------------------------------------------- */
 
-.hero-badge {
+.tp-info-icon {
+    flex: 0 0 76px;
 
-    display: inline-flex;
+    width: 76px;
+    height: 76px;
 
+    display: flex;
     align-items: center;
     justify-content: center;
 
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #2161e8;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ----------------------------------------------------------
+   INFO TEXT
+---------------------------------------------------------- */
+
+.tp-info-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.tp-info-text strong {
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.tp-info-text span {
+    max-width: 320px;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.90);
+}
+
+
+/* ----------------------------------------------------------
+   RIGHT CONTENT
+---------------------------------------------------------- */
+
+.tp-content {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 62px 64px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* decorative dots */
+
+.tp-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 65px;
+    right: 65px;
+
+    width: 170px;
+    height: 100px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #dce3ee 4px,
+            transparent 5px
+        );
+
+    background-size: 30px 28px;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+}
+
+
+/* ----------------------------------------------------------
+   NUMBER
+---------------------------------------------------------- */
+
+.tp-number {
+    position: relative;
+    z-index: 2;
+
     width: 58px;
-    height: 48px;
+    height: 42px;
 
-    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin: 0 0 20px;
+    margin-bottom: 18px;
 
-    border: none;
-
-    border-radius: 15px;
+    border-radius: 13px;
 
     background:
         linear-gradient(
             135deg,
-            #326cff,
-            #1d56df
+            #2e6df6,
+            #1e55d5
         );
 
     color: #ffffff;
 
     font-size: 17px;
-
-    font-weight: 800;
-
-    letter-spacing: 0;
+    font-weight: 700;
 
     box-shadow:
-        0 10px 25px rgba(42, 97, 240, .22);
+        0 10px 25px rgba(37, 99, 235, 0.22);
 }
 
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+/* ----------------------------------------------------------
+   HEADING
+---------------------------------------------------------- */
 
-.hero-content h1 {
+.tp-content h1 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 670px;
 
     margin: 0;
 
-    max-width: 650px;
+    color: #142d5b;
 
-    color: #172f68;
-
-    font-size: clamp(44px, 4vw, 62px);
+    font-size: clamp(42px, 4vw, 64px);
 
     line-height: 1.08;
 
@@ -296,42 +321,45 @@
     letter-spacing: -2px;
 }
 
-.hero-content h1 span {
+.tp-content h1 span {
+    display: inline;
 
-    display: block;
-
-    color: #2f68ef;
+    color: #2865ec;
 }
 
 
-/* =========================================================
-   BLUE LINE
-   ========================================================= */
+/* ----------------------------------------------------------
+   DECORATIVE LINE
+---------------------------------------------------------- */
 
-.hero-line {
+.tp-line {
+    position: relative;
+    z-index: 2;
 
-    width: 48px;
+    width: 54px;
     height: 4px;
 
     margin: 22px 0 20px;
 
-    border-radius: 10px;
+    border-radius: 20px;
 
-    background: #2e68ee;
+    background: #2d68ed;
 }
 
 
-/* =========================================================
+/* ----------------------------------------------------------
    DESCRIPTION
-   ========================================================= */
+---------------------------------------------------------- */
 
-.hero-content > p {
+.tp-description {
+    position: relative;
+    z-index: 2;
 
-    max-width: 650px;
+    max-width: 670px;
 
-    margin: 0;
+    margin: 0 0 30px;
 
-    color: #596273;
+    color: #5f6978;
 
     font-size: 17px;
 
@@ -339,229 +367,662 @@
 }
 
 
-/* =========================================================
-   REMOVE OLD H2 STYLE
-   ========================================================= */
-
-.hero-content h2 {
-
-    margin: 0;
-
-}
-
-
-/* =========================================================
+/* ----------------------------------------------------------
    FEATURE GRID
-   ========================================================= */
+---------------------------------------------------------- */
 
-.hero-feature-grid {
+.tp-feature-grid {
+    position: relative;
+    z-index: 2;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 18px;
 
     width: 100%;
-
-    margin-top: 30px;
 }
 
 
-/* =========================================================
+/* ----------------------------------------------------------
    FEATURE CARD
-   ========================================================= */
+---------------------------------------------------------- */
 
-.hero-feature {
+.tp-feature {
+    min-width: 0;
+
+    min-height: 108px;
 
     display: flex;
-
     align-items: center;
 
-    gap: 15px;
+    gap: 18px;
 
-    min-height: 94px;
+    padding: 17px;
 
-    padding: 14px 18px;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fbfcff
+        );
 
-    background: rgba(255,255,255,.96);
+    border: 1px solid #edf1f7;
 
-    border: 1px solid #edf1f8;
-
-    border-radius: 17px;
+    border-radius: 18px;
 
     box-shadow:
-        0 10px 28px rgba(28, 57, 110, .07);
+        0 10px 28px rgba(28, 57, 100, 0.07);
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.hero-feature:hover {
+.tp-feature:hover {
+    transform: translateY(-4px);
 
-    transform: translateY(-3px);
-
-    border-color: #d7e3ff;
+    border-color: #d8e4ff;
 
     box-shadow:
-        0 15px 35px rgba(28, 57, 110, .11);
+        0 16px 35px rgba(28, 57, 100, 0.11);
 }
 
 
-/* =========================================================
+/* ----------------------------------------------------------
    FEATURE ICON
-   ========================================================= */
+---------------------------------------------------------- */
 
-.feature-icon {
+.tp-feature-icon {
+    flex: 0 0 66px;
 
-    flex: 0 0 54px;
-
-    width: 54px;
-    height: 54px;
+    width: 66px;
+    height: 66px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    border-radius: 15px;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #edf3ff
+        );
+
+    border: 1px solid #e3ebfb;
+
+    color: #2462e8;
+
+    font-size: 29px;
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.08);
+}
+
+
+/* ----------------------------------------------------------
+   FEATURE CONTENT
+---------------------------------------------------------- */
+
+.tp-feature-content {
+    min-width: 0;
+}
+
+.tp-feature-content h3 {
+    margin: 0 0 6px;
+
+    color: #16366e;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+}
+
+.tp-feature-content p {
+    margin: 0;
+
+    color: #697384;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   BOTTOM AREA
+---------------------------------------------------------- */
+
+.tp-bottom {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf1f7;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(28, 57, 100, 0.07);
+}
+
+
+/* ----------------------------------------------------------
+   TRUST
+---------------------------------------------------------- */
+
+.tp-trust {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+
+/* ----------------------------------------------------------
+   TRUST ICON
+---------------------------------------------------------- */
+
+.tp-trust-icon {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
 
     background:
         linear-gradient(
             135deg,
-            #edf4ff,
-            #ffffff
+            #2f70f7,
+            #1d56d8
         );
 
-    color: #2462dc;
+    color: #ffffff;
 
-    font-size: 23px;
-
-    border: 1px solid #e3ebfb;
+    font-size: 20px;
 }
 
 
-/* =========================================================
-   FEATURE TEXT
-   ========================================================= */
+/* ----------------------------------------------------------
+   TRUST TEXT
+---------------------------------------------------------- */
 
-.hero-feature h4 {
+.tp-trust > div:last-child {
+    display: flex;
+    flex-direction: column;
 
-    margin: 0 0 4px;
+    gap: 3px;
+}
 
-    color: #172f68;
+.tp-trust strong {
+    color: #16366e;
 
     font-size: 15px;
-
-    line-height: 1.35;
-
-    font-weight: 800;
+    line-height: 1.4;
 }
 
-.hero-feature p {
+.tp-trust span {
+    color: #7a8493;
 
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ----------------------------------------------------------
+   CTA
+---------------------------------------------------------- */
+
+.tp-cta {
+    flex: 0 0 auto;
+
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 14px 24px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #316ef2,
+            #2055d5
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tp-cta:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 32px rgba(37, 99, 235, 0.30);
+}
+
+
+/* ==========================================================
+   BENEFIT BAR — KEEP YOUR EXISTING HTML
+   ========================================================== */
+
+.hero-benefit {
+    position: relative;
+    z-index: 5;
+
+    margin-top: -35px;
+
+    padding: 0 20px 30px;
+}
+
+.hero-benefit .container {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.benefit-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+
+    padding: 18px 22px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 18px 45px rgba(25, 55, 100, 0.09);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: #f7faff;
+    transform: translateY(-2px);
+}
+
+.benefit-icon {
+    flex: 0 0 43px;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #316ef5,
+            #2356d5
+        );
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.benefit-item h4 {
+    margin: 0 0 3px;
+
+    color: #18396f;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+}
+
+.benefit-item p {
     margin: 0;
 
-    color: #687386;
+    color: #727d8d;
 
-    font-size: 12px;
+    font-size: 10px;
 
     line-height: 1.5;
 }
 
 
-/* =========================================================
-   HERO BUTTONS
-   ========================================================= */
+/* ==========================================================
+   RESPONSIVE — 1200px
+   ========================================================== */
 
-.hero-buttons {
+@media (max-width: 1200px) {
 
-    display: flex;
+    .tp-hero-card {
+        grid-template-columns: 48% 52%;
+        min-height: 720px;
+    }
 
-    align-items: center;
+    .tp-visual {
+        min-height: 720px;
+    }
 
-    gap: 14px;
+    .tp-content {
+        padding: 50px 45px 40px;
+    }
 
-    margin-top: 25px;
-}
+    .tp-content h1 {
+        font-size: 48px;
+    }
 
-.btn-primary,
-.btn-outline {
+    .tp-feature {
+        min-height: 100px;
+        padding: 14px;
+    }
 
-    display: inline-flex;
+    .tp-feature-icon {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+        font-size: 25px;
+    }
 
-    align-items: center;
-    justify-content: center;
-
-    min-height: 48px;
-
-    padding: 12px 25px;
-
-    border-radius: 13px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    transition: .3s ease;
-}
-
-.btn-primary {
-
-    background:
-        linear-gradient(
-            135deg,
-            #326df4,
-            #2456dc
-        );
-
-    color: #ffffff;
-
-    box-shadow:
-        0 10px 25px rgba(39, 96, 230, .22);
-}
-
-.btn-primary:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 32px rgba(39, 96, 230, .30);
-}
-
-.btn-outline {
-
-    background: #ffffff;
-
-    border: 1px solid #dce5f5;
-
-    color: #234476;
-}
-
-.btn-outline:hover {
-
-    transform: translateY(-3px);
-
-    border-color: #2d68ed;
-
-    color: #2d68ed;
+    .tp-image-info {
+        width: 90%;
+    }
 }
 
 
-/* =========================================================
-   REMOVE OLD FLOATING CARDS
-   ========================================================= */
+/* ==========================================================
+   TABLET — 991px
+   ========================================================== */
 
-.hero-image-content,
-.floating-card {
+@media (max-width: 991px) {
 
-    display: none !important;
+    .tp-hero {
+        padding: 25px 16px 70px;
+    }
 
+    .tp-hero-card {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        border-radius: 28px;
+    }
+
+    .tp-visual {
+        min-height: 580px;
+
+        height: 580px;
+    }
+
+    .tp-image-wrap {
+        border-radius: 28px 28px 0 0;
+    }
+
+    .tp-image-info {
+        width: 80%;
+
+        border-radius: 0 32px 0 0;
+    }
+
+    .tp-content {
+        padding: 45px 40px 40px;
+    }
+
+    .tp-content h1 {
+        font-size: 46px;
+    }
+
+    .tp-description {
+        font-size: 16px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE — 768px
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .tp-hero {
+        padding: 15px 12px 60px;
+    }
+
+    .tp-hero-card {
+        border-radius: 22px;
+    }
+
+    .tp-visual {
+        height: 470px;
+        min-height: 470px;
+    }
+
+    .tp-image-wrap {
+        border-radius: 22px 22px 0 0;
+    }
+
+    .tp-person {
+        object-position: center top;
+    }
+
+    .tp-image-info {
+        width: 88%;
+
+        min-height: 120px;
+
+        padding: 18px 20px;
+
+        gap: 14px;
+
+        border-radius: 0 25px 0 0;
+    }
+
+    .tp-info-icon {
+        width: 55px;
+        height: 55px;
+        flex-basis: 55px;
+
+        font-size: 21px;
+    }
+
+    .tp-info-text strong {
+        font-size: 15px;
+    }
+
+    .tp-info-text span {
+        font-size: 12px;
+    }
+
+    .tp-content {
+        padding: 35px 22px 25px;
+    }
+
+    .tp-content::before {
+        display: none;
+    }
+
+    .tp-number {
+        width: 50px;
+        height: 38px;
+
+        font-size: 15px;
+    }
+
+    .tp-content h1 {
+        font-size: 35px;
+
+        letter-spacing: -1px;
+    }
+
+    .tp-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .tp-feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .tp-feature {
+        min-height: 88px;
+    }
+
+    .tp-feature-icon {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+
+        font-size: 22px;
+    }
+
+    .tp-feature-content h3 {
+        font-size: 15px;
+    }
+
+    .tp-feature-content p {
+        font-size: 12px;
+    }
+
+    .tp-bottom {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 14px;
+    }
+
+    .tp-cta {
+        width: 100%;
+    }
+
+    .hero-benefit {
+        margin-top: -20px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE — 480px
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .tp-visual {
+        height: 400px;
+        min-height: 400px;
+    }
+
+    .tp-image-info {
+        width: 92%;
+
+        min-height: 105px;
+
+        padding: 15px;
+    }
+
+    .tp-info-icon {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+
+    .tp-content {
+        padding: 30px 18px 20px;
+    }
+
+    .tp-content h1 {
+        font-size: 30px;
+    }
+
+    .tp-description {
+        font-size: 13px;
+    }
+
+    .tp-feature {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .tp-feature-icon {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+
+    .benefit-item {
+        align-items: flex-start;
+    }
 }
 
 
