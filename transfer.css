@@ -1270,32 +1270,33 @@
         max-width: 470px;
     }
 
-   .hero-visual {
-    height: 420px;
-}
+    .hero-visual {
+        height: 420px;
+    }
 
-.hero-person {
-    height: 390px;
-}
+    .hero-person {
+        height: 390px;
+    }
 
-.hero-visual-card {
-    width: 310px;
-    height: 260px;
+    .hero-visual-card {
+        width: 310px;
+        height: 260px;
 
-    right: 5px;
-    top: 65px;
-}
+        right: 5px;
+        top: 65px;
+    }
 
-.hero-visual-glow {
-    width: 310px;
-    height: 310px;
+    .hero-visual-glow {
+        width: 310px;
+        height: 310px;
 
-    right: 0;
-    top: 40px;
-}
+        right: 0;
+        top: 40px;
+    }
 
-    .hero-image:hover img {
-        transform: translateX(8px) translateY(-4px);
+    .hero-visual-badge {
+        right: 5px;
+        bottom: 30px;
     }
 
     .hero-benefit > .container {
@@ -1307,11 +1308,11 @@
     }
 
     .benefit-item h4 {
-        font-size: 7px;
+        font-size: 9px;
     }
 
     .benefit-item p {
-        font-size: 6px;
+        font-size: 7.5px;
     }
 
     .service-grid {
@@ -1325,6 +1326,10 @@
 ========================================================= */
 
 @media (max-width: 991px) {
+
+    /* =========================
+       HERO
+    ========================= */
 
     .service-detail-hero {
         padding: 34px 0 20px;
@@ -1372,6 +1377,11 @@
         font-size: 9px;
     }
 
+
+    /* =========================
+       HERO VISUAL
+    ========================= */
+
     .hero-visual {
         height: 350px;
 
@@ -1385,7 +1395,6 @@
         height: 235px;
 
         right: 50%;
-
         top: 40px;
 
         transform: translateX(50%);
@@ -1396,7 +1405,6 @@
         height: 275px;
 
         right: 50%;
-
         top: 30px;
 
         transform: translateX(50%);
@@ -1425,10 +1433,11 @@
 
         font-size: 11px;
     }
-}
 
 
-    /* BENEFIT */
+    /* =========================
+       BENEFIT
+    ========================= */
 
     .hero-benefit > .container {
         padding: 0 20px;
@@ -1454,7 +1463,9 @@
     }
 
 
-    /* SERVICE */
+    /* =========================
+       SERVICE
+    ========================= */
 
     .service-content {
         padding: 65px 20px 85px;
@@ -1490,6 +1501,10 @@
 ========================================================= */
 
 @media (max-width: 768px) {
+
+    /* =========================
+       HERO
+    ========================= */
 
     .service-detail-hero {
         padding: 30px 0 18px;
@@ -1541,6 +1556,11 @@
         line-height: 1.7;
     }
 
+
+    /* =========================
+       HERO FEATURE
+    ========================= */
+
     .hero-feature {
         min-height: 43px;
 
@@ -1564,6 +1584,11 @@
         font-size: 8.5px;
     }
 
+
+    /* =========================
+       HERO BUTTON
+    ========================= */
+
     .hero-buttons {
         margin-top: 11px;
     }
@@ -1575,6 +1600,11 @@
 
         font-size: 10.5px;
     }
+
+
+    /* =========================
+       HERO VISUAL
+    ========================= */
 
     .hero-visual {
         height: 310px;
@@ -1608,7 +1638,10 @@
         font-size: 8px;
     }
 
-    /* BENEFIT */
+
+    /* =========================
+       BENEFIT
+    ========================= */
 
     .hero-benefit > .container {
         padding: 0 17px;
@@ -1650,9 +1683,11 @@
     .benefit-item p {
         font-size: 8.5px;
     }
-}
 
-    /* SERVICE */
+
+    /* =========================
+       SERVICE
+    ========================= */
 
     .service-content {
         padding: 55px 15px 70px;
@@ -1702,6 +1737,11 @@
         font-size: 12px;
     }
 
+
+    /* =========================
+       COMMITMENT
+    ========================= */
+
     .commitment {
         width: 100%;
 
@@ -1717,6 +1757,11 @@
     .commitment p {
         font-size: 12px;
     }
+
+
+    /* =========================
+       CTA
+    ========================= */
 
     .transfer-cta {
         width: 100%;
@@ -1813,6 +1858,10 @@
         top: 25px;
     }
 
+    .hero-visual-badge {
+        font-size: 7.5px;
+    }
+
     .btn-primary {
         min-width: 135px;
 
@@ -1829,6 +1878,8 @@
         font-size: 8px;
     }
 }
+
+
 /* =========================================================
    42. LARGE DESKTOP
 ========================================================= */
@@ -1841,17 +1892,18 @@
         padding: 0 35px;
     }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(400px, .78fr);
-    align-items: center;
-    gap: 55px;
-    width: 100%;
-    min-height: 480px;
-    margin: 0 auto;
-}
+    .hero-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(400px, .78fr);
+
+        align-items: center;
+
+        gap: 55px;
+
+        min-height: 480px;
+    }
+
     .hero-content h1 {
         font-size: 68px;
     }
@@ -1864,32 +1916,36 @@
         font-size: 13px;
     }
 
-    .hero-image {
+    .hero-visual {
         height: 440px;
     }
 
-    .hero-image::before {
+    .hero-visual-card {
         width: 330px;
         height: 270px;
 
         right: 20px;
+        top: 70px;
     }
 
-    .hero-image::after {
+    .hero-visual-glow {
         width: 300px;
         height: 300px;
 
         right: 30px;
+        top: 55px;
     }
 
-    .hero-image img {
-        height: 370px;
+    .hero-person {
+        height: 400px;
 
         transform: translateX(20px);
     }
 
-    .hero-image:hover img {
-        transform: translateX(20px) translateY(-4px);
+    .hero-visual:hover .hero-person {
+        transform:
+            translateX(20px)
+            translateY(-4px);
     }
 
     .hero-benefit > .container {
@@ -1897,24 +1953,32 @@
     }
 }
 
-.hero-feature h4 {
-    font-size: 11.5px;
-}
 
-.hero-feature p {
-    font-size: 9.5px;
-}
+/* =========================================================
+   DESKTOP FINAL TEXT SIZING
+========================================================= */
 
-.btn-primary {
-    font-size: 11px;
-}
+@media (min-width: 1200px) {
 
-.benefit-item h4 {
-    font-size: 11px;
-}
+    .hero-feature h4 {
+        font-size: 11.5px;
+    }
 
-.benefit-item p {
-    font-size: 9px;
+    .hero-feature p {
+        font-size: 9.5px;
+    }
+
+    .btn-primary {
+        font-size: 11px;
+    }
+
+    .benefit-item h4 {
+        font-size: 11px;
+    }
+
+    .benefit-item p {
+        font-size: 9px;
+    }
 }
 
 /* =========================================================
