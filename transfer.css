@@ -36,9 +36,13 @@
 
 .service-detail-hero {
     position: relative;
+
     width: 100%;
+
     padding: 32px 0 18px;
+
     overflow: hidden;
+
     background:
         radial-gradient(
             circle at 82% 38%,
@@ -65,16 +69,21 @@
 
 .hero-bg {
     position: absolute;
+
     pointer-events: none;
+
     border-radius: 50%;
+
     z-index: 0;
 }
 
 .hero-bg-1 {
     width: 420px;
     height: 420px;
+
     right: -190px;
     top: -190px;
+
     background:
         radial-gradient(
             circle,
@@ -87,8 +96,10 @@
 .hero-bg-2 {
     width: 320px;
     height: 320px;
+
     left: -210px;
     bottom: -220px;
+
     background:
         radial-gradient(
             circle,
@@ -104,10 +115,14 @@
 
 .service-detail-hero > .container {
     position: relative;
+
     z-index: 2;
+
     width: 100%;
     max-width: 1240px;
+
     margin: 0 auto;
+
     padding: 0 28px;
 }
 
@@ -121,13 +136,19 @@
 
 .hero-grid {
     display: grid;
+
     grid-template-columns:
         minmax(0, 1.08fr)
         minmax(360px, 0.82fr);
+
     align-items: center;
+
     gap: 42px;
+
     width: 100%;
+
     min-height: 455px;
+
     margin: 0 auto;
 }
 
@@ -138,10 +159,14 @@
 
 .hero-content {
     position: relative;
+
     z-index: 5;
+
     width: 100%;
     max-width: 610px;
+
     text-align: left;
+
     opacity: 1;
     transform: none;
 }
@@ -153,37 +178,38 @@
 
 .hero-badge {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 6px;
 
-    min-height: 30px;
+    min-height: 24px;
 
-    padding: 0 13px;
+    padding: 0 11px;
 
-    margin: 0 0 12px;
+    margin: 0 0 9px;
 
     border-radius: 999px;
 
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.86);
 
     border: 1px solid rgba(37, 99, 235, 0.22);
 
     color: #2862e8;
 
-    font-size: 10px;
+    font-size: 7px;
     font-weight: 800;
 
-    letter-spacing: 1.15px;
+    letter-spacing: 1.2px;
 
     text-transform: uppercase;
 
     box-shadow:
-        0 5px 15px rgba(41, 91, 180, 0.06);
+        0 5px 15px rgba(41, 91, 180, 0.05);
 }
 
 .hero-badge i {
-    font-size: 9px;
+    font-size: 7px;
 }
 
 
@@ -193,22 +219,17 @@
 
 .hero-content h1 {
     margin: 0;
-
     color: #092c67;
-
-    font-size: clamp(54px, 5.2vw, 72px);
-
-    line-height: 0.98;
-
+    font-size: clamp(48px, 5vw, 64px);
+    line-height: 0.95;
     font-weight: 800;
-
-    letter-spacing: -3px;
+    letter-spacing: -2.5px;
 }
 
 .hero-content h1 span {
     display: block;
 
-    margin-top: 4px;
+    margin-top: 3px;
 
     color: #2862e9;
 }
@@ -219,10 +240,10 @@
 ========================================================= */
 
 .hero-line {
-    width: 48px;
+    width: 42px;
     height: 3px;
 
-    margin: 14px 0 12px;
+    margin: 12px 0 10px;
 
     border-radius: 999px;
 
@@ -240,19 +261,19 @@
 ========================================================= */
 
 .hero-content h2 {
-    max-width: 560px;
+    max-width: 500px;
 
-    margin: 0 0 10px;
+    margin: 0 0 9px;
 
     color: #12396d;
 
-    font-size: 17px;
+    font-size: 18px;
 
-    line-height: 1.45;
+    line-height: 1.4;
 
     font-weight: 800;
 
-    letter-spacing: -0.25px;
+    letter-spacing: -0.3px;
 }
 
 
@@ -261,56 +282,42 @@
 ========================================================= */
 
 .hero-content > p {
-    max-width: 590px;
-
-    margin: 0 0 15px;
-
+    max-width: 560px;
+    margin: 0 0 13px;
     color: #66758a;
-
-    font-size: 13px;
-
-    line-height: 1.65;
-
+    font-size: 12.5px;
+    line-height: 1.7;
     font-weight: 400;
 }
 
 
 /* =========================================================
    12. HERO FEATURES
+
+   HTML Anda menggunakan 4 .hero-feature langsung,
+   bukan .hero-feature-grid.
 ========================================================= */
 
 .hero-feature {
     display: flex;
-
     align-items: center;
-
     width: 100%;
-    max-width: 560px;
-
-    min-height: 45px;
-
-    padding: 7px 11px;
-
-    margin: 0 0 6px;
-
-    gap: 11px;
-
+    max-width: 500px;
+    min-height: 42px;
+    padding: 6px 10px;
+    margin: 0 0 4px;
+    gap: 10px;
+    margin-bottom: 5px;
     border: 1px solid rgba(37, 99, 235, 0.14);
-
-    border-radius: 7px;
-
-    background: rgba(255, 255, 255, 0.90);
-
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.88);
     box-shadow:
         0 3px 10px rgba(30, 64, 175, 0.045);
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         border-color 0.25s ease;
-
     opacity: 1;
-
     transform: none;
 }
 
@@ -333,18 +340,13 @@
 ========================================================= */
 
 .feature-icon {
-    flex: 0 0 30px;
-
-    width: 30px;
-    height: 30px;
-
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    border-radius: 6px;
-
+    border-radius: 5px;
     background:
         linear-gradient(
             145deg,
@@ -353,8 +355,7 @@
         );
 
     color: #2863ea;
-
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
@@ -367,21 +368,19 @@
 
     color: #17396c;
 
-    font-size: 11.5px;
+    font-size: 10.5px;
 
-    line-height: 1.3;
+    line-height: 1.25;
 
     font-weight: 800;
 }
 
 .hero-feature p {
-    margin: 2px 0 0;
-
+    margin: 1px 0 0;
+    margin-top: 2px;
     color: #7b8798;
-
-    font-size: 9.5px;
-
-    line-height: 1.4;
+    font-size: 8.5px;
+    line-height: 1.35;
 }
 
 
@@ -394,7 +393,7 @@
 
     align-items: center;
 
-    margin: 12px 0 0;
+    margin: 10px 0 0;
 
     position: relative;
 
@@ -409,11 +408,10 @@
 
     gap: 8px;
 
-    min-width: 155px;
+    min-width: 150px;
+    min-height: 40px;
 
-    min-height: 42px;
-
-    padding: 0 19px;
+    padding: 0 17px;
 
     border: none;
 
@@ -430,7 +428,7 @@
 
     text-decoration: none;
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: 800;
 
@@ -450,12 +448,12 @@
 }
 
 .btn-primary i {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 
 /* =========================================================
-   16. HERO VISUAL
+   HERO VISUAL
 ========================================================= */
 
 .hero-visual {
@@ -465,9 +463,7 @@
     height: 455px;
 
     display: flex;
-
     align-items: flex-end;
-
     justify-content: center;
 
     z-index: 3;
@@ -475,7 +471,7 @@
 
 
 /* =========================================================
-   17. VISUAL CARD
+   VISUAL CARD
 ========================================================= */
 
 .hero-visual-card {
@@ -506,7 +502,7 @@
 
 
 /* =========================================================
-   18. VISUAL GLOW
+   VISUAL GLOW
 ========================================================= */
 
 .hero-visual-glow {
@@ -537,7 +533,7 @@
 
 
 /* =========================================================
-   19. PERSON
+   PERSON
 ========================================================= */
 
 .hero-person {
@@ -548,21 +544,17 @@
     display: block;
 
     width: auto;
-
     height: 420px;
 
     max-width: 100%;
 
     object-fit: contain;
-
     object-position: bottom center;
 
     margin: 0;
 
     border: none;
-
     border-radius: 0;
-
     box-shadow: none;
 
     transform: translateX(15px);
@@ -579,14 +571,14 @@
 
 
 /* =========================================================
-   19A. VISUAL BADGE
+   VISUAL BADGE
 ========================================================= */
 
 .hero-visual-badge {
+
     position: absolute;
 
     right: 0;
-
     bottom: 42px;
 
     display: flex;
@@ -595,7 +587,7 @@
 
     gap: 7px;
 
-    padding: 8px 13px;
+    padding: 7px 12px;
 
     border-radius: 999px;
 
@@ -608,8 +600,7 @@
 
     color: #17396c;
 
-    font-size: 9px;
-
+    font-size: 8px;
     font-weight: 700;
 
     white-space: nowrap;
@@ -617,7 +608,9 @@
     z-index: 8;
 }
 
+
 .badge-dot {
+
     width: 7px;
     height: 7px;
 
@@ -712,31 +705,49 @@
 
 .benefit-item:not(:last-child)::after {
     content: "";
+
     position: absolute;
+
     top: 15%;
+
     right: 0;
+
     width: 1px;
+
     height: 70%;
+
     background: #e4e9f2;
 }
 
 
+/* =========================================================
+   24. BENEFIT ICON
+========================================================= */
+
 .benefit-icon {
-    flex: 0 0 31px;
-    width: 31px;
-    height: 31px;
+    flex: 0 0 29px;
+
+    width: 29px;
+    height: 29px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    border-radius: 7px;
+
+    border-radius: 6px;
+
     background:
         linear-gradient(
             145deg,
             #326df2,
             #2456dc
         );
+
     color: #ffffff;
-    font-size: 11px;
+
+    font-size: 10px;
+
     box-shadow:
         0 5px 12px rgba(42, 96, 225, 0.15);
 }
@@ -747,13 +758,13 @@
 ========================================================= */
 
 .benefit-item h4 {
-    margin: 0 0 3px;
-
+    margin: 0 0 2px;
+    margin-bottom: 3px;
     color: #16386b;
 
     font-size: 10px;
 
-    line-height: 1.3;
+    line-height: 1.25;
 
     font-weight: 800;
 }
@@ -765,8 +776,9 @@
 
     font-size: 8.5px;
 
-    line-height: 1.45;
+    line-height: 1.4;
 }
+
 
 /* =========================================================
    26. SERVICE CONTENT
@@ -1270,33 +1282,34 @@
         max-width: 470px;
     }
 
-    .hero-visual {
-        height: 420px;
+    .hero-image {
+        height: 400px;
     }
 
-    .hero-person {
-        height: 390px;
+    .hero-image::before {
+        width: 290px;
+        height: 235px;
+
+        right: 8px;
+        top: 55px;
     }
 
-    .hero-visual-card {
-        width: 310px;
-        height: 260px;
+    .hero-image::after {
+        width: 270px;
+        height: 270px;
 
-        right: 5px;
-        top: 65px;
+        right: 18px;
+        top: 48px;
     }
 
-    .hero-visual-glow {
-        width: 310px;
-        height: 310px;
+    .hero-image img {
+        height: 335px;
 
-        right: 0;
-        top: 40px;
+        transform: translateX(8px);
     }
 
-    .hero-visual-badge {
-        right: 5px;
-        bottom: 30px;
+    .hero-image:hover img {
+        transform: translateX(8px) translateY(-4px);
     }
 
     .hero-benefit > .container {
@@ -1308,11 +1321,11 @@
     }
 
     .benefit-item h4 {
-        font-size: 9px;
+        font-size: 7px;
     }
 
     .benefit-item p {
-        font-size: 7.5px;
+        font-size: 6px;
     }
 
     .service-grid {
@@ -1327,10 +1340,6 @@
 
 @media (max-width: 991px) {
 
-    /* =========================
-       HERO
-    ========================= */
-
     .service-detail-hero {
         padding: 34px 0 20px;
     }
@@ -1338,7 +1347,7 @@
     .hero-grid {
         grid-template-columns: 1fr;
 
-        gap: 22px;
+        gap: 20px;
 
         min-height: auto;
 
@@ -1353,8 +1362,6 @@
 
     .hero-content h1 {
         font-size: 54px;
-
-        letter-spacing: -2.5px;
     }
 
     .hero-content h2 {
@@ -1362,82 +1369,59 @@
     }
 
     .hero-content > p {
-        font-size: 12.5px;
+        font-size: 12px;
     }
 
     .hero-feature {
         max-width: 100%;
     }
 
-    .hero-feature h4 {
-        font-size: 11px;
+    .hero-buttons {
+        margin-top: 10px;
     }
 
-    .hero-feature p {
-        font-size: 9px;
-    }
-
-
-    /* =========================
-       HERO VISUAL
-    ========================= */
-
-    .hero-visual {
-        height: 350px;
+    .hero-image {
+        height: 330px;
 
         max-width: 520px;
 
         margin: 0 auto;
     }
 
-    .hero-visual-card {
-        width: 285px;
-        height: 235px;
+    .hero-image::before {
+        width: 280px;
+        height: 220px;
 
         right: 50%;
-        top: 40px;
+
+        top: 45px;
 
         transform: translateX(50%);
     }
 
-    .hero-visual-glow {
-        width: 275px;
-        height: 275px;
+    .hero-image::after {
+        width: 250px;
+        height: 250px;
 
         right: 50%;
-        top: 30px;
+
+        top: 38px;
 
         transform: translateX(50%);
     }
 
-    .hero-person {
-        height: 330px;
+    .hero-image img {
+        height: 315px;
 
         transform: none;
     }
 
-    .hero-visual:hover .hero-person {
+    .hero-image:hover img {
         transform: translateY(-4px);
     }
 
-    .hero-visual-badge {
-        right: 10px;
 
-        bottom: 20px;
-
-        font-size: 8.5px;
-    }
-
-    .btn-primary {
-        min-height: 42px;
-
-        font-size: 11px;
-    }
-
-
-    /* =========================
-       BENEFIT
-    ========================= */
+    /* BENEFIT */
 
     .hero-benefit > .container {
         padding: 0 20px;
@@ -1463,9 +1447,7 @@
     }
 
 
-    /* =========================
-       SERVICE
-    ========================= */
+    /* SERVICE */
 
     .service-content {
         padding: 65px 20px 85px;
@@ -1502,10 +1484,6 @@
 
 @media (max-width: 768px) {
 
-    /* =========================
-       HERO
-    ========================= */
-
     .service-detail-hero {
         padding: 30px 0 18px;
     }
@@ -1515,7 +1493,7 @@
     }
 
     .hero-grid {
-        gap: 20px;
+        gap: 15px;
     }
 
     .hero-content {
@@ -1523,125 +1501,91 @@
     }
 
     .hero-badge {
-        min-height: 25px;
+        min-height: 22px;
 
-        padding: 0 11px;
+        padding: 0 10px;
 
-        margin-bottom: 10px;
+        margin-bottom: 9px;
 
-        font-size: 8.5px;
+        font-size: 7px;
     }
 
     .hero-content h1 {
         font-size: 45px;
 
-        line-height: 0.98;
-
         letter-spacing: -2px;
     }
 
     .hero-line {
-        margin: 12px 0 10px;
+        margin: 11px 0 9px;
     }
 
     .hero-content h2 {
         font-size: 16px;
-
-        line-height: 1.45;
     }
 
     .hero-content > p {
         font-size: 11.5px;
-
         line-height: 1.7;
     }
 
-
-    /* =========================
-       HERO FEATURE
-    ========================= */
-
     .hero-feature {
-        min-height: 43px;
+        min-height: 42px;
 
-        padding: 6px 9px;
+        padding: 5px 8px;
     }
 
     .feature-icon {
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
 
-        flex-basis: 26px;
+        flex-basis: 24px;
+
+        font-size: 9px;
+    }
+
+    .hero-feature h4 {
+        font-size: 10px;
+    }
+
+    .hero-feature p {
+        font-size: 8.2px;
+    }
+
+    .hero-buttons {
+        margin-top: 10px;
+    }
+
+    .btn-primary {
+        min-height: 38px;
 
         font-size: 10px;
     }
 
-    .hero-feature h4 {
-        font-size: 10.5px;
+    .hero-image {
+        height: 300px;
     }
 
-    .hero-feature p {
-        font-size: 8.5px;
-    }
-
-
-    /* =========================
-       HERO BUTTON
-    ========================= */
-
-    .hero-buttons {
-        margin-top: 11px;
-    }
-
-    .btn-primary {
-        min-height: 40px;
-
-        min-width: 145px;
-
-        font-size: 10.5px;
-    }
-
-
-    /* =========================
-       HERO VISUAL
-    ========================= */
-
-    .hero-visual {
-        height: 310px;
-    }
-
-    .hero-person {
-        height: 295px;
-    }
-
-    .hero-visual-card {
+    .hero-image::before {
         width: 245px;
-        height: 205px;
+        height: 195px;
+
+        top: 42px;
+    }
+
+    .hero-image::after {
+        width: 220px;
+        height: 220px;
 
         top: 35px;
     }
 
-    .hero-visual-glow {
-        width: 235px;
-        height: 235px;
-
-        top: 28px;
-    }
-
-    .hero-visual-badge {
-        right: 5px;
-
-        bottom: 15px;
-
-        padding: 7px 10px;
-
-        font-size: 8px;
+    .hero-image img {
+        height: 285px;
     }
 
 
-    /* =========================
-       BENEFIT
-    ========================= */
+    /* BENEFIT */
 
     .hero-benefit > .container {
         padding: 0 17px;
@@ -1654,9 +1598,9 @@
     }
 
     .benefit-item {
-        min-height: 54px;
+        min-height: 50px;
 
-        padding: 8px 10px;
+        padding: 7px 9px;
 
         border-bottom: 1px solid #e4e9f2;
     }
@@ -1670,14 +1614,14 @@
     }
 
     .benefit-icon {
-        width: 28px;
-        height: 28px;
+        width: 27px;
+        height: 27px;
 
-        flex-basis: 28px;
+        flex-basis: 27px;
     }
 
     .benefit-item h4 {
-        font-size: 10.5px;
+        font-size: 10px;
     }
 
     .benefit-item p {
@@ -1685,9 +1629,7 @@
     }
 
 
-    /* =========================
-       SERVICE
-    ========================= */
+    /* SERVICE */
 
     .service-content {
         padding: 55px 15px 70px;
@@ -1737,11 +1679,6 @@
         font-size: 12px;
     }
 
-
-    /* =========================
-       COMMITMENT
-    ========================= */
-
     .commitment {
         width: 100%;
 
@@ -1757,11 +1694,6 @@
     .commitment p {
         font-size: 12px;
     }
-
-
-    /* =========================
-       CTA
-    ========================= */
 
     .transfer-cta {
         width: 100%;
@@ -1794,15 +1726,9 @@
     }
 
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 42px;
 
-        letter-spacing: -1.8px;
-    }
-
-    .hero-badge {
-        font-size: 8px;
-
-        min-height: 24px;
+        letter-spacing: -2px;
     }
 
     .hero-content h2 {
@@ -1810,72 +1736,55 @@
     }
 
     .hero-content > p {
-        font-size: 10.5px;
-
-        line-height: 1.65;
+        font-size: 8.5px;
     }
 
     .hero-feature {
-        min-height: 41px;
-
-        padding: 6px 8px;
+        min-height: 33px;
     }
 
     .hero-feature h4 {
-        font-size: 10px;
-    }
-
-    .hero-feature p {
-        font-size: 8px;
-    }
-
-    .feature-icon {
-        width: 25px;
-        height: 25px;
-
-        flex-basis: 25px;
-    }
-
-    .hero-visual {
-        height: 285px;
-    }
-
-    .hero-person {
-        height: 270px;
-    }
-
-    .hero-visual-card {
-        width: 220px;
-        height: 185px;
-
-        top: 32px;
-    }
-
-    .hero-visual-glow {
-        width: 215px;
-        height: 215px;
-
-        top: 25px;
-    }
-
-    .hero-visual-badge {
         font-size: 7.5px;
     }
 
+    .hero-feature p {
+        font-size: 6.2px;
+    }
+
+    .hero-image {
+        height: 275px;
+    }
+
+    .hero-image::before {
+        width: 220px;
+        height: 175px;
+
+        top: 40px;
+    }
+
+    .hero-image::after {
+        width: 200px;
+        height: 200px;
+
+        top: 34px;
+    }
+
+    .hero-image img {
+        height: 265px;
+    }
+
     .btn-primary {
-        min-width: 135px;
+        width: auto;
 
-        min-height: 39px;
-
-        font-size: 10px;
+        min-width: 130px;
     }
 
-    .benefit-item h4 {
-        font-size: 10px;
+    .service-image img {
+        height: 205px;
     }
 
-    .benefit-item p {
-        font-size: 8px;
+    .service-body h3 {
+        font-size: 20px;
     }
 }
 
@@ -1892,18 +1801,17 @@
         padding: 0 35px;
     }
 
-    .hero-grid {
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(400px, .78fr);
-
-        align-items: center;
-
-        gap: 55px;
-
-        min-height: 480px;
-    }
-
+.hero-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, .78fr);
+    align-items: center;
+    gap: 55px;
+    width: 100%;
+    min-height: 480px;
+    margin: 0 auto;
+}
     .hero-content h1 {
         font-size: 68px;
     }
@@ -1913,39 +1821,35 @@
     }
 
     .hero-content > p {
-        font-size: 13px;
+        font-size: 9.5px;
     }
 
-    .hero-visual {
+    .hero-image {
         height: 440px;
     }
 
-    .hero-visual-card {
+    .hero-image::before {
         width: 330px;
         height: 270px;
 
         right: 20px;
-        top: 70px;
     }
 
-    .hero-visual-glow {
+    .hero-image::after {
         width: 300px;
         height: 300px;
 
         right: 30px;
-        top: 55px;
     }
 
-    .hero-person {
-        height: 400px;
+    .hero-image img {
+        height: 370px;
 
         transform: translateX(20px);
     }
 
-    .hero-visual:hover .hero-person {
-        transform:
-            translateX(20px)
-            translateY(-4px);
+    .hero-image:hover img {
+        transform: translateX(20px) translateY(-4px);
     }
 
     .hero-benefit > .container {
@@ -1953,33 +1857,6 @@
     }
 }
 
-
-/* =========================================================
-   DESKTOP FINAL TEXT SIZING
-========================================================= */
-
-@media (min-width: 1200px) {
-
-    .hero-feature h4 {
-        font-size: 11.5px;
-    }
-
-    .hero-feature p {
-        font-size: 9.5px;
-    }
-
-    .btn-primary {
-        font-size: 11px;
-    }
-
-    .benefit-item h4 {
-        font-size: 11px;
-    }
-
-    .benefit-item p {
-        font-size: 9px;
-    }
-}
 
 /* =========================================================
    43. ACCESSIBILITY
