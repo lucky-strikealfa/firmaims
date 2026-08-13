@@ -1881,3 +1881,1016 @@
 
     color: #ffffff;
 }
+
+/* =========================================================
+   TRANSFER PRICING — HERO VISUAL FINAL OVERRIDE
+   FIX MOCKUP / TYPOGRAPHY / RESPONSIVE
+   Letakkan PALING BAWAH file CSS
+========================================================= */
+
+
+/* =========================================================
+   01. HERO — GENERAL
+========================================================= */
+
+.service-detail-hero {
+    padding: 45px 0 25px;
+}
+
+.service-detail-hero > .container {
+    max-width: 1280px;
+    padding: 0 32px;
+}
+
+
+/* =========================================================
+   02. HERO GRID
+========================================================= */
+
+.hero-grid {
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 0.82fr);
+
+    align-items: center;
+
+    gap: 55px;
+
+    min-height: 500px;
+}
+
+
+/* =========================================================
+   03. HERO LEFT CONTENT
+========================================================= */
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.hero-badge {
+    min-height: 30px;
+
+    padding: 0 14px;
+
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(40, 98, 233, 0.18);
+
+    box-shadow:
+        0 6px 18px rgba(31, 68, 130, 0.06);
+}
+
+.hero-badge i {
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-content h1 {
+    margin: 0;
+
+    color: #092c67;
+
+    font-size: clamp(52px, 5vw, 70px);
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+}
+
+.hero-content h1 span {
+    margin-top: 4px;
+
+    color: #2862e9;
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.hero-line {
+    width: 55px;
+    height: 4px;
+
+    margin: 16px 0 15px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d9a63a,
+            #efc15d
+        );
+}
+
+
+/* =========================================================
+   HERO SUBTITLE
+========================================================= */
+
+.hero-content h2 {
+    max-width: 610px;
+
+    margin: 0 0 12px;
+
+    color: #12396d;
+
+    font-size: 20px;
+
+    line-height: 1.45;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-content > p {
+    max-width: 610px;
+
+    margin: 0 0 20px;
+
+    color: #66758a;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   04. HERO FEATURES
+========================================================= */
+
+.hero-feature {
+    max-width: 540px;
+
+    min-height: 52px;
+
+    padding: 8px 13px;
+
+    margin-bottom: 7px;
+
+    gap: 12px;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(37, 99, 235, 0.13);
+
+    box-shadow:
+        0 5px 16px rgba(30, 64, 175, 0.055);
+}
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.feature-icon {
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.hero-feature h4 {
+    margin: 0 0 2px;
+
+    color: #17396c;
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+========================================================= */
+
+.hero-feature p {
+    margin: 0;
+
+    color: #7b8798;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   05. HERO BUTTON
+========================================================= */
+
+.hero-buttons {
+    margin-top: 15px;
+}
+
+.btn-primary {
+    min-width: 165px;
+
+    min-height: 45px;
+
+    padding: 0 20px;
+
+    font-size: 11px;
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 9px 22px rgba(40, 92, 225, 0.20);
+}
+
+.btn-primary i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   06. HERO VISUAL
+========================================================= */
+
+.hero-visual {
+    position: relative;
+
+    width: 100%;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   07. MOCKUP CARD
+========================================================= */
+
+.hero-visual-card {
+    position: absolute;
+
+    width: 380px;
+    height: 330px;
+
+    right: 15px;
+    top: 65px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f7faff 100%
+        );
+
+    border: 1px solid rgba(215, 225, 241, 0.95);
+
+    box-shadow:
+        0 25px 60px rgba(38, 72, 130, 0.10);
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   MOCKUP CARD INNER LIGHT
+========================================================= */
+
+.hero-visual-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -45px;
+    top: -45px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(40, 98, 233, 0.10),
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   08. VISUAL GLOW
+========================================================= */
+
+.hero-visual-glow {
+    width: 420px;
+    height: 420px;
+
+    right: -5px;
+    top: 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.14),
+            rgba(37, 99, 235, 0.04) 48%,
+            transparent 72%
+        );
+
+    filter: blur(14px);
+}
+
+
+/* =========================================================
+   09. PERSON
+========================================================= */
+
+.hero-person {
+    position: relative;
+
+    z-index: 5;
+
+    width: auto;
+
+    height: 465px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    object-position: bottom center;
+
+    transform: translateX(15px);
+
+    filter:
+        drop-shadow(
+            0 16px 25px rgba(20, 45, 90, 0.10)
+        );
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+.hero-visual:hover .hero-person {
+    transform:
+        translateX(15px)
+        translateY(-6px);
+
+    filter:
+        drop-shadow(
+            0 22px 32px rgba(20, 45, 90, 0.14)
+        );
+}
+
+
+/* =========================================================
+   10. VISUAL BADGE
+========================================================= */
+
+.hero-visual-badge {
+    position: absolute;
+
+    right: -5px;
+    bottom: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 32px;
+
+    padding: 0 13px;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(220, 228, 242, 0.95);
+
+    box-shadow:
+        0 10px 25px rgba(31, 62, 110, 0.12);
+
+    color: #17396c;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    z-index: 8;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+
+    flex: 0 0 8px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 211, 102, 0.12);
+}
+
+
+/* =========================================================
+   11. BENEFIT BAR
+========================================================= */
+
+.hero-benefit {
+    padding: 15px 0 25px;
+
+    background: #f4f7fb;
+}
+
+.hero-benefit > .container {
+    max-width: 1220px;
+
+    padding: 0 28px;
+}
+
+.benefit-grid {
+    padding: 8px;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 12px 30px rgba(30, 60, 110, 0.07);
+}
+
+.benefit-item {
+    min-height: 65px;
+
+    padding: 9px 15px;
+
+    gap: 11px;
+}
+
+.benefit-icon {
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+}
+
+.benefit-item h4 {
+    margin: 0 0 4px;
+
+    color: #16386b;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+}
+
+.benefit-item p {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 9.5px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   12. TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .service-detail-hero {
+        padding: 40px 0 20px;
+    }
+
+    .service-detail-hero > .container {
+        padding: 0 24px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 680px;
+
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 56px;
+    }
+
+    .hero-content h2 {
+        font-size: 19px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+    }
+
+    .hero-feature {
+        max-width: 100%;
+    }
+
+    /* FIX UTAMA:
+       sekarang yang diatur adalah HERO-VISUAL,
+       bukan HERO-IMAGE */
+
+    .hero-visual {
+        width: 100%;
+
+        max-width: 560px;
+
+        height: 430px;
+
+        margin: 0 auto;
+    }
+
+    .hero-visual-card {
+        width: 350px;
+        height: 300px;
+
+        right: 50%;
+        top: 55px;
+
+        transform: translateX(50%);
+    }
+
+    .hero-visual-glow {
+        width: 360px;
+        height: 360px;
+
+        right: 50%;
+        top: 35px;
+
+        transform: translateX(50%);
+    }
+
+    .hero-person {
+        height: 400px;
+
+        transform: none;
+    }
+
+    .hero-visual:hover .hero-person {
+        transform: translateY(-5px);
+    }
+
+    .hero-visual-badge {
+        right: 25px;
+
+        bottom: 35px;
+    }
+
+    .hero-benefit > .container {
+        padding: 0 20px;
+    }
+}
+
+
+/* =========================================================
+   13. MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .service-detail-hero {
+        padding: 30px 0 15px;
+    }
+
+    .service-detail-hero > .container {
+        padding: 0 17px;
+    }
+
+    .hero-grid {
+        gap: 18px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-badge {
+        min-height: 27px;
+
+        padding: 0 12px;
+
+        margin-bottom: 11px;
+
+        font-size: 9px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+
+        line-height: 0.98;
+
+        letter-spacing: -2.3px;
+    }
+
+    .hero-line {
+        width: 45px;
+        height: 3px;
+
+        margin: 13px 0 12px;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+
+        line-height: 1.45;
+    }
+
+    .hero-content > p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+
+    /* FEATURES */
+
+    .hero-feature {
+        min-height: 48px;
+
+        padding: 7px 9px;
+
+        margin-bottom: 6px;
+
+        gap: 9px;
+    }
+
+    .feature-icon {
+        width: 29px;
+        height: 29px;
+
+        flex-basis: 29px;
+
+        font-size: 11px;
+    }
+
+    .hero-feature h4 {
+        font-size: 10.5px;
+    }
+
+    .hero-feature p {
+        font-size: 8.8px;
+    }
+
+
+    /* BUTTON */
+
+    .hero-buttons {
+        margin-top: 12px;
+    }
+
+    .btn-primary {
+        min-height: 42px;
+
+        min-width: 150px;
+
+        padding: 0 17px;
+
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       HERO VISUAL MOBILE
+    ===================================================== */
+
+    .hero-visual {
+        height: 350px;
+
+        max-width: 390px;
+
+        margin: 5px auto 0;
+    }
+
+    .hero-visual-card {
+        width: 270px;
+        height: 230px;
+
+        right: 50%;
+
+        top: 45px;
+
+        transform: translateX(50%);
+
+        border-radius: 18px;
+    }
+
+    .hero-visual-glow {
+        width: 290px;
+        height: 290px;
+
+        right: 50%;
+
+        top: 28px;
+
+        transform: translateX(50%);
+    }
+
+    .hero-person {
+        height: 325px;
+
+        max-width: 95%;
+
+        transform: none;
+    }
+
+    .hero-visual:hover .hero-person {
+        transform: translateY(-4px);
+    }
+
+    .hero-visual-badge {
+        right: 8px;
+
+        bottom: 27px;
+
+        min-height: 28px;
+
+        padding: 0 10px;
+
+        font-size: 8px;
+    }
+
+    .badge-dot {
+        width: 7px;
+        height: 7px;
+
+        flex-basis: 7px;
+    }
+
+
+    /* BENEFIT */
+
+    .hero-benefit {
+        padding: 10px 0 18px;
+    }
+
+    .hero-benefit > .container {
+        padding: 0 17px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+
+        padding: 5px;
+
+        border-radius: 10px;
+    }
+
+    .benefit-item {
+        min-height: 55px;
+
+        padding: 8px 10px;
+    }
+
+    .benefit-icon {
+        width: 29px;
+        height: 29px;
+
+        flex-basis: 29px;
+    }
+
+    .benefit-item h4 {
+        font-size: 10px;
+    }
+
+    .benefit-item p {
+        font-size: 8.5px;
+    }
+}
+
+
+/* =========================================================
+   14. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .service-detail-hero {
+        padding-top: 25px;
+    }
+
+    .service-detail-hero > .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+    }
+
+    .hero-content > p {
+        font-size: 11.5px;
+    }
+
+    .hero-feature {
+        min-height: 46px;
+    }
+
+    .hero-feature h4 {
+        font-size: 10px;
+    }
+
+    .hero-feature p {
+        font-size: 8.3px;
+    }
+
+
+    /* MOCKUP */
+
+    .hero-visual {
+        height: 320px;
+    }
+
+    .hero-visual-card {
+        width: 245px;
+        height: 210px;
+
+        top: 42px;
+    }
+
+    .hero-visual-glow {
+        width: 265px;
+        height: 265px;
+
+        top: 27px;
+    }
+
+    .hero-person {
+        height: 300px;
+    }
+
+    .hero-visual-badge {
+        right: 3px;
+
+        bottom: 23px;
+
+        min-height: 26px;
+
+        padding: 0 9px;
+
+        font-size: 7.5px;
+    }
+
+    .btn-primary {
+        min-height: 40px;
+
+        min-width: 145px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   15. VERY SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 15px;
+    }
+
+    .hero-content > p {
+        font-size: 11px;
+    }
+
+    .hero-feature h4 {
+        font-size: 9.5px;
+    }
+
+    .hero-feature p {
+        font-size: 8px;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+
+    .hero-visual-card {
+        width: 225px;
+        height: 195px;
+    }
+
+    .hero-person {
+        height: 285px;
+    }
+
+    .hero-visual-badge {
+        right: 0;
+
+        font-size: 7px;
+    }
+}
+
+
+/* =========================================================
+   16. REMOVE OLD HERO-IMAGE RESPONSIVE CONFLICT
+========================================================= */
+
+/*
+   CSS lama menggunakan .hero-image.
+   Kita matikan aturan visual lama agar tidak
+   mengganggu .hero-visual.
+*/
+
+.hero-image {
+    display: none !important;
+}
+
+.hero-image::before,
+.hero-image::after {
+    display: none !important;
+}
+
+
+/* =========================================================
+   17. ANIMATION CLEANUP
+========================================================= */
+
+.hero-content,
+.hero-feature,
+.benefit-item {
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    animation: none !important;
+}
