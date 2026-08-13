@@ -483,85 +483,65 @@
 
 
 /* =========================================================
-   16. RIGHT IMAGE AREA
-
-   Ini menggunakan .hero-image karena HTML Anda
-   memang menggunakan .hero-image.
+   HERO VISUAL
 ========================================================= */
 
-.hero-image {
+.hero-visual {
     position: relative;
 
     width: 100%;
-
-    height: 425px;
+    height: 455px;
 
     display: flex;
-
     align-items: flex-end;
     justify-content: center;
 
     z-index: 3;
-
-    opacity: 1;
-
-    transform: none;
 }
 
 
 /* =========================================================
-   17. IMAGE BACKDROP
-
-   Kotak dibuat kecil dan proporsional.
+   VISUAL CARD
 ========================================================= */
 
-.hero-image::before {
-    content: "";
-
+.hero-visual-card {
     position: absolute;
 
-    width: 315px;
-    height: 255px;
+    width: 330px;
+    height: 275px;
 
-    right: 22px;
-    top: 55px;
+    right: 12px;
+    top: 70px;
 
-    border-radius: 13px;
+    border-radius: 18px;
 
     background:
-        radial-gradient(
-            circle at 55% 45%,
-            rgba(37, 99, 235, 0.075),
-            transparent 48%
-        ),
         linear-gradient(
             145deg,
-            rgba(255, 255, 255, 0.96),
-            rgba(247, 250, 255, 0.90)
+            rgba(255,255,255,.96),
+            rgba(246,249,255,.92)
         );
 
-    border: 1px solid rgba(224, 231, 245, 0.75);
+    border: 1px solid rgba(220,228,242,.85);
 
     box-shadow:
-        0 16px 38px rgba(40, 73, 130, 0.07);
+        0 20px 45px rgba(38,72,130,.08);
 
     z-index: -2;
 }
 
 
 /* =========================================================
-   18. IMAGE SOFT GLOW
+   VISUAL GLOW
 ========================================================= */
 
-.hero-image::after {
-    content: "";
-
+.hero-visual-glow {
     position: absolute;
 
-    width: 290px;
-    height: 290px;
+    width: 330px;
+    height: 330px;
 
-    right: 32px;
+    right: 5px;
     top: 45px;
 
     border-radius: 50%;
@@ -569,12 +549,12 @@
     background:
         radial-gradient(
             circle,
-            rgba(55, 105, 237, 0.085),
-            rgba(55, 105, 237, 0.025) 48%,
+            rgba(37,99,235,.11),
+            rgba(37,99,235,.035) 48%,
             transparent 72%
         );
 
-    filter: blur(12px);
+    filter: blur(10px);
 
     z-index: -3;
 
@@ -583,47 +563,94 @@
 
 
 /* =========================================================
-   19. PERSON IMAGE
+   PERSON
 ========================================================= */
 
-.hero-image img {
+.hero-person {
     position: relative;
 
-    z-index: 2;
+    z-index: 5;
 
     display: block;
 
     width: auto;
-
-    height: 355px;
+    height: 420px;
 
     max-width: 100%;
 
-    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
 
     margin: 0;
 
-    object-fit: contain;
-
-    object-position: bottom center;
-
-    border: 0;
-
+    border: none;
     border-radius: 0;
-
     box-shadow: none;
 
     transform: translateX(15px);
 
     transition:
-        transform 0.35s ease;
+        transform .35s ease;
 }
 
-.hero-image:hover img {
-    transform: translateX(15px) translateY(-4px);
+.hero-visual:hover .hero-person {
+    transform:
+        translateX(15px)
+        translateY(-5px);
 }
 
 
+/* =========================================================
+   VISUAL BADGE
+========================================================= */
+
+.hero-visual-badge {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.96);
+
+    border: 1px solid rgba(225,231,241,.9);
+
+    box-shadow:
+        0 8px 22px rgba(31,62,110,.10);
+
+    color: #17396c;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    z-index: 8;
+}
+
+
+.badge-dot {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    box-shadow:
+        0 0 0 3px rgba(37,211,102,.12);
+}
 /* =========================================================
    20. BENEFIT BAR
 ========================================================= */
@@ -1814,16 +1841,17 @@
         padding: 0 35px;
     }
 
-    .hero-grid {
-        grid-template-columns:
-            minmax(0, 1.08fr)
-            minmax(440px, 0.82fr);
-
-        gap: 55px;
-
-        min-height: 470px;
-    }
-
+.hero-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, .78fr);
+    align-items: center;
+    gap: 55px;
+    width: 100%;
+    min-height: 480px;
+    margin: 0 auto;
+}
     .hero-content h1 {
         font-size: 68px;
     }
