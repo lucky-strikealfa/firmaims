@@ -168,14 +168,10 @@
     margin: 16px 0 0;
 
     font-family: "Poppins", sans-serif;
-
     font-size: clamp(58px, 5.1vw, 78px);
     line-height: .96;
-
     letter-spacing: -3px;
-
     font-weight: 800;
-
     color: #102b55;
 }
 
