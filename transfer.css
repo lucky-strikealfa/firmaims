@@ -36,13 +36,9 @@
 
 .service-detail-hero {
     position: relative;
-
     width: 100%;
-
     padding: 32px 0 18px;
-
     overflow: hidden;
-
     background:
         radial-gradient(
             circle at 82% 38%,
@@ -69,21 +65,16 @@
 
 .hero-bg {
     position: absolute;
-
     pointer-events: none;
-
     border-radius: 50%;
-
     z-index: 0;
 }
 
 .hero-bg-1 {
     width: 420px;
     height: 420px;
-
     right: -190px;
     top: -190px;
-
     background:
         radial-gradient(
             circle,
@@ -96,10 +87,8 @@
 .hero-bg-2 {
     width: 320px;
     height: 320px;
-
     left: -210px;
     bottom: -220px;
-
     background:
         radial-gradient(
             circle,
@@ -115,14 +104,10 @@
 
 .service-detail-hero > .container {
     position: relative;
-
     z-index: 2;
-
     width: 100%;
     max-width: 1240px;
-
     margin: 0 auto;
-
     padding: 0 28px;
 }
 
