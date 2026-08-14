@@ -197,7 +197,7 @@
 
     color: #2862e8;
 
-    font-size: 7px;
+    font-size: 18px;
     font-weight: 800;
 
     letter-spacing: 1.2px;
@@ -209,7 +209,7 @@
 }
 
 .hero-badge i {
-    font-size: 7px;
+    font-size: 18px;
 }
 
 
@@ -1286,7 +1286,7 @@
     }
 
     .benefit-item h4 {
-        font-size: 7px;
+        font-size: 18px;
     }
 
     .benefit-item p {
