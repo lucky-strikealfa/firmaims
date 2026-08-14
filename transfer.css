@@ -247,17 +247,11 @@
 
 .hero-content h2 {
     max-width: 610px;
-
-    margin: 0 0 12px;
-
+    margin: 0 0 14px;
     color: #12396d;
-
     font-size: 24px;
-
     line-height: 1.45;
-
     font-weight: 800;
-
     letter-spacing: -0.4px;
 }
 
@@ -270,9 +264,8 @@
     max-width: 610px;
     margin: 0 0 20px;
     color: #66758a;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.75;
-    font-weight: 400;
 }
 
 
@@ -351,7 +344,7 @@
 .hero-feature h4 {
     margin: 0 0 3px;
     color: #17396c;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.35;
     font-weight: 800;
 }
@@ -359,10 +352,9 @@
 .hero-feature p {
     margin: 0;
     color: #7b8798;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.45;
 }
-
 
 /* =========================================================
    15. HERO BUTTON
@@ -388,7 +380,7 @@
 
     gap: 8px;
 
-    min-width: 175px
+    min-width: 175px;
     min-height: 48px;
 
     padding: 0 22px;
