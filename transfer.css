@@ -1420,3 +1420,16 @@ zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
         height: 630px;
     }
 }
+
+/* =========================================================
+   HILANGKAN SEMUA LINGKARAN / GLOW BELAKANG ORANG
+   ========================================================= */
+
+.service-detail-hero .hero-visual-card,
+.service-detail-hero .hero-visual-glow {
+    display: none !important;
+}
+
+.service-detail-hero::before {
+    background: none !important;
+}
