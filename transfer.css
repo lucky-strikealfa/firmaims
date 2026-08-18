@@ -1518,3 +1518,42 @@
         height: 520px !important;
     }
 }
+
+/* =========================================================
+   PERBAIKAN PRESISI GAMBAR HERO (FIXED & OVERRIDE)
+   ========================================================= */
+
+/* Force Parent Container agar memiliki tinggi pasti */
+.service-detail-hero .hero-grid {
+    min-height: 780px !important;
+}
+
+.service-detail-hero .hero-visual {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 780px !important;
+}
+
+/* Force Gambar Model Rapat ke Kanan & Proporsional (Desktop & Laptop) */
+@media min-width: 901px {
+    .service-detail-hero .hero-person {
+        position: absolute !important;
+        bottom: 0 !important;
+        top: auto !important;
+        right: 0 !important;
+        left: auto !important;
+        
+        /* Menggunakan px langsung agar pasti berubah & tidak tergantung persentase */
+        height: 780px !important; 
+        width: auto !important;
+        max-width: none !important;
+        
+        /* Matikan translasi tengah */
+        transform: none !important; 
+        
+        object-fit: contain !important;
+        object-position: bottom right !important;
+        z-index: 10 !important;
+    }
+}
