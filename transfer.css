@@ -1433,3 +1433,37 @@
     box-shadow: 0 14px 38px rgba(34,61,102,.10) !important;
     border: 1px solid rgba(220,228,240,.75) !important;
 }
+
+/* =========================================================
+   PERBAIKAN POSISI BENEFIT BAR (NAIK KE ATAS)
+   ========================================================= */
+
+/* Desktop / Screen Besar */
+.hero-benefit {
+    /* Mengubah margin-top dari -82px menjadi -130px agar naik ~20% lebih tinggi */
+    margin-top: -130px !important; 
+    
+    /* Mengatur z-index agar papan tetap berada di depan background hero */
+    z-index: 20 !important; 
+}
+
+/* Penyesuaian Responsif untuk Laptop */
+@media (max-width: 1200px) {
+    .hero-benefit {
+        margin-top: -110px !important;
+    }
+}
+
+/* Penyesuaian Responsif untuk Tablet */
+@media (max-width: 900px) {
+    .hero-benefit {
+        margin-top: -60px !important;
+    }
+}
+
+/* Penyesuaian Responsif untuk Mobile */
+@media (max-width: 600px) {
+    .hero-benefit {
+        margin-top: -40px !important;
+    }
+}
