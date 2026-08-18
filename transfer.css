@@ -1449,25 +1449,3 @@
     position: relative !important;
     min-height: 480px !important; /* Dikecilkan dari 620px/780px */
 }
-
-/* 3. Posisi Gambar Orang Menyesuaikan Tinggi Baru */
-@media (min-width: 901px) {
-    .service-detail-hero .hero-person {
-        position: absolute !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        left: auto !important;
-        top: auto !important;
-        
-        height: 580px !important; /* Disesuaikan agar proporsional */
-        width: auto !important;
-        max-width: none !important;
-        
-        transform: none !important;
-        object-fit: contain !important;
-        object-position: bottom right !important;
-        z-index: 5 !important;
-        
-        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
-    }
-}
