@@ -1374,214 +1374,62 @@
 }
 
 /* =========================================================
-   FIX JARAK ATAS HERO TRANSFER PRICING
+   SOLUSI FINAL: HERO & BENEFIT BAR SEJAJAR RAPI
    ========================================================= */
 
-/* Hilangkan ruang kosong berlebih di bagian atas hero */
+/* 1. Kembalikan overflow ke visible agar papan benefit & gambar bisa 'overlap' sempurna */
 .service-detail-hero {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
+    position: relative !important;
+    width: 100% !important;
+    overflow: visible !important; 
+    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
+    isolation: isolate;
 }
 
-/* Posisi isi hero lebih dekat ke navbar */
-.service-detail-hero .hero-content {
-    padding-top: 20px !important;
-}
-
-/* Kurangi tinggi kosong hero */
+/* 2. Kunci Container Grid agar tinggi proporsional */
 .service-detail-hero .hero-grid {
-    min-height: 680px;
+    position: relative !important;
+    min-height: 620px !important; /* Disesuaikan agar tinggi hero seimbang dengan teks */
 }
 
-/* Posisi orang tetap proporsional dengan hero yang lebih pendek */
-.service-detail-hero .hero-person {
-    height: 680px;
-    bottom: 0;
-}
-
-/* Visual lingkaran ikut dinaikkan sedikit */
-.service-detail-hero .hero-visual-card {
-    top: 55px;
-}
-
-.service-detail-hero .hero-visual-glow {
-    top: 95px;
-}
-
-
-/* =========================================================
-   DESKTOP BESAR
-   ========================================================= */
-
-@media (min-width: 1500px) {
-
-    .service-detail-hero .hero-grid {
-        min-height: 700px;
-    }
-
-    .service-detail-hero .hero-content {
-        padding-top: 22px !important;
-    }
-
-    .service-detail-hero .hero-person {
-        height: 700px;
-    }
-}
-
-
-/* =========================================================
-   LAPTOP
-   ========================================================= */
-
-@media (max-width: 1200px) {
-
-    .service-detail-hero .hero-grid {
-        min-height: 650px;
-    }
-
-    .service-detail-hero .hero-content {
-        padding-top: 20px !important;
-    }
-
-    .service-detail-hero .hero-person {
-        height: 630px;
-    }
-}
-
-/* =========================================================
-   HILANGKAN SEMUA LINGKARAN / GLOW BELAKANG ORANG
-   ========================================================= */
-
-.service-detail-hero .hero-visual-card,
-.service-detail-hero .hero-visual-glow {
-    display: none !important;
-}
-
-.service-detail-hero::before {
-    background: none !important;
-}
-
-/* =========================================================
-   PERBAIKAN PRESISI GAMBAR HERO & PAPAN BENEFIT (FIXED)
-   ========================================================= */
-
-/* 1. Force Parent Container agar memiliki tinggi pasti */
-.service-detail-hero .hero-grid {
-    min-height: 780px !important;
-}
-
+/* 3. Container Visual Kanan */
 .service-detail-hero .hero-visual {
     position: relative !important;
     width: 100% !important;
     height: 100% !important;
-    min-height: 780px !important;
+    min-height: 100% !important;
 }
 
-/* 2. Force Gambar Model Rapat ke Kanan (Diperbaiki Sintaks @media-nya) */
+/* 4. Pengaturan Orang pada Desktop (Pasti Menempel di Atas Papan Benefit) */
 @media (min-width: 901px) {
     .service-detail-hero .hero-person {
         position: absolute !important;
-        bottom: 0 !important;
-        top: auto !important;
+        bottom: -20px !important;  /* Kaki orang akan sedikit masuk/tumpang-tindih rapi di papan benefit */
         right: 0 !important;
         left: auto !important;
+        top: auto !important;
         
-        height: 780px !important; 
+        height: 630px !important; /* Ukuran pas sejajar dari pinggang ke kepala */
         width: auto !important;
         max-width: none !important;
         
-        transform: none !important; 
-        
+        transform: none !important;
         object-fit: contain !important;
         object-position: bottom right !important;
-        z-index: 10 !important;
+        z-index: 5 !important;
+        
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
     }
 }
 
-/* 3. MENAIKKAN PAPAN BENEFIT ~20% KE ATAS */
+/* 5. Papan Benefit Tetap Utuh di Atas (Z-Index Lebih Tinggi dari Orang) */
 .hero-benefit {
-    margin-top: -130px !important; /* Diubah dari -82px menjadi -130px */
-    z-index: 20 !important;
-}
-
-/* Responsif Papan Benefit */
-@media (max-width: 1200px) {
-    .hero-benefit {
-        margin-top: -110px !important;
-    }
-}
-
-@media (max-width: 900px) {
-    .hero-benefit {
-        margin-top: -60px !important;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero-benefit {
-        margin-top: -40px !important;
-    }
-}
-
-/* =========================================================
-   PERBAIKAN AREA HERO & GAMBAR PERSON (AMAN UNTUK MOCKUP BAWAH)
-   ========================================================= */
-
-/* 1. Pastikan Hero Container memotong elemen meluap jika diperlukan, 
-   tapi tetap menjaga benefit bar aman */
-.service-detail-hero {
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* Mencegah gambar menembus keluar hero */
-    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
-    isolation: isolate;
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-}
-
-/* 2. Visual Container disesuaikan */
-.hero-visual {
     position: relative !important;
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: flex-end !important; /* Menempel di bawah grid hero */
-    justify-content: flex-end !important;
-}
-
-/* 3. Pengaturan Gambar Person pada Dekstop (Aman & Presisi) */
-@media (min-width: 901px) {
-    .service-detail-hero .hero-person {
-        position: relative !important; /* Gunakan relative agar memakan ruang secara alami */
-        display: block !important;
-        
-        /* Mengatur tinggi gambar agar secara proporsional naik & pas sejajar teks */
-        height: 580px !important; 
-        width: auto !important;
-        max-width: 100% !important;
-        
-        /* Hilangkan transform translateY agar tidak menabrak elemen lain */
-        transform: none !important; 
-        
-        object-fit: contain !important;
-        object-position: bottom right !important;
-        z-index: 10 !important;
-        
-        /* Memberikan sedikit margin negatif bawah agar masuk ke area benefit secara rapi */
-        margin-bottom: 20px !important;
-        
-        filter: drop-shadow(0 15px 20px rgba(20,47,85,.08));
-    }
-}
-
-/* 4. Benefit Bar Tetap Rapi di Bawah Hero */
-.hero-benefit {
-    position: relative;
-    z-index: 20 !important;
-    width: min(1400px, calc(100% - 80px));
-    margin: -40px auto 0 !important; /* Overlap halus dengan hero */
-    background: rgba(255,255,255,.97);
-    border-radius: 15px;
-    box-shadow: 0 14px 38px rgba(34,61,102,.10);
-    border: 1px solid rgba(220,228,240,.75);
+    z-index: 20 !important; /* Memastikan papan benefit selalu berada di depan gambar orang */
+    width: min(1400px, calc(100% - 80px)) !important;
+    margin: -50px auto 0 !important; /* Naik sedikit overlap ke area hero */
+    background: rgba(255,255,255,.97) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 14px 38px rgba(34,61,102,.10) !important;
+    border: 1px solid rgba(220,228,240,.75) !important;
 }
