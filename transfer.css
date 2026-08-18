@@ -94,7 +94,7 @@
     position: relative;
     display: grid;
     grid-template-columns: minmax(0, 48%) minmax(0, 52%);
-    min-height: 780px;
+    min-height: 480px;
 }
 
 
@@ -106,7 +106,7 @@
     position: relative;
     z-index: 5;
 
-    padding-top: 38px;
+    padding-top: 10px;
     padding-bottom: 110px;
 
     display: flex;
@@ -1435,35 +1435,39 @@
 }
 
 /* =========================================================
-   PERBAIKAN POSISI BENEFIT BAR (NAIK KE ATAS)
+   PERBAIKAN: MEMOTONG JARAK ATAS (30% LEBIH RAPAT)
    ========================================================= */
 
-/* Desktop / Screen Besar */
-.hero-benefit {
-    /* Mengubah margin-top dari -82px menjadi -130px agar naik ~20% lebih tinggi */
-    margin-top: -130px !important; 
-    
-    /* Mengatur z-index agar papan tetap berada di depan background hero */
-    z-index: 20 !important; 
+/* 1. Kurangi padding atas konten hero */
+.service-detail-hero .hero-content {
+    padding-top: 10px !important;
+    padding-bottom: 60px !important;
 }
 
-/* Penyesuaian Responsif untuk Laptop */
-@media (max-width: 1200px) {
-    .hero-benefit {
-        margin-top: -110px !important;
-    }
+/* 2. Potong min-height hero grid agar tidak terlalu tinggi */
+.service-detail-hero .hero-grid {
+    position: relative !important;
+    min-height: 480px !important; /* Dikecilkan dari 620px/780px */
 }
 
-/* Penyesuaian Responsif untuk Tablet */
-@media (max-width: 900px) {
-    .hero-benefit {
-        margin-top: -60px !important;
-    }
-}
-
-/* Penyesuaian Responsif untuk Mobile */
-@media (max-width: 600px) {
-    .hero-benefit {
-        margin-top: -40px !important;
+/* 3. Posisi Gambar Orang Menyesuaikan Tinggi Baru */
+@media (min-width: 901px) {
+    .service-detail-hero .hero-person {
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        
+        height: 580px !important; /* Disesuaikan agar proporsional */
+        width: auto !important;
+        max-width: none !important;
+        
+        transform: none !important;
+        object-fit: contain !important;
+        object-position: bottom right !important;
+        z-index: 5 !important;
+        
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
     }
 }
