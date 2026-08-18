@@ -468,32 +468,7 @@
    17. PERSON IMAGE
    ========================================================= */
 
-.hero-person {
-    position: absolute;
-
-    z-index: 3;
-
-    width: auto;
-
-    height: 770px;
-
-    max-width: none;
-
-    right: 55px;
-    bottom: 0;
-
-    object-fit: contain;
-
-    object-position: center bottom;
-
-    display: block;
-
-    filter:
-        drop-shadow(
-            0 20px 22px rgba(20,47,85,.08)
-        );
-}
-
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 
 /* =========================================================
    18. BENEFIT BAR
