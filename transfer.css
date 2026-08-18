@@ -1522,3 +1522,66 @@
         margin-top: -40px !important;
     }
 }
+
+/* =========================================================
+   PERBAIKAN AREA HERO & GAMBAR PERSON (AMAN UNTUK MOCKUP BAWAH)
+   ========================================================= */
+
+/* 1. Pastikan Hero Container memotong elemen meluap jika diperlukan, 
+   tapi tetap menjaga benefit bar aman */
+.service-detail-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Mencegah gambar menembus keluar hero */
+    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
+    isolation: isolate;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* 2. Visual Container disesuaikan */
+.hero-visual {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: flex-end !important; /* Menempel di bawah grid hero */
+    justify-content: flex-end !important;
+}
+
+/* 3. Pengaturan Gambar Person pada Dekstop (Aman & Presisi) */
+@media (min-width: 901px) {
+    .service-detail-hero .hero-person {
+        position: relative !important; /* Gunakan relative agar memakan ruang secara alami */
+        display: block !important;
+        
+        /* Mengatur tinggi gambar agar secara proporsional naik & pas sejajar teks */
+        height: 580px !important; 
+        width: auto !important;
+        max-width: 100% !important;
+        
+        /* Hilangkan transform translateY agar tidak menabrak elemen lain */
+        transform: none !important; 
+        
+        object-fit: contain !important;
+        object-position: bottom right !important;
+        z-index: 10 !important;
+        
+        /* Memberikan sedikit margin negatif bawah agar masuk ke area benefit secara rapi */
+        margin-bottom: 20px !important;
+        
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.08));
+    }
+}
+
+/* 4. Benefit Bar Tetap Rapi di Bawah Hero */
+.hero-benefit {
+    position: relative;
+    z-index: 20 !important;
+    width: min(1400px, calc(100% - 80px));
+    margin: -40px auto 0 !important; /* Overlap halus dengan hero */
+    background: rgba(255,255,255,.97);
+    border-radius: 15px;
+    box-shadow: 0 14px 38px rgba(34,61,102,.10);
+    border: 1px solid rgba(220,228,240,.75);
+}
