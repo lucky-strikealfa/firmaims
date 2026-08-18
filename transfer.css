@@ -1462,68 +1462,10 @@
 }
 
 /* =========================================================
-   PERBAIKAN PRESISI GAMBAR HERO (MOCKUP 1 -> MOCKUP 2)
+   PERBAIKAN PRESISI GAMBAR HERO & PAPAN BENEFIT (FIXED)
    ========================================================= */
 
-/* 1. Kembalikan tinggi Hero agar memberikan ruang vertikal yang cukup */
-.service-detail-hero .hero-grid {
-    min-height: 760px !important;
-}
-
-/* 2. Biarkan kontainer visual fleksibel */
-.service-detail-hero .hero-visual {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end; /* Memposisikan gambar rapat ke kanan */
-}
-
-/* 3. Atur proporsi gambar agar persis seperti Gambar 2 (Mockup Tujuan) */
-.service-detail-hero .hero-person {
-    position: absolute !important;
-    bottom: 0 !important;
-    right: -20px !important; /* Menyesuaikan posisi horizontal kanan */
-    left: auto !important;
-    transform: none !important; /* Hapus translateX(-50%) agar tidak bergeser ke tengah */
-    
-    /* Ukuran gambar lebih bebas & tidak terkompresi */
-    width: auto !important;
-    height: 105% !important; /* Membiarkan tinggi gambar sedikit menembus batas atas agar terlihat proporsional & gagah */
-    max-height: 780px !important;
-    
-    object-fit: contain !important;
-    object-position: bottom right !important;
-}
-
-/* 4. Penyesuaian Responsif untuk Screen Laptop / Screen Kecil */
-@media (max-width: 1200px) {
-    .service-detail-hero .hero-grid {
-        min-height: 700px !important;
-    }
-    
-    .service-detail-hero .hero-person {
-        right: -10px !important;
-        height: 100% !important;
-    }
-}
-
-@media (max-width: 900px) {
-    /* Pada tampilan Tablet/Mobile, kembalikan posisi ke tengah */
-    .service-detail-hero .hero-person {
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%) !important;
-        height: 520px !important;
-    }
-}
-
-/* =========================================================
-   PERBAIKAN PRESISI GAMBAR HERO (FIXED & OVERRIDE)
-   ========================================================= */
-
-/* Force Parent Container agar memiliki tinggi pasti */
+/* 1. Force Parent Container agar memiliki tinggi pasti */
 .service-detail-hero .hero-grid {
     min-height: 780px !important;
 }
@@ -1535,8 +1477,8 @@
     min-height: 780px !important;
 }
 
-/* Force Gambar Model Rapat ke Kanan & Proporsional (Desktop & Laptop) */
-@media min-width: 901px {
+/* 2. Force Gambar Model Rapat ke Kanan (Diperbaiki Sintaks @media-nya) */
+@media (min-width: 901px) {
     .service-detail-hero .hero-person {
         position: absolute !important;
         bottom: 0 !important;
@@ -1544,16 +1486,39 @@
         right: 0 !important;
         left: auto !important;
         
-        /* Menggunakan px langsung agar pasti berubah & tidak tergantung persentase */
         height: 780px !important; 
         width: auto !important;
         max-width: none !important;
         
-        /* Matikan translasi tengah */
         transform: none !important; 
         
         object-fit: contain !important;
         object-position: bottom right !important;
         z-index: 10 !important;
+    }
+}
+
+/* 3. MENAIKKAN PAPAN BENEFIT ~20% KE ATAS */
+.hero-benefit {
+    margin-top: -130px !important; /* Diubah dari -82px menjadi -130px */
+    z-index: 20 !important;
+}
+
+/* Responsif Papan Benefit */
+@media (max-width: 1200px) {
+    .hero-benefit {
+        margin-top: -110px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-benefit {
+        margin-top: -60px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-benefit {
+        margin-top: -40px !important;
     }
 }
