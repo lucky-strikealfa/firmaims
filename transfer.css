@@ -1404,7 +1404,7 @@
 @media (min-width: 901px) {
     .service-detail-hero .hero-person {
         position: absolute !important;
-        bottom: -20px !important;  /* Kaki orang akan sedikit masuk/tumpang-tindih rapi di papan benefit */
+        bottom: -80px !important;  /* Kaki orang akan sedikit masuk/tumpang-tindih rapi di papan benefit */
         right: 0 !important;
         left: auto !important;
         top: auto !important;
