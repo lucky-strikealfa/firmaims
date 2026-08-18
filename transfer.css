@@ -1427,7 +1427,7 @@
     position: relative !important;
     z-index: 20 !important;
     width: min(1400px, calc(100% - 80px)) !important;
-    margin: -110px auto 0 !important; /* Nilai diperbesar ke -110px agar naik ke atas */
+    margin: -200px auto 0 !important; /* Nilai diperbesar ke -110px agar naik ke atas */
     background: rgba(255,255,255,.97) !important;
     border-radius: 15px !important;
     box-shadow: 0 14px 38px rgba(34,61,102,.10) !important;
