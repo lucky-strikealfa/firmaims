@@ -1460,3 +1460,61 @@
 .service-detail-hero::before {
     background: none !important;
 }
+
+/* =========================================================
+   PERBAIKAN PRESISI GAMBAR HERO (MOCKUP 1 -> MOCKUP 2)
+   ========================================================= */
+
+/* 1. Kembalikan tinggi Hero agar memberikan ruang vertikal yang cukup */
+.service-detail-hero .hero-grid {
+    min-height: 760px !important;
+}
+
+/* 2. Biarkan kontainer visual fleksibel */
+.service-detail-hero .hero-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; /* Memposisikan gambar rapat ke kanan */
+}
+
+/* 3. Atur proporsi gambar agar persis seperti Gambar 2 (Mockup Tujuan) */
+.service-detail-hero .hero-person {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: -20px !important; /* Menyesuaikan posisi horizontal kanan */
+    left: auto !important;
+    transform: none !important; /* Hapus translateX(-50%) agar tidak bergeser ke tengah */
+    
+    /* Ukuran gambar lebih bebas & tidak terkompresi */
+    width: auto !important;
+    height: 105% !important; /* Membiarkan tinggi gambar sedikit menembus batas atas agar terlihat proporsional & gagah */
+    max-height: 780px !important;
+    
+    object-fit: contain !important;
+    object-position: bottom right !important;
+}
+
+/* 4. Penyesuaian Responsif untuk Screen Laptop / Screen Kecil */
+@media (max-width: 1200px) {
+    .service-detail-hero .hero-grid {
+        min-height: 700px !important;
+    }
+    
+    .service-detail-hero .hero-person {
+        right: -10px !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Pada tampilan Tablet/Mobile, kembalikan posisi ke tengah */
+    .service-detail-hero .hero-person {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        height: 520px !important;
+    }
+}
