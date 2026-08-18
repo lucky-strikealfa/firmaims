@@ -1435,17 +1435,54 @@
 }
 
 /* =========================================================
-   PERBAIKAN: MEMOTONG JARAK ATAS (30% LEBIH RAPAT)
+   SOLUSI MEMANGKAS HABIS JARAK ATAS (NAVBAR KE HERO)
    ========================================================= */
 
-/* 1. Kurangi padding atas konten hero */
-.service-detail-hero .hero-content {
-    padding-top: 10px !important;
-    padding-bottom: 60px !important;
+/* 1. Tarik section hero ke atas dan buang semua padding bawaan */
+.service-detail-hero {
+    position: relative !important;
+    width: 100% !important;
+    margin-top: -40px !important; /* Mendorong section naik menempel ke navbar */
+    padding-top: 0 !important;
+    overflow: visible !important; 
+    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
+    isolation: isolate;
 }
 
-/* 2. Potong min-height hero grid agar tidak terlalu tinggi */
+/* 2. Nolkan padding-top pada container & konten teks */
+.service-detail-hero > .container {
+    padding-top: 0 !important;
+}
+
+.service-detail-hero .hero-content {
+    padding-top: 15px !important; /* Jarak sangat tipis dari atas */
+    padding-bottom: 40px !important;
+}
+
+/* 3. Kompres tinggi grid hero agar lebih rapat */
 .service-detail-hero .hero-grid {
     position: relative !important;
-    min-height: 620px !important; /* Dikecilkan dari 620px/780px */
+    min-height: 420px !important; /* Didekatkan agar tidak terlalu longgar */
+}
+
+/* 4. Posisi Gambar Orang (Menyesuaikan Tinggi Baru) */
+@media (min-width: 901px) {
+    .service-detail-hero .hero-person {
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        
+        height: 520px !important; /* Menyesuaikan agar proporsional */
+        width: auto !important;
+        max-width: none !important;
+        
+        transform: none !important;
+        object-fit: contain !important;
+        object-position: bottom right !important;
+        z-index: 5 !important;
+        
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
+    }
 }
