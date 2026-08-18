@@ -468,7 +468,34 @@
    17. PERSON IMAGE
    ========================================================= */
 
-zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+.hero-person {
+    position: absolute;
+
+    z-index: 3;
+
+    /* Ukuran */
+    width: auto;
+    height: 680px;
+    max-width: none;
+
+    /* Pusatkan gambar di kolom kanan */
+    left: 50%;
+    right: auto;
+    bottom: 0;
+
+    /* Koreksi titik tengah gambar */
+    transform: translateX(-50%);
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 20px 22px rgba(20,47,85,.08)
+        );
+}
 
 /* =========================================================
    18. BENEFIT BAR
