@@ -1447,5 +1447,5 @@
 /* 2. Potong min-height hero grid agar tidak terlalu tinggi */
 .service-detail-hero .hero-grid {
     position: relative !important;
-    min-height: 480px !important; /* Dikecilkan dari 620px/780px */
+    min-height: 620px !important; /* Dikecilkan dari 620px/780px */
 }
