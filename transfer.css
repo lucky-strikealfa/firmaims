@@ -1315,7 +1315,7 @@
     }
 
     .service-content {
-        padding-top: 70px;
+        padding-top: 55px !important;
     }
 
     .service-content > .container {
@@ -1489,4 +1489,17 @@
         
         filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
     }
+}
+
+/* =========================================================
+   FINAL - JARAK LAYANAN TRANSFER PRICING
+   ========================================================= */
+
+.service-content {
+    padding-top: 80px !important;
+}
+
+.service-intro {
+    margin-top: 0 !important;
+    margin-bottom: 45px !important;
 }
