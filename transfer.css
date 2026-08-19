@@ -1480,7 +1480,7 @@
         transform: translateY(-50%) !important; /* Agar persis center secara vertikal */
 
         /* 3. ATUR UKURAN GAMBAR (OPSIONAL) */
-        height: 450px !important;     /* Sesuaikan tinggi gambar jika terlalu besar/kecil */
+        height: 550px !important;     /* Sesuaikan tinggi gambar jika terlalu besar/kecil */
         width: auto !important;
         max-width: none !important;
         
