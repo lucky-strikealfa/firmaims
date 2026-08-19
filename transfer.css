@@ -1442,7 +1442,7 @@
 .service-detail-hero {
     position: relative !important;
     width: 100% !important;
-    margin-top: -40px !important; /* Mendorong section naik menempel ke navbar */
+    margin-top: 10px !important; /* Mendorong section naik menempel ke navbar */
     padding-top: 0 !important;
     overflow: visible !important; 
     background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
@@ -1455,7 +1455,7 @@
 }
 
 .service-detail-hero .hero-content {
-    padding-top: 15px !important; /* Jarak sangat tipis dari atas */
+    padding-top: 40px !important; /* Jarak sangat tipis dari atas */
     padding-bottom: 40px !important;
 }
 
@@ -1469,18 +1469,22 @@
 @media (min-width: 901px) {
     .service-detail-hero .hero-person {
         position: absolute !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        left: auto !important;
-        top: auto !important;
         
-        height: 520px !important; /* Menyesuaikan agar proporsional */
+        /* 1. UBAH ATURAN POSISI (VERTIKAL & HORISONTAL) */
+        top: 50% !important;          /* Geser ke 50% dari atas */
+        right: 15% !important;        /* Geser ke kiri (semakin besar nilainya, semakin ke tengah) */
+        bottom: auto !important;
+        left: auto !important;
+        
+        /* 2. TAMBAHKAN TRANSFORM UNTUK PRESISI POSISI TENGAH */
+        transform: translateY(-50%) !important; /* Agar persis center secara vertikal */
+
+        /* 3. ATUR UKURAN GAMBAR (OPSIONAL) */
+        height: 450px !important;     /* Sesuaikan tinggi gambar jika terlalu besar/kecil */
         width: auto !important;
         max-width: none !important;
         
-        transform: none !important;
         object-fit: contain !important;
-        object-position: bottom right !important;
         z-index: 5 !important;
         
         filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
