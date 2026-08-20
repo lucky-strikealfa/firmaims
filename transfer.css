@@ -17,10 +17,14 @@
 .service-detail-hero {
     position: relative;
     width: 100%;
-    margin-top: 10px; /* Menempel dekat ke navbar */
-    padding-top: 0;
-    overflow: visible; /* Diperlukan agar gambar & benefit bar overlap sempurna */
-    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
+    overflow: visible;
+    background:
+        linear-gradient(
+            180deg,
+            #f7f9ff 0%,
+            #f1f5fd 55%,
+            #eef3fb 100%
+        );
     isolation: isolate;
 }
 
@@ -33,12 +37,13 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        circle at 78% 30%,
-        rgba(255,255,255,.95) 0%,
-        rgba(255,255,255,.45) 28%,
-        transparent 55%
-    );
+    background:
+        radial-gradient(
+            circle at 78% 30%,
+            rgba(255,255,255,.95) 0%,
+            rgba(255,255,255,.45) 28%,
+            transparent 55%
+        );
     pointer-events: none;
     z-index: -1;
 }
@@ -78,7 +83,6 @@
     position: relative;
     width: min(1400px, calc(100% - 80px));
     margin: 0 auto;
-    padding-top: 0;
 }
 
 
@@ -90,7 +94,7 @@
     position: relative;
     display: grid;
     grid-template-columns: minmax(0, 48%) minmax(0, 52%);
-    min-height: 420px;
+    min-height: 480px;
 }
 
 
@@ -101,8 +105,10 @@
 .hero-content {
     position: relative;
     z-index: 5;
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+    padding-top: 10px;
+    padding-bottom: 110px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -117,26 +123,39 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
+
     padding: 9px 18px 9px 13px;
+
     border-radius: 30px;
+
     background: rgba(255,255,255,.92);
+
     color: #1761db;
+
     font-size: 14px;
     font-weight: 700;
     letter-spacing: .35px;
-    box-shadow: 0 8px 24px rgba(25,82,160,.08);
+
+    box-shadow:
+        0 8px 24px rgba(25,82,160,.08);
+
     border: 1px solid rgba(28,102,229,.06);
 }
 
 .hero-badge i {
     width: 30px;
     height: 30px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
+
     background: #edf4ff;
+
     color: #1768e8;
+
     font-size: 16px;
 }
 
@@ -147,6 +166,7 @@
 
 .hero-content h1 {
     margin: 16px 0 0;
+
     font-family: "Poppins", sans-serif;
     font-size: clamp(58px, 5.1vw, 78px);
     line-height: .96;
@@ -157,7 +177,9 @@
 
 .hero-content h1 span {
     display: block;
+
     color: #2468e8;
+
     font-weight: 800;
 }
 
@@ -169,8 +191,11 @@
 .hero-line {
     width: 100px;
     height: 5px;
+
     margin-top: 17px;
+
     border-radius: 10px;
+
     background: #f4b91d;
 }
 
@@ -181,11 +206,16 @@
 
 .hero-content h2 {
     max-width: 500px;
+
     margin: 22px 0 10px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 22px;
     line-height: 1.25;
+
     font-weight: 700;
+
     color: #102b55;
 }
 
@@ -196,11 +226,16 @@
 
 .hero-content > p {
     max-width: 540px;
+
     margin: 0 0 12px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 15px;
     line-height: 1.58;
+
     font-weight: 400;
+
     color: #39475e;
 }
 
@@ -211,22 +246,36 @@
 
 .hero-feature {
     width: min(540px, 100%);
+
     min-height: 52px;
+
     display: flex;
     align-items: center;
+
     gap: 14px;
+
     margin-top: 7px;
     padding: 7px 13px;
+
     border-radius: 11px;
+
     background: rgba(255,255,255,.94);
+
     border: 1px solid rgba(218,226,240,.7);
-    box-shadow: 0 5px 16px rgba(40,73,122,.07);
-    transition: transform .25s ease, box-shadow .25s ease;
+
+    box-shadow:
+        0 5px 16px rgba(40,73,122,.07);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .hero-feature:hover {
     transform: translateX(4px);
-    box-shadow: 0 9px 24px rgba(40,73,122,.10);
+
+    box-shadow:
+        0 9px 24px rgba(40,73,122,.10);
 }
 
 
@@ -236,31 +285,49 @@
 
 .feature-icon {
     flex: 0 0 38px;
+
     width: 38px;
     height: 38px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 10px;
-    background: linear-gradient(145deg, #edf4ff, #dce9ff);
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf4ff,
+            #dce9ff
+        );
+
     color: #2468e8;
+
     font-size: 18px;
 }
 
 .hero-feature h4 {
     margin: 0 0 1px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 14px;
     line-height: 1.2;
+
     font-weight: 700;
+
     color: #102b55;
 }
 
 .hero-feature p {
     margin: 0;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 11.5px;
     line-height: 1.3;
+
     color: #5a6577;
 }
 
@@ -275,21 +342,41 @@
 
 .btn-primary {
     min-width: 226px;
+
     min-height: 41px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 28px;
+
     padding: 9px 16px 9px 22px;
+
     border-radius: 9px;
-    background: linear-gradient(135deg, #1764e8, #286eea);
+
+    background:
+        linear-gradient(
+            135deg,
+            #1764e8,
+            #286eea
+        );
+
     color: #fff;
+
     text-decoration: none;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 13px;
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(31,102,229,.22);
-    transition: transform .25s ease, box-shadow .25s ease;
+
+    box-shadow:
+        0 8px 20px rgba(31,102,229,.22);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .btn-primary i {
@@ -298,80 +385,117 @@
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(31,102,229,.30);
+
+    box-shadow:
+        0 12px 28px rgba(31,102,229,.30);
 }
 
 
 /* =========================================================
-   14. RIGHT VISUAL & PERSON
+   14. RIGHT VISUAL
    ========================================================= */
 
 .hero-visual {
     position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+
+    min-height: 780px;
+
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
+
+/* =========================================================
+   15. VISUAL CARD
+   ========================================================= */
+
 .hero-visual-card {
     position: absolute;
+
     width: 470px;
     height: 470px;
+
     right: 45px;
     top: 90px;
+
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(255,255,255,.82) 0%,
-        rgba(255,255,255,.35) 58%,
-        transparent 72%
-    );
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.82) 0%,
+            rgba(255,255,255,.35) 58%,
+            transparent 72%
+        );
+
     filter: blur(2px);
+
     z-index: 0;
 }
+
+
+/* =========================================================
+   16. VISUAL GLOW
+   ========================================================= */
 
 .hero-visual-glow {
     position: absolute;
+
     width: 390px;
     height: 390px;
+
     right: 80px;
     top: 130px;
+
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(255,255,255,.92),
-        rgba(229,238,255,.45) 55%,
-        transparent 72%
-    );
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.92),
+            rgba(229,238,255,.45) 55%,
+            transparent 72%
+        );
+
     filter: blur(12px);
+
     z-index: 0;
 }
 
+
+/* =========================================================
+   17. PERSON IMAGE
+   ========================================================= */
+
 .hero-person {
     position: absolute;
-    z-index: 5;
+
+    z-index: 3;
+
+    /* Ukuran */
     width: auto;
+    height: 680px;
     max-width: none;
+
+    /* Pusatkan gambar di kolom kanan */
+    left: 50%;
+    right: auto;
+    bottom: 0;
+
+    /* Koreksi titik tengah gambar */
+    transform: translateX(-50%);
+
     object-fit: contain;
+    object-position: center bottom;
+
     display: block;
-    filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
-}
 
-/* Pengaturan khusus gambar orang di Desktop */
-@media (min-width: 901px) {
-    .hero-person {
-        top: 50%;
-        right: 15%;
-        bottom: auto;
-        left: auto;
-        transform: translateY(-50%);
-        height: 550px;
-    }
+    filter:
+        drop-shadow(
+            0 20px 22px rgba(20,47,85,.08)
+        );
 }
-
 
 /* =========================================================
    18. BENEFIT BAR
@@ -379,116 +503,187 @@
 
 .hero-benefit {
     position: relative;
+
     z-index: 20;
+
     width: min(1400px, calc(100% - 80px));
-    margin: -100px auto 0;
+
+    margin: -82px auto 0;
+
     background: rgba(255,255,255,.97);
+
     border-radius: 15px;
-    box-shadow: 0 14px 38px rgba(34,61,102,.10);
+
+    box-shadow:
+        0 14px 38px rgba(34,61,102,.10);
+
     border: 1px solid rgba(220,228,240,.75);
 }
 
+
+/* =========================================================
+   19. BENEFIT GRID
+   ========================================================= */
+
 .benefit-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     min-height: 143px;
+
     padding: 24px 30px;
 }
 
+
+/* =========================================================
+   20. BENEFIT ITEM
+   ========================================================= */
+
 .benefit-item {
     position: relative;
+
     display: flex;
     align-items: center;
+
     gap: 17px;
+
     padding: 0 22px;
 }
 
 .benefit-item:not(:last-child)::after {
     content: "";
+
     position: absolute;
+
     right: 0;
     top: 13px;
     bottom: 13px;
+
     width: 1px;
+
     background: #dce3ee;
 }
 
+
+/* =========================================================
+   21. BENEFIT ICON
+   ========================================================= */
+
 .benefit-icon {
     flex: 0 0 60px;
+
     width: 60px;
     height: 60px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 13px;
-    background: linear-gradient(145deg, #1d67e8, #286fec);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1d67e8,
+            #286fec
+        );
+
     color: #fff;
+
     font-size: 25px;
-    box-shadow: 0 8px 18px rgba(31,102,229,.18);
+
+    box-shadow:
+        0 8px 18px rgba(31,102,229,.18);
 }
+
+
+/* =========================================================
+   22. BENEFIT TEXT
+   ========================================================= */
 
 .benefit-item h4 {
     margin: 0 0 4px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 16px;
     line-height: 1.25;
+
     font-weight: 700;
+
     color: #102b55;
 }
 
 .benefit-item p {
     margin: 0;
+
     max-width: 220px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 12.5px;
     line-height: 1.45;
+
     color: #5b6677;
 }
 
 
 /* =========================================================
-   25. SERVICE GRID & CONTAINER
+   25. SERVICE GRID
    ========================================================= */
-
-.service-content {
-    padding-top: 60px !important;
-}
 
 .service-grid {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 34px;
 }
 
+
 /* =========================================================
-   26. SERVICE BOX (KARTU UTAMA LAYANAN)
+   26. SERVICE BOX
    ========================================================= */
 
 .service-box {
     position: relative;
+
     width: 100%;
-    min-height: 420px;
+    min-height: 380px;
+
     display: grid;
-    /* Membagi 2 kolom: Kiri Gambar (40%), Kanan Teks (60%) */
-    grid-template-columns: 40% 60%;
-    align-items: stretch;
+    grid-template-columns: 44% 56%;
+
     overflow: hidden;
+
     background: #ffffff;
+
     border: 1px solid #e2e8f2;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(24, 52, 91, .06);
-    transition: transform .3s ease, box-shadow .3s ease;
+
+    box-shadow:
+        0 10px 30px rgba(24, 52, 91, .06);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
 .service-box:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 42px rgba(24, 52, 91, .10);
+
+    box-shadow:
+        0 18px 42px rgba(24, 52, 91, .10);
 }
 
-/* Variasi posisi terbalik (Reverse) */
+
+/* =========================================================
+   CARD REVERSE
+   ========================================================= */
+
 .service-box.reverse {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 56% 44%;
 }
 
 .service-box.reverse .service-image {
@@ -499,163 +694,195 @@
     order: 1;
 }
 
+
 /* =========================================================
-   27. SERVICE IMAGE (SISI GAMBAR)
+   27. SERVICE IMAGE
    ========================================================= */
 
 .service-image {
     position: relative;
+
     width: 100%;
     height: 100%;
-    min-height: 100%;
+    min-height: 380px;
+
     overflow: hidden;
+
     background: #eef3f9;
 }
 
 .service-image img {
     display: block;
+
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Memastikan gambar memenuhi area tanpa gepeng */
+
+    object-fit: cover;
     object-position: center;
-    transition: transform .6s ease;
+
+    transition:
+        transform .6s ease;
 }
 
 .service-box:hover .service-image img {
     transform: scale(1.035);
 }
 
+
 /* =========================================================
-   28. SERVICE BODY (SISI TEKS & KONTEN)
+   28. SERVICE BODY
    ========================================================= */
 
 .service-body {
     position: relative;
-    width: 100%;
-    padding: 40px 45px;
+
+    min-width: 0;
+
+    padding: 48px 52px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     background: #ffffff;
 }
 
-/* Nomor Indikator Layanan di Pojok Kanan Atas */
-.service-box .service-number {
-    position: absolute;
-    top: 25px;
-    right: 28px;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #edf4ff;
-    color: #2468e8;
+
+/* NOMOR */
+
+.service-number {
+    display: block;
+
+    margin-bottom: 10px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 13px;
+    line-height: 1;
+
     font-weight: 700;
+
+    color: #2468e8;
 }
 
-/* Judul Layanan */
+
+/* JUDUL */
+
 .service-body h3 {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
+
     font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    line-height: 1.3;
+
+    font-size: 26px;
+    line-height: 1.25;
+
     font-weight: 700;
+
     color: #102b55;
-    padding-right: 40px; /* Agar tidak menabrak nomor di pojok */
 }
 
-/* Deskripsi Singkat */
+
+/* DESKRIPSI UTAMA */
+
 .service-body > p {
-    margin: 0 0 24px;
+    margin: 0 0 20px;
+
+    max-width: 650px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
+
+    font-weight: 400;
+
     color: #596579;
 }
 
+
 /* =========================================================
-   GRID LIST/POIN-POIN LAYANAN (DAFTAR DI BAWAH TEKS)
+   CHECKLIST
    ========================================================= */
 
 .service-body ul {
     list-style: none;
+
     margin: 0;
     padding: 0;
+
     display: grid;
-    /* Membuat 2 Kolom Sejajar Rapi */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px 24px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 28px;
+    row-gap: 10px;
 }
 
 .service-body ul li {
     position: relative;
+
     margin: 0;
-    padding-left: 28px;
+    padding-left: 23px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 13px;
     line-height: 1.5;
+
     color: #34445c;
 }
 
-/* Mengatur Judul Tebal dalam Poin (misal: Evaluasi Transaksi, Risiko Fiskal) */
-.service-body ul li strong,
-.service-body ul li b {
-    display: block;
-    color: #102b55;
-    font-weight: 700;
-    margin-bottom: 2px;
-}
-
-/* Ikon/Bullet pada Poin */
 .service-body ul li::before {
     content: "✓";
+
     position: absolute;
+
     left: 0;
-    top: 2px;
-    width: 20px;
-    height: 20px;
+    top: 0;
+
+    width: 17px;
+    height: 17px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
+
     background: #edf4ff;
+
     color: #2468e8;
-    font-size: 11px;
+
+    font-size: 10px;
     font-weight: 800;
 }
 
+
 /* =========================================================
-   RESPONSIF KARTU UNTUK LAYAR TABLET & MOBILE (≤ 900px)
+   NOMOR DI POJOK
    ========================================================= */
 
-@media (max-width: 900px) {
-    .service-box,
-    .service-box.reverse {
-        grid-template-columns: 1fr; /* Jadi 1 Kolom Vertikal di HP/Tablet */
-    }
+.service-box .service-number {
+    position: absolute;
 
-    .service-box.reverse .service-image,
-    .service-box.reverse .service-body {
-        order: initial;
-    }
+    top: 28px;
+    right: 32px;
 
-    .service-image {
-        min-height: 250px;
-        height: 250px;
-    }
+    width: 36px;
+    height: 36px;
 
-    .service-body {
-        padding: 30px 24px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .service-body ul {
-        grid-template-columns: 1fr; /* Jadi 1 Kolom di HP */
-        gap: 14px;
-    }
+    border-radius: 50%;
+
+    background: #f0f5ff;
+
+    color: #2468e8;
+
+    font-size: 13px;
+    font-weight: 700;
 }
 
 /* =========================================================
@@ -664,331 +891,615 @@
 
 .commitment {
     max-width: 900px;
+
     margin: 75px auto 0;
+
     padding: 45px 50px;
+
     text-align: center;
+
     border-radius: 20px;
-    background: linear-gradient(135deg, #f4f8ff, #edf4ff);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8ff,
+            #edf4ff
+        );
+
     border: 1px solid #dfe8f7;
 }
 
 .commitment h2 {
     margin: 0 0 12px;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 29px;
+
     color: #102b55;
 }
 
 .commitment p {
     margin: 0;
+
     font-family: "Poppins", sans-serif;
+
     font-size: 14px;
     line-height: 1.7;
+
     color: #5b6677;
 }
 
 
 /* =========================================================
-   30. MEDIA QUERIES (DESKTOP BESAR, LAPTOP, TABLET, MOBILE)
+   30. DESKTOP BESAR
    ========================================================= */
 
 @media (min-width: 1500px) {
+
     .service-detail-hero > .container {
         width: 1400px;
     }
+
     .hero-grid {
-        min-height: 500px;
+        min-height: 780px;
     }
+
+    .hero-content {
+        padding-top: 38px;
+    }
+
     .hero-content h1 {
         font-size: 78px;
     }
+
+    .hero-person {
+        height: 770px;
+        right: 55px;
+    }
+
 }
 
+
+/* =========================================================
+   31. LAPTOP
+   ========================================================= */
+
 @media (max-width: 1200px) {
+
     .service-detail-hero > .container,
     .hero-benefit,
     .service-content > .container {
         width: min(1100px, calc(100% - 50px));
     }
+
     .hero-grid {
         grid-template-columns: 50% 50%;
-        min-height: 480px;
+        min-height: 730px;
     }
+
     .hero-content h1 {
         font-size: 65px;
     }
+
     .hero-content h2 {
         font-size: 20px;
     }
+
     .hero-content > p {
         font-size: 14px;
     }
+
     .hero-feature {
         width: 500px;
     }
+
     .hero-person {
-        height: 480px;
-        right: 5%;
+        height: 690px;
+        right: 10px;
     }
+
     .hero-visual-card {
         right: 0;
     }
+
     .hero-visual-glow {
         right: 25px;
     }
+
     .benefit-grid {
         padding: 22px 15px;
     }
+
     .benefit-item {
         gap: 12px;
         padding: 0 15px;
     }
+
     .benefit-icon {
         flex-basis: 52px;
         width: 52px;
         height: 52px;
         font-size: 21px;
     }
+
     .benefit-item h4 {
         font-size: 14px;
     }
+
     .benefit-item p {
         font-size: 11px;
     }
+
 }
 
+
+/* =========================================================
+   32. TABLET
+   ========================================================= */
+
 @media (max-width: 900px) {
+
     .service-detail-hero > .container {
         width: calc(100% - 36px);
     }
+
     .hero-grid {
         grid-template-columns: 1fr;
+
         min-height: auto;
     }
+
     .hero-content {
         padding-top: 45px;
         padding-bottom: 25px;
+
         align-items: center;
+
         text-align: center;
     }
+
     .hero-content h1 {
         font-size: 58px;
     }
+
     .hero-line {
         margin-left: auto;
         margin-right: auto;
     }
+
     .hero-content h2 {
         max-width: 600px;
     }
+
     .hero-content > p {
         max-width: 650px;
     }
+
     .hero-feature {
         text-align: left;
     }
+
     .hero-visual {
         min-height: 560px;
+
         margin-top: -10px;
     }
+
     .hero-person {
         height: 570px;
         right: 50%;
-        left: auto;
-        top: auto;
-        bottom: 0;
         transform: translateX(50%);
     }
+
     .hero-visual-card {
         right: 50%;
         transform: translateX(50%);
+
         width: 420px;
         height: 420px;
     }
+
     .hero-visual-glow {
         right: 50%;
         transform: translateX(50%);
+
         width: 350px;
         height: 350px;
     }
+
     .hero-benefit {
         width: calc(100% - 36px);
+
         margin-top: -30px;
     }
+
     .benefit-grid {
         grid-template-columns: repeat(2, 1fr);
+
         row-gap: 22px;
     }
+
     .benefit-item:nth-child(2)::after {
         display: none;
     }
+
     .benefit-item:nth-child(3),
     .benefit-item:nth-child(4) {
         border-top: 1px solid #e1e6ef;
+
         padding-top: 22px;
     }
+
     .service-box,
     .service-box.reverse {
         grid-template-columns: 1fr;
     }
+
     .service-box.reverse .service-image,
     .service-box.reverse .service-body {
         order: initial;
     }
+
     .service-image {
         min-height: 330px;
     }
+
 }
 
+
+/* =========================================================
+   33. MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
+
     .service-detail-hero > .container {
         width: calc(100% - 28px);
     }
+
     .hero-content {
         padding-top: 30px;
     }
+
     .hero-badge {
         font-size: 11px;
         padding: 7px 13px 7px 9px;
     }
+
     .hero-badge i {
         width: 25px;
         height: 25px;
+
         font-size: 13px;
     }
+
     .hero-content h1 {
         margin-top: 14px;
+
         font-size: 48px;
+
         letter-spacing: -2px;
     }
+
     .hero-line {
         width: 75px;
         height: 4px;
+
         margin-top: 14px;
     }
+
     .hero-content h2 {
         margin-top: 17px;
+
         font-size: 18px;
     }
+
     .hero-content > p {
         font-size: 12.5px;
         line-height: 1.6;
     }
+
     .hero-feature {
         min-height: 49px;
+
         gap: 10px;
+
         padding: 6px 9px;
+
         border-radius: 9px;
     }
+
     .feature-icon {
         flex-basis: 34px;
+
         width: 34px;
         height: 34px;
+
         font-size: 15px;
     }
+
     .hero-feature h4 {
         font-size: 12px;
     }
+
     .hero-feature p {
         font-size: 9.5px;
     }
+
     .hero-buttons {
         margin-top: 14px;
     }
+
     .btn-primary {
         min-width: 205px;
+
         min-height: 39px;
+
         font-size: 11.5px;
+
         gap: 20px;
     }
+
     .hero-visual {
         min-height: 440px;
     }
+
     .hero-person {
         height: 455px;
         right: 50%;
     }
+
     .hero-visual-card {
         width: 330px;
         height: 330px;
+
         top: 45px;
     }
+
     .hero-visual-glow {
         width: 280px;
         height: 280px;
+
         top: 70px;
     }
+
     .hero-benefit {
         width: calc(100% - 28px);
+
         margin-top: -20px;
+
         border-radius: 13px;
     }
+
     .benefit-grid {
         grid-template-columns: 1fr;
+
         padding: 10px 15px;
     }
+
     .benefit-item,
     .benefit-item:nth-child(3),
     .benefit-item:nth-child(4) {
         min-height: 80px;
+
         padding: 15px 5px;
+
         border-top: 1px solid #e1e6ef;
     }
+
     .benefit-item:first-child {
         border-top: none;
     }
+
     .benefit-item::after {
         display: none !important;
     }
+
     .benefit-icon {
         flex-basis: 47px;
+
         width: 47px;
         height: 47px;
+
         font-size: 19px;
     }
+
     .benefit-item h4 {
         font-size: 13px;
     }
+
     .benefit-item p {
         font-size: 10.5px;
     }
+
     .service-content {
         padding-top: 55px !important;
     }
+
     .service-content > .container {
         width: calc(100% - 28px);
     }
+
     .service-intro {
         margin-bottom: 35px;
     }
+
     .service-intro h2 {
         font-size: 27px;
     }
+
     .service-intro p {
         font-size: 13px;
     }
+
     .service-body {
         padding: 30px 25px;
     }
+
     .service-body h3 {
         font-size: 21px;
     }
+
     .service-image {
         min-height: 270px;
     }
+
     .commitment {
         padding: 30px 25px;
     }
+
 }
 
+
+/* =========================================================
+   34. EXTRA SMALL
+   ========================================================= */
+
 @media (max-width: 400px) {
+
     .hero-content h1 {
         font-size: 42px;
     }
+
     .hero-person {
         height: 420px;
     }
+
     .hero-visual {
         min-height: 410px;
     }
+
+}
+
+/* =========================================================
+   SOLUSI FINAL: HERO & BENEFIT BAR SEJAJAR RAPI
+   ========================================================= */
+
+/* 1. Kembalikan overflow ke visible agar papan benefit & gambar bisa 'overlap' sempurna */
+.service-detail-hero {
+    position: relative !important;
+    width: 100% !important;
+    overflow: visible !important; 
+    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
+    isolation: isolate;
+}
+
+/* 2. Kunci Container Grid agar tinggi proporsional */
+.service-detail-hero .hero-grid {
+    position: relative !important;
+    min-height: 620px !important; /* Disesuaikan agar tinggi hero seimbang dengan teks */
+}
+
+/* 3. Container Visual Kanan */
+.service-detail-hero .hero-visual {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+}
+
+/* 4. Pengaturan Orang pada Desktop (Pasti Menempel di Atas Papan Benefit) */
+@media (min-width: 901px) {
+    .service-detail-hero .hero-person {
+        position: absolute !important;
+        bottom: 200px !important;  /* Kaki orang akan sedikit masuk/tumpang-tindih rapi di papan benefit */
+        right: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        
+        height: 630px !important; /* Ukuran pas sejajar dari pinggang ke kepala */
+        width: auto !important;
+        max-width: none !important;
+        
+        transform: none !important;
+        object-fit: contain !important;
+        object-position: bottom right !important;
+        z-index: 5 !important;
+        
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
+    }
+}
+
+/* 5. Papan Benefit Tetap Utuh di Atas (Z-Index Lebih Tinggi dari Orang) */
+.hero-benefit {
+    position: relative !important;
+    z-index: 20 !important;
+    width: min(1400px, calc(100% - 80px)) !important;
+    margin: -100px auto 0 !important; /* Nilai diperbesar ke -110px agar naik ke atas */
+    background: rgba(255,255,255,.97) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 14px 38px rgba(34,61,102,.10) !important;
+    border: 1px solid rgba(220,228,240,.75) !important;
+}
+
+/* =========================================================
+   SOLUSI MEMANGKAS HABIS JARAK ATAS (NAVBAR KE HERO)
+   ========================================================= */
+
+/* 1. Tarik section hero ke atas dan buang semua padding bawaan */
+.service-detail-hero {
+    position: relative !important;
+    width: 100% !important;
+    margin-top: 10px !important; /* Mendorong section naik menempel ke navbar */
+    padding-top: 0 !important;
+    overflow: visible !important; 
+    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
+    isolation: isolate;
+}
+
+/* 2. Nolkan padding-top pada container & konten teks */
+.service-detail-hero > .container {
+    padding-top: 0 !important;
+}
+
+.service-detail-hero .hero-content {
+    padding-top: 40px !important; /* Jarak sangat tipis dari atas */
+    padding-bottom: 40px !important;
+}
+
+/* 3. Kompres tinggi grid hero agar lebih rapat */
+.service-detail-hero .hero-grid {
+    position: relative !important;
+    min-height: 420px !important; /* Didekatkan agar tidak terlalu longgar */
+}
+
+/* 4. Posisi Gambar Orang (Menyesuaikan Tinggi Baru) */
+@media (min-width: 901px) {
+    .service-detail-hero .hero-person {
+        position: absolute !important;
+        
+        /* 1. UBAH ATURAN POSISI (VERTIKAL & HORISONTAL) */
+        top: 50% !important;          /* Geser ke 50% dari atas */
+        right: 15% !important;        /* Geser ke kiri (semakin besar nilainya, semakin ke tengah) */
+        bottom: auto !important;
+        left: auto !important;
+        
+        /* 2. TAMBAHKAN TRANSFORM UNTUK PRESISI POSISI TENGAH */
+        transform: translateY(-50%) !important; /* Agar persis center secara vertikal */
+
+        /* 3. ATUR UKURAN GAMBAR (OPSIONAL) */
+        height: 550px !important;     /* Sesuaikan tinggi gambar jika terlalu besar/kecil */
+        width: auto !important;
+        max-width: none !important;
+        
+        object-fit: contain !important;
+        z-index: 5 !important;
+        
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
+    }
+}
+
+/* =========================================================
+   FINAL - JARAK LAYANAN TRANSFER PRICING
+   ========================================================= */
+
+.service-content {
+    padding-top: 80px !important;
+}
+
+.service-intro {
+    margin-top: 0 !important;
+    margin-bottom: 45px !important;
 }
