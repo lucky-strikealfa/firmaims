@@ -447,31 +447,32 @@
 
 
 /* =========================================================
-   25. SERVICE GRID & BOX
+   25. SERVICE GRID & CONTAINER
    ========================================================= */
 
 .service-content {
-    padding-top: 80px;
-}
-
-.service-intro {
-    margin-top: 0;
-    margin-bottom: 45px;
+    padding-top: 60px !important;
 }
 
 .service-grid {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 40px;
 }
+
+/* =========================================================
+   26. SERVICE BOX (KARTU UTAMA LAYANAN)
+   ========================================================= */
 
 .service-box {
     position: relative;
     width: 100%;
-    min-height: 380px;
+    min-height: 420px;
     display: grid;
-    grid-template-columns: 44% 56%;
+    /* Membagi 2 kolom: Kiri Gambar (40%), Kanan Teks (60%) */
+    grid-template-columns: 40% 60%;
+    align-items: stretch;
     overflow: hidden;
     background: #ffffff;
     border: 1px solid #e2e8f2;
@@ -485,8 +486,9 @@
     box-shadow: 0 18px 42px rgba(24, 52, 91, .10);
 }
 
+/* Variasi posisi terbalik (Reverse) */
 .service-box.reverse {
-    grid-template-columns: 56% 44%;
+    grid-template-columns: 60% 40%;
 }
 
 .service-box.reverse .service-image {
@@ -497,11 +499,15 @@
     order: 1;
 }
 
+/* =========================================================
+   27. SERVICE IMAGE (SISI GAMBAR)
+   ========================================================= */
+
 .service-image {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 380px;
+    min-height: 100%;
     overflow: hidden;
     background: #eef3f9;
 }
@@ -510,7 +516,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Memastikan gambar memenuhi area tanpa gepeng */
     object-position: center;
     transition: transform .6s ease;
 }
@@ -519,98 +525,138 @@
     transform: scale(1.035);
 }
 
+/* =========================================================
+   28. SERVICE BODY (SISI TEKS & KONTEN)
+   ========================================================= */
+
 .service-body {
     position: relative;
-    min-width: 0;
-    padding: 48px 52px;
+    width: 100%;
+    padding: 40px 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: #ffffff;
 }
 
-.service-number {
-    display: block;
-    margin-bottom: 10px;
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    line-height: 1;
-    font-weight: 700;
-    color: #2468e8;
-}
-
-.service-body h3 {
-    margin: 0 0 14px;
-    font-family: "Poppins", sans-serif;
-    font-size: 26px;
-    line-height: 1.25;
-    font-weight: 700;
-    color: #102b55;
-}
-
-.service-body > p {
-    margin: 0 0 20px;
-    max-width: 650px;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    line-height: 1.7;
-    font-weight: 400;
-    color: #596579;
-}
-
-.service-body ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 28px;
-    row-gap: 10px;
-}
-
-.service-body ul li {
-    position: relative;
-    margin: 0;
-    padding-left: 23px;
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-    color: #34445c;
-}
-
-.service-body ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 17px;
-    height: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #edf4ff;
-    color: #2468e8;
-    font-size: 10px;
-    font-weight: 800;
-}
-
+/* Nomor Indikator Layanan di Pojok Kanan Atas */
 .service-box .service-number {
     position: absolute;
-    top: 28px;
-    right: 32px;
+    top: 25px;
+    right: 28px;
     width: 36px;
     height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #f0f5ff;
+    background: #edf4ff;
     color: #2468e8;
+    font-family: "Poppins", sans-serif;
     font-size: 13px;
     font-weight: 700;
 }
 
+/* Judul Layanan */
+.service-body h3 {
+    margin: 0 0 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #102b55;
+    padding-right: 40px; /* Agar tidak menabrak nomor di pojok */
+}
+
+/* Deskripsi Singkat */
+.service-body > p {
+    margin: 0 0 24px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #596579;
+}
+
+/* =========================================================
+   GRID LIST/POIN-POIN LAYANAN (DAFTAR DI BAWAH TEKS)
+   ========================================================= */
+
+.service-body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* Membuat 2 Kolom Sejajar Rapi */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+}
+
+.service-body ul li {
+    position: relative;
+    margin: 0;
+    padding-left: 28px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #34445c;
+}
+
+/* Mengatur Judul Tebal dalam Poin (misal: Evaluasi Transaksi, Risiko Fiskal) */
+.service-body ul li strong,
+.service-body ul li b {
+    display: block;
+    color: #102b55;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* Ikon/Bullet pada Poin */
+.service-body ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf4ff;
+    color: #2468e8;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   RESPONSIF KARTU UNTUK LAYAR TABLET & MOBILE (≤ 900px)
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .service-box,
+    .service-box.reverse {
+        grid-template-columns: 1fr; /* Jadi 1 Kolom Vertikal di HP/Tablet */
+    }
+
+    .service-box.reverse .service-image,
+    .service-box.reverse .service-body {
+        order: initial;
+    }
+
+    .service-image {
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .service-body {
+        padding: 30px 24px;
+    }
+
+    .service-body ul {
+        grid-template-columns: 1fr; /* Jadi 1 Kolom di HP */
+        gap: 14px;
+    }
+}
 
 /* =========================================================
    29. COMMITMENT
