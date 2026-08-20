@@ -15,16 +15,12 @@
 }
 
 .service-detail-hero {
-    position: relative;
-    width: 100%;
-    overflow: visible;
-    background:
-        linear-gradient(
-            180deg,
-            #f7f9ff 0%,
-            #f1f5fd 55%,
-            #eef3fb 100%
-        );
+    position: relative !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+    padding-top: 0 !important;
+    overflow: visible !important; 
+    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
     isolation: isolate;
 }
 
@@ -83,6 +79,7 @@
     position: relative;
     width: min(1400px, calc(100% - 80px));
     margin: 0 auto;
+    padding-top: 0 !important;
 }
 
 
@@ -91,10 +88,10 @@
    ========================================================= */
 
 .hero-grid {
-    position: relative;
+    position: relative !important;
     display: grid;
     grid-template-columns: minmax(0, 48%) minmax(0, 52%);
-    min-height: 480px;
+    min-height: 420px !important;
 }
 
 
@@ -106,8 +103,8 @@
     position: relative;
     z-index: 5;
 
-    padding-top: 10px;
-    padding-bottom: 110px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
 
     display: flex;
     flex-direction: column;
@@ -396,9 +393,10 @@
    ========================================================= */
 
 .hero-visual {
-    position: relative;
-
-    min-height: 780px;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
 
     display: flex;
     align-items: flex-end;
@@ -470,54 +468,51 @@
 
 .hero-person {
     position: absolute;
-
     z-index: 3;
-
-    /* Ukuran */
     width: auto;
     height: 680px;
     max-width: none;
-
-    /* Pusatkan gambar di kolom kanan */
     left: 50%;
     right: auto;
     bottom: 0;
-
-    /* Koreksi titik tengah gambar */
     transform: translateX(-50%);
-
     object-fit: contain;
     object-position: center bottom;
-
     display: block;
-
-    filter:
-        drop-shadow(
-            0 20px 22px rgba(20,47,85,.08)
-        );
+    filter: drop-shadow(0 20px 22px rgba(20,47,85,.08));
 }
+
+@media (min-width: 901px) {
+    .service-detail-hero .hero-person {
+        position: absolute !important;
+        top: 50% !important;
+        right: 15% !important;
+        bottom: auto !important;
+        left: auto !important;
+        transform: translateY(-50%) !important;
+        height: 550px !important;
+        width: auto !important;
+        max-width: none !important;
+        object-fit: contain !important;
+        z-index: 5 !important;
+        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
+    }
+}
+
 
 /* =========================================================
    18. BENEFIT BAR
    ========================================================= */
 
 .hero-benefit {
-    position: relative;
-
-    z-index: 20;
-
-    width: min(1400px, calc(100% - 80px));
-
-    margin: -82px auto 0;
-
-    background: rgba(255,255,255,.97);
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 14px 38px rgba(34,61,102,.10);
-
-    border: 1px solid rgba(220,228,240,.75);
+    position: relative !important;
+    z-index: 20 !important;
+    width: min(1400px, calc(100% - 80px)) !important;
+    margin: -100px auto 0 !important;
+    background: rgba(255,255,255,.97) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 14px 38px rgba(34,61,102,.10) !important;
+    border: 1px solid rgba(220,228,240,.75) !important;
 }
 
 
@@ -631,6 +626,20 @@
 
 
 /* =========================================================
+   23. SERVICE SECTION & INTRO
+   ========================================================= */
+
+.service-content {
+    padding-top: 80px !important;
+}
+
+.service-intro {
+    margin-top: 0 !important;
+    margin-bottom: 45px !important;
+}
+
+
+/* =========================================================
    25. SERVICE GRID
    ========================================================= */
 
@@ -638,52 +647,41 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 60px;
 }
 
 
 /* =========================================================
-   26. SERVICE BOX
+   26. SERVICE BOX (TANPA KOTAK PEMBATAS / SEAMLESS)
    ========================================================= */
 
 .service-box {
     position: relative;
-
     width: 100%;
-    min-height: 380px;
-
     display: grid;
-    grid-template-columns: 44% 56%;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    overflow: visible;
 
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border: 1px solid #e2e8f2;
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(24, 52, 91, .06);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    /* Menghilangkan latar putih, border, dan bayangan */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0;
+    transition: none;
 }
 
 .service-box:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 18px 42px rgba(24, 52, 91, .10);
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 
-/* =========================================================
-   CARD REVERSE
-   ========================================================= */
+/* CARD REVERSE */
 
 .service-box.reverse {
-    grid-template-columns: 56% 44%;
+    grid-template-columns: 55% 45%;
 }
 
 .service-box.reverse .service-image {
@@ -701,27 +699,21 @@
 
 .service-image {
     position: relative;
-
     width: 100%;
     height: 100%;
-    min-height: 380px;
-
+    max-height: 380px;
+    border-radius: 16px;
     overflow: hidden;
-
-    background: #eef3f9;
+    background: transparent;
 }
 
 .service-image img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center;
-
-    transition:
-        transform .6s ease;
+    transition: transform .6s ease;
 }
 
 .service-box:hover .service-image img {
@@ -735,34 +727,31 @@
 
 .service-body {
     position: relative;
-
     min-width: 0;
-
-    padding: 48px 52px;
-
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    background: #ffffff;
+    background: transparent !important;
 }
 
 
-/* NOMOR */
+/* NOMOR INDIKATOR */
 
-.service-number {
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 13px;
-    line-height: 1;
-
-    font-weight: 700;
-
+.service-box .service-number {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf4ff;
     color: #2468e8;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 
@@ -800,9 +789,7 @@
 }
 
 
-/* =========================================================
-   CHECKLIST
-   ========================================================= */
+/* CHECKLIST */
 
 .service-body ul {
     list-style: none;
@@ -857,33 +844,6 @@
     font-weight: 800;
 }
 
-
-/* =========================================================
-   NOMOR DI POJOK
-   ========================================================= */
-
-.service-box .service-number {
-    position: absolute;
-
-    top: 28px;
-    right: 32px;
-
-    width: 36px;
-    height: 36px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #f0f5ff;
-
-    color: #2468e8;
-
-    font-size: 13px;
-    font-weight: 700;
-}
 
 /* =========================================================
    29. COMMITMENT
@@ -943,11 +903,11 @@
     }
 
     .hero-grid {
-        min-height: 780px;
+        min-height: 780px !important;
     }
 
     .hero-content {
-        padding-top: 38px;
+        padding-top: 38px !important;
     }
 
     .hero-content h1 {
@@ -976,7 +936,7 @@
 
     .hero-grid {
         grid-template-columns: 50% 50%;
-        min-height: 730px;
+        min-height: 730px !important;
     }
 
     .hero-content h1 {
@@ -1047,16 +1007,13 @@
 
     .hero-grid {
         grid-template-columns: 1fr;
-
-        min-height: auto;
+        min-height: auto !important;
     }
 
     .hero-content {
-        padding-top: 45px;
-        padding-bottom: 25px;
-
+        padding-top: 45px !important;
+        padding-bottom: 25px !important;
         align-items: center;
-
         text-align: center;
     }
 
@@ -1082,8 +1039,7 @@
     }
 
     .hero-visual {
-        min-height: 560px;
-
+        min-height: 560px !important;
         margin-top: -10px;
     }
 
@@ -1096,7 +1052,6 @@
     .hero-visual-card {
         right: 50%;
         transform: translateX(50%);
-
         width: 420px;
         height: 420px;
     }
@@ -1104,20 +1059,17 @@
     .hero-visual-glow {
         right: 50%;
         transform: translateX(50%);
-
         width: 350px;
         height: 350px;
     }
 
     .hero-benefit {
-        width: calc(100% - 36px);
-
-        margin-top: -30px;
+        width: calc(100% - 36px) !important;
+        margin-top: -30px !important;
     }
 
     .benefit-grid {
         grid-template-columns: repeat(2, 1fr);
-
         row-gap: 22px;
     }
 
@@ -1128,13 +1080,13 @@
     .benefit-item:nth-child(3),
     .benefit-item:nth-child(4) {
         border-top: 1px solid #e1e6ef;
-
         padding-top: 22px;
     }
 
     .service-box,
     .service-box.reverse {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .service-box.reverse .service-image,
@@ -1144,6 +1096,10 @@
 
     .service-image {
         min-height: 330px;
+    }
+
+    .service-body {
+        padding: 10px 0;
     }
 
 }
@@ -1160,7 +1116,7 @@
     }
 
     .hero-content {
-        padding-top: 30px;
+        padding-top: 30px !important;
     }
 
     .hero-badge {
@@ -1171,28 +1127,23 @@
     .hero-badge i {
         width: 25px;
         height: 25px;
-
         font-size: 13px;
     }
 
     .hero-content h1 {
         margin-top: 14px;
-
         font-size: 48px;
-
         letter-spacing: -2px;
     }
 
     .hero-line {
         width: 75px;
         height: 4px;
-
         margin-top: 14px;
     }
 
     .hero-content h2 {
         margin-top: 17px;
-
         font-size: 18px;
     }
 
@@ -1203,20 +1154,15 @@
 
     .hero-feature {
         min-height: 49px;
-
         gap: 10px;
-
         padding: 6px 9px;
-
         border-radius: 9px;
     }
 
     .feature-icon {
         flex-basis: 34px;
-
         width: 34px;
         height: 34px;
-
         font-size: 15px;
     }
 
@@ -1234,16 +1180,13 @@
 
     .btn-primary {
         min-width: 205px;
-
         min-height: 39px;
-
         font-size: 11.5px;
-
         gap: 20px;
     }
 
     .hero-visual {
-        min-height: 440px;
+        min-height: 440px !important;
     }
 
     .hero-person {
@@ -1254,28 +1197,23 @@
     .hero-visual-card {
         width: 330px;
         height: 330px;
-
         top: 45px;
     }
 
     .hero-visual-glow {
         width: 280px;
         height: 280px;
-
         top: 70px;
     }
 
     .hero-benefit {
-        width: calc(100% - 28px);
-
-        margin-top: -20px;
-
-        border-radius: 13px;
+        width: calc(100% - 28px) !important;
+        margin-top: -20px !important;
+        border-radius: 13px !important;
     }
 
     .benefit-grid {
         grid-template-columns: 1fr;
-
         padding: 10px 15px;
     }
 
@@ -1283,9 +1221,7 @@
     .benefit-item:nth-child(3),
     .benefit-item:nth-child(4) {
         min-height: 80px;
-
         padding: 15px 5px;
-
         border-top: 1px solid #e1e6ef;
     }
 
@@ -1299,10 +1235,8 @@
 
     .benefit-icon {
         flex-basis: 47px;
-
         width: 47px;
         height: 47px;
-
         font-size: 19px;
     }
 
@@ -1323,7 +1257,7 @@
     }
 
     .service-intro {
-        margin-bottom: 35px;
+        margin-bottom: 35px !important;
     }
 
     .service-intro h2 {
@@ -1332,10 +1266,6 @@
 
     .service-intro p {
         font-size: 13px;
-    }
-
-    .service-body {
-        padding: 30px 25px;
     }
 
     .service-body h3 {
@@ -1368,138 +1298,7 @@
     }
 
     .hero-visual {
-        min-height: 410px;
+        min-height: 410px !important;
     }
 
-}
-
-/* =========================================================
-   SOLUSI FINAL: HERO & BENEFIT BAR SEJAJAR RAPI
-   ========================================================= */
-
-/* 1. Kembalikan overflow ke visible agar papan benefit & gambar bisa 'overlap' sempurna */
-.service-detail-hero {
-    position: relative !important;
-    width: 100% !important;
-    overflow: visible !important; 
-    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
-    isolation: isolate;
-}
-
-/* 2. Kunci Container Grid agar tinggi proporsional */
-.service-detail-hero .hero-grid {
-    position: relative !important;
-    min-height: 620px !important; /* Disesuaikan agar tinggi hero seimbang dengan teks */
-}
-
-/* 3. Container Visual Kanan */
-.service-detail-hero .hero-visual {
-    position: relative !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 100% !important;
-}
-
-/* 4. Pengaturan Orang pada Desktop (Pasti Menempel di Atas Papan Benefit) */
-@media (min-width: 901px) {
-    .service-detail-hero .hero-person {
-        position: absolute !important;
-        bottom: 200px !important;  /* Kaki orang akan sedikit masuk/tumpang-tindih rapi di papan benefit */
-        right: 0 !important;
-        left: auto !important;
-        top: auto !important;
-        
-        height: 630px !important; /* Ukuran pas sejajar dari pinggang ke kepala */
-        width: auto !important;
-        max-width: none !important;
-        
-        transform: none !important;
-        object-fit: contain !important;
-        object-position: bottom right !important;
-        z-index: 5 !important;
-        
-        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
-    }
-}
-
-/* 5. Papan Benefit Tetap Utuh di Atas (Z-Index Lebih Tinggi dari Orang) */
-.hero-benefit {
-    position: relative !important;
-    z-index: 20 !important;
-    width: min(1400px, calc(100% - 80px)) !important;
-    margin: -100px auto 0 !important; /* Nilai diperbesar ke -110px agar naik ke atas */
-    background: rgba(255,255,255,.97) !important;
-    border-radius: 15px !important;
-    box-shadow: 0 14px 38px rgba(34,61,102,.10) !important;
-    border: 1px solid rgba(220,228,240,.75) !important;
-}
-
-/* =========================================================
-   SOLUSI MEMANGKAS HABIS JARAK ATAS (NAVBAR KE HERO)
-   ========================================================= */
-
-/* 1. Tarik section hero ke atas dan buang semua padding bawaan */
-.service-detail-hero {
-    position: relative !important;
-    width: 100% !important;
-    margin-top: 10px !important; /* Mendorong section naik menempel ke navbar */
-    padding-top: 0 !important;
-    overflow: visible !important; 
-    background: linear-gradient(180deg, #f7f9ff 0%, #f1f5fd 55%, #eef3fb 100%);
-    isolation: isolate;
-}
-
-/* 2. Nolkan padding-top pada container & konten teks */
-.service-detail-hero > .container {
-    padding-top: 0 !important;
-}
-
-.service-detail-hero .hero-content {
-    padding-top: 40px !important; /* Jarak sangat tipis dari atas */
-    padding-bottom: 40px !important;
-}
-
-/* 3. Kompres tinggi grid hero agar lebih rapat */
-.service-detail-hero .hero-grid {
-    position: relative !important;
-    min-height: 420px !important; /* Didekatkan agar tidak terlalu longgar */
-}
-
-/* 4. Posisi Gambar Orang (Menyesuaikan Tinggi Baru) */
-@media (min-width: 901px) {
-    .service-detail-hero .hero-person {
-        position: absolute !important;
-        
-        /* 1. UBAH ATURAN POSISI (VERTIKAL & HORISONTAL) */
-        top: 50% !important;          /* Geser ke 50% dari atas */
-        right: 15% !important;        /* Geser ke kiri (semakin besar nilainya, semakin ke tengah) */
-        bottom: auto !important;
-        left: auto !important;
-        
-        /* 2. TAMBAHKAN TRANSFORM UNTUK PRESISI POSISI TENGAH */
-        transform: translateY(-50%) !important; /* Agar persis center secara vertikal */
-
-        /* 3. ATUR UKURAN GAMBAR (OPSIONAL) */
-        height: 550px !important;     /* Sesuaikan tinggi gambar jika terlalu besar/kecil */
-        width: auto !important;
-        max-width: none !important;
-        
-        object-fit: contain !important;
-        z-index: 5 !important;
-        
-        filter: drop-shadow(0 15px 20px rgba(20,47,85,.12));
-    }
-}
-
-/* =========================================================
-   FINAL - JARAK LAYANAN TRANSFER PRICING
-   ========================================================= */
-
-.service-content {
-    padding-top: 80px !important;
-}
-
-.service-intro {
-    margin-top: 0 !important;
-    margin-bottom: 45px !important;
 }
