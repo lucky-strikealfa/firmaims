@@ -209,7 +209,6 @@
     color: #cbd5e1;
 }
 
-
 /* ---------------------------------------------------------
    02. BENEFIT BAR SECTION
    --------------------------------------------------------- */
@@ -270,9 +269,8 @@
     line-height: 1.4;
 }
 
-
 /* ---------------------------------------------------------
-   03. SERVICE SECTION & LAYANAN CARDS
+   03. SERVICE SECTION & LAYANAN CARDS (SESUAI GAMBAR)
    --------------------------------------------------------- */
 .service-content {
     padding: 40px 0 80px;
@@ -306,137 +304,134 @@
     margin: 0;
 }
 
-/* SERVICE GRID CONTAINER */
+/* SERVICE GRID CONTAINER (2 KOLOM BESAR) */
 .service-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 50px;
     width: min(1300px, calc(100% - 60px));
     margin: 0 auto;
 }
 
-.service-box {
-    display: grid;
-    grid-template-columns: 42% 58%;
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 16px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
-    padding: 24px !important;
-    gap: 30px;
-    align-items: center;
+/* KARTU LAYANAN */
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-box:hover {
+.service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
 }
 
-.service-box.reverse {
-    grid-template-columns: 58% 42%;
+/* HEADER DALAM KARTU */
+.card-header {
+    margin-bottom: 28px;
 }
 
-.service-box.reverse .service-image {
-    order: 2;
-}
-
-.service-box.reverse .service-body {
-    order: 1;
-}
-
-.service-image {
-    width: 100%;
-    height: 100%;
-    min-height: 260px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.service-body {
-    position: relative;
-    padding: 10px;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.service-box .service-number {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #eef4ff;
-    color: #2563eb;
-    font-size: 12px;
+.card-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #0a192f;
+    line-height: 1.25;
+    margin: 0 0 12px 0;
 }
 
-.service-body h3 {
-    margin: 0 0 12px;
-    font-family: "Poppins", sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #0f172a;
+.card-header h2 span {
+    color: #1d4ed8;
 }
 
-.service-body > p {
-    margin: 0 0 18px;
+.card-header p {
     font-family: "Poppins", sans-serif;
     font-size: 13.5px;
-    line-height: 1.6;
     color: #475569;
-}
-
-.service-body ul {
-    list-style: none;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
+}
+
+/* KONTEN FITUR */
+.card-features {
     display: grid;
+    gap: 24px;
+}
+
+.vertical-features {
+    grid-template-columns: 1fr;
+}
+
+.grid-2x2 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px 20px;
+    gap: 24px 20px;
 }
 
-.service-body ul li {
-    position: relative;
-    padding-left: 22px;
-    font-family: "Poppins", sans-serif;
-    font-size: 12.5px;
-    color: #334155;
+/* FITUR ITEM */
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
 }
 
-.service-body ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 16px;
-    height: 16px;
+/* IKON MELINGKAR DENGAN GLOW SESUAI DESAIN */
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     border-radius: 50%;
-    background: #eef4ff;
-    color: #2563eb;
-    font-size: 10px;
-    font-weight: 800;
+    background: radial-gradient(circle at 30% 30%, #2563eb, #0f172a);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+    border: 2px solid #ffffff;
+    outline: 2px solid #dbeafe;
 }
 
+/* TEKS FITUR */
+.feature-text {
+    position: relative;
+    padding-left: 12px;
+}
+
+/* TITIK PENANDA BIRU DI SAMPING TEKS */
+.feature-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background-color: #1d4ed8;
+    border-radius: 50%;
+}
+
+.feature-text h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.feature-text p {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* KOMITMEN */
 .commitment {
     text-align: center;
     max-width: 800px;
@@ -462,7 +457,6 @@
     line-height: 1.6;
     margin: 0;
 }
-
 
 /* ---------------------------------------------------------
    04. RESPONSIVE / MEDIA QUERIES
@@ -497,13 +491,13 @@
         border-bottom: none;
     }
 
-    .service-box,
-    .service-box.reverse {
+    .service-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .service-box.reverse .service-image {
-        order: initial;
+    .grid-2x2 {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -518,9 +512,5 @@
 
     .benefit-item:last-child {
         border-bottom: none;
-    }
-
-    .service-body ul {
-        grid-template-columns: 1fr;
     }
 }
