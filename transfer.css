@@ -1,5 +1,5 @@
 /* =========================================================
-   TRANSFER PRICING - CLEAN INTEGRATED DESIGN
+   TRANSFER PRICING - CLEAN INTEGRATED DESIGN (FULL FIXED)
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -270,7 +270,7 @@
 }
 
 /* ---------------------------------------------------------
-   03. SERVICE SECTION & LAYANAN CARDS (FIXED & BEAUTIFIED)
+   03. SERVICE SECTION & LAYANAN CARDS (FIXED & FULL RESTRUCTURED)
    --------------------------------------------------------- */
 .service-content {
     padding: 60px 0 80px;
@@ -323,7 +323,7 @@
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -360,6 +360,9 @@
 .card-features {
     display: grid;
     gap: 16px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    list-style: none !important;
 }
 
 .grid-2x2 {
@@ -370,32 +373,48 @@
     grid-template-columns: 1fr;
 }
 
-/* KOTAK SUB-FITUR (DENGAN LAYOUT HORISONTAL & BACKGROUND ABU HALUS) */
-.feature-item {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 14px;
+/* KOTAK SUB-FITUR (MEMAKSA SETIAP ITEM RAPI DAN BERBAGI HORIZONTAL) */
+.feature-item,
+.card-features > li {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
     background: #f8fafc;
     padding: 16px;
     border-radius: 12px;
     border: 1px solid #f1f5f9;
+    list-style: none !important;
+    margin-bottom: 0 !important;
 }
 
-/* WADAH IKON DENGAN BACKGROUND BIRU */
+/* HAPUS BULLET LIST DEFAULT JIKA MENGGUNAKAN UL/LI */
+.card-features,
+.card-features li {
+    list-style-type: none !important;
+}
+
+.feature-text h4::before,
+.feature-item h4::before {
+    content: none !important;
+}
+
+/* IKON DI SAMPING TEKS */
 .icon-wrapper,
-.feature-item > i {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
+.feature-item > i,
+.card-features li > i {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
     border-radius: 10px;
     background: #2563eb;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
     box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    margin: 0 !important;
 }
 
 /* TEKS SUB-FITUR */
@@ -403,19 +422,21 @@
     flex: 1;
 }
 
-.feature-text h4 {
+.feature-text h4,
+.feature-item h4 {
     font-size: 14px;
     font-weight: 700;
     color: #0f172a;
-    margin: 0 0 4px 0;
+    margin: 0 0 4px 0 !important;
     line-height: 1.3;
 }
 
-.feature-text p {
+.feature-text p,
+.feature-item p {
     font-size: 12px;
     color: #64748b;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 !important;
 }
 
 /* KOMITMEN */
