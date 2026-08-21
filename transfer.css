@@ -1,5 +1,5 @@
 /* =========================================================
-   TRANSFER PRICING - CLEAN INTEGRATED DESIGN (FULL FIXED)
+   TRANSFER PRICING - CLEAN INTEGRATED DESIGN
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -81,7 +81,7 @@
     max-width: 540px;
 }
 
-/* HERO FEATURES LIST (LEFT SIDE) */
+/* HERO FEATURES LIST */
 .hero-feature {
     display: flex;
     align-items: flex-start;
@@ -146,7 +146,7 @@
     box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
-/* HERO RIGHT VISUAL & PROTECTION CARD */
+/* HERO RIGHT VISUAL */
 .hero-visual {
     position: relative;
     display: flex;
@@ -197,7 +197,6 @@
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.5px;
     color: #ffffff;
 }
 
@@ -270,7 +269,7 @@
 }
 
 /* ---------------------------------------------------------
-   03. SERVICE SECTION & LAYANAN CARDS (FIXED & FULL RESTRUCTURED)
+   03. SERVICE SECTION & LAYANAN CARDS
    --------------------------------------------------------- */
 .service-content {
     padding: 60px 0 80px;
@@ -304,7 +303,7 @@
     margin: 0;
 }
 
-/* SERVICE GRID CONTAINER (2 KARTU UTAMA DAMPINGAN) */
+/* SERVICE GRID CONTAINER */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -332,7 +331,6 @@
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
 }
 
-/* HEADER DALAM KARTU LAYANAN */
 .card-header {
     margin-bottom: 24px;
 }
@@ -356,13 +354,10 @@
     margin: 0;
 }
 
-/* CONTAINER FITUR DI DALAM KARTU */
+/* CONTAINER FITUR */
 .card-features {
     display: grid;
     gap: 16px;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    list-style: none !important;
 }
 
 .grid-2x2 {
@@ -373,9 +368,8 @@
     grid-template-columns: 1fr;
 }
 
-/* KOTAK SUB-FITUR (MEMAKSA SETIAP ITEM RAPI DAN BERBAGI HORIZONTAL) */
-.feature-item,
-.card-features > li {
+/* KOTAK SUB-FITUR HORIZONTAL */
+.feature-item {
     display: flex !important;
     flex-direction: row !important;
     align-items: flex-start !important;
@@ -384,25 +378,10 @@
     padding: 16px;
     border-radius: 12px;
     border: 1px solid #f1f5f9;
-    list-style: none !important;
-    margin-bottom: 0 !important;
 }
 
-/* HAPUS BULLET LIST DEFAULT JIKA MENGGUNAKAN UL/LI */
-.card-features,
-.card-features li {
-    list-style-type: none !important;
-}
-
-.feature-text h4::before,
-.feature-item h4::before {
-    content: none !important;
-}
-
-/* IKON DI SAMPING TEKS */
-.icon-wrapper,
-.feature-item > i,
-.card-features li > i {
+/* IKON WIDGET */
+.icon-wrapper {
     width: 36px !important;
     height: 36px !important;
     min-width: 36px !important;
@@ -415,15 +394,14 @@
     font-size: 16px !important;
     box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
     margin: 0 !important;
+    flex-shrink: 0;
 }
 
-/* TEKS SUB-FITUR */
 .feature-text {
     flex: 1;
 }
 
-.feature-text h4,
-.feature-item h4 {
+.feature-text h4 {
     font-size: 14px;
     font-weight: 700;
     color: #0f172a;
@@ -431,8 +409,7 @@
     line-height: 1.3;
 }
 
-.feature-text p,
-.feature-item p {
+.feature-text p {
     font-size: 12px;
     color: #64748b;
     line-height: 1.5;
