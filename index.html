@@ -16,8 +16,8 @@
   </a>
 
   <!-- Header Navigation -->
-  <header>
-    <div class="container nav">
+  <header class="site-header">
+    <div class="container nav-container">
       <div class="logo">
         <img src="assets/logofirma.png" alt="Logo IMS">
         <span class="logo-text">Firma Idola Makmur Solusindo</span>
@@ -25,11 +25,12 @@
 
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">☰</button>
 
-      <nav id="menu">
-        <a href="#" class="active">Beranda</a>
-        <a href="tentang.html">Tentang</a>
+      <nav id="menu" class="nav-menu">
+        <a href="#" class="nav-link active">Beranda</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
+        
         <div class="dropdown">
-          <button class="dropdown-toggle" type="button">Layanan ▾</button>
+          <button class="dropdown-toggle" type="button">Layanan <span class="arrow">▾</span></button>
           <div class="dropdown-menu">
             <a href="konsultasi.html">Konsultasi Pajak</a>
             <a href="sengketa.html">Sengketa Pajak</a>
@@ -38,12 +39,13 @@
             <a href="pelatihan.html">Pelatihan Pajak</a>
           </div>
         </div>
+        
         <a href="tanyakami.html" class="nav-cta">Tanya Kami</a>
       </nav>
     </div>
   </header>
 
-  <div class="nav-overlay"></div>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
   <!-- Hero Slider -->
   <section class="hero-slider">
