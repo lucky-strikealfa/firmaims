@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (msg) msg.innerHTML = "⏳ Mengirim data...";
 
       const data = {
-        nama: form.nama ? form.nama.value : "",
-        email: form.email ? form.email.value : "",
-        telp: form.telp ? form.telp.value : "",
-        subjek: form.subjek ? form.subjek.value : "",
-        pesan: form.pesan ? form.pesan.value : ""
+        nama: form.nama.value,
+        email: form.email.value,
+        telp: form.telp.value,
+        subjek: form.subjek.value,
+        pesan: form.pesan.value
       };
 
       try {
@@ -28,20 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (msg) msg.innerHTML = "✅ Data berhasil dikirim.";
         form.reset();
       } catch (error) {
-        console.error("Error submitting form:", error);
+        console.error(error);
         if (msg) msg.innerHTML = "❌ Terjadi kesalahan saat mengirim.";
       }
     });
   }
 
-  // ================= SCROLL HELPER =================
+  // ================= SCROLL TO FORM =================
   window.scrollToForm = function () {
     document.getElementById("kontak")?.scrollIntoView({
       behavior: "smooth"
     });
   };
 
-  // ================= SLIDER =================
+  // ================= HERO SLIDER =================
   let index = 0;
   const slides = document.querySelector(".slides");
   const slideItems = document.querySelectorAll(".slide");
@@ -51,10 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const total = slideItems.length;
     let interval;
 
-    // Clear dots container to avoid duplicate dots
-    dotsContainer.innerHTML = "";
-
-    // Generate Dots dynamically
+    // Generate Dots
     slideItems.forEach((_, i) => {
       const dot = document.createElement("span");
       dot.addEventListener("click", () => {
@@ -90,11 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(interval);
     }
 
-    // Slider controls
+    // Button Listeners
     document.querySelector(".next")?.addEventListener("click", next);
     document.querySelector(".prev")?.addEventListener("click", prev);
 
-    // Hover pause behavior
+    // Hover Pause
     const slider = document.querySelector(".hero-slider");
     if (slider) {
       slider.addEventListener("mouseenter", stop);
@@ -105,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide();
   }
 
-  // ================= MENU MOBILE =================
+  // ================= MENU MOBILE & OVERLAY =================
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
   const overlay = document.querySelector(".nav-overlay");
@@ -118,98 +115,71 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     toggle.addEventListener("click", () => {
-      const isActive = menu.classList.toggle("active");
-      overlay.classList.toggle("active", isActive);
-      document.body.style.overflow = isActive ? "hidden" : "auto";
+      menu.classList.toggle("active");
+      overlay.classList.toggle("active");
+      document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "auto";
     });
 
     overlay.addEventListener("click", closeMenu);
 
-    // Close menu when clicking standard nav links
-    document.querySelectorAll("#menu > a.nav-link").forEach(link => {
+    document.querySelectorAll("#menu > a").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
 
-    // Auto-close mobile menu when scrolling page
+    // Auto close saat scroll
     window.addEventListener("scroll", () => {
       if (menu.classList.contains("active")) {
         closeMenu();
       }
-    }, { passive: true });
+    });
   }
 
-  // ================= DROPDOWN MENU (MOBILE & DESKTOP TOGGLE) =================
+  // ================= DROPDOWN MOBILE =================
   const dropdownToggle = document.querySelector(".dropdown-toggle");
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-
   if (dropdownToggle) {
     dropdownToggle.addEventListener("click", function (e) {
       if (window.innerWidth <= 991) {
         e.preventDefault();
-        e.stopPropagation();
-        
-        // Toggle class 'active' di container dropdown & 'show' di menu-nya
-        const parentDropdown = this.closest(".dropdown");
-        if (parentDropdown) {
-          parentDropdown.classList.toggle("active");
-        }
-        if (dropdownMenu) {
-          dropdownMenu.classList.toggle("show");
-        }
+        this.parentElement.classList.toggle("active");
       }
     });
-
-    // Close dropdown menu links when clicked on mobile
-    if (dropdownMenu) {
-      dropdownMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth <= 991 && menu) {
-            menu.classList.remove("active");
-            if (overlay) overlay.classList.remove("active");
-            document.body.style.overflow = "auto";
-          }
-        });
-      });
-    }
   }
 
-  // ================= SCROLL ANIMATION (INTERSECTION OBSERVER) =================
-  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
-  if (revealElements.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        } else {
-          entry.target.classList.remove('active');
-        }
-      });
-    }, { threshold: 0.15 });
+  // ================= SCROLL ANIMATION REPEAT =================
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
 
-    revealElements.forEach(el => observer.observe(el));
-  }
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom').forEach(el => {
+    observer.observe(el);
+  });
 
   // ================= FAQ ACCORDION =================
   const faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach(item => {
     const btn = item.querySelector(".faq-question");
-    const answer = item.querySelector(".faq-answer");
-
-    if (btn && answer) {
+    if (btn) {
       btn.addEventListener("click", () => {
-        const isActive = item.classList.contains("active");
-
-        // Reset state for all items
+        const active = item.classList.contains("active");
+        
         faqItems.forEach(i => {
           i.classList.remove("active");
           const ans = i.querySelector(".faq-answer");
           if (ans) ans.style.maxHeight = null;
         });
 
-        // Expand clicked item if previously inactive
-        if (!isActive) {
+        if (!active) {
           item.classList.add("active");
-          answer.style.maxHeight = answer.scrollHeight + "px";
+          const answer = item.querySelector(".faq-answer");
+          if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
         }
       });
     }
