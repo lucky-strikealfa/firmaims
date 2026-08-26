@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const total = slideItems.length;
     let interval;
 
+    // Clear dots container to avoid duplicate dots
+    dotsContainer.innerHTML = "";
+
     // Generate Dots dynamically
     slideItems.forEach((_, i) => {
       const dot = document.createElement("span");
@@ -122,10 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     overlay.addEventListener("click", closeMenu);
 
-    document.querySelectorAll("#menu > a").forEach(link => {
+    // Close menu when clicking standard nav links
+    document.querySelectorAll("#menu > a.nav-link").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
 
+    // Auto-close mobile menu when scrolling page
     window.addEventListener("scroll", () => {
       if (menu.classList.contains("active")) {
         closeMenu();
@@ -133,15 +138,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { passive: true });
   }
 
-  // ================= DROPDOWN MOBILE =================
+  // ================= DROPDOWN MENU (MOBILE & DESKTOP TOGGLE) =================
   const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
   if (dropdownToggle) {
     dropdownToggle.addEventListener("click", function (e) {
       if (window.innerWidth <= 991) {
         e.preventDefault();
-        this.parentElement.classList.toggle("active");
+        e.stopPropagation();
+        
+        // Toggle class 'active' di container dropdown & 'show' di menu-nya
+        const parentDropdown = this.closest(".dropdown");
+        if (parentDropdown) {
+          parentDropdown.classList.toggle("active");
+        }
+        if (dropdownMenu) {
+          dropdownMenu.classList.toggle("show");
+        }
       }
     });
+
+    // Close dropdown menu links when clicked on mobile
+    if (dropdownMenu) {
+      dropdownMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 991 && menu) {
+            menu.classList.remove("active");
+            if (overlay) overlay.classList.remove("active");
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+    }
   }
 
   // ================= SCROLL ANIMATION (INTERSECTION OBSERVER) =================
