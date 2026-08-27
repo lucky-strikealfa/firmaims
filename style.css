@@ -245,6 +245,11 @@ header {
   transition: var(--transition);
 }
 
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ==========================================================================
    4. HERO SLIDER & FLOATING CONSULT
    ========================================================================== */
@@ -257,6 +262,7 @@ header {
 }
 
 .slides {
+  position: relative;
   height: 100%;
   width: 100%;
 }
@@ -272,11 +278,14 @@ header {
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
-.slide.active, .slide:first-child {
+.slide.active {
   opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 
 .overlay-light {
@@ -290,6 +299,7 @@ header {
   z-index: 2;
   margin-left: 10%;
   max-width: 600px;
+  padding-right: 20px;
 }
 
 .caption h1 {
@@ -728,6 +738,7 @@ header {
   margin-top: 30px;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn-white {
@@ -770,6 +781,7 @@ header {
   position: absolute;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
 }
 
 .shape1 {
@@ -835,6 +847,7 @@ header {
 .socials {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .socials a {
@@ -868,6 +881,7 @@ header {
 .footer-links {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .footer-links h4 {
@@ -891,31 +905,43 @@ header {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
   padding-top: 30px;
   font-size: 0.85rem;
   color: #64748b;
 }
 
 /* ==========================================================================
-   10. ANIMATION CLASSES & RESPONSIVE DESIGN
+   10. ANIMATION CLASSES
    ========================================================================== */
 .reveal-left, .reveal-right, .reveal-zoom {
   opacity: 1; /* Fallback jika script ScrollReveal belum running */
   transition: all 0.8s ease;
 }
 
+/* ==========================================================================
+   11. RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* ---- Tablet & below (<=992px) ---- */
 @media (max-width: 992px) {
   .about-grid, .vision-flex, .hero-container, .professional-flex, .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .grid.layanan-grid, .about-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .caption h1 {
     font-size: 2.2rem;
+  }
+
+  .caption.right {
+    margin-left: 6%;
+    max-width: 80%;
   }
 
   .cta-red-box {
@@ -923,7 +949,7 @@ header {
     text-align: center;
     padding: 40px 25px;
   }
-  
+
   .cta-red-buttons {
     justify-content: center;
   }
@@ -937,23 +963,177 @@ header {
     gap: 25px;
   }
 
+  /* ---- Mobile navigation ---- */
   .menu-toggle {
     display: block;
+    z-index: 1001;
   }
 
   #menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(320px, 85%);
     background: var(--white);
     flex-direction: column;
-    padding: 25px 0;
-    display: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 90px 30px 30px;
+    display: flex;
+    overflow-y: auto;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    transition: right 0.35s ease;
+    z-index: 1000;
   }
 
   #menu.active {
-    display: flex;
+    right: 0;
+  }
+
+  #menu a {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  #menu a.nav-cta {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-overlay.active {
+    display: block;
+  }
+
+  /* ---- Mobile dropdown (tap to open, no hover) ---- */
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    min-width: 0;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    /* disable hover-open on touch devices */
+    max-height: 0;
+  }
+
+  .dropdown.active .dropdown-toggle {
+    color: var(--primary-red);
+  }
+
+  .dropdown.active .dropdown-menu {
+    max-height: 400px;
+    padding: 5px 0 10px;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 10px !important;
+  }
+}
+
+/* ---- Small phones (<=576px) ---- */
+@media (max-width: 576px) {
+  .about-modern, .section, .vision-section, .hero-modern, .professional-section {
+    padding: 60px 0;
+  }
+
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+
+  .hero-slider {
+    height: 75vh;
+    min-height: 480px;
+  }
+
+  .caption h1 {
+    font-size: 1.7rem;
+  }
+
+  .caption p {
+    font-size: 1rem;
+  }
+
+  .caption.right {
+    margin-left: 5%;
+    max-width: 90%;
+  }
+
+  .floating-consult {
+    left: 5%;
+    bottom: 25px;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .slider-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .slider-btn.prev { left: 10px; }
+  .slider-btn.next { right: 10px; }
+
+  .dots {
+    right: 5%;
+  }
+
+  .about-left h2, .vision-text h2, .professional-text h2, .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .section h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta-red-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-red-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-red-buttons a {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 }
