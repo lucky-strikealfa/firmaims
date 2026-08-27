@@ -53,18 +53,15 @@ if(form){
   };
 
   // ================= SLIDER =================
-  // FIX: sebelumnya kode ini menggeser (translateX) container .slides,
-  // padahal CSS-nya memakai .slide { position:absolute } + opacity crossfade
-  // dan tidak pernah menambahkan class "active" ke slide yang aktif.
-  // Akibatnya seluruh slider ikut bergeser keluar layar setelah slide pertama
-  // (itulah yang membuat tampilan jadi berantakan). Sekarang slider murni
-  // mengganti class "active" pada slide & dot yang sesuai.
+  // Cocok dengan style.css asli: .slides = flex row, .slide = min-width:100%,
+  // jadi kita geser .slides pakai translateX (bukan opacity-crossfade).
+  let index = 0;
+  const slides = document.querySelector(".slides");
   const slideItems = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots");
 
-  if(slideItems.length && dotsContainer){
+  if(slides && slideItems.length && dotsContainer){
 
-    let index = 0;
     const total = slideItems.length;
     let interval;
 
@@ -82,13 +79,10 @@ if(form){
     const dots = document.querySelectorAll(".dots span");
 
     function showSlide(){
-      slideItems.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
+      slides.style.transform = `translateX(-${index * 100}%)`;
 
-      dots.forEach((d, i) => {
-        d.classList.toggle("active", i === index);
-      });
+      dots.forEach(d => d.classList.remove("active"));
+      if(dots[index]) dots[index].classList.add("active");
     }
 
     function next(){
@@ -132,34 +126,30 @@ if(form){
   // ================= MENU MOBILE =================
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
-  const overlay = document.querySelector(".nav-overlay");
 
-  if(toggle && menu && overlay){
+  if(toggle && menu){
 
     toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
-      overlay.classList.toggle("active");
 
       document.body.style.overflow =
         menu.classList.contains("active") ? "hidden" : "auto";
     });
 
-    overlay.addEventListener("click", closeMenu);
-
-    document.querySelectorAll("#menu > a").forEach(link => {
+    // Tutup menu saat link mana pun di dalamnya diklik
+    // (termasuk link di dalam dropdown "Layanan", bukan cuma anak langsung #menu)
+    menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
 
     function closeMenu(){
       menu.classList.remove("active");
-      overlay.classList.remove("active");
       document.body.style.overflow = "auto";
     }
 
-    // auto close saat scroll (desktop/tablet only; di mobile menu full-screen fixed
-    // jadi tidak perlu ikut menutup saat halaman di baliknya di-scroll)
+    // auto close saat scroll (hanya saat mode mobile/tablet aktif)
     window.addEventListener("scroll", () => {
-      if(menu.classList.contains("active") && window.innerWidth > 992){
+      if(menu.classList.contains("active") && window.innerWidth <= 991){
         closeMenu();
       }
     });
@@ -194,17 +184,13 @@ document.querySelectorAll(
 });
 
 // ================= DROPDOWN MOBILE =================
-// FIX: sebelumnya toggle class "active" hanya dipasang ke dropdown PERTAMA
-// yang ditemukan (querySelector, bukan querySelectorAll), dan CSS tidak
-// punya aturan untuk menampilkan .dropdown-menu saat .dropdown.active
-// (CSS lama hanya mengandalkan :hover, yang tidak berfungsi di layar sentuh).
-// Sekarang semua tombol dropdown ditangani, dan CSS sudah menambahkan
-// aturan .dropdown.active .dropdown-menu untuk mode mobile.
+// Sebelumnya querySelector() hanya mengikat dropdown PERTAMA yang ditemukan.
+// Sekarang semua tombol dropdown (kalau nanti ada lebih dari satu) ditangani.
 document.querySelectorAll(".dropdown-toggle").forEach(dropdownToggle => {
 
   dropdownToggle.addEventListener("click", function(e){
 
-    if(window.innerWidth <= 992){
+    if(window.innerWidth <= 991){
 
       e.preventDefault();
 
