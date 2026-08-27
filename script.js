@@ -53,13 +53,18 @@ if(form){
   };
 
   // ================= SLIDER =================
-  let index = 0;
-  const slides = document.querySelector(".slides");
+  // FIX: sebelumnya kode ini menggeser (translateX) container .slides,
+  // padahal CSS-nya memakai .slide { position:absolute } + opacity crossfade
+  // dan tidak pernah menambahkan class "active" ke slide yang aktif.
+  // Akibatnya seluruh slider ikut bergeser keluar layar setelah slide pertama
+  // (itulah yang membuat tampilan jadi berantakan). Sekarang slider murni
+  // mengganti class "active" pada slide & dot yang sesuai.
   const slideItems = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots");
 
-  if(slides && slideItems.length && dotsContainer){
+  if(slideItems.length && dotsContainer){
 
+    let index = 0;
     const total = slideItems.length;
     let interval;
 
@@ -69,6 +74,7 @@ if(form){
       dot.addEventListener("click", () => {
         index = i;
         showSlide();
+        restart();
       });
       dotsContainer.appendChild(dot);
     });
@@ -76,10 +82,13 @@ if(form){
     const dots = document.querySelectorAll(".dots span");
 
     function showSlide(){
-      slides.style.transform = `translateX(-${index * 100}%)`;
+      slideItems.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
 
-      dots.forEach(d => d.classList.remove("active"));
-      if(dots[index]) dots[index].classList.add("active");
+      dots.forEach((d, i) => {
+        d.classList.toggle("active", i === index);
+      });
     }
 
     function next(){
@@ -100,9 +109,14 @@ if(form){
       clearInterval(interval);
     }
 
+    function restart(){
+      stop();
+      start();
+    }
+
     // BUTTON
-    document.querySelector(".next")?.addEventListener("click", next);
-    document.querySelector(".prev")?.addEventListener("click", prev);
+    document.querySelector(".next")?.addEventListener("click", () => { next(); restart(); });
+    document.querySelector(".prev")?.addEventListener("click", () => { prev(); restart(); });
 
     // HOVER PAUSE
     const slider = document.querySelector(".hero-slider");
@@ -111,8 +125,8 @@ if(form){
       slider.addEventListener("mouseleave", start);
     }
 
-    start();
     showSlide();
+    start();
   }
 
   // ================= MENU MOBILE =================
@@ -132,9 +146,9 @@ if(form){
 
     overlay.addEventListener("click", closeMenu);
 
-document.querySelectorAll("#menu > a").forEach(link => {
-  link.addEventListener("click", closeMenu);
-});
+    document.querySelectorAll("#menu > a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
 
     function closeMenu(){
       menu.classList.remove("active");
@@ -142,9 +156,10 @@ document.querySelectorAll("#menu > a").forEach(link => {
       document.body.style.overflow = "auto";
     }
 
-    // auto close saat scroll
+    // auto close saat scroll (desktop/tablet only; di mobile menu full-screen fixed
+    // jadi tidak perlu ikut menutup saat halaman di baliknya di-scroll)
     window.addEventListener("scroll", () => {
-      if(menu.classList.contains("active")){
+      if(menu.classList.contains("active") && window.innerWidth > 992){
         closeMenu();
       }
     });
@@ -179,13 +194,17 @@ document.querySelectorAll(
 });
 
 // ================= DROPDOWN MOBILE =================
-const dropdownToggle = document.querySelector(".dropdown-toggle");
-
-if(dropdownToggle){
+// FIX: sebelumnya toggle class "active" hanya dipasang ke dropdown PERTAMA
+// yang ditemukan (querySelector, bukan querySelectorAll), dan CSS tidak
+// punya aturan untuk menampilkan .dropdown-menu saat .dropdown.active
+// (CSS lama hanya mengandalkan :hover, yang tidak berfungsi di layar sentuh).
+// Sekarang semua tombol dropdown ditangani, dan CSS sudah menambahkan
+// aturan .dropdown.active .dropdown-menu untuk mode mobile.
+document.querySelectorAll(".dropdown-toggle").forEach(dropdownToggle => {
 
   dropdownToggle.addEventListener("click", function(e){
 
-    if(window.innerWidth <= 991){
+    if(window.innerWidth <= 992){
 
       e.preventDefault();
 
@@ -195,7 +214,7 @@ if(dropdownToggle){
 
   });
 
-}
+});
 
 /* ==========================================
 FAQ ACCORDION
