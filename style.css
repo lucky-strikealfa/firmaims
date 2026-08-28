@@ -209,6 +209,11 @@ HERO SLIDER MODERN 2026
 }
 
 /* TITLE */
+.caption{
+  position:relative;
+  z-index:5;
+}
+
 .caption h1{
   font-size:clamp(42px,5vw,72px);
   line-height:1.05;
