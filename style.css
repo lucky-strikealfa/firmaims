@@ -179,6 +179,7 @@ HERO SLIDER MODERN 2026
   );
 
   z-index:1;
+  pointer-events:none;
 }
 
 /* GLOW */
@@ -201,6 +202,15 @@ HERO SLIDER MODERN 2026
   z-index:1;
   opacity:.18;
   filter:blur(25px);
+  pointer-events:none;
+}
+
+/* =========================================================
+CAPTION WRAPPER (FIX: teks & tombol harus di atas overlay & glow)
+========================================================= */
+.caption{
+  position:relative;
+  z-index:5;
 }
 
 /* BADGE */
@@ -209,11 +219,6 @@ HERO SLIDER MODERN 2026
 }
 
 /* TITLE */
-.caption{
-  position:relative;
-  z-index:5;
-}
-
 .caption h1{
   font-size:clamp(42px,5vw,72px);
   line-height:1.05;
@@ -3493,43 +3498,4 @@ RESPONSIVE TAMBAHAN (HP KECIL & LAYAR SEMPIT)
   .workspace-text h2{
     font-size:30px;
   }
-}
-
-/* =========================================================
-   FIX ANTI-BLUR & TEXT SHARPNESS ENHANCEMENT
-========================================================= */
-
-/* 1. Memaksa rendering teks tajam di semua browser (Chrome, Safari, Firefox) */
-body, h1, h2, h3, h4, h5, h6, p, span, a, li, button, input {
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  text-rendering: optimizeLegibility !important;
-}
-
-/* 2. Mengunci piksel pada animasi Scroll Reveal & Slider */
-.slides, 
-.slide, 
-.caption, 
-.reveal, 
-.reveal-left, 
-.reveal-right, 
-.reveal-zoom,
-.hero-content,
-.hero-image {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  will-change: transform, opacity;
-}
-
-/* 3. Fix khusus untuk Slide 2 yang translateY(-70px) agar pikselnya tidak desimal */
-.slide:nth-child(2) .caption {
-  transform: translateY(-70px) translateZ(0);
-}
-
-/* 4. Memastikan Dropdown & Element Melayang memiliki layer hardware tersendiri */
-.dropdown-menu,
-.floating-consult,
-.wa-float {
-  transform: translateZ(0);
 }
