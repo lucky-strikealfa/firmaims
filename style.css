@@ -1569,34 +1569,60 @@ RESPONSIVE MEDIA QUERIES
 @media (max-width: 767px) {
   body { padding-top: 80px; }
 
-  .hero-slider, .slides { min-height: calc(100vh - 80px); }
-  .slide {
-    min-height: calc(100vh - 80px);
-    padding: 60px 20px;
-    align-items: flex-start;
-    background-size: 100%;
-    background-position: center bottom;
+  .hero-slider, .slides { 
+    min-height: 85vh; 
+    background: #f8fafc !important; 
   }
 
+  .slide {
+    min-height: 85vh;
+    padding: 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: contain !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    background-color: #f8fafc !important;
+  }
+
+  /* Bikin overlay transparan terang biar gak gelap */
   .overlay {
     background: linear-gradient(
-      to bottom,
-      rgba(248, 250, 252, 0.97) 0%,
-      rgba(248, 250, 252, 0.92) 50%,
-      rgba(248, 250, 252, 0.4) 80%,
-      rgba(248, 250, 252, 0) 100%
-    );
+      180deg,
+      rgba(248, 250, 252, 0.95) 0%,
+      rgba(248, 250, 252, 0.7) 40%,
+      rgba(248, 250, 252, 0.1) 100%
+    ) !important;
   }
 
-  .caption { max-width: 100%; text-align: center; }
-  .caption h1 { font-size: 32px; line-height: 1.2; letter-spacing: -1px; }
-  .caption p { font-size: 15px; line-height: 1.7; }
+  .caption { 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 20px;
+  }
 
+  .caption h1 { 
+    font-size: 28px !important; 
+    line-height: 1.3 !important; 
+    color: #0f172a !important; 
+  }
+
+  .caption p { 
+    font-size: 14px !important; 
+    color: #475569 !important; 
+  }
+
+  /* Tombol Konsultasi disesuaikan biar gak numpuk sama gambar */
   .btn-cta {
     width: 100%;
-    max-width: 280px;
-    margin: 30px auto 0;
+    max-width: 260px;
+    height: 50px;
+    font-size: 14px;
+    margin: 20px auto 0;
   }
+}
 
   .slider-btn { width: 44px; height: 44px; font-size: 15px; }
 
