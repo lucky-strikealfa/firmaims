@@ -228,5 +228,4 @@ faqItems.forEach(item => {
         }
 
     });
-
 });
