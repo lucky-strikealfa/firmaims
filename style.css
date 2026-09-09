@@ -15,6 +15,7 @@ RESET & BASE
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  color-scheme: light only; /* cegah Chrome Android membalik warna jadi dark mode paksa */
 }
 
 body {
@@ -190,7 +191,7 @@ nav a:hover {
   transform: translateY(0);
 }
 
-/* ========================================================
+/* =========================================================
 HERO SLIDER
 ========================================================= */
 .hero-slider {
