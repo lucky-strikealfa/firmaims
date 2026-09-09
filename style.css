@@ -1565,54 +1565,53 @@ RESPONSIVE MEDIA QUERIES
   .service-intro h2 { font-size: 30px; }
 }
 
-/* MOBILE (MAX-WIDTH: 767PX) */
+/* FIX KHUSUS UKURAN GAMBAR & BACKGROUND MOBILE */
 @media (max-width: 767px) {
-  body { padding-top: 80px; }
-
-  .hero-slider, .slides { 
-    min-height: 85vh; 
-    background: #f8fafc !important; 
+  /* Paksa background kontainer utama terang */
+  .hero-slider, 
+  .slide, 
+  .carousel-item,
+  .hero-section {
+    background-color: #ffffff !important;
+    background-image: none !important; /* Hapus background-image versi desktop jika ada */
+    min-height: auto !important;
   }
 
-  .slide {
-    min-height: 85vh;
-    padding: 40px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-size: contain !important;
-    background-position: center bottom !important;
-    background-repeat: no-repeat !important;
-    background-color: #f8fafc !important;
+  /* Hilangkan overlay gelap jika pakai div terpisah */
+  .overlay, 
+  .hero-overlay {
+    background: none !important;
+    display: none !important;
   }
 
-  /* Bikin overlay transparan terang biar gak gelap */
-  .overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(248, 250, 252, 0.95) 0%,
-      rgba(248, 250, 252, 0.7) 40%,
-      rgba(248, 250, 252, 0.1) 100%
-    ) !important;
+  /* Atur ulang ukuran gambar biar proporsional dan jelas */
+  .slide img, 
+  .hero-slider img, 
+  .carousel-item img {
+    width: 85% !important;        /* Atur lebar gambar biar gak kecill banget */
+    max-width: 320px !important;   /* Batas maksimal biar gak kebesaran */
+    height: auto !important;       /* Jaga rasio gambar */
+    max-height: none !important;   /* Hapus batasan tinggi */
+    display: block !important;
+    margin: 20px auto 0 !important;/* Rata tengah */
+    object-fit: contain !important;
   }
 
-  .caption { 
-    width: 100%; 
-    text-align: center; 
-    margin-top: 20px;
+  /* Rapikan teks & tombol */
+  .caption, .hero-content {
+    color: #1e293b !important;
+    text-align: center !important;
   }
 
-  .caption h1 { 
-    font-size: 28px !important; 
-    line-height: 1.3 !important; 
-    color: #0f172a !important; 
+  .caption h1, .hero-title {
+    color: #0f172a !important;
+    font-size: 24px !important;
   }
 
-  .caption p { 
-    font-size: 14px !important; 
-    color: #475569 !important; 
+  .caption p, .hero-description {
+    color: #475569 !important;
   }
+}
 
   /* Tombol Konsultasi disesuaikan biar gak numpuk sama gambar */
   .btn-cta {
