@@ -1468,6 +1468,19 @@ RESPONSIVE MEDIA QUERIES
   .slide:nth-child(5) { background-position: right center !important; }
 }
 
+/* NAV OVERLAY (dim background behind the open mobile menu) */
+.nav-overlay { display: none; }
+
+@media (max-width: 991px) {
+  body:has(nav#menu.active) .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 9998; /* just below header/nav (9999) */
+  }
+}
+
 /* TABLET (MAX-WIDTH: 991PX) */
 @media (max-width: 991px) {
   .menu-toggle { display: block; }
@@ -1483,6 +1496,8 @@ RESPONSIVE MEDIA QUERIES
     padding: 25px;
     display: none;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
 
   nav.active { display: flex; }
@@ -1533,20 +1548,23 @@ RESPONSIVE MEDIA QUERIES
   .professional-image img { max-width: 320px; height: auto; }
 
   .cta-red-box {
-    padding: 50px 30px 320px;
+    padding: 50px 30px;
     flex-direction: column;
     text-align: center;
+    min-height: auto;
   }
-  .cta-red-content { width: 100%; }
+  .cta-red-content { width: 100%; max-width: 100%; }
   .cta-line { margin: 0 auto 28px; }
   .cta-list li { justify-content: center; }
   .cta-red-buttons { justify-content: center; }
 
   .cta-red-image {
-    width: 260px;
-    right: 50%;
-    transform: translateX(50%);
+    position: static;
+    width: 220px;
+    height: auto;
+    margin: 30px auto 0;
   }
+  .cta-red-image img { transform: none; height: auto; width: 100%; }
 
   .prima-top { text-align: center; }
   .prima-heading { max-width: 100%; }
@@ -1563,100 +1581,56 @@ RESPONSIVE MEDIA QUERIES
   .training-cta { padding: 40px 25px; }
   .training-cta h2 { font-size: 28px; }
   .service-intro h2 { font-size: 30px; }
-}
 
-/* FIX KHUSUS UKURAN GAMBAR & BACKGROUND — TABLET (768–991PX) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .hero-slider,
-  .slide,
-  .carousel-item,
-  .hero-section {
-    background-color: #ffffff !important;
+  /* ============= HERO SLIDER (tablet & mobile, shared) =============
+     The hero photos are set as an inline background-image on .slide
+     itself (not an <img> tag), so they must be turned off on .slide,
+     not on an "img" selector. */
+  .hero-slider { min-height: auto; }
+
+  .slide {
+    min-height: auto;
     background-image: none !important;
-    min-height: auto !important;
-    padding: 60px 6% !important;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 70px 6% 100px;
   }
 
-  .overlay,
-  .hero-overlay {
-    background: none !important;
-    display: none !important;
+  .slide::after { display: none; } /* decorative blur circle, not needed without the photo */
+  .overlay { display: none; }
+
+  .caption { max-width: 560px; margin: 0 auto; }
+  .caption p { max-width: 100%; margin: 0 auto; }
+  .caption p br { display: none; } /* let paragraphs reflow instead of using the desktop hard line-breaks */
+
+  .btn-cta {
+    margin-top: 28px;
   }
 
-  .slide img,
-  .hero-slider img,
-  .carousel-item img {
-    width: 70% !important;
-    max-width: 420px !important;
-    height: auto !important;
-    max-height: none !important;
-    display: block !important;
-    margin: 24px auto 0 !important;
-    object-fit: contain !important;
+  .floating-consult {
+    position: static;
+    display: inline-flex;
+    margin: 26px auto 0;
+    height: 54px;
+    padding: 0 30px;
+    font-size: 15px;
   }
 
-  .caption, .hero-content {
-    color: #1e293b !important;
-    text-align: center !important;
-    margin: 0 auto;
-  }
-
-  .caption p {
-    margin: 0 auto;
-  }
+  .slider-btn { width: 46px; height: 46px; font-size: 16px; }
+  .prev { left: 12px; }
+  .next { right: 12px; }
+  .dots { bottom: 26px; }
 }
 
-/* FIX KHUSUS UKURAN GAMBAR & BACKGROUND MOBILE */
+/* MOBILE (MAX-WIDTH: 767PX) */
 @media (max-width: 767px) {
-  /* Paksa background kontainer utama terang */
-  .hero-slider, 
-  .slide, 
-  .carousel-item,
-  .hero-section {
-    background-color: #ffffff !important;
-    background-image: none !important; /* Hapus background-image versi desktop jika ada */
-    min-height: auto !important;
-    padding: 40px 6% 30px !important;
-  }
+  .slide { padding: 60px 6% 90px; }
+  .caption h1 { font-size: 28px; }
+  .caption p { font-size: 16px; line-height: 1.7; }
 
-  /* Hilangkan overlay gelap jika pakai div terpisah */
-  .overlay, 
-  .hero-overlay {
-    background: none !important;
-    display: none !important;
-  }
-
-  /* Atur ulang ukuran gambar biar proporsional dan jelas */
-  .slide img, 
-  .hero-slider img, 
-  .carousel-item img {
-    width: 85% !important;        /* Atur lebar gambar biar gak kecill banget */
-    max-width: 320px !important;   /* Batas maksimal biar gak kebesaran */
-    height: auto !important;       /* Jaga rasio gambar */
-    max-height: none !important;   /* Hapus batasan tinggi */
-    display: block !important;
-    margin: 20px auto 0 !important;/* Rata tengah */
-    object-fit: contain !important;
-  }
-
-  /* Rapikan teks & tombol */
-  .caption, .hero-content {
-    color: #1e293b !important;
-    text-align: center !important;
-    margin: 0 auto;
-  }
-
-  .caption h1, .hero-title {
-    color: #0f172a !important;
-    font-size: 24px !important;
-  }
-
-  .caption p, .hero-description {
-    color: #475569 !important;
-    margin: 0 auto;
-  }
-
-  /* Tombol Konsultasi disesuaikan biar gak numpuk sama gambar */
   .btn-cta {
     width: 100%;
     max-width: 260px;
@@ -1665,19 +1639,13 @@ RESPONSIVE MEDIA QUERIES
     margin: 20px auto 0;
   }
 
-  .slider-btn { width: 44px; height: 44px; font-size: 15px; }
+  .slider-btn { width: 40px; height: 40px; font-size: 14px; }
 
   .floating-consult {
-    left: 50%;
-    top: auto;
-    bottom: 30px;
-    transform: translateX(-50%);
-    width: 280px;
-    max-width: 90%;
-  }
-
-  .floating-consult:hover {
-    transform: translateX(-50%) translateY(-4px);
+    width: 100%;
+    max-width: 280px;
+    height: 52px;
+    padding: 0 24px;
   }
 
   .service-prima-section { padding: 60px 15px; }
@@ -1697,10 +1665,7 @@ RESPONSIVE MEDIA QUERIES
   .about-card { min-height: auto; padding: 22px; }
 
   .cta-red-section { padding: 60px 16px; }
-  .cta-red-box {
-    padding: 40px 20px 280px;
-    border-radius: 28px;
-  }
+  .cta-red-box { padding: 40px 20px; border-radius: 28px; }
 
   .cta-red-content h2 { font-size: 28px; }
   .cta-red-content p { font-size: 15px; }
@@ -1732,7 +1697,8 @@ RESPONSIVE MEDIA QUERIES
 @media (max-width: 480px) {
   .logo-text { font-size: 13px; }
   .logo img { width: 44px; height: 44px; }
-  .caption h1 { font-size: 26px; }
+  .caption h1 { font-size: 24px; }
+  .caption p { font-size: 15px; }
   .prima-heading h2,
   .about-left h2,
   .tentang-text h2,
