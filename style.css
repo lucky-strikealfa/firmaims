@@ -1565,6 +1565,47 @@ RESPONSIVE MEDIA QUERIES
   .service-intro h2 { font-size: 30px; }
 }
 
+/* FIX KHUSUS UKURAN GAMBAR & BACKGROUND — TABLET (768–991PX) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-slider,
+  .slide,
+  .carousel-item,
+  .hero-section {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    min-height: auto !important;
+    padding: 60px 6% !important;
+  }
+
+  .overlay,
+  .hero-overlay {
+    background: none !important;
+    display: none !important;
+  }
+
+  .slide img,
+  .hero-slider img,
+  .carousel-item img {
+    width: 70% !important;
+    max-width: 420px !important;
+    height: auto !important;
+    max-height: none !important;
+    display: block !important;
+    margin: 24px auto 0 !important;
+    object-fit: contain !important;
+  }
+
+  .caption, .hero-content {
+    color: #1e293b !important;
+    text-align: center !important;
+    margin: 0 auto;
+  }
+
+  .caption p {
+    margin: 0 auto;
+  }
+}
+
 /* FIX KHUSUS UKURAN GAMBAR & BACKGROUND MOBILE */
 @media (max-width: 767px) {
   /* Paksa background kontainer utama terang */
@@ -1575,6 +1616,7 @@ RESPONSIVE MEDIA QUERIES
     background-color: #ffffff !important;
     background-image: none !important; /* Hapus background-image versi desktop jika ada */
     min-height: auto !important;
+    padding: 40px 6% 30px !important;
   }
 
   /* Hilangkan overlay gelap jika pakai div terpisah */
@@ -1601,6 +1643,7 @@ RESPONSIVE MEDIA QUERIES
   .caption, .hero-content {
     color: #1e293b !important;
     text-align: center !important;
+    margin: 0 auto;
   }
 
   .caption h1, .hero-title {
@@ -1610,8 +1653,8 @@ RESPONSIVE MEDIA QUERIES
 
   .caption p, .hero-description {
     color: #475569 !important;
+    margin: 0 auto;
   }
-}
 
   /* Tombol Konsultasi disesuaikan biar gak numpuk sama gambar */
   .btn-cta {
@@ -1621,7 +1664,6 @@ RESPONSIVE MEDIA QUERIES
     font-size: 14px;
     margin: 20px auto 0;
   }
-}
 
   .slider-btn { width: 44px; height: 44px; font-size: 15px; }
 
