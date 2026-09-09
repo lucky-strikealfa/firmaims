@@ -215,11 +215,24 @@ HERO SLIDER
   display: flex;
   align-items: center;
   padding: 0 8%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
   background-color: #f8fafc;
 }
+
+/* Foto hero sekarang pakai <img> asli (bukan CSS background-image),
+   supaya ukuran & posisinya selalu bisa diprediksi di semua device. */
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide:nth-child(3) .slide-bg { object-position: right bottom; }
+.slide:nth-child(5) .slide-bg { object-position: right center; }
 
 .overlay {
   position: absolute;
@@ -345,9 +358,7 @@ HERO SLIDER
 }
 
 .slide:nth-child(2) .caption { transform: translateY(-30px); }
-.slide:nth-child(3) { background-position: right bottom !important; }
-.slide:nth-child(5) { background-position: right center !important; }
-.slide:nth-child(5) .caption { left: 8%; max-width: 550px; }
+.slide:nth-child(5) .caption { max-width: 550px; }
 
 /* =========================================================
 HERO MODERN FINAL
@@ -1459,12 +1470,12 @@ RESPONSIVE MEDIA QUERIES
 ========================================================= */
 /* LARGE DESKTOP */
 @media (min-width: 1400px) {
-  .slide { background-size: contain; background-color: #eef4ff; }
+  .slide { background-color: #eef4ff; }
 }
 
 @media (min-width: 992px) {
-  .slide:nth-child(4) { background-position: right 20px bottom !important; }
-  .slide:nth-child(5) { background-position: right center !important; }
+  .slide:nth-child(4) .slide-bg { object-position: right 20px bottom; }
+  .slide:nth-child(5) .slide-bg { object-position: right center; }
 }
 
 /* NAV OVERLAY (dim background behind the open mobile menu) */
@@ -1582,24 +1593,33 @@ RESPONSIVE MEDIA QUERIES
   .service-intro h2 { font-size: 30px; }
 
   /* ============= HERO SLIDER (tablet & mobile, shared) =============
-     The hero photos are set as an inline background-image on .slide
-     itself (not an <img> tag). Instead of hiding them, show each photo
-     contained at the top of its own slide (like the existing
-     "hero-modern" section further down the page), with the caption
-     stacked underneath on a clean white background. */
+     Foto hero sekarang <img class="slide-bg"> yang mengalir normal di
+     bagian atas slide (bukan lagi CSS background-image absolute), lalu
+     caption ditumpuk di bawahnya pada latar putih polos. Pendekatan ini
+     jauh lebih stabil ketimbang meng-override background-size/position,
+     jadi tidak akan lagi muncul sebagai gambar kecil yang salah tempat. */
   .hero-slider { min-height: auto; }
 
   .slide {
     min-height: auto;
-    background-repeat: no-repeat !important;
-    background-position: top center !important;
-    background-size: auto 300px !important;
     background-color: #ffffff;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 320px 6% 100px;
+    padding: 24px 6% 70px;
+    overflow: visible;
+  }
+
+  .slide-bg {
+    position: static;
+    width: auto;
+    max-width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: top center;
+    margin: 0 auto 28px;
+    z-index: auto;
   }
 
   .slide::after { display: none; } /* decorative blur circle, not needed with this layout */
@@ -1630,10 +1650,9 @@ RESPONSIVE MEDIA QUERIES
 
 /* MOBILE (MAX-WIDTH: 767PX) */
 @media (max-width: 767px) {
-  .slide {
-    background-size: auto 220px !important;
-    padding: 240px 6% 90px;
-  }
+  .slide { padding: 20px 6% 60px; }
+  .slide-bg { height: 220px; margin: 0 auto 22px; }
+
   .caption h1 { font-size: 28px; }
   .caption p { font-size: 16px; line-height: 1.7; }
 
@@ -1701,14 +1720,14 @@ RESPONSIVE MEDIA QUERIES
 
 /* SMALL MOBILE (MAX-WIDTH: 480PX) */
 @media (max-width: 480px) {
-  .slide {
-    background-size: auto 180px !important;
-    padding: 200px 6% 80px;
-  }
+  .slide { padding: 16px 6% 60px; }
+  .slide-bg { height: 180px; margin: 0 auto 18px; }
+
   .logo-text { font-size: 13px; }
   .logo img { width: 44px; height: 44px; }
   .caption h1 { font-size: 24px; }
   .caption p { font-size: 15px; }
+  .circle-bg { width: 220px; height: 220px; }
   .prima-heading h2,
   .about-left h2,
   .tentang-text h2,
