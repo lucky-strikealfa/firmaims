@@ -1458,7 +1458,6 @@ SCROLL ANIMATIONS
 /* =========================================================
 RESPONSIVE MEDIA QUERIES
 ========================================================= */
-
 /* LARGE DESKTOP */
 @media (min-width: 1400px) {
   .slide { background-size: contain; background-color: #eef4ff; }
