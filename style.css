@@ -1759,3 +1759,56 @@ RESPONSIVE MEDIA QUERIES
   .workspace-text h2 { font-size: 26px; }
   .tentang-card-wrap { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+MOBILE UX FIXES — SPACING SECTION & STACKING "ABOUT"
+(ditambahkan untuk mengatasi jarak kosong berlebih & kotak
+mini-box "Profesional / Tepat & Efisien / Terpercaya" yang
+tampak terpotong/berantakan saat di-scroll di HP & tablet)
+========================================================= */
+@media (max-width: 991px) {
+  /* Section-section ini masih pakai padding desktop (100-110px),
+     jadi jarak antar blok terasa sangat lebar di layar sempit. */
+  .about-modern,
+  .vision-section,
+  .service-highlight,
+  .professional-section,
+  .cta-red-section {
+    padding: 60px 16px;
+  }
+
+  .service-prima-section { padding: 50px 16px; }
+
+  /* Kotak biru "Profesional / Tepat & Efisien / Terpercaya":
+     dipaksa jadi 1 kolom penuh, bukan wrap 160px yang bikin
+     tampilannya numpuk & terlihat kepotong di layar sempit. */
+  .about-mini-box {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+    padding: 20px;
+  }
+
+  .mini-item { min-width: 100%; }
+
+  /* Kurangi jarak kosong antara teks/mini-box dan foto di bawahnya. */
+  .about-right { margin-top: 8px; }
+  .about-cards { margin-top: 20px; }
+}
+
+@media (max-width: 767px) {
+  .about-modern,
+  .vision-section,
+  .service-highlight,
+  .professional-section,
+  .cta-red-section {
+    padding: 45px 16px;
+  }
+
+  .about-left h2 { margin-bottom: 18px; }
+  .about-left p { margin-bottom: 18px; }
+
+  .about-mini-box { padding: 18px; }
+  .mini-item h5 { font-size: 14px; }
+  .mini-item span { font-size: 12.5px; }
+}
