@@ -1812,3 +1812,182 @@ tampak terpotong/berantakan saat di-scroll di HP & tablet)
   .mini-item h5 { font-size: 14px; }
   .mini-item span { font-size: 12.5px; }
 }
+
+
+@media (max-width: 991px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+ 
+  .nav { gap: 12px; }
+ 
+  .logo {
+    flex-shrink: 1;
+    min-width: 0;
+    gap: 10px;
+  }
+ 
+  .logo img { width: 44px; height: 44px; flex-shrink: 0; }
+  .logo-text { font-size: 14px; line-height: 1.25; }
+ 
+  .menu-toggle { flex-shrink: 0; margin-left: auto; }
+}
+ 
+@media (max-width: 480px) {
+  .logo img { width: 38px; height: 38px; }
+  .logo-text { font-size: 12px; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   2. MENU MOBILE — overlay dipindah ke class .menu-open
+   (selector :has() lama tidak jalan di sebagian browser Android
+   lawas, jadi overlay-nya kadang tidak muncul sama sekali)
+   --------------------------------------------------------- */
+@media (max-width: 991px) {
+  body.menu-open { overflow: hidden; }
+ 
+  body.menu-open .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 9998;
+  }
+ 
+  nav#menu { z-index: 9999; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   3. FOOTER — di tablet (768–991px) masih 3 kolom, dan kolom
+   ketiga isinya 3 kolom lagi = 9 kolom teks gepeng.
+   --------------------------------------------------------- */
+@media (max-width: 991px) {
+  .footer-modern { padding: 45px 0 20px; }
+ 
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+ 
+  .footer-address {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 24px;
+    margin-bottom: 0;
+  }
+ 
+  .footer-links { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+ 
+  .footer-bottom { margin-top: 28px; }
+}
+ 
+@media (max-width: 600px) {
+  .footer-links { grid-template-columns: 1fr; gap: 18px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   4. FOTO SECTION "TENTANG" — sumber ruang kosong besar
+   .photo-placeholder dipatok height:520px di semua ukuran layar,
+   padahal fotonya di HP cuma setinggi ~200px. Sisanya kosong.
+   --------------------------------------------------------- */
+@media (max-width: 991px) {
+  .photo-placeholder {
+    height: auto !important;
+    min-height: 0;
+    display: block;
+  }
+ 
+  /* <img> di HTML kebungkus <span>; span-nya inline jadi ikut
+     bikin celah. Dijadikan block + font-size 0. */
+  .photo-placeholder > span {
+    display: block;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+  }
+ 
+  .photo-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 28px;
+  }
+ 
+  .about-image { border-radius: 28px; }
+  .about-right { margin-top: 0; }
+  .about-cards { margin-top: 18px; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   5. KARTU "TENTANG" di tablet — 1 kolom bikin halaman kepanjangan
+   --------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-cards { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .about-card { min-height: auto; padding: 20px 16px; }
+  .about-card h4 { font-size: 18px; }
+  .about-card p { font-size: 13px; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   6. HERO SLIDER di tablet — gambar 240px terlalu kecil
+   untuk layar 800–990px, jadi kelihatan kosong kiri-kanan
+   --------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .slide-bg { height: 320px !important; max-width: 70%; }
+  .caption h1 { font-size: 40px; }
+  .caption p { font-size: 17px; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   7. ANIMASI SCROLL — translateX 100px bikin konten sempat
+   nongol di luar layar / kelihatan "geser" di HP
+   --------------------------------------------------------- */
+@media (max-width: 991px) {
+  .reveal       { transform: translateY(40px); }
+  .reveal-left  { transform: translateX(-40px); }
+  .reveal-right { transform: translateX(40px); }
+ 
+  .reveal.active       { transform: translateY(0); }
+  .reveal-left.active,
+  .reveal-right.active { transform: translateX(0); }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-zoom {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   8. RAPIKAN JARAK ANTAR SECTION DI HP
+   --------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hero-modern { padding: 45px 0; }
+  .section { padding: 40px 16px; }
+  .hero-container { gap: 28px; }
+  .professional-highlight { flex-direction: column; text-align: left; gap: 14px; }
+  .professional-highlight-icon { margin: 0 auto; }
+}
+ 
+ 
+/* ---------------------------------------------------------
+   9. TOMBOL WA jangan nutupin tombol/dots di HP kecil
+   --------------------------------------------------------- */
+@media (max-width: 480px) {
+  .wa-float {
+    width: 52px !important;
+    height: 52px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+  .wa-float img { width: 28px !important; height: 28px !important; }
+}
