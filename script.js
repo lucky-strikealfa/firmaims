@@ -1,66 +1,61 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
- // ================= FORM GOOGLE SHEET =================
-const form = document.getElementById("form");
-const msg = document.getElementById("msg");
+  /* ================= FORM GOOGLE SHEET ================= */
+  const form = document.getElementById("form");
+  const msg = document.getElementById("msg");
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyU-JaanMbmptpMWWO2RTRtxROnur1xETytTqElS7cscTcG2xQibrcJwJTXLpHjp4uQ1A/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyU-JaanMbmptpMWWO2RTRtxROnur1xETytTqElS7cscTcG2xQibrcJwJTXLpHjp4uQ1A/exec";
 
-if(form){
+  if (form) {
 
-  form.addEventListener("submit", async function(e){
+    form.addEventListener("submit", async function (e) {
 
-    e.preventDefault();
+      e.preventDefault();
 
-    msg.innerHTML = "⏳ Mengirim data...";
+      if (msg) msg.innerHTML = "⏳ Mengirim data...";
 
-    const data = {
-      nama: form.nama.value,
-      email: form.email.value,
-      telp: form.telp.value,
-      subjek: form.subjek.value,
-      pesan: form.pesan.value
-    };
+      const data = {
+        nama: form.nama.value,
+        email: form.email.value,
+        telp: form.telp.value,
+        subjek: form.subjek.value,
+        pesan: form.pesan.value
+      };
 
-    try{
+      try {
 
-      await fetch(SCRIPT_URL,{
-        method:"POST",
-        mode:"no-cors",
-        body:JSON.stringify(data)
-      });
+        await fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify(data)
+        });
 
-      msg.innerHTML = "✅ Data berhasil dikirim.";
+        if (msg) msg.innerHTML = "✅ Data berhasil dikirim.";
+        form.reset();
 
-      form.reset();
+      } catch (error) {
 
-    }catch(error){
+        console.error(error);
+        if (msg) msg.innerHTML = "❌ Terjadi kesalahan saat mengirim.";
 
-      console.error(error);
+      }
 
-      msg.innerHTML = "❌ Terjadi kesalahan saat mengirim.";
-
-    }
-
-  });
-
-}
-  // ================= SCROLL =================
-  window.scrollToForm = function(){
-    document.getElementById("kontak")?.scrollIntoView({
-      behavior:"smooth"
     });
+
+  }
+
+  /* ================= SCROLL ================= */
+  window.scrollToForm = function () {
+    document.getElementById("kontak")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ================= SLIDER =================
-  // Cocok dengan style.css asli: .slides = flex row, .slide = min-width:100%,
-  // jadi kita geser .slides pakai translateX (bukan opacity-crossfade).
+  /* ================= SLIDER ================= */
   let index = 0;
   const slides = document.querySelector(".slides");
   const slideItems = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots");
 
-  if(slides && slideItems.length && dotsContainer){
+  if (slides && slideItems.length && dotsContainer) {
 
     const total = slideItems.length;
     let interval;
@@ -78,154 +73,182 @@ if(form){
 
     const dots = document.querySelectorAll(".dots span");
 
-    function showSlide(){
+    function showSlide() {
       slides.style.transform = `translateX(-${index * 100}%)`;
-
       dots.forEach(d => d.classList.remove("active"));
-      if(dots[index]) dots[index].classList.add("active");
+      if (dots[index]) dots[index].classList.add("active");
     }
 
-    function next(){
-      index = (index + 1) % total;
-      showSlide();
-    }
+    function next() { index = (index + 1) % total; showSlide(); }
+    function prev() { index = (index - 1 + total) % total; showSlide(); }
 
-    function prev(){
-      index = (index - 1 + total) % total;
-      showSlide();
-    }
+    function start() { interval = setInterval(next, 4000); }
+    function stop() { clearInterval(interval); }
+    function restart() { stop(); start(); }
 
-    function start(){
-      interval = setInterval(next, 4000);
-    }
-
-    function stop(){
-      clearInterval(interval);
-    }
-
-    function restart(){
-      stop();
-      start();
-    }
-
-    // BUTTON
     document.querySelector(".next")?.addEventListener("click", () => { next(); restart(); });
     document.querySelector(".prev")?.addEventListener("click", () => { prev(); restart(); });
 
-    // HOVER PAUSE
     const slider = document.querySelector(".hero-slider");
-    if(slider){
+
+    if (slider) {
       slider.addEventListener("mouseenter", stop);
       slider.addEventListener("mouseleave", start);
+
+      /* GESER (SWIPE) DI HP — panah kiri/kanan disembunyikan di mobile,
+         jadi sebelumnya slider cuma bisa nunggu auto-play. */
+      let startX = 0;
+      let startY = 0;
+      let tracking = false;
+
+      slider.addEventListener("touchstart", (e) => {
+        if (e.touches.length !== 1) return;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        tracking = true;
+        stop();
+      }, { passive: true });
+
+      slider.addEventListener("touchend", (e) => {
+        if (!tracking) return;
+        tracking = false;
+
+        const dx = e.changedTouches[0].clientX - startX;
+        const dy = e.changedTouches[0].clientY - startY;
+
+        // hanya dianggap swipe kalau gerak horizontalnya dominan
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+          dx < 0 ? next() : prev();
+        }
+
+        restart();
+      }, { passive: true });
+
+      // hemat baterai: berhenti kalau tab tidak aktif
+      document.addEventListener("visibilitychange", () => {
+        document.hidden ? stop() : restart();
+      });
     }
 
     showSlide();
     start();
   }
 
-  // ================= MENU MOBILE =================
+  /* ================= MENU MOBILE ================= */
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
+  const overlay = document.querySelector(".nav-overlay");
 
-  if(toggle && menu){
+  if (toggle && menu) {
+
+    function openMenu() {
+      menu.classList.add("active");
+      document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+      menu.classList.remove("active");
+      document.body.classList.remove("menu-open");
+      document.querySelectorAll(".dropdown.active")
+        .forEach(d => d.classList.remove("active"));
+    }
 
     toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-
-      document.body.style.overflow =
-        menu.classList.contains("active") ? "hidden" : "auto";
+      menu.classList.contains("active") ? closeMenu() : openMenu();
     });
 
-    // Tutup menu saat link mana pun di dalamnya diklik
-    // (termasuk link di dalam dropdown "Layanan", bukan cuma anak langsung #menu)
+    // klik link mana pun (termasuk di dalam dropdown) → tutup
     menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
 
-    function closeMenu(){
-      menu.classList.remove("active");
-      document.body.style.overflow = "auto";
-    }
+    // klik area gelap di luar menu → tutup
+    overlay?.addEventListener("click", closeMenu);
 
-    // auto close saat scroll (hanya saat mode mobile/tablet aktif)
-    window.addEventListener("scroll", () => {
-      if(menu.classList.contains("active") && window.innerWidth <= 991){
-        closeMenu();
-      }
+    // tombol Esc → tutup
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // kalau layar diputar / diperbesar ke ukuran desktop, reset state
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 991) closeMenu();
     });
   }
 
-});
+  /* ================= DROPDOWN MOBILE ================= */
+  document.querySelectorAll(".dropdown-toggle").forEach(btn => {
 
-// =======================
-// SCROLL ANIMATION REPEAT
-// =======================
-
-const observer = new IntersectionObserver((entries)=>{
-
-  entries.forEach(entry=>{
-
-    if(entry.isIntersecting){
-      entry.target.classList.add('active');
-    }else{
-      entry.target.classList.remove('active');
-    }
+    btn.addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        this.parentElement.classList.toggle("active");
+      }
+    });
 
   });
 
-},{
-  threshold:0.2
-});
+  /* ================= SCROLL ANIMATION ================= */
+  const revealEls = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right, .reveal-zoom"
+  );
 
-document.querySelectorAll(
-  '.reveal, .reveal-left, .reveal-right, .reveal-zoom'
-).forEach(el=>{
-  observer.observe(el);
-});
+  if (revealEls.length) {
 
-// ================= DROPDOWN MOBILE =================
-// Sebelumnya querySelector() hanya mengikat dropdown PERTAMA yang ditemukan.
-// Sekarang semua tombol dropdown (kalau nanti ada lebih dari satu) ditangani.
-document.querySelectorAll(".dropdown-toggle").forEach(dropdownToggle => {
+    const reduceMotion =
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  dropdownToggle.addEventListener("click", function(e){
+    if (reduceMotion) {
+      revealEls.forEach(el => el.classList.add("active"));
+    } else {
 
-    if(window.innerWidth <= 991){
+      /* threshold 0.2 bikin elemen panjang (kolom teks di HP) kadang
+         tidak pernah kena trigger, jadi isinya tetap opacity:0 alias
+         kelihatan hilang. Pakai threshold 0 + rootMargin. */
+      const observer = new IntersectionObserver((entries) => {
 
-      e.preventDefault();
+        entries.forEach(entry => {
+          entry.target.classList.toggle("active", entry.isIntersecting);
+        });
 
-      this.parentElement.classList.toggle("active");
+      }, {
+        threshold: 0,
+        rootMargin: "0px 0px -8% 0px"
+      });
 
+      revealEls.forEach(el => observer.observe(el));
     }
+  }
 
-  });
+  /* ================= FAQ ACCORDION ================= */
+  const faqItems = document.querySelectorAll(".faq-item");
 
-});
-
-/* ==========================================
-FAQ ACCORDION
-========================================== */
-
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach(item => {
+  faqItems.forEach(item => {
 
     const btn = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    // sebelumnya tanpa guard ini, satu .faq-item tanpa tombol
+    // bikin seluruh script setelahnya mati
+    if (!btn || !answer) return;
 
     btn.addEventListener("click", () => {
 
-        const active = item.classList.contains("active");
+      const isActive = item.classList.contains("active");
 
-        faqItems.forEach(i => {
-            i.classList.remove("active");
-            i.querySelector(".faq-answer").style.maxHeight = null;
-        });
+      faqItems.forEach(i => {
+        i.classList.remove("active");
+        const a = i.querySelector(".faq-answer");
+        if (a) a.style.maxHeight = null;
+      });
 
-        if (!active) {
-            item.classList.add("active");
-            item.querySelector(".faq-answer").style.maxHeight =
-                item.querySelector(".faq-answer").scrollHeight + "px";
-        }
+      if (!isActive) {
+        item.classList.add("active");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
 
     });
+
+  });
+
 });
