@@ -9,1134 +9,439 @@
 <title>Sengketa Pajak | PT Idola Makmur Solusindo</title>
 
 <meta name="description" content="Layanan sengketa pajak meliputi pendampingan pemeriksaan, pengajuan keberatan, dan banding pajak bersama konsultan profesional IMS.">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#721e49">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="sengketa.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sengketa.css">
 </head>
 
 
 <body>
 
+<a href="#main" class="skip-link">Lompat ke konten</a>
+
 <!-- FLOATING WHATSAPP -->
-
-<a href="https://wa.me/6282129811869"
-target="_blank"
-class="wa-float">
-
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-alt="WhatsApp">
-
+<a href="https://wa.me/6282129811869" target="_blank" rel="noopener" class="wa-float" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+  </svg>
 </a>
 
 <!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container nav-bar nav">
 
-<header>
-<div class="container nav">
-<div class="logo">
-<img src="assets/logofirma.png" alt="Logo IMS">
-<span class="logo-text">
-Firma Idola Makmur Solusindo
-</span>
+    <a class="logo" href="index.html">
+      <img src="assets/logofirma.png" alt="Logo IMS">
+      <span class="logo-text">Firma Idola Makmur Solusindo</span>
+    </a>
 
-</div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle-bar"></span>
+    </button>
 
+    <nav id="menu" aria-label="Menu utama">
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
 
-<button id="menu-toggle" class="menu-toggle">
-☰
-</button>
+      <div class="dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          Layanan
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
 
+        <div class="dropdown-menu">
+          <a href="konsultasi.html">Konsultasi Pajak</a>
+          <a href="sengketa.html" class="is-current">Sengketa Pajak</a>
+          <a href="akuntansi.html">Akuntansi &amp; Audit</a>
+          <a href="transfer.html">Transfer Pricing</a>
+          <a href="pelatihan.html">Pelatihan Pajak</a>
+        </div>
+      </div>
 
+      <a href="tanyakami.html" class="nav-cta">Tanya Kami</a>
+    </nav>
 
-<nav id="menu">
-
-
-<a href="index.html">
-Beranda
-</a>
-
-<a href="tentang.html">Tentang</a>
-
-<div class="dropdown">
-
-<a href="#" class="dropdown-toggle">
-Layanan ▾
-</a>
-
-
-<div class="dropdown-menu">
-
-
-<a href="konsultasi.html">
-Konsultasi Pajak
-</a>
-
-
-<a href="sengketa.html">
-Sengketa Pajak
-</a>
-
-
-<a href="akuntansi.html">
-Akuntansi & Audit
-</a>
-
-
-<a href="transfer.html">
-Transfer Pricing
-</a>
-
-
-<a href="pelatihan.html">
-Pelatihan Pajak
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-<a href="tanyakami.html" class="nav-cta">Tanya Kami</a>
-
-
-
-</nav>
-
-
-</div>
-
-
+  </div>
 </header>
 
+<div class="nav-overlay" hidden></div>
 
-
-<div class="nav-overlay"></div>
+<main id="main">
 
 <!-- ================= HERO PAGE ================= -->
 <section class="page-hero">
+  <div class="container hero-grid">
 
-<div class="container hero-grid">
-
-    <!-- TEXT -->
     <div class="hero-content">
 
-        <span class="hero-badge">
-            LAYANAN PROFESIONAL
-        </span>
+      <span class="hero-badge">LAYANAN PROFESIONAL</span>
 
-        <h1>
+      <h1>
+        Sengketa Pajak
+        <span>Pendampingan Profesional Hingga Tuntas</span>
+      </h1>
 
-            Sengketa Pajak
+      <p>
+        Kami mendampingi wajib pajak dalam menghadapi pemeriksaan,
+        keberatan, banding, hingga penyelesaian sengketa perpajakan
+        dengan strategi yang tepat dan berdasarkan regulasi terbaru.
+      </p>
 
-            <span>
-                Pendampingan Profesional Hingga Tuntas
-            </span>
-
-        </h1>
-
-        <p>
-
-            Kami mendampingi wajib pajak dalam menghadapi pemeriksaan,
-            keberatan, banding, hingga penyelesaian sengketa perpajakan
-            dengan strategi yang tepat dan berdasarkan regulasi terbaru.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="tanyakami.html" class="hero-btn">
-                Konsultasi Sekarang
-            </a>
-
-            <a href="https://wa.me/6282129811869"
-               class="hero-btn-outline">
-                Hubungi Kami
-            </a>
-
-        </div>
+      <div class="hero-buttons">
+        <a href="tanyakami.html" class="hero-btn">Konsultasi Sekarang</a>
+        <a href="https://wa.me/6282129811869" class="hero-btn-outline">Hubungi Kami</a>
+      </div>
 
     </div>
-
-    <!-- IMAGE -->
 
     <div class="hero-image">
+      <img src="assets/sengketa-1.png" alt="Sengketa Pajak">
 
-        <img src="assets/sengketa-1.png"
-             alt="Sengketa Pajak">
-
-        <div class="hero-card">
-
-            <strong>100+</strong>
-
-            <span>
-                Pendampingan Pajak
-            </span>
-
-        </div>
-
+      <div class="hero-card">
+        <strong>100+</strong>
+        <span>Pendampingan Pajak</span>
+      </div>
     </div>
 
-</div>
-
+  </div>
 </section>
-
-<!-- ================= CONTENT ================= -->
-
 
 <!-- =====================================================
-HERO PREMIUM SLIDE 2
+     HERO PREMIUM SLIDE 2
 ===================================================== -->
 <section class="sengketa-premium">
-
-    <div class="container">
-
-        <div class="premium-grid">
-
-            <!-- =======================================
-            LEFT
-            ======================================== -->
-            <div class="premium-left">
-
-                <span class="premium-badge">
-                    LAYANAN SENGKETA PAJAK
-                </span>
-
-                <h2 class="premium-title">
-                    Kami Hadir,<br>
-
-                    Menjadi Solusi
-
-                    <span>Sengketa Pajak Anda</span>
-
-                </h2>
-
-                <p class="premium-desc">
-
-                    Kami membantu wajib pajak menghadapi proses
-                    pemeriksaan, keberatan, banding hingga
-                    peninjauan kembali dengan strategi yang tepat,
-                    komunikasi profesional, serta pendampingan
-                    sesuai ketentuan perpajakan Indonesia.
-
-                </p>
-
-                <!-- CARD -->
-
-                <div class="premium-service">
-
-                    <div class="service-top">
-
-                        <div class="service-icon">
-
-                            <svg
-                                width="34"
-                                height="34"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                viewBox="0 0 24 24">
-
-                                <path d="M8 3h8l4 4v14H4V3h4z"/>
-
-                                <path d="M8 13h8"/>
-
-                                <path d="M8 17h5"/>
-
-                                <path d="M8 9h4"/>
-
-                            </svg>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-
-                                Pendampingan Pemeriksaan
-
-                            </h3>
-
-                            <p>
-
-                                Solusi profesional mulai dari
-                                persiapan dokumen hingga
-                                penyelesaian sengketa perpajakan.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="service-list">
-
-                        <div>
-
-                            ✓ Persiapan Dokumen
-
-                        </div>
-
-                        <div>
-
-                            ✓ Pendampingan Pemeriksaan
-
-                        </div>
-
-                        <div>
-
-                            ✓ Komunikasi Dengan Fiskus
-
-                        </div>
-
-                        <div>
-
-                            ✓ Penyusunan Klarifikasi
-
-                        </div>
-
-                        <div>
-
-                            ✓ Strategi Keberatan
-
-                        </div>
-
-                        <div>
-
-                            ✓ Banding Pajak
-
-                        </div>
-
-                    </div>
-
-                    <a href="tanyakami.html" class="premium-btn">
-
-                        Konsultasikan Sekarang
-
-                        <span>→</span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- =======================================
-            RIGHT
-            ======================================== -->
-
-            <div class="premium-right">
-
-                <div class="arch-wrapper">
-
-                    <!-- Background -->
-
-                    <div class="arch-bg"></div>
-
-                    <div class="circle-accent"></div>
-
-                    <!-- IMAGE -->
-
-                    <img
-                        src="assets/sengketa-2.png"
-                        alt="Pendampingan Sengketa Pajak"
-                        class="premium-photo">
-
-                    <!-- CARD 1 -->
-
-                    <div class="floating-card card-left">
-
-                        <div class="floating-icon">
-
-                            🛡
-
-                        </div>
-
-                        <div>
-
-                            <strong>
-
-                                PROFESSIONAL
-
-                            </strong>
-
-                            <span>
-
-                                TAX CONSULTANT
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CARD 2 -->
-
-                    <div class="floating-card card-right">
-
-                        <div class="floating-icon">
-
-                            ✔
-
-                        </div>
-
-                        <div>
-
-                            <strong>
-
-                                AMANAH
-
-                            </strong>
-
-                            <span>
-
-                                Berpengalaman & Terpercaya
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- =====================================
-        BOTTOM INFO
-        ====================================== -->
-
-        <div class="premium-features">
-
-            <div class="feature-item">
-
-                <div class="feature-circle">
-
-                    🛡
-
-                </div>
-
-                <div>
-
-                    <strong>
-
-                        BERPENGALAMAN
-
-                    </strong>
-
-                    <p>
-
-                        Menangani berbagai sengketa perpajakan.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="feature-item">
-
-                <div class="feature-circle">
-
-                    🎯
-
-                </div>
-
-                <div>
-
-                    <strong>
-
-                        STRATEGIS
-
-                    </strong>
-
-                    <p>
-
-                        Solusi terbaik sesuai kondisi klien.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="feature-item">
-
-                <div class="feature-circle">
-
-                    ⚖
-
-                </div>
-
-                <div>
-
-                    <strong>
-
-                        SESUAI REGULASI
-
-                    </strong>
-
-                    <p>
-
-                        Mengacu pada ketentuan perpajakan terbaru.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-    <!-- ===========================================================
-SHOWCASE PENGAJUAN KEBERATAN & BANDING
-=========================================================== -->
-
-<section class="sengketa-showcase">
-
-<div class="container">
-
-    <!-- ==========================================
-    TOP AREA
-    =========================================== -->
-
-    <div class="showcase-top">
-
-        <!-- ===========================
-        LEFT IMAGE
-        ============================ -->
-
-        <div class="showcase-photo">
-
-            <div class="photo-frame">
-
-                <img src="assets/sengketa-3.png"
-                     alt="Pengajuan Keberatan">
-
-            </div>
-
-            <!-- FLOATING CARD -->
-
-            <div class="photo-card">
-
-                <div class="photo-icon">
-
-                    <svg width="44"
-                         height="44"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         viewBox="0 0 24 24">
-
-                        <path d="M8 3h8l4 4v14H4V3h4z"/>
-
-                        <path d="M8 9h5"/>
-
-                        <path d="M8 13h8"/>
-
-                        <path d="M8 17h6"/>
-
-                    </svg>
-
-                </div>
-
-                <div>
-
-                    <h4>
-
-                        Solusi Profesional
-
-                    </h4>
-
-                    <p>
-
-                        Pendampingan menyeluruh untuk
-                        penyelesaian sengketa perpajakan.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- ===========================
-        RIGHT CONTENT
-        ============================ -->
-
-        <div class="showcase-content">
-
-            <span class="showcase-label">
-
-                LAYANAN SENGKETA PAJAK
-
-            </span>
-
-            <h2>
-
-                Pengajuan
-
-                <span>
-
-                    Keberatan & Banding
-
-                </span>
-
-            </h2>
-
-            <p class="showcase-desc">
-
-                Kami membantu wajib pajak dalam proses
-                pengajuan keberatan maupun banding pajak
-                secara profesional, terstruktur,
-                sesuai regulasi perpajakan,
-                dan didampingi konsultan berpengalaman.
-
-            </p>
-
-            <!-- ===========================
-            MINI FEATURE
-            ============================ -->
-
-            <div class="mini-feature-wrap">
-
-                <div class="mini-feature">
-
-                    <div class="mini-icon">
-
-                        🛡️
-
-                    </div>
-
-                    <div>
-
-                        <strong>
-
-                            Profesional
-
-                        </strong>
-
-                        <span>
-
-                            Ditangani oleh tim
-                            konsultan berpengalaman
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <div class="mini-feature">
-
-                    <div class="mini-icon">
-
-                        🎯
-
-                    </div>
-
-                    <div>
-
-                        <strong>
-
-                            Tepat & Akurat
-
-                        </strong>
-
-                        <span>
-
-                            Analisa sesuai
-                            regulasi perpajakan
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <div class="mini-feature">
-
-                    <div class="mini-icon">
-
-                        🔒
-
-                    </div>
-
-                    <div>
-
-                        <strong>
-
-                            Aman & Terpercaya
-
-                        </strong>
-
-                        <span>
-
-                            Kerahasiaan data
-                            klien terjamin
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- ==========================================
-    CARD BESAR
-    =========================================== -->
-
-    <div class="showcase-box">
-
-        <!-- ===========================
-        TAB
-        ============================ -->
-
-        <div class="showcase-tabs">
-
-            <button
-                class="show-tab active"
-                type="button">
-
-                <span>
-
-                    📄
-
-                </span>
-
-                Pengajuan Keberatan
-
-            </button>
-
-            <button
-                class="show-tab"
-                type="button">
-
-                <span>
-
-                    ⚖️
-
-                </span>
-
-                Pengajuan Banding
-
-            </button>
-
-        </div>
-
-        <!-- ===========================
-        CONTENT WRAP
-        ============================ -->
-
-        <div class="showcase-services">
-                      <!-- =====================================================
-            KOLOM KIRI
-            ====================================================== -->
-
-            <div class="showcase-service">
-
-                <div class="service-header">
-
-                    <div class="service-icon">
-
-                        <svg width="42"
-                             height="42"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             viewBox="0 0 24 24">
-
-                            <path d="M8 3h8l4 4v14H4V3h4z"/>
-                            <path d="M8 9h5"/>
-                            <path d="M8 13h8"/>
-                            <path d="M8 17h6"/>
-
-                        </svg>
-
-                    </div>
-
-                    <div>
-
-                        <h3>
-
-                            Pengajuan Keberatan
-
-                        </h3>
-
-                        <p>
-
-                            Membantu penyusunan dan pengajuan
-                            keberatan pajak berdasarkan analisa
-                            profesional terhadap ketetapan pajak
-                            yang diterbitkan oleh otoritas pajak.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="service-title">
-
-                    Layanan Kami
-
-                </div>
-
-                <ul class="service-list">
-
-                    <li>Analisa ketetapan pajak</li>
-
-                    <li>Penyusunan surat keberatan</li>
-
-                    <li>Pendampingan selama proses keberatan</li>
-
-                    <li>Monitoring proses hingga selesai</li>
-
-                </ul>
-
-                </a>
-
-            </div>
-
-            <!-- =====================================================
-            KOLOM KANAN
-            ====================================================== -->
-
-            <div class="showcase-service">
-
-                <div class="service-header">
-
-                    <div class="service-icon">
-
-                        <svg width="42"
-                             height="42"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             viewBox="0 0 24 24">
-
-                            <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/>
-
-                        </svg>
-
-                    </div>
-
-                    <div>
-
-                        <h3>
-
-                            Pengajuan Banding
-
-                        </h3>
-
-                        <p>
-
-                            Memberikan pendampingan dalam proses
-                            banding pajak termasuk penyusunan
-                            argumentasi hukum, memori banding,
-                            hingga pendampingan persidangan.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="service-title">
-
-                    Layanan Kami
-
-                </div>
-
-                <ul class="service-list">
-
-                    <li>Analisa putusan keberatan</li>
-
-                    <li>Penyusunan memori banding</li>
-
-                    <li>Pendampingan sidang banding</li>
-
-                    <li>Monitoring proses banding</li>
-
-                </ul>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-      <!-- ==========================================
-    BENEFIT
-    =========================================== -->
-
-    <div class="showcase-benefits">
-
-        <!-- ITEM -->
-
-        <div class="benefit-card">
-
-            <div class="benefit-icon">
-
-                🛡
-
-            </div>
-
-            <div class="benefit-content">
-
-                <h3>
-
-                    Berpengalaman
-
-                </h3>
-
-                <p>
-
-                    Didukung konsultan pajak profesional
-                    dengan pengalaman menangani berbagai
-                    sengketa perpajakan perusahaan maupun individu.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-
-        <div class="benefit-card">
-
-            <div class="benefit-icon">
-
-                🎯
-
-            </div>
-
-            <div class="benefit-content">
-
-                <h3>
-
-                    Strategis
-
-                </h3>
-
-                <p>
-
-                    Setiap kasus dianalisa secara mendalam
-                    sehingga solusi yang diberikan tepat,
-                    efektif dan sesuai kebutuhan klien.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- ITEM -->
-
-        <div class="benefit-card">
-
-            <div class="benefit-icon">
-
-                ⚖
-
-            </div>
-
-            <div class="benefit-content">
-
-                <h3>
-
-                    Sesuai Regulasi
-
-                </h3>
-
-                <p>
-
-                    Seluruh proses mengacu pada ketentuan
-                    perpajakan terbaru sehingga memberikan
-                    rasa aman bagi wajib pajak.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ==========================================
-    CTA
-    =========================================== -->
-
-    <div class="showcase-cta">
-
-        <div class="cta-left">
-
-            <div class="cta-icon">
-
-                <svg width="40"
-                     height="40"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2"
-                     viewBox="0 0 24 24">
-
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2
-                    19.86 19.86 0 0 1-8.63-3.07
-                    19.5 19.5 0 0 1-6-6
-                    19.86 19.86 0 0 1-3.07-8.67
-                    A2 2 0 0 1 4.11 2h3
-                    a2 2 0 0 1 2 1.72
-                    c.12.89.33 1.76.63 2.6
-                    a2 2 0 0 1-.45 2.11L8.09 9.91
-                    a16 16 0 0 0 6 6l1.48-1.2
-                    a2 2 0 0 1 2.11-.45
-                    c.84.3 1.71.51 2.6.63
-                    A2 2 0 0 1 22 16.92z"/>
-
-                </svg>
-
+  <div class="container">
+
+    <div class="premium-grid">
+
+      <!-- LEFT -->
+      <div class="premium-left">
+
+        <span class="premium-badge">LAYANAN SENGKETA PAJAK</span>
+
+        <h2 class="premium-title">
+          Kami Hadir,<br>
+          Menjadi Solusi
+          <span>Sengketa Pajak Anda</span>
+        </h2>
+
+        <p class="premium-desc">
+          Kami membantu wajib pajak menghadapi proses
+          pemeriksaan, keberatan, banding hingga
+          peninjauan kembali dengan strategi yang tepat,
+          komunikasi profesional, serta pendampingan
+          sesuai ketentuan perpajakan Indonesia.
+        </p>
+
+        <div class="premium-service">
+
+          <div class="service-top">
+            <div class="service-icon">
+              <svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M8 3h8l4 4v14H4V3h4z"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+                <path d="M8 9h4"/>
+              </svg>
             </div>
 
             <div>
-
-                <span class="cta-small">
-
-                    Konsultasi Sengketa Pajak
-
-                </span>
-
-                <h2>
-
-                    Butuh Bantuan Menyelesaikan
-                    Sengketa Pajak?
-
-                </h2>
-
-                <p>
-
-                    Tim PT Idola Makmur Solusindo siap
-                    mendampingi proses pemeriksaan,
-                    keberatan hingga banding pajak
-                    secara profesional.
-
-                </p>
-
+              <h3>Pendampingan Pemeriksaan</h3>
+              <p>Solusi profesional mulai dari persiapan dokumen hingga penyelesaian sengketa perpajakan.</p>
             </div>
+          </div>
+
+          <div class="service-list">
+            <div>✓ Persiapan Dokumen</div>
+            <div>✓ Pendampingan Pemeriksaan</div>
+            <div>✓ Komunikasi Dengan Fiskus</div>
+            <div>✓ Penyusunan Klarifikasi</div>
+            <div>✓ Strategi Keberatan</div>
+            <div>✓ Banding Pajak</div>
+          </div>
+
+          <a href="tanyakami.html" class="premium-btn">
+            Konsultasikan Sekarang
+            <span>→</span>
+          </a>
 
         </div>
 
-        <div class="cta-right">
+      </div>
 
-            <a href="tanyakami.html"
-               class="cta-main-btn">
+      <!-- RIGHT -->
+      <div class="premium-right">
+        <div class="arch-wrapper">
 
-                Konsultasi Sekarang
+          <div class="arch-bg"></div>
+          <div class="circle-accent"></div>
 
-            </a>
+          <img src="assets/sengketa-2.png" alt="Pendampingan Sengketa Pajak" class="premium-photo">
 
-            <a href="https://wa.me/6282129811869"
-               class="cta-outline-btn">
+          <div class="floating-card card-left">
+            <div class="floating-icon">🛡</div>
+            <div>
+              <strong>PROFESSIONAL</strong>
+              <span>TAX CONSULTANT</span>
+            </div>
+          </div>
 
-                Hubungi WhatsApp
-
-            </a>
+          <div class="floating-card card-right">
+            <div class="floating-icon">✔</div>
+            <div>
+              <strong>AMANAH</strong>
+              <span>Berpengalaman &amp; Terpercaya</span>
+            </div>
+          </div>
 
         </div>
+      </div>
 
     </div>
 
-</div>
+    <!-- BOTTOM INFO -->
+    <div class="premium-features">
 
+      <div class="feature-item">
+        <div class="feature-circle">🛡</div>
+        <div>
+          <strong>BERPENGALAMAN</strong>
+          <p>Menangani berbagai sengketa perpajakan.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-circle">🎯</div>
+        <div>
+          <strong>STRATEGIS</strong>
+          <p>Solusi terbaik sesuai kondisi klien.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-circle">⚖</div>
+        <div>
+          <strong>SESUAI REGULASI</strong>
+          <p>Mengacu pada ketentuan perpajakan terbaru.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
-<!-- ================= CTA ================= -->
+<!-- ===========================================================
+     SHOWCASE PENGAJUAN KEBERATAN & BANDING
+=========================================================== -->
+<section class="sengketa-showcase">
+  <div class="container">
 
-<!--
-<section class="cta-red-section">
-<div class="container">
-<div class="cta-red-box">
-<div class="cta-red-content">
+    <!-- TOP AREA -->
+    <div class="showcase-top">
 
-<h2>
+      <div class="showcase-photo">
 
-Hadapi Sengketa Pajak Dengan Strategi Yang Tepat
+        <div class="photo-frame">
+          <img src="assets/sengketa-3.png" alt="Pengajuan Keberatan">
+        </div>
 
-</h2>
+        <div class="photo-card">
+          <div class="photo-icon">
+            <svg width="44" height="44" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M8 3h8l4 4v14H4V3h4z"/>
+              <path d="M8 9h5"/>
+              <path d="M8 13h8"/>
+              <path d="M8 17h6"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Solusi Profesional</h4>
+            <p>Pendampingan menyeluruh untuk penyelesaian sengketa perpajakan.</p>
+          </div>
+        </div>
 
+      </div>
 
-<p>
+      <div class="showcase-content">
 
-Percayakan penyelesaian sengketa pajak Anda
-kepada tim profesional PT Idola Makmur Solusindo.
+        <span class="showcase-label">LAYANAN SENGKETA PAJAK</span>
 
-</p>
+        <h2>
+          Pengajuan
+          <span>Keberatan &amp; Banding</span>
+        </h2>
 
-<div class="cta-red-buttons">
-<a href="tanyakami.html" class="hero-btn">
-Konsultasi Gratis
-</a>
+        <p class="showcase-desc">
+          Kami membantu wajib pajak dalam proses
+          pengajuan keberatan maupun banding pajak
+          secara profesional, terstruktur,
+          sesuai regulasi perpajakan,
+          dan didampingi konsultan berpengalaman.
+        </p>
 
-<a href="https://wa.me/6282129811869"
-class="btn-outline">
+        <div class="mini-feature-wrap">
 
-Hubungi Admin
+          <div class="mini-feature">
+            <div class="mini-icon">🛡️</div>
+            <div>
+              <strong>Profesional</strong>
+              <span>Ditangani oleh tim konsultan berpengalaman</span>
+            </div>
+          </div>
 
-</a>
+          <div class="mini-feature">
+            <div class="mini-icon">🎯</div>
+            <div>
+              <strong>Tepat &amp; Akurat</strong>
+              <span>Analisa sesuai regulasi perpajakan</span>
+            </div>
+          </div>
 
+          <div class="mini-feature">
+            <div class="mini-icon">🔒</div>
+            <div>
+              <strong>Aman &amp; Terpercaya</strong>
+              <span>Kerahasiaan data klien terjamin</span>
+            </div>
+          </div>
 
-</div>
+        </div>
 
+      </div>
 
-</div>
+    </div>
 
+    <!-- CARD BESAR -->
+    <div class="showcase-box">
 
+      <div class="showcase-tabs">
+        <button class="show-tab active" type="button"><span>📄</span> Pengajuan Keberatan</button>
+        <button class="show-tab" type="button"><span>⚖️</span> Pengajuan Banding</button>
+      </div>
 
+      <div class="showcase-services">
 
-<div class="cta-red-image">
+        <div class="showcase-service">
+          <div class="service-header">
+            <div class="service-icon">
+              <svg width="42" height="42" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M8 3h8l4 4v14H4V3h4z"/>
+                <path d="M8 9h5"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Pengajuan Keberatan</h3>
+              <p>Membantu penyusunan dan pengajuan keberatan pajak berdasarkan analisa profesional terhadap ketetapan pajak yang diterbitkan oleh otoritas pajak.</p>
+            </div>
+          </div>
 
+          <div class="service-title">Layanan Kami</div>
+          <ul class="service-list">
+            <li>Analisa ketetapan pajak</li>
+            <li>Penyusunan surat keberatan</li>
+            <li>Pendampingan selama proses keberatan</li>
+            <li>Monitoring proses hingga selesai</li>
+          </ul>
+        </div>
 
-<img src="assets/pic5.png"
-alt="Konsultan Pajak IMS">
+        <div class="showcase-service">
+          <div class="service-header">
+            <div class="service-icon">
+              <svg width="42" height="42" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Pengajuan Banding</h3>
+              <p>Memberikan pendampingan dalam proses banding pajak termasuk penyusunan argumentasi hukum, memori banding, hingga pendampingan persidangan.</p>
+            </div>
+          </div>
 
-</div>
+          <div class="service-title">Layanan Kami</div>
+          <ul class="service-list">
+            <li>Analisa putusan keberatan</li>
+            <li>Penyusunan memori banding</li>
+            <li>Pendampingan sidang banding</li>
+            <li>Monitoring proses banding</li>
+          </ul>
+        </div>
 
+      </div>
+    </div>
 
+    <!-- BENEFIT -->
+    <div class="showcase-benefits">
 
-</div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡</div>
+        <div class="benefit-content">
+          <h3>Berpengalaman</h3>
+          <p>Didukung konsultan pajak profesional dengan pengalaman menangani berbagai sengketa perpajakan perusahaan maupun individu.</p>
+        </div>
+      </div>
 
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-content">
+          <h3>Strategis</h3>
+          <p>Setiap kasus dianalisa secara mendalam sehingga solusi yang diberikan tepat, efektif dan sesuai kebutuhan klien.</p>
+        </div>
+      </div>
 
-</div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚖</div>
+        <div class="benefit-content">
+          <h3>Sesuai Regulasi</h3>
+          <p>Seluruh proses mengacu pada ketentuan perpajakan terbaru sehingga memberikan rasa aman bagi wajib pajak.</p>
+        </div>
+      </div>
 
+    </div>
 
+    <!-- CTA -->
+    <div class="showcase-cta">
+
+      <div class="cta-left">
+        <div class="cta-icon">
+          <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.89.33 1.76.63 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.2a2 2 0 0 1 2.11-.45c.84.3 1.71.51 2.6.63A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+
+        <div>
+          <span class="cta-small">Konsultasi Sengketa Pajak</span>
+          <h2>Butuh Bantuan Menyelesaikan Sengketa Pajak?</h2>
+          <p>Tim PT Idola Makmur Solusindo siap mendampingi proses pemeriksaan, keberatan hingga banding pajak secara profesional.</p>
+        </div>
+      </div>
+
+      <div class="cta-right">
+        <a href="tanyakami.html" class="cta-main-btn">Konsultasi Sekarang</a>
+        <a href="https://wa.me/6282129811869" class="cta-outline-btn">Hubungi WhatsApp</a>
+      </div>
+
+    </div>
+
+  </div>
 </section>
--->
+
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer-modern">
 
   <div class="container footer-grid">
 
-    <!-- KOLOM 1 -->
     <div class="footer-brand">
-
       <div class="footer-logo">
         <img src="assets/logofirma.png" alt="Logo">
         <div>
@@ -1145,60 +450,31 @@ alt="Konsultan Pajak IMS">
         </div>
       </div>
 
-      <h4>
-        PT Idola Makmur Solusindo
-      </h4>
+      <h4>PT Idola Makmur Solusindo</h4>
 
-     <div class="socials">
-
-  <!-- Instagram -->
-  <a href="https://tr.ee/9Zqe-6UAyw" target="_blank" rel="noopener" aria-label="Instagram">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1a1.25 1.25 0 1 0 0 2.5A1.25 1.25 0 0 0 16.5 5zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6z"/>
-    </svg>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://tr.ee/jNnNIstRWU" target="_blank" rel="noopener" aria-label="LinkedIn">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5S1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.53-1 1.84-2.2 3.8-2.2c4.06 0 4.8 2.67 4.8 6.14V24h-4v-7.1c0-1.7-.03-3.88-2.36-3.88c-2.37 0-2.74 1.85-2.74 3.76V24h-4V8z"/>
-    </svg>
-  </a>
-
-  <!-- Facebook -->
-  <a href="https://tr.ee/PLvbKRprcy" target="_blank" rel="noopener" aria-label="Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M22 12A10 10 0 1 0 10.44 21.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89c1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/>
-    </svg>
-  </a>
-
-  <!-- X / Twitter -->
-  <a href="https://tr.ee/SqKLYy2mno" target="_blank" rel="noopener" aria-label="X">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M18.9 2H22l-6.9 7.88L23 22h-6.8l-5.3-6.92L4.8 22H1.7l7.4-8.45L1 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L6.2 3.9H4.2L17.7 20z"/>
-    </svg>
-  </a>
-
-  <!-- YouTube -->
-  <a href="https://tr.ee/SUY4Rzmbqt" target="_blank" rel="noopener" aria-label="YouTube">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2A31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.5v-7l6.1 3.5l-6.1 3.5z"/>
-    </svg>
-  </a>
-
-  <!-- TikTok -->
-  <a href="https://tr.ee/8Pi6Vyrb29" target="_blank" rel="noopener" aria-label="TikTok">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19.59 6.69A4.83 4.83 0 0 1 16 5.26V16a5 5 0 1 1-5-5c.17 0 .34.01.5.03v2.54a2.5 2.5 0 1 0 2 2.43V2h2.5a4.83 4.83 0 0 0 3.59 4.69v0z"/>
-    </svg>
-  </a>
-
-</div>
+      <div class="socials">
+        <a href="https://tr.ee/9Zqe-6UAyw" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4zm8.75 1a1.25 1.25 0 1 0 0 2.5A1.25 1.25 0 0 0 16.5 5zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6z"/></svg>
+        </a>
+        <a href="https://tr.ee/jNnNIstRWU" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5S1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.53-1 1.84-2.2 3.8-2.2c4.06 0 4.8 2.67 4.8 6.14V24h-4v-7.1c0-1.7-.03-3.88-2.36-3.88c-2.37 0-2.74 1.85-2.74 3.76V24h-4V8z"/></svg>
+        </a>
+        <a href="https://tr.ee/PLvbKRprcy" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12A10 10 0 1 0 10.44 21.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89c1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+        </a>
+        <a href="https://tr.ee/SqKLYy2mno" target="_blank" rel="noopener" aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 2H22l-6.9 7.88L23 22h-6.8l-5.3-6.92L4.8 22H1.7l7.4-8.45L1 2h6.9l4.8 6.3L18.9 2zm-1.2 18h1.9L6.2 3.9H4.2L17.7 20z"/></svg>
+        </a>
+        <a href="https://tr.ee/SUY4Rzmbqt" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2A31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.5v-7l6.1 3.5l-6.1 3.5z"/></svg>
+        </a>
+        <a href="https://tr.ee/8Pi6Vyrb29" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69A4.83 4.83 0 0 1 16 5.26V16a5 5 0 1 1-5-5c.17 0 .34.01.5.03v2.54a2.5 2.5 0 1 0 2 2.43V2h2.5a4.83 4.83 0 0 0 3.59 4.69v0z"/></svg>
+        </a>
       </div>
+    </div>
 
-    <!-- KOLOM 2 -->
     <div class="footer-address">
-
       <p>
         <strong>Jakarta:</strong><br>
         Office Park Lantai 22 Suite E,F,G
@@ -1209,43 +485,37 @@ alt="Konsultan Pajak IMS">
         <strong>Jakarta:</strong><br>
         Jalan Utan Kayu Raya No. 38, Matraman, Jakarta Timur
       </p>
-
     </div>
 
-    <!-- KOLOM 3 -->
     <div class="footer-links">
-
       <div>
         <h4>Layanan</h4>
-        <a href="#">Pajak Perusahaan</a>
-        <a href="#">Pajak Individu</a>
-        <a href="#">Konsultasi</a>
+        <a href="konsultasi.html">Pajak Perusahaan</a>
+        <a href="konsultasi.html">Pajak Individu</a>
+        <a href="konsultasi.html">Konsultasi</a>
       </div>
 
       <div>
         <h4>Tentang Kami</h4>
-        <a href="#">Kolaborasi</a>
-        <a href="#">Karir</a>
-        <a href="#">Hubungi Kami</a>
+        <a href="tentang.html">Kolaborasi</a>
+        <a href="tentang.html">Karir</a>
+        <a href="tanyakami.html">Hubungi Kami</a>
       </div>
 
       <div>
         <h4>Tanya Pajak</h4>
-        <a href="#">Forum Diskusi</a>
-        <a href="#">Download</a>
-        <a href="#">Online Learning</a>
+        <a href="tanyakami.html">Forum Diskusi</a>
+        <a href="tanyakami.html">Download</a>
+        <a href="pelatihan.html">Online Learning</a>
       </div>
-
     </div>
 
   </div>
 
-<div class="footer-bottom">
-  <span>© 2018-2026 PT Idola Makmur Solusindo. All rights reserved</span>
-
-  <span>Syarat Layanan</span>
-</div>
-
+  <div class="container footer-bottom">
+    <span>© 2018-2026 PT Idola Makmur Solusindo. All rights reserved</span>
+    <span>Syarat Layanan</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>
