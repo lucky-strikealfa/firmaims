@@ -1,254 +1,287 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ================= FORM GOOGLE SHEET ================= */
-  const form = document.getElementById("form");
-  const msg = document.getElementById("msg");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyU-JaanMbmptpMWWO2RTRtxROnur1xETytTqElS7cscTcG2xQibrcJwJTXLpHjp4uQ1A/exec";
+  /* =========================================================
+     1. HERO SLIDER
+     ========================================================= */
+  (function initSlider() {
 
-  if (form) {
+    var track = document.querySelector(".slides");
+    var slides = document.querySelectorAll(".slide");
+    var dotsBox = document.querySelector(".dots");
+    var slider = document.querySelector(".hero-slider");
 
-    form.addEventListener("submit", async function (e) {
+    if (!track || slides.length < 2 || !slider) return;
 
-      e.preventDefault();
+    var total = slides.length;
+    var index = 0;
+    var timer = null;
+    var DELAY = 6000;
 
-      if (msg) msg.innerHTML = "⏳ Mengirim data...";
-
-      const data = {
-        nama: form.nama.value,
-        email: form.email.value,
-        telp: form.telp.value,
-        subjek: form.subjek.value,
-        pesan: form.pesan.value
-      };
-
-      try {
-
-        await fetch(SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          body: JSON.stringify(data)
+    // buat dots
+    var dots = [];
+    if (dotsBox) {
+      dotsBox.innerHTML = "";
+      for (var i = 0; i < total; i++) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Slide " + (i + 1));
+        dot.dataset.index = i;
+        dot.addEventListener("click", function () {
+          goTo(Number(this.dataset.index));
+          restart();
         });
-
-        if (msg) msg.innerHTML = "✅ Data berhasil dikirim.";
-        form.reset();
-
-      } catch (error) {
-
-        console.error(error);
-        if (msg) msg.innerHTML = "❌ Terjadi kesalahan saat mengirim.";
-
+        dotsBox.appendChild(dot);
+        dots.push(dot);
       }
-
-    });
-
-  }
-
-  /* ================= SCROLL ================= */
-  window.scrollToForm = function () {
-    document.getElementById("kontak")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  /* ================= SLIDER ================= */
-  let index = 0;
-  const slides = document.querySelector(".slides");
-  const slideItems = document.querySelectorAll(".slide");
-  const dotsContainer = document.querySelector(".dots");
-
-  if (slides && slideItems.length && dotsContainer) {
-
-    const total = slideItems.length;
-    let interval;
-
-    // DOTS
-    slideItems.forEach((_, i) => {
-      const dot = document.createElement("span");
-      dot.addEventListener("click", () => {
-        index = i;
-        showSlide();
-        restart();
-      });
-      dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll(".dots span");
-
-    function showSlide() {
-      slides.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach(d => d.classList.remove("active"));
-      if (dots[index]) dots[index].classList.add("active");
     }
 
-    function next() { index = (index + 1) % total; showSlide(); }
-    function prev() { index = (index - 1 + total) % total; showSlide(); }
+    function render() {
+      track.style.transform = "translateX(" + (-index * 100) + "%)";
 
-    function start() { interval = setInterval(next, 4000); }
-    function stop() { clearInterval(interval); }
+      for (var i = 0; i < total; i++) {
+        var isCurrent = i === index;
+        // slide yang tersembunyi tidak boleh bisa di-tab
+        slides[i].setAttribute("aria-hidden", String(!isCurrent));
+        slides[i].querySelectorAll("a, button").forEach(function (el) {
+          el.tabIndex = isCurrent ? 0 : -1;
+        });
+        if (dots[i]) {
+          dots[i].classList.toggle("active", isCurrent);
+          dots[i].setAttribute("aria-current", isCurrent ? "true" : "false");
+        }
+      }
+    }
+
+    function goTo(i) { index = (i + total) % total; render(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    function start() { if (!reduceMotion) timer = setInterval(next, DELAY); }
+    function stop() { clearInterval(timer); timer = null; }
     function restart() { stop(); start(); }
 
-    document.querySelector(".next")?.addEventListener("click", () => { next(); restart(); });
-    document.querySelector(".prev")?.addEventListener("click", () => { prev(); restart(); });
+    var btnNext = slider.querySelector(".next");
+    var btnPrev = slider.querySelector(".prev");
+    if (btnNext) btnNext.addEventListener("click", function () { next(); restart(); });
+    if (btnPrev) btnPrev.addEventListener("click", function () { prev(); restart(); });
 
-    const slider = document.querySelector(".hero-slider");
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", start);
+    slider.addEventListener("focusin", stop);
 
-    if (slider) {
-      slider.addEventListener("mouseenter", stop);
-      slider.addEventListener("mouseleave", start);
+    // swipe di HP
+    var startX = 0, startY = 0, tracking = false;
 
-      /* GESER (SWIPE) DI HP — panah kiri/kanan disembunyikan di mobile,
-         jadi sebelumnya slider cuma bisa nunggu auto-play. */
-      let startX = 0;
-      let startY = 0;
-      let tracking = false;
+    slider.addEventListener("touchstart", function (e) {
+      if (e.touches.length !== 1) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      tracking = true;
+      stop();
+    }, { passive: true });
 
-      slider.addEventListener("touchstart", (e) => {
-        if (e.touches.length !== 1) return;
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-        tracking = true;
-        stop();
-      }, { passive: true });
+    slider.addEventListener("touchend", function (e) {
+      if (!tracking) return;
+      tracking = false;
 
-      slider.addEventListener("touchend", (e) => {
-        if (!tracking) return;
-        tracking = false;
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
 
-        const dx = e.changedTouches[0].clientX - startX;
-        const dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) { next(); } else { prev(); }
+      }
+      restart();
+    }, { passive: true });
 
-        // hanya dianggap swipe kalau gerak horizontalnya dominan
-        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
-          dx < 0 ? next() : prev();
-        }
+    // panah keyboard saat slider difokus
+    slider.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { next(); restart(); }
+      if (e.key === "ArrowLeft") { prev(); restart(); }
+    });
 
-        restart();
-      }, { passive: true });
+    // hemat baterai: berhenti kalau tab tidak aktif
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { stop(); } else { restart(); }
+    });
 
-      // hemat baterai: berhenti kalau tab tidak aktif
-      document.addEventListener("visibilitychange", () => {
-        document.hidden ? stop() : restart();
-      });
-    }
-
-    showSlide();
+    render();
     start();
-  }
+  })();
 
-  /* ================= MENU MOBILE ================= */
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
-  const overlay = document.querySelector(".nav-overlay");
+  /* =========================================================
+     2. MENU MOBILE
+     ========================================================= */
+  (function initMenu() {
 
-  if (toggle && menu) {
+    var toggle = document.getElementById("menu-toggle");
+    var menu = document.getElementById("menu");
+    var overlay = document.querySelector(".nav-overlay");
+
+    if (!toggle || !menu) return;
 
     function openMenu() {
       menu.classList.add("active");
       document.body.classList.add("menu-open");
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Tutup menu");
+      if (overlay) overlay.hidden = false;
     }
 
     function closeMenu() {
       menu.classList.remove("active");
       document.body.classList.remove("menu-open");
-      document.querySelectorAll(".dropdown.active")
-        .forEach(d => d.classList.remove("active"));
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Buka menu");
+      if (overlay) overlay.hidden = true;
+      menu.querySelectorAll(".dropdown.active").forEach(function (d) {
+        d.classList.remove("active");
+        var b = d.querySelector(".dropdown-toggle");
+        if (b) b.setAttribute("aria-expanded", "false");
+      });
     }
 
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", function () {
       menu.classList.contains("active") ? closeMenu() : openMenu();
     });
 
-    // klik link mana pun (termasuk di dalam dropdown) → tutup
-    menu.querySelectorAll("a").forEach(link => {
+    menu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", closeMenu);
     });
 
-    // klik area gelap di luar menu → tutup
-    overlay?.addEventListener("click", closeMenu);
+    if (overlay) overlay.addEventListener("click", closeMenu);
 
-    // tombol Esc → tutup
-    document.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
     });
 
-    // kalau layar diputar / diperbesar ke ukuran desktop, reset state
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function () {
       if (window.innerWidth > 991) closeMenu();
     });
-  }
 
-  /* ================= DROPDOWN MOBILE ================= */
-  document.querySelectorAll(".dropdown-toggle").forEach(btn => {
-
-    btn.addEventListener("click", function (e) {
-      if (window.innerWidth <= 991) {
+    // dropdown: klik hanya aktif di mobile, desktop pakai hover/focus
+    menu.querySelectorAll(".dropdown-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        if (window.innerWidth > 991) return;
         e.preventDefault();
-        this.parentElement.classList.toggle("active");
-      }
+        var parent = this.parentElement;
+        var willOpen = !parent.classList.contains("active");
+        parent.classList.toggle("active", willOpen);
+        this.setAttribute("aria-expanded", String(willOpen));
+      });
     });
+  })();
 
-  });
+  /* =========================================================
+     3. REVEAL SAAT SCROLL
+     Sekali muncul, tetap muncul (versi lama pakai toggle,
+     jadi konten hilang lagi kalau di-scroll ke atas).
+     ========================================================= */
+  (function initReveal() {
 
-  /* ================= SCROLL ANIMATION ================= */
-  const revealEls = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right, .reveal-zoom"
-  );
+    var items = document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-zoom");
+    if (!items.length) return;
 
-  if (revealEls.length) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      items.forEach(function (el) { el.classList.add("active"); });
+      return;
+    }
 
-    const reduceMotion =
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
 
-    if (reduceMotion) {
-      revealEls.forEach(el => el.classList.add("active"));
-    } else {
+    items.forEach(function (el) { observer.observe(el); });
+  })();
 
-      /* threshold 0.2 bikin elemen panjang (kolom teks di HP) kadang
-         tidak pernah kena trigger, jadi isinya tetap opacity:0 alias
-         kelihatan hilang. Pakai threshold 0 + rootMargin. */
-      const observer = new IntersectionObserver((entries) => {
+  /* =========================================================
+     4. FAQ ACCORDION
+     ========================================================= */
+  (function initFaq() {
 
-        entries.forEach(entry => {
-          entry.target.classList.toggle("active", entry.isIntersecting);
+    var items = document.querySelectorAll(".faq-item");
+    if (!items.length) return;
+
+    items.forEach(function (item) {
+
+      var btn = item.querySelector(".faq-question");
+      var answer = item.querySelector(".faq-answer");
+      if (!btn || !answer) return;
+
+      btn.setAttribute("aria-expanded", "false");
+
+      btn.addEventListener("click", function () {
+        var wasActive = item.classList.contains("active");
+
+        items.forEach(function (other) {
+          other.classList.remove("active");
+          var a = other.querySelector(".faq-answer");
+          var b = other.querySelector(".faq-question");
+          if (a) a.style.maxHeight = null;
+          if (b) b.setAttribute("aria-expanded", "false");
         });
 
-      }, {
-        threshold: 0,
-        rootMargin: "0px 0px -8% 0px"
+        if (!wasActive) {
+          item.classList.add("active");
+          answer.style.maxHeight = answer.scrollHeight + 40 + "px";
+          btn.setAttribute("aria-expanded", "true");
+        }
       });
-
-      revealEls.forEach(el => observer.observe(el));
-    }
-  }
-
-  /* ================= FAQ ACCORDION ================= */
-  const faqItems = document.querySelectorAll(".faq-item");
-
-  faqItems.forEach(item => {
-
-    const btn = item.querySelector(".faq-question");
-    const answer = item.querySelector(".faq-answer");
-
-    // sebelumnya tanpa guard ini, satu .faq-item tanpa tombol
-    // bikin seluruh script setelahnya mati
-    if (!btn || !answer) return;
-
-    btn.addEventListener("click", () => {
-
-      const isActive = item.classList.contains("active");
-
-      faqItems.forEach(i => {
-        i.classList.remove("active");
-        const a = i.querySelector(".faq-answer");
-        if (a) a.style.maxHeight = null;
-      });
-
-      if (!isActive) {
-        item.classList.add("active");
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
-
     });
 
-  });
+    // kalau layar diputar, tinggi jawaban yang terbuka dihitung ulang
+    window.addEventListener("resize", function () {
+      var open = document.querySelector(".faq-item.active .faq-answer");
+      if (open) open.style.maxHeight = open.scrollHeight + 40 + "px";
+    });
+  })();
+
+  /* =========================================================
+     5. FORM KE GOOGLE SHEET
+     ========================================================= */
+  (function initForm() {
+
+    var form = document.getElementById("form");
+    var msg = document.getElementById("msg");
+    if (!form) return;
+
+    var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyU-JaanMbmptpMWWO2RTRtxROnur1xETytTqElS7cscTcG2xQibrcJwJTXLpHjp4uQ1A/exec";
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var button = form.querySelector("button[type=submit], button");
+      if (button) button.disabled = true;
+      if (msg) msg.textContent = "Mengirim data...";
+
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
+      }).then(function () {
+        if (msg) msg.textContent = "Pesan terkirim. Kami akan menghubungi Anda kembali.";
+        form.reset();
+      }).catch(function (error) {
+        console.error(error);
+        if (msg) msg.textContent = "Pengiriman gagal. Coba lagi, atau hubungi kami lewat WhatsApp.";
+      }).finally(function () {
+        if (button) button.disabled = false;
+      });
+    });
+  })();
+
+  /* kompatibilitas halaman lama */
+  window.scrollToForm = function () {
+    var target = document.getElementById("kontak") || document.getElementById("form-pertanyaan");
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+  };
 
 });
