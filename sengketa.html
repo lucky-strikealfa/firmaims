@@ -23,6 +23,8 @@
 
 <body>
 
+<a href="#main" class="skip-link">Lompat ke konten</a>
+
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/6282129811869" target="_blank" rel="noopener" class="wa-float" aria-label="Chat WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -31,44 +33,47 @@
 </a>
 
 <!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container nav-bar nav">
+<header>
 
-    <a class="logo" href="index.html">
+  <div class="container nav">
+
+    <div class="logo">
       <img src="assets/logofirma.png" alt="Logo IMS">
       <span class="logo-text">Firma Idola Makmur Solusindo</span>
-    </a>
+    </div>
 
-    <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
-      <span class="menu-toggle-bar"></span>
-    </button>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu">☰</button>
 
-    <nav id="menu" aria-label="Menu utama">
+    <nav id="menu">
+
       <a href="index.html">Beranda</a>
       <a href="tentang.html">Tentang</a>
 
       <div class="dropdown">
-        <button class="dropdown-toggle" type="button" aria-expanded="false">
-          Layanan
-          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+
+        <button class="dropdown-toggle" type="button">
+          Layanan ▾
         </button>
 
         <div class="dropdown-menu">
           <a href="konsultasi.html">Konsultasi Pajak</a>
-          <a href="sengketa.html" class="is-current">Sengketa Pajak</a>
+          <a href="sengketa.html">Sengketa Pajak</a>
           <a href="akuntansi.html">Akuntansi &amp; Audit</a>
           <a href="transfer.html">Transfer Pricing</a>
           <a href="pelatihan.html">Pelatihan Pajak</a>
         </div>
+
       </div>
 
       <a href="tanyakami.html" class="nav-cta">Tanya Kami</a>
+
     </nav>
 
   </div>
+
 </header>
 
-<div class="nav-overlay" hidden></div>
+<div class="nav-overlay"></div>
 
 <main id="main">
 
