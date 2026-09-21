@@ -938,22 +938,24 @@ img {
     }
 
     .hero-right {
-        min-height: 420px;
+        min-height: 460px;
         margin-top: 10px;
     }
 
     .circle-bg {
-        width: 320px;
-        height: 320px;
+        width: 360px;
+        height: 360px;
+        top: 50%;
         right: 50%;
-        transform: translateX(50%);
+        transform: translate(50%, -50%);
     }
 
     .circle-outline {
-        width: 380px;
-        height: 380px;
+        width: 420px;
+        height: 420px;
+        top: 50%;
         right: 50%;
-        transform: translateX(50%);
+        transform: translate(50%, -50%);
     }
 
     .dot-pattern {
@@ -963,7 +965,7 @@ img {
     .hero-photo {
         right: 50%;
         transform: translateX(50%);
-        width: 340px;
+        width: 400px;
     }
 
     .floating-card {
@@ -1079,21 +1081,21 @@ img {
     }
 
     .hero-right {
-        min-height: 320px;
+        min-height: 380px;
     }
 
     .circle-bg {
-        width: 240px;
-        height: 240px;
+        width: 300px;
+        height: 300px;
     }
 
     .circle-outline {
-        width: 290px;
-        height: 290px;
+        width: 350px;
+        height: 350px;
     }
 
     .hero-photo {
-        width: 260px;
+        width: 330px;
     }
 
     .hero-wave svg {
@@ -1143,18 +1145,22 @@ img {
 
 @media (max-width: 480px) {
 
+    .hero-right {
+        min-height: 320px;
+    }
+
     .hero-photo {
-        width: 220px;
+        width: 270px;
     }
 
     .circle-bg {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 
     .circle-outline {
-        width: 240px;
-        height: 240px;
+        width: 290px;
+        height: 290px;
     }
 
     .btn-premium {
