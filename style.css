@@ -1689,14 +1689,15 @@ form button:active {
 
   .slides {
     min-height: auto !important;
+    align-items: stretch;
   }
 
   .slide {
-    min-height: auto !important;
+    min-height: 600px;
     height: auto !important;
     display: flex !important;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 28px 7% 8px;
@@ -1841,6 +1842,7 @@ form button:active {
   .about-card p { font-size: 13px; }
 
   .slide-bg { height: 320px !important; max-width: 70%; }
+  .slide { min-height: 640px; }
   .caption h1 { font-size: 40px; }
   .caption p { font-size: 17px; }
 }
@@ -1852,7 +1854,7 @@ form button:active {
 
 /* MOBILE (MAX-WIDTH: 767PX) */
 @media (max-width: 767px) {
-  .slide { padding: 24px 6% 6px; }
+  .slide { padding: 24px 6% 6px; min-height: 540px; }
   .slide-bg { height: 210px !important; max-width: 85%; margin: 0 auto 18px !important; }
 
   .caption h1 { font-size: 28px; }
@@ -1943,7 +1945,7 @@ form button:active {
 
 /* SMALL MOBILE (MAX-WIDTH: 480PX) */
 @media (max-width: 480px) {
-  .slide { padding: 20px 6% 4px; }
+  .slide { padding: 20px 6% 4px; min-height: 480px; }
   .slide-bg { height: 170px !important; max-width: 88%; margin: 0 auto 14px !important; }
 
   .logo-text { font-size: 13px; }
