@@ -46,7 +46,6 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: var(--text);
-    /* cegah geser ke samping di HP */
     overflow-x: hidden;
 }
 
@@ -64,7 +63,7 @@ img {
 
 
 /* ==========================================================
-   3. SECTION TITLE (dipakai beberapa section)
+   3. SECTION TITLE
 ========================================================== */
 
 .section-title {
@@ -109,8 +108,6 @@ img {
             #ffffff 100%);
 }
 
-/* Background blur */
-
 .hero-shape {
     position: absolute;
     border-radius: 50%;
@@ -136,8 +133,6 @@ img {
     opacity: .08;
 }
 
-/* Grid */
-
 .hero-grid {
     position: relative;
     z-index: 5;
@@ -146,8 +141,6 @@ img {
     gap: 70px;
     align-items: center;
 }
-
-/* Content */
 
 .hero-content {
     position: relative;
@@ -198,8 +191,6 @@ img {
     margin-bottom: 38px;
 }
 
-/* Button */
-
 .hero-button {
     display: flex;
     flex-wrap: wrap;
@@ -223,8 +214,6 @@ img {
 .btn-primary:hover {
     transform: translateY(-5px);
 }
-
-/* Image */
 
 .hero-image {
     position: relative;
@@ -267,8 +256,6 @@ img {
         transform: translateY(-15px);
     }
 }
-
-/* Wave */
 
 .hero-wave {
     position: absolute;
@@ -412,8 +399,6 @@ img {
     align-items: center;
 }
 
-/* Image */
-
 .about-left {
     position: relative;
     display: flex;
@@ -440,8 +425,6 @@ img {
     max-width: 520px;
     animation: heroFloat 6s ease-in-out infinite;
 }
-
-/* Content */
 
 .about-right {
     position: relative;
@@ -480,8 +463,6 @@ img {
     color: var(--text);
     max-width: 620px;
 }
-
-/* Stat */
 
 .about-stat-grid {
     display: grid;
@@ -953,8 +934,6 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-/* Right box */
-
 .highlight-box {
     position: relative;
     overflow: hidden;
@@ -1130,8 +1109,6 @@ img {
     color: var(--maroon);
 }
 
-/* Image */
-
 .cta-v2-image {
     display: flex;
     justify-content: center;
@@ -1162,8 +1139,6 @@ img {
     object-fit: contain;
 }
 
-/* Wave */
-
 .cta-v2-wave {
     position: absolute;
     bottom: -1px;
@@ -1193,7 +1168,6 @@ img {
         --section-pad: 90px;
     }
 
-    /* HERO */
     .hero {
         padding: 70px 0 150px;
     }
@@ -1225,7 +1199,6 @@ img {
         max-width: 400px;
     }
 
-    /* ABOUT */
     .about-premium-grid {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -1244,7 +1217,6 @@ img {
         margin-right: auto;
     }
 
-    /* VISION */
     .vision-grid {
         grid-template-columns: 1fr;
         gap: 45px;
@@ -1259,7 +1231,6 @@ img {
         margin-right: auto;
     }
 
-    /* CORE + SERVICE + TIMELINE */
     .core-grid,
     .service-grid,
     .timeline {
@@ -1270,7 +1241,6 @@ img {
         display: none;
     }
 
-    /* CHOOSE */
     .choose-grid {
         grid-template-columns: 1fr;
         gap: 45px;
@@ -1284,7 +1254,6 @@ img {
         text-align: left;
     }
 
-    /* CTA */
     .cta-v2-grid {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -1364,7 +1333,6 @@ img {
         margin-bottom: 40px;
     }
 
-    /* HERO */
     .hero {
         padding: 60px 0 110px;
     }
@@ -1383,7 +1351,6 @@ img {
         height: 80px;
     }
 
-    /* FEATURE */
     .hero-feature-grid {
         gap: 12px;
         margin-top: 28px;
@@ -1416,7 +1383,6 @@ img {
         font-size: 11px;
     }
 
-    /* ABOUT */
     .about-photo {
         max-width: 340px;
     }
@@ -1459,7 +1425,6 @@ img {
         width: 100%;
     }
 
-    /* VISION / CORE / SERVICE / TIMELINE */
     .vision-right,
     .core-grid,
     .service-grid,
@@ -1512,7 +1477,6 @@ img {
         margin-bottom: 16px;
     }
 
-    /* CHOOSE */
     .choose-left ul {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -1527,7 +1491,6 @@ img {
         padding: 30px 26px;
     }
 
-    /* FAQ */
     .faq-item {
         padding: 22px 24px;
         border-radius: 18px;
@@ -1537,7 +1500,6 @@ img {
         font-size: 18px;
     }
 
-    /* CTA */
     .cta-v2 {
         padding: 70px 0 110px;
     }
@@ -1604,5 +1566,120 @@ img {
     .choose-left .mini-title {
         font-size: 12px;
         padding: 10px 20px;
+    }
+}
+
+
+/* ==========================================================
+   18. OUR LEADERSHIP (section baru — tidak mengubah rule lain)
+========================================================== */
+
+.leadership-section {
+    background: #f8fbff;
+    padding: var(--section-pad) 0;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.leader-card {
+    background: #fff;
+    padding: 34px 26px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: .35s;
+}
+
+.leader-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.leader-photo {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--secondary), #965dff);
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.leader-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-card h3 {
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--dark);
+    margin: 0 0 6px;
+}
+
+.leader-role {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.leader-card > p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--text);
+    margin: 0 0 18px;
+    text-align: left;
+}
+
+.leader-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.leader-tags span {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #eef4ff;
+    color: #17447e;
+}
+
+/* TABLET BESAR */
+@media (max-width: 1100px) {
+    .leadership-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .leader-card {
+        padding: 28px 22px;
+    }
+
+    .leader-card > p {
+        text-align: center;
     }
 }
