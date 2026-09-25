@@ -233,7 +233,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #7a1f63, #0f4c81);
+    background: #0f4c81;
     color: #fff;
     font-weight: 800;
     flex-shrink: 0;
@@ -468,7 +468,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #7a1f63, #0f4c81);
+    background: #0f4c81;
     flex-shrink: 0;
 }
 
@@ -762,9 +762,9 @@ img {
     margin: 80px auto;
     overflow: hidden;
     border-radius: 28px;
-    background: linear-gradient(135deg, #7a1f63 0%, #0f4c81 100%);
+    background: #0f4c81;
     padding: 70px;
-    box-shadow: 0 25px 60px rgba(124, 31, 85, .22);
+    box-shadow: 0 25px 60px rgba(15, 76, 129, .22);
 }
 
 /* ornamen */
