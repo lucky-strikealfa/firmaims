@@ -89,17 +89,17 @@ img {
     gap: 10px;
     padding: 16px 28px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #7a1f63, #0f4c81);
+    background: #0f4c81;
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 18px 40px rgba(122, 31, 99, .22);
+    box-shadow: 0 18px 40px rgba(15, 76, 129, .22);
     transition: .25s ease;
 }
 
 .btn-premium:hover {
     transform: translateY(-3px);
-    box-shadow: 0 24px 52px rgba(122, 31, 99, .30);
+    box-shadow: 0 24px 52px rgba(15, 76, 129, .30);
 }
 
 /* FITUR 3 KOLOM */
